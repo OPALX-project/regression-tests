@@ -1,0 +1,1338 @@
+/gpfs/homefelsim/export/sge/spool/felsim11/job_scripts/30746: line 12: cd: ./Scan-1: No such file or directory
+Ippl> CommMPI: Parent process waiting for children ...
+Ippl> CommMPI: Child 2 ready.
+Ippl> CommMPI: Child 3 ready.
+Ippl> CommMPI: Child 1 ready.
+Ippl> CommMPI: Initialization complete.
+Ippl> CommMPI: Started job 1 on host `felsim11'.
+Ippl> CommMPI: Started job 2 on host `felsim11'.
+Ippl> CommMPI: Started job 3 on host `felsim11'.
+{0}>                ____  _____       ___ 
+{0}>               / __ \|  __ \ /\   | | 
+{0}>              | |  | | |__) /  \  | |
+{0}>              | |  | |  ___/ /\ \ | |
+{0}>              | |__| | |  / ____ \| |____
+{0}>               \____/|_| /_/    \_\______|
+OPAL {0}> 
+OPAL {0}> This is OPAL (Object Oriented Parallel Accelerator Library) Version 1.1.9 SVN version 12544  (c) PSI, http://amas.web.psi.ch
+OPAL {0}> 
+OPAL {0}> Please send cookies, goodies or other motivations (wine and beer ... ) to andreas.adelmann@psi.ch
+OPAL {0}> Time: 09.41.43 date: 08/08/2011
+OPAL {0}> NOTE 17: unable to mkdir; File exists
+OPAL {0}> No startup file "/gpfs/homefelsim/adelmann/init.opal" found.
+OPAL {0}> Reading input stream "Scan-1.in".
+   +2 Option, ECHO=FALSE;
+   +2 Option, ECHO=FALSE;
+   +2 Option, ECHO=FALSE;
+   +2 Option, ECHO=FALSE;
+OPAL {0}> 
+OPAL {0}> value: {GAMMA,BRHO,EDES,BETA,GAMBET}={1,3.37213e-06,1e-09,0.00197836,0.00197836}
+OPAL {0}> 
+OPAL {0}> 
+OPAL {0}> value: {I,RV1,RV2,RV3,RV4,RV5}={0,2.1218,0,0,0,0}
+OPAL {0}> 
+OPAL {0}> 
+OPAL {0}> 8 elements selected.
+OPAL {0}> 
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}>   Selected Tracking Method == PARALLEL-T, NEW TRACK in SCAN MODE
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}>  -- B I N N I N G in T -----------------------------------------
+OPAL {0}>  ---------------------I N P U T --------------------------------
+OPAL {0}>  GUNGAUSS FLAT TOP &  THERMAL EMITTANCE in ASTRA MODE
+OPAL {0}>  Kinetic energy (thermal emittance) = 0.4 [eV]  
+OPAL {0}>  Phi max = 90 [deg]  
+OPAL {0}>  tBin = 3.0335e-12 [sec]  nBins = 5 tEmission =  1.51675e-11 [sec] 
+OPAL {0}> -----------------------------------------
+OPAL {0}>      CREATE BINNED GAUSS DISTRIBUTION DONE        
+OPAL {0}> Bins= 5 hBin= 0 Particle vector length 0
+OPAL {0}> Bin # 0 val 36
+OPAL {0}> Bin # 1 val 249
+OPAL {0}> Bin # 2 val 446
+OPAL {0}> Bin # 3 val 233
+OPAL {0}> Bin # 4 val 36
+OPAL {0}> Last emitted bin is 0
+OPAL {0}> 
+OPAL {0}> * ************* D I S T R I B U T I O N ******************************************** 
+OPAL {0}> * Distribution:	DIST1
+OPAL {0}> * Distribution type:	GUNGAUSSFLATTOPTH
+OPAL {0}> * sigmax=	0.0005455 [m];	sigmay=	0.0005455 [m];	sigmat=	0 [m];
+OPAL {0}> * transverse cut  3 [sigma] 
+OPAL {0}> * sigmapx=	0 [eV];	sigmapy=	0 [eV];	pt +- sigmapt=	0+-0 [eV]
+OPAL {0}> * corr x-px=	0	 corr y-py=	0	 corr t-pt=	0
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}> 
+OPAL {0}> * ************* B E A M ************************************************************ 
+OPAL {0}> * BEAM        BEAM1
+OPAL {0}> * PARTICLE    ELECTRON
+OPAL {0}> * CURRENT     0.0310284 A
+OPAL {0}> * FREQENCY    1.49896e+09 Hz
+OPAL {0}> * CHARGE      -e * 1 
+OPAL {0}> * REST MASS   0.000510999 GeV
+OPAL {0}> * MOMENTUM    1.01094e-06
+OPAL {0}> * NPART       1000
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}> 
+OPAL {0}> * ************* F I E L D S O L V E R ********************************************** 
+OPAL {0}> * FIELDSOLVER  FS1
+OPAL {0}> * TYPE         FFT
+OPAL {0}> * N-PROCESSORS 4
+OPAL {0}> * MX           16
+OPAL {0}> * MY           16
+OPAL {0}> * MT           16
+OPAL {0}> * BBOXINCR     3
+OPAL {0}> * GRRENSF      INTEGRATED
+OPAL {0}> * XDIM is parallel  
+OPAL {0}> * YDIM is parallel  
+OPAL {0}> * Z(T)DIM is parallel  
+OPAL {0}> 
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}> 
+OPAL {0}> 
+OPAL {0}> Phase space dump frequency 10 and statistics dump frequency 10 w.r.t. the time step.
+RFCavity {0}> GUN using file 1T1.T7 (2D dynamic); zini= 0 m; zfinal= 0.008 m;
+Solenoid {0}> SP1 using file 1T2.T7 (2D magnetostatic); zini= 0 m; zfinal= 0.12 m;
+Solenoid {0}> SP2 using file 1T3.T7 (2D dynamic); zini= 0 m; zfinal= 0.49 m;
+Solenoid {0}> SP3 using file 1T3.T7 (2D dynamic); zini= 0 m; zfinal= 0.49 m;
+Solenoid {0}> SP4 using file 1T3.T7 (2D dynamic); zini= 0 m; zfinal= 0.49 m;
+Solenoid {0}> SP5 using file 1T3.T7 (2D dynamic); zini= 0 m; zfinal= 0.49 m;
+OPAL {0}> execute .... -1
+OPAL {0}> totalParticle_i= 0
+OPAL {0}> Track start at: 09.41.47, t= 0; zstop at: 1e+06 [m]
+OPAL {0}> Executing ParallelTTracker, initial DT 1e-12 [s];
+OPAL {0}> max integration steps 101, step= 1, Nplocal= 0
+OPAL {0}> 
+OPAL {0}> --- BEGIN FIELD LIST ---------------------------------------------------------------
+OPAL {0}> 
+OPAL {0}> --- -0.5315 m -- -0.4115 m -- alpha = 0 -- beta = 0 --------------------------------
+OPAL {0}> SP1
+OPAL {0}> --- -0.397 m -- -0.267 m -- alpha = 0 -- beta = 0 ----------------------------------
+OPAL {0}> SP2
+OPAL {0}> --- -0.267 m -- -0.157 m -- alpha = 0 -- beta = 0 ----------------------------------
+OPAL {0}> SP2
+OPAL {0}> SP3
+OPAL {0}> --- -0.157 m -- -0.047 m -- alpha = 0 -- beta = 0 ----------------------------------
+OPAL {0}> SP2
+OPAL {0}> SP3
+OPAL {0}> SP4
+OPAL {0}> --- -0.047 m -- 0 m -- alpha = 0 -- beta = 0 ---------------------------------------
+OPAL {0}> SP2
+OPAL {0}> SP3
+OPAL {0}> SP4
+OPAL {0}> SP5
+OPAL {0}> --- 0 m -- 0.008 m -- alpha = 0 -- beta = 0 ----------------------------------------
+OPAL {0}> SP2
+OPAL {0}> SP3
+OPAL {0}> SP4
+OPAL {0}> SP5
+OPAL {0}> GUN
+OPAL {0}> --- 0.008 m -- 0.093 m -- alpha = 0 -- beta = 0 ------------------------------------
+OPAL {0}> SP2
+OPAL {0}> SP3
+OPAL {0}> SP4
+OPAL {0}> SP5
+OPAL {0}> --- 0.093 m -- 0.223 m -- alpha = 0 -- beta = 0 ------------------------------------
+OPAL {0}> SP3
+OPAL {0}> SP4
+OPAL {0}> SP5
+OPAL {0}> --- 0.223 m -- 0.333 m -- alpha = 0 -- beta = 0 ------------------------------------
+OPAL {0}> SP4
+OPAL {0}> SP5
+OPAL {0}> --- 0.333 m -- 0.443 m -- alpha = 0 -- beta = 0 ------------------------------------
+OPAL {0}> SP5
+OPAL {0}> 
+OPAL {0}> --- END FIELD LIST -----------------------------------------------------------------
+OPAL {0}> 
+FM2DD {0}> 
+FM2DD {0}> * ************ I N F O *********************************************************
+FM2DD {0}> * read in fieldmap '1T3.T7'                                                    *
+FM2DD {0}> * ******************************************************************************
+FM2DD {0}> 
+FM2DD {0}> 
+FM2DD {0}> 
+FM2DD {0}> * ************ I N F O *********************************************************
+FM2DD {0}> * read in fieldmap '1T1.T7'                                                    *
+FM2DD {0}> * ******************************************************************************
+FM2DD {0}> 
+FM2DD {0}> 
+OPAL {0}> MINSTEPFORREBIN 1500
+OPAL {0}> REPARTFREQ 1000
+OPAL {0}> Changing emission time step to: 3.0335e-14
+OPAL {0}> Step 1 no emission yet  t= 3.0335e-14 [s]
+OPAL {0}> Step 2 no emission yet  t= 6.067e-14 [s]
+OPAL {0}> Step 3 no emission yet  t= 9.10051e-14 [s]
+OPAL {0}> Step 4 no emission yet  t= 1.2134e-13 [s]
+OPAL {0}> Step 5 no emission yet  t= 1.51675e-13 [s]
+OPAL {0}> Step 6 no emission yet  t= 1.8201e-13 [s]
+OPAL {0}> Step 7 no emission yet  t= 2.12345e-13 [s]
+OPAL {0}> Step 8 no emission yet  t= 2.4268e-13 [s]
+OPAL {0}> Step 9 no emission yet  t= 2.73015e-13 [s]
+OPAL {0}> Step 10 no emission yet  t= 3.0335e-13 [s]
+OPAL {0}> Step 11 no emission yet  t= 3.33685e-13 [s]
+OPAL {0}> Step 12 no emission yet  t= 3.6402e-13 [s]
+OPAL {0}> Step 13 no emission yet  t= 3.94355e-13 [s]
+OPAL {0}> 09.41.51 Step 14; only 1 particles emitted; t= 4.2469e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 15; only 2 particles emitted; t= 4.55025e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 16; only 2 particles emitted; t= 4.8536e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 17; only 2 particles emitted; t= 5.15695e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 18; only 2 particles emitted; t= 5.4603e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 19; only 2 particles emitted; t= 5.76365e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 20; only 2 particles emitted; t= 6.067e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 21; only 2 particles emitted; t= 6.37035e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 22; only 2 particles emitted; t= 6.67371e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 23; only 2 particles emitted; t= 6.97706e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 24; only 2 particles emitted; t= 7.28041e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 25; only 2 particles emitted; t= 7.58376e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 26; only 2 particles emitted; t= 7.88711e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 27; only 3 particles emitted; t= 8.19046e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 28; only 3 particles emitted; t= 8.49381e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 29; only 3 particles emitted; t= 8.79716e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 30; only 4 particles emitted; t= 9.10051e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 31; only 4 particles emitted; t= 9.40386e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 32; only 4 particles emitted; t= 9.70721e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 33; only 4 particles emitted; t= 1.00106e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 34; only 5 particles emitted; t= 1.03139e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 35; only 5 particles emitted; t= 1.06173e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 36; only 6 particles emitted; t= 1.09206e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 37; only 6 particles emitted; t= 1.1224e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 38; only 6 particles emitted; t= 1.15273e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 39; only 6 particles emitted; t= 1.18307e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 40; only 6 particles emitted; t= 1.2134e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 41; only 6 particles emitted; t= 1.24374e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 42; only 7 particles emitted; t= 1.27407e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 43; only 7 particles emitted; t= 1.30441e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 44; only 7 particles emitted; t= 1.33474e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 45; only 7 particles emitted; t= 1.36508e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 46; only 8 particles emitted; t= 1.39541e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 47; only 8 particles emitted; t= 1.42575e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 48; only 8 particles emitted; t= 1.45608e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 49; only 8 particles emitted; t= 1.48642e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 50; only 8 particles emitted; t= 1.51675e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 51; only 8 particles emitted; t= 1.54709e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 52; only 8 particles emitted; t= 1.57742e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 53; only 8 particles emitted; t= 1.60776e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 54; only 9 particles emitted; t= 1.63809e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 55; only 9 particles emitted; t= 1.66843e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 56; only 9 particles emitted; t= 1.69876e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 57; only 9 particles emitted; t= 1.7291e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 58; only 10 particles emitted; t= 1.75943e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 59; only 10 particles emitted; t= 1.78977e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 60; only 10 particles emitted; t= 1.8201e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 61 at 3.04567e-06 [m] t= 1.85044e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.51 Step 62 at 3.22292e-06 [m] t= 1.88077e-12 [s] E=0.000155956 [MeV] 
+OPAL {0}> 09.41.51 Step 63 at 2.06922e-06 [m] t= 1.91111e-12 [s] E=0.093074 [MeV] 
+OPAL {0}> 09.41.51 Step 64 at 2.08304e-06 [m] t= 1.94144e-12 [s] E=0.0394553 [MeV] 
+OPAL {0}> 09.41.51 Step 65 at 3.01849e-06 [m] t= 1.97178e-12 [s] E=0.073145 [MeV] 
+OPAL {0}> 09.41.51 Step 66 at 3.1793e-06 [m] t= 2.00211e-12 [s] E=0.00013424 [MeV] 
+OPAL {0}> 09.41.51 Step 67 at 3.34754e-06 [m] t= 2.03245e-12 [s] E=0.00014182 [MeV] 
+OPAL {0}> 09.41.51 Step 68 at 3.52322e-06 [m] t= 2.06278e-12 [s] E=0.000149742 [MeV] 
+OPAL {0}> 09.41.51 Step 69 at 3.60837e-06 [m] t= 2.09312e-12 [s] E=0.0320955 [MeV] 
+OPAL {0}> 09.41.51 Step 70 at 3.792e-06 [m] t= 2.12345e-12 [s] E=0.000156914 [MeV] 
+OPAL {0}> * Wrote beam phase space.
+OPAL {0}> * ************** B U N C H ********************************************************* 
+OPAL {0}> * NP= 17 Qtot= 0.0003519 [nC]  Qi= 2.07e-14 [C]
+OPAL {0}> * Ekin= 0.000156914 [MeV] dEkin= 0.000186542 [MeV]
+OPAL {0}> * rmax= ( 0.000494824 , 0.000420595 , 1.26739e-05 ) [m]
+OPAL {0}> * rmin= ( -0.000331805 , -0.000387658 , -3.50994e-07 ) [m]
+OPAL {0}> * rms beam size= ( 0.000220358 , 0.000257414 , 3.99777e-06 ) [m]
+OPAL {0}> * rms momenta= ( 0.000701433 , 0.000737312 , 0.014734 ) [beta gamma]
+OPAL {0}> * mean position= ( 0.000131673 , 1.89257e-05 , 3.39882e-06 ) [m]
+OPAL {0}> * mean momenta= ( -0.000220597 , -0.000143352 , 0.0199041 ) [beta gamma]
+OPAL {0}> * rms emmitance= ( 6.06725e-06 , 7.64728e-06 , 5.40985e-07 ) (not normalized)
+OPAL {0}> * rms correlation= ( 0.231434 , 0.0528591 , 0.973749 )
+OPAL {0}> * dh= 0.03 [m] dT= 3.0335e-14 [s]
+OPAL {0}> * hr= ( 5.51086e-05 , 5.38835e-05 , 8.68323e-07 ) [m]
+OPAL {0}> * spos= 3.792e-06 [m]
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}> 
+OPAL {0}> * Wrote beam statistics.
+OPAL {0}> 09.41.51 Step 71 at 3.98307e-06 [m] t= 2.15379e-12 [s] E=0.000165404 [MeV] 
+OPAL {0}> 09.41.51 Step 72 at 4.18156e-06 [m] t= 2.18412e-12 [s] E=0.000174236 [MeV] 
+OPAL {0}> 09.41.51 Step 73 at 4.38748e-06 [m] t= 2.21446e-12 [s] E=0.00018341 [MeV] 
+OPAL {0}> 09.41.51 Step 74 at 4.60084e-06 [m] t= 2.24479e-12 [s] E=0.000192926 [MeV] 
+OPAL {0}> 09.41.51 Step 75 at 4.82162e-06 [m] t= 2.27513e-12 [s] E=0.000202784 [MeV] 
+OPAL {0}> 09.41.51 Step 76 at 4.83539e-06 [m] t= 2.30546e-12 [s] E=0.0302718 [MeV] 
+OPAL {0}> 09.41.51 Step 77 at 4.55175e-06 [m] t= 2.3358e-12 [s] E=0.0286 [MeV] 
+OPAL {0}> 09.41.51 Step 78 at 4.76642e-06 [m] t= 2.36613e-12 [s] E=0.000209908 [MeV] 
+OPAL {0}> 09.41.51 Step 79 at 4.98853e-06 [m] t= 2.39647e-12 [s] E=0.00022008 [MeV] 
+OPAL {0}> 09.41.51 Step 80 at 4.46393e-06 [m] t= 2.4268e-12 [s] E=0.0271254 [MeV] 
+OPAL {0}> * Wrote beam phase space.
+OPAL {0}> * ************** B U N C H ********************************************************* 
+OPAL {0}> * NP= 20 Qtot= 0.000414 [nC]  Qi= 2.07e-14 [C]
+OPAL {0}> * Ekin= 0.000219158 [MeV] dEkin= 0.000241792 [MeV]
+OPAL {0}> * rmax= ( 0.000494834 , 0.000423884 , 1.74732e-05 ) [m]
+OPAL {0}> * rmin= ( -0.000331905 , -0.000503025 , -4.90999e-07 ) [m]
+OPAL {0}> * rms beam size= ( 0.000224227 , 0.000264373 , 5.27593e-06 ) [m]
+OPAL {0}> * rms momenta= ( 0.000669818 , 0.000689463 , 0.0161613 ) [beta gamma]
+OPAL {0}> * mean position= ( 9.25094e-05 , -1.87899e-05 , 4.75287e-06 ) [m]
+OPAL {0}> * mean momenta= ( -0.000234342 , -0.000139611 , 0.0244129 ) [beta gamma]
+OPAL {0}> * rms emmitance= ( 4.99423e-06 , 6.22279e-06 , 7.02765e-07 ) (not normalized)
+OPAL {0}> * rms correlation= ( 0.226589 , 0.00764214 , 0.970422 )
+OPAL {0}> * dh= 0.03 [m] dT= 3.0335e-14 [s]
+OPAL {0}> * hr= ( 5.5116e-05 , 6.17939e-05 , 1.19762e-06 ) [m]
+OPAL {0}> * spos= 4.46393e-06 [m]
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}> 
+OPAL {0}> * Wrote beam statistics.
+OPAL {0}> 09.41.51 Step 81 at 4.67641e-06 [m] t= 2.45714e-12 [s] E=0.000229536 [MeV] 
+OPAL {0}> 09.41.51 Step 82 at 4.89631e-06 [m] t= 2.48747e-12 [s] E=0.000240255 [MeV] 
+OPAL {0}> 09.41.51 Step 83 at 5.12364e-06 [m] t= 2.51781e-12 [s] E=0.000251317 [MeV] 
+OPAL {0}> 09.41.51 Step 84 at 5.3584e-06 [m] t= 2.54814e-12 [s] E=0.000262721 [MeV] 
+OPAL {0}> 09.41.52 Step 85 at 5.60059e-06 [m] t= 2.57848e-12 [s] E=0.000274467 [MeV] 
+OPAL {0}> 09.41.52 Step 86 at 5.17986e-06 [m] t= 2.60881e-12 [s] E=0.0513865 [MeV] 
+OPAL {0}> 09.41.52 Step 87 at 5.30135e-06 [m] t= 2.63915e-12 [s] E=0.0234992 [MeV] 
+OPAL {0}> 09.41.52 Step 88 at 5.5364e-06 [m] t= 2.66948e-12 [s] E=0.000271363 [MeV] 
+OPAL {0}> 09.41.52 Step 89 at 5.54376e-06 [m] t= 2.69982e-12 [s] E=0.0225003 [MeV] 
+OPAL {0}> 09.41.52 Step 90 at 5.31961e-06 [m] t= 2.73015e-12 [s] E=0.042866 [MeV] 
+OPAL {0}> * Wrote beam phase space.
+OPAL {0}> * ************** B U N C H ********************************************************* 
+OPAL {0}> * NP= 26 Qtot= 0.0005382 [nC]  Qi= 2.07e-14 [C]
+OPAL {0}> * Ekin= 0.000261014 [MeV] dEkin= 0.000307139 [MeV]
+OPAL {0}> * rmax= ( 0.000522341 , 0.000423818 , 2.30396e-05 ) [m]
+OPAL {0}> * rmin= ( -0.000332831 , -0.000503013 , -6.75611e-07 ) [m]
+OPAL {0}> * rms beam size= ( 0.000233756 , 0.000258239 , 6.63568e-06 ) [m]
+OPAL {0}> * rms momenta= ( 0.000673581 , 0.000652251 , 0.0188124 ) [beta gamma]
+OPAL {0}> * mean position= ( 8.88521e-05 , -6.095e-06 , 5.66293e-06 ) [m]
+OPAL {0}> * mean momenta= ( -0.000337323 , -8.54152e-05 , 0.025832 ) [beta gamma]
+OPAL {0}> * rms emmitance= ( 4.91109e-06 , 5.26841e-06 , 1.09597e-06 ) (not normalized)
+OPAL {0}> * rms correlation= ( 0.0767239 , 0.017406 , 0.959811 )
+OPAL {0}> * dh= 0.03 [m] dT= 3.0335e-14 [s]
+OPAL {0}> * hr= ( 5.70114e-05 , 6.17887e-05 , 1.58101e-06 ) [m]
+OPAL {0}> * spos= 5.31961e-06 [m]
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}> 
+OPAL {0}> * Wrote beam statistics.
+OPAL {0}> 09.41.52 Step 91 at 5.551e-06 [m] t= 2.76049e-12 [s] E=0.000271985 [MeV] 
+OPAL {0}> 09.41.52 Step 92 at 5.50437e-06 [m] t= 2.79082e-12 [s] E=0.039591 [MeV] 
+OPAL {0}> 09.41.52 Step 93 at 5.73902e-06 [m] t= 2.82116e-12 [s] E=0.000274037 [MeV] 
+OPAL {0}> 09.41.52 Step 94 at 5.73784e-06 [m] t= 2.85149e-12 [s] E=0.0185353 [MeV] 
+OPAL {0}> 09.41.52 Step 95 at 5.38985e-06 [m] t= 2.88183e-12 [s] E=0.0531488 [MeV] 
+OPAL {0}> 09.41.52 Step 96 at 5.61829e-06 [m] t= 2.91216e-12 [s] E=0.000270485 [MeV] 
+OPAL {0}> 09.41.52 Step 97 at 5.85417e-06 [m] t= 2.9425e-12 [s] E=0.000281382 [MeV] 
+OPAL {0}> 09.41.52 Step 98 at 5.62099e-06 [m] t= 2.97283e-12 [s] E=0.0481989 [MeV] 
+OPAL {0}> 09.41.52 Step 99 at 5.85472e-06 [m] t= 3.00317e-12 [s] E=0.000278282 [MeV] 
+OPAL {0}> * Bin number: 0 has emitted all particles (new emmit).
+OPAL {0}> 09.41.52 Step 100 at 5.90966e-06 [m] t= 3.0335e-12 [s] E=0.0148893 [MeV] 
+OPAL {0}> * Wrote beam phase space.
+OPAL {0}> * ************** B U N C H ********************************************************* 
+OPAL {0}> * NP= 36 Qtot= 0.0007452 [nC]  Qi= 2.07e-14 [C]
+OPAL {0}> * Ekin= 0.000281289 [MeV] dEkin= 0.000348324 [MeV]
+OPAL {0}> * rmax= ( 0.00052224 , 0.000462887 , 2.93704e-05 ) [m]
+OPAL {0}> * rmin= ( -0.000332927 , -0.000504175 , -8.58514e-07 ) [m]
+OPAL {0}> * rms beam size= ( 0.000224641 , 0.000266659 , 7.94401e-06 ) [m]
+OPAL {0}> * rms momenta= ( 0.000641786 , 0.000660367 , 0.0205523 ) [beta gamma]
+OPAL {0}> * mean position= ( 0.000102691 , 1.2899e-05 , 6.10353e-06 ) [m]
+OPAL {0}> * mean momenta= ( -0.000294523 , -5.9933e-05 , 0.0260465 ) [beta gamma]
+OPAL {0}> * rms emmitance= ( 4.34424e-06 , 5.30442e-06 , 1.34333e-06 ) (not normalized)
+OPAL {0}> * rms correlation= ( 0.0106489 , 0.0273828 , 0.962003 )
+OPAL {0}> * dh= 0.03 [m] dT= 3.0335e-14 [s]
+OPAL {0}> * hr= ( 5.70112e-05 , 6.44708e-05 , 2.01526e-06 ) [m]
+OPAL {0}> * spos= 5.90966e-06 [m]
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}> 
+OPAL {0}> * Wrote beam statistics.
+OPAL {0}> Dump phase space of last step
+FM2DD {0}> 
+FM2DD {0}> * ************ I N F O *********************************************************
+FM2DD {0}> * freed fieldmap '1T3.T7'                                                      *
+FM2DD {0}> * ******************************************************************************
+FM2DD {0}> 
+FM2DD {0}> 
+
+Replacing the object "COL".
+
+
+Replacing the object "COL".
+
+
+
+Replacing the object "SP1".
+
+Replacing the object "
+Replacing the object "SP2".
+
+SP1
+Replacing the object "SP3".
+
+".
+
+Replacing the object "SP4".
+
+
+
+Replacing the object "SP5".
+
+
+Replacing the object "GUN".
+
+
+Replacing the object "SP2".
+
+Replacing the object "L1".
+
+
+FM2DD {0}> 
+FM2DD {0}> * ************ I N F O *********************************************************
+FM2DD {0}> * freed fieldmap '1T1.T7'                                                      *
+FM2DD {0}> * ******************************************************************************
+FM2DD {0}> 
+FM2DD {0}> 
+OPAL {0}> done executing ParallelTTracker at 09.41.52
+
+Replacing the object "SP3".
+
+
+Replacing the object "COL".
+
+
+
+Replacing the object "SP1".
+
+
+Replacing the object "COL".
+
+
+Replacing the object "SP2".
+
+Replacing the object "
+Replacing the object "SP3".
+
+
+Replacing the object "SP1".
+
+SP4
+Replacing the object "SP2".
+
+
+Replacing the object "SP4".
+
+".
+Replacing the object "SP5".
+
+
+Replacing the object "SP3".
+
+
+
+
+Replacing the object "SP4".
+
+
+Replacing the object "GUN".
+
+
+Replacing the object "SP5".
+
+
+
+Replacing the object "GUN".
+
+Replacing the object "
+Replacing the object "L1".
+
+SP5".OPAL {0}> 
+OPAL {0}> value: {I,RV1,RV2,RV3,RV4,RV5}={1,1.142,0,0,0,0}
+OPAL {0}> 
+
+
+
+Replacing the object "L1".
+
+OPAL {0}> 
+OPAL {0}> 8 elements selected.
+OPAL {0}> 
+
+Replacing the object "OPAL {0}> * ********************************************************************************** 
+OPAL {0}>   Selected Tracking Method == PARALLEL-T, SCAN TRACK
+OPAL {0}> * ********************************************************************************** 
+GUN".
+
+
+Replacing the object "L1".
+
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}>   PARALLEL-T SCAN
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}>  -- B I N N I N G in T -----------------------------------------
+OPAL {0}>  ---------------------I N P U T --------------------------------
+OPAL {0}>  GUNGAUSS FLAT TOP &  THERMAL EMITTANCE in ASTRA MODE
+OPAL {0}>  Kinetic energy (thermal emittance) = 0.4 [eV]  
+OPAL {0}>  Phi max = 90 [deg]  
+OPAL {0}>  tBin = 3.0335e-12 [sec]  nBins = 5 tEmission =  1.51675e-11 [sec] 
+OPAL {0}> -----------------------------------------
+OPAL {0}>      CREATE BINNED GAUSS DISTRIBUTION DONE        
+OPAL {0}> Bins= 5 hBin= 0 Particle vector length 0
+OPAL {0}> Bin # 0 val 36
+OPAL {0}> Bin # 1 val 249
+OPAL {0}> Bin # 2 val 446
+OPAL {0}> Bin # 3 val 233
+OPAL {0}> Bin # 4 val 36
+OPAL {0}> Last emitted bin is 0
+OPAL {0}> 
+OPAL {0}> * ************* D I S T R I B U T I O N ******************************************** 
+OPAL {0}> * Distribution:	DIST1
+OPAL {0}> * Distribution type:	GUNGAUSSFLATTOPTH
+OPAL {0}> * sigmax=	0.0005455 [m];	sigmay=	0.0005455 [m];	sigmat=	0 [m];
+OPAL {0}> * transverse cut  3 [sigma] 
+OPAL {0}> * sigmapx=	0 [eV];	sigmapy=	0 [eV];	pt +- sigmapt=	0+-0 [eV]
+OPAL {0}> * corr x-px=	0	 corr y-py=	0	 corr t-pt=	0
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}> 
+OPAL {0}> * ************* B E A M ************************************************************ 
+OPAL {0}> * BEAM        BEAM1
+OPAL {0}> * PARTICLE    ELECTRON
+OPAL {0}> * CURRENT     0.0310284 A
+OPAL {0}> * FREQENCY    1.49896e+09 Hz
+OPAL {0}> * CHARGE      -e * 1 
+OPAL {0}> * REST MASS   0.000510999 GeV
+OPAL {0}> * MOMENTUM    1.01094e-06
+OPAL {0}> * NPART       1000
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}> 
+OPAL {0}> * ************* F I E L D S O L V E R ********************************************** 
+OPAL {0}> * FIELDSOLVER  FS1
+OPAL {0}> * TYPE         FFT
+OPAL {0}> * N-PROCESSORS 4
+OPAL {0}> * MX           16
+OPAL {0}> * MY           16
+OPAL {0}> * MT           16
+OPAL {0}> * BBOXINCR     3
+OPAL {0}> * GRRENSF      INTEGRATED
+OPAL {0}> * XDIM is parallel  
+OPAL {0}> * YDIM is parallel  
+OPAL {0}> * Z(T)DIM is parallel  
+OPAL {0}> 
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}> 
+OPAL {0}> 
+OPAL {0}> Phase space dump frequency 10 and statistics dump frequency 10 w.r.t. the time step.
+RFCavity {0}> GUN using file 1T1.T7 (2D dynamic); zini= 0 m; zfinal= 0.008 m;
+Solenoid {0}> SP1 using file 1T2.T7 (2D magnetostatic); zini= 0 m; zfinal= 0.12 m;
+Solenoid {0}> SP2 using file 1T3.T7 (2D dynamic); zini= 0 m; zfinal= 0.49 m;
+Solenoid {0}> SP3 using file 1T3.T7 (2D dynamic); zini= 0 m; zfinal= 0.49 m;
+Solenoid {0}> SP4 using file 1T3.T7 (2D dynamic); zini= 0 m; zfinal= 0.49 m;
+Solenoid {0}> SP5 using file 1T3.T7 (2D dynamic); zini= 0 m; zfinal= 0.49 m;
+OPAL {0}> execute .... -1
+OPAL {0}> totalParticle_i= 0
+OPAL {0}> Track start at: 09.41.56, t= 0; zstop at: 1e+06 [m]
+OPAL {0}> Executing ParallelTTracker, initial DT 1e-12 [s];
+OPAL {0}> max integration steps 100, step= 1, Nplocal= 0
+OPAL {0}> 
+OPAL {0}> --- BEGIN FIELD LIST ---------------------------------------------------------------
+OPAL {0}> 
+OPAL {0}> --- -0.5315 m -- -0.4115 m -- alpha = 0 -- beta = 0 --------------------------------
+OPAL {0}> SP1
+OPAL {0}> --- -0.397 m -- -0.267 m -- alpha = 0 -- beta = 0 ----------------------------------
+OPAL {0}> SP2
+OPAL {0}> --- -0.267 m -- -0.157 m -- alpha = 0 -- beta = 0 ----------------------------------
+OPAL {0}> SP2
+OPAL {0}> SP3
+OPAL {0}> --- -0.157 m -- -0.047 m -- alpha = 0 -- beta = 0 ----------------------------------
+OPAL {0}> SP2
+OPAL {0}> SP3
+OPAL {0}> SP4
+OPAL {0}> --- -0.047 m -- 0 m -- alpha = 0 -- beta = 0 ---------------------------------------
+OPAL {0}> SP2
+OPAL {0}> SP3
+OPAL {0}> SP4
+OPAL {0}> SP5
+OPAL {0}> --- 0 m -- 0.008 m -- alpha = 0 -- beta = 0 ----------------------------------------
+OPAL {0}> SP2
+OPAL {0}> SP3
+OPAL {0}> SP4
+OPAL {0}> SP5
+OPAL {0}> GUN
+OPAL {0}> --- 0.008 m -- 0.093 m -- alpha = 0 -- beta = 0 ------------------------------------
+OPAL {0}> SP2
+OPAL {0}> SP3
+OPAL {0}> SP4
+OPAL {0}> SP5
+OPAL {0}> --- 0.093 m -- 0.223 m -- alpha = 0 -- beta = 0 ------------------------------------
+OPAL {0}> SP3
+OPAL {0}> SP4
+OPAL {0}> SP5
+OPAL {0}> --- 0.223 m -- 0.333 m -- alpha = 0 -- beta = 0 ------------------------------------
+OPAL {0}> SP4
+OPAL {0}> SP5
+OPAL {0}> --- 0.333 m -- 0.443 m -- alpha = 0 -- beta = 0 ------------------------------------
+OPAL {0}> SP5
+OPAL {0}> 
+OPAL {0}> --- END FIELD LIST -----------------------------------------------------------------
+OPAL {0}> 
+FM2DD {0}> 
+FM2DD {0}> * ************ I N F O *********************************************************
+FM2DD {0}> * read in fieldmap '1T3.T7'                                                    *
+FM2DD {0}> * ******************************************************************************
+FM2DD {0}> 
+FM2DD {0}> 
+FM2DD {0}> 
+FM2DD {0}> * ************ I N F O *********************************************************
+FM2DD {0}> * read in fieldmap '1T1.T7'                                                    *
+FM2DD {0}> * ******************************************************************************
+FM2DD {0}> 
+FM2DD {0}> 
+OPAL {0}> MINSTEPFORREBIN 1500
+OPAL {0}> REPARTFREQ 1000
+OPAL {0}> Changing emission time step to: 3.0335e-14
+OPAL {0}> Step 1 no emission yet  t= 3.0335e-14 [s]
+OPAL {0}> Step 2 no emission yet  t= 6.067e-14 [s]
+OPAL {0}> Step 3 no emission yet  t= 9.10051e-14 [s]
+OPAL {0}> Step 4 no emission yet  t= 1.2134e-13 [s]
+OPAL {0}> Step 5 no emission yet  t= 1.51675e-13 [s]
+OPAL {0}> Step 6 no emission yet  t= 1.8201e-13 [s]
+OPAL {0}> Step 7 no emission yet  t= 2.12345e-13 [s]
+OPAL {0}> Step 8 no emission yet  t= 2.4268e-13 [s]
+OPAL {0}> Step 9 no emission yet  t= 2.73015e-13 [s]
+OPAL {0}> Step 10 no emission yet  t= 3.0335e-13 [s]
+OPAL {0}> Step 11 no emission yet  t= 3.33685e-13 [s]
+OPAL {0}> Step 12 no emission yet  t= 3.6402e-13 [s]
+OPAL {0}> Step 13 no emission yet  t= 3.94355e-13 [s]
+OPAL {0}> 09.41.59 Step 14; only 1 particles emitted; t= 4.2469e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 15; only 2 particles emitted; t= 4.55025e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 16; only 2 particles emitted; t= 4.8536e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 17; only 2 particles emitted; t= 5.15695e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 18; only 2 particles emitted; t= 5.4603e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 19; only 2 particles emitted; t= 5.76365e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 20; only 2 particles emitted; t= 6.067e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 21; only 2 particles emitted; t= 6.37035e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 22; only 2 particles emitted; t= 6.67371e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 23; only 2 particles emitted; t= 6.97706e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 24; only 2 particles emitted; t= 7.28041e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 25; only 2 particles emitted; t= 7.58376e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 26; only 2 particles emitted; t= 7.88711e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 27; only 3 particles emitted; t= 8.19046e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 28; only 3 particles emitted; t= 8.49381e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 29; only 3 particles emitted; t= 8.79716e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 30; only 4 particles emitted; t= 9.10051e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 31; only 4 particles emitted; t= 9.40386e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 32; only 4 particles emitted; t= 9.70721e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 33; only 4 particles emitted; t= 1.00106e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 34; only 5 particles emitted; t= 1.03139e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 35; only 5 particles emitted; t= 1.06173e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 36; only 6 particles emitted; t= 1.09206e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 37; only 6 particles emitted; t= 1.1224e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 38; only 6 particles emitted; t= 1.15273e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 39; only 6 particles emitted; t= 1.18307e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 40; only 6 particles emitted; t= 1.2134e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 41; only 6 particles emitted; t= 1.24374e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 42; only 7 particles emitted; t= 1.27407e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 43; only 7 particles emitted; t= 1.30441e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 44; only 7 particles emitted; t= 1.33474e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 45; only 7 particles emitted; t= 1.36508e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 46; only 8 particles emitted; t= 1.39541e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 47; only 8 particles emitted; t= 1.42575e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 48; only 8 particles emitted; t= 1.45608e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 49; only 8 particles emitted; t= 1.48642e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 50; only 8 particles emitted; t= 1.51675e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 51; only 8 particles emitted; t= 1.54709e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 52; only 8 particles emitted; t= 1.57742e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 53; only 8 particles emitted; t= 1.60776e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 54; only 9 particles emitted; t= 1.63809e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 55; only 9 particles emitted; t= 1.66843e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 56; only 9 particles emitted; t= 1.69876e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 57; only 9 particles emitted; t= 1.7291e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 58; only 10 particles emitted; t= 1.75943e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 59; only 10 particles emitted; t= 1.78977e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 60; only 10 particles emitted; t= 1.8201e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.41.59 Step 61 at 2.99753e-06 [m] t= 1.85044e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.42.00 Step 62 at 3.17193e-06 [m] t= 1.88077e-12 [s] E=0.00015095 [MeV] 
+OPAL {0}> 09.42.00 Step 63 at 2.03652e-06 [m] t= 1.91111e-12 [s] E=0.0930687 [MeV] 
+OPAL {0}> 09.42.00 Step 64 at 2.05008e-06 [m] t= 1.94144e-12 [s] E=0.0394506 [MeV] 
+OPAL {0}> 09.42.00 Step 65 at 2.9706e-06 [m] t= 1.97178e-12 [s] E=0.0731403 [MeV] 
+OPAL {0}> 09.42.00 Step 66 at 3.12882e-06 [m] t= 2.00211e-12 [s] E=0.000129924 [MeV] 
+OPAL {0}> 09.42.00 Step 67 at 3.29436e-06 [m] t= 2.03245e-12 [s] E=0.000137258 [MeV] 
+OPAL {0}> 09.42.00 Step 68 at 3.4672e-06 [m] t= 2.06278e-12 [s] E=0.000144923 [MeV] 
+OPAL {0}> 09.42.00 Step 69 at 3.55096e-06 [m] t= 2.09312e-12 [s] E=0.0320904 [MeV] 
+OPAL {0}> 09.42.00 Step 70 at 3.73163e-06 [m] t= 2.12345e-12 [s] E=0.000151859 [MeV] 
+OPAL {0}> * Wrote beam phase space.
+OPAL {0}> * ************** B U N C H ********************************************************* 
+OPAL {0}> * NP= 17 Qtot= 0.0003519 [nC]  Qi= 2.07e-14 [C]
+OPAL {0}> * Ekin= 0.000151859 [MeV] dEkin= 0.000180488 [MeV]
+OPAL {0}> * rmax= ( 0.000494824 , 0.000420595 , 1.24713e-05 ) [m]
+OPAL {0}> * rmin= ( -0.000331805 , -0.000387658 , -3.45259e-07 ) [m]
+OPAL {0}> * rms beam size= ( 0.000220358 , 0.000257414 , 3.93392e-06 ) [m]
+OPAL {0}> * rms momenta= ( 0.000701402 , 0.000737343 , 0.014491 ) [beta gamma]
+OPAL {0}> * mean position= ( 0.000131673 , 1.89257e-05 , 3.34475e-06 ) [m]
+OPAL {0}> * mean momenta= ( -0.000220623 , -0.000143431 , 0.0195826 ) [beta gamma]
+OPAL {0}> * rms emmitance= ( 6.16721e-06 , 7.77393e-06 , 5.32038e-07 ) (not normalized)
+OPAL {0}> * rms correlation= ( 0.231391 , 0.0527091 , 0.973767 )
+OPAL {0}> * dh= 0.03 [m] dT= 3.0335e-14 [s]
+OPAL {0}> * hr= ( 5.51086e-05 , 5.38835e-05 , 8.54437e-07 ) [m]
+OPAL {0}> * spos= 3.73163e-06 [m]
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}> 
+OPAL {0}> * Wrote beam statistics.
+OPAL {0}> 09.42.00 Step 71 at 3.9196e-06 [m] t= 2.15379e-12 [s] E=0.000160072 [MeV] 
+OPAL {0}> 09.42.00 Step 72 at 4.11488e-06 [m] t= 2.18412e-12 [s] E=0.000168616 [MeV] 
+OPAL {0}> 09.42.00 Step 73 at 4.31747e-06 [m] t= 2.21446e-12 [s] E=0.000177491 [MeV] 
+OPAL {0}> 09.42.00 Step 74 at 4.52736e-06 [m] t= 2.24479e-12 [s] E=0.000186697 [MeV] 
+OPAL {0}> 09.42.00 Step 75 at 4.74456e-06 [m] t= 2.27513e-12 [s] E=0.000196233 [MeV] 
+OPAL {0}> 09.42.00 Step 76 at 4.75803e-06 [m] t= 2.30546e-12 [s] E=0.0302649 [MeV] 
+OPAL {0}> 09.42.00 Step 77 at 4.47889e-06 [m] t= 2.3358e-12 [s] E=0.0285932 [MeV] 
+OPAL {0}> 09.42.00 Step 78 at 4.69008e-06 [m] t= 2.36613e-12 [s] E=0.000203119 [MeV] 
+OPAL {0}> 09.42.00 Step 79 at 4.90858e-06 [m] t= 2.39647e-12 [s] E=0.00021296 [MeV] 
+OPAL {0}> 09.42.00 Step 80 at 4.39243e-06 [m] t= 2.4268e-12 [s] E=0.0271179 [MeV] 
+OPAL {0}> * Wrote beam phase space.
+OPAL {0}> * ************** B U N C H ********************************************************* 
+OPAL {0}> * NP= 20 Qtot= 0.000414 [nC]  Qi= 2.07e-14 [C]
+OPAL {0}> * Ekin= 0.000212067 [MeV] dEkin= 0.000233893 [MeV]
+OPAL {0}> * rmax= ( 0.000494834 , 0.000423884 , 1.71924e-05 ) [m]
+OPAL {0}> * rmin= ( -0.000331905 , -0.000503025 , -4.82801e-07 ) [m]
+OPAL {0}> * rms beam size= ( 0.000224227 , 0.000264373 , 5.19104e-06 ) [m]
+OPAL {0}> * rms momenta= ( 0.000669757 , 0.000689515 , 0.0158924 ) [beta gamma]
+OPAL {0}> * mean position= ( 9.25094e-05 , -1.87899e-05 , 4.67673e-06 ) [m]
+OPAL {0}> * mean momenta= ( -0.000234421 , -0.00013976 , 0.0240171 ) [beta gamma]
+OPAL {0}> * rms emmitance= ( 5.07677e-06 , 6.3265e-06 , 6.90715e-07 ) (not normalized)
+OPAL {0}> * rms correlation= ( 0.226456 , 0.0073238 , 0.970467 )
+OPAL {0}> * dh= 0.03 [m] dT= 3.0335e-14 [s]
+OPAL {0}> * hr= ( 5.5116e-05 , 6.17939e-05 , 1.17835e-06 ) [m]
+OPAL {0}> * spos= 4.39243e-06 [m]
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}> 
+OPAL {0}> * Wrote beam statistics.
+OPAL {0}> 09.42.00 Step 81 at 4.60147e-06 [m] t= 2.45714e-12 [s] E=0.000222106 [MeV] 
+OPAL {0}> 09.42.00 Step 82 at 4.81781e-06 [m] t= 2.48747e-12 [s] E=0.000232476 [MeV] 
+OPAL {0}> 09.42.00 Step 83 at 5.04146e-06 [m] t= 2.51781e-12 [s] E=0.000243176 [MeV] 
+OPAL {0}> 09.42.00 Step 84 at 5.27241e-06 [m] t= 2.54814e-12 [s] E=0.000254208 [MeV] 
+OPAL {0}> 09.42.00 Step 85 at 5.51067e-06 [m] t= 2.57848e-12 [s] E=0.000265571 [MeV] 
+OPAL {0}> 09.42.00 Step 86 at 5.09667e-06 [m] t= 2.60881e-12 [s] E=0.0513772 [MeV] 
+OPAL {0}> 09.42.00 Step 87 at 5.21617e-06 [m] t= 2.63915e-12 [s] E=0.0234904 [MeV] 
+OPAL {0}> 09.42.00 Step 88 at 5.44741e-06 [m] t= 2.66948e-12 [s] E=0.000262562 [MeV] 
+OPAL {0}> 09.42.00 Step 89 at 5.45461e-06 [m] t= 2.69982e-12 [s] E=0.0224911 [MeV] 
+OPAL {0}> 09.42.00 Step 90 at 5.23404e-06 [m] t= 2.73015e-12 [s] E=0.0428568 [MeV] 
+OPAL {0}> * Wrote beam phase space.
+OPAL {0}> * ************** B U N C H ********************************************************* 
+OPAL {0}> * NP= 26 Qtot= 0.0005382 [nC]  Qi= 2.07e-14 [C]
+OPAL {0}> * Ekin= 0.000252546 [MeV] dEkin= 0.000297091 [MeV]
+OPAL {0}> * rmax= ( 0.000522341 , 0.000423817 , 2.26679e-05 ) [m]
+OPAL {0}> * rmin= ( -0.000332831 , -0.000503013 , -6.64594e-07 ) [m]
+OPAL {0}> * rms beam size= ( 0.000233756 , 0.000258239 , 6.52835e-06 ) [m]
+OPAL {0}> * rms momenta= ( 0.000673468 , 0.000652331 , 0.0184993 ) [beta gamma]
+OPAL {0}> * mean position= ( 8.88521e-05 , -6.09502e-06 , 5.57182e-06 ) [m]
+OPAL {0}> * mean momenta= ( -0.000337458 , -8.56182e-05 , 0.0254125 ) [beta gamma]
+OPAL {0}> * rms emmitance= ( 4.99202e-06 , 5.35672e-06 , 1.07761e-06 ) (not normalized)
+OPAL {0}> * rms correlation= ( 0.0764802 , 0.016917 , 0.959835 )
+OPAL {0}> * dh= 0.03 [m] dT= 3.0335e-14 [s]
+OPAL {0}> * hr= ( 5.70114e-05 , 6.17887e-05 , 1.5555e-06 ) [m]
+OPAL {0}> * spos= 5.23404e-06 [m]
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}> 
+OPAL {0}> * Wrote beam statistics.
+OPAL {0}> 09.42.00 Step 91 at 5.46168e-06 [m] t= 2.76049e-12 [s] E=0.00026316 [MeV] 
+OPAL {0}> 09.42.00 Step 92 at 5.41573e-06 [m] t= 2.79082e-12 [s] E=0.0395818 [MeV] 
+OPAL {0}> 09.42.00 Step 93 at 5.64658e-06 [m] t= 2.82116e-12 [s] E=0.000265143 [MeV] 
+OPAL {0}> 09.42.00 Step 94 at 5.64541e-06 [m] t= 2.85149e-12 [s] E=0.018526 [MeV] 
+OPAL {0}> 09.42.00 Step 95 at 5.30303e-06 [m] t= 2.88183e-12 [s] E=0.0531395 [MeV] 
+OPAL {0}> 09.42.00 Step 96 at 5.52778e-06 [m] t= 2.91216e-12 [s] E=0.000261705 [MeV] 
+OPAL {0}> 09.42.00 Step 97 at 5.75983e-06 [m] t= 2.9425e-12 [s] E=0.000272246 [MeV] 
+OPAL {0}> 09.42.00 Step 98 at 5.53038e-06 [m] t= 2.97283e-12 [s] E=0.0481894 [MeV] 
+OPAL {0}> 09.42.00 Step 99 at 5.76032e-06 [m] t= 3.00317e-12 [s] E=0.000269246 [MeV] 
+OPAL {0}> * Wrote beam phase space.
+OPAL {0}> * ************** B U N C H ********************************************************* 
+OPAL {0}> * NP= 35 Qtot= 0.0007245 [nC]  Qi= 2.07e-14 [C]
+OPAL {0}> * Ekin= 0.000269246 [MeV] dEkin= 0.000333227 [MeV]
+OPAL {0}> * rmax= ( 0.00052225 , 0.00042376 , 2.82389e-05 ) [m]
+OPAL {0}> * rmin= ( -0.000332918 , -0.000503002 , -8.31327e-07 ) [m]
+OPAL {0}> * rms beam size= ( 0.000226954 , 0.000260556 , 7.68369e-06 ) [m]
+OPAL {0}> * rms momenta= ( 0.000642073 , 0.00066825 , 0.0200961 ) [beta gamma]
+OPAL {0}> * mean position= ( 9.93713e-05 , 8.24008e-07 , 5.94087e-06 ) [m]
+OPAL {0}> * mean momenta= ( -0.000277499 , -5.25196e-05 , 0.0254903 ) [beta gamma]
+OPAL {0}> * rms emmitance= ( 4.48701e-06 , 5.35704e-06 , 1.30562e-06 ) (not normalized)
+OPAL {0}> * rms correlation= ( 0.0242405 , 0.046874 , 0.961582 )
+OPAL {0}> * dh= 0.03 [m] dT= 3.0335e-14 [s]
+OPAL {0}> * hr= ( 5.70112e-05 , 6.17841e-05 , 1.93801e-06 ) [m]
+OPAL {0}> * spos= 5.76032e-06 [m]
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}> 
+OPAL {0}> * Wrote beam statistics.
+OPAL {0}> Dump phase space of last step
+FM2DD {0}> 
+FM2DD {0}> * ************ I N F O *********************************************************
+FM2DD {0}> * freed fieldmap '1T3.T7'                                                      *
+FM2DD {0}> * ******************************************************************************
+FM2DD {0}> 
+FM2DD {0}> 
+
+Replacing the object "COL".
+
+Replacing the object "COL".
+
+
+
+Replacing the object "SP1".
+
+
+Replacing the object "SP2".
+
+
+Replacing the object "SP3".
+
+
+
+Replacing the object "SP4".
+
+Replacing the object "
+Replacing the object "SP5".
+
+SP1
+Replacing the object "GUN".".
+
+FM2DD {0}> 
+FM2DD {0}> * ************ I N F O *********************************************************
+FM2DD {0}> * freed fieldmap '1T1.T7'                                                      *
+FM2DD {0}> * ******************************************************************************
+FM2DD {0}> 
+FM2DD {0}> 
+OPAL {0}> done executing ParallelTTracker at 09.42.00
+
+
+
+Replacing the object "L1".
+
+
+Replacing the object "SP2".
+
+
+Replacing the object "COL".
+Replacing the object "COL
+
+".
+
+
+Replacing the object "SP1".
+
+
+Replacing the object "SP1".
+
+
+Replacing the object "SP2".
+
+
+Replacing the object "SP2".
+
+
+Replacing the object "SP3".
+
+
+Replacing the object "SP3".
+
+
+Replacing the object "SP4".
+
+
+Replacing the object "SP4".
+
+
+Replacing the object "SP5".
+
+
+
+Replacing the object "SP5".
+
+
+Replacing the object "GUN".
+
+Replacing the object "
+Replacing the object "GUN".
+
+SP3".
+OPAL {0}> 
+OPAL {0}> value: {I,RV1,RV2,RV3,RV4,RV5}={2,3.89909,0,0,0,0}
+OPAL {0}> 
+
+Replacing the object "L1".
+
+
+
+Replacing the object "L1".
+
+
+OPAL {0}> 
+OPAL {0}> 8 elements selected.
+OPAL {0}> 
+Replacing the object "SP4OPAL {0}> * ********************************************************************************** 
+OPAL {0}>   Selected Tracking Method == PARALLEL-T, SCAN TRACK
+OPAL {0}> * ********************************************************************************** 
+".
+
+
+Replacing the object "SP5".
+
+
+Replacing the object "GUN".
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}>   PARALLEL-T SCAN
+OPAL {0}> * ********************************************************************************** 
+
+
+Replacing the object "L1".
+
+OPAL {0}>  -- B I N N I N G in T -----------------------------------------
+OPAL {0}>  ---------------------I N P U T --------------------------------
+OPAL {0}>  GUNGAUSS FLAT TOP &  THERMAL EMITTANCE in ASTRA MODE
+OPAL {0}>  Kinetic energy (thermal emittance) = 0.4 [eV]  
+OPAL {0}>  Phi max = 90 [deg]  
+OPAL {0}>  tBin = 3.0335e-12 [sec]  nBins = 5 tEmission =  1.51675e-11 [sec] 
+OPAL {0}> -----------------------------------------
+OPAL {0}>      CREATE BINNED GAUSS DISTRIBUTION DONE        
+OPAL {0}> Bins= 5 hBin= 0 Particle vector length 0
+OPAL {0}> Bin # 0 val 36
+OPAL {0}> Bin # 1 val 249
+OPAL {0}> Bin # 2 val 446
+OPAL {0}> Bin # 3 val 233
+OPAL {0}> Bin # 4 val 36
+OPAL {0}> Last emitted bin is 0
+OPAL {0}> 
+OPAL {0}> * ************* D I S T R I B U T I O N ******************************************** 
+OPAL {0}> * Distribution:	DIST1
+OPAL {0}> * Distribution type:	GUNGAUSSFLATTOPTH
+OPAL {0}> * sigmax=	0.0005455 [m];	sigmay=	0.0005455 [m];	sigmat=	0 [m];
+OPAL {0}> * transverse cut  3 [sigma] 
+OPAL {0}> * sigmapx=	0 [eV];	sigmapy=	0 [eV];	pt +- sigmapt=	0+-0 [eV]
+OPAL {0}> * corr x-px=	0	 corr y-py=	0	 corr t-pt=	0
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}> 
+OPAL {0}> * ************* B E A M ************************************************************ 
+OPAL {0}> * BEAM        BEAM1
+OPAL {0}> * PARTICLE    ELECTRON
+OPAL {0}> * CURRENT     0.0310284 A
+OPAL {0}> * FREQENCY    1.49896e+09 Hz
+OPAL {0}> * CHARGE      -e * 1 
+OPAL {0}> * REST MASS   0.000510999 GeV
+OPAL {0}> * MOMENTUM    1.01094e-06
+OPAL {0}> * NPART       1000
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}> 
+OPAL {0}> * ************* F I E L D S O L V E R ********************************************** 
+OPAL {0}> * FIELDSOLVER  FS1
+OPAL {0}> * TYPE         FFT
+OPAL {0}> * N-PROCESSORS 4
+OPAL {0}> * MX           16
+OPAL {0}> * MY           16
+OPAL {0}> * MT           16
+OPAL {0}> * BBOXINCR     3
+OPAL {0}> * GRRENSF      INTEGRATED
+OPAL {0}> * XDIM is parallel  
+OPAL {0}> * YDIM is parallel  
+OPAL {0}> * Z(T)DIM is parallel  
+OPAL {0}> 
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}> 
+OPAL {0}> 
+OPAL {0}> Phase space dump frequency 10 and statistics dump frequency 10 w.r.t. the time step.
+RFCavity {0}> GUN using file 1T1.T7 (2D dynamic); zini= 0 m; zfinal= 0.008 m;
+Solenoid {0}> SP1 using file 1T2.T7 (2D magnetostatic); zini= 0 m; zfinal= 0.12 m;
+Solenoid {0}> SP2 using file 1T3.T7 (2D dynamic); zini= 0 m; zfinal= 0.49 m;
+Solenoid {0}> SP3 using file 1T3.T7 (2D dynamic); zini= 0 m; zfinal= 0.49 m;
+Solenoid {0}> SP4 using file 1T3.T7 (2D dynamic); zini= 0 m; zfinal= 0.49 m;
+Solenoid {0}> SP5 using file 1T3.T7 (2D dynamic); zini= 0 m; zfinal= 0.49 m;
+OPAL {0}> execute .... -1
+OPAL {0}> totalParticle_i= 0
+OPAL {0}> Track start at: 09.42.04, t= 0; zstop at: 1e+06 [m]
+OPAL {0}> Executing ParallelTTracker, initial DT 1e-12 [s];
+OPAL {0}> max integration steps 100, step= 1, Nplocal= 0
+OPAL {0}> 
+OPAL {0}> --- BEGIN FIELD LIST ---------------------------------------------------------------
+OPAL {0}> 
+OPAL {0}> --- -0.5315 m -- -0.4115 m -- alpha = 0 -- beta = 0 --------------------------------
+OPAL {0}> SP1
+OPAL {0}> --- -0.397 m -- -0.267 m -- alpha = 0 -- beta = 0 ----------------------------------
+OPAL {0}> SP2
+OPAL {0}> --- -0.267 m -- -0.157 m -- alpha = 0 -- beta = 0 ----------------------------------
+OPAL {0}> SP2
+OPAL {0}> SP3
+OPAL {0}> --- -0.157 m -- -0.047 m -- alpha = 0 -- beta = 0 ----------------------------------
+OPAL {0}> SP2
+OPAL {0}> SP3
+OPAL {0}> SP4
+OPAL {0}> --- -0.047 m -- 0 m -- alpha = 0 -- beta = 0 ---------------------------------------
+OPAL {0}> SP2
+OPAL {0}> SP3
+OPAL {0}> SP4
+OPAL {0}> SP5
+OPAL {0}> --- 0 m -- 0.008 m -- alpha = 0 -- beta = 0 ----------------------------------------
+OPAL {0}> SP2
+OPAL {0}> SP3
+OPAL {0}> SP4
+OPAL {0}> SP5
+OPAL {0}> GUN
+OPAL {0}> --- 0.008 m -- 0.093 m -- alpha = 0 -- beta = 0 ------------------------------------
+OPAL {0}> SP2
+OPAL {0}> SP3
+OPAL {0}> SP4
+OPAL {0}> SP5
+OPAL {0}> --- 0.093 m -- 0.223 m -- alpha = 0 -- beta = 0 ------------------------------------
+OPAL {0}> SP3
+OPAL {0}> SP4
+OPAL {0}> SP5
+OPAL {0}> --- 0.223 m -- 0.333 m -- alpha = 0 -- beta = 0 ------------------------------------
+OPAL {0}> SP4
+OPAL {0}> SP5
+OPAL {0}> --- 0.333 m -- 0.443 m -- alpha = 0 -- beta = 0 ------------------------------------
+OPAL {0}> SP5
+OPAL {0}> 
+OPAL {0}> --- END FIELD LIST -----------------------------------------------------------------
+OPAL {0}> 
+FM2DD {0}> 
+FM2DD {0}> * ************ I N F O *********************************************************
+FM2DD {0}> * read in fieldmap '1T3.T7'                                                    *
+FM2DD {0}> * ******************************************************************************
+FM2DD {0}> 
+FM2DD {0}> 
+FM2DD {0}> 
+FM2DD {0}> * ************ I N F O *********************************************************
+FM2DD {0}> * read in fieldmap '1T1.T7'                                                    *
+FM2DD {0}> * ******************************************************************************
+FM2DD {0}> 
+FM2DD {0}> 
+OPAL {0}> MINSTEPFORREBIN 1500
+OPAL {0}> REPARTFREQ 1000
+OPAL {0}> Changing emission time step to: 3.0335e-14
+OPAL {0}> Step 1 no emission yet  t= 3.0335e-14 [s]
+OPAL {0}> Step 2 no emission yet  t= 6.067e-14 [s]
+OPAL {0}> Step 3 no emission yet  t= 9.10051e-14 [s]
+OPAL {0}> Step 4 no emission yet  t= 1.2134e-13 [s]
+OPAL {0}> Step 5 no emission yet  t= 1.51675e-13 [s]
+OPAL {0}> Step 6 no emission yet  t= 1.8201e-13 [s]
+OPAL {0}> Step 7 no emission yet  t= 2.12345e-13 [s]
+OPAL {0}> Step 8 no emission yet  t= 2.4268e-13 [s]
+OPAL {0}> Step 9 no emission yet  t= 2.73015e-13 [s]
+OPAL {0}> Step 10 no emission yet  t= 3.0335e-13 [s]
+OPAL {0}> Step 11 no emission yet  t= 3.33685e-13 [s]
+OPAL {0}> Step 12 no emission yet  t= 3.6402e-13 [s]
+OPAL {0}> Step 13 no emission yet  t= 3.94355e-13 [s]
+OPAL {0}> 09.42.08 Step 14; only 1 particles emitted; t= 4.2469e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 15; only 2 particles emitted; t= 4.55025e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 16; only 2 particles emitted; t= 4.8536e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 17; only 2 particles emitted; t= 5.15695e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 18; only 2 particles emitted; t= 5.4603e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 19; only 2 particles emitted; t= 5.76365e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 20; only 2 particles emitted; t= 6.067e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 21; only 2 particles emitted; t= 6.37035e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 22; only 2 particles emitted; t= 6.67371e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 23; only 2 particles emitted; t= 6.97706e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 24; only 2 particles emitted; t= 7.28041e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 25; only 2 particles emitted; t= 7.58376e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 26; only 2 particles emitted; t= 7.88711e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 27; only 3 particles emitted; t= 8.19046e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 28; only 3 particles emitted; t= 8.49381e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 29; only 3 particles emitted; t= 8.79716e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 30; only 4 particles emitted; t= 9.10051e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 31; only 4 particles emitted; t= 9.40386e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 32; only 4 particles emitted; t= 9.70721e-13 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 33; only 4 particles emitted; t= 1.00106e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 34; only 5 particles emitted; t= 1.03139e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 35; only 5 particles emitted; t= 1.06173e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 36; only 6 particles emitted; t= 1.09206e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 37; only 6 particles emitted; t= 1.1224e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 38; only 6 particles emitted; t= 1.15273e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 39; only 6 particles emitted; t= 1.18307e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 40; only 6 particles emitted; t= 1.2134e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 41; only 6 particles emitted; t= 1.24374e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 42; only 7 particles emitted; t= 1.27407e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 43; only 7 particles emitted; t= 1.30441e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 44; only 7 particles emitted; t= 1.33474e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 45; only 7 particles emitted; t= 1.36508e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 46; only 8 particles emitted; t= 1.39541e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 47; only 8 particles emitted; t= 1.42575e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 48; only 8 particles emitted; t= 1.45608e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 49; only 8 particles emitted; t= 1.48642e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 50; only 8 particles emitted; t= 1.51675e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 51; only 8 particles emitted; t= 1.54709e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 52; only 8 particles emitted; t= 1.57742e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 53; only 8 particles emitted; t= 1.60776e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 54; only 9 particles emitted; t= 1.63809e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 55; only 9 particles emitted; t= 1.66843e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 56; only 9 particles emitted; t= 1.69876e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 57; only 9 particles emitted; t= 1.7291e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 58; only 10 particles emitted; t= 1.75943e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 59; only 10 particles emitted; t= 1.78977e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 60; only 10 particles emitted; t= 1.8201e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 61 at 3.12242e-06 [m] t= 1.85044e-12 [s] E=0 [MeV] 
+OPAL {0}> 09.42.08 Step 62 at 3.30422e-06 [m] t= 1.88077e-12 [s] E=0.000164107 [MeV] 
+OPAL {0}> 09.42.08 Step 63 at 2.12137e-06 [m] t= 1.91111e-12 [s] E=0.0930826 [MeV] 
+OPAL {0}> 09.42.08 Step 64 at 2.13557e-06 [m] t= 1.94144e-12 [s] E=0.0394631 [MeV] 
+OPAL {0}> 09.42.08 Step 65 at 3.09483e-06 [m] t= 1.97178e-12 [s] E=0.0731526 [MeV] 
+OPAL {0}> 09.42.08 Step 66 at 3.25977e-06 [m] t= 2.00211e-12 [s] E=0.000141266 [MeV] 
+OPAL {0}> 09.42.08 Step 67 at 3.43233e-06 [m] t= 2.03245e-12 [s] E=0.000149247 [MeV] 
+OPAL {0}> 09.42.08 Step 68 at 3.61252e-06 [m] t= 2.06278e-12 [s] E=0.00015759 [MeV] 
+OPAL {0}> 09.42.08 Step 69 at 3.69989e-06 [m] t= 2.09312e-12 [s] E=0.0321038 [MeV] 
+OPAL {0}> 09.42.08 Step 70 at 3.88825e-06 [m] t= 2.12345e-12 [s] E=0.000165145 [MeV] 
+OPAL {0}> * Wrote beam phase space.
+OPAL {0}> * ************** B U N C H ********************************************************* 
+OPAL {0}> * NP= 17 Qtot= 0.0003519 [nC]  Qi= 2.07e-14 [C]
+OPAL {0}> * Ekin= 0.000165145 [MeV] dEkin= 0.000196402 [MeV]
+OPAL {0}> * rmax= ( 0.000494824 , 0.000420595 , 1.29968e-05 ) [m]
+OPAL {0}> * rmin= ( -0.000331805 , -0.000387658 , -3.60136e-07 ) [m]
+OPAL {0}> * rms beam size= ( 0.000220358 , 0.000257414 , 4.09955e-06 ) [m]
+OPAL {0}> * rms momenta= ( 0.000701486 , 0.000737262 , 0.0151214 ) [beta gamma]
+OPAL {0}> * mean position= ( 0.000131673 , 1.89257e-05 , 3.48503e-06 ) [m]
+OPAL {0}> * mean momenta= ( -0.000220552 , -0.000143223 , 0.0204169 ) [beta gamma]
+OPAL {0}> * rms emmitance= ( 5.91443e-06 , 7.45364e-06 , 5.55247e-07 ) (not normalized)
+OPAL {0}> * rms correlation= ( 0.231508 , 0.0531077 , 0.973723 )
+OPAL {0}> * dh= 0.03 [m] dT= 3.0335e-14 [s]
+OPAL {0}> * hr= ( 5.51086e-05 , 5.38835e-05 , 8.90462e-07 ) [m]
+OPAL {0}> * spos= 3.88825e-06 [m]
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}> 
+OPAL {0}> * Wrote beam statistics.
+OPAL {0}> 09.42.08 Step 71 at 4.08424e-06 [m] t= 2.15379e-12 [s] E=0.000174085 [MeV] 
+OPAL {0}> 09.42.08 Step 72 at 4.28786e-06 [m] t= 2.18412e-12 [s] E=0.000183386 [MeV] 
+OPAL {0}> 09.42.08 Step 73 at 4.49911e-06 [m] t= 2.21446e-12 [s] E=0.000193047 [MeV] 
+OPAL {0}> 09.42.08 Step 74 at 4.71798e-06 [m] t= 2.24479e-12 [s] E=0.000203069 [MeV] 
+OPAL {0}> 09.42.08 Step 75 at 4.94447e-06 [m] t= 2.27513e-12 [s] E=0.00021345 [MeV] 
+OPAL {0}> 09.42.08 Step 76 at 4.95874e-06 [m] t= 2.30546e-12 [s] E=0.030283 [MeV] 
+OPAL {0}> 09.42.08 Step 77 at 4.66791e-06 [m] t= 2.3358e-12 [s] E=0.0286111 [MeV] 
+OPAL {0}> 09.42.08 Step 78 at 4.88813e-06 [m] t= 2.36613e-12 [s] E=0.000220962 [MeV] 
+OPAL {0}> 09.42.08 Step 79 at 5.11598e-06 [m] t= 2.39647e-12 [s] E=0.000231674 [MeV] 
+OPAL {0}> 09.42.08 Step 80 at 4.57794e-06 [m] t= 2.4268e-12 [s] E=0.0271375 [MeV] 
+OPAL {0}> * Wrote beam phase space.
+OPAL {0}> * ************** B U N C H ********************************************************* 
+OPAL {0}> * NP= 20 Qtot= 0.000414 [nC]  Qi= 2.07e-14 [C]
+OPAL {0}> * Ekin= 0.000230706 [MeV] dEkin= 0.000254657 [MeV]
+OPAL {0}> * rmax= ( 0.000494834 , 0.000423884 , 1.79209e-05 ) [m]
+OPAL {0}> * rmin= ( -0.000331905 , -0.000503025 , -5.0407e-07 ) [m]
+OPAL {0}> * rms beam size= ( 0.000224227 , 0.000264373 , 5.41125e-06 ) [m]
+OPAL {0}> * rms momenta= ( 0.000669918 , 0.000689377 , 0.01659 ) [beta gamma]
+OPAL {0}> * mean position= ( 9.25094e-05 , -1.87899e-05 , 4.87425e-06 ) [m]
+OPAL {0}> * mean momenta= ( -0.000234213 , -0.000139367 , 0.0250437 ) [beta gamma]
+OPAL {0}> * rms emmitance= ( 4.86807e-06 , 6.06424e-06 , 7.21972e-07 ) (not normalized)
+OPAL {0}> * rms correlation= ( 0.22681 , 0.00816627 , 0.970353 )
+OPAL {0}> * dh= 0.03 [m] dT= 3.0335e-14 [s]
+OPAL {0}> * hr= ( 5.5116e-05 , 6.1794e-05 , 1.22833e-06 ) [m]
+OPAL {0}> * spos= 4.57794e-06 [m]
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}> 
+OPAL {0}> * Wrote beam statistics.
+OPAL {0}> 09.42.08 Step 81 at 4.79589e-06 [m] t= 2.45714e-12 [s] E=0.000241635 [MeV] 
+OPAL {0}> 09.42.08 Step 82 at 5.02146e-06 [m] t= 2.48747e-12 [s] E=0.000252923 [MeV] 
+OPAL {0}> 09.42.08 Step 83 at 5.25466e-06 [m] t= 2.51781e-12 [s] E=0.000264573 [MeV] 
+OPAL {0}> 09.42.08 Step 84 at 5.49549e-06 [m] t= 2.54814e-12 [s] E=0.000276583 [MeV] 
+OPAL {0}> 09.42.08 Step 85 at 5.74394e-06 [m] t= 2.57848e-12 [s] E=0.000288953 [MeV] 
+OPAL {0}> 09.42.08 Step 86 at 5.31248e-06 [m] t= 2.60881e-12 [s] E=0.0514016 [MeV] 
+OPAL {0}> 09.42.08 Step 87 at 5.43715e-06 [m] t= 2.63915e-12 [s] E=0.0235135 [MeV] 
+OPAL {0}> 09.42.08 Step 88 at 5.67828e-06 [m] t= 2.66948e-12 [s] E=0.000285695 [MeV] 
+OPAL {0}> 09.42.08 Step 89 at 5.68588e-06 [m] t= 2.69982e-12 [s] E=0.0225153 [MeV] 
+OPAL {0}> 09.42.08 Step 90 at 5.45602e-06 [m] t= 2.73015e-12 [s] E=0.042881 [MeV] 
+OPAL {0}> * Wrote beam phase space.
+OPAL {0}> * ************** B U N C H ********************************************************* 
+OPAL {0}> * NP= 26 Qtot= 0.0005382 [nC]  Qi= 2.07e-14 [C]
+OPAL {0}> * Ekin= 0.000274802 [MeV] dEkin= 0.000323505 [MeV]
+OPAL {0}> * rmax= ( 0.000522341 , 0.000423818 , 2.36321e-05 ) [m]
+OPAL {0}> * rmin= ( -0.00033283 , -0.000503013 , -6.93173e-07 ) [m]
+OPAL {0}> * rms beam size= ( 0.000233756 , 0.000258239 , 6.80679e-06 ) [m]
+OPAL {0}> * rms momenta= ( 0.000673767 , 0.000652123 , 0.0193117 ) [beta gamma]
+OPAL {0}> * mean position= ( 8.88521e-05 , -6.09496e-06 , 5.80819e-06 ) [m]
+OPAL {0}> * mean momenta= ( -0.0003371 , -8.50837e-05 , 0.0265008 ) [beta gamma]
+OPAL {0}> * rms emmitance= ( 4.78744e-06 , 5.13342e-06 , 1.12523e-06 ) (not normalized)
+OPAL {0}> * rms correlation= ( 0.0771255 , 0.0182087 , 0.959775 )
+OPAL {0}> * dh= 0.03 [m] dT= 3.0335e-14 [s]
+OPAL {0}> * hr= ( 5.70114e-05 , 6.17887e-05 , 1.62168e-06 ) [m]
+OPAL {0}> * spos= 5.45602e-06 [m]
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}> 
+OPAL {0}> * Wrote beam statistics.
+OPAL {0}> 09.42.08 Step 91 at 5.6934e-06 [m] t= 2.76049e-12 [s] E=0.000286356 [MeV] 
+OPAL {0}> 09.42.08 Step 92 at 5.64569e-06 [m] t= 2.79082e-12 [s] E=0.039606 [MeV] 
+OPAL {0}> 09.42.08 Step 93 at 5.88641e-06 [m] t= 2.82116e-12 [s] E=0.00028852 [MeV] 
+OPAL {0}> 09.42.08 Step 94 at 5.88519e-06 [m] t= 2.85149e-12 [s] E=0.0185504 [MeV] 
+OPAL {0}> 09.42.08 Step 95 at 5.52824e-06 [m] t= 2.88183e-12 [s] E=0.053164 [MeV] 
+OPAL {0}> 09.42.08 Step 96 at 5.76259e-06 [m] t= 2.91216e-12 [s] E=0.000284784 [MeV] 
+OPAL {0}> 09.42.08 Step 97 at 6.00457e-06 [m] t= 2.9425e-12 [s] E=0.000296259 [MeV] 
+OPAL {0}> 09.42.08 Step 98 at 5.76544e-06 [m] t= 2.97283e-12 [s] E=0.0482143 [MeV] 
+OPAL {0}> 09.42.08 Step 99 at 6.00521e-06 [m] t= 3.00317e-12 [s] E=0.000292997 [MeV] 
+OPAL {0}> * Wrote beam phase space.
+OPAL {0}> * ************** B U N C H ********************************************************* 
+OPAL {0}> * NP= 35 Qtot= 0.0007245 [nC]  Qi= 2.07e-14 [C]
+OPAL {0}> * Ekin= 0.000292997 [MeV] dEkin= 0.000362904 [MeV]
+OPAL {0}> * rmax= ( 0.00052225 , 0.000423762 , 2.94431e-05 ) [m]
+OPAL {0}> * rmin= ( -0.000332918 , -0.000503002 , -8.67273e-07 ) [m]
+OPAL {0}> * rms beam size= ( 0.000226954 , 0.000260556 , 8.01267e-06 ) [m]
+OPAL {0}> * rms momenta= ( 0.000642429 , 0.000668029 , 0.0209808 ) [beta gamma]
+OPAL {0}> * mean position= ( 9.93713e-05 , 8.24096e-07 , 6.19335e-06 ) [m]
+OPAL {0}> * mean momenta= ( -0.000277039 , -5.19335e-05 , 0.0265802 ) [beta gamma]
+OPAL {0}> * rms emmitance= ( 4.30355e-06 , 5.1332e-06 , 1.36355e-06 ) (not normalized)
+OPAL {0}> * rms correlation= ( 0.0251758 , 0.0483677 , 0.961528 )
+OPAL {0}> * dh= 0.03 [m] dT= 3.0335e-14 [s]
+OPAL {0}> * hr= ( 5.70112e-05 , 6.17842e-05 , 2.02069e-06 ) [m]
+OPAL {0}> * spos= 6.00521e-06 [m]
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}> 
+OPAL {0}> * Wrote beam statistics.
+OPAL {0}> Dump phase space of last step
+FM2DD {0}> 
+FM2DD {0}> * ************ I N F O *********************************************************
+FM2DD {0}> * freed fieldmap '1T3.T7'                                                      *
+FM2DD {0}> * ******************************************************************************
+FM2DD {0}> 
+FM2DD {0}> 
+FM2DD {0}> 
+FM2DD {0}> * ************ I N F O *********************************************************
+FM2DD {0}> * freed fieldmap '1T1.T7'                                                      *
+FM2DD {0}> * ******************************************************************************
+FM2DD {0}> 
+FM2DD {0}> 
+OPAL {0}> done executing ParallelTTracker at 09.42.08
+OPAL {0}> End of input stream "Scan-1.in".
+Timings{0}> -----------------------------------------------------------------
+Timings{0}>      Timing results for 4 nodes:
+Timings{0}> -----------------------------------------------------------------
+Timings{0}> mainTimer ........... Wall tot =    25.3911, CPU tot =      25.08
+Timings{0}> 
+Timings{0}> Secondary emission .. Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> Particle Inside ..... Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> zshiftPre Processing  Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> Ray tracing ......... Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> Check inward ........ Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> Pre Processing ...... Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> SelfField ........... Wall max =    1.45915, CPU max =       1.49
+Timings{0}>                       Wall avg =    1.45849, CPU avg =     1.4575
+Timings{0}>                       Wall min =     1.4578, CPU min =       1.43
+Timings{0}> 
+Timings{0}> Boundingbox ......... Wall max =   0.011569, CPU max =       0.02
+Timings{0}>                       Wall avg =     0.0115, CPU avg =     0.0125
+Timings{0}>                       Wall min =   0.011455, CPU min =       0.01
+Timings{0}> 
+Timings{0}> Statistics .......... Wall max =   0.009445, CPU max =       0.03
+Timings{0}>                       Wall avg =  0.0093205, CPU avg =      0.015
+Timings{0}>                       Wall min =   0.009208, CPU min =          0
+Timings{0}> 
+Timings{0}> Potential ........... Wall max =    1.31389, CPU max =       1.38
+Timings{0}>                       Wall avg =    1.31307, CPU avg =     1.3175
+Timings{0}>                       Wall min =    1.31227, CPU min =       1.28
+Timings{0}> 
+Timings{0}> Histogram ........... Wall max =    1.1e-05, CPU max =          0
+Timings{0}>                       Wall avg =      1e-05, CPU avg =          0
+Timings{0}>                       Wall min =      9e-06, CPU min =          0
+Timings{0}> 
+Timings{0}> CreatDistr .......... Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> LoadDistr ........... Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> GreensFTotal ........ Wall max =    0.90168, CPU max =       0.92
+Timings{0}>                       Wall avg =   0.898662, CPU avg =     0.8925
+Timings{0}>                       Wall min =   0.896783, CPU min =       0.87
+Timings{0}> 
+Timings{0}> IntGreenF1 .......... Wall max =   0.182884, CPU max =       0.15
+Timings{0}>                       Wall avg =   0.057361, CPU avg =     0.0475
+Timings{0}>                       Wall min =    0.00333, CPU min =       0.01
+Timings{0}> 
+Timings{0}> IntGreenF2 .......... Wall max =   0.022537, CPU max =       0.03
+Timings{0}>                       Wall avg =  0.0121005, CPU avg =      0.015
+Timings{0}>                       Wall min =   0.006888, CPU min =          0
+Timings{0}> 
+Timings{0}> IntGreenF3 .......... Wall max =   0.217861, CPU max =       0.22
+Timings{0}>                       Wall avg =   0.163333, CPU avg =     0.1775
+Timings{0}>                       Wall min =    0.03609, CPU min =       0.07
+Timings{0}> 
+Timings{0}> IntGreenF4 .......... Wall max =   0.113682, CPU max =       0.13
+Timings{0}>                       Wall avg =   0.109032, CPU avg =      0.105
+Timings{0}>                       Wall min =   0.099733, CPU min =       0.09
+Timings{0}> 
+Timings{0}> ShIntGreenF1 ........ Wall max =   0.181986, CPU max =       0.17
+Timings{0}>                       Wall avg =  0.0572072, CPU avg =     0.0525
+Timings{0}>                       Wall min =   0.003431, CPU min =          0
+Timings{0}> 
+Timings{0}> ShIntGreenF2 ........ Wall max =    0.18939, CPU max =       0.19
+Timings{0}>                       Wall avg =  0.0590622, CPU avg =       0.06
+Timings{0}>                       Wall min =   0.003298, CPU min =          0
+Timings{0}> 
+Timings{0}> ShIntGreenF3 ........ Wall max =   0.441268, CPU max =       0.44
+Timings{0}>                       Wall avg =   0.330843, CPU avg =      0.335
+Timings{0}>                       Wall min =   0.088405, CPU min =       0.11
+Timings{0}> 
+Timings{0}> ShIntGreenF4 ........ Wall max =   0.117597, CPU max =       0.13
+Timings{0}>                       Wall avg =   0.107686, CPU avg =        0.1
+Timings{0}>                       Wall min =   0.094834, CPU min =       0.07
+Timings{0}> 
+Timings{0}> GreenF1 ............. Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> GreenF2 ............. Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> GreenF3 ............. Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> GreenF4 ............. Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> H5PartTimer ......... Wall max =   0.247891, CPU max =       0.17
+Timings{0}>                       Wall avg =   0.247838, CPU avg =     0.1275
+Timings{0}>                       Wall min =   0.247744, CPU min =        0.1
+Timings{0}> 
+Timings{0}> H5BlockTimer ........ Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> StatMarkerTimer ..... Wall max =   0.008639, CPU max =       0.01
+Timings{0}>                       Wall avg =  0.0029725, CPU avg =     0.0025
+Timings{0}>                       Wall min =    0.00106, CPU min =          0
+Timings{0}> 
+Timings{0}> TIntegration1 ....... Wall max =   0.005341, CPU max =       0.01
+Timings{0}>                       Wall avg = 0.00526475, CPU avg =     0.0075
+Timings{0}>                       Wall min =   0.005219, CPU min =          0
+Timings{0}> 
+Timings{0}> TIntegration2 ....... Wall max =   0.548493, CPU max =       0.53
+Timings{0}>                       Wall avg =   0.408184, CPU avg =       0.37
+Timings{0}>                       Wall min =   0.085829, CPU min =       0.05
+Timings{0}> 
+Timings{0}> Fieldeval ........... Wall max =   0.045427, CPU max =       0.05
+Timings{0}>                       Wall avg =  0.0453325, CPU avg =      0.035
+Timings{0}>                       Wall min =   0.045243, CPU min =       0.01
+Timings{0}> 
+Timings{0}> Binaryrepart ........ Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> WakeField ........... Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> RC-RRtranspose ...... Wall max =   0.109124, CPU max =       0.12
+Timings{0}>                       Wall avg =  0.0989302, CPU avg =      0.085
+Timings{0}>                       Wall min =    0.08723, CPU min =       0.06
+Timings{0}> 
+Timings{0}> RC-CCtranspose ...... Wall max =   0.363825, CPU max =       0.45
+Timings{0}>                       Wall avg =    0.35207, CPU avg =     0.3425
+Timings{0}>                       Wall min =   0.327835, CPU min =       0.26
+Timings{0}> 
+Timings{0}> RC-RC1Dfft .......... Wall max =   0.054677, CPU max =       0.07
+Timings{0}>                       Wall avg =  0.0538742, CPU avg =     0.0475
+Timings{0}>                       Wall min =   0.052895, CPU min =       0.03
+Timings{0}> 
+Timings{0}> RC-CC1Dfft .......... Wall max =   0.067893, CPU max =        0.1
+Timings{0}>                       Wall avg =  0.0631077, CPU avg =     0.0825
+Timings{0}>                       Wall min =   0.058061, CPU min =       0.06
+Timings{0}> 
+Timings{0}> RC-total ............ Wall max =   0.605725, CPU max =       0.65
+Timings{0}>                       Wall avg =   0.581674, CPU avg =     0.5775
+Timings{0}>                       Wall min =   0.539659, CPU min =       0.51
+Timings{0}> 
+Timings{0}> -----------------------------------------------------------------

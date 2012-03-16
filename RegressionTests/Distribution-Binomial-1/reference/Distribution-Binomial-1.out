@@ -1,0 +1,304 @@
+/gpfs/homefelsim/export/sge/spool/felsim01/job_scripts/30536: line 12: cd: ./Distribution-Binomial-1: No such file or directory
+Ippl> CommMPI: Started job 1 on host `felsim01'.
+Ippl> CommMPI: Started job 3 on host `felsim01'.
+Ippl> CommMPI: Parent process waiting for children ...
+Ippl> CommMPI: Started job 2 on host `felsim01'.
+Ippl> CommMPI: Child 1 ready.
+Ippl> CommMPI: Child 3 ready.
+Ippl> CommMPI: Child 2 ready.
+Ippl> CommMPI: Initialization complete.
+{0}>                ____  _____       ___ 
+{0}>               / __ \|  __ \ /\   | | 
+{0}>              | |  | | |__) /  \  | |
+{0}>              | |  | |  ___/ /\ \ | |
+{0}>              | |__| | |  / ____ \| |____
+{0}>               \____/|_| /_/    \_\______|
+OPAL {0}> 
+OPAL {0}> This is OPAL (Object Oriented Parallel Accelerator Library) Version 1.1.9 SVN version 12544  (c) PSI, http://amas.web.psi.ch
+OPAL {0}> 
+OPAL {0}> Please send cookies, goodies or other motivations (wine and beer ... ) to andreas.adelmann@psi.ch
+OPAL {0}> Time: 07.16.42 date: 08/08/2011
+OPAL {0}> No startup file "/gpfs/homefelsim/adelmann/init.opal" found.
+OPAL {0}> Reading input stream "Distribution-Binomial-1.in".
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}>   Selected Tracking Method == PARALLEL-T, NEW TRACK
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}> * ************* D I S T R I B U T I O N ******************************************** 
+OPAL {0}> * Distribution:	DIST2
+OPAL {0}> * Distribution type:	BINOMIAL
+OPAL {0}> * sigmax=	0.00215 [m];	sigmay=	0.0115 [m];	sigmat=	0.0001 [m];
+OPAL {0}> * transverse cut  3 [sigma] 
+OPAL {0}> * sigmapx=	33.56 [eV];	sigmapy=	28 [eV];	pt +- sigmapt=	0+-11.96 [eV]
+OPAL {0}> * corr x-px=	0	 corr y-py=	0	 corr t-pt=	0
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}> 
+OPAL {0}> * ************* B E A M ************************************************************ 
+OPAL {0}> * BEAM        BEAM1
+OPAL {0}> * PARTICLE    PROTON
+OPAL {0}> * CURRENT     1.001e-09 A
+OPAL {0}> * FREQENCY    1.3e+09 Hz
+OPAL {0}> * CHARGE      +e * 1 
+OPAL {0}> * REST MASS   0.938272 GeV
+OPAL {0}> * MOMENTUM    0.37456
+OPAL {0}> * NPART       1e+06
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}> 
+OPAL {0}> * ************* F I E L D S O L V E R ********************************************** 
+OPAL {0}> * FIELDSOLVER  FS1
+OPAL {0}> * TYPE         FFT
+OPAL {0}> * N-PROCESSORS 4
+OPAL {0}> * MX           16
+OPAL {0}> * MY           16
+OPAL {0}> * MT           32
+OPAL {0}> * BBOXINCR     1
+OPAL {0}> * GRRENSF      INTEGRATED
+OPAL {0}> * XDIM is parallel  
+OPAL {0}> * YDIM is parallel  
+OPAL {0}> * Z(T)DIM is parallel  
+OPAL {0}> 
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}> 
+OPAL {0}> * ************** B U N C H ********************************************************* 
+OPAL {0}> * NP= 1000000 Qtot= 7.7e-10 [nC]  Qi= 7.7e-25 [C]
+OPAL {0}> * Ekin= 7.35511e-05 [MeV] dEkin= 5.9313e-05 [MeV]
+OPAL {0}> * rmax= ( 0.00535515 , 0.0287015 , 0.000492528 ) [m]
+OPAL {0}> * rmin= ( -0.00536148 , -0.0286618 , -4.92528e-06 ) [m]
+OPAL {0}> * rms beam size= ( 0.00214942 , 0.0115019 , 0.000100069 ) [m]
+OPAL {0}> * rms momenta= ( 0.000267579 , 0.00024432 , 0.000159653 ) [beta gamma]
+OPAL {0}> * mean position= ( 2.02039e-06 , 4.82688e-06 , 0.000243973 ) [m]
+OPAL {0}> * mean momenta= ( 2.116e-07 , 2.3543e-07 , 1.0961e-07 ) [beta gamma]
+OPAL {0}> * rms emmitance= ( 0.00145254 , 0.00709716 , 4.03489e-05 ) (not normalized)
+OPAL {0}> * rms correlation= ( -0.00118927 , 0.000909996 , 0.00186159 )
+OPAL {0}> * dh= 0.01 [m] dT= 1e-11 [s]
+OPAL {0}> * hr= ( 0.000714442 , 0.00382422 , 1.60469e-05 ) [m]
+OPAL {0}> * spos= 0.000243973 [m]
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}> 
+OPAL {0}> Phase space dump frequency 10 and statistics dump frequency 1 w.r.t. the time step.
+OPAL {0}> execute .... -1
+OPAL {0}> totalParticle_i= 1000000
+OPAL {0}> Track start at: 07.16.44, t= 0; zstop at: 0.25 [m]
+OPAL {0}> Executing ParallelTTracker, initial DT 1e-11 [s];
+OPAL {0}> max integration steps 11, step= 1, Nplocal= 250190
+OPAL {0}> 
+OPAL {0}> --- BEGIN FIELD LIST ---------------------------------------------------------------
+OPAL {0}> 
+OPAL {0}> --- 0 m -- 1 m -- alpha = 0 -- beta = 0 --------------------------------------------
+OPAL {0}> Q1
+OPAL {0}> 
+OPAL {0}> --- END FIELD LIST -----------------------------------------------------------------
+OPAL {0}> 
+OPAL {0}> Emission done. Switching back to track timestep: 1e-11
+OPAL {0}> * Deleted 489766 particles, remaining 510234 particles
+OPAL {0}> 07.16.47 Step 1 at 0.00952999 [m] t= 1e-11 [s] E=7.36249e-05 [MeV] 
+OPAL {0}> * Wrote beam statistics.
+OPAL {0}> * Deleted 11 particles, remaining 510223 particles
+OPAL {0}> 07.16.47 Step 2 at 0.00953003 [m] t= 2e-11 [s] E=7.36241e-05 [MeV] 
+OPAL {0}> * Wrote beam statistics.
+OPAL {0}> * Deleted 14 particles, remaining 510209 particles
+OPAL {0}> 07.16.48 Step 3 at 0.00953019 [m] t= 3e-11 [s] E=7.36237e-05 [MeV] 
+OPAL {0}> * Wrote beam statistics.
+OPAL {0}> * Deleted 11 particles, remaining 510198 particles
+OPAL {0}> 07.16.48 Step 4 at 0.00953011 [m] t= 4e-11 [s] E=7.36231e-05 [MeV] 
+OPAL {0}> * Wrote beam statistics.
+OPAL {0}> * Deleted 9 particles, remaining 510189 particles
+OPAL {0}> 07.16.48 Step 5 at 0.00953007 [m] t= 5e-11 [s] E=7.36228e-05 [MeV] 
+OPAL {0}> * Wrote beam statistics.
+OPAL {0}> * Deleted 17 particles, remaining 510172 particles
+OPAL {0}> 07.16.49 Step 6 at 0.00953028 [m] t= 6e-11 [s] E=7.36218e-05 [MeV] 
+OPAL {0}> * Wrote beam statistics.
+OPAL {0}> * Deleted 13 particles, remaining 510159 particles
+OPAL {0}> 07.16.49 Step 7 at 0.00953025 [m] t= 7e-11 [s] E=7.36211e-05 [MeV] 
+OPAL {0}> * Wrote beam statistics.
+OPAL {0}> * Deleted 13 particles, remaining 510146 particles
+OPAL {0}> 07.16.49 Step 8 at 0.00953052 [m] t= 8e-11 [s] E=7.3621e-05 [MeV] 
+OPAL {0}> * Wrote beam statistics.
+OPAL {0}> * Deleted 12 particles, remaining 510134 particles
+OPAL {0}> 07.16.49 Step 9 at 0.00953057 [m] t= 9e-11 [s] E=7.36206e-05 [MeV] 
+OPAL {0}> * Wrote beam statistics.
+OPAL {0}> * Deleted 11 particles, remaining 510123 particles
+OPAL {0}> 07.16.50 Step 10 at 0.00953067 [m] t= 1e-10 [s] E=7.36199e-05 [MeV] 
+OPAL {0}> * Wrote beam phase space.
+OPAL {0}> * ************** B U N C H ********************************************************* 
+OPAL {0}> * NP= 510123 Qtot= 3.92795e-10 [nC]  Qi= 7.7e-25 [C]
+OPAL {0}> * Ekin= 7.36199e-05 [MeV] dEkin= 9.17219e-05 [MeV]
+OPAL {0}> * rmax= ( 0.00265644 , 0.0227864 , 0.0226189 ) [m]
+OPAL {0}> * rmin= ( -0.00261575 , -0.00681734 , -0.000226869 ) [m]
+OPAL {0}> * rms beam size= ( 0.000987304 , 0.00510418 , 0.00462509 ) [m]
+OPAL {0}> * rms momenta= ( 0.000187655 , 0.000246608 , 0.000246772 ) [beta gamma]
+OPAL {0}> * mean position= ( 0.000114005 , 0.00644423 , 0.00691059 ) [m]
+OPAL {0}> * mean momenta= ( -6.46476e-09 , 3.37651e-07 , 3.38824e-07 ) [beta gamma]
+OPAL {0}> * rms emmitance= ( 0.000467685 , 0.0031775 , 0.00288115 ) (not normalized)
+OPAL {0}> * rms correlation= ( 0.00616753 , 0.000714598 , 0.00288761 )
+OPAL {0}> * dh= 0.01 [m] dT= 1e-11 [s]
+OPAL {0}> * hr= ( 0.000351479 , 0.00197358 , 0.000736961 ) [m]
+OPAL {0}> * spos= 0.00953067 [m]
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}> 
+OPAL {0}> * Wrote beam statistics.
+OPAL {0}> * Wrote beam statistics.
+OPAL {0}> Dump phase space of last step
+OPAL {0}> done executing ParallelTTracker at 07.16.50
+OPAL {0}> End of input stream "Distribution-Binomial-1.in".
+Timings{0}> -----------------------------------------------------------------
+Timings{0}>      Timing results for 4 nodes:
+Timings{0}> -----------------------------------------------------------------
+Timings{0}> mainTimer ........... Wall tot =    7.88893, CPU tot =       7.81
+Timings{0}> 
+Timings{0}> Secondary emission .. Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> Particle Inside ..... Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> zshiftPre Processing  Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> Ray tracing ......... Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> Check inward ........ Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> Pre Processing ...... Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> SelfField ........... Wall max =    1.11023, CPU max =       1.14
+Timings{0}>                       Wall avg =     1.1102, CPU avg =     1.1125
+Timings{0}>                       Wall min =    1.11017, CPU min =        1.1
+Timings{0}> 
+Timings{0}> Boundingbox ......... Wall max =    3.35785, CPU max =       3.32
+Timings{0}>                       Wall avg =    3.11194, CPU avg =       3.08
+Timings{0}>                       Wall min =    2.88162, CPU min =       2.85
+Timings{0}> 
+Timings{0}> Statistics .......... Wall max =   0.533623, CPU max =       0.54
+Timings{0}>                       Wall avg =   0.476154, CPU avg =     0.4975
+Timings{0}>                       Wall min =   0.423222, CPU min =       0.46
+Timings{0}> 
+Timings{0}> Potential ........... Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> Histogram ........... Wall max =   0.049912, CPU max =       0.07
+Timings{0}>                       Wall avg =  0.0362575, CPU avg =     0.0525
+Timings{0}>                       Wall min =    0.03098, CPU min =       0.04
+Timings{0}> 
+Timings{0}> CreatDistr .......... Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> LoadDistr ........... Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> GreensFTotal ........ Wall max =   0.057881, CPU max =       0.07
+Timings{0}>                       Wall avg =  0.0576165, CPU avg =     0.0475
+Timings{0}>                       Wall min =   0.057327, CPU min =       0.03
+Timings{0}> 
+Timings{0}> IntGreenF1 .......... Wall max =   0.031487, CPU max =       0.02
+Timings{0}>                       Wall avg =  0.0101943, CPU avg =      0.005
+Timings{0}>                       Wall min =   0.000965, CPU min =          0
+Timings{0}> 
+Timings{0}> IntGreenF2 .......... Wall max =   0.028505, CPU max =       0.07
+Timings{0}>                       Wall avg =  0.0153885, CPU avg =      0.025
+Timings{0}>                       Wall min =   0.001107, CPU min =          0
+Timings{0}> 
+Timings{0}> IntGreenF3 .......... Wall max =   0.035632, CPU max =       0.03
+Timings{0}>                       Wall avg =   0.013333, CPU avg =       0.01
+Timings{0}>                       Wall min =   0.005678, CPU min =          0
+Timings{0}> 
+Timings{0}> IntGreenF4 .......... Wall max =   0.019682, CPU max =       0.03
+Timings{0}>                       Wall avg =  0.0185975, CPU avg =     0.0075
+Timings{0}>                       Wall min =    0.01675, CPU min =          0
+Timings{0}> 
+Timings{0}> ShIntGreenF1 ........ Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> ShIntGreenF2 ........ Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> ShIntGreenF3 ........ Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> ShIntGreenF4 ........ Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> GreenF1 ............. Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> GreenF2 ............. Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> GreenF3 ............. Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> GreenF4 ............. Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> H5PartTimer ......... Wall max =   0.152967, CPU max =       0.13
+Timings{0}>                       Wall avg =   0.152938, CPU avg =     0.1075
+Timings{0}>                       Wall min =   0.152903, CPU min =       0.08
+Timings{0}> 
+Timings{0}> H5BlockTimer ........ Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> StatMarkerTimer ..... Wall max =   0.111731, CPU max =       0.11
+Timings{0}>                       Wall avg =   0.108742, CPU avg =       0.11
+Timings{0}>                       Wall min =   0.107651, CPU min =       0.11
+Timings{0}> 
+Timings{0}> TIntegration1 ....... Wall max =    1.19552, CPU max =        1.2
+Timings{0}>                       Wall avg =    1.19418, CPU avg =     1.1825
+Timings{0}>                       Wall min =     1.1937, CPU min =       1.17
+Timings{0}> 
+Timings{0}> TIntegration2 ....... Wall max =    2.03583, CPU max =       2.05
+Timings{0}>                       Wall avg =     1.9376, CPU avg =     1.9325
+Timings{0}>                       Wall min =    1.83296, CPU min =       1.81
+Timings{0}> 
+Timings{0}> Fieldeval ........... Wall max =   0.450088, CPU max =       0.47
+Timings{0}>                       Wall avg =   0.450044, CPU avg =     0.4475
+Timings{0}>                       Wall min =   0.449995, CPU min =       0.42
+Timings{0}> 
+Timings{0}> Binaryrepart ........ Wall max =    1.18086, CPU max =       1.19
+Timings{0}>                       Wall avg =    1.17643, CPU avg =      1.175
+Timings{0}>                       Wall min =    1.16367, CPU min =       1.16
+Timings{0}> 
+Timings{0}> WakeField ........... Wall max =          0, CPU max =          0
+Timings{0}>                       Wall avg =          0, CPU avg =          0
+Timings{0}>                       Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> RC-RRtranspose ...... Wall max =   0.009686, CPU max =       0.01
+Timings{0}>                       Wall avg = 0.00882475, CPU avg =     0.0025
+Timings{0}>                       Wall min =   0.007803, CPU min =          0
+Timings{0}> 
+Timings{0}> RC-CCtranspose ...... Wall max =   0.033377, CPU max =       0.06
+Timings{0}>                       Wall avg =  0.0324648, CPU avg =       0.04
+Timings{0}>                       Wall min =   0.030322, CPU min =       0.02
+Timings{0}> 
+Timings{0}> RC-RC1Dfft .......... Wall max =   0.005447, CPU max =       0.01
+Timings{0}>                       Wall avg = 0.00542725, CPU avg =     0.0025
+Timings{0}>                       Wall min =   0.005389, CPU min =          0
+Timings{0}> 
+Timings{0}> RC-CC1Dfft .......... Wall max =   0.006112, CPU max =       0.03
+Timings{0}>                       Wall avg = 0.00559875, CPU avg =     0.0075
+Timings{0}>                       Wall min =   0.005059, CPU min =          0
+Timings{0}> 
+Timings{0}> RC-total ............ Wall max =   0.055687, CPU max =       0.07
+Timings{0}>                       Wall avg =   0.053667, CPU avg =     0.0525
+Timings{0}>                       Wall min =    0.05009, CPU min =       0.02
+Timings{0}> 
+Timings{0}> -----------------------------------------------------------------
