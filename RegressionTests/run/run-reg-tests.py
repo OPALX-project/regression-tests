@@ -108,7 +108,10 @@ def main(argv):
     os.chdir(sys.path[0]) #chdir to path of script
     rundir = os.getcwd()
     regdir = '/run'.join((rundir.split("/run"))[0:-1])
-    srcdir = (str.split(rundir, "/opal-Tests"))[0]
+    #FIXME
+    if not os.environ.get('OPAL_ROOT'):
+        os.putenv("OPAL_ROOT", "/gpfs/homefelsim/l_felsimsvn/work/opal/")
+    srcdir = os.getenv("OPAL_ROOT")
     builddir = rundir + "/build"
     d = datetime.date.today()
     global totalNrPassed

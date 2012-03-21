@@ -46,14 +46,14 @@ class Builder:
         infolines = str.split(info, "\n")
         self.revision = str.split(infolines[4], ":")[1].lstrip()
         os.chdir(curdir)
-    
+
     def getGitRevision(self):
         curdir = os.getcwd()
         os.chdir(self.basedir)
         info = subprocess.getoutput('git info')
         self.revision = "TODO"
         os.chdir(curdir)
-        
+
     def SCMUpdate(self):
         curdir = os.getcwd()
         os.chdir(self.basedir)
@@ -68,7 +68,7 @@ class Builder:
 
     def runCMAKE(self):
         module_load("cmake")
-    
+
         outtext = self.SCMUpdate()
         curdir = os.getcwd()
         subprocess.getoutput("rm -rf " + curdir + "/build")
@@ -105,7 +105,7 @@ class Builder:
             os.putenv("OPAL_ROOT", self.basedir)
 
         if not os.environ.get('IPPL_PREFIX'):
-            os.putenv("IPPL_PREFIX", "/gpfs/homefelsim/l_felsimsvn/extlib/ippl/build")
+            os.putenv("IPPL_PREFIX", "/gpfs/homefelsim/l_felsimsvn/extlib/ippl")
 
         if not os.environ.get('H5hut'):
             os.putenv("H5hut", "/gpfs/homefelsim/l_felsimsvn/extlib/H5hut-1.99.6")
@@ -116,7 +116,7 @@ class Builder:
 
         rep.appendReport("Start Build Test on %s \n" % datetime.datetime.today())
         rep.appendReport("==========================================================\n")
-    
+
         (passed, revision) = self.runCMAKE()
         rep.appendReport("==========================================================\n")
         build_report = TempXMLElement("Build")
@@ -134,10 +134,10 @@ class Builder:
             resultdir = self.basedir + "/opal-Tests/RegressionTests/results/" + d.isoformat()
             if not os.path.isdir(resultdir):
                 subprocess.getoutput("mkdir -p " + resultdir)
-    
-            subprocess.getoutput("cp build/src/opal " + resultdir) 
+
+            subprocess.getoutput("cp build/src/opal " + resultdir)
 
         rep.appendReport("Finished Build Test on %s \n" % datetime.datetime.today())
-    
+
         return passed
 

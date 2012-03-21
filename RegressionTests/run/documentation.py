@@ -6,7 +6,7 @@ else:
     import subprocess
 
 class OpalDocumentation:
-    
+
     #FIXME: check for LATEX
     def __init(self):
         self.build()
@@ -17,7 +17,7 @@ class OpalDocumentation:
     """
     def build():
         curdir = os.getcwd()
-        os.chdir("/gpfs/homefelsim/l_felsimsvn/scratch/src/opal/opal-Doc/doc/OPAL/user_guide")
+        os.chdir("/gpfs/homefelsim/l_felsimsvn/work/opal-doc/doc/OPAL/user_guide")
         subprocess.getoutput("svn update")
         subprocess.getoutput("make")
         subprocess.getoutput("makeindex opal_user_guide")
@@ -38,7 +38,7 @@ class OpalDoxygen:
     """
     def build(self):
         curdir = os.getcwd()
-        os.chdir("/gpfs/homefelsim/l_felsimsvn/scratch/src/opal/")
+        os.chdir("/gpfs/homefelsim/l_felsimsvn/work/opal/")
         subprocess.getoutput("doxygen")
         subprocess.getoutput("cp -r doc/html /afs/psi.ch/project/amas/www/docs/opal/")
         os.chdir(curdir)
