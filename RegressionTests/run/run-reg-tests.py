@@ -109,9 +109,9 @@ def main(argv):
     rundir = os.getcwd()
     regdir = '/run'.join((rundir.split("/run"))[0:-1])
     #FIXME
-    if not os.environ.get('OPAL_ROOT'):
-        os.putenv("OPAL_ROOT", "/gpfs/homefelsim/l_felsimsvn/work/opal/")
     srcdir = os.getenv("OPAL_ROOT")
+    if srcdir is None:
+        srcdir = "/gpfs/homefelsim/l_felsimsvn/work/opal/"
     builddir = rundir + "/build"
     d = datetime.date.today()
     global totalNrPassed
