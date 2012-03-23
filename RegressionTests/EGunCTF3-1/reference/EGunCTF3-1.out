@@ -1,12 +1,11 @@
-/gpfs/homefelsim/export/sge/spool/felsim08/job_scripts/33491: line 12: cd: ./EGunCTF3-1: No such file or directory
-Ippl> CommMPI: Started job 3 on host `felsim08'.
-Ippl> CommMPI: Started job 1 on host `felsim08'.
 Ippl> CommMPI: Parent process waiting for children ...
 Ippl> CommMPI: Child 1 ready.
-Ippl> CommMPI: Started job 2 on host `felsim08'.
 Ippl> CommMPI: Child 3 ready.
 Ippl> CommMPI: Child 2 ready.
 Ippl> CommMPI: Initialization complete.
+Ippl> CommMPI: Started job 1 on host `merlinl01'.
+Ippl> CommMPI: Started job 2 on host `merlinl01'.
+Ippl> CommMPI: Started job 3 on host `merlinl01'.
 {0}>                ____  _____       ___ 
 {0}>               / __ \|  __ \ /\   | | 
 {0}>              | |  | | |__) /  \  | |
@@ -14,758 +13,2236 @@ Ippl> CommMPI: Initialization complete.
 {0}>              | |__| | |  / ____ \| |____
 {0}>               \____/|_| /_/    \_\______|
 OPAL {0}> 
-OPAL {0}> This is OPAL (Object Oriented Parallel Accelerator Library) Version 1.1.9 SVN version 12714  (c) PSI, http://amas.web.psi.ch
+OPAL {0}> This is OPAL (Object Oriented Parallel Accelerator Library) Version 1.1.9 SVN version 13625  (c) PSI, http://amas.web.psi.ch
 OPAL {0}> 
 OPAL {0}> Please send cookies, goodies or other motivations (wine and beer ... ) to the OPAL developers opal@lists.psi.ch
-OPAL {0}> Time: 05.54.45 date: 07/09/2011
+OPAL {0}> Time: 14.53.48 date: 22/03/2012
 OPAL {0}> NOTE 17: unable to mkdir; File exists
-OPAL {0}> No startup file "/gpfs/homefelsim/adelmann/init.opal" found.
-OPAL {0}> Reading input stream "EGunCTF3-1.in".
-   +2 Option, STATDUMPFREQ=1;
-   +2    +3 Option, ECHO=FALSE;
-   +2   +2 Option, STATDUMPFREQ=1;
-Option, STATDUMPFREQ=1;
-   +3 Option, ECHO=FALSE;
-   +3 Option, ECHO=FALSE;
- Option, STATDUMPFREQ=1;
-   +3 Option, ECHO=FALSE;
-OPAL {0}> 
-OPAL {0}> 8 elements selected.
-OPAL {0}> 
-OPAL {0}> * ********************************************************************************** 
-OPAL {0}>   Selected Tracking Method == PARALLEL-T, NEW TRACK
-OPAL {0}> * ********************************************************************************** 
-OPAL {0}>  -- B I N N I N G in T -----------------------------------------
-OPAL {0}>  ---------------------I N P U T --------------------------------
-OPAL {0}>  GUNGAUSS FLAT TOP &  THERMAL EMITTANCE in ASTRA MODE
-OPAL {0}>  Kinetic energy (thermal emittance) = 0.4 [eV]  
-OPAL {0}>  Phi max = 90 [deg]  
-OPAL {0}>  tBin = 5.29966e-12 [sec]  nBins = 5 tEmission =  2.64983e-11 [sec] 
-OPAL {0}> -----------------------------------------
-OPAL {0}>      CREATE BINNED GAUSS DISTRIBUTION DONE        
-OPAL {0}> Bins= 5 hBin= 0 Particle vector length 0
-OPAL {0}> Bin # 0 val 702
-OPAL {0}> Bin # 1 val 4722
-OPAL {0}> Bin # 2 val 9174
-OPAL {0}> Bin # 3 val 4742
-OPAL {0}> Bin # 4 val 660
-OPAL {0}> Last emitted bin is 0
-OPAL {0}> 
-OPAL {0}> * ************* D I S T R I B U T I O N ******************************************** 
-OPAL {0}> * Distribution:	DIST1
-OPAL {0}> * Distribution type:	GUNGAUSSFLATTOPTH
-OPAL {0}> * sigmax=	0.000395 [m];	sigmay=	0.000395 [m];	sigmat=	0 [m];
-OPAL {0}> * transverse cut  3 [sigma] 
-OPAL {0}> * sigmapx=	0 [eV];	sigmapy=	0 [eV];	pt +- sigmapt=	0+-0 [eV]
-OPAL {0}> * corr x-px=	0	 corr y-py=	0	 corr t-pt=	0
-OPAL {0}> * ********************************************************************************** 
-OPAL {0}> 
-OPAL {0}> * ************* B E A M ************************************************************ 
-OPAL {0}> * BEAM        BEAM1
-OPAL {0}> * PARTICLE    ELECTRON
-OPAL {0}> * CURRENT     5.996e-07 A
-OPAL {0}> * FREQENCY    2998 Hz
-OPAL {0}> * CHARGE      -e * 1 
-OPAL {0}> * REST MASS   0.000510999 GeV
-OPAL {0}> * MOMENTUM    1
-OPAL {0}> * NPART       20000
-OPAL {0}> * ********************************************************************************** 
-OPAL {0}> 
-OPAL {0}> * ************* F I E L D S O L V E R ********************************************** 
-OPAL {0}> * FIELDSOLVER  FS1
-OPAL {0}> * TYPE         FFT
-OPAL {0}> * N-PROCESSORS 4
-OPAL {0}> * MX           32
-OPAL {0}> * MY           32
-OPAL {0}> * MT           64
-OPAL {0}> * BBOXINCR     1
-OPAL {0}> * GRRENSF      INTEGRATED
-OPAL {0}> * XDIM is parallel  
-OPAL {0}> * YDIM is parallel  
-OPAL {0}> * Z(T)DIM is parallel  
-OPAL {0}> 
-OPAL {0}> * ********************************************************************************** 
-OPAL {0}> 
-OPAL {0}> 
-OPAL {0}> Phase space dump frequency 50 and statistics dump frequency 1 w.r.t. the time step.
-RFCavity {0}> FINSS_RGUN using file CTF3_Ez_ASTRA.opal (1D dynamic); zini= 0 m; zfinal= 0.17493 m;
-Solenoid {0}> FIND1_MSOL10 using file NEW_SINGLE_SOL_NOFRINGE_ASTRA.opal (1D magnetostatic); zini= -0.3 m; zfinal= 0.3 m;
-Solenoid {0}> END using file NEW_SINGLE_SOL_NOFRINGE_ASTRA.opal (1D magnetostatic); zini= -0.3 m; zfinal= 0.3 m;
-Autophasing {0}> 
-Autophasing {0}> start at t= 0 [s], zstop at: 100.3 [m], Nplocal= 1
-Autophasing {0}> initial DT 5e-13 [s], step= 0, R =  ( 0 , 0 , 0 ) [m]
-Autophasing {0}> estimated phi= 2.2426232 rad, Ekin= 6.6240059 MeV
-Autophasing {0}> FINSS_RGUN_phi= 2.23608 rad / 128.118 deg, AstraPhi= 218.118 deg,
-Autophasing {0}> E= 6.62437 (MeV), phi_nom= -3.5
-OPAL {0}> 
-OPAL {0}> -------------------------------------------------------------------------------------
-OPAL {0}> FINSS_RGUN: phi_orig= phi_nom + phi_maxE= 124.618 degree, global phase shift= -14.2995 degree
-OPAL {0}> -------------------------------------------------------------------------------------
-OPAL {0}> 
-OPAL {0}> totalParticle_i= 0
-OPAL {0}> Track start at: 05.54.45, t= 0; zstop at: 0.14 [m]
-OPAL {0}> Executing ParallelTTracker, initial DT 1e-12 [s];
-OPAL {0}> max integration steps 100, next step= 0
-OPAL {0}> 
-OPAL {0}> --- BEGIN FIELD LIST ---------------------------------------------------------------
-OPAL {0}> 
-OPAL {0}> --- 0 m -- 0.17493 m -- alpha = 0 -- beta = 0 --------------------------------------
-OPAL {0}> FINSS_RGUN
-OPAL {0}> FIND1_MSOL10
-OPAL {0}> --- 0.17493 m -- 0.6 m -- alpha = 0 -- beta = 0 ------------------------------------
-OPAL {0}> FIND1_MSOL10
-OPAL {0}> --- 1.38 m -- 1.48 m -- alpha = 0 -- beta = 0 --------------------------------------
-OPAL {0}> FIND1_MQ10
-OPAL {0}> --- 1.56 m -- 1.66 m -- alpha = 0 -- beta = 0 --------------------------------------
-OPAL {0}> FIND1_MQ20
-OPAL {0}> --- 1.74 m -- 1.84 m -- alpha = 0 -- beta = 0 --------------------------------------
-OPAL {0}> FIND1_MQ30
-OPAL {0}> --- 99.7 m -- 100.3 m -- alpha = 0 -- beta = 0 -------------------------------------
-OPAL {0}> END
-OPAL {0}> 
-OPAL {0}> --- END FIELD LIST -----------------------------------------------------------------
-OPAL {0}> 
-OPAL {0}> MINSTEPFORREBIN 600
-OPAL {0}> REPARTFREQ 100
-OPAL {0}> Changing emission time step to: 5.29966e-12
-OPAL {0}> * Bin number: 0 has emitted all 702 particles.
-OPAL {0}> 05.54.45 Step 0 at 1.11344e-05 [m] t= 5.29966e-12 [s] E=0 [MeV] 
-OPAL {0}> * Wrote beam phase space.
-OPAL {0}> * ************** B U N C H ********************************************************* 
-OPAL {0}> * NP= 702 Qtot= 0.00702 [nC]  Qi= 1e-14 [C]
-OPAL {0}> * Ekin= 0.00035167 [MeV] dEkin= 0.000440917 [MeV]
-OPAL {0}> * rmax= ( 0.000396294 , 0.000393316 , 8.07612e-05 ) [m]
-OPAL {0}> * rmin= ( -0.000395492 , -0.000391819 , -8.05471e-07 ) [m]
-OPAL {0}> * rms beam size= ( 0.000193079 , 0.000197805 , 1.56928e-05 ) [m]
-OPAL {0}> * rms momenta= ( 0.000709651 , 0.00070033 , 0.0232696 ) [beta gamma]
-OPAL {0}> * mean position= ( 1.67842e-06 , 5.27146e-06 , 1.11469e-05 ) [m]
-OPAL {0}> * mean momenta= ( 1.71901e-05 , 5.10668e-05 , 0.0289032 ) [beta gamma]
-OPAL {0}> * rms emmitance= ( 3.68478e-06 , 3.73087e-06 , 2.79147e-06 ) (not normalized)
-OPAL {0}> * rms correlation= ( 0.0650937 , -0.0360724 , 0.958926 )
-OPAL {0}> * dh= 0.01 [m] dT= 5.29966e-12 [s]
-OPAL {0}> * hr= ( 2.55415e-05 , 2.53269e-05 , 1.29471e-06 ) [m]
-OPAL {0}> * spos= 1.11344e-05 [m]
-OPAL {0}> * ********************************************************************************** 
-OPAL {0}> 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> * Bin number: 1 has emitted all 4722 particles.
-OPAL {0}> 05.54.46 Step 1 at 3.92897e-05 [m] t= 1.05993e-11 [s] E=3.44923 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> * Bin number: 2 has emitted all 9174 particles.
-OPAL {0}> 05.54.47 Step 2 at 0.00011461 [m] t= 1.5899e-11 [s] E=0.878227 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> * Bin number: 3 has emitted all 4742 particles.
-OPAL {0}> 05.54.47 Step 3 at 0.000329256 [m] t= 2.11986e-11 [s] E=0.187947 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> * Bin number: 4 has emitted all 660 particles.
-OPAL {0}> Emission done. Switching back to track timestep: 1e-12
-OPAL {0}> 05.54.49 Step 4 at 0.000781111 [m] t= 2.21986e-11 [s] E=0.0627522 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.54.50 Step 5 at 0.000895429 [m] t= 2.31986e-11 [s] E=0.0505887 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.54.51 Step 6 at 0.00101766 [m] t= 2.41986e-11 [s] E=0.0579759 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.54.52 Step 7 at 0.00114767 [m] t= 2.51986e-11 [s] E=0.0659862 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.54.53 Step 8 at 0.00128532 [m] t= 2.61986e-11 [s] E=0.0746238 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.54.54 Step 9 at 0.00143042 [m] t= 2.71986e-11 [s] E=0.0838905 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.54.56 Step 10 at 0.00158278 [m] t= 2.81986e-11 [s] E=0.0937865 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.54.57 Step 11 at 0.00174219 [m] t= 2.91986e-11 [s] E=0.10431 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.54.58 Step 12 at 0.00190841 [m] t= 3.01986e-11 [s] E=0.115458 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.54.59 Step 13 at 0.00208121 [m] t= 3.11986e-11 [s] E=0.127224 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.00 Step 14 at 0.00226032 [m] t= 3.21986e-11 [s] E=0.139603 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.01 Step 15 at 0.00244548 [m] t= 3.31986e-11 [s] E=0.152587 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.03 Step 16 at 0.00263644 [m] t= 3.41986e-11 [s] E=0.166168 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.04 Step 17 at 0.00283295 [m] t= 3.51986e-11 [s] E=0.180334 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.05 Step 18 at 0.00303475 [m] t= 3.61986e-11 [s] E=0.195076 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.06 Step 19 at 0.00324157 [m] t= 3.71986e-11 [s] E=0.210383 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.07 Step 20 at 0.00345319 [m] t= 3.81986e-11 [s] E=0.226241 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.08 Step 21 at 0.00366934 [m] t= 3.91986e-11 [s] E=0.242639 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.10 Step 22 at 0.0038898 [m] t= 4.01986e-11 [s] E=0.259564 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.11 Step 23 at 0.00411433 [m] t= 4.11986e-11 [s] E=0.277002 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.12 Step 24 at 0.00434272 [m] t= 4.21986e-11 [s] E=0.294939 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.13 Step 25 at 0.00457475 [m] t= 4.31986e-11 [s] E=0.313361 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.14 Step 26 at 0.00481022 [m] t= 4.41986e-11 [s] E=0.332254 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.15 Step 27 at 0.00504893 [m] t= 4.51986e-11 [s] E=0.351603 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.17 Step 28 at 0.00529071 [m] t= 4.61986e-11 [s] E=0.371394 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.18 Step 29 at 0.00553538 [m] t= 4.71986e-11 [s] E=0.39161 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.19 Step 30 at 0.00578276 [m] t= 4.81986e-11 [s] E=0.412237 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.20 Step 31 at 0.00603272 [m] t= 4.91986e-11 [s] E=0.433259 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.21 Step 32 at 0.00628509 [m] t= 5.01986e-11 [s] E=0.45466 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.22 Step 33 at 0.00653974 [m] t= 5.11986e-11 [s] E=0.476423 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.24 Step 34 at 0.00679654 [m] t= 5.21986e-11 [s] E=0.498534 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.25 Step 35 at 0.00705535 [m] t= 5.31986e-11 [s] E=0.520974 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.26 Step 36 at 0.00731608 [m] t= 5.41986e-11 [s] E=0.543726 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.27 Step 37 at 0.0075786 [m] t= 5.51986e-11 [s] E=0.566775 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.28 Step 38 at 0.00784281 [m] t= 5.61986e-11 [s] E=0.590101 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.29 Step 39 at 0.00810861 [m] t= 5.71986e-11 [s] E=0.613688 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.31 Step 40 at 0.00837592 [m] t= 5.81986e-11 [s] E=0.637517 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.32 Step 41 at 0.00864464 [m] t= 5.91986e-11 [s] E=0.66157 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.33 Step 42 at 0.00891471 [m] t= 6.01986e-11 [s] E=0.685829 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.34 Step 43 at 0.00918602 [m] t= 6.11986e-11 [s] E=0.710274 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.35 Step 44 at 0.00945853 [m] t= 6.21986e-11 [s] E=0.734887 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.36 Step 45 at 0.00973216 [m] t= 6.31986e-11 [s] E=0.759649 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.38 Step 46 at 0.0100068 [m] t= 6.41986e-11 [s] E=0.78454 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.39 Step 47 at 0.0102825 [m] t= 6.51986e-11 [s] E=0.80954 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.40 Step 48 at 0.0105592 [m] t= 6.61986e-11 [s] E=0.834631 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.41 Step 49 at 0.0108367 [m] t= 6.71986e-11 [s] E=0.859791 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.42 Step 50 at 0.011115 [m] t= 6.81986e-11 [s] E=0.885002 [MeV] 
-OPAL {0}> * Wrote beam phase space.
-OPAL {0}> * ************** B U N C H ********************************************************* 
-OPAL {0}> * NP= 20000 Qtot= 0.2 [nC]  Qi= 1e-14 [C]
-OPAL {0}> * Ekin= 0.885002 [MeV] dEkin= 0.0756409 [MeV]
-OPAL {0}> * rmax= ( 0.000807094 , 0.000801137 , 0.0138569 ) [m]
-OPAL {0}> * rmin= ( -0.000813057 , -0.000798432 , 0.00811299 ) [m]
-OPAL {0}> * rms beam size= ( 0.000350429 , 0.000350313 , 0.000998492 ) [m]
-OPAL {0}> * rms momenta= ( 0.0182449 , 0.0182704 , 0.159065 ) [beta gamma]
-OPAL {0}> * mean position= ( 1.88477e-06 , 9.00254e-07 , 0.011115 ) [m]
-OPAL {0}> * mean momenta= ( -4.98627e-05 , -2.73711e-05 , 2.5415 ) [beta gamma]
-OPAL {0}> * rms emmitance= ( 5.24369e-07 , 5.46482e-07 , 2.77802e-06 ) (not normalized)
-OPAL {0}> * rms correlation= ( 0.978021 , 0.976156 , 0.999011 )
-OPAL {0}> * dh= 0.01 [m] dT= 1e-12 [s]
-OPAL {0}> * hr= ( 5.22629e-05 , 5.1599e-05 , 9.1174e-05 ) [m]
-OPAL {0}> * spos= 0.011115 [m]
-OPAL {0}> * ********************************************************************************** 
-OPAL {0}> 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.44 Step 51 at 0.0113942 [m] t= 6.91986e-11 [s] E=0.910243 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.45 Step 52 at 0.0116741 [m] t= 7.01986e-11 [s] E=0.935494 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.46 Step 53 at 0.0119547 [m] t= 7.11986e-11 [s] E=0.960735 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.47 Step 54 at 0.012236 [m] t= 7.21986e-11 [s] E=0.985946 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.48 Step 55 at 0.0125179 [m] t= 7.31986e-11 [s] E=1.01111 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.49 Step 56 at 0.0128005 [m] t= 7.41986e-11 [s] E=1.0362 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.51 Step 57 at 0.0130836 [m] t= 7.51986e-11 [s] E=1.06119 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.52 Step 58 at 0.0133672 [m] t= 7.61986e-11 [s] E=1.08608 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.53 Step 59 at 0.0136514 [m] t= 7.71986e-11 [s] E=1.11084 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.54 Step 60 at 0.013936 [m] t= 7.81986e-11 [s] E=1.13545 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.55 Step 61 at 0.0142211 [m] t= 7.91986e-11 [s] E=1.15988 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.56 Step 62 at 0.0145066 [m] t= 8.01986e-11 [s] E=1.18413 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.58 Step 63 at 0.0147926 [m] t= 8.11986e-11 [s] E=1.20817 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.55.59 Step 64 at 0.0150789 [m] t= 8.21986e-11 [s] E=1.23198 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.00 Step 65 at 0.0153656 [m] t= 8.31986e-11 [s] E=1.25555 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.01 Step 66 at 0.0156527 [m] t= 8.41986e-11 [s] E=1.27885 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.02 Step 67 at 0.0159401 [m] t= 8.51986e-11 [s] E=1.30187 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.03 Step 68 at 0.0162278 [m] t= 8.61986e-11 [s] E=1.32459 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.05 Step 69 at 0.0165158 [m] t= 8.71986e-11 [s] E=1.34699 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.06 Step 70 at 0.0168041 [m] t= 8.81986e-11 [s] E=1.36906 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.07 Step 71 at 0.0170927 [m] t= 8.91986e-11 [s] E=1.39078 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.08 Step 72 at 0.0173815 [m] t= 9.01986e-11 [s] E=1.41213 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.09 Step 73 at 0.0176706 [m] t= 9.11986e-11 [s] E=1.4331 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.10 Step 74 at 0.0179599 [m] t= 9.21986e-11 [s] E=1.45367 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.12 Step 75 at 0.0182494 [m] t= 9.31986e-11 [s] E=1.47384 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.13 Step 76 at 0.0185391 [m] t= 9.41986e-11 [s] E=1.49357 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.14 Step 77 at 0.0188291 [m] t= 9.51986e-11 [s] E=1.51288 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.15 Step 78 at 0.0191192 [m] t= 9.61986e-11 [s] E=1.53173 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.16 Step 79 at 0.0194095 [m] t= 9.71986e-11 [s] E=1.55012 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.17 Step 80 at 0.0196999 [m] t= 9.81986e-11 [s] E=1.56804 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.19 Step 81 at 0.0199906 [m] t= 9.91986e-11 [s] E=1.58548 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.20 Step 82 at 0.0202814 [m] t= 1.00199e-10 [s] E=1.60242 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.21 Step 83 at 0.0205723 [m] t= 1.01199e-10 [s] E=1.61887 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.22 Step 84 at 0.0208633 [m] t= 1.02199e-10 [s] E=1.6348 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.23 Step 85 at 0.0211545 [m] t= 1.03199e-10 [s] E=1.65022 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.24 Step 86 at 0.0214458 [m] t= 1.04199e-10 [s] E=1.66512 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.26 Step 87 at 0.0217373 [m] t= 1.05199e-10 [s] E=1.67949 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.27 Step 88 at 0.0220288 [m] t= 1.06199e-10 [s] E=1.69333 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.28 Step 89 at 0.0223204 [m] t= 1.07199e-10 [s] E=1.70664 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.29 Step 90 at 0.0226122 [m] t= 1.08199e-10 [s] E=1.71941 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.30 Step 91 at 0.022904 [m] t= 1.09199e-10 [s] E=1.73164 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.31 Step 92 at 0.0231959 [m] t= 1.10199e-10 [s] E=1.74333 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.33 Step 93 at 0.0234879 [m] t= 1.11199e-10 [s] E=1.75448 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.34 Step 94 at 0.0237799 [m] t= 1.12199e-10 [s] E=1.76509 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.35 Step 95 at 0.0240721 [m] t= 1.13199e-10 [s] E=1.77517 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.36 Step 96 at 0.0243643 [m] t= 1.14199e-10 [s] E=1.78472 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.37 Step 97 at 0.0246565 [m] t= 1.15199e-10 [s] E=1.79373 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.38 Step 98 at 0.0249489 [m] t= 1.16199e-10 [s] E=1.80223 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.40 Step 99 at 0.0252544 [m] t= 1.17199e-10 [s] E=1.81021 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> * Wrote beam phase space.
-OPAL {0}> * ************** B U N C H ********************************************************* 
-OPAL {0}> * NP= 20000 Qtot= 0.2 [nC]  Qi= 1e-14 [C]
-OPAL {0}> * Ekin= 1.81021 [MeV] dEkin= 0.0473404 [MeV]
-OPAL {0}> * rmax= ( 0.00107054 , 0.00106144 , 0.0280759 ) [m]
-OPAL {0}> * rmin= ( -0.00107698 , -0.00105529 , 0.0220758 ) [m]
-OPAL {0}> * rms beam size= ( 0.000457826 , 0.0004577 , 0.00104386 ) [m]
-OPAL {0}> * rms momenta= ( 0.0451981 , 0.0452038 , 0.0949727 ) [beta gamma]
-OPAL {0}> * mean position= ( 1.82567e-06 , 8.63539e-07 , 0.0252412 ) [m]
-OPAL {0}> * mean momenta= ( 5.66452e-05 , 2.6113e-05 , 4.43054 ) [beta gamma]
-OPAL {0}> * rms emmitance= ( 3.16554e-07 , 3.26268e-07 , 2.84316e-06 ) (not normalized)
-OPAL {0}> * rms correlation= ( 0.9977 , 0.997556 , 0.991893 )
-OPAL {0}> * dh= 0.01 [m] dT= 1e-12 [s]
-OPAL {0}> * hr= ( 6.92747e-05 , 6.82817e-05 , 9.52403e-05 ) [m]
-OPAL {0}> * spos= 0.0252544 [m]
-OPAL {0}> * ********************************************************************************** 
-OPAL {0}> 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> Dump phase space of last step
-OPAL {0}> done executing ParallelTTracker at 05.56.40
-OPAL {0}> * ********************************************************************************** 
-OPAL {0}>   Selected Tracking Method == PARALLEL-T, FOLLOWUP TRACK
-OPAL {0}> * ********************************************************************************** 
-OPAL {0}> * ************* B E A M ************************************************************ 
-OPAL {0}> * BEAM        BEAM1
-OPAL {0}> * PARTICLE    ELECTRON
-OPAL {0}> * CURRENT     5.996e-07 A
-OPAL {0}> * FREQENCY    2998 Hz
-OPAL {0}> * CHARGE      -e * 1 
-OPAL {0}> * REST MASS   0.000510999 GeV
-OPAL {0}> * MOMENTUM    1
-OPAL {0}> * NPART       20000
-OPAL {0}> * ********************************************************************************** 
-OPAL {0}> 
-OPAL {0}> * ************* F I E L D S O L V E R ********************************************** 
-OPAL {0}> * FIELDSOLVER  FS1
-OPAL {0}> * TYPE         FFT
-OPAL {0}> * N-PROCESSORS 4
-OPAL {0}> * MX           32
-OPAL {0}> * MY           32
-OPAL {0}> * MT           64
-OPAL {0}> * BBOXINCR     1
-OPAL {0}> * GRRENSF      INTEGRATED
-OPAL {0}> * XDIM is parallel  
-OPAL {0}> * YDIM is parallel  
-OPAL {0}> * Z(T)DIM is parallel  
-OPAL {0}> 
-OPAL {0}> * ********************************************************************************** 
-OPAL {0}> 
-OPAL {0}> * ************** B U N C H ********************************************************* 
-OPAL {0}> * NP= 20000 Qtot= 0.2 [nC]  Qi= 1e-14 [C]
-OPAL {0}> * Ekin= 1.81021 [MeV] dEkin= 0.0473404 [MeV]
-OPAL {0}> * rmax= ( 0.00107054 , 0.00106144 , 0.0280759 ) [m]
-OPAL {0}> * rmin= ( -0.00107698 , -0.00105529 , 0.0220758 ) [m]
-OPAL {0}> * rms beam size= ( 0.000457826 , 0.0004577 , 0.00104386 ) [m]
-OPAL {0}> * rms momenta= ( 0.0451981 , 0.0452038 , 0.0949727 ) [beta gamma]
-OPAL {0}> * mean position= ( 1.82567e-06 , 8.63539e-07 , 0.0252412 ) [m]
-OPAL {0}> * mean momenta= ( 5.66452e-05 , 2.6113e-05 , 4.43054 ) [beta gamma]
-OPAL {0}> * rms emmitance= ( 3.16554e-07 , 3.26268e-07 , 2.84316e-06 ) (not normalized)
-OPAL {0}> * rms correlation= ( 0.9977 , 0.997556 , 0.991893 )
-OPAL {0}> * dh= 0.01 [m] dT= 1e-11 [s]
-OPAL {0}> * hr= ( 6.92747e-05 , 6.82817e-05 , 9.52403e-05 ) [m]
-OPAL {0}> * spos= 0.0252544 [m]
-OPAL {0}> * ********************************************************************************** 
-OPAL {0}> 
-OPAL {0}> Phase space dump frequency 50 and statistics dump frequency 1 w.r.t. the time step.
-RFCavity {0}> FINSS_RGUN using file CTF3_Ez_ASTRA.opal (1D dynamic); zini= 0 m; zfinal= 0.17493 m;
-Solenoid {0}> FIND1_MSOL10 using file NEW_SINGLE_SOL_NOFRINGE_ASTRA.opal (1D magnetostatic); zini= -0.3 m; zfinal= 0.3 m;
-Solenoid {0}> END using file NEW_SINGLE_SOL_NOFRINGE_ASTRA.opal (1D magnetostatic); zini= -0.3 m; zfinal= 0.3 m;
-OPAL {0}> 
-OPAL {0}> -------------------------------------------------------------------------------------
-OPAL {0}> FINSS_RGUN: phi_orig= phi_nom + phi_maxE= 124.618 degree, global phase shift= -14.2995 degree
-OPAL {0}> -------------------------------------------------------------------------------------
-OPAL {0}> 
-OPAL {0}> totalParticle_i= 20000
-OPAL {0}> Track start at: 05.56.40, t= 1.17199e-10; zstop at: 0.2 [m]
-OPAL {0}> Executing ParallelTTracker, initial DT 1e-11 [s];
-OPAL {0}> max integration steps 150, next step= 100
-OPAL {0}> 
-OPAL {0}> --- BEGIN FIELD LIST ---------------------------------------------------------------
-OPAL {0}> 
-OPAL {0}> --- 0 m -- 0.17493 m -- alpha = 0 -- beta = 0 --------------------------------------
-OPAL {0}> FINSS_RGUN
-OPAL {0}> FIND1_MSOL10
-OPAL {0}> --- 0.17493 m -- 0.6 m -- alpha = 0 -- beta = 0 ------------------------------------
-OPAL {0}> FIND1_MSOL10
-OPAL {0}> --- 1.38 m -- 1.48 m -- alpha = 0 -- beta = 0 --------------------------------------
-OPAL {0}> FIND1_MQ10
-OPAL {0}> --- 1.56 m -- 1.66 m -- alpha = 0 -- beta = 0 --------------------------------------
-OPAL {0}> FIND1_MQ20
-OPAL {0}> --- 1.74 m -- 1.84 m -- alpha = 0 -- beta = 0 --------------------------------------
-OPAL {0}> FIND1_MQ30
-OPAL {0}> --- 99.7 m -- 100.3 m -- alpha = 0 -- beta = 0 -------------------------------------
-OPAL {0}> END
-OPAL {0}> 
-OPAL {0}> --- END FIELD LIST -----------------------------------------------------------------
-OPAL {0}> 
-OPAL {0}> MINSTEPFORREBIN 600
-OPAL {0}> REPARTFREQ 100
-OPAL {0}> Changing emission time step to: 5.29966e-12
-OPAL {0}> Emission done. Switching back to track timestep: 1e-11
-OPAL {0}> 05.56.41 Step 100 at 0.0281785 [m] t= 1.27199e-10 [s] E=1.86325 [MeV] 
-OPAL {0}> * Wrote beam phase space.
-OPAL {0}> * ************** B U N C H ********************************************************* 
-OPAL {0}> * NP= 20000 Qtot= 0.2 [nC]  Qi= 1e-14 [C]
-OPAL {0}> * Ekin= 1.86325 [MeV] dEkin= 0.0381218 [MeV]
-OPAL {0}> * rmax= ( 0.00114676 , 0.00113666 , 0.0310061 ) [m]
-OPAL {0}> * rmin= ( -0.0011534 , -0.00112997 , 0.024992 ) [m]
-OPAL {0}> * rms beam size= ( 0.000489599 , 0.000489471 , 0.00104651 ) [m]
-OPAL {0}> * rms momenta= ( 0.0525701 , 0.0525722 , 0.0763928 ) [beta gamma]
-OPAL {0}> * mean position= ( 1.87311e-06 , 8.84762e-07 , 0.0281668 ) [m]
-OPAL {0}> * mean momenta= ( 8.61465e-05 , 3.95224e-05 , 4.53676 ) [beta gamma]
-OPAL {0}> * rms emmitance= ( 3.09007e-07 , 3.19441e-07 , 2.9176e-06 ) (not normalized)
-OPAL {0}> * rms correlation= ( 0.998515 , 0.998412 , 0.986194 )
-OPAL {0}> * dh= 0.01 [m] dT= 1e-11 [s]
-OPAL {0}> * hr= ( 7.41987e-05 , 7.31171e-05 , 9.54625e-05 ) [m]
-OPAL {0}> * spos= 0.0281785 [m]
-OPAL {0}> * ********************************************************************************** 
-OPAL {0}> 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.43 Step 101 at 0.0311051 [m] t= 1.37199e-10 [s] E=1.87872 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.44 Step 102 at 0.0340323 [m] t= 1.47199e-10 [s] E=1.8774 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.45 Step 103 at 0.0369593 [m] t= 1.57199e-10 [s] E=1.88359 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.46 Step 104 at 0.0398875 [m] t= 1.67199e-10 [s] E=1.91971 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.47 Step 105 at 0.0428188 [m] t= 1.77199e-10 [s] E=2.0019 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.48 Step 106 at 0.0457557 [m] t= 1.87199e-10 [s] E=2.13786 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.50 Step 107 at 0.048699 [m] t= 1.97199e-10 [s] E=2.32675 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.51 Step 108 at 0.0516503 [m] t= 2.07199e-10 [s] E=2.56023 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.52 Step 109 at 0.0546085 [m] t= 2.17199e-10 [s] E=2.82425 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.53 Step 110 at 0.0575727 [m] t= 2.27199e-10 [s] E=3.10096 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.54 Step 111 at 0.0605416 [m] t= 2.37199e-10 [s] E=3.37094 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.55 Step 112 at 0.0635145 [m] t= 2.47199e-10 [s] E=3.61535 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.57 Step 113 at 0.0664898 [m] t= 2.57199e-10 [s] E=3.81831 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.58 Step 114 at 0.069467 [m] t= 2.67199e-10 [s] E=3.9692 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.56.59 Step 115 at 0.0724454 [m] t= 2.77199e-10 [s] E=4.06464 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.00 Step 116 at 0.0754241 [m] t= 2.87199e-10 [s] E=4.10971 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.01 Step 117 at 0.078403 [m] t= 2.97199e-10 [s] E=4.1177 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.02 Step 118 at 0.0813822 [m] t= 3.07199e-10 [s] E=4.10814 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.04 Step 119 at 0.0843609 [m] t= 3.17199e-10 [s] E=4.10343 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.05 Step 120 at 0.08734 [m] t= 3.27199e-10 [s] E=4.12482 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.06 Step 121 at 0.0903195 [m] t= 3.37199e-10 [s] E=4.18899 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.07 Step 122 at 0.0932997 [m] t= 3.47199e-10 [s] E=4.30581 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.08 Step 123 at 0.0962808 [m] t= 3.57199e-10 [s] E=4.47755 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.09 Step 124 at 0.0992632 [m] t= 3.67199e-10 [s] E=4.69929 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.11 Step 125 at 0.102247 [m] t= 3.77199e-10 [s] E=4.96006 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.12 Step 126 at 0.105232 [m] t= 3.87199e-10 [s] E=5.24451 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.13 Step 127 at 0.108219 [m] t= 3.97199e-10 [s] E=5.53489 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.14 Step 128 at 0.111206 [m] t= 4.07199e-10 [s] E=5.81312 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.15 Step 129 at 0.114195 [m] t= 4.17199e-10 [s] E=6.06314 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.16 Step 130 at 0.117184 [m] t= 4.27199e-10 [s] E=6.27284 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.18 Step 131 at 0.120173 [m] t= 4.37199e-10 [s] E=6.43582 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.19 Step 132 at 0.123163 [m] t= 4.47199e-10 [s] E=6.55171 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.20 Step 133 at 0.126153 [m] t= 4.57199e-10 [s] E=6.62541 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.21 Step 134 at 0.129143 [m] t= 4.67199e-10 [s] E=6.66518 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.22 Step 135 at 0.132133 [m] t= 4.77199e-10 [s] E=6.68034 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.23 Step 136 at 0.135123 [m] t= 4.87199e-10 [s] E=6.67948 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.25 Step 137 at 0.138113 [m] t= 4.97199e-10 [s] E=6.66948 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.26 Step 138 at 0.141104 [m] t= 5.07199e-10 [s] E=6.65528 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.27 Step 139 at 0.144094 [m] t= 5.17199e-10 [s] E=6.6401 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.28 Step 140 at 0.147084 [m] t= 5.27199e-10 [s] E=6.62582 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.29 Step 141 at 0.150074 [m] t= 5.37199e-10 [s] E=6.61338 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.30 Step 142 at 0.153064 [m] t= 5.47199e-10 [s] E=6.60313 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.32 Step 143 at 0.156054 [m] t= 5.57199e-10 [s] E=6.595 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.33 Step 144 at 0.159043 [m] t= 5.67199e-10 [s] E=6.58878 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.34 Step 145 at 0.162034 [m] t= 5.77199e-10 [s] E=6.58413 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.35 Step 146 at 0.165023 [m] t= 5.87199e-10 [s] E=6.58073 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.36 Step 147 at 0.168013 [m] t= 5.97199e-10 [s] E=6.57825 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.37 Step 148 at 0.171003 [m] t= 6.07199e-10 [s] E=6.57646 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> 05.57.39 Step 149 at 0.173993 [m] t= 6.17199e-10 [s] E=6.57516 [MeV] 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> * Wrote beam phase space.
-OPAL {0}> * ************** B U N C H ********************************************************* 
-OPAL {0}> * NP= 20000 Qtot= 0.2 [nC]  Qi= 1e-14 [C]
-OPAL {0}> * Ekin= 6.57516 [MeV] dEkin= 0.0401987 [MeV]
-OPAL {0}> * rmax= ( 0.00261095 , 0.00255878 , 0.176857 ) [m]
-OPAL {0}> * rmin= ( -0.00260217 , -0.00254246 , 0.170749 ) [m]
-OPAL {0}> * rms beam size= ( 0.00109367 , 0.00109358 , 0.00106509 ) [m]
-OPAL {0}> * rms momenta= ( 0.068047 , 0.0680324 , 0.0788723 ) [beta gamma]
-OPAL {0}> * mean position= ( 2.3048e-06 , 1.1025e-06 , 0.174004 ) [m]
-OPAL {0}> * mean momenta= ( 6.88624e-05 , 7.46115e-05 , 13.8308 ) [beta gamma]
-OPAL {0}> * rms emmitance= ( 1.45e-06 , 1.44835e-06 , 2.79161e-06 ) (not normalized)
-OPAL {0}> * rms correlation= ( 0.963005 , 0.963069 , -0.888113 )
-OPAL {0}> * dh= 0.01 [m] dT= 1e-11 [s]
-OPAL {0}> * hr= ( 0.000168165 , 0.000164556 , 9.69448e-05 ) [m]
-OPAL {0}> * spos= 0.173993 [m]
-OPAL {0}> * ********************************************************************************** 
-OPAL {0}> 
-OPAL {0}> * Wrote beam statistics.
-OPAL {0}> Dump phase space of last step
-OPAL {0}> done executing ParallelTTracker at 05.57.39
-OPAL {0}> End of input stream "EGunCTF3-1.in".
-Timings{0}> -----------------------------------------------------------------
-Timings{0}>      Timing results for 4 nodes:
-Timings{0}> -----------------------------------------------------------------
-Timings{0}> mainTimer ........... Wall tot =    174.054, CPU tot =      173.1
-Timings{0}> 
-Timings{0}> Secondary emission .. Wall max =          0, CPU max =          0
-Timings{0}>                       Wall avg =          0, CPU avg =          0
-Timings{0}>                       Wall min =          0, CPU min =          0
-Timings{0}> 
-Timings{0}> Particle Inside ..... Wall max =          0, CPU max =          0
-Timings{0}>                       Wall avg =          0, CPU avg =          0
-Timings{0}>                       Wall min =          0, CPU min =          0
-Timings{0}> 
-Timings{0}> zshiftPre Processing  Wall max =          0, CPU max =          0
-Timings{0}>                       Wall avg =          0, CPU avg =          0
-Timings{0}>                       Wall min =          0, CPU min =          0
-Timings{0}> 
-Timings{0}> Ray tracing ......... Wall max =          0, CPU max =          0
-Timings{0}>                       Wall avg =          0, CPU avg =          0
-Timings{0}>                       Wall min =          0, CPU min =          0
-Timings{0}> 
-Timings{0}> Check inward ........ Wall max =          0, CPU max =          0
-Timings{0}>                       Wall avg =          0, CPU avg =          0
-Timings{0}>                       Wall min =          0, CPU min =          0
-Timings{0}> 
-Timings{0}> Pre Processing ...... Wall max =          0, CPU max =          0
-Timings{0}>                       Wall avg =          0, CPU avg =          0
-Timings{0}>                       Wall min =          0, CPU min =          0
-Timings{0}> 
-Timings{0}> SelfField ........... Wall max =    171.381, CPU max =     171.48
-Timings{0}>                       Wall avg =    171.375, CPU avg =     171.39
-Timings{0}>                       Wall min =    171.366, CPU min =      171.3
-Timings{0}> 
-Timings{0}> Boundingbox ......... Wall max =   0.139154, CPU max =        0.2
-Timings{0}>                       Wall avg =    0.13413, CPU avg =     0.1475
-Timings{0}>                       Wall min =   0.124359, CPU min =       0.07
-Timings{0}> 
-Timings{0}> Statistics .......... Wall max =   0.112498, CPU max =       0.13
-Timings{0}>                       Wall avg =   0.110781, CPU avg =      0.115
-Timings{0}>                       Wall min =   0.109122, CPU min =        0.1
-Timings{0}> 
-Timings{0}> Potential ........... Wall max =    161.344, CPU max =      161.4
-Timings{0}>                       Wall avg =    161.336, CPU avg =    161.193
-Timings{0}>                       Wall min =    161.328, CPU min =     160.69
-Timings{0}> 
-Timings{0}> Histogram ........... Wall max =          0, CPU max =          0
-Timings{0}>                       Wall avg =          0, CPU avg =          0
-Timings{0}>                       Wall min =          0, CPU min =          0
-Timings{0}> 
-Timings{0}> CreatDistr .......... Wall max =          0, CPU max =          0
-Timings{0}>                       Wall avg =          0, CPU avg =          0
-Timings{0}>                       Wall min =          0, CPU min =          0
-Timings{0}> 
-Timings{0}> LoadDistr ........... Wall max =          0, CPU max =          0
-Timings{0}>                       Wall avg =          0, CPU avg =          0
-Timings{0}>                       Wall min =          0, CPU min =          0
-Timings{0}> 
-Timings{0}> GreensFTotal ........ Wall max =     98.659, CPU max =      98.67
-Timings{0}>                       Wall avg =    98.1334, CPU avg =     98.195
-Timings{0}>                       Wall min =    97.5416, CPU min =       97.8
-Timings{0}> 
-Timings{0}> IntGreenF1 .......... Wall max =    16.4196, CPU max =      16.45
-Timings{0}>                       Wall avg =    4.93704, CPU avg =     4.9625
-Timings{0}>                       Wall min =   0.519695, CPU min =       0.55
-Timings{0}> 
-Timings{0}> IntGreenF2 .......... Wall max =    15.6799, CPU max =      15.64
-Timings{0}>                       Wall avg =    8.68935, CPU avg =       8.69
-Timings{0}>                       Wall min =    0.82876, CPU min =       0.87
-Timings{0}> 
-Timings{0}> IntGreenF3 .......... Wall max =    19.9154, CPU max =      19.98
-Timings{0}>                       Wall avg =    8.46111, CPU avg =     8.4175
-Timings{0}>                       Wall min =    4.37599, CPU min =       4.38
-Timings{0}> 
-Timings{0}> IntGreenF4 .......... Wall max =     18.812, CPU max =      18.83
-Timings{0}>                       Wall avg =    17.9648, CPU avg =    18.0025
-Timings{0}>                       Wall min =    16.2237, CPU min =      16.19
-Timings{0}> 
-Timings{0}> ShIntGreenF1 ........ Wall max =    16.1141, CPU max =         16
-Timings{0}>                       Wall avg =    4.99408, CPU avg =      4.865
-Timings{0}>                       Wall min =   0.673956, CPU min =       0.78
-Timings{0}> 
-Timings{0}> ShIntGreenF2 ........ Wall max =    16.2512, CPU max =      16.48
-Timings{0}>                       Wall avg =    4.95517, CPU avg =      5.075
-Timings{0}>                       Wall min =   0.429718, CPU min =       0.56
-Timings{0}> 
-Timings{0}> ShIntGreenF3 ........ Wall max =    39.3626, CPU max =      39.52
-Timings{0}>                       Wall avg =    30.4647, CPU avg =    30.5175
-Timings{0}>                       Wall min =    10.1431, CPU min =      10.03
-Timings{0}> 
-Timings{0}> ShIntGreenF4 ........ Wall max =    19.1121, CPU max =      19.13
-Timings{0}>                       Wall avg =    17.4175, CPU avg =     17.405
-Timings{0}>                       Wall min =    15.2081, CPU min =      15.36
-Timings{0}> 
-Timings{0}> GreenF1 ............. Wall max =          0, CPU max =          0
-Timings{0}>                       Wall avg =          0, CPU avg =          0
-Timings{0}>                       Wall min =          0, CPU min =          0
-Timings{0}> 
-Timings{0}> GreenF2 ............. Wall max =          0, CPU max =          0
-Timings{0}>                       Wall avg =          0, CPU avg =          0
-Timings{0}>                       Wall min =          0, CPU min =          0
-Timings{0}> 
-Timings{0}> GreenF3 ............. Wall max =          0, CPU max =          0
-Timings{0}>                       Wall avg =          0, CPU avg =          0
-Timings{0}>                       Wall min =          0, CPU min =          0
-Timings{0}> 
-Timings{0}> GreenF4 ............. Wall max =          0, CPU max =          0
-Timings{0}>                       Wall avg =          0, CPU avg =          0
-Timings{0}>                       Wall min =          0, CPU min =          0
-Timings{0}> 
-Timings{0}> H5PartTimer ......... Wall max =    1.00422, CPU max =       0.17
-Timings{0}>                       Wall avg =     1.0039, CPU avg =       0.13
-Timings{0}>                       Wall min =    1.00368, CPU min =       0.09
-Timings{0}> 
-Timings{0}> H5BlockTimer ........ Wall max =          0, CPU max =          0
-Timings{0}>                       Wall avg =          0, CPU avg =          0
-Timings{0}>                       Wall min =          0, CPU min =          0
-Timings{0}> 
-Timings{0}> StatMarkerTimer ..... Wall max =   0.150579, CPU max =       0.06
-Timings{0}>                       Wall avg =  0.0677085, CPU avg =       0.04
-Timings{0}>                       Wall min =   0.040024, CPU min =       0.02
-Timings{0}> 
-Timings{0}> TIntegration1 ....... Wall max =   0.140942, CPU max =       0.19
-Timings{0}>                       Wall avg =   0.140503, CPU avg =      0.135
-Timings{0}>                       Wall min =    0.13941, CPU min =       0.11
-Timings{0}> 
-Timings{0}> TIntegration2 ....... Wall max =   0.826525, CPU max =       0.85
-Timings{0}>                       Wall avg =    0.81381, CPU avg =       0.74
-Timings{0}>                       Wall min =   0.806808, CPU min =       0.68
-Timings{0}> 
-Timings{0}> Fieldeval ........... Wall max =    0.48438, CPU max =       0.44
-Timings{0}>                       Wall avg =   0.484212, CPU avg =     0.4075
-Timings{0}>                       Wall min =   0.484056, CPU min =       0.33
-Timings{0}> 
-Timings{0}> Binaryrepart ........ Wall max =   0.028181, CPU max =       0.03
-Timings{0}>                       Wall avg =  0.0281785, CPU avg =     0.0275
-Timings{0}>                       Wall min =   0.028174, CPU min =       0.02
-Timings{0}> 
-Timings{0}> WakeField ........... Wall max =          0, CPU max =          0
-Timings{0}>                       Wall avg =          0, CPU avg =          0
-Timings{0}>                       Wall min =          0, CPU min =          0
-Timings{0}> 
-Timings{0}> RC-RRtranspose ...... Wall max =    18.0371, CPU max =      17.62
-Timings{0}>                       Wall avg =     16.065, CPU avg =     15.715
-Timings{0}>                       Wall min =    13.9575, CPU min =      13.58
-Timings{0}> 
-Timings{0}> RC-CCtranspose ...... Wall max =    64.6501, CPU max =      65.06
-Timings{0}>                       Wall avg =    63.6691, CPU avg =    63.9175
-Timings{0}>                       Wall min =    61.1396, CPU min =      61.64
-Timings{0}> 
-Timings{0}> RC-RC1Dfft .......... Wall max =    6.09138, CPU max =       6.05
-Timings{0}>                       Wall avg =    5.81809, CPU avg =     5.6575
-Timings{0}>                       Wall min =    5.16176, CPU min =       5.31
-Timings{0}> 
-Timings{0}> RC-CC1Dfft .......... Wall max =    7.72747, CPU max =        7.8
-Timings{0}>                       Wall avg =     6.9516, CPU avg =     7.0275
-Timings{0}>                       Wall min =    6.17555, CPU min =       5.94
-Timings{0}> 
-Timings{0}> RC-total ............ Wall max =    96.7272, CPU max =       96.3
-Timings{0}>                       Wall avg =    93.3219, CPU avg =    93.1225
-Timings{0}>                       Wall min =    87.2525, CPU min =      87.39
-Timings{0}> 
-Timings{0}> -----------------------------------------------------------------
+OPAL {+0}> No startup file "/gpfs/home/adelmann/init.opal" found.
+OPAL {+0}> Reading input stream "EGunCTF3-1.in".
+OPAL {+0}> 
+OPAL {+0}> 8 elements selected.
+OPAL {+0}> 
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}>   Selected Tracking Method == PARALLEL-T, NEW TRACK
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}>  -- B I N N I N G in T -----------------------------------------
+OPAL {+0}>  ---------------------I N P U T --------------------------------
+OPAL {+0}>  GUNGAUSS FLAT TOP &  THERMAL EMITTANCE in ASTRA MODE
+OPAL {+0}>  Kinetic energy (thermal emittance) = 0.4 [eV]  
+OPAL {+0}>  Phi max = 90 [deg]  
+OPAL {+0}>  tBin = 5.29966e-12 [sec]  nBins = 5 tEmission =  2.64983e-11 [sec] 
+OPAL {+0}> -----------------------------------------
+OPAL {+0}>      CREATE BINNED GAUSS DISTRIBUTION DONE        
+OPAL {+0}> Bins= 5 hBin= 0 Particle vector length 0
+OPAL {+0}> Bin # 0 val 702
+OPAL {+0}> Bin # 1 val 4722
+OPAL {+0}> Bin # 2 val 9174
+OPAL {+0}> Bin # 3 val 4742
+OPAL {+0}> Bin # 4 val 660
+OPAL {+0}> Last emitted bin is 0
+OPAL {+0}> 
+OPAL {+0}> * ************* D I S T R I B U T I O N ******************************************** 
+OPAL {+0}> * Distribution:	DIST1
+OPAL {+0}> * Distribution type:	GUNGAUSSFLATTOPTH
+OPAL {+0}> * sigmax=	0.000395 [m];	sigmay=	0.000395 [m];	sigmat=	0 [m];
+OPAL {+0}> * transverse cut  3 [sigma] 
+OPAL {+0}> * sigmapx=	0 [eV];	sigmapy=	0 [eV];	pt +- sigmapt=	0+-0 [eV]
+OPAL {+0}> * corr x-px=	0	 corr y-py=	0	 corr t-pt=	0
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * ************* B E A M ************************************************************ 
+OPAL {+0}> * BEAM        BEAM1
+OPAL {+0}> * PARTICLE    ELECTRON
+OPAL {+0}> * CURRENT     5.996e-07 A
+OPAL {+0}> * FREQENCY    2998 Hz
+OPAL {+0}> * CHARGE      -e * 1 
+OPAL {+0}> * REST MASS   0.000510999 GeV
+OPAL {+0}> * MOMENTUM    1
+OPAL {+0}> * NPART       20000
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * ************* F I E L D S O L V E R ********************************************** 
+OPAL {+0}> * FIELDSOLVER  FS1
+OPAL {+0}> * TYPE         FFT
+OPAL {+0}> * N-PROCESSORS 4
+OPAL {+0}> * MX           32
+OPAL {+0}> * MY           32
+OPAL {+0}> * MT           64
+OPAL {+0}> * BBOXINCR     1
+OPAL {+0}> * GRRENSF      INTEGRATED
+OPAL {+0}> * XDIM is parallel  
+OPAL {+0}> * YDIM is parallel  
+OPAL {+0}> * Z(T)DIM is parallel  
+Ippl{+0}> ======UniformCartesian<3,MFLOAT>==begin======
+Ippl{+0}> gridSizes[0] = 33
+Ippl{+0}> gridSizes[1] = 33
+Ippl{+0}> gridSizes[2] = 65
+Ippl{+0}> origin = ( 0 , 0 , 0 )
+Ippl{+0}> meshSpacing[0] = 1
+Ippl{+0}> meshSpacing[1] = 1
+Ippl{+0}> meshSpacing[2] = 1
+Ippl{+0}> Dvc[0] = ( -0.25 , -0.25 , -0.25 )
+Ippl{+0}> Dvc[1] = ( 0.25 , -0.25 , -0.25 )
+Ippl{+0}> Dvc[2] = ( -0.25 , 0.25 , -0.25 )
+Ippl{+0}> Dvc[3] = ( 0.25 , 0.25 , -0.25 )
+Ippl{+0}> Dvc[4] = ( -0.25 , -0.25 , 0.25 )
+Ippl{+0}> Dvc[5] = ( 0.25 , -0.25 , 0.25 )
+Ippl{+0}> Dvc[6] = ( -0.25 , 0.25 , 0.25 )
+Ippl{+0}> Dvc[7] = ( 0.25 , 0.25 , 0.25 )
+Ippl{+0}> cell volume = 1
+Ippl{+0}> ======UniformCartesian<3,MFLOAT>==end========
+Ippl{+0}> 
+Ippl{+0}> ParticleSpatialLayout, with particle distribution:
+Ippl{+0}>     Number of particles 0  Number of particles 0  Number of particles 0  Number of particles 0  
+Ippl{+0}> SpatialLayout decomposition = Total Domain = {[0,32),[0,32),[0,64)}
+Ippl{+0}> Local Rnodes = 1
+Ippl{+0}>  rnode 0 : {[0,16),[0,16),[0,64)}
+Ippl{+0}> Remote Rnodes = 3
+Ippl{+0}>  rnode 0 : {[0,16),[16,32),[0,64)}
+Ippl{+0}>  rnode 1 : {[16,32),[0,16),[0,64)}
+Ippl{+0}>  rnode 2 : {[16,32),[16,32),[0,64)}
+Ippl{+0}> Internal FieldLayout = Domain = {[0:31:1],[0:31:1],[0:63:1]}
+Ippl{+0}> FieldLayoutUsers = 1
+Ippl{+0}> Total number of vnodes = 4
+Ippl{+0}> Local Vnodes = 1
+Ippl{+0}>  vnode 0: Node = 0 ; vnode_m = 0 ; Domain = {[0:15:1],[0:15:1],[0:63:1]}
+Ippl{+0}> Remote Vnodes = 3
+Ippl{+0}>  vnode 0 : Node = 1 ; vnode_m = 1 ; Domain = {[0:15:1],[16:31:1],[0:63:1]}
+Ippl{+0}>  vnode 1 : Node = 2 ; vnode_m = 2 ; Domain = {[16:31:1],[0:15:1],[0:63:1]}
+Ippl{+0}>  vnode 2 : Node = 3 ; vnode_m = 3 ; Domain = {[16:31:1],[16:31:1],[0:63:1]}
+Ippl{+0}> 
+OPAL {+0}> 
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> 
+OPAL {+0}> Phase space dump frequency 50 and statistics dump frequency 1 w.r.t. the time step.
+RFCavity {+0}> FINSS_RGUN using file CTF3_Ez_ASTRA.opal (1D dynamic); zini= 0 m; zfinal= 0.17493 m;
+Solenoid {+0}> FIND1_MSOL10 using file NEW_SINGLE_SOL_NOFRINGE_ASTRA.opal (1D magnetostatic); zini= -0.3 m; zfinal= 0.3 m;
+Solenoid {+0}> END using file NEW_SINGLE_SOL_NOFRINGE_ASTRA.opal (1D magnetostatic); zini= -0.3 m; zfinal= 0.3 m;
+Autophasing {+0}> 
+Autophasing {+0}> start at t= 0 [s], zstop at: 100.3 [m], Nplocal= 1
+Autophasing {+0}> initial DT 5e-13 [s], step= 0, R =  ( 0 , 0 , 0 ) [m]
+Ippl{+0}> 
+Ippl{+0}> * ************ I N F O *********************************************************
+Ippl{+0}> * read in fieldmap 'CTF3_Ez_ASTRA.opal'                                        *
+Ippl{+0}> * ******************************************************************************
+Ippl{+0}> 
+Ippl{+0}> FINSS_RGUN gone live
+Ippl{+0}> 
+Ippl{+0}> * ************ I N F O *********************************************************
+Ippl{+0}> * read in fieldmap 'NEW_SINGLE_SOL_NOFRINGE_ASTRA.opal'                        *
+Ippl{+0}> * ******************************************************************************
+Ippl{+0}> 
+Ippl{+0}> FIND1_MSOL10 gone live
+Ippl{+0}> Found FINSS_RGUN at 0 [m], step  0, t= 0 [s],
+Ippl{+0}> E= 2.55522e-13 [MeV]
+Ippl{+0}> start phase scan ... 
+Ippl{+0}> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Ippl{+0}> FINSS_RGUN, start Ekin= 2.55522e-13 MeV, t= 0 s, phi= -0.0610865, 
+Autophasing {+0}> estimated phi= 2.2443898 rad, Ekin= 6.6241112 MeV
+Ippl{+0}> beta = 0.0001 tErr = 0
+Autophasing {+0}> Did APtrack with phi= 2.24439 result E= 6.62427
+Ippl{+0}> do fine scan around effective max energy (6.62427 MeV), dphi= 0.00872665
+Ippl{+0}> try phi= 2.23566 rad -> DEkin= beta = 0.0001 tErr = 0
+Ippl{+0}> 0.000141344 MeV: accepted
+Ippl{+0}> try phi= 2.22694 rad -> DEkin= beta = 0.0001 tErr = 0
+Ippl{+0}> -0.000166705 MeV: rejected E= 6.62424 Emax= 6.62441
+Ippl{+0}> refinement level: 1, dphi= 0.00436332
+Ippl{+0}> try phi= 2.2313 rad -> DEkin= beta = 0.0001 tErr = 0
+Ippl{+0}> -4.52121e-05 MeV: rejected
+Ippl{+0}> try phi= 2.24003 rad -> DEkin= beta = 0.0001 tErr = 0
+Ippl{+0}> -3.18011e-05 MeV: rejected
+Ippl{+0}> refinement level: 2, dphi= 0.00218166
+Ippl{+0}> try phi= 2.23348 rad -> DEkin= beta = 0.0001 tErr = 0
+Ippl{+0}> -1.3025e-05 MeV: rejected
+Ippl{+0}> try phi= 2.23784 rad -> DEkin= beta = 0.0001 tErr = 0
+Ippl{+0}> -6.22816e-06 MeV: rejected
+Ippl{+0}> refinement level: 3, dphi= 0.00109083
+Ippl{+0}> try phi= 2.23457 rad -> DEkin= beta = 0.0001 tErr = 0
+Ippl{+0}> -4.11159e-06 MeV: rejected
+Ippl{+0}> try phi= 2.23675 rad -> DEkin= beta = 0.0001 tErr = 0
+Ippl{+0}> -7.0169e-07 MeV: rejected
+Ippl{+0}> refinement level: 4, dphi= 0.000545415
+Ippl{+0}> try phi= 2.23512 rad -> DEkin= beta = 0.0001 tErr = 0
+Ippl{+0}> -1.45485e-06 MeV: rejected
+Ippl{+0}> try phi= 2.23621 rad -> DEkin= beta = 0.0001 tErr = 0
+Ippl{+0}> 2.51534e-07 MeV: accepted
+Autophasing {+0}> FINSS_RGUN_phi= 2.23621 rad / 128.125 deg, AstraPhi= 218.125 deg,
+Autophasing {+0}> E= 6.62441 (MeV), phi_nom= -3.5
+Ippl{+0}> %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Ippl{+0}> step = 0, spos = 1.05524e-06 [m], t= 5e-13 [s], E= 5.06492e-05 [MeV] 
+OPAL {+0}> 
+OPAL {+0}> -------------------------------------------------------------------------------------
+OPAL {+0}> FINSS_RGUN: phi_orig= phi_nom + phi_maxE= 124.625 degree, global phase shift= -14.2995 degree
+OPAL {+0}> -------------------------------------------------------------------------------------
+OPAL {+0}> 
+Ippl{+0}> Saved phases in the h5 file: Cav-1-name->FINSS_RGUN --- Cav-1-value ->2.23621
+OPAL {+0}> totalParticle_i= 0
+OPAL {+0}> Track start at: 14.53.48, t= 0; zstop at: 0.14 [m]
+OPAL {+0}> Executing ParallelTTracker, initial DT 1e-12 [s];
+OPAL {+0}> max integration steps 100, next step= 0
+OPAL {+0}> 
+OPAL {+0}> --- BEGIN FIELD LIST ---------------------------------------------------------------
+OPAL {+0}> 
+OPAL {+0}> --- 0 m -- 0.17493 m -- alpha = 0 -- beta = 0 --------------------------------------
+OPAL {+0}> FINSS_RGUN
+OPAL {+0}> FIND1_MSOL10
+OPAL {+0}> --- 0.17493 m -- 0.6 m -- alpha = 0 -- beta = 0 ------------------------------------
+OPAL {+0}> FIND1_MSOL10
+OPAL {+0}> --- 1.38 m -- 1.48 m -- alpha = 0 -- beta = 0 --------------------------------------
+OPAL {+0}> FIND1_MQ10
+OPAL {+0}> --- 1.56 m -- 1.66 m -- alpha = 0 -- beta = 0 --------------------------------------
+OPAL {+0}> FIND1_MQ20
+OPAL {+0}> --- 1.74 m -- 1.84 m -- alpha = 0 -- beta = 0 --------------------------------------
+OPAL {+0}> FIND1_MQ30
+OPAL {+0}> --- 99.7 m -- 100.3 m -- alpha = 0 -- beta = 0 -------------------------------------
+OPAL {+0}> END
+OPAL {+0}> 
+OPAL {+0}> --- END FIELD LIST -----------------------------------------------------------------
+OPAL {+0}> 
+OPAL {+0}> MINSTEPFORREBIN 600
+OPAL {+0}> REPARTFREQ 100
+OPAL {+0}> Changing emission time step to: 5.29966e-12
+OPAL {+0}> * Bin number: 0 has emitted all 702 particles.
+OPAL {+0}> 14.53.48 Step 0 at 1.09012e-05 [m] t= 5.29966e-12 [s] E=0 [MeV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP= 702 Qtot= 0.00702 [nC]  Qi= 1e-14 [C]
+OPAL {+0}> * Ekin= 0.000343899 [MeV] dEkin= 0.000435091 [MeV]
+OPAL {+0}> * rmax= ( 0.000396298 , 0.000393313 , 7.9218e-05 ) [m]
+OPAL {+0}> * rmin= ( -0.000395488 , -0.000391819 , -7.92075e-07 ) [m]
+OPAL {+0}> * rms beam size= ( 0.000193079 , 0.000197805 , 1.54752e-05 ) [m]
+OPAL {+0}> * rms momenta= ( 0.000709665 , 0.000700316 , 0.0232198 ) [beta gamma]
+OPAL {+0}> * mean position= ( 1.67849e-06 , 5.27087e-06 , 1.09012e-05 ) [m]
+OPAL {+0}> * mean momenta= ( 1.71977e-05 , 5.10612e-05 , 0.028412 ) [beta gamma]
+OPAL {+0}> * rms emittance= ( 3.72618e-06 , 3.77277e-06 , 2.80162e-06 ) (not normalized)
+OPAL {+0}> * rms correlation= ( 0.0654024 , -0.0357343 , 0.958202 )
+OPAL {+0}> * dh= 0.01 [m] dT= 5.29966e-12 [s]
+OPAL {+0}> * hr= ( 2.55415e-05 , 2.53268e-05 , 1.27e-06 ) [m]
+OPAL {+0}> * spos= 1.09012e-05 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 1.00067 NpInbin= 702
+Ippl{+0}> Bin 1 has no particles 
+Ippl{+0}> Bin 2 has no particles 
+Ippl{+0}> Bin 3 has no particles 
+Ippl{+0}> Bin 4 has no particles 
+OPAL {+0}> * Bin number: 1 has emitted all 4722 particles.
+OPAL {+0}> 14.53.50 Step 1 at 3.88316e-05 [m] t= 1.05993e-11 [s] E=3.44909 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 1.01185 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 1.00169 NpInbin= 4722
+Ippl{+0}> Bin 2 has no particles 
+Ippl{+0}> Bin 3 has no particles 
+Ippl{+0}> Bin 4 has no particles 
+Ippl{+0}> dE= 5.1908 [keV] of Bin 0 and 1
+OPAL {+0}> * Bin number: 2 has emitted all 9174 particles.
+OPAL {+0}> 14.53.52 Step 2 at 0.000113732 [m] t= 1.5899e-11 [s] E=0.878119 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 1.04504 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 1.0176 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 1.0035 NpInbin= 9174
+Ippl{+0}> Bin 3 has no particles 
+Ippl{+0}> Bin 4 has no particles 
+Ippl{+0}> dE= 14.0192 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 7.20727 [keV] of Bin 1 and 2
+OPAL {+0}> * Bin number: 3 has emitted all 4742 particles.
+OPAL {+0}> 14.53.53 Step 3 at 0.000327561 [m] t= 2.11986e-11 [s] E=0.187834 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 1.10791 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 1.06208 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 1.02456 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.00627 NpInbin= 4742
+Ippl{+0}> Bin 4 has no particles 
+Ippl{+0}> dE= 23.4218 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 19.1719 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 9.34531 [keV] of Bin 2 and 3
+OPAL {+0}> * Bin number: 4 has emitted all 660 particles.
+OPAL {+0}> Emission done. Switching back to track timestep: 1e-12
+OPAL {+0}> 14.53.54 Step 4 at 0.000778327 [m] t= 2.21986e-11 [s] E=0.0625979 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 1.20356 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 1.14164 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 1.07849 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.03608 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.0095 NpInbin= 660
+Ippl{+0}> dE= 31.6448 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 32.2673 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 21.6699 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 13.5838 [keV] of Bin 3 and 4
+OPAL {+0}> 14.53.55 Step 5 at 0.000892442 [m] t= 2.31986e-11 [s] E=0.0504284 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 1.22374 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 1.15927 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 1.0918 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.04494 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.01403 NpInbin= 660
+Ippl{+0}> dE= 32.9467 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 34.4735 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 23.9457 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 15.7989 [keV] of Bin 3 and 4
+OPAL {+0}> 14.53.56 Step 6 at 0.00101447 [m] t= 2.41986e-11 [s] E=0.0578048 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 1.24501 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 1.17805 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 1.10635 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.05505 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.01973 NpInbin= 660
+Ippl{+0}> dE= 34.2158 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 36.6387 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 26.2149 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 18.0445 [keV] of Bin 3 and 4
+OPAL {+0}> 14.53.58 Step 7 at 0.00114429 [m] t= 2.51986e-11 [s] E=0.0658046 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 1.26736 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 1.19798 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 1.12213 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.06642 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.02669 NpInbin= 660
+Ippl{+0}> dE= 35.452 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 38.7589 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 28.4662 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 20.3008 [keV] of Bin 3 and 4
+OPAL {+0}> 14.53.59 Step 8 at 0.00128176 [m] t= 2.61986e-11 [s] E=0.074432 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 1.29079 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 1.21905 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 1.13915 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.07909 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.03496 NpInbin= 660
+Ippl{+0}> dE= 36.6554 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 40.8305 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 30.6899 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 22.5517 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.00 Step 9 at 0.00142669 [m] t= 2.71986e-11 [s] E=0.0836889 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 1.31529 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 1.24127 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 1.15741 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.09307 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.04457 NpInbin= 660
+Ippl{+0}> dE= 37.8262 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 42.8509 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 32.878 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 24.7839 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.01 Step 10 at 0.0015789 [m] t= 2.81986e-11 [s] E=0.0935754 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 1.34087 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 1.26462 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 1.17692 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.10838 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.05556 NpInbin= 660
+Ippl{+0}> dE= 38.9649 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 44.8178 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 35.0237 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 26.9865 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.02 Step 11 at 0.00173815 [m] t= 2.91986e-11 [s] E=0.10409 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 1.36752 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 1.2891 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 1.19765 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.125 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.06796 NpInbin= 660
+Ippl{+0}> dE= 40.0717 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 46.7299 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 37.1215 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 29.1504 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.03 Step 12 at 0.00190423 [m] t= 3.01986e-11 [s] E=0.115229 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 1.39521 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 1.31469 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 1.21961 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.14296 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.08177 NpInbin= 660
+Ippl{+0}> dE= 41.1473 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 48.5862 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 39.1669 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 31.2682 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.04 Step 13 at 0.00207688 [m] t= 3.11986e-11 [s] E=0.126987 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 1.42395 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 1.34138 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 1.24277 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.16223 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.097 NpInbin= 660
+Ippl{+0}> dE= 42.1926 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 50.3863 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 41.1566 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 33.3337 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.06 Step 14 at 0.00225586 [m] t= 3.21986e-11 [s] E=0.139358 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 1.45371 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 1.36916 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 1.26714 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.18282 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.11366 NpInbin= 660
+Ippl{+0}> dE= 43.2078 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 52.1303 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 43.088 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 35.3421 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.07 Step 15 at 0.00244091 [m] t= 3.31986e-11 [s] E=0.152334 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 1.48449 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 1.39801 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 1.29268 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.2047 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.13173 NpInbin= 660
+Ippl{+0}> dE= 44.1939 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 53.8187 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 44.9595 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 37.2898 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.08 Step 16 at 0.00263178 [m] t= 3.41986e-11 [s] E=0.165907 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 1.51627 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 1.42791 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 1.31939 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.22786 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.1512 NpInbin= 660
+Ippl{+0}> dE= 45.1516 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 55.4523 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 46.7705 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 39.1742 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.09 Step 17 at 0.00282819 [m] t= 3.51986e-11 [s] E=0.180067 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 1.54903 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 1.45885 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 1.34724 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.25229 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.17207 NpInbin= 660
+Ippl{+0}> dE= 46.0817 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 57.0322 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 48.5207 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 40.9936 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.10 Step 18 at 0.00302989 [m] t= 3.61986e-11 [s] E=0.194802 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 1.58276 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 1.49081 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 1.37621 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.27795 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.1943 NpInbin= 660
+Ippl{+0}> dE= 46.9848 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 58.5598 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 50.2105 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 42.7476 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.11 Step 19 at 0.00323663 [m] t= 3.71986e-11 [s] E=0.210102 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 1.61743 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 1.52377 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 1.40628 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.30483 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.21787 NpInbin= 660
+Ippl{+0}> dE= 47.8615 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 60.0363 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 51.8411 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 44.4361 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.12 Step 20 at 0.00344816 [m] t= 3.81986e-11 [s] E=0.225955 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 1.65303 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 1.5577 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 1.43742 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.3329 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.24276 NpInbin= 660
+Ippl{+0}> dE= 48.7122 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 61.4633 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 53.4135 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 46.06 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.14 Step 21 at 0.00366424 [m] t= 3.91986e-11 [s] E=0.242347 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 1.68954 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 1.59259 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 1.46962 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.36212 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.26893 NpInbin= 660
+Ippl{+0}> dE= 49.5374 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 62.8423 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 54.9293 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 47.6207 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.15 Step 22 at 0.00388462 [m] t= 4.01986e-11 [s] E=0.259266 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 1.72693 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 1.62842 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 1.50283 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.39248 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.29635 NpInbin= 660
+Ippl{+0}> dE= 50.3378 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 64.1746 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 56.3904 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 49.1198 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.16 Step 23 at 0.00410908 [m] t= 4.11986e-11 [s] E=0.276698 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 1.76518 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 1.66515 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 1.53705 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.42394 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.325 NpInbin= 660
+Ippl{+0}> dE= 51.1134 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 65.4617 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 57.7984 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 50.5595 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.17 Step 24 at 0.0043374 [m] t= 4.21986e-11 [s] E=0.29463 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 1.80427 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 1.70277 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 1.57223 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.45647 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.35482 NpInbin= 660
+Ippl{+0}> dE= 51.8644 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 66.7049 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 59.1553 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 51.9422 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.18 Step 25 at 0.00456936 [m] t= 4.31986e-11 [s] E=0.313047 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 1.84417 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 1.74125 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 1.60837 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.49004 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.3858 NpInbin= 660
+Ippl{+0}> dE= 52.5908 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 67.9053 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 60.463 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 53.2704 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.19 Step 26 at 0.00480477 [m] t= 4.41986e-11 [s] E=0.331936 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 1.88486 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 1.78057 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 1.64541 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.52463 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.41788 NpInbin= 660
+Ippl{+0}> dE= 53.2926 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 69.0641 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 61.7231 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 54.5463 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.20 Step 27 at 0.00504343 [m] t= 4.51986e-11 [s] E=0.35128 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 1.92631 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 1.8207 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 1.68335 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.56019 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.45104 NpInbin= 660
+Ippl{+0}> dE= 53.9696 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 70.1822 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 62.9373 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 55.7725 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.22 Step 28 at 0.00528515 [m] t= 4.61986e-11 [s] E=0.371066 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 1.9685 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 1.8616 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 1.72215 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.5967 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.48524 NpInbin= 660
+Ippl{+0}> dE= 54.6218 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 71.2603 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 64.1073 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 56.9513 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.23 Step 29 at 0.00552977 [m] t= 4.71986e-11 [s] E=0.391278 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 2.01138 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 1.90326 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 1.76178 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.63412 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.52045 NpInbin= 660
+Ippl{+0}> dE= 55.2489 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 72.299 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 65.2345 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 58.0849 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.24 Step 30 at 0.00577711 [m] t= 4.81986e-11 [s] E=0.411901 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 2.05495 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 1.94565 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 1.80221 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.67242 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.55662 NpInbin= 660
+Ippl{+0}> dE= 55.8505 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 73.299 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 66.3201 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 59.1752 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.25 Step 31 at 0.00602702 [m] t= 4.91986e-11 [s] E=0.432919 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 2.09916 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 1.98873 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 1.84341 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.71158 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.59372 NpInbin= 660
+Ippl{+0}> dE= 56.426 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 74.2605 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 67.3653 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 60.2242 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.26 Step 32 at 0.00627936 [m] t= 5.01986e-11 [s] E=0.454316 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 2.14398 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 2.03248 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 1.88535 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.75155 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.63172 NpInbin= 660
+Ippl{+0}> dE= 56.975 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 75.1839 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 68.371 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 61.2336 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.27 Step 33 at 0.00653397 [m] t= 5.11986e-11 [s] E=0.476076 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 2.18939 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 2.07687 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 1.928 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.79231 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.67058 NpInbin= 660
+Ippl{+0}> dE= 57.4969 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 76.0692 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 69.338 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 62.2048 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.28 Step 34 at 0.00679073 [m] t= 5.21986e-11 [s] E=0.498183 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 2.23534 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 2.12186 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 1.97133 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.83382 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.71026 NpInbin= 660
+Ippl{+0}> dE= 57.9912 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 76.9166 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 70.2669 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 63.139 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.30 Step 35 at 0.00704952 [m] t= 5.31986e-11 [s] E=0.52062 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 2.28181 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 2.16741 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 2.01531 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.87605 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.75074 NpInbin= 660
+Ippl{+0}> dE= 58.4575 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 77.7258 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 71.1584 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 64.0374 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.31 Step 36 at 0.00731022 [m] t= 5.41986e-11 [s] E=0.543369 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 2.32877 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 2.21351 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 2.0599 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.91897 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.79196 NpInbin= 660
+Ippl{+0}> dE= 58.8951 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 78.4967 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 72.0127 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 64.9007 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.32 Step 37 at 0.00757271 [m] t= 5.51986e-11 [s] E=0.566414 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 2.37616 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 2.26011 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 2.10506 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 1.96254 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.83391 NpInbin= 660
+Ippl{+0}> dE= 59.3035 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 79.2291 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 72.8301 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 65.7296 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.33 Step 38 at 0.00783689 [m] t= 5.61986e-11 [s] E=0.589738 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 2.42398 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 2.30718 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 2.15078 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 2.00672 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.87654 NpInbin= 660
+Ippl{+0}> dE= 59.682 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 79.9227 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 73.6108 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 66.5248 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.34 Step 39 at 0.00810267 [m] t= 5.71986e-11 [s] E=0.613322 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 2.47216 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 2.35469 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 2.197 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 2.05149 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.91981 NpInbin= 660
+Ippl{+0}> dE= 60.0301 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 80.5774 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 74.3547 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 67.2867 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.35 Step 40 at 0.00836996 [m] t= 5.81986e-11 [s] E=0.637148 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 2.52069 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 2.40259 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 2.2437 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 2.09681 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 1.9637 NpInbin= 660
+Ippl{+0}> dE= 60.3473 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 81.1926 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 75.0618 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 68.0154 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.36 Step 41 at 0.00863866 [m] t= 5.91986e-11 [s] E=0.661199 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 2.56951 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 2.45086 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 2.29084 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 2.14264 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 2.00817 NpInbin= 660
+Ippl{+0}> dE= 60.6329 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 81.7682 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 75.732 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 68.7111 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.38 Step 42 at 0.0089087 [m] t= 6.01986e-11 [s] E=0.685455 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 2.6186 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 2.49945 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 2.33838 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 2.18894 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 2.05318 NpInbin= 660
+Ippl{+0}> dE= 60.8864 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 82.3036 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 76.3652 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 69.3738 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.39 Step 43 at 0.00918 [m] t= 6.11986e-11 [s] E=0.709898 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 2.66791 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 2.54833 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 2.38629 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 2.23569 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 2.09869 NpInbin= 660
+Ippl{+0}> dE= 61.1074 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 82.7987 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 76.9613 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 70.0032 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.40 Step 44 at 0.00945248 [m] t= 6.21986e-11 [s] E=0.734509 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 2.71741 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 2.59746 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 2.43454 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 2.28283 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 2.14467 NpInbin= 660
+Ippl{+0}> dE= 61.2951 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 83.2529 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 77.52 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 70.5993 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.41 Step 45 at 0.00972609 [m] t= 6.31986e-11 [s] E=0.759268 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 2.76706 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 2.6468 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 2.48307 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 2.33035 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 2.19109 NpInbin= 660
+Ippl{+0}> dE= 61.4492 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 83.6659 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 78.0412 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 71.1619 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.42 Step 46 at 0.0100008 [m] t= 6.41986e-11 [s] E=0.784157 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 2.81681 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 2.69632 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 2.53186 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 2.37819 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 2.2379 NpInbin= 660
+Ippl{+0}> dE= 61.569 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 84.0373 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 78.5245 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 71.6907 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.43 Step 47 at 0.0102764 [m] t= 6.51986e-11 [s] E=0.809156 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 2.86663 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 2.74597 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 2.58087 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 2.42633 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 2.28507 NpInbin= 660
+Ippl{+0}> dE= 61.6543 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 84.3668 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 78.9697 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 72.1856 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.44 Step 48 at 0.010553 [m] t= 6.61986e-11 [s] E=0.834245 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 2.91647 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 2.79572 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 2.63006 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 2.47472 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 2.33256 NpInbin= 660
+Ippl{+0}> dE= 61.7048 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 84.6539 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 79.3766 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 72.6461 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.46 Step 49 at 0.0108305 [m] t= 6.71986e-11 [s] E=0.859404 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 2.96631 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 2.84553 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 2.67938 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 2.52333 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 2.38033 NpInbin= 660
+Ippl{+0}> dE= 61.7201 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 84.8983 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 79.745 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 73.072 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.47 Step 50 at 0.0111089 [m] t= 6.81986e-11 [s] E=0.884614 [MeV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP= 20000 Qtot= 0.2 [nC]  Qi= 1e-14 [C]
+OPAL {+0}> * Ekin= 0.884614 [MeV] dEkin= 0.0757111 [MeV]
+OPAL {+0}> * rmax= ( 0.000806985 , 0.000801276 , 0.0138483 ) [m]
+OPAL {+0}> * rmin= ( -0.000812685 , -0.000797575 , 0.00810864 ) [m]
+OPAL {+0}> * rms beam size= ( 0.000350276 , 0.000350159 , 0.000999173 ) [m]
+OPAL {+0}> * rms momenta= ( 0.0182372 , 0.0182627 , 0.15922 ) [beta gamma]
+OPAL {+0}> * mean position= ( 1.88705e-06 , 9.00094e-07 , 0.0111089 ) [m]
+OPAL {+0}> * mean momenta= ( -4.95834e-05 , -2.74015e-05 , 2.54068 ) [beta gamma]
+OPAL {+0}> * rms emittance= ( 5.24293e-07 , 5.4647e-07 , 2.78258e-06 ) (not normalized)
+OPAL {+0}> * rms correlation= ( 0.978003 , 0.976131 , 0.999011 )
+OPAL {+0}> * dh= 0.01 [m] dT= 1e-12 [s]
+OPAL {+0}> * hr= ( 5.22474e-05 , 5.15758e-05 , 9.11054e-05 ) [m]
+OPAL {+0}> * spos= 0.0111089 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 3.01609 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 2.89535 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 2.72881 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 2.57211 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 2.42835 NpInbin= 660
+Ippl{+0}> dE= 61.6999 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 85.0999 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 80.0745 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 73.463 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.50 Step 51 at 0.011388 [m] t= 6.91986e-11 [s] E=0.909854 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 3.06578 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 2.94515 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 2.7783 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 2.62103 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 2.47657 NpInbin= 660
+Ippl{+0}> dE= 61.6439 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 85.2583 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 80.365 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 73.8188 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.51 Step 52 at 0.0116679 [m] t= 7.01986e-11 [s] E=0.935104 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 3.11534 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 2.99489 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 2.82781 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 2.67005 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 2.52497 NpInbin= 660
+Ippl{+0}> dE= 61.5518 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 85.3735 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 80.6161 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 74.1392 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.52 Step 53 at 0.0119485 [m] t= 7.11986e-11 [s] E=0.960344 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 3.16472 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 3.04452 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 2.87731 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 2.71913 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 2.57349 NpInbin= 660
+Ippl{+0}> dE= 61.4235 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 85.4451 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 80.8278 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 74.4237 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.53 Step 54 at 0.0122298 [m] t= 7.21986e-11 [s] E=0.985554 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 3.21389 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 3.09401 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 2.92675 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 2.76823 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 2.6221 NpInbin= 660
+Ippl{+0}> dE= 61.2589 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 85.4732 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 80.9998 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 74.6721 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.54 Step 55 at 0.0125117 [m] t= 7.31986e-11 [s] E=1.01071 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 3.26281 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 3.14332 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 2.97609 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 2.81732 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 2.67077 NpInbin= 660
+Ippl{+0}> dE= 61.0581 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 85.4575 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 81.1322 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 74.8843 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.55 Step 56 at 0.0127943 [m] t= 7.41986e-11 [s] E=1.0358 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 3.31144 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 3.19241 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 3.02529 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 2.86634 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 2.71945 NpInbin= 660
+Ippl{+0}> dE= 60.8206 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 85.3982 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 81.2248 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 75.0597 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.56 Step 57 at 0.0130773 [m] t= 7.51986e-11 [s] E=1.0608 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 3.35973 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 3.24124 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 3.07432 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 2.91527 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 2.76811 NpInbin= 660
+Ippl{+0}> dE= 60.5468 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 85.2951 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 81.2776 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 75.1985 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.58 Step 58 at 0.013361 [m] t= 7.61986e-11 [s] E=1.08569 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 3.40765 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 3.28977 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 3.12314 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 2.96406 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 2.8167 NpInbin= 660
+Ippl{+0}> dE= 60.2366 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 85.1484 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 81.2906 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 75.3003 [keV] of Bin 3 and 4
+OPAL {+0}> 14.54.59 Step 59 at 0.0136451 [m] t= 7.71986e-11 [s] E=1.11045 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 3.45517 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 3.33796 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 3.17171 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 3.01268 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 2.86519 NpInbin= 660
+Ippl{+0}> dE= 59.8897 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 84.9582 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 81.2638 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 75.3653 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.00 Step 60 at 0.0139298 [m] t= 7.81986e-11 [s] E=1.13505 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 3.50223 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 3.38578 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 3.21998 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 3.06108 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 2.91354 NpInbin= 660
+Ippl{+0}> dE= 59.5067 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 84.7246 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 81.1974 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 75.3932 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.01 Step 61 at 0.0142148 [m] t= 7.91986e-11 [s] E=1.15949 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 3.54881 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 3.43318 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 3.26792 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 3.10923 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 2.9617 NpInbin= 660
+Ippl{+0}> dE= 59.0878 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 84.4477 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 81.0914 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 75.3842 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.02 Step 62 at 0.0145004 [m] t= 8.01986e-11 [s] E=1.18374 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 3.59487 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 3.48013 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 3.31549 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 3.15709 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 3.00965 NpInbin= 660
+Ippl{+0}> dE= 58.6334 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 84.1278 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 80.9461 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 75.3382 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.03 Step 63 at 0.0147863 [m] t= 8.11986e-11 [s] E=1.20778 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 3.64037 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 3.52659 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 3.36266 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 3.20462 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 3.05734 NpInbin= 660
+Ippl{+0}> dE= 58.1433 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 83.7652 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 80.7616 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 75.2553 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.04 Step 64 at 0.0150726 [m] t= 8.21986e-11 [s] E=1.23159 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 3.68528 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 3.57252 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 3.40939 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 3.25178 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 3.10474 NpInbin= 660
+Ippl{+0}> dE= 57.6182 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 83.3603 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 80.5383 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 75.1356 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.05 Step 65 at 0.0153593 [m] t= 8.31986e-11 [s] E=1.25516 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 3.72955 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 3.61789 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 3.45563 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 3.29854 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 3.15181 NpInbin= 660
+Ippl{+0}> dE= 57.0584 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 82.9137 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 80.2763 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 74.9794 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.07 Step 66 at 0.0156464 [m] t= 8.41986e-11 [s] E=1.27846 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 3.77317 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 3.66267 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 3.50137 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 3.34486 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 3.1985 NpInbin= 660
+Ippl{+0}> dE= 56.4642 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 82.4257 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 79.976 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 74.7868 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.08 Step 67 at 0.0159338 [m] t= 8.51986e-11 [s] E=1.30148 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 3.81608 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 3.70681 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 3.54655 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 3.3907 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 3.24479 NpInbin= 660
+Ippl{+0}> dE= 55.8361 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 81.8968 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 79.6379 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 74.5582 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.09 Step 68 at 0.0162215 [m] t= 8.61986e-11 [s] E=1.3242 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 3.85827 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 3.7503 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 3.59114 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 3.43603 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 3.29064 NpInbin= 660
+Ippl{+0}> dE= 55.175 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 81.3276 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 79.2625 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 74.2938 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.10 Step 69 at 0.0165095 [m] t= 8.71986e-11 [s] E=1.34661 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 3.8997 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 3.79308 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 3.63512 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 3.48081 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 3.33601 NpInbin= 660
+Ippl{+0}> dE= 54.4817 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 80.7188 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 78.8503 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 73.9939 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.11 Step 70 at 0.0167978 [m] t= 8.81986e-11 [s] E=1.36868 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 3.94034 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 3.83514 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 3.67844 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 3.52501 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 3.38087 NpInbin= 660
+Ippl{+0}> dE= 53.7566 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 80.0711 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 78.4019 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 73.659 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.12 Step 71 at 0.0170864 [m] t= 8.91986e-11 [s] E=1.3904 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 3.98016 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 3.87644 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 3.72108 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 3.5686 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 3.42518 NpInbin= 660
+Ippl{+0}> dE= 53.0005 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 79.3852 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 77.9178 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 73.2896 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.13 Step 72 at 0.0173752 [m] t= 9.01986e-11 [s] E=1.41175 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 4.01913 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 3.91695 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 3.76301 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 3.61154 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 3.46891 NpInbin= 660
+Ippl{+0}> dE= 52.2143 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 78.6622 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 77.3986 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 72.8862 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.15 Step 73 at 0.0176643 [m] t= 9.11986e-11 [s] E=1.43272 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 4.05723 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 3.95664 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 3.80419 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 3.65381 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 3.51203 NpInbin= 660
+Ippl{+0}> dE= 51.3984 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 77.903 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 76.8452 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 72.4495 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.16 Step 74 at 0.0179536 [m] t= 9.21986e-11 [s] E=1.4533 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 4.09443 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 3.99549 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 3.8446 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 3.69536 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 3.5545 NpInbin= 660
+Ippl{+0}> dE= 50.5542 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 77.1085 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 76.2584 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 71.9803 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.17 Step 75 at 0.0182431 [m] t= 9.31986e-11 [s] E=1.47347 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 4.1307 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 4.03347 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 3.8842 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 3.73618 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 3.5963 NpInbin= 660
+Ippl{+0}> dE= 49.6829 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 76.2798 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 75.6389 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 71.4788 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.18 Step 76 at 0.0185328 [m] t= 9.41986e-11 [s] E=1.49321 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 4.16603 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 4.07056 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 3.92297 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 3.77623 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 3.63739 NpInbin= 660
+Ippl{+0}> dE= 48.7848 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 75.4179 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 74.9879 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 70.946 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.19 Step 77 at 0.0188227 [m] t= 9.51986e-11 [s] E=1.51251 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 4.2004 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 4.10673 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 3.96089 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 3.81548 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 3.67774 NpInbin= 660
+Ippl{+0}> dE= 47.8614 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 74.524 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 74.3063 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 70.3826 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.20 Step 78 at 0.0191129 [m] t= 9.61986e-11 [s] E=1.53137 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 4.23377 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 4.14196 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 3.99793 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 3.85391 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 3.71734 NpInbin= 660
+Ippl{+0}> dE= 46.9139 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 73.5994 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 73.5951 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 69.7897 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.21 Step 79 at 0.0194032 [m] t= 9.71986e-11 [s] E=1.54976 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 4.26615 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 4.17624 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 4.03407 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 3.8915 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 3.75614 NpInbin= 660
+Ippl{+0}> dE= 45.9437 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 72.6453 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 72.8553 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 69.168 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.23 Step 80 at 0.0196936 [m] t= 9.81986e-11 [s] E=1.56768 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 4.2975 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 4.20953 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 4.06929 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 3.92822 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 3.79413 NpInbin= 660
+Ippl{+0}> dE= 44.952 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 71.6631 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 72.0882 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 68.5188 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.24 Step 81 at 0.0199842 [m] t= 9.91986e-11 [s] E=1.58512 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 4.32782 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 4.24183 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 4.10356 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 3.96404 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 3.83127 NpInbin= 660
+Ippl{+0}> dE= 43.9401 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 70.6542 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 71.2947 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 67.8431 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.25 Step 82 at 0.020275 [m] t= 1.00199e-10 [s] E=1.60207 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 4.35709 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 4.27311 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 4.13687 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 3.99895 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 3.86756 NpInbin= 660
+Ippl{+0}> dE= 42.91 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 69.6202 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 70.4763 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 67.1419 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.26 Step 83 at 0.0205659 [m] t= 1.01199e-10 [s] E=1.61852 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 4.3853 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 4.30337 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 4.1692 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 4.03293 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 3.90295 NpInbin= 660
+Ippl{+0}> dE= 41.8627 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 68.5629 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 69.6342 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 66.4161 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.27 Step 84 at 0.020857 [m] t= 1.02199e-10 [s] E=1.63446 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 4.41244 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 4.33259 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 4.20053 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 4.06595 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 3.93745 NpInbin= 660
+Ippl{+0}> dE= 40.7994 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 67.4837 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 68.7698 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 65.6673 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.28 Step 85 at 0.0211482 [m] t= 1.03199e-10 [s] E=1.64989 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 4.4385 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 4.36077 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 4.23086 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 4.09801 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 3.97101 NpInbin= 660
+Ippl{+0}> dE= 39.7218 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 66.3846 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 67.8846 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 64.8965 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.29 Step 86 at 0.0214395 [m] t= 1.04199e-10 [s] E=1.66479 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 4.46348 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 4.38788 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 4.26016 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 4.12908 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 4.00363 NpInbin= 660
+Ippl{+0}> dE= 38.6313 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 65.2673 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 66.98 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 64.1051 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.31 Step 87 at 0.0217309 [m] t= 1.05199e-10 [s] E=1.67916 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 4.48738 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 4.41394 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 4.28843 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 4.15916 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 4.03529 NpInbin= 660
+Ippl{+0}> dE= 37.53 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 64.1335 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 66.0578 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 63.2944 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.32 Step 88 at 0.0220224 [m] t= 1.06199e-10 [s] E=1.69301 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 4.51019 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 4.43892 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 4.31566 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 4.18822 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 4.06598 NpInbin= 660
+Ippl{+0}> dE= 36.4197 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 62.9849 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 65.1196 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 62.466 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.33 Step 89 at 0.0223141 [m] t= 1.07199e-10 [s] E=1.70632 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 4.53191 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 4.46283 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 4.34184 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 4.21627 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 4.09568 NpInbin= 660
+Ippl{+0}> dE= 35.3022 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 61.8234 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 64.167 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 61.6212 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.34 Step 90 at 0.0226058 [m] t= 1.08199e-10 [s] E=1.71909 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 4.55255 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 4.48566 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 4.36697 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 4.24329 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 4.12438 NpInbin= 660
+Ippl{+0}> dE= 34.1792 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 60.6511 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 63.2017 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 60.7616 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.35 Step 91 at 0.0228976 [m] t= 1.09199e-10 [s] E=1.73133 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 4.57211 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 4.50743 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 4.39105 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 4.26927 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 4.15207 NpInbin= 660
+Ippl{+0}> dE= 33.0527 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 59.4701 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 62.2254 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 59.8891 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.36 Step 92 at 0.0231895 [m] t= 1.10199e-10 [s] E=1.74302 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 4.59059 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 4.52812 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 4.41406 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 4.29422 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 4.17875 NpInbin= 660
+Ippl{+0}> dE= 31.9245 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 58.2826 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 61.2397 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 59.0052 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.37 Step 93 at 0.0234815 [m] t= 1.11199e-10 [s] E=1.75418 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 4.60801 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 4.54774 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 4.43602 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 4.31812 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 4.2044 NpInbin= 660
+Ippl{+0}> dE= 30.7966 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 57.0908 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 60.2466 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 58.1115 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.39 Step 94 at 0.0237736 [m] t= 1.12199e-10 [s] E=1.76479 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 4.62438 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 4.56631 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 4.45692 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 4.34098 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 4.22902 NpInbin= 660
+Ippl{+0}> dE= 29.671 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 55.8968 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 59.2479 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 57.21 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.40 Step 95 at 0.0240657 [m] t= 1.13199e-10 [s] E=1.77488 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 4.6397 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 4.58383 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 4.47678 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 4.36279 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 4.25261 NpInbin= 660
+Ippl{+0}> dE= 28.5497 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 54.7029 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 58.2456 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 56.302 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.41 Step 96 at 0.0243579 [m] t= 1.14199e-10 [s] E=1.78443 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 4.65399 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 4.6003 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 4.49558 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 4.38357 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 4.27517 NpInbin= 660
+Ippl{+0}> dE= 27.4347 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 53.5113 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 57.2418 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 55.3894 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.42 Step 97 at 0.0246502 [m] t= 1.15199e-10 [s] E=1.79345 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 4.66728 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 4.61575 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 4.51336 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 4.4033 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 4.2967 NpInbin= 660
+Ippl{+0}> dE= 26.3279 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 52.3243 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 56.2385 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 54.4739 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.43 Step 98 at 0.0249425 [m] t= 1.16199e-10 [s] E=1.80195 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> *****************************************************************
+Ippl{+0}> do repartition because of repartFreq
+Ippl{+0}> *****************************************************************
+Ippl{+0}> *****************************************************************
+Ippl{+0}> do repartition done
+Ippl{+0}> *****************************************************************
+Ippl{+0}> Bin 0 gamma = 4.67957 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 4.63019 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 4.53011 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 4.42201 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 4.3172 NpInbin= 660
+Ippl{+0}> dE= 25.2315 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 51.1443 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 55.2377 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 53.5577 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.44 Step 99 at 0.0252349 [m] t= 1.17199e-10 [s] E=1.80993 [MeV] 
+Ippl{+0}> *****************************************************************
+Ippl{+0}> do repartition because of zero particles or repartition frequency
+Ippl{+0}> done
+Ippl{+0}> *****************************************************************
+OPAL {+0}> * Wrote beam statistics.
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP= 20000 Qtot= 0.2 [nC]  Qi= 1e-14 [C]
+OPAL {+0}> * Ekin= 1.80993 [MeV] dEkin= 0.0474263 [MeV]
+OPAL {+0}> * rmax= ( 0.00107019 , 0.00106176 , 0.0280671 ) [m]
+OPAL {+0}> * rmin= ( -0.00107642 , -0.00105382 , 0.0220711 ) [m]
+OPAL {+0}> * rms beam size= ( 0.000457635 , 0.000457509 , 0.00104462 ) [m]
+OPAL {+0}> * rms momenta= ( 0.0451728 , 0.0451783 , 0.0951457 ) [beta gamma]
+OPAL {+0}> * mean position= ( 1.82897e-06 , 8.63298e-07 , 0.0252349 ) [m]
+OPAL {+0}> * mean momenta= ( 5.69691e-05 , 2.60669e-05 , 4.42999 ) [beta gamma]
+OPAL {+0}> * rms emittance= ( 3.16321e-07 , 3.26101e-07 , 2.84854e-06 ) (not normalized)
+OPAL {+0}> * rms correlation= ( 0.997699 , 0.997554 , 0.991906 )
+OPAL {+0}> * dh= 0.01 [m] dT= 1e-12 [s]
+OPAL {+0}> * hr= ( 6.92455e-05 , 6.82445e-05 , 9.51747e-05 ) [m]
+OPAL {+0}> * spos= 0.0252349 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+OPAL {+0}> Dump phase space of last step
+Ippl{+0}> 
+Ippl{+0}> * ************ I N F O *********************************************************
+Ippl{+0}> * freed fieldmap 'CTF3_Ez_ASTRA.opal'                                          *
+Ippl{+0}> * ******************************************************************************
+Ippl{+0}> 
+Ippl{+0}> FINSS_RGUN gone off
+Ippl{+0}> FIND1_MSOL10 gone off
+OPAL {+0}> done executing ParallelTTracker at 14.55.47
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}>   Selected Tracking Method == PARALLEL-T, FOLLOWUP TRACK
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> * ************* B E A M ************************************************************ 
+OPAL {+0}> * BEAM        BEAM1
+OPAL {+0}> * PARTICLE    ELECTRON
+OPAL {+0}> * CURRENT     5.996e-07 A
+OPAL {+0}> * FREQENCY    2998 Hz
+OPAL {+0}> * CHARGE      -e * 1 
+OPAL {+0}> * REST MASS   0.000510999 GeV
+OPAL {+0}> * MOMENTUM    1
+OPAL {+0}> * NPART       20000
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * ************* F I E L D S O L V E R ********************************************** 
+OPAL {+0}> * FIELDSOLVER  FS1
+OPAL {+0}> * TYPE         FFT
+OPAL {+0}> * N-PROCESSORS 4
+OPAL {+0}> * MX           32
+OPAL {+0}> * MY           32
+OPAL {+0}> * MT           64
+OPAL {+0}> * BBOXINCR     1
+OPAL {+0}> * GRRENSF      INTEGRATED
+OPAL {+0}> * XDIM is parallel  
+OPAL {+0}> * YDIM is parallel  
+OPAL {+0}> * Z(T)DIM is parallel  
+Ippl{+0}> ======UniformCartesian<3,MFLOAT>==begin======
+Ippl{+0}> gridSizes[0] = 33
+Ippl{+0}> gridSizes[1] = 33
+Ippl{+0}> gridSizes[2] = 65
+Ippl{+0}> origin = ( 0 , 0 , 0 )
+Ippl{+0}> meshSpacing[0] = 1
+Ippl{+0}> meshSpacing[1] = 1
+Ippl{+0}> meshSpacing[2] = 1
+Ippl{+0}> Dvc[0] = ( -0.25 , -0.25 , -0.25 )
+Ippl{+0}> Dvc[1] = ( 0.25 , -0.25 , -0.25 )
+Ippl{+0}> Dvc[2] = ( -0.25 , 0.25 , -0.25 )
+Ippl{+0}> Dvc[3] = ( 0.25 , 0.25 , -0.25 )
+Ippl{+0}> Dvc[4] = ( -0.25 , -0.25 , 0.25 )
+Ippl{+0}> Dvc[5] = ( 0.25 , -0.25 , 0.25 )
+Ippl{+0}> Dvc[6] = ( -0.25 , 0.25 , 0.25 )
+Ippl{+0}> Dvc[7] = ( 0.25 , 0.25 , 0.25 )
+Ippl{+0}> cell volume = 1
+Ippl{+0}> ======UniformCartesian<3,MFLOAT>==end========
+Ippl{+0}> 
+Ippl{+0}> ParticleSpatialLayout, with particle distribution:
+Ippl{+0}>     Number of particles 0  Number of particles 0  Number of particles 0  Number of particles 0  
+Ippl{+0}> SpatialLayout decomposition = Total Domain = {[0,32),[0,32),[0,64)}
+Ippl{+0}> Local Rnodes = 1
+Ippl{+0}>  rnode 0 : {[0,16),[0,16),[0,64)}
+Ippl{+0}> Remote Rnodes = 3
+Ippl{+0}>  rnode 0 : {[0,16),[16,32),[0,64)}
+Ippl{+0}>  rnode 1 : {[16,32),[0,16),[0,64)}
+Ippl{+0}>  rnode 2 : {[16,32),[16,32),[0,64)}
+Ippl{+0}> Internal FieldLayout = Domain = {[0:31:1],[0:31:1],[0:63:1]}
+Ippl{+0}> FieldLayoutUsers = 1
+Ippl{+0}> Total number of vnodes = 4
+Ippl{+0}> Local Vnodes = 1
+Ippl{+0}>  vnode 0: Node = 0 ; vnode_m = 0 ; Domain = {[0:15:1],[0:15:1],[0:63:1]}
+Ippl{+0}> Remote Vnodes = 3
+Ippl{+0}>  vnode 0 : Node = 1 ; vnode_m = 1 ; Domain = {[0:15:1],[16:31:1],[0:63:1]}
+Ippl{+0}>  vnode 1 : Node = 2 ; vnode_m = 2 ; Domain = {[16:31:1],[0:15:1],[0:63:1]}
+Ippl{+0}>  vnode 2 : Node = 3 ; vnode_m = 3 ; Domain = {[16:31:1],[16:31:1],[0:63:1]}
+Ippl{+0}> 
+OPAL {+0}> 
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP= 20000 Qtot= 0.2 [nC]  Qi= 1e-14 [C]
+OPAL {+0}> * Ekin= 1.80993 [MeV] dEkin= 0.0474263 [MeV]
+OPAL {+0}> * rmax= ( 0.00107019 , 0.00106176 , 0.0280671 ) [m]
+OPAL {+0}> * rmin= ( -0.00107642 , -0.00105382 , 0.0220711 ) [m]
+OPAL {+0}> * rms beam size= ( 0.000457635 , 0.000457509 , 0.00104462 ) [m]
+OPAL {+0}> * rms momenta= ( 0.0451728 , 0.0451783 , 0.0951457 ) [beta gamma]
+OPAL {+0}> * mean position= ( 1.82897e-06 , 8.63298e-07 , 0.0252349 ) [m]
+OPAL {+0}> * mean momenta= ( 5.69691e-05 , 2.60669e-05 , 4.42999 ) [beta gamma]
+OPAL {+0}> * rms emittance= ( 3.16321e-07 , 3.26101e-07 , 2.84854e-06 ) (not normalized)
+OPAL {+0}> * rms correlation= ( 0.997699 , 0.997554 , 0.991906 )
+OPAL {+0}> * dh= 0.01 [m] dT= 1e-11 [s]
+OPAL {+0}> * hr= ( 6.92455e-05 , 6.82445e-05 , 9.51747e-05 ) [m]
+OPAL {+0}> * spos= 0.0252349 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> Phase space dump frequency 50 and statistics dump frequency 1 w.r.t. the time step.
+RFCavity {+0}> FINSS_RGUN using file CTF3_Ez_ASTRA.opal (1D dynamic); zini= 0 m; zfinal= 0.17493 m;
+Solenoid {+0}> FIND1_MSOL10 using file NEW_SINGLE_SOL_NOFRINGE_ASTRA.opal (1D magnetostatic); zini= -0.3 m; zfinal= 0.3 m;
+Solenoid {+0}> END using file NEW_SINGLE_SOL_NOFRINGE_ASTRA.opal (1D magnetostatic); zini= -0.3 m; zfinal= 0.3 m;
+Ippl{+0}> In follow-up track use saved phases for -> name: FINSS_RGUN phi= 2.23621 (rad)
+OPAL {+0}> 
+OPAL {+0}> -------------------------------------------------------------------------------------
+OPAL {+0}> FINSS_RGUN: phi_orig= phi_nom + phi_maxE= 124.625 degree, global phase shift= -14.2995 degree
+OPAL {+0}> -------------------------------------------------------------------------------------
+OPAL {+0}> 
+OPAL {+0}> totalParticle_i= 20000
+OPAL {+0}> Track start at: 14.55.47, t= 1.17199e-10; zstop at: 0.2 [m]
+OPAL {+0}> Executing ParallelTTracker, initial DT 1e-11 [s];
+OPAL {+0}> max integration steps 150, next step= 100
+OPAL {+0}> 
+OPAL {+0}> --- BEGIN FIELD LIST ---------------------------------------------------------------
+OPAL {+0}> 
+OPAL {+0}> --- 0 m -- 0.17493 m -- alpha = 0 -- beta = 0 --------------------------------------
+OPAL {+0}> FINSS_RGUN
+OPAL {+0}> FIND1_MSOL10
+OPAL {+0}> --- 0.17493 m -- 0.6 m -- alpha = 0 -- beta = 0 ------------------------------------
+OPAL {+0}> FIND1_MSOL10
+OPAL {+0}> --- 1.38 m -- 1.48 m -- alpha = 0 -- beta = 0 --------------------------------------
+OPAL {+0}> FIND1_MQ10
+OPAL {+0}> --- 1.56 m -- 1.66 m -- alpha = 0 -- beta = 0 --------------------------------------
+OPAL {+0}> FIND1_MQ20
+OPAL {+0}> --- 1.74 m -- 1.84 m -- alpha = 0 -- beta = 0 --------------------------------------
+OPAL {+0}> FIND1_MQ30
+OPAL {+0}> --- 99.7 m -- 100.3 m -- alpha = 0 -- beta = 0 -------------------------------------
+OPAL {+0}> END
+OPAL {+0}> 
+OPAL {+0}> --- END FIELD LIST -----------------------------------------------------------------
+OPAL {+0}> 
+Ippl{+0}> 
+Ippl{+0}> * ************ I N F O *********************************************************
+Ippl{+0}> * read in fieldmap 'CTF3_Ez_ASTRA.opal'                                        *
+Ippl{+0}> * ******************************************************************************
+Ippl{+0}> 
+Ippl{+0}> FINSS_RGUN gone live
+Ippl{+0}> FIND1_MSOL10 gone live
+OPAL {+0}> MINSTEPFORREBIN 600
+OPAL {+0}> REPARTFREQ 100
+Ippl{+0}> Bin 0 gamma = 4.69089 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 4.64364 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 4.54584 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 4.43969 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 4.33667 NpInbin= 660
+Ippl{+0}> dE= 24.1474 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 49.9736 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 54.2415 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 52.6427 [keV] of Bin 3 and 4
+OPAL {+0}> Changing emission time step to: 5.29966e-12
+OPAL {+0}> Emission done. Switching back to track timestep: 1e-11
+OPAL {+0}> 14.55.49 Step 100 at 0.0281605 [m] t= 1.27199e-10 [s] E=1.86302 [MeV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP= 20000 Qtot= 0.2 [nC]  Qi= 1e-14 [C]
+OPAL {+0}> * Ekin= 1.86302 [MeV] dEkin= 0.038206 [MeV]
+OPAL {+0}> * rmax= ( 0.00114648 , 0.00113701 , 0.0309973 ) [m]
+OPAL {+0}> * rmin= ( -0.00115281 , -0.00112834 , 0.0249873 ) [m]
+OPAL {+0}> * rms beam size= ( 0.000489395 , 0.000489266 , 0.00104728 ) [m]
+OPAL {+0}> * rms momenta= ( 0.0525427 , 0.0525447 , 0.076562 ) [beta gamma]
+OPAL {+0}> * mean position= ( 1.87667e-06 , 8.84498e-07 , 0.0281605 ) [m]
+OPAL {+0}> * mean momenta= ( 8.65455e-05 , 3.94729e-05 , 4.5363 ) [beta gamma]
+OPAL {+0}> * rms emittance= ( 3.08804e-07 , 3.19297e-07 , 2.92323e-06 ) (not normalized)
+OPAL {+0}> * rms correlation= ( 0.998515 , 0.998411 , 0.986226 )
+OPAL {+0}> * dh= 0.01 [m] dT= 1e-11 [s]
+OPAL {+0}> * hr= ( 7.41706e-05 , 7.30757e-05 , 9.53972e-05 ) [m]
+OPAL {+0}> * spos= 0.0281605 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 4.75539 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 4.72733 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 4.65062 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 4.56274 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 4.4768 NpInbin= 660
+Ippl{+0}> dE= 14.3426 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 39.1947 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 44.9087 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 43.9148 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.52 Step 101 at 0.0310881 [m] t= 1.37199e-10 [s] E=1.87852 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 4.75874 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 4.74356 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 4.68144 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 4.60656 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 4.53323 NpInbin= 660
+Ippl{+0}> dE= 7.75534 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 31.7447 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 38.2602 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 37.4757 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.53 Step 102 at 0.0340161 [m] t= 1.47199e-10 [s] E=1.87721 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 4.74629 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 4.73581 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 4.67901 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 4.609 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 4.54067 NpInbin= 660
+Ippl{+0}> dE= 5.35287 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 29.0257 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 35.7738 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 34.919 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.55 Step 103 at 0.0369443 [m] t= 1.57199e-10 [s] E=1.88341 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 4.76565 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 4.75204 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 4.6911 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 4.61709 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 4.54495 NpInbin= 660
+Ippl{+0}> dE= 6.95461 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 31.1416 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 37.8176 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 36.8638 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.56 Step 104 at 0.0398738 [m] t= 1.67199e-10 [s] E=1.91951 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 4.85653 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 4.83414 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 4.76177 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 4.67649 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 4.59286 NpInbin= 660
+Ippl{+0}> dE= 11.4427 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 36.9796 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 43.5795 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 42.7317 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.57 Step 105 at 0.0428066 [m] t= 1.77199e-10 [s] E=2.00168 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 5.0442 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 5.01037 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 4.92275 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 4.82198 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 4.72205 NpInbin= 660
+Ippl{+0}> dE= 17.2917 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 44.7717 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 51.4917 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 51.0667 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.58 Step 106 at 0.0457449 [m] t= 1.87199e-10 [s] E=2.13762 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 5.33737 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 5.29231 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 5.18916 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 5.07211 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 4.95449 NpInbin= 660
+Ippl{+0}> dE= 23.0263 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 52.7048 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 59.8139 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 60.1071 [keV] of Bin 3 and 4
+OPAL {+0}> 14.55.59 Step 107 at 0.04869 [m] t= 1.97199e-10 [s] E=2.32649 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 5.72897 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 5.67527 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 5.55934 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 5.42818 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 5.29461 NpInbin= 660
+Ippl{+0}> dE= 27.4363 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 59.2442 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 67.0202 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 68.2543 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.00 Step 108 at 0.0516425 [m] t= 2.07199e-10 [s] E=2.55997 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 6.19871 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 6.14073 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 6.01697 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 5.87615 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 5.73079 NpInbin= 660
+Ippl{+0}> dE= 29.6237 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 63.2449 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 71.958 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 74.2781 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.02 Step 109 at 0.0546017 [m] t= 2.17199e-10 [s] E=2.82399 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 6.71633 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 6.65964 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 6.53452 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 6.38998 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 6.2386 NpInbin= 660
+Ippl{+0}> dE= 28.9716 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 63.9341 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 73.8602 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 77.3553 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.03 Step 110 at 0.0575669 [m] t= 2.27199e-10 [s] E=3.10072 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 7.24543 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 7.19625 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 7.07712 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 6.93563 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 6.78488 NpInbin= 660
+Ippl{+0}> dE= 25.1329 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 60.8762 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 72.2997 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 77.0319 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.04 Step 111 at 0.0605366 [m] t= 2.37199e-10 [s] E=3.37073 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 7.74762 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 7.71231 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 7.60671 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 7.47527 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 7.33206 NpInbin= 660
+Ippl{+0}> dE= 18.0399 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 53.9621 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 67.1682 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 73.181 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.05 Step 112 at 0.06351 [m] t= 2.47199e-10 [s] E=3.61519 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 8.18704 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 8.17147 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 8.08642 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 7.97158 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 7.84245 NpInbin= 660
+Ippl{+0}> dE= 7.9552 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 43.4604 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 58.6829 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 65.9864 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.06 Step 113 at 0.0664858 [m] t= 2.57199e-10 [s] E=3.81821 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 8.53524 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 8.54394 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 8.48508 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 8.39225 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 8.2827 NpInbin= 660
+Ippl{+0}> dE= -4.44299 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 30.0761 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 47.4367 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 55.978 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.07 Step 114 at 0.0694635 [m] t= 2.67199e-10 [s] E=3.96916 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 8.77584 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 8.81116 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 8.78178 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 8.71437 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 8.6281 NpInbin= 660
+Ippl{+0}> dE= -18.0494 [keV] of Bin 0 and 1
+Ippl{+0}> dE= 15.0103 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 34.4497 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 44.0806 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.08 Step 115 at 0.0724422 [m] t= 2.77199e-10 [s] E=4.06467 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 8.90812 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 8.96957 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 8.96979 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 8.92844 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 8.86659 NpInbin= 660
+Ippl{+0}> dE= -31.4026 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -0.111755 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 21.1306 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 31.6079 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.10 Step 116 at 0.0754214 [m] t= 2.87199e-10 [s] E=4.10981 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 8.94856 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 9.03258 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 9.05891 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 9.04103 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 9.00164 NpInbin= 660
+Ippl{+0}> dE= -42.9355 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -13.4534 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 9.13294 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 20.1317 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.11 Step 117 at 0.0784008 [m] t= 2.97199e-10 [s] E=4.11784 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 8.92885 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 9.02933 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 9.07508 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 9.07506 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 9.05311 NpInbin= 660
+Ippl{+0}> dE= -51.343 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -23.3809 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 0.010828 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 11.2141 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.12 Step 118 at 0.0813802 [m] t= 3.07199e-10 [s] E=4.10832 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 8.89058 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 9.00005 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 9.05662 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 9.06674 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 9.05495 NpInbin= 660
+Ippl{+0}> dE= -55.9387 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -28.9073 [keV] of Bin 1 and 2
+Ippl{+0}> dE= -5.17295 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 6.02635 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.13 Step 119 at 0.0843596 [m] t= 3.17199e-10 [s] E=4.10362 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 8.87776 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 8.9889 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 9.04745 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 9.05945 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 9.04965 NpInbin= 660
+Ippl{+0}> dE= -56.7909 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -29.9173 [keV] of Bin 1 and 2
+Ippl{+0}> dE= -6.13636 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 5.01042 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.14 Step 120 at 0.087339 [m] t= 3.27199e-10 [s] E=4.12502 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 8.92927 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 9.0362 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 9.08932 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 9.096 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 9.08073 NpInbin= 660
+Ippl{+0}> dE= -54.6377 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -27.1458 [keV] of Bin 1 and 2
+Ippl{+0}> dE= -3.41164 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 7.79872 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.15 Step 121 at 0.0903189 [m] t= 3.37199e-10 [s] E=4.18919 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 9.07309 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 9.17214 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 9.21497 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 9.21132 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 9.18518 NpInbin= 660
+Ippl{+0}> dE= -50.6124 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -21.8878 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 1.86497 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 13.3563 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.16 Step 122 at 0.0932994 [m] t= 3.47199e-10 [s] E=4.306 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 9.32325 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 9.41318 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 9.44378 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 9.42753 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 9.38779 NpInbin= 660
+Ippl{+0}> dE= -45.954 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -15.6354 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 8.30134 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 20.3074 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.18 Step 123 at 0.096281 [m] t= 3.57199e-10 [s] E=4.47773 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 9.67924 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 9.76104 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 9.78021 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 9.75178 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 9.69845 NpInbin= 660
+Ippl{+0}> dE= -41.8013 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -9.79763 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 14.5273 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 27.253 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.19 Step 124 at 0.0992638 [m] t= 3.67199e-10 [s] E=4.69947 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 10.1273 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 10.2038 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 10.2146 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 10.1767 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 10.1121 NpInbin= 660
+Ippl{+0}> dE= -39.0774 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -5.53686 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 19.3922 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 32.987 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.20 Step 125 at 0.102248 [m] t= 3.77199e-10 [s] E=4.96024 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 10.6431 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 10.7183 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 10.7256 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 10.6824 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 10.6108 NpInbin= 660
+Ippl{+0}> dE= -38.4593 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -3.70637 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 22.0426 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 36.6109 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.21 Step 126 at 0.105233 [m] t= 3.87199e-10 [s] E=5.24471 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 11.1946 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 11.2736 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 11.283 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 11.24 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 11.1666 NpInbin= 660
+Ippl{+0}> dE= -40.339 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -4.82476 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 21.9537 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 37.5477 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.22 Step 127 at 0.10822 [m] t= 3.97199e-10 [s] E=5.53511 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 11.7468 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 11.8344 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 11.8521 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 11.8151 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 11.7455 NpInbin= 660
+Ippl{+0}> dE= -44.7954 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -9.04515 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 18.9379 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 35.5615 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.23 Step 128 at 0.111208 [m] t= 4.07199e-10 [s] E=5.81338 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 12.2652 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 12.366 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 12.3975 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 12.3718 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 12.3115 NpInbin= 660
+Ippl{+0}> dE= -51.5064 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -16.1205 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 13.1736 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 30.7791 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.24 Step 129 at 0.114196 [m] t= 4.17199e-10 [s] E=6.06343 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 12.7209 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 12.8381 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 12.8877 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 12.8775 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 12.8311 NpInbin= 660
+Ippl{+0}> dE= -59.8954 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -25.3177 [keV] of Bin 1 and 2
+Ippl{+0}> dE= 5.21929 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 23.6875 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.26 Step 130 at 0.117185 [m] t= 4.27199e-10 [s] E=6.27318 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 13.0944 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 13.2292 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 13.2988 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 13.3066 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 13.277 NpInbin= 660
+Ippl{+0}> dE= -68.8499 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -35.5688 [keV] of Bin 1 and 2
+Ippl{+0}> dE= -3.98378 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 15.104 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.27 Step 131 at 0.120175 [m] t= 4.37199e-10 [s] E=6.43619 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 13.3779 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 13.5291 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 13.6182 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 13.644 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 13.6318 NpInbin= 660
+Ippl{+0}> dE= -77.2852 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -45.5296 [keV] of Bin 1 and 2
+Ippl{+0}> dE= -13.2034 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 6.23138 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.28 Step 132 at 0.123165 [m] t= 4.47199e-10 [s] E=6.55211 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 13.5747 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 13.7396 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 13.8452 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 13.8868 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 13.8903 NpInbin= 660
+Ippl{+0}> dE= -84.2391 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -53.9762 [keV] of Bin 1 and 2
+Ippl{+0}> dE= -21.2655 [keV] of Bin 2 and 3
+Ippl{+0}> dE= -1.76122 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.29 Step 133 at 0.126155 [m] t= 4.57199e-10 [s] E=6.62583 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 13.6974 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 13.8719 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 13.9895 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 14.0429 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 14.0584 NpInbin= 660
+Ippl{+0}> dE= -89.1719 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -60.1204 [keV] of Bin 1 and 2
+Ippl{+0}> dE= -27.3047 [keV] of Bin 2 and 3
+Ippl{+0}> dE= -7.91803 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.30 Step 134 at 0.129145 [m] t= 4.67199e-10 [s] E=6.6656 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 13.7624 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 13.9425 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 14.0673 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 14.1279 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 14.151 NpInbin= 660
+Ippl{+0}> dE= -92.0471 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -63.7724 [keV] of Bin 1 and 2
+Ippl{+0}> dE= -30.9904 [keV] of Bin 2 and 3
+Ippl{+0}> dE= -11.7763 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.31 Step 135 at 0.132135 [m] t= 4.77199e-10 [s] E=6.68076 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 13.7868 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 13.9692 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 14.0969 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 14.1605 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 14.1868 NpInbin= 660
+Ippl{+0}> dE= -93.2023 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -65.2516 [keV] of Bin 1 and 2
+Ippl{+0}> dE= -32.516 [keV] of Bin 2 and 3
+Ippl{+0}> dE= -13.4185 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.32 Step 136 at 0.135126 [m] t= 4.87199e-10 [s] E=6.67989 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 13.7855 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 13.9677 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 14.0952 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 14.1586 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 14.1847 NpInbin= 660
+Ippl{+0}> dE= -93.1364 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -65.1417 [keV] of Bin 1 and 2
+Ippl{+0}> dE= -32.3983 [keV] of Bin 2 and 3
+Ippl{+0}> dE= -13.3108 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.34 Step 137 at 0.138116 [m] t= 4.97199e-10 [s] E=6.66988 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 13.7696 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 13.9503 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 14.0757 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 14.1368 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 14.1604 NpInbin= 660
+Ippl{+0}> dE= -92.3341 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -64.0515 [keV] of Bin 1 and 2
+Ippl{+0}> dE= -31.2366 [keV] of Bin 2 and 3
+Ippl{+0}> dE= -12.0634 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.35 Step 138 at 0.141106 [m] t= 5.07199e-10 [s] E=6.65567 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 13.7472 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 13.9257 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 14.048 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 14.1058 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 14.1258 NpInbin= 660
+Ippl{+0}> dE= -91.1808 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -62.4845 [keV] of Bin 1 and 2
+Ippl{+0}> dE= -29.5517 [keV] of Bin 2 and 3
+Ippl{+0}> dE= -10.2231 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.36 Step 139 at 0.144096 [m] t= 5.17199e-10 [s] E=6.64047 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 13.7234 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 13.8994 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 14.0183 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 14.0726 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 14.0887 NpInbin= 660
+Ippl{+0}> dE= -89.941 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -60.7945 [keV] of Bin 1 and 2
+Ippl{+0}> dE= -27.7209 [keV] of Bin 2 and 3
+Ippl{+0}> dE= -8.20975 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.37 Step 140 at 0.147087 [m] t= 5.27199e-10 [s] E=6.62618 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 13.7009 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 13.8746 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 13.9905 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 14.0413 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 14.0536 NpInbin= 660
+Ippl{+0}> dE= -88.7732 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -59.1973 [keV] of Bin 1 and 2
+Ippl{+0}> dE= -25.9817 [keV] of Bin 2 and 3
+Ippl{+0}> dE= -6.28958 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.38 Step 141 at 0.150077 [m] t= 5.37199e-10 [s] E=6.61374 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 13.6814 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 13.8531 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 13.9662 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 14.0141 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 14.0231 NpInbin= 660
+Ippl{+0}> dE= -87.7597 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -57.8042 [keV] of Bin 1 and 2
+Ippl{+0}> dE= -24.4588 [keV] of Bin 2 and 3
+Ippl{+0}> dE= -4.60604 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.39 Step 142 at 0.153067 [m] t= 5.47199e-10 [s] E=6.60348 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 13.6652 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 13.8354 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 13.9462 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 13.9916 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 13.9979 NpInbin= 660
+Ippl{+0}> dE= -86.9317 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -56.6588 [keV] of Bin 1 and 2
+Ippl{+0}> dE= -23.2001 [keV] of Bin 2 and 3
+Ippl{+0}> dE= -3.21474 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.40 Step 143 at 0.156057 [m] t= 5.57199e-10 [s] E=6.59535 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 13.6524 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 13.8213 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 13.9304 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 13.9739 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 13.978 NpInbin= 660
+Ippl{+0}> dE= -86.2875 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -55.7606 [keV] of Bin 1 and 2
+Ippl{+0}> dE= -22.2085 [keV] of Bin 2 and 3
+Ippl{+0}> dE= -2.11909 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.42 Step 144 at 0.159047 [m] t= 5.67199e-10 [s] E=6.58912 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 13.6426 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 13.8105 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 13.9183 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 13.9603 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 13.9628 NpInbin= 660
+Ippl{+0}> dE= -85.8103 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -55.0854 [keV] of Bin 1 and 2
+Ippl{+0}> dE= -21.459 [keV] of Bin 2 and 3
+Ippl{+0}> dE= -1.29344 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.43 Step 145 at 0.162037 [m] t= 5.77199e-10 [s] E=6.58447 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 13.6351 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 13.8024 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 13.9092 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 13.9502 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 13.9515 NpInbin= 660
+Ippl{+0}> dE= -85.4763 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -54.6016 [keV] of Bin 1 and 2
+Ippl{+0}> dE= -20.9151 [keV] of Bin 2 and 3
+Ippl{+0}> dE= -0.696794 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.44 Step 146 at 0.165027 [m] t= 5.87199e-10 [s] E=6.58106 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 13.6295 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 13.7964 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 13.9026 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 13.9428 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 13.9434 NpInbin= 660
+Ippl{+0}> dE= -85.2588 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -54.2738 [keV] of Bin 1 and 2
+Ippl{+0}> dE= -20.54 [keV] of Bin 2 and 3
+Ippl{+0}> dE= -0.286652 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.45 Step 147 at 0.168017 [m] t= 5.97199e-10 [s] E=6.57859 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 13.6254 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 13.792 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 13.8978 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 13.9375 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 13.9376 NpInbin= 660
+Ippl{+0}> dE= -85.1337 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -54.068 [keV] of Bin 1 and 2
+Ippl{+0}> dE= -20.2967 [keV] of Bin 2 and 3
+Ippl{+0}> dE= -0.0230456 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.46 Step 148 at 0.171007 [m] t= 6.07199e-10 [s] E=6.57679 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+Ippl{+0}> Bin 0 gamma = 13.6222 NpInbin= 702
+Ippl{+0}> Bin 1 gamma = 13.7887 NpInbin= 4722
+Ippl{+0}> Bin 2 gamma = 13.8943 NpInbin= 9174
+Ippl{+0}> Bin 3 gamma = 13.9337 NpInbin= 4742
+Ippl{+0}> Bin 4 gamma = 13.9335 NpInbin= 660
+Ippl{+0}> dE= -85.0796 [keV] of Bin 0 and 1
+Ippl{+0}> dE= -53.9557 [keV] of Bin 1 and 2
+Ippl{+0}> dE= -20.1524 [keV] of Bin 2 and 3
+Ippl{+0}> dE= 0.131091 [keV] of Bin 3 and 4
+OPAL {+0}> 14.56.47 Step 149 at 0.173997 [m] t= 6.17199e-10 [s] E=6.57549 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP= 20000 Qtot= 0.2 [nC]  Qi= 1e-14 [C]
+OPAL {+0}> * Ekin= 6.57549 [MeV] dEkin= 0.040048 [MeV]
+OPAL {+0}> * rmax= ( 0.00260265 , 0.00255839 , 0.176848 ) [m]
+OPAL {+0}> * rmin= ( -0.00260064 , -0.00253707 , 0.170744 ) [m]
+OPAL {+0}> * rms beam size= ( 0.00109318 , 0.00109308 , 0.00106594 ) [m]
+OPAL {+0}> * rms momenta= ( 0.0680165 , 0.0680019 , 0.0785766 ) [beta gamma]
+OPAL {+0}> * mean position= ( 2.31416e-06 , 1.10173e-06 , 0.173997 ) [m]
+OPAL {+0}> * mean momenta= ( 6.94927e-05 , 7.46615e-05 , 13.8315 ) [beta gamma]
+OPAL {+0}> * rms emittance= ( 1.44815e-06 , 1.44651e-06 , 2.79833e-06 ) (not normalized)
+OPAL {+0}> * rms correlation= ( 0.96303 , 0.963093 , -0.88682 )
+OPAL {+0}> * dh= 0.01 [m] dT= 1e-11 [s]
+OPAL {+0}> * hr= ( 0.000167848 , 0.00016437 , 9.68869e-05 ) [m]
+OPAL {+0}> * spos= 0.173997 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+OPAL {+0}> Dump phase space of last step
+Ippl{+0}> 
+Ippl{+0}> * ************ I N F O *********************************************************
+Ippl{+0}> * freed fieldmap 'CTF3_Ez_ASTRA.opal'                                          *
+Ippl{+0}> * ******************************************************************************
+Ippl{+0}> 
+Ippl{+0}> FINSS_RGUN gone off
+Ippl{+0}> FIND1_MSOL10 gone off
+OPAL {+0}> done executing ParallelTTracker at 14.56.51
+OPAL {+0}> End of input stream "EGunCTF3-1.in".
+Timings{+0}> -----------------------------------------------------------------
+Timings{+0}>      Timing results for 4 nodes:
+Timings{+0}> -----------------------------------------------------------------
+Timings{+0}> mainTimer ........... Wall tot =    182.894, CPU tot =     170.83
+Timings{+0}> 
+Timings{+0}> Secondary emission .. Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> Particle Inside ..... Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> zshiftPre Processing  Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> Ray tracing ......... Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> Check inward ........ Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> Pre Processing ...... Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> SelfField ........... Wall max =    169.034, CPU max =     169.03
+Timings{+0}>                       Wall avg =     169.03, CPU avg =    168.977
+Timings{+0}>                       Wall min =     169.02, CPU min =     168.92
+Timings{+0}> 
+Timings{+0}> Boundingbox ......... Wall max =   0.161143, CPU max =       0.17
+Timings{+0}>                       Wall avg =   0.159852, CPU avg =      0.155
+Timings{+0}>                       Wall min =   0.157813, CPU min =       0.14
+Timings{+0}> 
+Timings{+0}> Statistics .......... Wall max =   0.139617, CPU max =       0.23
+Timings{+0}>                       Wall avg =   0.139252, CPU avg =       0.17
+Timings{+0}>                       Wall min =   0.138675, CPU min =        0.1
+Timings{+0}> 
+Timings{+0}> Potential ........... Wall max =    156.894, CPU max =      157.1
+Timings{+0}>                       Wall avg =     156.89, CPU avg =    156.963
+Timings{+0}>                       Wall min =    156.886, CPU min =     156.79
+Timings{+0}> 
+Timings{+0}> Histogram ........... Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> CreatDistr .......... Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> LoadDistr ........... Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> GreensFTotal ........ Wall max =    103.079, CPU max =      102.9
+Timings{+0}>                       Wall avg =    103.008, CPU avg =    102.655
+Timings{+0}>                       Wall min =    102.956, CPU min =     102.38
+Timings{+0}> 
+Timings{+0}> IntGreenF1 .......... Wall max =    22.5622, CPU max =      22.47
+Timings{+0}>                       Wall avg =    6.50618, CPU avg =       6.42
+Timings{+0}>                       Wall min =   0.326838, CPU min =       0.26
+Timings{+0}> 
+Timings{+0}> IntGreenF2 .......... Wall max =    21.2524, CPU max =      21.22
+Timings{+0}>                       Wall avg =    10.9803, CPU avg =     10.945
+Timings{+0}>                       Wall min =   0.362236, CPU min =       0.31
+Timings{+0}> 
+Timings{+0}> IntGreenF3 .......... Wall max =    24.9274, CPU max =      24.91
+Timings{+0}>                       Wall avg =    8.40188, CPU avg =      8.435
+Timings{+0}>                       Wall min =    2.59994, CPU min =       2.57
+Timings{+0}> 
+Timings{+0}> IntGreenF4 .......... Wall max =    14.1498, CPU max =      14.26
+Timings{+0}>                       Wall avg =     13.734, CPU avg =     13.645
+Timings{+0}>                       Wall min =    13.0482, CPU min =       13.1
+Timings{+0}> 
+Timings{+0}> ShIntGreenF1 ........ Wall max =    22.3299, CPU max =      22.29
+Timings{+0}>                       Wall avg =    6.50485, CPU avg =      6.455
+Timings{+0}>                       Wall min =   0.387444, CPU min =       0.37
+Timings{+0}> 
+Timings{+0}> ShIntGreenF2 ........ Wall max =     23.015, CPU max =      23.15
+Timings{+0}>                       Wall avg =    6.66956, CPU avg =       6.72
+Timings{+0}>                       Wall min =   0.374165, CPU min =       0.46
+Timings{+0}> 
+Timings{+0}> ShIntGreenF3 ........ Wall max =    49.2838, CPU max =      49.39
+Timings{+0}>                       Wall avg =    36.5851, CPU avg =    36.5675
+Timings{+0}>                       Wall min =    5.36286, CPU min =       5.17
+Timings{+0}> 
+Timings{+0}> ShIntGreenF4 ........ Wall max =    14.2362, CPU max =      14.19
+Timings{+0}>                       Wall avg =    13.4207, CPU avg =      13.27
+Timings{+0}>                       Wall min =    12.5146, CPU min =      12.43
+Timings{+0}> 
+Timings{+0}> GreenF1 ............. Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> GreenF2 ............. Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> GreenF3 ............. Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> GreenF4 ............. Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> H5PartTimer ......... Wall max =    12.1431, CPU max =       0.18
+Timings{+0}>                       Wall avg =    12.1416, CPU avg =     0.1375
+Timings{+0}>                       Wall min =    12.1406, CPU min =        0.1
+Timings{+0}> 
+Timings{+0}> H5BlockTimer ........ Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> StatMarkerTimer ..... Wall max =   0.109656, CPU max =        0.1
+Timings{+0}>                       Wall avg =   0.065004, CPU avg =     0.0725
+Timings{+0}>                       Wall min =   0.050079, CPU min =       0.05
+Timings{+0}> 
+Timings{+0}> TIntegration1 ....... Wall max =   0.164774, CPU max =       0.21
+Timings{+0}>                       Wall avg =    0.16473, CPU avg =     0.1575
+Timings{+0}>                       Wall min =   0.164687, CPU min =       0.07
+Timings{+0}> 
+Timings{+0}> TIntegration2 ....... Wall max =   0.932021, CPU max =       0.99
+Timings{+0}>                       Wall avg =   0.916705, CPU avg =     0.9175
+Timings{+0}>                       Wall min =   0.909676, CPU min =       0.83
+Timings{+0}> 
+Timings{+0}> Fieldeval ........... Wall max =   0.499821, CPU max =       0.57
+Timings{+0}>                       Wall avg =   0.499747, CPU avg =     0.4725
+Timings{+0}>                       Wall min =   0.499649, CPU min =       0.42
+Timings{+0}> 
+Timings{+0}> Binaryrepart ........ Wall max =   0.039837, CPU max =       0.06
+Timings{+0}>                       Wall avg =   0.039832, CPU avg =     0.0425
+Timings{+0}>                       Wall min =    0.03982, CPU min =       0.03
+Timings{+0}> 
+Timings{+0}> WakeField ........... Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> RC-RRtranspose ...... Wall max =     7.9781, CPU max =       8.02
+Timings{+0}>                       Wall avg =    7.35153, CPU avg =     7.2725
+Timings{+0}>                       Wall min =    6.25327, CPU min =        6.4
+Timings{+0}> 
+Timings{+0}> RC-CCtranspose ...... Wall max =    27.3875, CPU max =      28.11
+Timings{+0}>                       Wall avg =    27.0136, CPU avg =      27.18
+Timings{+0}>                       Wall min =    26.0337, CPU min =      25.79
+Timings{+0}> 
+Timings{+0}> RC-RC1Dfft .......... Wall max =    14.6205, CPU max =      14.87
+Timings{+0}>                       Wall avg =      14.31, CPU avg =    14.3875
+Timings{+0}>                       Wall min =    13.7825, CPU min =      13.36
+Timings{+0}> 
+Timings{+0}> RC-CC1Dfft .......... Wall max =    30.7235, CPU max =       30.9
+Timings{+0}>                       Wall avg =    29.4488, CPU avg =    29.3525
+Timings{+0}>                       Wall min =    28.1469, CPU min =       27.8
+Timings{+0}> 
+Timings{+0}> RC-total ............ Wall max =    80.0638, CPU max =      80.47
+Timings{+0}>                       Wall avg =    78.3709, CPU avg =      78.44
+Timings{+0}>                       Wall min =    75.7823, CPU min =      75.89
+Timings{+0}> 
+Timings{+0}> -----------------------------------------------------------------
