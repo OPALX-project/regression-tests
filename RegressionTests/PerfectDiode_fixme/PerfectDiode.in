@@ -53,12 +53,6 @@ T1s = 6.0e-12;
 lz = T1s * v0;
 value,{v0,lz};
 
-Dist1:DISTRIBUTION, DISTRIBUTION = gungauss,
-sigmax = 0.00027, sigmapx = 0.0, corrx = 0.0,
-sigmay = 0.00027, sigmapy = 0.0, corry = 0.0,
-sigmat = lz, pt = 1.0, sigmapt = 0.0, corrt = 0.0,
-TEMISSION = 39.0e-12, NBIN = 1, DEBIN = 1;
-
 MINSTEPFORREBIN = 800;
 
 // End: Gaussian Distribution //////////////////////////////////
@@ -72,11 +66,10 @@ T1s = 30.0e-12;
 lz = T1s * v0;
 value,{v0,lz};
 
-Dist2:DISTRIBUTION, DISTRIBUTION = gununiform,
-sigmax = 0.0005, sigmapx = 0.0, corrx = 0.0,
-sigmay = 0.0005, sigmapy = 0.0, corry = 0.0,
-sigmat = lz, pt = 1.0, sigmapt = 0.0, corrt = 0.0,
-TEMISSION = 30.0e-12, NBIN = 10, DEBIN = 1;
+Dist2:DISTRIBUTION, DISTRIBUTION = "GUNGAUSSFLATTOPTH",
+sigmax = 0.000395, sigmapx = 0.0, corrx = 0.0,
+sigmay = 0.000395, sigmapy = 0.0, corry = 0.0,
+sigmat = 0.0, pt = 0.0, sigmapt = 0.0, corrt = 0.0, tRise=7.45e-12, tFall=7.45e-12, tPulseFWHM=10.4e-12, ekin=0.4, NBIN=5, DEBIN=30;
 
 MINSTEPFORREBIN = 800;
 
