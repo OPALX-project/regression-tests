@@ -24,9 +24,23 @@ specifies which regression tests are run, e.g.
 runs only the BC1-1 and RingCyclotron regression tests (matching on directory 
 name).
 
+--run-local 
+
+Without sge installed, use the --run-local switch and copy the regression-test-name.sge to 
+regression-test-name.local. Edit the regression-test.local such that it only containes:
+
+mpirun -np 4 $OPAL_EXE_PATH/opal .... 
+
 
 Required Environment Variables
 ==============================
 
 The OPAL executable path has to be set with the environment variable 
 OPAL_EXE_PATH.
+
+Required Package
+================
+
+On MAC insatll md5sum:
+
+% sudo port install md5sha1sum
