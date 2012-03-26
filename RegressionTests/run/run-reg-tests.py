@@ -120,6 +120,7 @@ def main(argv):
     totalNrPassed = 0
     runAsUser = False
     runtests = list()
+    run_local = False
 
     if "--run-local" in argv:
         run_local = True
