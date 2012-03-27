@@ -177,7 +177,7 @@ def main(argv):
         os.chdir(regdir)
         #first update all tests and regression test files
         #FIXME: detect SCM
-        if os.path.isdir(regdir + "/.svn"):
+        if os.path.isdir(regdir + "/.svn") and not runAsUser:
             subprocess.getoutput("svn update")
         #walk the run dir tree
         arglist = [runtests, run_local]
