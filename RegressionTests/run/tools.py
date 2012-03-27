@@ -1,4 +1,4 @@
-#!/usr/bin/python 
+#!/usr/bin/python
 import sys
 if sys.version_info < (3,0):
     import commands
@@ -7,7 +7,7 @@ import os
 import datetime
 
 """
-parse linefile into list and strip newline 
+parse linefile into list and strip newline
 char at the end
 """
 def readfile(fname):
@@ -79,7 +79,7 @@ returns fileame
 def genplot(simname, var):
     simnames = simname + ".stat"
     reference = "reference/" + simnames
-    
+
     vars = []
     nrCol = -1
     varUnit = ''
@@ -129,7 +129,7 @@ def genplot(simname, var):
     revLine = 0
     readLines = 0
     numScalars = 0
-    
+
     lines = readfile(reference)
 
     for line in lines:
@@ -151,7 +151,7 @@ def genplot(simname, var):
             values = line.split()
             data2.write(values[1] + "\t" + values[nrCol] + "\n")
         data2.close()
-    
+
     filename = ""
     d = datetime.date.today()
     if nrCol > -1:
@@ -169,14 +169,15 @@ def genplot(simname, var):
         plotcmd += "'data2.dat' u 1:2 w l lw 2 t '" + refRevision + "', "
         plotcmd += "\"< paste data1.dat data2.dat\" u 1:($2-$4) w l lw 2 axis x1y2 t 'difference'" + ";\n"
         plot = subprocess.Popen(['gnuplot'], stdin=subprocess.PIPE)
-        plot.communicate(plotcmd)
 
         if sys.version_info < (3,0):
+            plot.communicate(plotcmd)
             commands.getoutput("convert -rotate 90 " + filename + ".ps " + filename + ".png")
             commands.getoutput("rm " + filename + ".ps data1.dat data2.dat")
         else:
+            plot.communicate(bytes(plotcmd, "UTF-8"))
             subprocess.getoutput("convert -rotate 90 " + filename + ".ps " + filename + ".png")
-            subprocess.getoutput("rm " + filename + ".ps data1.dat data2.dat")            
+            subprocess.getoutput("rm " + filename + ".ps data1.dat data2.dat")
     else:
         print ("Error in genplot: Cannot find stat variable!")
 
