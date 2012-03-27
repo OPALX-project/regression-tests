@@ -313,20 +313,40 @@ class OutTest:
 
         for line in lines:
             if self.var in line:
+                # split line containing variable at all equal signs
                 varline = str.split(line, "=")
                 value = ""
                 for i in range (len(varline)):
                     if self.var in varline[i]:
-                        value = varline[i+1].lstrip()
-                        if value.startswith("("): #vector
-                            vec = str.split(value, " ")
-                            retval = (float(vec[1]), float(vec[3]), float(vec[5]))
-                        else: #scalar
-                            retval = (float(str.split(value, " ")[0]),)
+                        # ok our value is in element i+1
+                        value = varline[i+1].lstrip().rstrip()
+                        if self.valueIsVector(value):
+                            vars.append(self.parseVector(value))
+                        else:
+                            parsed_value = str.split(value, " ")[0]
+                            parsed_value = parsed_value.lstrip().rstrip()
+                            vars.append((float(parsed_value),))
 
-                        vars.append(retval)
                         break;
         return vars
+
+    def valueIsVector(self, str):
+        return str.startswith("(")
+
+
+    def parseVector(self, value_str):
+        # remove vector brackets
+        value_str = value_str.split("(")[1]
+        value_str = value_str.split(")")[0]
+        values = value_str.lstrip().rstrip()
+
+        vector_values = values.split(",")
+        x = float(vector_values[0].lstrip().rstrip())
+        y = float(vector_values[1].lstrip().rstrip())
+        z = float(vector_values[2].lstrip().rstrip())
+
+        parsed_value = (x, y, z)
+        return parsed_value
 
 
     """
