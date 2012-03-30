@@ -62,7 +62,7 @@ IN.CRMOD.MAR.END: marker, elemedge = 1.22203E+01;
 IN.MAR.END: marker, elemedge = 1.22203E+01;
 END: marker, elemedge = 1.22203E+01;
 IN.GUN: rfcavity, type = "STANDING", l =  1.50000E-01, fmapfn = "fieldgrid_4.t7",
-   volt = 2.09435E+01, elemedge = 0;
+   volt = 2.09435E+01, elemedge = 0, APVETO=TRUE, LAG=PI;
 IN.A1.PIP01: drift, l =  4.64000E-01, elemedge = 1.50000E-01;
 IN.A1.SOL01: solenoid, l =  6.00000E-01, fmapfn = "fieldgrid_5.t7",
    ks = 5.72377E-02, elemedge = 3.00000E-03;
