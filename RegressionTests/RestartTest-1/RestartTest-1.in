@@ -6,11 +6,13 @@ Option, FINEEMISSION=FALSE;
 
 Title, string="Phase 1 of PSI FEL 250 Injector with CTF3 RF Photoinjector";
 
+DORESTART = FALSE;
+
 FINSB01_RACC_phi = 0; 
 FINSB02_RACC_phi = 0;    
 
 REPARTFREQ       = 100;
-MINSTEPFORREBIN  = 600;
+MINSTEPFORREBIN  = 50;
 
 QB               = 0.2e-9;
 BF               = 2998.0;
@@ -102,19 +104,20 @@ beam1: BEAM, PARTICLE = ELECTRON, pc = P0, NPART = 20000, BFREQ = BF , BCURRENT 
 
 SELECT, LINE=Injector;
 
+// Simulation of the beam with step size DT 
+TRACK,LINE= Injector, BEAM=beam1, MAXSTEPS=250, DT=1.0e-11, ZSTOP=0.20;
+ RUN, METHOD = "PARALLEL-T", BEAM=beam1, FIELDSOLVER=Fs1;
+ENDTRACK;
+
 // Simulation of the gun with step size DTGUN 
 //TRACK, LINE= Injector, BEAM=beam1, MAXSTEPS=100, DT=1.0e-12, ZSTOP=0.14;  
 // RUN, METHOD = "PARALLEL-T", BEAM = beam1, FIELDSOLVER = Fs1, DISTRIBUTION = Dist1;
 //ENDTRACK;
 
-// Simulation of the beam with step size DT 
-TRACK,LINE= Injector, BEAM=beam1, MAXSTEPS=150, DT=1.0e-11, ZSTOP=0.20;
- RUN, METHOD = "PARALLEL-T", BEAM=beam1, FIELDSOLVER=Fs1;
-ENDTRACK;
-
 // For producing the restart file
 //TRACK,LINE= Injector, BEAM=beam1, MAXSTEPS=110, DT=1.0e-11, ZSTOP=0.20;
 // RUN, METHOD = "PARALLEL-T", BEAM=beam1, FIELDSOLVER=Fs1;
 //ENDTRACK;
+
 
 QUIT;
