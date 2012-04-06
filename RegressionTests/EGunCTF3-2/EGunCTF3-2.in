@@ -109,7 +109,7 @@ track, line= Injector, beam=beam1, MAXSTEPS=100, DT=1.0e-12, ZSTOP=0.14;
 endtrack;
 
 // Simulation of the beam with step size DT 
-track,line= Injector, beam=beam1, MAXSTEPS=150, DT=1.0e-11, ZSTOP=0.20;
+track,line= Injector, beam=beam1, MAXSTEPS=50, DT=1.0e-11, ZSTOP=0.20;
  run, method = "PARALLEL-T", beam=beam1, fieldsolver=Fs1;
 endtrack;
 
