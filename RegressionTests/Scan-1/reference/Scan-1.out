@@ -1,10 +1,11 @@
 Ippl> CommMPI: Parent process waiting for children ...
 Ippl> CommMPI: Child 2 ready.
 Ippl> CommMPI: Child 3 ready.
-Ippl> CommMPI: Started job 2 on host `Dude-3.local'.
-Ippl> CommMPI: Started job 3 on host `Dude-3.local'.
 Ippl> CommMPI: Child 1 ready.
 Ippl> CommMPI: Initialization complete.
+Ippl> CommMPI: Started job 1 on host `psvpn102.psi.ch'.
+Ippl> CommMPI: Started job 2 on host `psvpn102.psi.ch'.
+Ippl> CommMPI: Started job 3 on host `psvpn102.psi.ch'.
 {0}>                ____  _____       ___ 
 {0}>               / __ \|  __ \ /\   | | 
 {0}>              | |  | | |__) /  \  | |
@@ -12,18 +13,21 @@ Ippl> CommMPI: Initialization complete.
 {0}>              | |__| | |  / ____ \| |____
 {0}>               \____/|_| /_/    \_\______|
 OPAL {0}> 
-OPAL {0}> This is OPAL (Object Oriented Parallel Accelerator Library) Version 1.1.9 SVN version 13635  (c) PSI, http://amas.web.psi.ch
+OPAL {0}> This is OPAL (Object Oriented Parallel Accelerator Library) Version 1.1.9 SVN version 13667  (c) PSI, http://amas.web.psi.ch
 OPAL {0}> 
 OPAL {0}> Please send cookies, goodies or other motivations (wine and beer ... ) to the OPAL developers opal@lists.psi.ch
-OPAL {0}> Time: 12.54.13 date: 28/03/2012
+OPAL {0}> Time: 08.58.35 date: 07/04/2012
 OPAL {0}> NOTE 17: unable to mkdir; File exists
-Ippl> CommMPI: Started job 1 on host `Dude-3.local'.
 OPAL {+0}> Reading startup file "/Users/adelmann/init.opal".
 OPAL {+0}> Finished reading startup file.
 OPAL {+0}> Reading input stream "Scan-1.in".
-OPAL {+0}> 
+   +2   +2   +2   +2OPAL {+0}> 
 OPAL {+0}> value: {GAMMA,BRHO,EDES,BETA,GAMBET}={1,3.37213e-06,1e-09,0.00197836,0.00197836}
 OPAL {+0}> 
+ Option, ECHO=FALSE;
+ Option, ECHO=FALSE;
+ Option, ECHO=FALSE;
+ Option, ECHO=FALSE;
 OPAL {+0}> 
 OPAL {+0}> value: {I,RV1,RV2,RV3,RV4,RV5}={0,2.1218,0,0,0,0}
 OPAL {+0}> 
@@ -33,10 +37,6 @@ OPAL {+0}>
 OPAL {+0}> * ********************************************************************************** 
 OPAL {+0}>   Selected Tracking Method == PARALLEL-T, NEW TRACK in SCAN MODE
 OPAL {+0}> * ********************************************************************************** 
-   +2 Option, ECHO=FALSE;
-   +2 Option, ECHO=FALSE;
-   +2 Option, ECHO=FALSE;
-   +2 Option, ECHO=FALSE;
 OPAL {+0}>  -- B I N N I N G in T -----------------------------------------
 OPAL {+0}>  ---------------------I N P U T --------------------------------
 OPAL {+0}>  GUNGAUSS FLAT TOP &  THERMAL EMITTANCE in ASTRA MODE
@@ -96,52 +96,52 @@ Solenoid {+0}> SP2 using file 1T3.T7 (2D dynamic); zini= 0 m; zfinal= 0.49 m;
 Solenoid {+0}> SP3 using file 1T3.T7 (2D dynamic); zini= 0 m; zfinal= 0.49 m;
 Solenoid {+0}> SP4 using file 1T3.T7 (2D dynamic); zini= 0 m; zfinal= 0.49 m;
 Solenoid {+0}> SP5 using file 1T3.T7 (2D dynamic); zini= 0 m; zfinal= 0.49 m;
-OPAL {+0}> totalParticle_i= 0
-OPAL {+0}> Track start at: 12.54.28, t= 0; zstop at: 1e+06 [m]
-OPAL {+0}> Executing ParallelTTracker, initial DT 1e-12 [s];
-OPAL {+0}> max integration steps 100, next step= 0
-OPAL {+0}> 
-OPAL {+0}> --- BEGIN FIELD LIST ---------------------------------------------------------------
-OPAL {+0}> 
-OPAL {+0}> --- -0.5315 m -- -0.4115 m -- alpha = 0 -- beta = 0 --------------------------------
-OPAL {+0}> SP1
-OPAL {+0}> --- -0.397 m -- -0.267 m -- alpha = 0 -- beta = 0 ----------------------------------
-OPAL {+0}> SP2
-OPAL {+0}> --- -0.267 m -- -0.157 m -- alpha = 0 -- beta = 0 ----------------------------------
-OPAL {+0}> SP2
-OPAL {+0}> SP3
-OPAL {+0}> --- -0.157 m -- -0.047 m -- alpha = 0 -- beta = 0 ----------------------------------
-OPAL {+0}> SP2
-OPAL {+0}> SP3
-OPAL {+0}> SP4
-OPAL {+0}> --- -0.047 m -- 0 m -- alpha = 0 -- beta = 0 ---------------------------------------
-OPAL {+0}> SP2
-OPAL {+0}> SP3
-OPAL {+0}> SP4
-OPAL {+0}> SP5
-OPAL {+0}> --- 0 m -- 0.008 m -- alpha = 0 -- beta = 0 ----------------------------------------
-OPAL {+0}> SP2
-OPAL {+0}> SP3
-OPAL {+0}> SP4
-OPAL {+0}> SP5
-OPAL {+0}> GUN
-OPAL {+0}> --- 0.008 m -- 0.093 m -- alpha = 0 -- beta = 0 ------------------------------------
-OPAL {+0}> SP2
-OPAL {+0}> SP3
-OPAL {+0}> SP4
-OPAL {+0}> SP5
-OPAL {+0}> --- 0.093 m -- 0.223 m -- alpha = 0 -- beta = 0 ------------------------------------
-OPAL {+0}> SP3
-OPAL {+0}> SP4
-OPAL {+0}> SP5
-OPAL {+0}> --- 0.223 m -- 0.333 m -- alpha = 0 -- beta = 0 ------------------------------------
-OPAL {+0}> SP4
-OPAL {+0}> SP5
-OPAL {+0}> --- 0.333 m -- 0.443 m -- alpha = 0 -- beta = 0 ------------------------------------
-OPAL {+0}> SP5
-OPAL {+0}> 
-OPAL {+0}> --- END FIELD LIST -----------------------------------------------------------------
-OPAL {+0}> 
+ParallelTTracker {+0}> totalParticle_i= 0
+ParallelTTracker {+0}> Track start at: 08.58.50, t= 0; zstop at: 1e+06 [m]
+ParallelTTracker {+0}> Executing ParallelTTracker, initial DT 1e-12 [s];
+ParallelTTracker {+0}> max integration steps 100, next step= 0
+ParallelTTracker {+0}> 
+ParallelTTracker {+0}> --- BEGIN FIELD LIST ---------------------------------------------------------------
+ParallelTTracker {+0}> 
+ParallelTTracker {+0}> --- -0.5315 m -- -0.4115 m -- alpha = 0 -- beta = 0 --------------------------------
+ParallelTTracker {+0}> SP1
+ParallelTTracker {+0}> --- -0.397 m -- -0.267 m -- alpha = 0 -- beta = 0 ----------------------------------
+ParallelTTracker {+0}> SP2
+ParallelTTracker {+0}> --- -0.267 m -- -0.157 m -- alpha = 0 -- beta = 0 ----------------------------------
+ParallelTTracker {+0}> SP2
+ParallelTTracker {+0}> SP3
+ParallelTTracker {+0}> --- -0.157 m -- -0.047 m -- alpha = 0 -- beta = 0 ----------------------------------
+ParallelTTracker {+0}> SP2
+ParallelTTracker {+0}> SP3
+ParallelTTracker {+0}> SP4
+ParallelTTracker {+0}> --- -0.047 m -- 0 m -- alpha = 0 -- beta = 0 ---------------------------------------
+ParallelTTracker {+0}> SP2
+ParallelTTracker {+0}> SP3
+ParallelTTracker {+0}> SP4
+ParallelTTracker {+0}> SP5
+ParallelTTracker {+0}> --- 0 m -- 0.008 m -- alpha = 0 -- beta = 0 ----------------------------------------
+ParallelTTracker {+0}> SP2
+ParallelTTracker {+0}> SP3
+ParallelTTracker {+0}> SP4
+ParallelTTracker {+0}> SP5
+ParallelTTracker {+0}> GUN
+ParallelTTracker {+0}> --- 0.008 m -- 0.093 m -- alpha = 0 -- beta = 0 ------------------------------------
+ParallelTTracker {+0}> SP2
+ParallelTTracker {+0}> SP3
+ParallelTTracker {+0}> SP4
+ParallelTTracker {+0}> SP5
+ParallelTTracker {+0}> --- 0.093 m -- 0.223 m -- alpha = 0 -- beta = 0 ------------------------------------
+ParallelTTracker {+0}> SP3
+ParallelTTracker {+0}> SP4
+ParallelTTracker {+0}> SP5
+ParallelTTracker {+0}> --- 0.223 m -- 0.333 m -- alpha = 0 -- beta = 0 ------------------------------------
+ParallelTTracker {+0}> SP4
+ParallelTTracker {+0}> SP5
+ParallelTTracker {+0}> --- 0.333 m -- 0.443 m -- alpha = 0 -- beta = 0 ------------------------------------
+ParallelTTracker {+0}> SP5
+ParallelTTracker {+0}> 
+ParallelTTracker {+0}> --- END FIELD LIST -----------------------------------------------------------------
+ParallelTTracker {+0}> 
 FM2DD {+0}> 
 FM2DD {+0}> * ************ I N F O *********************************************************
 FM2DD {+0}> * read in fieldmap '1T3.T7'                                                    *
@@ -154,201 +154,212 @@ FM2DD {+0}> * read in fieldmap '1T1.T7'                                         
 FM2DD {+0}> * ******************************************************************************
 FM2DD {+0}> 
 FM2DD {+0}> 
-OPAL {+0}> MINSTEPFORREBIN 1500
-OPAL {+0}> REPARTFREQ 1000
-OPAL {+0}> Changing emission time step to: 3.0335e-14
-OPAL {+0}> Step 0 no emission yet  t= 3.0335e-14 [s]
-OPAL {+0}> Step 1 no emission yet  t= 6.067e-14 [s]
-OPAL {+0}> Step 2 no emission yet  t= 9.10051e-14 [s]
-OPAL {+0}> Step 3 no emission yet  t= 1.2134e-13 [s]
-OPAL {+0}> Step 4 no emission yet  t= 1.51675e-13 [s]
-OPAL {+0}> Step 5 no emission yet  t= 1.8201e-13 [s]
-OPAL {+0}> Step 6 no emission yet  t= 2.12345e-13 [s]
-OPAL {+0}> Step 7 no emission yet  t= 2.4268e-13 [s]
-OPAL {+0}> Step 8 no emission yet  t= 2.73015e-13 [s]
-OPAL {+0}> Step 9 no emission yet  t= 3.0335e-13 [s]
-OPAL {+0}> Step 10 no emission yet  t= 3.33685e-13 [s]
-OPAL {+0}> Step 11 no emission yet  t= 3.6402e-13 [s]
-OPAL {+0}> Step 12 no emission yet  t= 3.94355e-13 [s]
-OPAL {+0}> 12.54.41 Step 13; only 1 particles emitted; t= 4.2469e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 14; only 2 particles emitted; t= 4.55025e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 15; only 2 particles emitted; t= 4.8536e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 16; only 2 particles emitted; t= 5.15695e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 17; only 2 particles emitted; t= 5.4603e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 18; only 2 particles emitted; t= 5.76365e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 19; only 2 particles emitted; t= 6.067e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 20; only 2 particles emitted; t= 6.37035e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 21; only 2 particles emitted; t= 6.67371e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 22; only 2 particles emitted; t= 6.97706e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 23; only 2 particles emitted; t= 7.28041e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 24; only 2 particles emitted; t= 7.58376e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 25; only 2 particles emitted; t= 7.88711e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 26; only 3 particles emitted; t= 8.19046e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 27; only 3 particles emitted; t= 8.49381e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 28; only 3 particles emitted; t= 8.79716e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 29; only 4 particles emitted; t= 9.10051e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 30; only 4 particles emitted; t= 9.40386e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 31; only 4 particles emitted; t= 9.70721e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 32; only 4 particles emitted; t= 1.00106e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 33; only 5 particles emitted; t= 1.03139e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 34; only 5 particles emitted; t= 1.06173e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 35; only 6 particles emitted; t= 1.09206e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 36; only 6 particles emitted; t= 1.1224e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 37; only 6 particles emitted; t= 1.15273e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 38; only 6 particles emitted; t= 1.18307e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 39; only 6 particles emitted; t= 1.2134e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 40; only 6 particles emitted; t= 1.24374e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 41; only 7 particles emitted; t= 1.27407e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 42; only 7 particles emitted; t= 1.30441e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 43; only 7 particles emitted; t= 1.33474e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 44; only 7 particles emitted; t= 1.36508e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 45; only 8 particles emitted; t= 1.39541e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 46; only 8 particles emitted; t= 1.42575e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 47; only 8 particles emitted; t= 1.45608e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 48; only 8 particles emitted; t= 1.48642e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 49; only 8 particles emitted; t= 1.51675e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 50; only 8 particles emitted; t= 1.54709e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 51; only 8 particles emitted; t= 1.57742e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 52; only 8 particles emitted; t= 1.60776e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 53; only 9 particles emitted; t= 1.63809e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 54; only 9 particles emitted; t= 1.66843e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 55; only 9 particles emitted; t= 1.69876e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 56; only 9 particles emitted; t= 1.7291e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 57; only 10 particles emitted; t= 1.75943e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 58; only 10 particles emitted; t= 1.78977e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 59; only 10 particles emitted; t= 1.8201e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.54.41 Step 60 at 1.03527e-06 [m] t= 1.85044e-12 [s] E=0 [MeV] 
+ParallelTTracker {+0}> MINBINEMITTED 10
+ParallelTTracker {+0}> MINSTEPFORREBIN 1500
+ParallelTTracker {+0}> SURFACEEMISSIONSTOP after 1000 seconds
+ParallelTTracker {+0}> REPARTFREQ 1000
+ParallelTTracker {+0}> Step 0 no emission yet  t= 3.0335e-14 [s]
+ParallelTTracker {+0}> Step 1 no emission yet  t= 6.067e-14 [s]
+ParallelTTracker {+0}> Step 2 no emission yet  t= 9.10051e-14 [s]
+ParallelTTracker {+0}> Step 3 no emission yet  t= 1.2134e-13 [s]
+ParallelTTracker {+0}> Step 4 no emission yet  t= 1.51675e-13 [s]
+ParallelTTracker {+0}> Step 5 no emission yet  t= 1.8201e-13 [s]
+ParallelTTracker {+0}> Step 6 no emission yet  t= 2.12345e-13 [s]
+ParallelTTracker {+0}> Step 7 no emission yet  t= 2.4268e-13 [s]
+ParallelTTracker {+0}> Step 8 no emission yet  t= 2.73015e-13 [s]
+ParallelTTracker {+0}> Step 9 no emission yet  t= 3.0335e-13 [s]
+ParallelTTracker {+0}> Step 10 no emission yet  t= 3.33685e-13 [s]
+ParallelTTracker {+0}> Step 11 no emission yet  t= 3.6402e-13 [s]
+ParallelTTracker {+0}> Step 12 no emission yet  t= 3.94355e-13 [s]
+ParallelTTracker {+0}> 08.59.04 Step     13; only    1 particles emitted; t=  4.247e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     14; only    2 particles emitted; t=  4.550e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     15; only    2 particles emitted; t=  4.854e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     16; only    2 particles emitted; t=  5.157e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     17; only    2 particles emitted; t=  5.460e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     18; only    2 particles emitted; t=  5.764e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     19; only    2 particles emitted; t=  6.067e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     20; only    2 particles emitted; t=  6.370e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     21; only    2 particles emitted; t=  6.674e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     22; only    2 particles emitted; t=  6.977e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     23; only    2 particles emitted; t=  7.280e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     24; only    2 particles emitted; t=  7.584e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     25; only    2 particles emitted; t=  7.887e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     26; only    3 particles emitted; t=  8.190e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     27; only    3 particles emitted; t=  8.494e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     28; only    3 particles emitted; t=  8.797e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     29; only    4 particles emitted; t=  9.101e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     30; only    4 particles emitted; t=  9.404e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     31; only    4 particles emitted; t=  9.707e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     32; only    4 particles emitted; t=  1.001e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     33; only    5 particles emitted; t=  1.031e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     34; only    5 particles emitted; t=  1.062e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     35; only    6 particles emitted; t=  1.092e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     36; only    6 particles emitted; t=  1.122e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     37; only    6 particles emitted; t=  1.153e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     38; only    6 particles emitted; t=  1.183e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     39; only    6 particles emitted; t=  1.213e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     40; only    6 particles emitted; t=  1.244e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     41; only    7 particles emitted; t=  1.274e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     42; only    7 particles emitted; t=  1.304e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     43; only    7 particles emitted; t=  1.335e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     44; only    7 particles emitted; t=  1.365e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     45; only    8 particles emitted; t=  1.395e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     46; only    8 particles emitted; t=  1.426e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     47; only    8 particles emitted; t=  1.456e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     48; only    8 particles emitted; t=  1.486e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     49; only    8 particles emitted; t=  1.517e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     50; only    8 particles emitted; t=  1.547e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     51; only    8 particles emitted; t=  1.577e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     52; only    8 particles emitted; t=  1.608e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     53; only    9 particles emitted; t=  1.638e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     54; only    9 particles emitted; t=  1.668e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     55; only    9 particles emitted; t=  1.699e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     56; only    9 particles emitted; t=  1.729e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     57; only   10 particles emitted; t=  1.759e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     58; only   10 particles emitted; t=  1.790e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     59; only   10 particles emitted; t=  1.820e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     60 at    0.001 [mm] t=  1.850e-12 [s] E=    0.015 [keV] 
 OPAL {+0}> * Wrote beam phase space.
 OPAL {+0}> * ************** B U N C H ********************************************************* 
-OPAL {+0}> * NP= 11 Qtot= 0.0002277 [nC]  Qi= 2.07e-14 [C]
-OPAL {+0}> * Ekin= 1.45688e-05 [MeV] dEkin= 1.51686e-05 [MeV]
-OPAL {+0}> * rmax= ( 0.000388766 , 0.000419902 , 2.98667e-06 ) [m]
-OPAL {+0}> * rmin= ( -0.00019479 , -0.000361731 , -8.86889e-08 ) [m]
-OPAL {+0}> * rms beam size= ( 0.000166067 , 0.000234714 , 9.99469e-07 ) [m]
-OPAL {+0}> * rms momenta= ( 0.000749893 , 0.000733954 , 0.00393112 ) [beta gamma]
-OPAL {+0}> * mean position= ( 0.000157793 , 0.000108754 , 1.03527e-06 ) [m]
-OPAL {+0}> * mean momenta= ( -2.5242e-05 , 4.51873e-05 , 0.00636122 ) [beta gamma]
-OPAL {+0}> * rms emittance= ( 1.64849e-05 , 2.23542e-05 , 1.3667e-07 ) (not normalized)
-OPAL {+0}> * rms correlation= ( -0.0284408 , -0.199583 , 0.964886 )
-OPAL {+0}> * dh= 0.03 [m] dT= 3.0335e-14 [s]
-OPAL {+0}> * hr= ( 3.89037e-05 , 5.21089e-05 , 2.05024e-07 ) [m]
-OPAL {+0}> * spos= 9.95455e-07 [m]
+OPAL {+0}> * NP              =   11
+OPAL {+0}> * Qtot            =    2.27700e-04 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    1.45688e-05 [MeV]      dEkin =  1.51686e-05 [MeV]
+OPAL {+0}> * rmax            = (  3.88766e-04 ,  4.19905e-04 ,  2.92808e-06 ) [m]
+OPAL {+0}> * rmin            = ( -1.94787e-04 , -3.61733e-04 , -8.74067e-08 ) [m]
+OPAL {+0}> * rms beam size   = (  1.66067e-04 ,  2.34714e-04 ,  9.99469e-07 ) [m]
+OPAL {+0}> * rms momenta     = (  7.49893e-04 ,  7.33954e-04 ,  3.93112e-03 ) [beta gamma]
+OPAL {+0}> * mean position   = (  1.57793e-04 ,  1.08754e-04 ,  1.03527e-06 ) [m]
+OPAL {+0}> * mean momenta    = ( -2.52420e-05 ,  4.51873e-05 ,  6.36122e-03 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.64849e-05 ,  2.23542e-05 ,  1.36670e-07 ) (not normalized)
+OPAL {+0}> * rms correlation = ( -2.84408e-02 , -1.99583e-01 ,  9.64886e-01 )
+OPAL {+0}> * hr              = (  3.89035e-05 ,  5.21092e-05 ,  2.01032e-07 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    1.85044e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    1.03527e-06 [m]
 OPAL {+0}> * ********************************************************************************** 
 OPAL {+0}> 
 OPAL {+0}> * Wrote beam statistics.
-OPAL {+0}> 12.54.41 Step 61 at 1.09421e-06 [m] t= 1.88077e-12 [s] E=1.53637e-05 [MeV] 
-OPAL {+0}> 12.54.41 Step 62 at 9.77754e-07 [m] t= 1.91111e-12 [s] E=0.0929252 [MeV] 
-OPAL {+0}> 12.54.41 Step 63 at 9.5856e-07 [m] t= 1.94144e-12 [s] E=0.0393221 [MeV] 
-OPAL {+0}> 12.54.41 Step 64 at 8.8595e-07 [m] t= 1.97178e-12 [s] E=0.0730141 [MeV] 
-OPAL {+0}> 12.54.41 Step 65 at 9.35512e-07 [m] t= 2.00211e-12 [s] E=1.31621e-05 [MeV] 
-OPAL {+0}> 12.54.41 Step 66 at 9.87271e-07 [m] t= 2.03245e-12 [s] E=1.3862e-05 [MeV] 
-OPAL {+0}> 12.54.41 Step 67 at 1.04122e-06 [m] t= 2.06278e-12 [s] E=1.45916e-05 [MeV] 
-OPAL {+0}> 12.54.41 Step 68 at 1.03293e-06 [m] t= 2.09312e-12 [s] E=0.0319528 [MeV] 
-OPAL {+0}> 12.54.41 Step 69 at 1.08818e-06 [m] t= 2.12345e-12 [s] E=1.52203e-05 [MeV] 
-OPAL {+0}> 12.54.41 Step 70 at 1.14562e-06 [m] t= 2.15379e-12 [s] E=1.59971e-05 [MeV] 
+ParallelTTracker {+0}> 08.59.04 Step     61 at    0.001 [mm] t=  1.881e-12 [s] E=    0.015 [keV] 
+ParallelTTracker {+0}> 08.59.04 Step     62 at    0.001 [mm] t=  1.911e-12 [s] E=    0.014 [keV] 
+ParallelTTracker {+0}> 08.59.04 Step     63 at    0.001 [mm] t=  1.941e-12 [s] E=    0.013 [keV] 
+ParallelTTracker {+0}> 08.59.05 Step     64 at    0.001 [mm] t=  1.972e-12 [s] E=    0.012 [keV] 
+ParallelTTracker {+0}> 08.59.05 Step     65 at    0.001 [mm] t=  2.002e-12 [s] E=    0.013 [keV] 
+ParallelTTracker {+0}> 08.59.05 Step     66 at    0.001 [mm] t=  2.032e-12 [s] E=    0.014 [keV] 
+ParallelTTracker {+0}> 08.59.05 Step     67 at    0.001 [mm] t=  2.063e-12 [s] E=    0.015 [keV] 
+ParallelTTracker {+0}> 08.59.05 Step     68 at    0.001 [mm] t=  2.093e-12 [s] E=    0.014 [keV] 
+ParallelTTracker {+0}> 08.59.05 Step     69 at    0.001 [mm] t=  2.123e-12 [s] E=    0.015 [keV] 
+ParallelTTracker {+0}> 08.59.05 Step     70 at    0.001 [mm] t=  2.154e-12 [s] E=    0.016 [keV] 
 OPAL {+0}> * Wrote beam phase space.
 OPAL {+0}> * ************** B U N C H ********************************************************* 
-OPAL {+0}> * NP= 17 Qtot= 0.0003519 [nC]  Qi= 2.07e-14 [C]
-OPAL {+0}> * Ekin= 1.59971e-05 [MeV] dEkin= 1.81156e-05 [MeV]
-OPAL {+0}> * rmax= ( 0.000494824 , 0.000420585 , 4.27157e-06 ) [m]
-OPAL {+0}> * rmin= ( -0.000331806 , -0.000387657 , -1.12024e-07 ) [m]
-OPAL {+0}> * rms beam size= ( 0.000220358 , 0.000257414 , 1.33676e-06 ) [m]
-OPAL {+0}> * rms momenta= ( 0.000700876 , 0.000737982 , 0.00448041 ) [beta gamma]
-OPAL {+0}> * mean position= ( 0.000131673 , 1.89243e-05 , 1.14562e-06 ) [m]
-OPAL {+0}> * mean momenta= ( -0.000220594 , -0.000144861 , 0.00643692 ) [beta gamma]
-OPAL {+0}> * rms emittance= ( 1.89881e-05 , 2.3977e-05 , 1.70285e-07 ) (not normalized)
-OPAL {+0}> * rms correlation= ( 0.231488 , 0.0505106 , 0.974364 )
-OPAL {+0}> * dh= 0.03 [m] dT= 3.0335e-14 [s]
-OPAL {+0}> * hr= ( 5.51087e-05 , 5.38828e-05 , 2.9224e-07 ) [m]
-OPAL {+0}> * spos= 1.28372e-06 [m]
+OPAL {+0}> * NP              =   17
+OPAL {+0}> * Qtot            =    3.51900e-04 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    1.59971e-05 [MeV]      dEkin =  1.81156e-05 [MeV]
+OPAL {+0}> * rmax            = (  4.94823e-04 ,  4.20589e-04 ,  4.20177e-06 ) [m]
+OPAL {+0}> * rmin            = ( -3.31801e-04 , -3.87660e-04 , -1.14598e-07 ) [m]
+OPAL {+0}> * rms beam size   = (  2.20358e-04 ,  2.57414e-04 ,  1.33676e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  7.00876e-04 ,  7.37982e-04 ,  4.48041e-03 ) [beta gamma]
+OPAL {+0}> * mean position   = (  1.31673e-04 ,  1.89243e-05 ,  1.14562e-06 ) [m]
+OPAL {+0}> * mean momenta    = ( -2.20594e-04 , -1.44861e-04 ,  6.43692e-03 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.89881e-05 ,  2.39770e-05 ,  1.70285e-07 ) (not normalized)
+OPAL {+0}> * rms correlation = (  2.31488e-01 ,  5.05106e-02 ,  9.74364e-01 )
+OPAL {+0}> * hr              = (  5.51083e-05 ,  5.38833e-05 ,  2.87758e-07 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    2.15379e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    1.14562e-06 [m]
 OPAL {+0}> * ********************************************************************************** 
 OPAL {+0}> 
 OPAL {+0}> * Wrote beam statistics.
-OPAL {+0}> 12.54.41 Step 71 at 1.20525e-06 [m] t= 2.18412e-12 [s] E=1.68036e-05 [MeV] 
-OPAL {+0}> 12.54.41 Step 72 at 1.26707e-06 [m] t= 2.21446e-12 [s] E=1.76397e-05 [MeV] 
-OPAL {+0}> 12.54.41 Step 73 at 1.33108e-06 [m] t= 2.24479e-12 [s] E=1.85055e-05 [MeV] 
-OPAL {+0}> 12.54.41 Step 74 at 1.39729e-06 [m] t= 2.27513e-12 [s] E=1.94008e-05 [MeV] 
-OPAL {+0}> 12.54.41 Step 75 at 1.38459e-06 [m] t= 2.30546e-12 [s] E=0.0300791 [MeV] 
-OPAL {+0}> 12.54.41 Step 76 at 1.37554e-06 [m] t= 2.3358e-12 [s] E=0.028409 [MeV] 
-OPAL {+0}> 12.54.41 Step 77 at 1.44199e-06 [m] t= 2.36613e-12 [s] E=1.99967e-05 [MeV] 
-OPAL {+0}> 12.54.41 Step 78 at 1.51063e-06 [m] t= 2.39647e-12 [s] E=2.09273e-05 [MeV] 
-OPAL {+0}> 12.54.41 Step 79 at 1.50286e-06 [m] t= 2.4268e-12 [s] E=0.0269166 [MeV] 
-OPAL {+0}> 12.54.41 Step 80 at 1.5729e-06 [m] t= 2.45714e-12 [s] E=2.17691e-05 [MeV] 
+ParallelTTracker {+0}> 08.59.05 Step     71 at    0.001 [mm] t=  2.184e-12 [s] E=    0.017 [keV] 
+ParallelTTracker {+0}> 08.59.05 Step     72 at    0.001 [mm] t=  2.214e-12 [s] E=    0.018 [keV] 
+ParallelTTracker {+0}> 08.59.06 Step     73 at    0.001 [mm] t=  2.245e-12 [s] E=    0.019 [keV] 
+ParallelTTracker {+0}> 08.59.06 Step     74 at    0.001 [mm] t=  2.275e-12 [s] E=    0.019 [keV] 
+ParallelTTracker {+0}> 08.59.06 Step     75 at    0.001 [mm] t=  2.305e-12 [s] E=    0.019 [keV] 
+ParallelTTracker {+0}> 08.59.06 Step     76 at    0.001 [mm] t=  2.336e-12 [s] E=    0.019 [keV] 
+ParallelTTracker {+0}> 08.59.06 Step     77 at    0.001 [mm] t=  2.366e-12 [s] E=    0.020 [keV] 
+ParallelTTracker {+0}> 08.59.06 Step     78 at    0.002 [mm] t=  2.396e-12 [s] E=    0.021 [keV] 
+ParallelTTracker {+0}> 08.59.06 Step     79 at    0.002 [mm] t=  2.427e-12 [s] E=    0.021 [keV] 
+ParallelTTracker {+0}> 08.59.06 Step     80 at    0.002 [mm] t=  2.457e-12 [s] E=    0.022 [keV] 
 OPAL {+0}> * Wrote beam phase space.
 OPAL {+0}> * ************** B U N C H ********************************************************* 
-OPAL {+0}> * NP= 20 Qtot= 0.000414 [nC]  Qi= 2.07e-14 [C]
-OPAL {+0}> * Ekin= 2.17691e-05 [MeV] dEkin= 2.26288e-05 [MeV]
-OPAL {+0}> * rmax= ( 0.000494834 , 0.000423872 , 5.78386e-06 ) [m]
-OPAL {+0}> * rmin= ( -0.000331907 , -0.000503023 , -1.50491e-07 ) [m]
-OPAL {+0}> * rms beam size= ( 0.000224228 , 0.000264372 , 1.72271e-06 ) [m]
-OPAL {+0}> * rms momenta= ( 0.000668605 , 0.000690834 , 0.00479768 ) [beta gamma]
-OPAL {+0}> * mean position= ( 9.2509e-05 , -1.87912e-05 , 1.5729e-06 ) [m]
-OPAL {+0}> * mean momenta= ( -0.000235649 , -0.000143181 , 0.00782227 ) [beta gamma]
-OPAL {+0}> * rms emittance= ( 1.58259e-05 , 1.97861e-05 , 1.95544e-07 ) (not normalized)
-OPAL {+0}> * rms correlation= ( 0.224809 , 0.001169 , 0.975862 )
-OPAL {+0}> * dh= 0.03 [m] dT= 3.0335e-14 [s]
-OPAL {+0}> * hr= ( 5.51161e-05 , 6.1793e-05 , 3.95623e-07 ) [m]
-OPAL {+0}> * spos= 1.48806e-06 [m]
+OPAL {+0}> * NP              =   20
+OPAL {+0}> * Qtot            =    4.14000e-04 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    2.17691e-05 [MeV]      dEkin =  2.26288e-05 [MeV]
+OPAL {+0}> * rmax            = (  4.94834e-04 ,  4.23875e-04 ,  5.70276e-06 ) [m]
+OPAL {+0}> * rmin            = ( -3.31902e-04 , -5.03024e-04 , -1.55340e-07 ) [m]
+OPAL {+0}> * rms beam size   = (  2.24228e-04 ,  2.64372e-04 ,  1.72271e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  6.68605e-04 ,  6.90834e-04 ,  4.79768e-03 ) [beta gamma]
+OPAL {+0}> * mean position   = (  9.25090e-05 , -1.87912e-05 ,  1.57290e-06 ) [m]
+OPAL {+0}> * mean momenta    = ( -2.35649e-04 , -1.43181e-04 ,  7.82227e-03 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.58259e-05 ,  1.97861e-05 ,  1.95544e-07 ) (not normalized)
+OPAL {+0}> * rms correlation = (  2.24809e-01 ,  1.16900e-03 ,  9.75862e-01 )
+OPAL {+0}> * hr              = (  5.51157e-05 ,  6.17933e-05 ,  3.90540e-07 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    2.45714e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    1.57290e-06 [m]
 OPAL {+0}> * ********************************************************************************** 
 OPAL {+0}> 
 OPAL {+0}> * Wrote beam statistics.
-OPAL {+0}> 12.54.42 Step 81 at 1.64513e-06 [m] t= 2.48747e-12 [s] E=2.27483e-05 [MeV] 
-OPAL {+0}> 12.54.42 Step 82 at 1.71955e-06 [m] t= 2.51781e-12 [s] E=2.37573e-05 [MeV] 
-OPAL {+0}> 12.54.42 Step 83 at 1.79617e-06 [m] t= 2.54814e-12 [s] E=2.47961e-05 [MeV] 
-OPAL {+0}> 12.54.42 Step 84 at 1.87498e-06 [m] t= 2.57848e-12 [s] E=2.58646e-05 [MeV] 
-OPAL {+0}> 12.54.42 Step 85 at 1.77838e-06 [m] t= 2.60881e-12 [s] E=0.0511269 [MeV] 
-OPAL {+0}> 12.54.42 Step 86 at 1.77409e-06 [m] t= 2.63915e-12 [s] E=0.0232528 [MeV] 
-OPAL {+0}> 12.54.42 Step 87 at 1.84948e-06 [m] t= 2.66948e-12 [s] E=2.55144e-05 [MeV] 
-OPAL {+0}> 12.54.42 Step 88 at 1.84697e-06 [m] t= 2.69982e-12 [s] E=0.0222439 [MeV] 
-OPAL {+0}> 12.54.42 Step 89 at 1.77607e-06 [m] t= 2.73015e-12 [s] E=0.0426098 [MeV] 
-OPAL {+0}> 12.54.42 Step 90 at 1.84972e-06 [m] t= 2.76049e-12 [s] E=2.55164e-05 [MeV] 
+ParallelTTracker {+0}> 08.59.07 Step     81 at    0.002 [mm] t=  2.487e-12 [s] E=    0.023 [keV] 
+ParallelTTracker {+0}> 08.59.07 Step     82 at    0.002 [mm] t=  2.518e-12 [s] E=    0.024 [keV] 
+ParallelTTracker {+0}> 08.59.07 Step     83 at    0.002 [mm] t=  2.548e-12 [s] E=    0.025 [keV] 
+ParallelTTracker {+0}> 08.59.07 Step     84 at    0.002 [mm] t=  2.578e-12 [s] E=    0.026 [keV] 
+ParallelTTracker {+0}> 08.59.07 Step     85 at    0.002 [mm] t=  2.609e-12 [s] E=    0.025 [keV] 
+ParallelTTracker {+0}> 08.59.07 Step     86 at    0.002 [mm] t=  2.639e-12 [s] E=    0.024 [keV] 
+ParallelTTracker {+0}> 08.59.07 Step     87 at    0.002 [mm] t=  2.669e-12 [s] E=    0.026 [keV] 
+ParallelTTracker {+0}> 08.59.07 Step     88 at    0.002 [mm] t=  2.700e-12 [s] E=    0.025 [keV] 
+ParallelTTracker {+0}> 08.59.08 Step     89 at    0.002 [mm] t=  2.730e-12 [s] E=    0.025 [keV] 
+ParallelTTracker {+0}> 08.59.08 Step     90 at    0.002 [mm] t=  2.760e-12 [s] E=    0.026 [keV] 
 OPAL {+0}> * Wrote beam phase space.
 OPAL {+0}> * ************** B U N C H ********************************************************* 
-OPAL {+0}> * NP= 26 Qtot= 0.0005382 [nC]  Qi= 2.07e-14 [C]
-OPAL {+0}> * Ekin= 2.55164e-05 [MeV] dEkin= 2.8569e-05 [MeV]
-OPAL {+0}> * rmax= ( 0.000522345 , 0.0004238 , 7.52408e-06 ) [m]
-OPAL {+0}> * rmin= ( -0.000332832 , -0.000503011 , -2.13953e-07 ) [m]
-OPAL {+0}> * rms beam size= ( 0.000233757 , 0.000258239 , 2.1319e-06 ) [m]
-OPAL {+0}> * rms momenta= ( 0.000671054 , 0.000654509 , 0.0055947 ) [beta gamma]
-OPAL {+0}> * mean position= ( 8.8851e-05 , -6.09621e-06 , 1.84972e-06 ) [m]
-OPAL {+0}> * mean momenta= ( -0.000340239 , -9.06883e-05 , 0.00822015 ) [beta gamma]
-OPAL {+0}> * rms emittance= ( 1.56557e-05 , 1.69125e-05 , 3.25452e-07 ) (not normalized)
-OPAL {+0}> * rms correlation= ( 0.0720457 , 0.00643268 , 0.962103 )
-OPAL {+0}> * dh= 0.03 [m] dT= 3.0335e-14 [s]
-OPAL {+0}> * hr= ( 5.70118e-05 , 6.17875e-05 , 5.15869e-07 ) [m]
-OPAL {+0}> * spos= 1.74391e-06 [m]
+OPAL {+0}> * NP              =   26
+OPAL {+0}> * Qtot            =    5.38200e-04 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    2.55164e-05 [MeV]      dEkin =  2.85690e-05 [MeV]
+OPAL {+0}> * rmax            = (  5.22350e-04 ,  4.23804e-04 ,  7.43153e-06 ) [m]
+OPAL {+0}> * rmin            = ( -3.32828e-04 , -5.03012e-04 , -2.15678e-07 ) [m]
+OPAL {+0}> * rms beam size   = (  2.33757e-04 ,  2.58239e-04 ,  2.13190e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  6.71054e-04 ,  6.54509e-04 ,  5.59470e-03 ) [beta gamma]
+OPAL {+0}> * mean position   = (  8.88510e-05 , -6.09621e-06 ,  1.84972e-06 ) [m]
+OPAL {+0}> * mean momenta    = ( -3.40239e-04 , -9.06883e-05 ,  8.22015e-03 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.56557e-05 ,  1.69125e-05 ,  3.25452e-07 ) (not normalized)
+OPAL {+0}> * rms correlation = (  7.20457e-02 ,  6.43268e-03 ,  9.62103e-01 )
+OPAL {+0}> * hr              = (  5.70118e-05 ,  6.17877e-05 ,  5.09814e-07 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    2.76049e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    1.84972e-06 [m]
 OPAL {+0}> * ********************************************************************************** 
 OPAL {+0}> 
 OPAL {+0}> * Wrote beam statistics.
-OPAL {+0}> 12.54.42 Step 91 at 1.78817e-06 [m] t= 2.79082e-12 [s] E=0.0393342 [MeV] 
-OPAL {+0}> 12.54.42 Step 92 at 1.86121e-06 [m] t= 2.82116e-12 [s] E=2.5672e-05 [MeV] 
-OPAL {+0}> 12.54.42 Step 93 at 1.86979e-06 [m] t= 2.85149e-12 [s] E=0.0182767 [MeV] 
-OPAL {+0}> 12.54.42 Step 94 at 1.76294e-06 [m] t= 2.88183e-12 [s] E=0.0528888 [MeV] 
-OPAL {+0}> 12.54.42 Step 95 at 1.83385e-06 [m] t= 2.91216e-12 [s] E=2.53001e-05 [MeV] 
-OPAL {+0}> 12.54.42 Step 96 at 1.90695e-06 [m] t= 2.9425e-12 [s] E=2.62925e-05 [MeV] 
-OPAL {+0}> 12.54.42 Step 97 at 1.81273e-06 [m] t= 2.97283e-12 [s] E=0.0479335 [MeV] 
-OPAL {+0}> 12.54.42 Step 98 at 1.88452e-06 [m] t= 3.00317e-12 [s] E=2.59879e-05 [MeV] 
+ParallelTTracker {+0}> 08.59.08 Step     91 at    0.002 [mm] t=  2.791e-12 [s] E=    0.025 [keV] 
+ParallelTTracker {+0}> 08.59.08 Step     92 at    0.002 [mm] t=  2.821e-12 [s] E=    0.026 [keV] 
+ParallelTTracker {+0}> 08.59.08 Step     93 at    0.002 [mm] t=  2.851e-12 [s] E=    0.026 [keV] 
+ParallelTTracker {+0}> 08.59.08 Step     94 at    0.002 [mm] t=  2.882e-12 [s] E=    0.024 [keV] 
+ParallelTTracker {+0}> 08.59.08 Step     95 at    0.002 [mm] t=  2.912e-12 [s] E=    0.025 [keV] 
+ParallelTTracker {+0}> 08.59.08 Step     96 at    0.002 [mm] t=  2.942e-12 [s] E=    0.026 [keV] 
+ParallelTTracker {+0}> 08.59.09 Step     97 at    0.002 [mm] t=  2.973e-12 [s] E=    0.025 [keV] 
+ParallelTTracker {+0}> 08.59.09 Step     98 at    0.002 [mm] t=  3.003e-12 [s] E=    0.026 [keV] 
 OPAL {+0}> * Bin number: 0 has emitted all particles (new emmit).
-OPAL {+0}> 12.54.42 Step 99 at 1.9043e-06 [m] t= 3.0335e-12 [s] E=0.014627 [MeV] 
+ParallelTTracker {+0}> 08.59.09 Step     99 at    0.002 [mm] t=  3.034e-12 [s] E=    0.026 [keV] 
 OPAL {+0}> * Wrote beam phase space.
 OPAL {+0}> * ************** B U N C H ********************************************************* 
-OPAL {+0}> * NP= 36 Qtot= 0.0007452 [nC]  Qi= 2.07e-14 [C]
-OPAL {+0}> * Ekin= 2.62564e-05 [MeV] dEkin= 3.14811e-05 [MeV]
-OPAL {+0}> * rmax= ( 0.000522254 , 0.00046289 , 9.28477e-06 ) [m]
-OPAL {+0}> * rmin= ( -0.00033292 , -0.000504175 , -2.71282e-07 ) [m]
-OPAL {+0}> * rms beam size= ( 0.000224642 , 0.000266658 , 2.46799e-06 ) [m]
-OPAL {+0}> * rms momenta= ( 0.000638378 , 0.000662992 , 0.00607749 ) [beta gamma]
-OPAL {+0}> * mean position= ( 0.000102692 , 1.28982e-05 , 1.9043e-06 ) [m]
-OPAL {+0}> * mean momenta= ( -0.000298687 , -6.59651e-05 , 0.00805576 ) [beta gamma]
-OPAL {+0}> * rms emittance= ( 1.41462e-05 , 1.74377e-05 , 3.97923e-07 ) (not normalized)
-OPAL {+0}> * rms correlation= ( 0.00266059 , 0.0144644 , 0.963156 )
-OPAL {+0}> * dh= 0.03 [m] dT= 3.0335e-14 [s]
-OPAL {+0}> * hr= ( 5.70116e-05 , 6.4471e-05 , 6.3707e-07 ) [m]
-OPAL {+0}> * spos= 1.84868e-06 [m]
+OPAL {+0}> * NP              =   36
+OPAL {+0}> * Qtot            =    7.45200e-04 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    2.62564e-05 [MeV]      dEkin =  3.14811e-05 [MeV]
+OPAL {+0}> * rmax            = (  5.22254e-04 ,  4.62890e-04 ,  9.28477e-06 ) [m]
+OPAL {+0}> * rmin            = ( -3.32920e-04 , -5.04175e-04 , -2.71282e-07 ) [m]
+OPAL {+0}> * rms beam size   = (  2.24642e-04 ,  2.66658e-04 ,  2.46799e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  6.38378e-04 ,  6.62992e-04 ,  6.07749e-03 ) [beta gamma]
+OPAL {+0}> * mean position   = (  1.02692e-04 ,  1.28982e-05 ,  1.90430e-06 ) [m]
+OPAL {+0}> * mean momenta    = ( -2.98687e-04 , -6.59651e-05 ,  8.05576e-03 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.41462e-05 ,  1.74377e-05 ,  3.97923e-07 ) (not normalized)
+OPAL {+0}> * rms correlation = (  2.66059e-03 ,  1.44644e-02 ,  9.63156e-01 )
+OPAL {+0}> * hr              = (  5.70116e-05 ,  6.44710e-05 ,  6.37070e-07 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    3.03350e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    1.90430e-06 [m]
 OPAL {+0}> * ********************************************************************************** 
 OPAL {+0}> 
 OPAL {+0}> * Wrote beam statistics.
-OPAL {+0}> Dump phase space of last step
+ParallelTTracker {+0}> Dump phase space of last step
 FM2DD {+0}> 
 FM2DD {+0}> * ************ I N F O *********************************************************
 FM2DD {+0}> * freed fieldmap '1T3.T7'                                                      *
@@ -361,112 +372,112 @@ FM2DD {+0}> * freed fieldmap '1T1.T7'                                           
 FM2DD {+0}> * ******************************************************************************
 FM2DD {+0}> 
 FM2DD {+0}> 
-OPAL {+0}> done executing ParallelTTracker at 12.54.42
+ParallelTTracker {+0}> done executing ParallelTTracker at 08.59.09
 OPAL {+0}> 
 OPAL {+0}> value: {I,RV1,RV2,RV3,RV4,RV5}={1,1.142,0,0,0,0}
 OPAL {+0}> 
 OPAL {+0}> 
 OPAL {+0}> 8 elements selected.
 OPAL {+0}> 
-OPAL {+0}> * **********
-Replacing the object "COL".
-
-
-Replacing the object "SP1".
-
-
-Replacing the object "SP2".
-
-
-Replacing the object "SP3".
-
-
-Replacing the object "SP4".
-
-
-Replacing the object "SP5".
-
-
-Replacing the object "GUN".
-
-
-Replacing the object "L1".
-
-
-Replacing the object "COL".
-
-
-Replacing the object "SP1".
-
-
-Replacing the object "SP2".
-
-
-Replacing the object "SP3".
-
-
-Replacing the object "SP4".
-
-
-Replacing the object "SP5".
-
-
-Replacing the object "GUN".
-
-
-Replacing the object "L1".
-
-
-Replacing the object "COL".
-
-
-Replacing the object "SP1".
-
-
-Replacing the object "SP2".
-
-
-Replacing the object "SP3".
-
-
-Replacing the object "SP4".
-
-
-Replacing the object "SP5".
-
-
-Replacing the object "GUN".
-
-
-Replacing the object "L1".
-
-
-Replacing the object "COL".
-
-
-Replacing the object "SP1".
-
-
-Replacing the object "SP2".
-
-
-Replacing the object "SP3".
-
-
-Replacing the object "SP4".
-
-
-Replacing the object "SP5".
-
-
-Replacing the object "GUN".
-
-
-Replacing the object "L1".
-
-************************************************************************ 
+OPAL {+0}> * ********************************************************************************** 
 OPAL {+0}>   Selected Tracking Method == PARALLEL-T, SCAN TRACK
 OPAL {+0}> * ********************************************************************************** 
+
+Replacing the object "COL".
+
+
+Replacing the object "SP1".
+
+
+Replacing the object "SP2".
+
+
+Replacing the object "SP3".
+
+
+Replacing the object "SP4".
+
+
+Replacing the object "SP5".
+
+
+Replacing the object "GUN".
+
+
+Replacing the object "L1".
+
+
+Replacing the object "COL".
+
+
+Replacing the object "SP1".
+
+
+Replacing the object "SP2".
+
+
+Replacing the object "SP3".
+
+
+Replacing the object "SP4".
+
+
+Replacing the object "SP5".
+
+
+Replacing the object "GUN".
+
+
+Replacing the object "L1".
+
+
+Replacing the object "COL".
+
+
+Replacing the object "SP1".
+
+
+Replacing the object "SP2".
+
+
+Replacing the object "SP3".
+
+
+Replacing the object "SP4".
+
+
+Replacing the object "SP5".
+
+
+Replacing the object "GUN".
+
+
+Replacing the object "L1".
+
+
+Replacing the object "COL".
+
+
+Replacing the object "SP1".
+
+
+Replacing the object "SP2".
+
+
+Replacing the object "SP3".
+
+
+Replacing the object "SP4".
+
+
+Replacing the object "SP5".
+
+
+Replacing the object "GUN".
+
+
+Replacing the object "L1".
+
 OPAL {+0}> * ********************************************************************************** 
 OPAL {+0}>   PARALLEL-T SCAN
 OPAL {+0}> * ********************************************************************************** 
@@ -529,52 +540,52 @@ Solenoid {+0}> SP2 using file 1T3.T7 (2D dynamic); zini= 0 m; zfinal= 0.49 m;
 Solenoid {+0}> SP3 using file 1T3.T7 (2D dynamic); zini= 0 m; zfinal= 0.49 m;
 Solenoid {+0}> SP4 using file 1T3.T7 (2D dynamic); zini= 0 m; zfinal= 0.49 m;
 Solenoid {+0}> SP5 using file 1T3.T7 (2D dynamic); zini= 0 m; zfinal= 0.49 m;
-OPAL {+0}> totalParticle_i= 0
-OPAL {+0}> Track start at: 12.54.56, t= 0; zstop at: 1e+06 [m]
-OPAL {+0}> Executing ParallelTTracker, initial DT 1e-12 [s];
-OPAL {+0}> max integration steps 100, next step= 1
-OPAL {+0}> 
-OPAL {+0}> --- BEGIN FIELD LIST ---------------------------------------------------------------
-OPAL {+0}> 
-OPAL {+0}> --- -0.5315 m -- -0.4115 m -- alpha = 0 -- beta = 0 --------------------------------
-OPAL {+0}> SP1
-OPAL {+0}> --- -0.397 m -- -0.267 m -- alpha = 0 -- beta = 0 ----------------------------------
-OPAL {+0}> SP2
-OPAL {+0}> --- -0.267 m -- -0.157 m -- alpha = 0 -- beta = 0 ----------------------------------
-OPAL {+0}> SP2
-OPAL {+0}> SP3
-OPAL {+0}> --- -0.157 m -- -0.047 m -- alpha = 0 -- beta = 0 ----------------------------------
-OPAL {+0}> SP2
-OPAL {+0}> SP3
-OPAL {+0}> SP4
-OPAL {+0}> --- -0.047 m -- 0 m -- alpha = 0 -- beta = 0 ---------------------------------------
-OPAL {+0}> SP2
-OPAL {+0}> SP3
-OPAL {+0}> SP4
-OPAL {+0}> SP5
-OPAL {+0}> --- 0 m -- 0.008 m -- alpha = 0 -- beta = 0 ----------------------------------------
-OPAL {+0}> SP2
-OPAL {+0}> SP3
-OPAL {+0}> SP4
-OPAL {+0}> SP5
-OPAL {+0}> GUN
-OPAL {+0}> --- 0.008 m -- 0.093 m -- alpha = 0 -- beta = 0 ------------------------------------
-OPAL {+0}> SP2
-OPAL {+0}> SP3
-OPAL {+0}> SP4
-OPAL {+0}> SP5
-OPAL {+0}> --- 0.093 m -- 0.223 m -- alpha = 0 -- beta = 0 ------------------------------------
-OPAL {+0}> SP3
-OPAL {+0}> SP4
-OPAL {+0}> SP5
-OPAL {+0}> --- 0.223 m -- 0.333 m -- alpha = 0 -- beta = 0 ------------------------------------
-OPAL {+0}> SP4
-OPAL {+0}> SP5
-OPAL {+0}> --- 0.333 m -- 0.443 m -- alpha = 0 -- beta = 0 ------------------------------------
-OPAL {+0}> SP5
-OPAL {+0}> 
-OPAL {+0}> --- END FIELD LIST -----------------------------------------------------------------
-OPAL {+0}> 
+ParallelTTracker {+0}> totalParticle_i= 0
+ParallelTTracker {+0}> Track start at: 08.59.24, t= 0; zstop at: 1e+06 [m]
+ParallelTTracker {+0}> Executing ParallelTTracker, initial DT 1e-12 [s];
+ParallelTTracker {+0}> max integration steps 200, next step= 1
+ParallelTTracker {+0}> 
+ParallelTTracker {+0}> --- BEGIN FIELD LIST ---------------------------------------------------------------
+ParallelTTracker {+0}> 
+ParallelTTracker {+0}> --- -0.5315 m -- -0.4115 m -- alpha = 0 -- beta = 0 --------------------------------
+ParallelTTracker {+0}> SP1
+ParallelTTracker {+0}> --- -0.397 m -- -0.267 m -- alpha = 0 -- beta = 0 ----------------------------------
+ParallelTTracker {+0}> SP2
+ParallelTTracker {+0}> --- -0.267 m -- -0.157 m -- alpha = 0 -- beta = 0 ----------------------------------
+ParallelTTracker {+0}> SP2
+ParallelTTracker {+0}> SP3
+ParallelTTracker {+0}> --- -0.157 m -- -0.047 m -- alpha = 0 -- beta = 0 ----------------------------------
+ParallelTTracker {+0}> SP2
+ParallelTTracker {+0}> SP3
+ParallelTTracker {+0}> SP4
+ParallelTTracker {+0}> --- -0.047 m -- 0 m -- alpha = 0 -- beta = 0 ---------------------------------------
+ParallelTTracker {+0}> SP2
+ParallelTTracker {+0}> SP3
+ParallelTTracker {+0}> SP4
+ParallelTTracker {+0}> SP5
+ParallelTTracker {+0}> --- 0 m -- 0.008 m -- alpha = 0 -- beta = 0 ----------------------------------------
+ParallelTTracker {+0}> SP2
+ParallelTTracker {+0}> SP3
+ParallelTTracker {+0}> SP4
+ParallelTTracker {+0}> SP5
+ParallelTTracker {+0}> GUN
+ParallelTTracker {+0}> --- 0.008 m -- 0.093 m -- alpha = 0 -- beta = 0 ------------------------------------
+ParallelTTracker {+0}> SP2
+ParallelTTracker {+0}> SP3
+ParallelTTracker {+0}> SP4
+ParallelTTracker {+0}> SP5
+ParallelTTracker {+0}> --- 0.093 m -- 0.223 m -- alpha = 0 -- beta = 0 ------------------------------------
+ParallelTTracker {+0}> SP3
+ParallelTTracker {+0}> SP4
+ParallelTTracker {+0}> SP5
+ParallelTTracker {+0}> --- 0.223 m -- 0.333 m -- alpha = 0 -- beta = 0 ------------------------------------
+ParallelTTracker {+0}> SP4
+ParallelTTracker {+0}> SP5
+ParallelTTracker {+0}> --- 0.333 m -- 0.443 m -- alpha = 0 -- beta = 0 ------------------------------------
+ParallelTTracker {+0}> SP5
+ParallelTTracker {+0}> 
+ParallelTTracker {+0}> --- END FIELD LIST -----------------------------------------------------------------
+ParallelTTracker {+0}> 
 FM2DD {+0}> 
 FM2DD {+0}> * ************ I N F O *********************************************************
 FM2DD {+0}> * read in fieldmap '1T3.T7'                                                    *
@@ -587,181 +598,491 @@ FM2DD {+0}> * read in fieldmap '1T1.T7'                                         
 FM2DD {+0}> * ******************************************************************************
 FM2DD {+0}> 
 FM2DD {+0}> 
-OPAL {+0}> MINSTEPFORREBIN 1500
-OPAL {+0}> REPARTFREQ 1000
-OPAL {+0}> Changing emission time step to: 3.0335e-14
-OPAL {+0}> Step 1 no emission yet  t= 3.0335e-14 [s]
-OPAL {+0}> Step 2 no emission yet  t= 6.067e-14 [s]
-OPAL {+0}> Step 3 no emission yet  t= 9.10051e-14 [s]
-OPAL {+0}> Step 4 no emission yet  t= 1.2134e-13 [s]
-OPAL {+0}> Step 5 no emission yet  t= 1.51675e-13 [s]
-OPAL {+0}> Step 6 no emission yet  t= 1.8201e-13 [s]
-OPAL {+0}> Step 7 no emission yet  t= 2.12345e-13 [s]
-OPAL {+0}> Step 8 no emission yet  t= 2.4268e-13 [s]
-OPAL {+0}> Step 9 no emission yet  t= 2.73015e-13 [s]
-OPAL {+0}> Step 10 no emission yet  t= 3.0335e-13 [s]
-OPAL {+0}> Step 11 no emission yet  t= 3.33685e-13 [s]
-OPAL {+0}> Step 12 no emission yet  t= 3.6402e-13 [s]
-OPAL {+0}> Step 13 no emission yet  t= 3.94355e-13 [s]
-OPAL {+0}> 12.55.10 Step 14; only 1 particles emitted; t= 4.2469e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 15; only 2 particles emitted; t= 4.55025e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 16; only 2 particles emitted; t= 4.8536e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 17; only 2 particles emitted; t= 5.15695e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 18; only 2 particles emitted; t= 5.4603e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 19; only 2 particles emitted; t= 5.76365e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 20; only 2 particles emitted; t= 6.067e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 21; only 2 particles emitted; t= 6.37035e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 22; only 2 particles emitted; t= 6.67371e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 23; only 2 particles emitted; t= 6.97706e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 24; only 2 particles emitted; t= 7.28041e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 25; only 2 particles emitted; t= 7.58376e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 26; only 2 particles emitted; t= 7.88711e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 27; only 3 particles emitted; t= 8.19046e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 28; only 3 particles emitted; t= 8.49381e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 29; only 3 particles emitted; t= 8.79716e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 30; only 4 particles emitted; t= 9.10051e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 31; only 4 particles emitted; t= 9.40386e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 32; only 4 particles emitted; t= 9.70721e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 33; only 4 particles emitted; t= 1.00106e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 34; only 5 particles emitted; t= 1.03139e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 35; only 5 particles emitted; t= 1.06173e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 36; only 6 particles emitted; t= 1.09206e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 37; only 6 particles emitted; t= 1.1224e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 38; only 6 particles emitted; t= 1.15273e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 39; only 6 particles emitted; t= 1.18307e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 40; only 6 particles emitted; t= 1.2134e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 41; only 6 particles emitted; t= 1.24374e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 42; only 7 particles emitted; t= 1.27407e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 43; only 7 particles emitted; t= 1.30441e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 44; only 7 particles emitted; t= 1.33474e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 45; only 7 particles emitted; t= 1.36508e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 46; only 8 particles emitted; t= 1.39541e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 47; only 8 particles emitted; t= 1.42575e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 48; only 8 particles emitted; t= 1.45608e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 49; only 8 particles emitted; t= 1.48642e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 50; only 8 particles emitted; t= 1.51675e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 51; only 8 particles emitted; t= 1.54709e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 52; only 8 particles emitted; t= 1.57742e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 53; only 8 particles emitted; t= 1.60776e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 54; only 9 particles emitted; t= 1.63809e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 55; only 9 particles emitted; t= 1.66843e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 56; only 9 particles emitted; t= 1.69876e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 57; only 9 particles emitted; t= 1.7291e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 58; only 10 particles emitted; t= 1.75943e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 59; only 10 particles emitted; t= 1.78977e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 60; only 10 particles emitted; t= 1.8201e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 61 at 1.02066e-06 [m] t= 1.85044e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.10 Step 62 at 1.07871e-06 [m] t= 1.88077e-12 [s] E=1.49063e-05 [MeV] 
-OPAL {+0}> 12.55.10 Step 63 at 9.63858e-07 [m] t= 1.91111e-12 [s] E=0.0929247 [MeV] 
-OPAL {+0}> 12.55.10 Step 64 at 9.44895e-07 [m] t= 1.94144e-12 [s] E=0.0393217 [MeV] 
-OPAL {+0}> 12.55.10 Step 65 at 8.73293e-07 [m] t= 1.97178e-12 [s] E=0.0730137 [MeV] 
-OPAL {+0}> 12.55.10 Step 66 at 9.2212e-07 [m] t= 2.00211e-12 [s] E=1.27695e-05 [MeV] 
-OPAL {+0}> 12.55.10 Step 67 at 9.73106e-07 [m] t= 2.03245e-12 [s] E=1.34473e-05 [MeV] 
-OPAL {+0}> 12.55.10 Step 68 at 1.02625e-06 [m] t= 2.06278e-12 [s] E=1.41539e-05 [MeV] 
-OPAL {+0}> 12.55.10 Step 69 at 1.01804e-06 [m] t= 2.09312e-12 [s] E=0.0319524 [MeV] 
-OPAL {+0}> 12.55.10 Step 70 at 1.07246e-06 [m] t= 2.12345e-12 [s] E=1.4762e-05 [MeV] 
+ParallelTTracker {+0}> MINBINEMITTED 10
+ParallelTTracker {+0}> MINSTEPFORREBIN 1500
+ParallelTTracker {+0}> SURFACEEMISSIONSTOP after 1000 seconds
+ParallelTTracker {+0}> REPARTFREQ 1000
+ParallelTTracker {+0}> Step 1 no emission yet  t= 3.0335e-14 [s]
+ParallelTTracker {+0}> Step 2 no emission yet  t= 6.067e-14 [s]
+ParallelTTracker {+0}> Step 3 no emission yet  t= 9.10051e-14 [s]
+ParallelTTracker {+0}> Step 4 no emission yet  t= 1.2134e-13 [s]
+ParallelTTracker {+0}> Step 5 no emission yet  t= 1.51675e-13 [s]
+ParallelTTracker {+0}> Step 6 no emission yet  t= 1.8201e-13 [s]
+ParallelTTracker {+0}> Step 7 no emission yet  t= 2.12345e-13 [s]
+ParallelTTracker {+0}> Step 8 no emission yet  t= 2.4268e-13 [s]
+ParallelTTracker {+0}> Step 9 no emission yet  t= 2.73015e-13 [s]
+ParallelTTracker {+0}> Step 10 no emission yet  t= 3.0335e-13 [s]
+ParallelTTracker {+0}> Step 11 no emission yet  t= 3.33685e-13 [s]
+ParallelTTracker {+0}> Step 12 no emission yet  t= 3.6402e-13 [s]
+ParallelTTracker {+0}> Step 13 no emission yet  t= 3.94355e-13 [s]
+ParallelTTracker {+0}> 08.59.39 Step     14; only    1 particles emitted; t=  4.247e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     15; only    2 particles emitted; t=  4.550e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     16; only    2 particles emitted; t=  4.854e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     17; only    2 particles emitted; t=  5.157e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     18; only    2 particles emitted; t=  5.460e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     19; only    2 particles emitted; t=  5.764e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     20; only    2 particles emitted; t=  6.067e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     21; only    2 particles emitted; t=  6.370e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     22; only    2 particles emitted; t=  6.674e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     23; only    2 particles emitted; t=  6.977e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     24; only    2 particles emitted; t=  7.280e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     25; only    2 particles emitted; t=  7.584e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     26; only    2 particles emitted; t=  7.887e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     27; only    3 particles emitted; t=  8.190e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     28; only    3 particles emitted; t=  8.494e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     29; only    3 particles emitted; t=  8.797e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     30; only    4 particles emitted; t=  9.101e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     31; only    4 particles emitted; t=  9.404e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     32; only    4 particles emitted; t=  9.707e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     33; only    4 particles emitted; t=  1.001e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     34; only    5 particles emitted; t=  1.031e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     35; only    5 particles emitted; t=  1.062e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     36; only    6 particles emitted; t=  1.092e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     37; only    6 particles emitted; t=  1.122e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     38; only    6 particles emitted; t=  1.153e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     39; only    6 particles emitted; t=  1.183e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     40; only    6 particles emitted; t=  1.213e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     41; only    6 particles emitted; t=  1.244e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     42; only    7 particles emitted; t=  1.274e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     43; only    7 particles emitted; t=  1.304e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     44; only    7 particles emitted; t=  1.335e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     45; only    7 particles emitted; t=  1.365e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     46; only    8 particles emitted; t=  1.395e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     47; only    8 particles emitted; t=  1.426e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     48; only    8 particles emitted; t=  1.456e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     49; only    8 particles emitted; t=  1.486e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     50; only    8 particles emitted; t=  1.517e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     51; only    8 particles emitted; t=  1.547e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     52; only    8 particles emitted; t=  1.577e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     53; only    8 particles emitted; t=  1.608e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     54; only    9 particles emitted; t=  1.638e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     55; only    9 particles emitted; t=  1.668e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     56; only    9 particles emitted; t=  1.699e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     57; only    9 particles emitted; t=  1.729e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     58; only   10 particles emitted; t=  1.759e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     59; only   10 particles emitted; t=  1.790e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     60; only   10 particles emitted; t=  1.820e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 08.59.39 Step     61 at    0.001 [mm] t=  1.850e-12 [s] E=    0.014 [keV] 
+ParallelTTracker {+0}> 08.59.39 Step     62 at    0.001 [mm] t=  1.881e-12 [s] E=    0.015 [keV] 
+ParallelTTracker {+0}> 08.59.39 Step     63 at    0.001 [mm] t=  1.911e-12 [s] E=    0.013 [keV] 
+ParallelTTracker {+0}> 08.59.39 Step     64 at    0.001 [mm] t=  1.941e-12 [s] E=    0.013 [keV] 
+ParallelTTracker {+0}> 08.59.39 Step     65 at    0.001 [mm] t=  1.972e-12 [s] E=    0.012 [keV] 
+ParallelTTracker {+0}> 08.59.39 Step     66 at    0.001 [mm] t=  2.002e-12 [s] E=    0.013 [keV] 
+ParallelTTracker {+0}> 08.59.39 Step     67 at    0.001 [mm] t=  2.032e-12 [s] E=    0.013 [keV] 
+ParallelTTracker {+0}> 08.59.40 Step     68 at    0.001 [mm] t=  2.063e-12 [s] E=    0.014 [keV] 
+ParallelTTracker {+0}> 08.59.40 Step     69 at    0.001 [mm] t=  2.093e-12 [s] E=    0.014 [keV] 
+ParallelTTracker {+0}> 08.59.40 Step     70 at    0.001 [mm] t=  2.123e-12 [s] E=    0.015 [keV] 
 OPAL {+0}> * Wrote beam phase space.
 OPAL {+0}> * ************** B U N C H ********************************************************* 
-OPAL {+0}> * NP= 17 Qtot= 0.0003519 [nC]  Qi= 2.07e-14 [C]
-OPAL {+0}> * Ekin= 1.4762e-05 [MeV] dEkin= 1.7124e-05 [MeV]
-OPAL {+0}> * rmax= ( 0.000494823 , 0.000420593 , 4.07234e-06 ) [m]
-OPAL {+0}> * rmin= ( -0.000331796 , -0.000387663 , -1.14288e-07 ) [m]
-OPAL {+0}> * rms beam size= ( 0.000220357 , 0.000257414 , 1.27812e-06 ) [m]
-OPAL {+0}> * rms momenta= ( 0.000700886 , 0.000737992 , 0.00440878 ) [beta gamma]
-OPAL {+0}> * mean position= ( 0.000131675 , 1.89256e-05 , 1.07246e-06 ) [m]
-OPAL {+0}> * mean momenta= ( -0.000220567 , -0.000144877 , 0.00610213 ) [beta gamma]
-OPAL {+0}> * rms emittance= ( 1.97665e-05 , 2.49602e-05 , 1.71862e-07 ) (not normalized)
-OPAL {+0}> * rms correlation= ( 0.23153 , 0.050533 , 0.972756 )
-OPAL {+0}> * dh= 0.03 [m] dT= 3.0335e-14 [s]
-OPAL {+0}> * hr= ( 5.5108e-05 , 5.38837e-05 , 2.79108e-07 ) [m]
-OPAL {+0}> * spos= 1.20646e-06 [m]
+OPAL {+0}> * NP              =   17
+OPAL {+0}> * Qtot            =    3.51900e-04 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    1.47620e-05 [MeV]      dEkin =  1.71240e-05 [MeV]
+OPAL {+0}> * rmax            = (  4.94822e-04 ,  4.20596e-04 ,  4.00471e-06 ) [m]
+OPAL {+0}> * rmin            = ( -3.31791e-04 , -3.87666e-04 , -1.15764e-07 ) [m]
+OPAL {+0}> * rms beam size   = (  2.20357e-04 ,  2.57414e-04 ,  1.27812e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  7.00886e-04 ,  7.37992e-04 ,  4.40878e-03 ) [beta gamma]
+OPAL {+0}> * mean position   = (  1.31675e-04 ,  1.89256e-05 ,  1.07246e-06 ) [m]
+OPAL {+0}> * mean momenta    = ( -2.20567e-04 , -1.44877e-04 ,  6.10213e-03 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.97665e-05 ,  2.49602e-05 ,  1.71862e-07 ) (not normalized)
+OPAL {+0}> * rms correlation = (  2.31530e-01 ,  5.05330e-02 ,  9.72756e-01 )
+OPAL {+0}> * hr              = (  5.51076e-05 ,  5.38841e-05 ,  2.74698e-07 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    2.12345e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    1.07246e-06 [m]
 OPAL {+0}> * ********************************************************************************** 
 OPAL {+0}> 
 OPAL {+0}> * Wrote beam statistics.
-OPAL {+0}> 12.55.10 Step 71 at 1.12902e-06 [m] t= 2.15379e-12 [s] E=1.55142e-05 [MeV] 
-OPAL {+0}> 12.55.10 Step 72 at 1.18775e-06 [m] t= 2.18412e-12 [s] E=1.6295e-05 [MeV] 
-OPAL {+0}> 12.55.10 Step 73 at 1.24863e-06 [m] t= 2.21446e-12 [s] E=1.71045e-05 [MeV] 
-OPAL {+0}> 12.55.10 Step 74 at 1.31166e-06 [m] t= 2.24479e-12 [s] E=1.79426e-05 [MeV] 
-OPAL {+0}> 12.55.11 Step 75 at 1.37685e-06 [m] t= 2.27513e-12 [s] E=1.88093e-05 [MeV] 
-OPAL {+0}> 12.55.11 Step 76 at 1.36429e-06 [m] t= 2.30546e-12 [s] E=0.0300785 [MeV] 
-OPAL {+0}> 12.55.11 Step 77 at 1.35533e-06 [m] t= 2.3358e-12 [s] E=0.0284084 [MeV] 
-OPAL {+0}> 12.55.11 Step 78 at 1.42076e-06 [m] t= 2.36613e-12 [s] E=1.93846e-05 [MeV] 
-OPAL {+0}> 12.55.11 Step 79 at 1.48835e-06 [m] t= 2.39647e-12 [s] E=2.02856e-05 [MeV] 
-OPAL {+0}> 12.55.11 Step 80 at 1.48066e-06 [m] t= 2.4268e-12 [s] E=0.0269159 [MeV] 
+ParallelTTracker {+0}> 08.59.40 Step     71 at    0.001 [mm] t=  2.154e-12 [s] E=    0.016 [keV] 
+ParallelTTracker {+0}> 08.59.40 Step     72 at    0.001 [mm] t=  2.184e-12 [s] E=    0.016 [keV] 
+ParallelTTracker {+0}> 08.59.40 Step     73 at    0.001 [mm] t=  2.214e-12 [s] E=    0.017 [keV] 
+ParallelTTracker {+0}> 08.59.40 Step     74 at    0.001 [mm] t=  2.245e-12 [s] E=    0.018 [keV] 
+ParallelTTracker {+0}> 08.59.40 Step     75 at    0.001 [mm] t=  2.275e-12 [s] E=    0.019 [keV] 
+ParallelTTracker {+0}> 08.59.41 Step     76 at    0.001 [mm] t=  2.305e-12 [s] E=    0.019 [keV] 
+ParallelTTracker {+0}> 08.59.41 Step     77 at    0.001 [mm] t=  2.336e-12 [s] E=    0.019 [keV] 
+ParallelTTracker {+0}> 08.59.41 Step     78 at    0.001 [mm] t=  2.366e-12 [s] E=    0.019 [keV] 
+ParallelTTracker {+0}> 08.59.41 Step     79 at    0.001 [mm] t=  2.396e-12 [s] E=    0.020 [keV] 
+ParallelTTracker {+0}> 08.59.41 Step     80 at    0.001 [mm] t=  2.427e-12 [s] E=    0.020 [keV] 
 OPAL {+0}> * Wrote beam phase space.
 OPAL {+0}> * ************** B U N C H ********************************************************* 
-OPAL {+0}> * NP= 20 Qtot= 0.000414 [nC]  Qi= 2.07e-14 [C]
-OPAL {+0}> * Ekin= 2.01807e-05 [MeV] dEkin= 2.14268e-05 [MeV]
-OPAL {+0}> * rmax= ( 0.000494833 , 0.000423879 , 5.53865e-06 ) [m]
-OPAL {+0}> * rmin= ( -0.000331897 , -0.000503024 , -1.56586e-07 ) [m]
-OPAL {+0}> * rms beam size= ( 0.000224227 , 0.000264372 , 1.655e-06 ) [m]
-OPAL {+0}> * rms momenta= ( 0.00066861 , 0.000690847 , 0.0047182 ) [beta gamma]
-OPAL {+0}> * mean position= ( 9.25111e-05 , -1.87899e-05 , 1.48066e-06 ) [m]
-OPAL {+0}> * mean momenta= ( -0.000235643 , -0.000143222 , 0.00746506 ) [beta gamma]
-OPAL {+0}> * rms emittance= ( 1.64368e-05 , 2.05504e-05 , 1.96324e-07 ) (not normalized)
-OPAL {+0}> * rms correlation= ( 0.224837 , 0.00116753 , 0.974716 )
-OPAL {+0}> * dh= 0.03 [m] dT= 3.0335e-14 [s]
-OPAL {+0}> * hr= ( 5.51154e-05 , 6.17935e-05 , 3.79682e-07 ) [m]
-OPAL {+0}> * spos= 1.40072e-06 [m]
+OPAL {+0}> * NP              =   20
+OPAL {+0}> * Qtot            =    4.14000e-04 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    2.01807e-05 [MeV]      dEkin =  2.14268e-05 [MeV]
+OPAL {+0}> * rmax            = (  4.94833e-04 ,  4.23882e-04 ,  5.45990e-06 ) [m]
+OPAL {+0}> * rmin            = ( -3.31892e-04 , -5.03025e-04 , -1.59405e-07 ) [m]
+OPAL {+0}> * rms beam size   = (  2.24227e-04 ,  2.64372e-04 ,  1.65500e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  6.68610e-04 ,  6.90847e-04 ,  4.71820e-03 ) [beta gamma]
+OPAL {+0}> * mean position   = (  9.25111e-05 , -1.87899e-05 ,  1.48066e-06 ) [m]
+OPAL {+0}> * mean momenta    = ( -2.35643e-04 , -1.43222e-04 ,  7.46506e-03 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.64368e-05 ,  2.05504e-05 ,  1.96324e-07 ) (not normalized)
+OPAL {+0}> * rms correlation = (  2.24837e-01 ,  1.16753e-03 ,  9.74716e-01 )
+OPAL {+0}> * hr              = (  5.51150e-05 ,  6.17938e-05 ,  3.74620e-07 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    2.42680e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    1.48066e-06 [m]
 OPAL {+0}> * ********************************************************************************** 
 OPAL {+0}> 
 OPAL {+0}> * Wrote beam statistics.
-OPAL {+0}> 12.55.11 Step 81 at 1.54963e-06 [m] t= 2.45714e-12 [s] E=2.11e-05 [MeV] 
-OPAL {+0}> 12.55.11 Step 82 at 1.62075e-06 [m] t= 2.48747e-12 [s] E=2.2048e-05 [MeV] 
-OPAL {+0}> 12.55.11 Step 83 at 1.69402e-06 [m] t= 2.51781e-12 [s] E=2.30248e-05 [MeV] 
-OPAL {+0}> 12.55.11 Step 84 at 1.76946e-06 [m] t= 2.54814e-12 [s] E=2.40303e-05 [MeV] 
-OPAL {+0}> 12.55.11 Step 85 at 1.84705e-06 [m] t= 2.57848e-12 [s] E=2.50646e-05 [MeV] 
-OPAL {+0}> 12.55.11 Step 86 at 1.75184e-06 [m] t= 2.60881e-12 [s] E=0.0511261 [MeV] 
-OPAL {+0}> 12.55.11 Step 87 at 1.74758e-06 [m] t= 2.63915e-12 [s] E=0.023252 [MeV] 
-OPAL {+0}> 12.55.11 Step 88 at 1.82181e-06 [m] t= 2.66948e-12 [s] E=2.47237e-05 [MeV] 
-OPAL {+0}> 12.55.11 Step 89 at 1.8193e-06 [m] t= 2.69982e-12 [s] E=0.0222431 [MeV] 
-OPAL {+0}> 12.55.11 Step 90 at 1.74943e-06 [m] t= 2.73015e-12 [s] E=0.042609 [MeV] 
+ParallelTTracker {+0}> 08.59.41 Step     81 at    0.002 [mm] t=  2.457e-12 [s] E=    0.021 [keV] 
+ParallelTTracker {+0}> 08.59.41 Step     82 at    0.002 [mm] t=  2.487e-12 [s] E=    0.022 [keV] 
+ParallelTTracker {+0}> 08.59.41 Step     83 at    0.002 [mm] t=  2.518e-12 [s] E=    0.023 [keV] 
+ParallelTTracker {+0}> 08.59.42 Step     84 at    0.002 [mm] t=  2.548e-12 [s] E=    0.024 [keV] 
+ParallelTTracker {+0}> 08.59.42 Step     85 at    0.002 [mm] t=  2.578e-12 [s] E=    0.025 [keV] 
+ParallelTTracker {+0}> 08.59.42 Step     86 at    0.002 [mm] t=  2.609e-12 [s] E=    0.024 [keV] 
+ParallelTTracker {+0}> 08.59.42 Step     87 at    0.002 [mm] t=  2.639e-12 [s] E=    0.024 [keV] 
+ParallelTTracker {+0}> 08.59.42 Step     88 at    0.002 [mm] t=  2.669e-12 [s] E=    0.025 [keV] 
+ParallelTTracker {+0}> 08.59.42 Step     89 at    0.002 [mm] t=  2.700e-12 [s] E=    0.025 [keV] 
+ParallelTTracker {+0}> 08.59.42 Step     90 at    0.002 [mm] t=  2.730e-12 [s] E=    0.024 [keV] 
 OPAL {+0}> * Wrote beam phase space.
 OPAL {+0}> * ************** B U N C H ********************************************************* 
-OPAL {+0}> * NP= 26 Qtot= 0.0005382 [nC]  Qi= 2.07e-14 [C]
-OPAL {+0}> * Ekin= 2.37565e-05 [MeV] dEkin= 2.71081e-05 [MeV]
-OPAL {+0}> * rmax= ( 0.000522355 , 0.000423808 , 7.22875e-06 ) [m]
-OPAL {+0}> * rmin= ( -0.000332823 , -0.000503013 , -2.12959e-07 ) [m]
-OPAL {+0}> * rms beam size= ( 0.000233756 , 0.000258239 , 2.05125e-06 ) [m]
-OPAL {+0}> * rms momenta= ( 0.000671039 , 0.000654529 , 0.00550173 ) [beta gamma]
-OPAL {+0}> * mean position= ( 8.88541e-05 , -6.09539e-06 , 1.74943e-06 ) [m]
-OPAL {+0}> * mean momenta= ( -0.000340243 , -9.07303e-05 , 0.00785582 ) [beta gamma]
-OPAL {+0}> * rms emittance= ( 1.62248e-05 , 1.75283e-05 , 3.26428e-07 ) (not normalized)
-OPAL {+0}> * rms correlation= ( 0.0720576 , 0.00640384 , 0.960316 )
-OPAL {+0}> * dh= 0.03 [m] dT= 3.0335e-14 [s]
-OPAL {+0}> * hr= ( 5.70118e-05 , 6.1788e-05 , 4.96114e-07 ) [m]
-OPAL {+0}> * spos= 1.64732e-06 [m]
+OPAL {+0}> * NP              =   26
+OPAL {+0}> * Qtot            =    5.38200e-04 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    2.37565e-05 [MeV]      dEkin =  2.71081e-05 [MeV]
+OPAL {+0}> * rmax            = (  5.22360e-04 ,  4.23811e-04 ,  7.13872e-06 ) [m]
+OPAL {+0}> * rmin            = ( -3.32818e-04 , -5.03013e-04 , -2.12453e-07 ) [m]
+OPAL {+0}> * rms beam size   = (  2.33756e-04 ,  2.58239e-04 ,  2.05125e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  6.71039e-04 ,  6.54529e-04 ,  5.50173e-03 ) [beta gamma]
+OPAL {+0}> * mean position   = (  8.88541e-05 , -6.09539e-06 ,  1.74943e-06 ) [m]
+OPAL {+0}> * mean momenta    = ( -3.40243e-04 , -9.07303e-05 ,  7.85582e-03 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.62248e-05 ,  1.75283e-05 ,  3.26428e-07 ) (not normalized)
+OPAL {+0}> * rms correlation = (  7.20576e-02 ,  6.40384e-03 ,  9.60316e-01 )
+OPAL {+0}> * hr              = (  5.70118e-05 ,  6.17883e-05 ,  4.90078e-07 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    2.73015e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    1.74943e-06 [m]
 OPAL {+0}> * ********************************************************************************** 
 OPAL {+0}> 
 OPAL {+0}> * Wrote beam statistics.
-OPAL {+0}> 12.55.11 Step 91 at 1.82195e-06 [m] t= 2.76049e-12 [s] E=2.47243e-05 [MeV] 
-OPAL {+0}> 12.55.11 Step 92 at 1.76129e-06 [m] t= 2.79082e-12 [s] E=0.0393334 [MeV] 
-OPAL {+0}> 12.55.11 Step 93 at 1.83322e-06 [m] t= 2.82116e-12 [s] E=2.48742e-05 [MeV] 
-OPAL {+0}> 12.55.11 Step 94 at 1.84164e-06 [m] t= 2.85149e-12 [s] E=0.0182758 [MeV] 
-OPAL {+0}> 12.55.11 Step 95 at 1.73638e-06 [m] t= 2.88183e-12 [s] E=0.052888 [MeV] 
-OPAL {+0}> 12.55.11 Step 96 at 1.8062e-06 [m] t= 2.91216e-12 [s] E=2.45132e-05 [MeV] 
-OPAL {+0}> 12.55.11 Step 97 at 1.87818e-06 [m] t= 2.9425e-12 [s] E=2.5474e-05 [MeV] 
-OPAL {+0}> 12.55.11 Step 98 at 1.78537e-06 [m] t= 2.97283e-12 [s] E=0.0479327 [MeV] 
-OPAL {+0}> 12.55.11 Step 99 at 1.85606e-06 [m] t= 3.00317e-12 [s] E=2.51786e-05 [MeV] 
+ParallelTTracker {+0}> 08.59.42 Step     91 at    0.002 [mm] t=  2.760e-12 [s] E=    0.025 [keV] 
+ParallelTTracker {+0}> 08.59.43 Step     92 at    0.002 [mm] t=  2.791e-12 [s] E=    0.024 [keV] 
+ParallelTTracker {+0}> 08.59.43 Step     93 at    0.002 [mm] t=  2.821e-12 [s] E=    0.025 [keV] 
+ParallelTTracker {+0}> 08.59.43 Step     94 at    0.002 [mm] t=  2.851e-12 [s] E=    0.025 [keV] 
+ParallelTTracker {+0}> 08.59.43 Step     95 at    0.002 [mm] t=  2.882e-12 [s] E=    0.024 [keV] 
+ParallelTTracker {+0}> 08.59.43 Step     96 at    0.002 [mm] t=  2.912e-12 [s] E=    0.025 [keV] 
+ParallelTTracker {+0}> 08.59.43 Step     97 at    0.002 [mm] t=  2.942e-12 [s] E=    0.025 [keV] 
+ParallelTTracker {+0}> 08.59.43 Step     98 at    0.002 [mm] t=  2.973e-12 [s] E=    0.024 [keV] 
+ParallelTTracker {+0}> 08.59.43 Step     99 at    0.002 [mm] t=  3.003e-12 [s] E=    0.025 [keV] 
+OPAL {+0}> * Bin number: 0 has emitted all particles (new emmit).
+ParallelTTracker {+0}> 08.59.44 Step    100 at    0.002 [mm] t=  3.034e-12 [s] E=    0.025 [keV] 
 OPAL {+0}> * Wrote beam phase space.
 OPAL {+0}> * ************** B U N C H ********************************************************* 
-OPAL {+0}> * NP= 35 Qtot= 0.0007245 [nC]  Qi= 2.07e-14 [C]
-OPAL {+0}> * Ekin= 2.51786e-05 [MeV] dEkin= 3.0144e-05 [MeV]
-OPAL {+0}> * rmax= ( 0.000522264 , 0.000423744 , 8.94087e-06 ) [m]
-OPAL {+0}> * rmin= ( -0.00033291 , -0.000503002 , -2.57513e-07 ) [m]
-OPAL {+0}> * rms beam size= ( 0.000226954 , 0.000260554 , 2.3913e-06 ) [m]
-OPAL {+0}> * rms momenta= ( 0.000639018 , 0.00067083 , 0.0059426 ) [beta gamma]
-OPAL {+0}> * mean position= ( 9.93724e-05 , 8.232e-07 , 1.85606e-06 ) [m]
-OPAL {+0}> * mean momenta= ( -0.000281372 , -5.82951e-05 , 0.00789288 ) [beta gamma]
-OPAL {+0}> * rms emittance= ( 1.46071e-05 , 1.75966e-05 , 3.86453e-07 ) (not normalized)
-OPAL {+0}> * rms correlation= ( 0.0169843 , 0.0341856 , 0.962869 )
-OPAL {+0}> * dh= 0.03 [m] dT= 3.0335e-14 [s]
-OPAL {+0}> * hr= ( 5.70116e-05 , 6.1783e-05 , 6.13226e-07 ) [m]
-OPAL {+0}> * spos= 1.80362e-06 [m]
+OPAL {+0}> * NP              =   36
+OPAL {+0}> * Qtot            =    7.45200e-04 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    2.54384e-05 [MeV]      dEkin =  3.04663e-05 [MeV]
+OPAL {+0}> * rmax            = (  5.22259e-04 ,  4.62891e-04 ,  9.04126e-06 ) [m]
+OPAL {+0}> * rmin            = ( -3.32915e-04 , -5.04176e-04 , -2.68033e-07 ) [m]
+OPAL {+0}> * rms beam size   = (  2.24642e-04 ,  2.66658e-04 ,  2.42981e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  6.38373e-04 ,  6.63001e-04 ,  5.97538e-03 ) [beta gamma]
+OPAL {+0}> * mean position   = (  1.02692e-04 ,  1.28982e-05 ,  1.87553e-06 ) [m]
+OPAL {+0}> * mean momenta    = ( -2.98691e-04 , -6.59815e-05 ,  7.93248e-03 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.43717e-05 ,  1.77161e-05 ,  3.90969e-07 ) (not normalized)
+OPAL {+0}> * rms correlation = (  2.66083e-03 ,  1.44500e-02 ,  9.63225e-01 )
+OPAL {+0}> * hr              = (  5.70116e-05 ,  6.44711e-05 ,  6.20619e-07 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    3.03350e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    1.87553e-06 [m]
 OPAL {+0}> * ********************************************************************************** 
 OPAL {+0}> 
 OPAL {+0}> * Wrote beam statistics.
-OPAL {+0}> Dump phase space of last step
+ParallelTTracker {+0}> 08.59.44 Step    101 at    0.002 [mm] t=  3.064e-12 [s] E=    0.025 [keV] 
+ParallelTTracker {+0}> 08.59.44 Step    102 at    0.002 [mm] t=  3.094e-12 [s] E=    0.025 [keV] 
+ParallelTTracker {+0}> 08.59.44 Step    103 at    0.002 [mm] t=  3.125e-12 [s] E=    0.025 [keV] 
+ParallelTTracker {+0}> 08.59.45 Step    104 at    0.002 [mm] t=  3.155e-12 [s] E=    0.025 [keV] 
+ParallelTTracker {+0}> 08.59.45 Step    105 at    0.002 [mm] t=  3.185e-12 [s] E=    0.026 [keV] 
+ParallelTTracker {+0}> 08.59.45 Step    106 at    0.002 [mm] t=  3.216e-12 [s] E=    0.026 [keV] 
+ParallelTTracker {+0}> 08.59.45 Step    107 at    0.002 [mm] t=  3.246e-12 [s] E=    0.027 [keV] 
+ParallelTTracker {+0}> 08.59.45 Step    108 at    0.002 [mm] t=  3.276e-12 [s] E=    0.026 [keV] 
+ParallelTTracker {+0}> 08.59.46 Step    109 at    0.002 [mm] t=  3.307e-12 [s] E=    0.027 [keV] 
+ParallelTTracker {+0}> 08.59.46 Step    110 at    0.002 [mm] t=  3.337e-12 [s] E=    0.027 [keV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP              =   50
+OPAL {+0}> * Qtot            =    1.03500e-03 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    2.66504e-05 [MeV]      dEkin =  3.31953e-05 [MeV]
+OPAL {+0}> * rmax            = (  5.23609e-04 ,  5.41051e-04 ,  1.11673e-05 ) [m]
+OPAL {+0}> * rmin            = ( -3.82827e-04 , -5.50241e-04 , -3.34596e-07 ) [m]
+OPAL {+0}> * rms beam size   = (  2.31317e-04 ,  2.68757e-04 ,  2.77448e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  6.61371e-04 ,  6.94461e-04 ,  6.36089e-03 ) [beta gamma]
+OPAL {+0}> * mean position   = (  6.07496e-05 ,  2.36151e-05 ,  1.96634e-06 ) [m]
+OPAL {+0}> * mean momenta    = ( -2.14329e-04 , -2.76283e-05 ,  7.93017e-03 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.49708e-05 ,  1.79477e-05 ,  4.85653e-07 ) (not normalized)
+OPAL {+0}> * rms correlation = ( -3.36016e-02 ,  1.88289e-01 ,  9.59692e-01 )
+OPAL {+0}> * hr              = (  6.04291e-05 ,  7.27528e-05 ,  7.66796e-07 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    3.33685e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    1.96634e-06 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 08.59.46 Step    111 at    0.002 [mm] t=  3.367e-12 [s] E=    0.027 [keV] 
+ParallelTTracker {+0}> 08.59.46 Step    112 at    0.002 [mm] t=  3.398e-12 [s] E=    0.027 [keV] 
+ParallelTTracker {+0}> 08.59.47 Step    113 at    0.002 [mm] t=  3.428e-12 [s] E=    0.028 [keV] 
+ParallelTTracker {+0}> 08.59.47 Step    114 at    0.002 [mm] t=  3.458e-12 [s] E=    0.029 [keV] 
+ParallelTTracker {+0}> 08.59.47 Step    115 at    0.002 [mm] t=  3.489e-12 [s] E=    0.030 [keV] 
+ParallelTTracker {+0}> 08.59.47 Step    116 at    0.002 [mm] t=  3.519e-12 [s] E=    0.031 [keV] 
+ParallelTTracker {+0}> 08.59.48 Step    117 at    0.002 [mm] t=  3.549e-12 [s] E=    0.031 [keV] 
+ParallelTTracker {+0}> 08.59.48 Step    118 at    0.002 [mm] t=  3.580e-12 [s] E=    0.031 [keV] 
+ParallelTTracker {+0}> 08.59.48 Step    119 at    0.002 [mm] t=  3.610e-12 [s] E=    0.031 [keV] 
+ParallelTTracker {+0}> 08.59.48 Step    120 at    0.002 [mm] t=  3.640e-12 [s] E=    0.030 [keV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP              =   64
+OPAL {+0}> * Qtot            =    1.32480e-03 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    2.96785e-05 [MeV]      dEkin =  3.69739e-05 [MeV]
+OPAL {+0}> * rmax            = (  5.64012e-04 ,  5.41096e-04 ,  1.35165e-05 ) [m]
+OPAL {+0}> * rmin            = ( -4.58389e-04 , -5.50328e-04 , -4.05458e-07 ) [m]
+OPAL {+0}> * rms beam size   = (  2.53451e-04 ,  2.72928e-04 ,  3.15859e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  6.89209e-04 ,  6.76911e-04 ,  6.71380e-03 ) [beta gamma]
+OPAL {+0}> * mean position   = (  3.20718e-05 ,  2.70576e-05 ,  2.19333e-06 ) [m]
+OPAL {+0}> * mean momenta    = ( -1.55672e-04 , -8.03552e-05 ,  8.37436e-03 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.60999e-05 ,  1.70596e-05 ,  5.78020e-07 ) (not normalized)
+OPAL {+0}> * rms correlation = ( -1.14997e-01 ,  9.76172e-02 ,  9.55875e-01 )
+OPAL {+0}> * hr              = (  6.81600e-05 ,  7.27616e-05 ,  9.28130e-07 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    3.64020e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    2.19333e-06 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 08.59.49 Step    121 at    0.002 [mm] t=  3.671e-12 [s] E=    0.030 [keV] 
+ParallelTTracker {+0}> 08.59.49 Step    122 at    0.002 [mm] t=  3.701e-12 [s] E=    0.030 [keV] 
+ParallelTTracker {+0}> 08.59.49 Step    123 at    0.002 [mm] t=  3.731e-12 [s] E=    0.031 [keV] 
+ParallelTTracker {+0}> 08.59.49 Step    124 at    0.002 [mm] t=  3.762e-12 [s] E=    0.030 [keV] 
+ParallelTTracker {+0}> 08.59.50 Step    125 at    0.002 [mm] t=  3.792e-12 [s] E=    0.031 [keV] 
+ParallelTTracker {+0}> 08.59.50 Step    126 at    0.002 [mm] t=  3.822e-12 [s] E=    0.032 [keV] 
+ParallelTTracker {+0}> 08.59.50 Step    127 at    0.002 [mm] t=  3.853e-12 [s] E=    0.033 [keV] 
+ParallelTTracker {+0}> 08.59.50 Step    128 at    0.002 [mm] t=  3.883e-12 [s] E=    0.032 [keV] 
+ParallelTTracker {+0}> 08.59.51 Step    129 at    0.002 [mm] t=  3.913e-12 [s] E=    0.033 [keV] 
+ParallelTTracker {+0}> 08.59.51 Step    130 at    0.002 [mm] t=  3.944e-12 [s] E=    0.034 [keV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP              =   79
+OPAL {+0}> * Qtot            =    1.63530e-03 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    3.37104e-05 [MeV]      dEkin =  4.07389e-05 [MeV]
+OPAL {+0}> * rmax            = (  5.64119e-04 ,  5.41142e-04 ,  1.60894e-05 ) [m]
+OPAL {+0}> * rmin            = ( -4.58295e-04 , -5.50415e-04 , -4.82424e-07 ) [m]
+OPAL {+0}> * rms beam size   = (  2.51547e-04 ,  2.79668e-04 ,  3.56993e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  6.95891e-04 ,  6.54891e-04 ,  6.94103e-03 ) [beta gamma]
+OPAL {+0}> * mean position   = (  4.22537e-05 ,  1.30482e-05 ,  2.49545e-06 ) [m]
+OPAL {+0}> * mean momenta    = ( -5.92219e-05 , -6.81680e-05 ,  9.10237e-03 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.52388e-05 ,  1.58687e-05 ,  6.17575e-07 ) (not normalized)
+OPAL {+0}> * rms correlation = (  8.39496e-03 ,  9.75302e-02 ,  9.58144e-01 )
+OPAL {+0}> * hr              = (  6.81610e-05 ,  7.27705e-05 ,  1.10479e-06 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    3.94355e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    2.49545e-06 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 08.59.51 Step    131 at    0.003 [mm] t=  3.974e-12 [s] E=    0.034 [keV] 
+ParallelTTracker {+0}> 08.59.51 Step    132 at    0.003 [mm] t=  4.004e-12 [s] E=    0.034 [keV] 
+ParallelTTracker {+0}> 08.59.52 Step    133 at    0.003 [mm] t=  4.035e-12 [s] E=    0.034 [keV] 
+ParallelTTracker {+0}> 08.59.52 Step    134 at    0.003 [mm] t=  4.065e-12 [s] E=    0.035 [keV] 
+ParallelTTracker {+0}> 08.59.52 Step    135 at    0.003 [mm] t=  4.095e-12 [s] E=    0.035 [keV] 
+ParallelTTracker {+0}> 08.59.52 Step    136 at    0.003 [mm] t=  4.126e-12 [s] E=    0.036 [keV] 
+ParallelTTracker {+0}> 08.59.52 Step    137 at    0.003 [mm] t=  4.156e-12 [s] E=    0.037 [keV] 
+ParallelTTracker {+0}> 08.59.53 Step    138 at    0.003 [mm] t=  4.186e-12 [s] E=    0.037 [keV] 
+ParallelTTracker {+0}> 08.59.53 Step    139 at    0.003 [mm] t=  4.217e-12 [s] E=    0.037 [keV] 
+ParallelTTracker {+0}> 08.59.53 Step    140 at    0.003 [mm] t=  4.247e-12 [s] E=    0.038 [keV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP              =   97
+OPAL {+0}> * Qtot            =    2.00790e-03 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    3.78676e-05 [MeV]      dEkin =  4.52963e-05 [MeV]
+OPAL {+0}> * rmax            = (  5.64231e-04 ,  5.41188e-04 ,  1.88860e-05 ) [m]
+OPAL {+0}> * rmin            = ( -4.58202e-04 , -5.50501e-04 , -5.65983e-07 ) [m]
+OPAL {+0}> * rms beam size   = (  2.54214e-04 ,  2.78175e-04 ,  3.99079e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  6.84605e-04 ,  6.64918e-04 ,  7.28162e-03 ) [beta gamma]
+OPAL {+0}> * mean position   = (  3.17192e-05 ,  1.24929e-05 ,  2.80762e-06 ) [m]
+OPAL {+0}> * mean momenta    = ( -9.16521e-06 , -6.04085e-05 ,  9.71029e-03 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.42938e-05 ,  1.51911e-05 ,  7.08189e-07 ) (not normalized)
+OPAL {+0}> * rms correlation = ( -1.43690e-02 ,  1.51080e-02 ,  9.54972e-01 )
+OPAL {+0}> * hr              = (  6.81622e-05 ,  7.27793e-05 ,  1.29680e-06 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    4.24690e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    2.80762e-06 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 08.59.54 Step    141 at    0.003 [mm] t=  4.277e-12 [s] E=    0.039 [keV] 
+ParallelTTracker {+0}> 08.59.54 Step    142 at    0.003 [mm] t=  4.308e-12 [s] E=    0.039 [keV] 
+ParallelTTracker {+0}> 08.59.54 Step    143 at    0.003 [mm] t=  4.338e-12 [s] E=    0.039 [keV] 
+ParallelTTracker {+0}> 08.59.54 Step    144 at    0.003 [mm] t=  4.368e-12 [s] E=    0.040 [keV] 
+ParallelTTracker {+0}> 08.59.55 Step    145 at    0.003 [mm] t=  4.399e-12 [s] E=    0.040 [keV] 
+ParallelTTracker {+0}> 08.59.55 Step    146 at    0.003 [mm] t=  4.429e-12 [s] E=    0.041 [keV] 
+ParallelTTracker {+0}> 08.59.55 Step    147 at    0.003 [mm] t=  4.459e-12 [s] E=    0.041 [keV] 
+ParallelTTracker {+0}> 08.59.55 Step    148 at    0.003 [mm] t=  4.490e-12 [s] E=    0.042 [keV] 
+ParallelTTracker {+0}> 08.59.56 Step    149 at    0.003 [mm] t=  4.520e-12 [s] E=    0.041 [keV] 
+ParallelTTracker {+0}> 08.59.56 Step    150 at    0.003 [mm] t=  4.550e-12 [s] E=    0.041 [keV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP              =   121
+OPAL {+0}> * Qtot            =    2.50470e-03 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    4.11550e-05 [MeV]      dEkin =  5.02557e-05 [MeV]
+OPAL {+0}> * rmax            = (  5.64689e-04 ,  5.41234e-04 ,  2.19066e-05 ) [m]
+OPAL {+0}> * rmin            = ( -4.69984e-04 , -5.50588e-04 , -6.57114e-07 ) [m]
+OPAL {+0}> * rms beam size   = (  2.58431e-04 ,  2.79286e-04 ,  4.40415e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  7.04383e-04 ,  6.51285e-04 ,  7.74952e-03 ) [beta gamma]
+OPAL {+0}> * mean position   = (  2.02784e-05 ,  4.12632e-05 ,  3.05529e-06 ) [m]
+OPAL {+0}> * mean momenta    = ( -5.40991e-05 , -8.07644e-05 ,  1.00056e-02 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.43356e-05 ,  1.43240e-05 ,  8.53129e-07 ) (not normalized)
+OPAL {+0}> * rms correlation = (  3.12580e-02 , -3.26849e-02 ,  9.48342e-01 )
+OPAL {+0}> * hr              = (  6.89782e-05 ,  7.27881e-05 ,  1.50425e-06 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    4.55025e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    3.05529e-06 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 08.59.56 Step    151 at    0.003 [mm] t=  4.581e-12 [s] E=    0.041 [keV] 
+ParallelTTracker {+0}> 08.59.56 Step    152 at    0.003 [mm] t=  4.611e-12 [s] E=    0.041 [keV] 
+ParallelTTracker {+0}> 08.59.57 Step    153 at    0.003 [mm] t=  4.641e-12 [s] E=    0.042 [keV] 
+ParallelTTracker {+0}> 08.59.57 Step    154 at    0.003 [mm] t=  4.672e-12 [s] E=    0.043 [keV] 
+ParallelTTracker {+0}> 08.59.57 Step    155 at    0.003 [mm] t=  4.702e-12 [s] E=    0.043 [keV] 
+ParallelTTracker {+0}> 08.59.57 Step    156 at    0.003 [mm] t=  4.732e-12 [s] E=    0.044 [keV] 
+ParallelTTracker {+0}> 08.59.58 Step    157 at    0.003 [mm] t=  4.763e-12 [s] E=    0.044 [keV] 
+ParallelTTracker {+0}> 08.59.58 Step    158 at    0.003 [mm] t=  4.793e-12 [s] E=    0.045 [keV] 
+ParallelTTracker {+0}> 08.59.58 Step    159 at    0.003 [mm] t=  4.823e-12 [s] E=    0.045 [keV] 
+ParallelTTracker {+0}> 08.59.58 Step    160 at    0.003 [mm] t=  4.854e-12 [s] E=    0.046 [keV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP              =   146
+OPAL {+0}> * Qtot            =    3.02220e-03 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    4.55298e-05 [MeV]      dEkin =  5.54820e-05 [MeV]
+OPAL {+0}> * rmax            = (  5.65495e-04 ,  5.41280e-04 ,  2.51511e-05 ) [m]
+OPAL {+0}> * rmin            = ( -4.93745e-04 , -5.50675e-04 , -7.53954e-07 ) [m]
+OPAL {+0}> * rms beam size   = (  2.55458e-04 ,  2.81126e-04 ,  4.86356e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  7.24535e-04 ,  6.68710e-04 ,  8.13407e-03 ) [beta gamma]
+OPAL {+0}> * mean position   = (  2.17988e-05 ,  2.44704e-05 ,  3.38503e-06 ) [m]
+OPAL {+0}> * mean momenta    = ( -4.11167e-05 , -5.50352e-05 ,  1.05396e-02 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.38620e-05 ,  1.40810e-05 ,  9.47989e-07 ) (not normalized)
+OPAL {+0}> * rms correlation = ( -2.05163e-02 ,  1.40893e-02 ,  9.47454e-01 )
+OPAL {+0}> * hr              = (  7.06160e-05 ,  7.27970e-05 ,  1.72700e-06 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    4.85360e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    3.38503e-06 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 08.59.59 Step    161 at    0.003 [mm] t=  4.884e-12 [s] E=    0.047 [keV] 
+ParallelTTracker {+0}> 08.59.59 Step    162 at    0.004 [mm] t=  4.914e-12 [s] E=    0.047 [keV] 
+ParallelTTracker {+0}> 08.59.59 Step    163 at    0.004 [mm] t=  4.945e-12 [s] E=    0.048 [keV] 
+ParallelTTracker {+0}> 08.59.59 Step    164 at    0.004 [mm] t=  4.975e-12 [s] E=    0.047 [keV] 
+ParallelTTracker {+0}> 09.00.00 Step    165 at    0.004 [mm] t=  5.005e-12 [s] E=    0.048 [keV] 
+ParallelTTracker {+0}> 09.00.00 Step    166 at    0.004 [mm] t=  5.036e-12 [s] E=    0.048 [keV] 
+ParallelTTracker {+0}> 09.00.00 Step    167 at    0.004 [mm] t=  5.066e-12 [s] E=    0.049 [keV] 
+ParallelTTracker {+0}> 09.00.01 Step    168 at    0.004 [mm] t=  5.096e-12 [s] E=    0.050 [keV] 
+ParallelTTracker {+0}> 09.00.01 Step    169 at    0.004 [mm] t=  5.127e-12 [s] E=    0.051 [keV] 
+ParallelTTracker {+0}> 09.00.01 Step    170 at    0.004 [mm] t=  5.157e-12 [s] E=    0.052 [keV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP              =   167
+OPAL {+0}> * Qtot            =    3.45690e-03 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    5.23717e-05 [MeV]      dEkin =  6.17153e-05 [MeV]
+OPAL {+0}> * rmax            = (  5.67752e-04 ,  5.49115e-04 ,  2.86196e-05 ) [m]
+OPAL {+0}> * rmin            = ( -5.67378e-04 , -5.50996e-04 , -8.58257e-07 ) [m]
+OPAL {+0}> * rms beam size   = (  2.60634e-04 ,  2.78738e-04 ,  5.40592e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  7.26745e-04 ,  6.61604e-04 ,  8.43631e-03 ) [beta gamma]
+OPAL {+0}> * mean position   = (  8.25512e-06 ,  2.88463e-05 ,  3.90044e-06 ) [m]
+OPAL {+0}> * mean momenta    = ( -4.09024e-05 , -3.36625e-05 ,  1.15268e-02 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.31929e-05 ,  1.28802e-05 ,  9.92015e-07 ) (not normalized)
+OPAL {+0}> * rms correlation = ( -7.45103e-02 , -5.55242e-03 ,  9.50269e-01 )
+OPAL {+0}> * hr              = (  7.56753e-05 ,  7.33407e-05 ,  1.96519e-06 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    5.15695e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    3.90044e-06 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.00.01 Step    171 at    0.004 [mm] t=  5.187e-12 [s] E=    0.053 [keV] 
+ParallelTTracker {+0}> 09.00.02 Step    172 at    0.004 [mm] t=  5.218e-12 [s] E=    0.053 [keV] 
+ParallelTTracker {+0}> 09.00.02 Step    173 at    0.004 [mm] t=  5.248e-12 [s] E=    0.054 [keV] 
+ParallelTTracker {+0}> 09.00.02 Step    174 at    0.004 [mm] t=  5.278e-12 [s] E=    0.054 [keV] 
+ParallelTTracker {+0}> 09.00.02 Step    175 at    0.004 [mm] t=  5.309e-12 [s] E=    0.055 [keV] 
+ParallelTTracker {+0}> 09.00.03 Step    176 at    0.004 [mm] t=  5.339e-12 [s] E=    0.055 [keV] 
+ParallelTTracker {+0}> 09.00.03 Step    177 at    0.004 [mm] t=  5.369e-12 [s] E=    0.055 [keV] 
+ParallelTTracker {+0}> 09.00.03 Step    178 at    0.004 [mm] t=  5.400e-12 [s] E=    0.056 [keV] 
+ParallelTTracker {+0}> 09.00.03 Step    179 at    0.004 [mm] t=  5.430e-12 [s] E=    0.056 [keV] 
+ParallelTTracker {+0}> 09.00.04 Step    180 at    0.004 [mm] t=  5.460e-12 [s] E=    0.056 [keV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP              =   204
+OPAL {+0}> * Qtot            =    4.22280e-03 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    5.56526e-05 [MeV]      dEkin =  6.76806e-05 [MeV]
+OPAL {+0}> * rmax            = (  5.67867e-04 ,  5.49433e-04 ,  3.23122e-05 ) [m]
+OPAL {+0}> * rmin            = ( -5.67395e-04 , -5.62754e-04 , -9.69336e-07 ) [m]
+OPAL {+0}> * rms beam size   = (  2.54876e-04 ,  2.81598e-04 ,  5.87939e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  7.27718e-04 ,  6.59369e-04 ,  8.97495e-03 ) [beta gamma]
+OPAL {+0}> * mean position   = (  1.43646e-05 ,  1.55026e-05 ,  4.14931e-06 ) [m]
+OPAL {+0}> * mean momenta    = ( -2.52547e-05 , -1.68614e-06 ,  1.16765e-02 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.25501e-05 ,  1.25621e-05 ,  1.16708e-06 ) (not normalized)
+OPAL {+0}> * rms correlation = ( -5.18766e-02 , -5.40766e-02 ,  9.45220e-01 )
+OPAL {+0}> * hr              = (  7.56841e-05 ,  7.41459e-05 ,  2.21877e-06 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    5.46030e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    4.14931e-06 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.00.04 Step    181 at    0.004 [mm] t=  5.491e-12 [s] E=    0.055 [keV] 
+ParallelTTracker {+0}> 09.00.04 Step    182 at    0.004 [mm] t=  5.521e-12 [s] E=    0.056 [keV] 
+ParallelTTracker {+0}> 09.00.04 Step    183 at    0.004 [mm] t=  5.551e-12 [s] E=    0.056 [keV] 
+ParallelTTracker {+0}> 09.00.05 Step    184 at    0.004 [mm] t=  5.582e-12 [s] E=    0.056 [keV] 
+ParallelTTracker {+0}> 09.00.05 Step    185 at    0.004 [mm] t=  5.612e-12 [s] E=    0.057 [keV] 
+ParallelTTracker {+0}> 09.00.05 Step    186 at    0.004 [mm] t=  5.642e-12 [s] E=    0.058 [keV] 
+ParallelTTracker {+0}> 09.00.05 Step    187 at    0.004 [mm] t=  5.673e-12 [s] E=    0.058 [keV] 
+ParallelTTracker {+0}> 09.00.06 Step    188 at    0.004 [mm] t=  5.703e-12 [s] E=    0.058 [keV] 
+ParallelTTracker {+0}> 09.00.06 Step    189 at    0.004 [mm] t=  5.733e-12 [s] E=    0.058 [keV] 
+ParallelTTracker {+0}> 09.00.06 Step    190 at    0.004 [mm] t=  5.764e-12 [s] E=    0.059 [keV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP              =   249
+OPAL {+0}> * Qtot            =    5.15430e-03 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    5.85287e-05 [MeV]      dEkin =  7.26803e-05 [MeV]
+OPAL {+0}> * rmax            = (  5.68736e-04 ,  5.53203e-04 ,  3.62289e-05 ) [m]
+OPAL {+0}> * rmin            = ( -5.67434e-04 , -5.62841e-04 , -1.08675e-06 ) [m]
+OPAL {+0}> * rms beam size   = (  2.67094e-04 ,  2.79113e-04 ,  6.35498e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  7.24122e-04 ,  6.62944e-04 ,  9.39820e-03 ) [beta gamma]
+OPAL {+0}> * mean position   = (  7.92798e-06 ,  2.16730e-05 ,  4.36854e-06 ) [m]
+OPAL {+0}> * mean momenta    = ( -8.11985e-06 , -6.25759e-06 ,  1.18248e-02 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.27688e-05 ,  1.22044e-05 ,  1.29167e-06 ) (not normalized)
+OPAL {+0}> * rms correlation = ( -3.85983e-02 , -5.82866e-02 ,  9.44908e-01 )
+OPAL {+0}> * hr              = (  7.57447e-05 ,  7.44029e-05 ,  2.48771e-06 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    5.76365e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    4.36854e-06 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.00.06 Step    191 at    0.004 [mm] t=  5.794e-12 [s] E=    0.059 [keV] 
+ParallelTTracker {+0}> 09.00.07 Step    192 at    0.004 [mm] t=  5.824e-12 [s] E=    0.060 [keV] 
+ParallelTTracker {+0}> 09.00.07 Step    193 at    0.005 [mm] t=  5.855e-12 [s] E=    0.062 [keV] 
+ParallelTTracker {+0}> 09.00.07 Step    194 at    0.005 [mm] t=  5.885e-12 [s] E=    0.062 [keV] 
+ParallelTTracker {+0}> 09.00.07 Step    195 at    0.005 [mm] t=  5.915e-12 [s] E=    0.063 [keV] 
+ParallelTTracker {+0}> 09.00.08 Step    196 at    0.005 [mm] t=  5.946e-12 [s] E=    0.064 [keV] 
+ParallelTTracker {+0}> 09.00.08 Step    197 at    0.005 [mm] t=  5.976e-12 [s] E=    0.065 [keV] 
+ParallelTTracker {+0}> 09.00.08 Step    198 at    0.005 [mm] t=  6.006e-12 [s] E=    0.064 [keV] 
+ParallelTTracker {+0}> 09.00.08 Step    199 at    0.005 [mm] t=  6.037e-12 [s] E=    0.065 [keV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP              =   279
+OPAL {+0}> * Qtot            =    5.77530e-03 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    6.48120e-05 [MeV]      dEkin =  7.88038e-05 [MeV]
+OPAL {+0}> * rmax            = (  5.68695e-04 ,  5.53143e-04 ,  4.01578e-05 ) [m]
+OPAL {+0}> * rmin            = ( -5.67444e-04 , -5.62813e-04 , -1.20457e-06 ) [m]
+OPAL {+0}> * rms beam size   = (  2.69296e-04 ,  2.79255e-04 ,  6.89856e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  7.22197e-04 ,  6.63140e-04 ,  9.68357e-03 ) [beta gamma]
+OPAL {+0}> * mean position   = (  6.91724e-06 ,  1.57755e-05 ,  4.84455e-06 ) [m]
+OPAL {+0}> * mean momenta    = (  2.23381e-06 ,  8.60724e-06 ,  1.26089e-02 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.22089e-05 ,  1.16213e-05 ,  1.34278e-06 ) (not normalized)
+OPAL {+0}> * rms correlation = ( -1.69069e-02 , -3.06400e-02 ,  9.47366e-01 )
+OPAL {+0}> * hr              = (  7.57426e-05 ,  7.43971e-05 ,  2.75749e-06 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    6.03667e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    4.84455e-06 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> Dump phase space of last step
 FM2DD {+0}> 
 FM2DD {+0}> * ************ I N F O *********************************************************
 FM2DD {+0}> * freed fieldmap '1T3.T7'                                                      *
@@ -771,10 +1092,82 @@ FM2DD {+0}>
 FM2DD {+0}> 
 FM2DD {+0}> * ************ I N F O *********************************************************
 FM2DD {+0}> * freed fieldmap '1T1.T7'                                                      *
-FM2DD {+0}> * ******************************************************************************
+FM2DD {+0}> * **********************************
+Replacing the object "COL".
+
+
+Replacing the object "SP1".
+
+
+Replacing the object "SP2".
+
+
+Replacing the object "SP3".
+
+
+Replacing the object "SP4".
+
+
+Replacing the object "SP5".
+
+
+Replacing the object "GUN".
+
+
+Replacing the object "L1".
+
+
+Replacing the object "COL".
+
+
+Replacing the object "SP1".
+
+
+Replacing the object "SP2".
+
+
+Replacing the object "SP3".
+
+
+Replacing the object "SP4".
+
+
+Replacing the object "SP5".
+
+
+Replacing the object "GUN".
+
+
+Replacing the object "L1".
+
+
+Replacing the object "COL".
+
+
+Replacing the object "SP1".
+
+
+Replacing the object "SP2".
+
+
+Replacing the object "SP3".
+
+
+Replacing the object "SP4".
+
+
+Replacing the object "SP5".
+
+
+Replacing the object "GUN".
+
+
+Replacing the object "L1".
+
+********************************************
 FM2DD {+0}> 
 FM2DD {+0}> 
-OPAL {+0}> done executing ParallelTTracker at 12.55.11
+ParallelTTracker {+0}> done executing ParallelTTracker at 09.00.08
 OPAL {+0}> 
 OPAL {+0}> value: {I,RV1,RV2,RV3,RV4,RV5}={2,3.89909,0,0,0,0}
 OPAL {+0}> 
@@ -782,104 +1175,32 @@ OPAL {+0}>
 OPAL {+0}> 8 elements selected.
 OPAL {+0}> 
 OPAL {+0}> * ********************************************************************************** 
-OPAL {+0}>   Selected Tracking Method == PARALLEL-T, 
-Replacing the object "COL".
-
-
-Replacing the object "SP1".
-
-
-Replacing the object "SP2".
-
-
-Replacing the object "SP3".
-
-
-Replacing the object "SP4".
-
-
-Replacing the object "SP5".
-
-
-Replacing the object "GUN".
-
-
-Replacing the object "L1".
-
-
-Replacing the object "COL".
-
-
-Replacing the object "SP1".
-
-
-Replacing the object "SP2".
-
-
-Replacing the object "SP3".
-
-
-Replacing the object "SP4".
-
-
-Replacing the object "SP5".
-
-
-Replacing the object "GUN".
-
-
-Replacing the object "L1".
-
-
-Replacing the object "COL".
-
-
-Replacing the object "SP1".
-
-
-Replacing the object "SP2".
-
-
-Replacing the object "SP3".
-
-
-Replacing the object "SP4".
-
-
-Replacing the object "SP5".
-
-
-Replacing the object "GUN".
-
-
-Replacing the object "L1".
-
-
-Replacing the object "COL".
-
-
-Replacing the object "SP1".
-
-
-Replacing the object "SP2".
-
-
-Replacing the object "SP3".
-
-
-Replacing the object "SP4".
-
-
-Replacing the object "SP5".
-
-
-Replacing the object "GUN".
-
-
-Replacing the object "L1".
-
-SCAN TRACK
+OPAL {+0}>   Selected Tracking Method == PARALLEL-T, SCAN TRACK
 OPAL {+0}> * ********************************************************************************** 
+
+Replacing the object "COL".
+
+
+Replacing the object "SP1".
+
+
+Replacing the object "SP2".
+
+
+Replacing the object "SP3".
+
+
+Replacing the object "SP4".
+
+
+Replacing the object "SP5".
+
+
+Replacing the object "GUN".
+
+
+Replacing the object "L1".
+
 OPAL {+0}> * ********************************************************************************** 
 OPAL {+0}>   PARALLEL-T SCAN
 OPAL {+0}> * ********************************************************************************** 
@@ -942,52 +1263,52 @@ Solenoid {+0}> SP2 using file 1T3.T7 (2D dynamic); zini= 0 m; zfinal= 0.49 m;
 Solenoid {+0}> SP3 using file 1T3.T7 (2D dynamic); zini= 0 m; zfinal= 0.49 m;
 Solenoid {+0}> SP4 using file 1T3.T7 (2D dynamic); zini= 0 m; zfinal= 0.49 m;
 Solenoid {+0}> SP5 using file 1T3.T7 (2D dynamic); zini= 0 m; zfinal= 0.49 m;
-OPAL {+0}> totalParticle_i= 0
-OPAL {+0}> Track start at: 12.55.25, t= 0; zstop at: 1e+06 [m]
-OPAL {+0}> Executing ParallelTTracker, initial DT 1e-12 [s];
-OPAL {+0}> max integration steps 100, next step= 1
-OPAL {+0}> 
-OPAL {+0}> --- BEGIN FIELD LIST ---------------------------------------------------------------
-OPAL {+0}> 
-OPAL {+0}> --- -0.5315 m -- -0.4115 m -- alpha = 0 -- beta = 0 --------------------------------
-OPAL {+0}> SP1
-OPAL {+0}> --- -0.397 m -- -0.267 m -- alpha = 0 -- beta = 0 ----------------------------------
-OPAL {+0}> SP2
-OPAL {+0}> --- -0.267 m -- -0.157 m -- alpha = 0 -- beta = 0 ----------------------------------
-OPAL {+0}> SP2
-OPAL {+0}> SP3
-OPAL {+0}> --- -0.157 m -- -0.047 m -- alpha = 0 -- beta = 0 ----------------------------------
-OPAL {+0}> SP2
-OPAL {+0}> SP3
-OPAL {+0}> SP4
-OPAL {+0}> --- -0.047 m -- 0 m -- alpha = 0 -- beta = 0 ---------------------------------------
-OPAL {+0}> SP2
-OPAL {+0}> SP3
-OPAL {+0}> SP4
-OPAL {+0}> SP5
-OPAL {+0}> --- 0 m -- 0.008 m -- alpha = 0 -- beta = 0 ----------------------------------------
-OPAL {+0}> SP2
-OPAL {+0}> SP3
-OPAL {+0}> SP4
-OPAL {+0}> SP5
-OPAL {+0}> GUN
-OPAL {+0}> --- 0.008 m -- 0.093 m -- alpha = 0 -- beta = 0 ------------------------------------
-OPAL {+0}> SP2
-OPAL {+0}> SP3
-OPAL {+0}> SP4
-OPAL {+0}> SP5
-OPAL {+0}> --- 0.093 m -- 0.223 m -- alpha = 0 -- beta = 0 ------------------------------------
-OPAL {+0}> SP3
-OPAL {+0}> SP4
-OPAL {+0}> SP5
-OPAL {+0}> --- 0.223 m -- 0.333 m -- alpha = 0 -- beta = 0 ------------------------------------
-OPAL {+0}> SP4
-OPAL {+0}> SP5
-OPAL {+0}> --- 0.333 m -- 0.443 m -- alpha = 0 -- beta = 0 ------------------------------------
-OPAL {+0}> SP5
-OPAL {+0}> 
-OPAL {+0}> --- END FIELD LIST -----------------------------------------------------------------
-OPAL {+0}> 
+ParallelTTracker {+0}> totalParticle_i= 0
+ParallelTTracker {+0}> Track start at: 09.00.23, t= 0; zstop at: 1e+06 [m]
+ParallelTTracker {+0}> Executing ParallelTTracker, initial DT 1e-12 [s];
+ParallelTTracker {+0}> max integration steps 300, next step= 1
+ParallelTTracker {+0}> 
+ParallelTTracker {+0}> --- BEGIN FIELD LIST ---------------------------------------------------------------
+ParallelTTracker {+0}> 
+ParallelTTracker {+0}> --- -0.5315 m -- -0.4115 m -- alpha = 0 -- beta = 0 --------------------------------
+ParallelTTracker {+0}> SP1
+ParallelTTracker {+0}> --- -0.397 m -- -0.267 m -- alpha = 0 -- beta = 0 ----------------------------------
+ParallelTTracker {+0}> SP2
+ParallelTTracker {+0}> --- -0.267 m -- -0.157 m -- alpha = 0 -- beta = 0 ----------------------------------
+ParallelTTracker {+0}> SP2
+ParallelTTracker {+0}> SP3
+ParallelTTracker {+0}> --- -0.157 m -- -0.047 m -- alpha = 0 -- beta = 0 ----------------------------------
+ParallelTTracker {+0}> SP2
+ParallelTTracker {+0}> SP3
+ParallelTTracker {+0}> SP4
+ParallelTTracker {+0}> --- -0.047 m -- 0 m -- alpha = 0 -- beta = 0 ---------------------------------------
+ParallelTTracker {+0}> SP2
+ParallelTTracker {+0}> SP3
+ParallelTTracker {+0}> SP4
+ParallelTTracker {+0}> SP5
+ParallelTTracker {+0}> --- 0 m -- 0.008 m -- alpha = 0 -- beta = 0 ----------------------------------------
+ParallelTTracker {+0}> SP2
+ParallelTTracker {+0}> SP3
+ParallelTTracker {+0}> SP4
+ParallelTTracker {+0}> SP5
+ParallelTTracker {+0}> GUN
+ParallelTTracker {+0}> --- 0.008 m -- 0.093 m -- alpha = 0 -- beta = 0 ------------------------------------
+ParallelTTracker {+0}> SP2
+ParallelTTracker {+0}> SP3
+ParallelTTracker {+0}> SP4
+ParallelTTracker {+0}> SP5
+ParallelTTracker {+0}> --- 0.093 m -- 0.223 m -- alpha = 0 -- beta = 0 ------------------------------------
+ParallelTTracker {+0}> SP3
+ParallelTTracker {+0}> SP4
+ParallelTTracker {+0}> SP5
+ParallelTTracker {+0}> --- 0.223 m -- 0.333 m -- alpha = 0 -- beta = 0 ------------------------------------
+ParallelTTracker {+0}> SP4
+ParallelTTracker {+0}> SP5
+ParallelTTracker {+0}> --- 0.333 m -- 0.443 m -- alpha = 0 -- beta = 0 ------------------------------------
+ParallelTTracker {+0}> SP5
+ParallelTTracker {+0}> 
+ParallelTTracker {+0}> --- END FIELD LIST -----------------------------------------------------------------
+ParallelTTracker {+0}> 
 FM2DD {+0}> 
 FM2DD {+0}> * ************ I N F O *********************************************************
 FM2DD {+0}> * read in fieldmap '1T3.T7'                                                    *
@@ -1000,181 +1321,792 @@ FM2DD {+0}> * read in fieldmap '1T1.T7'                                         
 FM2DD {+0}> * ******************************************************************************
 FM2DD {+0}> 
 FM2DD {+0}> 
-OPAL {+0}> MINSTEPFORREBIN 1500
-OPAL {+0}> REPARTFREQ 1000
-OPAL {+0}> Changing emission time step to: 3.0335e-14
-OPAL {+0}> Step 1 no emission yet  t= 3.0335e-14 [s]
-OPAL {+0}> Step 2 no emission yet  t= 6.067e-14 [s]
-OPAL {+0}> Step 3 no emission yet  t= 9.10051e-14 [s]
-OPAL {+0}> Step 4 no emission yet  t= 1.2134e-13 [s]
-OPAL {+0}> Step 5 no emission yet  t= 1.51675e-13 [s]
-OPAL {+0}> Step 6 no emission yet  t= 1.8201e-13 [s]
-OPAL {+0}> Step 7 no emission yet  t= 2.12345e-13 [s]
-OPAL {+0}> Step 8 no emission yet  t= 2.4268e-13 [s]
-OPAL {+0}> Step 9 no emission yet  t= 2.73015e-13 [s]
-OPAL {+0}> Step 10 no emission yet  t= 3.0335e-13 [s]
-OPAL {+0}> Step 11 no emission yet  t= 3.33685e-13 [s]
-OPAL {+0}> Step 12 no emission yet  t= 3.6402e-13 [s]
-OPAL {+0}> Step 13 no emission yet  t= 3.94355e-13 [s]
-OPAL {+0}> 12.55.39 Step 14; only 1 particles emitted; t= 4.2469e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 15; only 2 particles emitted; t= 4.55025e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 16; only 2 particles emitted; t= 4.8536e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 17; only 2 particles emitted; t= 5.15695e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 18; only 2 particles emitted; t= 5.4603e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 19; only 2 particles emitted; t= 5.76365e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 20; only 2 particles emitted; t= 6.067e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 21; only 2 particles emitted; t= 6.37035e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 22; only 2 particles emitted; t= 6.67371e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 23; only 2 particles emitted; t= 6.97706e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 24; only 2 particles emitted; t= 7.28041e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 25; only 2 particles emitted; t= 7.58376e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 26; only 2 particles emitted; t= 7.88711e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 27; only 3 particles emitted; t= 8.19046e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 28; only 3 particles emitted; t= 8.49381e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 29; only 3 particles emitted; t= 8.79716e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 30; only 4 particles emitted; t= 9.10051e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 31; only 4 particles emitted; t= 9.40386e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 32; only 4 particles emitted; t= 9.70721e-13 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 33; only 4 particles emitted; t= 1.00106e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 34; only 5 particles emitted; t= 1.03139e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 35; only 5 particles emitted; t= 1.06173e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 36; only 6 particles emitted; t= 1.09206e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 37; only 6 particles emitted; t= 1.1224e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 38; only 6 particles emitted; t= 1.15273e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 39; only 6 particles emitted; t= 1.18307e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 40; only 6 particles emitted; t= 1.2134e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 41; only 6 particles emitted; t= 1.24374e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 42; only 7 particles emitted; t= 1.27407e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 43; only 7 particles emitted; t= 1.30441e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 44; only 7 particles emitted; t= 1.33474e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 45; only 7 particles emitted; t= 1.36508e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 46; only 8 particles emitted; t= 1.39541e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 47; only 8 particles emitted; t= 1.42575e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 48; only 8 particles emitted; t= 1.45608e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 49; only 8 particles emitted; t= 1.48642e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 50; only 8 particles emitted; t= 1.51675e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 51; only 8 particles emitted; t= 1.54709e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 52; only 8 particles emitted; t= 1.57742e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 53; only 8 particles emitted; t= 1.60776e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 54; only 9 particles emitted; t= 1.63809e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 55; only 9 particles emitted; t= 1.66843e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 56; only 9 particles emitted; t= 1.69876e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 57; only 9 particles emitted; t= 1.7291e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 58; only 10 particles emitted; t= 1.75943e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 59; only 10 particles emitted; t= 1.78977e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 60; only 10 particles emitted; t= 1.8201e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 61 at 1.05856e-06 [m] t= 1.85044e-12 [s] E=0 [MeV] 
-OPAL {+0}> 12.55.39 Step 62 at 1.11891e-06 [m] t= 1.88077e-12 [s] E=1.61077e-05 [MeV] 
-OPAL {+0}> 12.55.39 Step 63 at 9.99909e-07 [m] t= 1.91111e-12 [s] E=0.092926 [MeV] 
-OPAL {+0}> 12.55.39 Step 64 at 9.80347e-07 [m] t= 1.94144e-12 [s] E=0.0393229 [MeV] 
-OPAL {+0}> 12.55.39 Step 65 at 9.06129e-07 [m] t= 1.97178e-12 [s] E=0.0730148 [MeV] 
-OPAL {+0}> 12.55.39 Step 66 at 9.56864e-07 [m] t= 2.00211e-12 [s] E=1.38006e-05 [MeV] 
-OPAL {+0}> 12.55.39 Step 67 at 1.00985e-06 [m] t= 2.03245e-12 [s] E=1.45364e-05 [MeV] 
-OPAL {+0}> 12.55.39 Step 68 at 1.0651e-06 [m] t= 2.06278e-12 [s] E=1.53036e-05 [MeV] 
-OPAL {+0}> 12.55.39 Step 69 at 1.05667e-06 [m] t= 2.09312e-12 [s] E=0.0319536 [MeV] 
-OPAL {+0}> 12.55.39 Step 70 at 1.11325e-06 [m] t= 2.12345e-12 [s] E=1.59657e-05 [MeV] 
+ParallelTTracker {+0}> MINBINEMITTED 10
+ParallelTTracker {+0}> MINSTEPFORREBIN 1500
+ParallelTTracker {+0}> SURFACEEMISSIONSTOP after 1000 seconds
+ParallelTTracker {+0}> REPARTFREQ 1000
+ParallelTTracker {+0}> Step 1 no emission yet  t= 3.0335e-14 [s]
+ParallelTTracker {+0}> Step 2 no emission yet  t= 6.067e-14 [s]
+ParallelTTracker {+0}> Step 3 no emission yet  t= 9.10051e-14 [s]
+ParallelTTracker {+0}> Step 4 no emission yet  t= 1.2134e-13 [s]
+ParallelTTracker {+0}> Step 5 no emission yet  t= 1.51675e-13 [s]
+ParallelTTracker {+0}> Step 6 no emission yet  t= 1.8201e-13 [s]
+ParallelTTracker {+0}> Step 7 no emission yet  t= 2.12345e-13 [s]
+ParallelTTracker {+0}> Step 8 no emission yet  t= 2.4268e-13 [s]
+ParallelTTracker {+0}> Step 9 no emission yet  t= 2.73015e-13 [s]
+ParallelTTracker {+0}> Step 10 no emission yet  t= 3.0335e-13 [s]
+ParallelTTracker {+0}> Step 11 no emission yet  t= 3.33685e-13 [s]
+ParallelTTracker {+0}> Step 12 no emission yet  t= 3.6402e-13 [s]
+ParallelTTracker {+0}> Step 13 no emission yet  t= 3.94355e-13 [s]
+ParallelTTracker {+0}> 09.00.38 Step     14; only    1 particles emitted; t=  4.247e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     15; only    2 particles emitted; t=  4.550e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     16; only    2 particles emitted; t=  4.854e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     17; only    2 particles emitted; t=  5.157e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     18; only    2 particles emitted; t=  5.460e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     19; only    2 particles emitted; t=  5.764e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     20; only    2 particles emitted; t=  6.067e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     21; only    2 particles emitted; t=  6.370e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     22; only    2 particles emitted; t=  6.674e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     23; only    2 particles emitted; t=  6.977e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     24; only    2 particles emitted; t=  7.280e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     25; only    2 particles emitted; t=  7.584e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     26; only    2 particles emitted; t=  7.887e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     27; only    3 particles emitted; t=  8.190e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     28; only    3 particles emitted; t=  8.494e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     29; only    3 particles emitted; t=  8.797e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     30; only    4 particles emitted; t=  9.101e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     31; only    4 particles emitted; t=  9.404e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     32; only    4 particles emitted; t=  9.707e-13 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     33; only    4 particles emitted; t=  1.001e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     34; only    5 particles emitted; t=  1.031e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     35; only    5 particles emitted; t=  1.062e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     36; only    6 particles emitted; t=  1.092e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     37; only    6 particles emitted; t=  1.122e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     38; only    6 particles emitted; t=  1.153e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     39; only    6 particles emitted; t=  1.183e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     40; only    6 particles emitted; t=  1.213e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     41; only    6 particles emitted; t=  1.244e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     42; only    7 particles emitted; t=  1.274e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     43; only    7 particles emitted; t=  1.304e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     44; only    7 particles emitted; t=  1.335e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     45; only    7 particles emitted; t=  1.365e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     46; only    8 particles emitted; t=  1.395e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     47; only    8 particles emitted; t=  1.426e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     48; only    8 particles emitted; t=  1.456e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     49; only    8 particles emitted; t=  1.486e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     50; only    8 particles emitted; t=  1.517e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     51; only    8 particles emitted; t=  1.547e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     52; only    8 particles emitted; t=  1.577e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     53; only    8 particles emitted; t=  1.608e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     54; only    9 particles emitted; t=  1.638e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     55; only    9 particles emitted; t=  1.668e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     56; only    9 particles emitted; t=  1.699e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     57; only    9 particles emitted; t=  1.729e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     58; only   10 particles emitted; t=  1.759e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     59; only   10 particles emitted; t=  1.790e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     60; only   10 particles emitted; t=  1.820e-12 [s] E=    0.000 [MeV] 
+ParallelTTracker {+0}> 09.00.38 Step     61 at    0.001 [mm] t=  1.850e-12 [s] E=    0.015 [keV] 
+ParallelTTracker {+0}> 09.00.38 Step     62 at    0.001 [mm] t=  1.881e-12 [s] E=    0.016 [keV] 
+ParallelTTracker {+0}> 09.00.38 Step     63 at    0.001 [mm] t=  1.911e-12 [s] E=    0.014 [keV] 
+ParallelTTracker {+0}> 09.00.39 Step     64 at    0.001 [mm] t=  1.941e-12 [s] E=    0.014 [keV] 
+ParallelTTracker {+0}> 09.00.39 Step     65 at    0.001 [mm] t=  1.972e-12 [s] E=    0.013 [keV] 
+ParallelTTracker {+0}> 09.00.39 Step     66 at    0.001 [mm] t=  2.002e-12 [s] E=    0.014 [keV] 
+ParallelTTracker {+0}> 09.00.39 Step     67 at    0.001 [mm] t=  2.032e-12 [s] E=    0.015 [keV] 
+ParallelTTracker {+0}> 09.00.39 Step     68 at    0.001 [mm] t=  2.063e-12 [s] E=    0.015 [keV] 
+ParallelTTracker {+0}> 09.00.39 Step     69 at    0.001 [mm] t=  2.093e-12 [s] E=    0.015 [keV] 
+ParallelTTracker {+0}> 09.00.40 Step     70 at    0.001 [mm] t=  2.123e-12 [s] E=    0.016 [keV] 
 OPAL {+0}> * Wrote beam phase space.
 OPAL {+0}> * ************** B U N C H ********************************************************* 
-OPAL {+0}> * NP= 17 Qtot= 0.0003519 [nC]  Qi= 2.07e-14 [C]
-OPAL {+0}> * Ekin= 1.59657e-05 [MeV] dEkin= 1.85654e-05 [MeV]
-OPAL {+0}> * rmax= ( 0.000494823 , 0.000420593 , 4.22987e-06 ) [m]
-OPAL {+0}> * rmin= ( -0.000331796 , -0.000387663 , -1.18908e-07 ) [m]
-OPAL {+0}> * rms beam size= ( 0.000220357 , 0.000257414 , 1.32734e-06 ) [m]
-OPAL {+0}> * rms momenta= ( 0.000700881 , 0.000737991 , 0.00459616 ) [beta gamma]
-OPAL {+0}> * mean position= ( 0.000131675 , 1.89256e-05 , 1.11325e-06 ) [m]
-OPAL {+0}> * mean momenta= ( -0.000220589 , -0.000144883 , 0.00634511 ) [beta gamma]
-OPAL {+0}> * rms emittance= ( 1.90068e-05 , 2.40008e-05 , 1.79256e-07 ) (not normalized)
-OPAL {+0}> * rms correlation= ( 0.231495 , 0.0505016 , 0.97265 )
-OPAL {+0}> * dh= 0.03 [m] dT= 3.0335e-14 [s]
-OPAL {+0}> * hr= ( 5.5108e-05 , 5.38837e-05 , 2.89919e-07 ) [m]
-OPAL {+0}> * spos= 1.25249e-06 [m]
+OPAL {+0}> * NP              =   17
+OPAL {+0}> * Qtot            =    3.51900e-04 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    1.59657e-05 [MeV]      dEkin =  1.85654e-05 [MeV]
+OPAL {+0}> * rmax            = (  4.94822e-04 ,  4.20596e-04 ,  4.15946e-06 ) [m]
+OPAL {+0}> * rmin            = ( -3.31791e-04 , -3.87666e-04 , -1.20372e-07 ) [m]
+OPAL {+0}> * rms beam size   = (  2.20357e-04 ,  2.57414e-04 ,  1.32734e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  7.00881e-04 ,  7.37991e-04 ,  4.59616e-03 ) [beta gamma]
+OPAL {+0}> * mean position   = (  1.31675e-04 ,  1.89256e-05 ,  1.11325e-06 ) [m]
+OPAL {+0}> * mean momenta    = ( -2.20589e-04 , -1.44883e-04 ,  6.34511e-03 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.90068e-05 ,  2.40008e-05 ,  1.79256e-07 ) (not normalized)
+OPAL {+0}> * rms correlation = (  2.31495e-01 ,  5.05016e-02 ,  9.72650e-01 )
+OPAL {+0}> * hr              = (  5.51076e-05 ,  5.38841e-05 ,  2.85322e-07 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    2.12345e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    1.11325e-06 [m]
 OPAL {+0}> * ********************************************************************************** 
 OPAL {+0}> 
 OPAL {+0}> * Wrote beam statistics.
-OPAL {+0}> 12.55.39 Step 71 at 1.17207e-06 [m] t= 2.15379e-12 [s] E=1.67827e-05 [MeV] 
-OPAL {+0}> 12.55.39 Step 72 at 1.23315e-06 [m] t= 2.18412e-12 [s] E=1.7631e-05 [MeV] 
-OPAL {+0}> 12.55.39 Step 73 at 1.29648e-06 [m] t= 2.21446e-12 [s] E=1.85105e-05 [MeV] 
-OPAL {+0}> 12.55.39 Step 74 at 1.36205e-06 [m] t= 2.24479e-12 [s] E=1.94212e-05 [MeV] 
-OPAL {+0}> 12.55.39 Step 75 at 1.42988e-06 [m] t= 2.27513e-12 [s] E=2.03631e-05 [MeV] 
-OPAL {+0}> 12.55.40 Step 76 at 1.41696e-06 [m] t= 2.30546e-12 [s] E=0.0300801 [MeV] 
-OPAL {+0}> 12.55.40 Step 77 at 1.40777e-06 [m] t= 2.3358e-12 [s] E=0.02841 [MeV] 
-OPAL {+0}> 12.55.40 Step 78 at 1.47583e-06 [m] t= 2.36613e-12 [s] E=2.09925e-05 [MeV] 
-OPAL {+0}> 12.55.40 Step 79 at 1.54615e-06 [m] t= 2.39647e-12 [s] E=2.19713e-05 [MeV] 
-OPAL {+0}> 12.55.40 Step 80 at 1.53826e-06 [m] t= 2.4268e-12 [s] E=0.0269177 [MeV] 
+ParallelTTracker {+0}> 09.00.40 Step     71 at    0.001 [mm] t=  2.154e-12 [s] E=    0.017 [keV] 
+ParallelTTracker {+0}> 09.00.40 Step     72 at    0.001 [mm] t=  2.184e-12 [s] E=    0.018 [keV] 
+ParallelTTracker {+0}> 09.00.40 Step     73 at    0.001 [mm] t=  2.214e-12 [s] E=    0.019 [keV] 
+ParallelTTracker {+0}> 09.00.40 Step     74 at    0.001 [mm] t=  2.245e-12 [s] E=    0.019 [keV] 
+ParallelTTracker {+0}> 09.00.40 Step     75 at    0.001 [mm] t=  2.275e-12 [s] E=    0.020 [keV] 
+ParallelTTracker {+0}> 09.00.40 Step     76 at    0.001 [mm] t=  2.305e-12 [s] E=    0.020 [keV] 
+ParallelTTracker {+0}> 09.00.40 Step     77 at    0.001 [mm] t=  2.336e-12 [s] E=    0.020 [keV] 
+ParallelTTracker {+0}> 09.00.41 Step     78 at    0.001 [mm] t=  2.366e-12 [s] E=    0.021 [keV] 
+ParallelTTracker {+0}> 09.00.41 Step     79 at    0.002 [mm] t=  2.396e-12 [s] E=    0.022 [keV] 
+ParallelTTracker {+0}> 09.00.41 Step     80 at    0.002 [mm] t=  2.427e-12 [s] E=    0.022 [keV] 
 OPAL {+0}> * Wrote beam phase space.
 OPAL {+0}> * ************** B U N C H ********************************************************* 
-OPAL {+0}> * NP= 20 Qtot= 0.000414 [nC]  Qi= 2.07e-14 [C]
-OPAL {+0}> * Ekin= 2.1859e-05 [MeV] dEkin= 2.32758e-05 [MeV]
-OPAL {+0}> * rmax= ( 0.000494833 , 0.000423879 , 5.7569e-06 ) [m]
-OPAL {+0}> * rmin= ( -0.000331897 , -0.000503024 , -1.63099e-07 ) [m]
-OPAL {+0}> * rms beam size= ( 0.000224227 , 0.000264372 , 1.72029e-06 ) [m]
-OPAL {+0}> * rms momenta= ( 0.000668607 , 0.000690839 , 0.00492468 ) [beta gamma]
-OPAL {+0}> * mean position= ( 9.25111e-05 , -1.87899e-05 , 1.53826e-06 ) [m]
-OPAL {+0}> * mean momenta= ( -0.000235658 , -0.000143208 , 0.00776565 ) [beta gamma]
-OPAL {+0}> * rms emittance= ( 1.57933e-05 , 1.97455e-05 , 2.05965e-07 ) (not normalized)
-OPAL {+0}> * rms correlation= ( 0.224797 , 0.00115404 , 0.974388 )
-OPAL {+0}> * dh= 0.03 [m] dT= 3.0335e-14 [s]
-OPAL {+0}> * hr= ( 5.51154e-05 , 6.17935e-05 , 3.94666e-07 ) [m]
-OPAL {+0}> * spos= 1.45525e-06 [m]
+OPAL {+0}> * NP              =   20
+OPAL {+0}> * Qtot            =    4.14000e-04 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    2.18590e-05 [MeV]      dEkin =  2.32758e-05 [MeV]
+OPAL {+0}> * rmax            = (  4.94833e-04 ,  4.23882e-04 ,  5.67486e-06 ) [m]
+OPAL {+0}> * rmin            = ( -3.31892e-04 , -5.03025e-04 , -1.65854e-07 ) [m]
+OPAL {+0}> * rms beam size   = (  2.24227e-04 ,  2.64372e-04 ,  1.72029e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  6.68607e-04 ,  6.90839e-04 ,  4.92468e-03 ) [beta gamma]
+OPAL {+0}> * mean position   = (  9.25111e-05 , -1.87899e-05 ,  1.53826e-06 ) [m]
+OPAL {+0}> * mean momenta    = ( -2.35658e-04 , -1.43208e-04 ,  7.76565e-03 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.57933e-05 ,  1.97455e-05 ,  2.05965e-07 ) (not normalized)
+OPAL {+0}> * rms correlation = (  2.24797e-01 ,  1.15404e-03 ,  9.74388e-01 )
+OPAL {+0}> * hr              = (  5.51150e-05 ,  6.17938e-05 ,  3.89381e-07 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    2.42680e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    1.53826e-06 [m]
 OPAL {+0}> * ********************************************************************************** 
 OPAL {+0}> 
 OPAL {+0}> * Wrote beam statistics.
-OPAL {+0}> 12.55.40 Step 81 at 1.61e-06 [m] t= 2.45714e-12 [s] E=2.28578e-05 [MeV] 
-OPAL {+0}> 12.55.40 Step 82 at 1.684e-06 [m] t= 2.48747e-12 [s] E=2.38879e-05 [MeV] 
-OPAL {+0}> 12.55.40 Step 83 at 1.76025e-06 [m] t= 2.51781e-12 [s] E=2.49494e-05 [MeV] 
-OPAL {+0}> 12.55.40 Step 84 at 1.83875e-06 [m] t= 2.54814e-12 [s] E=2.60422e-05 [MeV] 
-OPAL {+0}> 12.55.40 Step 85 at 1.91951e-06 [m] t= 2.57848e-12 [s] E=2.71664e-05 [MeV] 
-OPAL {+0}> 12.55.40 Step 86 at 1.82068e-06 [m] t= 2.60881e-12 [s] E=0.0511283 [MeV] 
-OPAL {+0}> 12.55.40 Step 87 at 1.81635e-06 [m] t= 2.63915e-12 [s] E=0.0232541 [MeV] 
-OPAL {+0}> 12.55.40 Step 88 at 1.8936e-06 [m] t= 2.66948e-12 [s] E=2.68011e-05 [MeV] 
-OPAL {+0}> 12.55.40 Step 89 at 1.89108e-06 [m] t= 2.69982e-12 [s] E=0.0222453 [MeV] 
-OPAL {+0}> 12.55.40 Step 90 at 1.81853e-06 [m] t= 2.73015e-12 [s] E=0.0426112 [MeV] 
+ParallelTTracker {+0}> 09.00.41 Step     81 at    0.002 [mm] t=  2.457e-12 [s] E=    0.023 [keV] 
+ParallelTTracker {+0}> 09.00.41 Step     82 at    0.002 [mm] t=  2.487e-12 [s] E=    0.024 [keV] 
+ParallelTTracker {+0}> 09.00.41 Step     83 at    0.002 [mm] t=  2.518e-12 [s] E=    0.025 [keV] 
+ParallelTTracker {+0}> 09.00.41 Step     84 at    0.002 [mm] t=  2.548e-12 [s] E=    0.026 [keV] 
+ParallelTTracker {+0}> 09.00.42 Step     85 at    0.002 [mm] t=  2.578e-12 [s] E=    0.027 [keV] 
+ParallelTTracker {+0}> 09.00.42 Step     86 at    0.002 [mm] t=  2.609e-12 [s] E=    0.026 [keV] 
+ParallelTTracker {+0}> 09.00.42 Step     87 at    0.002 [mm] t=  2.639e-12 [s] E=    0.026 [keV] 
+ParallelTTracker {+0}> 09.00.42 Step     88 at    0.002 [mm] t=  2.669e-12 [s] E=    0.027 [keV] 
+ParallelTTracker {+0}> 09.00.42 Step     89 at    0.002 [mm] t=  2.700e-12 [s] E=    0.027 [keV] 
+ParallelTTracker {+0}> 09.00.42 Step     90 at    0.002 [mm] t=  2.730e-12 [s] E=    0.026 [keV] 
 OPAL {+0}> * Wrote beam phase space.
 OPAL {+0}> * ************** B U N C H ********************************************************* 
-OPAL {+0}> * NP= 26 Qtot= 0.0005382 [nC]  Qi= 2.07e-14 [C]
-OPAL {+0}> * Ekin= 2.57537e-05 [MeV] dEkin= 2.94642e-05 [MeV]
-OPAL {+0}> * rmax= ( 0.000522355 , 0.000423808 , 7.51758e-06 ) [m]
-OPAL {+0}> * rmin= ( -0.000332823 , -0.000503013 , -2.21603e-07 ) [m]
-OPAL {+0}> * rms beam size= ( 0.000233756 , 0.000258239 , 2.13364e-06 ) [m]
-OPAL {+0}> * rms momenta= ( 0.000671044 , 0.000654512 , 0.00574337 ) [beta gamma]
-OPAL {+0}> * mean position= ( 8.88541e-05 , -6.09539e-06 , 1.81853e-06 ) [m]
-OPAL {+0}> * mean momenta= ( -0.000340243 , -9.0697e-05 , 0.00817402 ) [beta gamma]
-OPAL {+0}> * rms emittance= ( 1.55831e-05 , 1.68345e-05 , 3.41249e-07 ) (not normalized)
-OPAL {+0}> * rms correlation= ( 0.0720368 , 0.00642198 , 0.960121 )
-OPAL {+0}> * dh= 0.03 [m] dT= 3.0335e-14 [s]
-OPAL {+0}> * hr= ( 5.70118e-05 , 6.1788e-05 , 5.15945e-07 ) [m]
-OPAL {+0}> * spos= 1.71234e-06 [m]
+OPAL {+0}> * NP              =   26
+OPAL {+0}> * Qtot            =    5.38200e-04 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    2.57537e-05 [MeV]      dEkin =  2.94642e-05 [MeV]
+OPAL {+0}> * rmax            = (  5.22360e-04 ,  4.23811e-04 ,  7.42378e-06 ) [m]
+OPAL {+0}> * rmin            = ( -3.32818e-04 , -5.03013e-04 , -2.21004e-07 ) [m]
+OPAL {+0}> * rms beam size   = (  2.33756e-04 ,  2.58239e-04 ,  2.13364e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  6.71044e-04 ,  6.54512e-04 ,  5.74337e-03 ) [beta gamma]
+OPAL {+0}> * mean position   = (  8.88541e-05 , -6.09539e-06 ,  1.81853e-06 ) [m]
+OPAL {+0}> * mean momenta    = ( -3.40243e-04 , -9.06970e-05 ,  8.17402e-03 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.55831e-05 ,  1.68345e-05 ,  3.41249e-07 ) (not normalized)
+OPAL {+0}> * rms correlation = (  7.20368e-02 ,  6.42198e-03 ,  9.60121e-01 )
+OPAL {+0}> * hr              = (  5.70118e-05 ,  6.17883e-05 ,  5.09652e-07 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    2.73015e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    1.81853e-06 [m]
 OPAL {+0}> * ********************************************************************************** 
 OPAL {+0}> 
 OPAL {+0}> * Wrote beam statistics.
-OPAL {+0}> 12.55.40 Step 91 at 1.89399e-06 [m] t= 2.76049e-12 [s] E=2.68054e-05 [MeV] 
-OPAL {+0}> 12.55.40 Step 92 at 1.83101e-06 [m] t= 2.79082e-12 [s] E=0.0393355 [MeV] 
-OPAL {+0}> 12.55.40 Step 93 at 1.90585e-06 [m] t= 2.82116e-12 [s] E=2.69703e-05 [MeV] 
-OPAL {+0}> 12.55.40 Step 94 at 1.91468e-06 [m] t= 2.85149e-12 [s] E=0.018278 [MeV] 
-OPAL {+0}> 12.55.40 Step 95 at 1.80529e-06 [m] t= 2.88183e-12 [s] E=0.0528902 [MeV] 
-OPAL {+0}> 12.55.40 Step 96 at 1.87793e-06 [m] t= 2.91216e-12 [s] E=2.65806e-05 [MeV] 
-OPAL {+0}> 12.55.40 Step 97 at 1.95282e-06 [m] t= 2.9425e-12 [s] E=2.76246e-05 [MeV] 
-OPAL {+0}> 12.55.40 Step 98 at 1.85636e-06 [m] t= 2.97283e-12 [s] E=0.0479349 [MeV] 
-OPAL {+0}> 12.55.40 Step 99 at 1.9299e-06 [m] t= 3.00317e-12 [s] E=2.7305e-05 [MeV] 
+ParallelTTracker {+0}> 09.00.43 Step     91 at    0.002 [mm] t=  2.760e-12 [s] E=    0.027 [keV] 
+ParallelTTracker {+0}> 09.00.43 Step     92 at    0.002 [mm] t=  2.791e-12 [s] E=    0.026 [keV] 
+ParallelTTracker {+0}> 09.00.43 Step     93 at    0.002 [mm] t=  2.821e-12 [s] E=    0.027 [keV] 
+ParallelTTracker {+0}> 09.00.43 Step     94 at    0.002 [mm] t=  2.851e-12 [s] E=    0.027 [keV] 
+ParallelTTracker {+0}> 09.00.43 Step     95 at    0.002 [mm] t=  2.882e-12 [s] E=    0.026 [keV] 
+ParallelTTracker {+0}> 09.00.43 Step     96 at    0.002 [mm] t=  2.912e-12 [s] E=    0.027 [keV] 
+ParallelTTracker {+0}> 09.00.43 Step     97 at    0.002 [mm] t=  2.942e-12 [s] E=    0.028 [keV] 
+ParallelTTracker {+0}> 09.00.43 Step     98 at    0.002 [mm] t=  2.973e-12 [s] E=    0.026 [keV] 
+ParallelTTracker {+0}> 09.00.44 Step     99 at    0.002 [mm] t=  3.003e-12 [s] E=    0.027 [keV] 
+OPAL {+0}> * Bin number: 0 has emitted all particles (new emmit).
+ParallelTTracker {+0}> 09.00.44 Step    100 at    0.002 [mm] t=  3.034e-12 [s] E=    0.028 [keV] 
 OPAL {+0}> * Wrote beam phase space.
 OPAL {+0}> * ************** B U N C H ********************************************************* 
-OPAL {+0}> * NP= 35 Qtot= 0.0007245 [nC]  Qi= 2.07e-14 [C]
-OPAL {+0}> * Ekin= 2.7305e-05 [MeV] dEkin= 3.27821e-05 [MeV]
-OPAL {+0}> * rmax= ( 0.000522264 , 0.000423744 , 9.30166e-06 ) [m]
-OPAL {+0}> * rmin= ( -0.00033291 , -0.000503002 , -2.68228e-07 ) [m]
-OPAL {+0}> * rms beam size= ( 0.000226954 , 0.000260554 , 2.48864e-06 ) [m]
-OPAL {+0}> * rms momenta= ( 0.000639032 , 0.000670807 , 0.00620595 ) [beta gamma]
-OPAL {+0}> * mean position= ( 9.93724e-05 , 8.23203e-07 , 1.9299e-06 ) [m]
-OPAL {+0}> * mean momenta= ( -0.000281361 , -5.82526e-05 , 0.00821107 ) [beta gamma]
-OPAL {+0}> * rms emittance= ( 1.40271e-05 , 1.6897e-05 , 4.04273e-07 ) (not normalized)
-OPAL {+0}> * rms correlation= ( 0.016983 , 0.0342267 , 0.962691 )
-OPAL {+0}> * dh= 0.03 [m] dT= 3.0335e-14 [s]
-OPAL {+0}> * hr= ( 5.70116e-05 , 6.1783e-05 , 6.37993e-07 ) [m]
-OPAL {+0}> * spos= 1.87543e-06 [m]
+OPAL {+0}> * NP              =   36
+OPAL {+0}> * Qtot            =    7.45200e-04 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    2.75876e-05 [MeV]      dEkin =  3.31337e-05 [MeV]
+OPAL {+0}> * rmax            = (  5.22259e-04 ,  4.62891e-04 ,  9.40627e-06 ) [m]
+OPAL {+0}> * rmin            = ( -3.32915e-04 , -5.04176e-04 , -2.78983e-07 ) [m]
+OPAL {+0}> * rms beam size   = (  2.24642e-04 ,  2.66658e-04 ,  2.52886e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  6.38387e-04 ,  6.62977e-04 ,  6.24030e-03 ) [beta gamma]
+OPAL {+0}> * mean position   = (  1.02692e-04 ,  1.28982e-05 ,  1.95017e-06 ) [m]
+OPAL {+0}> * mean momenta    = ( -2.98680e-04 , -6.59383e-05 ,  8.25232e-03 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.38008e-05 ,  1.70114e-05 ,  4.09011e-07 ) (not normalized)
+OPAL {+0}> * rms correlation = (  2.66178e-03 ,  1.44895e-02 ,  9.63050e-01 )
+OPAL {+0}> * hr              = (  5.70116e-05 ,  6.44711e-05 ,  6.45684e-07 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    3.03350e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    1.95017e-06 [m]
 OPAL {+0}> * ********************************************************************************** 
 OPAL {+0}> 
 OPAL {+0}> * Wrote beam statistics.
-OPAL {+0}> Dump phase space of last step
+ParallelTTracker {+0}> 09.00.44 Step    101 at    0.002 [mm] t=  3.064e-12 [s] E=    0.027 [keV] 
+ParallelTTracker {+0}> 09.00.44 Step    102 at    0.002 [mm] t=  3.094e-12 [s] E=    0.027 [keV] 
+ParallelTTracker {+0}> 09.00.45 Step    103 at    0.002 [mm] t=  3.125e-12 [s] E=    0.027 [keV] 
+ParallelTTracker {+0}> 09.00.45 Step    104 at    0.002 [mm] t=  3.155e-12 [s] E=    0.028 [keV] 
+ParallelTTracker {+0}> 09.00.45 Step    105 at    0.002 [mm] t=  3.185e-12 [s] E=    0.028 [keV] 
+ParallelTTracker {+0}> 09.00.45 Step    106 at    0.002 [mm] t=  3.216e-12 [s] E=    0.028 [keV] 
+ParallelTTracker {+0}> 09.00.46 Step    107 at    0.002 [mm] t=  3.246e-12 [s] E=    0.029 [keV] 
+ParallelTTracker {+0}> 09.00.46 Step    108 at    0.002 [mm] t=  3.276e-12 [s] E=    0.028 [keV] 
+ParallelTTracker {+0}> 09.00.46 Step    109 at    0.002 [mm] t=  3.307e-12 [s] E=    0.029 [keV] 
+ParallelTTracker {+0}> 09.00.46 Step    110 at    0.002 [mm] t=  3.337e-12 [s] E=    0.029 [keV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP              =   50
+OPAL {+0}> * Qtot            =    1.03500e-03 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    2.89083e-05 [MeV]      dEkin =  3.60979e-05 [MeV]
+OPAL {+0}> * rmax            = (  5.23609e-04 ,  5.41050e-04 ,  1.16222e-05 ) [m]
+OPAL {+0}> * rmin            = ( -3.82827e-04 , -5.50241e-04 , -3.48241e-07 ) [m]
+OPAL {+0}> * rms beam size   = (  2.31317e-04 ,  2.68757e-04 ,  2.88883e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  6.61390e-04 ,  6.94431e-04 ,  6.64147e-03 ) [beta gamma]
+OPAL {+0}> * mean position   = (  6.07496e-05 ,  2.36151e-05 ,  2.04493e-06 ) [m]
+OPAL {+0}> * mean momenta    = ( -2.14307e-04 , -2.75827e-05 ,  8.25096e-03 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.43746e-05 ,  1.72315e-05 ,  5.07263e-07 ) (not normalized)
+OPAL {+0}> * rms correlation = ( -3.35720e-02 ,  1.88347e-01 ,  9.59639e-01 )
+OPAL {+0}> * hr              = (  6.04291e-05 ,  7.27528e-05 ,  7.98029e-07 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    3.33685e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    2.04493e-06 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.00.46 Step    111 at    0.002 [mm] t=  3.367e-12 [s] E=    0.029 [keV] 
+ParallelTTracker {+0}> 09.00.47 Step    112 at    0.002 [mm] t=  3.398e-12 [s] E=    0.029 [keV] 
+ParallelTTracker {+0}> 09.00.47 Step    113 at    0.002 [mm] t=  3.428e-12 [s] E=    0.030 [keV] 
+ParallelTTracker {+0}> 09.00.47 Step    114 at    0.002 [mm] t=  3.458e-12 [s] E=    0.031 [keV] 
+ParallelTTracker {+0}> 09.00.48 Step    115 at    0.002 [mm] t=  3.489e-12 [s] E=    0.033 [keV] 
+ParallelTTracker {+0}> 09.00.48 Step    116 at    0.002 [mm] t=  3.519e-12 [s] E=    0.033 [keV] 
+ParallelTTracker {+0}> 09.00.48 Step    117 at    0.002 [mm] t=  3.549e-12 [s] E=    0.034 [keV] 
+ParallelTTracker {+0}> 09.00.48 Step    118 at    0.002 [mm] t=  3.580e-12 [s] E=    0.033 [keV] 
+ParallelTTracker {+0}> 09.00.49 Step    119 at    0.002 [mm] t=  3.610e-12 [s] E=    0.033 [keV] 
+ParallelTTracker {+0}> 09.00.49 Step    120 at    0.002 [mm] t=  3.640e-12 [s] E=    0.032 [keV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP              =   64
+OPAL {+0}> * Qtot            =    1.32480e-03 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    3.22039e-05 [MeV]      dEkin =  4.02148e-05 [MeV]
+OPAL {+0}> * rmax            = (  5.64012e-04 ,  5.41096e-04 ,  1.40711e-05 ) [m]
+OPAL {+0}> * rmin            = ( -4.58389e-04 , -5.50328e-04 , -4.22095e-07 ) [m]
+OPAL {+0}> * rms beam size   = (  2.53451e-04 ,  2.72928e-04 ,  3.28979e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  6.89232e-04 ,  6.76879e-04 ,  7.01014e-03 ) [beta gamma]
+OPAL {+0}> * mean position   = (  3.20718e-05 ,  2.70576e-05 ,  2.28146e-06 ) [m]
+OPAL {+0}> * mean momenta    = ( -1.55636e-04 , -8.03086e-05 ,  8.71487e-03 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.54563e-05 ,  1.63761e-05 ,  6.04047e-07 ) (not normalized)
+OPAL {+0}> * rms correlation = ( -1.14937e-01 ,  9.76949e-02 ,  9.55786e-01 )
+OPAL {+0}> * hr              = (  6.81600e-05 ,  7.27616e-05 ,  9.66211e-07 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    3.64020e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    2.28146e-06 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.00.49 Step    121 at    0.002 [mm] t=  3.671e-12 [s] E=    0.033 [keV] 
+ParallelTTracker {+0}> 09.00.49 Step    122 at    0.002 [mm] t=  3.701e-12 [s] E=    0.033 [keV] 
+ParallelTTracker {+0}> 09.00.50 Step    123 at    0.002 [mm] t=  3.731e-12 [s] E=    0.034 [keV] 
+ParallelTTracker {+0}> 09.00.50 Step    124 at    0.002 [mm] t=  3.762e-12 [s] E=    0.033 [keV] 
+ParallelTTracker {+0}> 09.00.50 Step    125 at    0.002 [mm] t=  3.792e-12 [s] E=    0.034 [keV] 
+ParallelTTracker {+0}> 09.00.50 Step    126 at    0.002 [mm] t=  3.822e-12 [s] E=    0.035 [keV] 
+ParallelTTracker {+0}> 09.00.51 Step    127 at    0.003 [mm] t=  3.853e-12 [s] E=    0.036 [keV] 
+ParallelTTracker {+0}> 09.00.51 Step    128 at    0.002 [mm] t=  3.883e-12 [s] E=    0.035 [keV] 
+ParallelTTracker {+0}> 09.00.51 Step    129 at    0.003 [mm] t=  3.913e-12 [s] E=    0.036 [keV] 
+ParallelTTracker {+0}> 09.00.51 Step    130 at    0.003 [mm] t=  3.944e-12 [s] E=    0.037 [keV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP              =   79
+OPAL {+0}> * Qtot            =    1.63530e-03 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    3.65892e-05 [MeV]      dEkin =  4.43264e-05 [MeV]
+OPAL {+0}> * rmax            = (  5.64119e-04 ,  5.41142e-04 ,  1.67535e-05 ) [m]
+OPAL {+0}> * rmin            = ( -4.58295e-04 , -5.50414e-04 , -5.02349e-07 ) [m]
+OPAL {+0}> * rms beam size   = (  2.51547e-04 ,  2.79668e-04 ,  3.71922e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  6.95909e-04 ,  6.54857e-04 ,  7.24910e-03 ) [beta gamma]
+OPAL {+0}> * mean position   = (  4.22537e-05 ,  1.30482e-05 ,  2.59612e-06 ) [m]
+OPAL {+0}> * mean momenta    = ( -5.91711e-05 , -6.81179e-05 ,  9.47372e-03 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.46274e-05 ,  1.52307e-05 ,  6.46246e-07 ) (not normalized)
+OPAL {+0}> * rms correlation = (  8.47310e-03 ,  9.76414e-02 ,  9.57976e-01 )
+OPAL {+0}> * hr              = (  6.81610e-05 ,  7.27705e-05 ,  1.15039e-06 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    3.94355e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    2.59612e-06 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.00.52 Step    131 at    0.003 [mm] t=  3.974e-12 [s] E=    0.037 [keV] 
+ParallelTTracker {+0}> 09.00.52 Step    132 at    0.003 [mm] t=  4.004e-12 [s] E=    0.037 [keV] 
+ParallelTTracker {+0}> 09.00.52 Step    133 at    0.003 [mm] t=  4.035e-12 [s] E=    0.037 [keV] 
+ParallelTTracker {+0}> 09.00.52 Step    134 at    0.003 [mm] t=  4.065e-12 [s] E=    0.038 [keV] 
+ParallelTTracker {+0}> 09.00.53 Step    135 at    0.003 [mm] t=  4.095e-12 [s] E=    0.038 [keV] 
+ParallelTTracker {+0}> 09.00.53 Step    136 at    0.003 [mm] t=  4.126e-12 [s] E=    0.039 [keV] 
+ParallelTTracker {+0}> 09.00.53 Step    137 at    0.003 [mm] t=  4.156e-12 [s] E=    0.040 [keV] 
+ParallelTTracker {+0}> 09.00.53 Step    138 at    0.003 [mm] t=  4.186e-12 [s] E=    0.040 [keV] 
+ParallelTTracker {+0}> 09.00.54 Step    139 at    0.003 [mm] t=  4.217e-12 [s] E=    0.041 [keV] 
+ParallelTTracker {+0}> 09.00.54 Step    140 at    0.003 [mm] t=  4.247e-12 [s] E=    0.041 [keV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP              =   97
+OPAL {+0}> * Qtot            =    2.00790e-03 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    4.11125e-05 [MeV]      dEkin =  4.92906e-05 [MeV]
+OPAL {+0}> * rmax            = (  5.64231e-04 ,  5.41188e-04 ,  1.96696e-05 ) [m]
+OPAL {+0}> * rmin            = ( -4.58202e-04 , -5.50501e-04 , -5.89492e-07 ) [m]
+OPAL {+0}> * rms beam size   = (  2.54214e-04 ,  2.78175e-04 ,  4.15852e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  6.84617e-04 ,  6.64887e-04 ,  7.60463e-03 ) [beta gamma]
+OPAL {+0}> * mean position   = (  3.17192e-05 ,  1.24929e-05 ,  2.92132e-06 ) [m]
+OPAL {+0}> * mean momenta    = ( -9.10161e-06 , -6.03554e-05 ,  1.01087e-02 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.37183e-05 ,  1.45786e-05 ,  7.40932e-07 ) (not normalized)
+OPAL {+0}> * rms correlation = ( -1.42552e-02 ,  1.52542e-02 ,  9.54812e-01 )
+OPAL {+0}> * hr              = (  6.81622e-05 ,  7.27793e-05 ,  1.35061e-06 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    4.24690e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    2.92132e-06 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.00.54 Step    141 at    0.003 [mm] t=  4.277e-12 [s] E=    0.042 [keV] 
+ParallelTTracker {+0}> 09.00.54 Step    142 at    0.003 [mm] t=  4.308e-12 [s] E=    0.042 [keV] 
+ParallelTTracker {+0}> 09.00.55 Step    143 at    0.003 [mm] t=  4.338e-12 [s] E=    0.042 [keV] 
+ParallelTTracker {+0}> 09.00.55 Step    144 at    0.003 [mm] t=  4.368e-12 [s] E=    0.043 [keV] 
+ParallelTTracker {+0}> 09.00.55 Step    145 at    0.003 [mm] t=  4.399e-12 [s] E=    0.044 [keV] 
+ParallelTTracker {+0}> 09.00.55 Step    146 at    0.003 [mm] t=  4.429e-12 [s] E=    0.044 [keV] 
+ParallelTTracker {+0}> 09.00.56 Step    147 at    0.003 [mm] t=  4.459e-12 [s] E=    0.045 [keV] 
+ParallelTTracker {+0}> 09.00.56 Step    148 at    0.003 [mm] t=  4.490e-12 [s] E=    0.045 [keV] 
+ParallelTTracker {+0}> 09.00.56 Step    149 at    0.003 [mm] t=  4.520e-12 [s] E=    0.044 [keV] 
+ParallelTTracker {+0}> 09.00.56 Step    150 at    0.003 [mm] t=  4.550e-12 [s] E=    0.045 [keV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP              =   121
+OPAL {+0}> * Qtot            =    2.50470e-03 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    4.46931e-05 [MeV]      dEkin =  5.46874e-05 [MeV]
+OPAL {+0}> * rmax            = (  5.64689e-04 ,  5.41234e-04 ,  2.28195e-05 ) [m]
+OPAL {+0}> * rmin            = ( -4.69984e-04 , -5.50588e-04 , -6.84502e-07 ) [m]
+OPAL {+0}> * rms beam size   = (  2.58431e-04 ,  2.79286e-04 ,  4.58986e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  7.04397e-04 ,  6.51263e-04 ,  8.09227e-03 ) [beta gamma]
+OPAL {+0}> * mean position   = (  2.02784e-05 ,  4.12632e-05 ,  3.17954e-06 ) [m]
+OPAL {+0}> * mean momenta    = ( -5.40239e-05 , -8.07126e-05 ,  1.04179e-02 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.37567e-05 ,  1.37449e-05 ,  8.92108e-07 ) (not normalized)
+OPAL {+0}> * rms correlation = (  3.14061e-02 , -3.25020e-02 ,  9.48200e-01 )
+OPAL {+0}> * hr              = (  6.89781e-05 ,  7.27881e-05 ,  1.56693e-06 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    4.55025e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    3.17954e-06 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.00.57 Step    151 at    0.003 [mm] t=  4.581e-12 [s] E=    0.045 [keV] 
+ParallelTTracker {+0}> 09.00.57 Step    152 at    0.003 [mm] t=  4.611e-12 [s] E=    0.045 [keV] 
+ParallelTTracker {+0}> 09.00.57 Step    153 at    0.003 [mm] t=  4.641e-12 [s] E=    0.046 [keV] 
+ParallelTTracker {+0}> 09.00.58 Step    154 at    0.003 [mm] t=  4.672e-12 [s] E=    0.047 [keV] 
+ParallelTTracker {+0}> 09.00.58 Step    155 at    0.003 [mm] t=  4.702e-12 [s] E=    0.047 [keV] 
+ParallelTTracker {+0}> 09.00.58 Step    156 at    0.003 [mm] t=  4.732e-12 [s] E=    0.047 [keV] 
+ParallelTTracker {+0}> 09.00.58 Step    157 at    0.003 [mm] t=  4.763e-12 [s] E=    0.048 [keV] 
+ParallelTTracker {+0}> 09.00.59 Step    158 at    0.003 [mm] t=  4.793e-12 [s] E=    0.049 [keV] 
+ParallelTTracker {+0}> 09.00.59 Step    159 at    0.003 [mm] t=  4.823e-12 [s] E=    0.049 [keV] 
+ParallelTTracker {+0}> 09.00.59 Step    160 at    0.004 [mm] t=  4.854e-12 [s] E=    0.049 [keV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP              =   146
+OPAL {+0}> * Qtot            =    3.02220e-03 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    4.94580e-05 [MeV]      dEkin =  6.03700e-05 [MeV]
+OPAL {+0}> * rmax            = (  5.65495e-04 ,  5.41280e-04 ,  2.62032e-05 ) [m]
+OPAL {+0}> * rmin            = ( -4.93745e-04 , -5.50675e-04 , -7.85514e-07 ) [m]
+OPAL {+0}> * rms beam size   = (  2.55458e-04 ,  2.81126e-04 ,  5.06921e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  7.24547e-04 ,  6.68695e-04 ,  8.49199e-03 ) [beta gamma]
+OPAL {+0}> * mean position   = (  2.17988e-05 ,  2.44704e-05 ,  3.52333e-06 ) [m]
+OPAL {+0}> * mean momenta    = ( -4.10288e-05 , -5.49831e-05 ,  1.09778e-02 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.33003e-05 ,  1.35099e-05 ,  9.90681e-07 ) (not normalized)
+OPAL {+0}> * rms correlation = ( -2.03261e-02 ,  1.43266e-02 ,  9.47351e-01 )
+OPAL {+0}> * hr              = (  7.06160e-05 ,  7.27970e-05 ,  1.79925e-06 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    4.85360e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    3.52333e-06 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.00.59 Step    161 at    0.004 [mm] t=  4.884e-12 [s] E=    0.051 [keV] 
+ParallelTTracker {+0}> 09.01.00 Step    162 at    0.004 [mm] t=  4.914e-12 [s] E=    0.052 [keV] 
+ParallelTTracker {+0}> 09.01.00 Step    163 at    0.004 [mm] t=  4.945e-12 [s] E=    0.052 [keV] 
+ParallelTTracker {+0}> 09.01.00 Step    164 at    0.004 [mm] t=  4.975e-12 [s] E=    0.051 [keV] 
+ParallelTTracker {+0}> 09.01.00 Step    165 at    0.004 [mm] t=  5.005e-12 [s] E=    0.052 [keV] 
+ParallelTTracker {+0}> 09.01.01 Step    166 at    0.004 [mm] t=  5.036e-12 [s] E=    0.053 [keV] 
+ParallelTTracker {+0}> 09.01.01 Step    167 at    0.004 [mm] t=  5.066e-12 [s] E=    0.054 [keV] 
+ParallelTTracker {+0}> 09.01.01 Step    168 at    0.004 [mm] t=  5.096e-12 [s] E=    0.055 [keV] 
+ParallelTTracker {+0}> 09.01.01 Step    169 at    0.004 [mm] t=  5.127e-12 [s] E=    0.056 [keV] 
+ParallelTTracker {+0}> 09.01.02 Step    170 at    0.004 [mm] t=  5.157e-12 [s] E=    0.057 [keV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP              =   167
+OPAL {+0}> * Qtot            =    3.45690e-03 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    5.69078e-05 [MeV]      dEkin =  6.71648e-05 [MeV]
+OPAL {+0}> * rmax            = (  5.67752e-04 ,  5.49115e-04 ,  2.98207e-05 ) [m]
+OPAL {+0}> * rmin            = ( -5.67378e-04 , -5.50996e-04 , -8.94289e-07 ) [m]
+OPAL {+0}> * rms beam size   = (  2.60634e-04 ,  2.78738e-04 ,  5.63515e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  7.26759e-04 ,  6.61596e-04 ,  8.80779e-03 ) [beta gamma]
+OPAL {+0}> * mean position   = (  8.25514e-06 ,  2.88463e-05 ,  4.06055e-06 ) [m]
+OPAL {+0}> * mean momenta    = ( -4.07976e-05 , -3.36060e-05 ,  1.20092e-02 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.26566e-05 ,  1.23560e-05 ,  1.03697e-06 ) (not normalized)
+OPAL {+0}> * rms correlation = ( -7.42532e-02 , -5.23042e-03 ,  9.50143e-01 )
+OPAL {+0}> * hr              = (  7.56753e-05 ,  7.33407e-05 ,  2.04766e-06 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    5.15695e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    4.06055e-06 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.01.02 Step    171 at    0.004 [mm] t=  5.187e-12 [s] E=    0.058 [keV] 
+ParallelTTracker {+0}> 09.01.02 Step    172 at    0.004 [mm] t=  5.218e-12 [s] E=    0.058 [keV] 
+ParallelTTracker {+0}> 09.01.02 Step    173 at    0.004 [mm] t=  5.248e-12 [s] E=    0.058 [keV] 
+ParallelTTracker {+0}> 09.01.03 Step    174 at    0.004 [mm] t=  5.278e-12 [s] E=    0.059 [keV] 
+ParallelTTracker {+0}> 09.01.03 Step    175 at    0.004 [mm] t=  5.309e-12 [s] E=    0.059 [keV] 
+ParallelTTracker {+0}> 09.01.03 Step    176 at    0.004 [mm] t=  5.339e-12 [s] E=    0.060 [keV] 
+ParallelTTracker {+0}> 09.01.04 Step    177 at    0.004 [mm] t=  5.369e-12 [s] E=    0.060 [keV] 
+ParallelTTracker {+0}> 09.01.04 Step    178 at    0.004 [mm] t=  5.400e-12 [s] E=    0.061 [keV] 
+ParallelTTracker {+0}> 09.01.04 Step    179 at    0.004 [mm] t=  5.430e-12 [s] E=    0.061 [keV] 
+ParallelTTracker {+0}> 09.01.04 Step    180 at    0.004 [mm] t=  5.460e-12 [s] E=    0.060 [keV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP              =   204
+OPAL {+0}> * Qtot            =    4.22280e-03 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    6.04882e-05 [MeV]      dEkin =  7.36712e-05 [MeV]
+OPAL {+0}> * rmax            = (  5.67867e-04 ,  5.49433e-04 ,  3.36721e-05 ) [m]
+OPAL {+0}> * rmin            = ( -5.67395e-04 , -5.62754e-04 , -1.01013e-06 ) [m]
+OPAL {+0}> * rms beam size   = (  2.54876e-04 ,  2.81598e-04 ,  6.12903e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  7.27732e-04 ,  6.59368e-04 ,  9.37078e-03 ) [beta gamma]
+OPAL {+0}> * mean position   = (  1.43647e-05 ,  1.55026e-05 ,  4.32044e-06 ) [m]
+OPAL {+0}> * mean momenta    = ( -2.51416e-05 , -1.62877e-06 ,  1.21660e-02 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.20384e-05 ,  1.20497e-05 ,  1.22037e-06 ) (not normalized)
+OPAL {+0}> * rms correlation = ( -5.15608e-02 , -5.36822e-02 ,  9.45043e-01 )
+OPAL {+0}> * hr              = (  7.56841e-05 ,  7.41459e-05 ,  2.31215e-06 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    5.46030e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    4.32044e-06 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.01.05 Step    181 at    0.004 [mm] t=  5.491e-12 [s] E=    0.060 [keV] 
+ParallelTTracker {+0}> 09.01.05 Step    182 at    0.004 [mm] t=  5.521e-12 [s] E=    0.061 [keV] 
+ParallelTTracker {+0}> 09.01.05 Step    183 at    0.004 [mm] t=  5.551e-12 [s] E=    0.061 [keV] 
+ParallelTTracker {+0}> 09.01.05 Step    184 at    0.004 [mm] t=  5.582e-12 [s] E=    0.061 [keV] 
+ParallelTTracker {+0}> 09.01.06 Step    185 at    0.004 [mm] t=  5.612e-12 [s] E=    0.062 [keV] 
+ParallelTTracker {+0}> 09.01.06 Step    186 at    0.005 [mm] t=  5.642e-12 [s] E=    0.063 [keV] 
+ParallelTTracker {+0}> 09.01.06 Step    187 at    0.005 [mm] t=  5.673e-12 [s] E=    0.063 [keV] 
+ParallelTTracker {+0}> 09.01.06 Step    188 at    0.004 [mm] t=  5.703e-12 [s] E=    0.063 [keV] 
+ParallelTTracker {+0}> 09.01.07 Step    189 at    0.005 [mm] t=  5.733e-12 [s] E=    0.063 [keV] 
+ParallelTTracker {+0}> 09.01.07 Step    190 at    0.005 [mm] t=  5.764e-12 [s] E=    0.064 [keV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP              =   249
+OPAL {+0}> * Qtot            =    5.15430e-03 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    6.36279e-05 [MeV]      dEkin =  7.91268e-05 [MeV]
+OPAL {+0}> * rmax            = (  5.68736e-04 ,  5.53203e-04 ,  3.77574e-05 ) [m]
+OPAL {+0}> * rmin            = ( -5.67434e-04 , -5.62841e-04 , -1.13261e-06 ) [m]
+OPAL {+0}> * rms beam size   = (  2.67094e-04 ,  2.79114e-04 ,  6.62521e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  7.24136e-04 ,  6.62955e-04 ,  9.81330e-03 ) [beta gamma]
+OPAL {+0}> * mean position   = (  7.92801e-06 ,  2.16730e-05 ,  4.54938e-06 ) [m]
+OPAL {+0}> * mean momenta    = ( -8.00054e-06 , -6.19886e-06 ,  1.23214e-02 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.22469e-05 ,  1.17056e-05 ,  1.35092e-06 ) (not normalized)
+OPAL {+0}> * rms correlation = ( -3.82370e-02 , -5.78194e-02 ,  9.44709e-01 )
+OPAL {+0}> * hr              = (  7.57447e-05 ,  7.44029e-05 ,  2.59267e-06 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    5.76365e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    4.54938e-06 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.01.07 Step    191 at    0.005 [mm] t=  5.794e-12 [s] E=    0.064 [keV] 
+ParallelTTracker {+0}> 09.01.08 Step    192 at    0.005 [mm] t=  5.824e-12 [s] E=    0.065 [keV] 
+ParallelTTracker {+0}> 09.01.08 Step    193 at    0.005 [mm] t=  5.855e-12 [s] E=    0.067 [keV] 
+ParallelTTracker {+0}> 09.01.08 Step    194 at    0.005 [mm] t=  5.885e-12 [s] E=    0.067 [keV] 
+ParallelTTracker {+0}> 09.01.09 Step    195 at    0.005 [mm] t=  5.915e-12 [s] E=    0.068 [keV] 
+ParallelTTracker {+0}> 09.01.09 Step    196 at    0.005 [mm] t=  5.946e-12 [s] E=    0.070 [keV] 
+ParallelTTracker {+0}> 09.01.09 Step    197 at    0.005 [mm] t=  5.976e-12 [s] E=    0.070 [keV] 
+ParallelTTracker {+0}> 09.01.10 Step    198 at    0.005 [mm] t=  6.006e-12 [s] E=    0.070 [keV] 
+ParallelTTracker {+0}> 09.01.10 Step    199 at    0.005 [mm] t=  6.037e-12 [s] E=    0.070 [keV] 
+OPAL {+0}> * Bin number: 1 has emitted all particles (new emmit).
+ParallelTTracker {+0}> 09.01.11 Step    200 at    0.005 [mm] t=  6.067e-12 [s] E=    0.071 [keV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP              =   285
+OPAL {+0}> * Qtot            =    5.89950e-03 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    7.06338e-05 [MeV]      dEkin =  8.63311e-05 [MeV]
+OPAL {+0}> * rmax            = (  5.68693e-04 ,  5.53140e-04 ,  4.20767e-05 ) [m]
+OPAL {+0}> * rmin            = ( -5.67445e-04 , -5.62811e-04 , -1.26176e-06 ) [m]
+OPAL {+0}> * rms beam size   = (  2.70852e-04 ,  2.77926e-04 ,  7.24058e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  7.18551e-04 ,  6.63610e-04 ,  1.01620e-02 ) [beta gamma]
+OPAL {+0}> * mean position   = (  5.32906e-06 ,  1.53894e-05 ,  5.05768e-06 ) [m]
+OPAL {+0}> * mean momenta    = (  4.74814e-06 ,  7.83363e-06 ,  1.31259e-02 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.17047e-05 ,  1.10863e-05 ,  1.42317e-06 ) (not normalized)
+OPAL {+0}> * rms correlation = ( -3.47426e-03 , -3.25911e-02 ,  9.46872e-01 )
+OPAL {+0}> * hr              = (  7.57425e-05 ,  7.43967e-05 ,  2.88923e-06 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    6.06700e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    5.05768e-06 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.01.12 Step    201 at    0.005 [mm] t=  6.097e-12 [s] E=    0.072 [keV] 
+ParallelTTracker {+0}> 09.01.12 Step    202 at    0.005 [mm] t=  6.128e-12 [s] E=    0.073 [keV] 
+ParallelTTracker {+0}> 09.01.13 Step    203 at    0.005 [mm] t=  6.158e-12 [s] E=    0.074 [keV] 
+ParallelTTracker {+0}> 09.01.13 Step    204 at    0.005 [mm] t=  6.188e-12 [s] E=    0.075 [keV] 
+ParallelTTracker {+0}> 09.01.14 Step    205 at    0.005 [mm] t=  6.219e-12 [s] E=    0.076 [keV] 
+ParallelTTracker {+0}> 09.01.15 Step    206 at    0.005 [mm] t=  6.249e-12 [s] E=    0.076 [keV] 
+ParallelTTracker {+0}> 09.01.15 Step    207 at    0.005 [mm] t=  6.279e-12 [s] E=    0.076 [keV] 
+ParallelTTracker {+0}> 09.01.16 Step    208 at    0.006 [mm] t=  6.310e-12 [s] E=    0.078 [keV] 
+ParallelTTracker {+0}> 09.01.16 Step    209 at    0.006 [mm] t=  6.340e-12 [s] E=    0.080 [keV] 
+ParallelTTracker {+0}> 09.01.17 Step    210 at    0.006 [mm] t=  6.370e-12 [s] E=    0.081 [keV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP              =   313
+OPAL {+0}> * Qtot            =    6.47910e-03 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    8.08504e-05 [MeV]      dEkin =  9.52143e-05 [MeV]
+OPAL {+0}> * rmax            = (  5.68654e-04 ,  5.53077e-04 ,  4.66299e-05 ) [m]
+OPAL {+0}> * rmin            = ( -5.67627e-04 , -5.62781e-04 , -1.39884e-06 ) [m]
+OPAL {+0}> * rms beam size   = (  2.74276e-04 ,  2.73811e-04 ,  7.95508e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  7.19073e-04 ,  6.66134e-04 ,  1.04758e-02 ) [beta gamma]
+OPAL {+0}> * mean position   = (  3.56376e-06 ,  2.04499e-05 ,  5.79895e-06 ) [m]
+OPAL {+0}> * mean momenta    = (  9.08537e-06 ,  1.75603e-05 ,  1.43460e-02 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.10853e-05 ,  1.02504e-05 ,  1.46369e-06 ) (not normalized)
+OPAL {+0}> * rms correlation = (  1.52691e-02 , -2.23816e-02 ,  9.49935e-01 )
+OPAL {+0}> * hr              = (  7.57520e-05 ,  7.43906e-05 ,  3.20192e-06 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    6.37035e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    5.79895e-06 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.01.17 Step    211 at    0.006 [mm] t=  6.401e-12 [s] E=    0.082 [keV] 
+ParallelTTracker {+0}> 09.01.18 Step    212 at    0.006 [mm] t=  6.431e-12 [s] E=    0.082 [keV] 
+ParallelTTracker {+0}> 09.01.18 Step    213 at    0.006 [mm] t=  6.461e-12 [s] E=    0.082 [keV] 
+ParallelTTracker {+0}> 09.01.19 Step    214 at    0.006 [mm] t=  6.492e-12 [s] E=    0.084 [keV] 
+ParallelTTracker {+0}> 09.01.20 Step    215 at    0.006 [mm] t=  6.522e-12 [s] E=    0.084 [keV] 
+ParallelTTracker {+0}> 09.01.20 Step    216 at    0.006 [mm] t=  6.552e-12 [s] E=    0.085 [keV] 
+ParallelTTracker {+0}> 09.01.20 Step    217 at    0.006 [mm] t=  6.583e-12 [s] E=    0.085 [keV] 
+ParallelTTracker {+0}> 09.01.21 Step    218 at    0.006 [mm] t=  6.613e-12 [s] E=    0.086 [keV] 
+ParallelTTracker {+0}> 09.01.21 Step    219 at    0.006 [mm] t=  6.643e-12 [s] E=    0.087 [keV] 
+ParallelTTracker {+0}> 09.01.22 Step    220 at    0.006 [mm] t=  6.674e-12 [s] E=    0.088 [keV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP              =   358
+OPAL {+0}> * Qtot            =    7.41060e-03 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    8.79384e-05 [MeV]      dEkin =  1.04087e-04 [MeV]
+OPAL {+0}> * rmax            = (  5.68611e-04 ,  5.53015e-04 ,  5.14171e-05 ) [m]
+OPAL {+0}> * rmin            = ( -5.67699e-04 , -5.62752e-04 , -1.54217e-06 ) [m]
+OPAL {+0}> * rms beam size   = (  2.74162e-04 ,  2.70829e-04 ,  8.62068e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  7.09487e-04 ,  6.76135e-04 ,  1.09809e-02 ) [beta gamma]
+OPAL {+0}> * mean position   = (  8.03184e-07 ,  2.98200e-05 ,  6.31663e-06 ) [m]
+OPAL {+0}> * mean momenta    = (  9.99465e-06 ,  2.20232e-05 ,  1.49240e-02 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.04738e-05 ,  9.86919e-06 ,  1.62314e-06 ) (not normalized)
+OPAL {+0}> * rms correlation = (  4.46820e-02 , -1.25702e-02 ,  9.48051e-01 )
+OPAL {+0}> * hr              = (  7.57540e-05 ,  7.43844e-05 ,  3.53062e-06 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    6.67371e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    6.31663e-06 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.01.23 Step    221 at    0.006 [mm] t=  6.704e-12 [s] E=    0.089 [keV] 
+ParallelTTracker {+0}> 09.01.23 Step    222 at    0.006 [mm] t=  6.734e-12 [s] E=    0.090 [keV] 
+ParallelTTracker {+0}> 09.01.23 Step    223 at    0.007 [mm] t=  6.765e-12 [s] E=    0.091 [keV] 
+ParallelTTracker {+0}> 09.01.24 Step    224 at    0.007 [mm] t=  6.795e-12 [s] E=    0.092 [keV] 
+ParallelTTracker {+0}> 09.01.25 Step    225 at    0.007 [mm] t=  6.825e-12 [s] E=    0.093 [keV] 
+ParallelTTracker {+0}> 09.01.25 Step    226 at    0.007 [mm] t=  6.856e-12 [s] E=    0.093 [keV] 
+ParallelTTracker {+0}> 09.01.26 Step    227 at    0.007 [mm] t=  6.886e-12 [s] E=    0.094 [keV] 
+ParallelTTracker {+0}> 09.01.26 Step    228 at    0.007 [mm] t=  6.916e-12 [s] E=    0.095 [keV] 
+ParallelTTracker {+0}> 09.01.27 Step    229 at    0.007 [mm] t=  6.947e-12 [s] E=    0.095 [keV] 
+ParallelTTracker {+0}> 09.01.27 Step    230 at    0.007 [mm] t=  6.977e-12 [s] E=    0.096 [keV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP              =   404
+OPAL {+0}> * Qtot            =    8.36280e-03 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    9.59669e-05 [MeV]      dEkin =  1.13883e-04 [MeV]
+OPAL {+0}> * rmax            = (  5.68569e-04 ,  5.52952e-04 ,  5.64382e-05 ) [m]
+OPAL {+0}> * rmin            = ( -5.67771e-04 , -5.62722e-04 , -1.69313e-06 ) [m]
+OPAL {+0}> * rms beam size   = (  2.73622e-04 ,  2.70481e-04 ,  9.33979e-06 ) [m]
+OPAL {+0}> * rms momenta     = (  7.12637e-04 ,  6.79057e-04 ,  1.15010e-02 ) [beta gamma]
+OPAL {+0}> * mean position   = (  3.84619e-06 ,  3.14553e-05 ,  6.90407e-06 ) [m]
+OPAL {+0}> * mean momenta    = (  2.21631e-05 ,  2.90100e-05 ,  1.55712e-02 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.00455e-05 ,  9.47217e-06 ,  1.78407e-06 ) (not normalized)
+OPAL {+0}> * rms correlation = (  5.52443e-02 , -3.09250e-02 ,  9.46772e-01 )
+OPAL {+0}> * hr              = (  7.57560e-05 ,  7.43783e-05 ,  3.87542e-06 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    6.97706e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    6.90407e-06 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.01.28 Step    231 at    0.007 [mm] t=  7.007e-12 [s] E=    0.097 [keV] 
+ParallelTTracker {+0}> 09.01.28 Step    232 at    0.007 [mm] t=  7.038e-12 [s] E=    0.097 [keV] 
+ParallelTTracker {+0}> 09.01.29 Step    233 at    0.007 [mm] t=  7.068e-12 [s] E=    0.098 [keV] 
+ParallelTTracker {+0}> 09.01.29 Step    234 at    0.007 [mm] t=  7.098e-12 [s] E=    0.099 [keV] 
+ParallelTTracker {+0}> 09.01.29 Step    235 at    0.007 [mm] t=  7.129e-12 [s] E=    0.100 [keV] 
+ParallelTTracker {+0}> 09.01.30 Step    236 at    0.007 [mm] t=  7.159e-12 [s] E=    0.101 [keV] 
+ParallelTTracker {+0}> 09.01.30 Step    237 at    0.007 [mm] t=  7.189e-12 [s] E=    0.102 [keV] 
+ParallelTTracker {+0}> 09.01.31 Step    238 at    0.007 [mm] t=  7.220e-12 [s] E=    0.102 [keV] 
+ParallelTTracker {+0}> 09.01.31 Step    239 at    0.007 [mm] t=  7.250e-12 [s] E=    0.103 [keV] 
+ParallelTTracker {+0}> 09.01.32 Step    240 at    0.008 [mm] t=  7.280e-12 [s] E=    0.104 [keV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP              =   454
+OPAL {+0}> * Qtot            =    9.39780e-03 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    1.04202e-04 [MeV]      dEkin =  1.23881e-04 [MeV]
+OPAL {+0}> * rmax            = (  5.68578e-04 ,  5.52890e-04 ,  6.16931e-05 ) [m]
+OPAL {+0}> * rmin            = ( -5.67845e-04 , -5.62693e-04 , -1.85074e-06 ) [m]
+OPAL {+0}> * rms beam size   = (  2.71296e-04 ,  2.71030e-04 ,  1.00956e-05 ) [m]
+OPAL {+0}> * rms momenta     = (  7.17566e-04 ,  6.81870e-04 ,  1.20063e-02 ) [beta gamma]
+OPAL {+0}> * mean position   = (  2.32379e-06 ,  2.69340e-05 ,  7.50852e-06 ) [m]
+OPAL {+0}> * mean momenta    = (  1.31871e-05 ,  3.58400e-05 ,  1.62119e-02 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  9.61877e-06 ,  9.14717e-06 ,  1.93039e-06 ) (not normalized)
+OPAL {+0}> * rms correlation = (  6.50087e-02 , -2.76068e-02 ,  9.46862e-01 )
+OPAL {+0}> * hr              = (  7.57615e-05 ,  7.43722e-05 ,  4.23625e-06 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    7.28041e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    7.50852e-06 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.01.32 Step    241 at    0.008 [mm] t=  7.311e-12 [s] E=    0.105 [keV] 
+ParallelTTracker {+0}> 09.01.33 Step    242 at    0.008 [mm] t=  7.341e-12 [s] E=    0.107 [keV] 
+ParallelTTracker {+0}> 09.01.33 Step    243 at    0.008 [mm] t=  7.371e-12 [s] E=    0.108 [keV] 
+ParallelTTracker {+0}> 09.01.33 Step    244 at    0.008 [mm] t=  7.402e-12 [s] E=    0.108 [keV] 
+ParallelTTracker {+0}> 09.01.34 Step    245 at    0.008 [mm] t=  7.432e-12 [s] E=    0.109 [keV] 
+ParallelTTracker {+0}> 09.01.34 Step    246 at    0.008 [mm] t=  7.462e-12 [s] E=    0.111 [keV] 
+ParallelTTracker {+0}> 09.01.35 Step    247 at    0.008 [mm] t=  7.493e-12 [s] E=    0.111 [keV] 
+ParallelTTracker {+0}> 09.01.35 Step    248 at    0.008 [mm] t=  7.523e-12 [s] E=    0.112 [keV] 
+ParallelTTracker {+0}> 09.01.35 Step    249 at    0.008 [mm] t=  7.553e-12 [s] E=    0.113 [keV] 
+ParallelTTracker {+0}> 09.01.36 Step    250 at    0.008 [mm] t=  7.584e-12 [s] E=    0.114 [keV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP              =   500
+OPAL {+0}> * Qtot            =    1.03500e-02 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    1.14453e-04 [MeV]      dEkin =  1.34915e-04 [MeV]
+OPAL {+0}> * rmax            = (  5.68709e-04 ,  5.62688e-04 ,  6.71816e-05 ) [m]
+OPAL {+0}> * rmin            = ( -5.68200e-04 , -5.62960e-04 , -2.01508e-06 ) [m]
+OPAL {+0}> * rms beam size   = (  2.71627e-04 ,  2.69715e-04 ,  1.09272e-05 ) [m]
+OPAL {+0}> * rms momenta     = (  7.19611e-04 ,  6.90516e-04 ,  1.24766e-02 ) [beta gamma]
+OPAL {+0}> * mean position   = (  3.57928e-06 ,  2.62043e-05 ,  8.26107e-06 ) [m]
+OPAL {+0}> * mean momenta    = (  1.76625e-05 ,  4.03337e-05 ,  1.70715e-02 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  9.19218e-06 ,  8.79413e-06 ,  2.05095e-06 ) (not normalized)
+OPAL {+0}> * rms correlation = (  9.59783e-02 , -3.34347e-02 ,  9.47952e-01 )
+OPAL {+0}> * hr              = (  7.57939e-05 ,  7.50432e-05 ,  4.61311e-06 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    7.58376e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    8.26107e-06 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.01.36 Step    251 at    0.008 [mm] t=  7.614e-12 [s] E=    0.115 [keV] 
+ParallelTTracker {+0}> 09.01.37 Step    252 at    0.008 [mm] t=  7.644e-12 [s] E=    0.116 [keV] 
+ParallelTTracker {+0}> 09.01.37 Step    253 at    0.008 [mm] t=  7.675e-12 [s] E=    0.117 [keV] 
+ParallelTTracker {+0}> 09.01.38 Step    254 at    0.009 [mm] t=  7.705e-12 [s] E=    0.118 [keV] 
+ParallelTTracker {+0}> 09.01.39 Step    255 at    0.009 [mm] t=  7.735e-12 [s] E=    0.120 [keV] 
+ParallelTTracker {+0}> 09.01.39 Step    256 at    0.009 [mm] t=  7.766e-12 [s] E=    0.121 [keV] 
+ParallelTTracker {+0}> 09.01.40 Step    257 at    0.009 [mm] t=  7.796e-12 [s] E=    0.122 [keV] 
+ParallelTTracker {+0}> 09.01.41 Step    258 at    0.009 [mm] t=  7.826e-12 [s] E=    0.123 [keV] 
+ParallelTTracker {+0}> 09.01.41 Step    259 at    0.009 [mm] t=  7.857e-12 [s] E=    0.124 [keV] 
+ParallelTTracker {+0}> 09.01.42 Step    260 at    0.009 [mm] t=  7.887e-12 [s] E=    0.126 [keV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP              =   546
+OPAL {+0}> * Qtot            =    1.13022e-02 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    1.25757e-04 [MeV]      dEkin =  1.46540e-04 [MeV]
+OPAL {+0}> * rmax            = (  5.68834e-04 ,  5.62688e-04 ,  7.29036e-05 ) [m]
+OPAL {+0}> * rmin            = ( -5.68291e-04 , -5.64233e-04 , -2.18670e-06 ) [m]
+OPAL {+0}> * rms beam size   = (  2.69044e-04 ,  2.71673e-04 ,  1.18127e-05 ) [m]
+OPAL {+0}> * rms momenta     = (  7.18951e-04 ,  6.90536e-04 ,  1.29284e-02 ) [beta gamma]
+OPAL {+0}> * mean position   = (  3.64385e-06 ,  1.33000e-05 ,  9.09269e-06 ) [m]
+OPAL {+0}> * mean momenta    = (  2.10986e-05 ,  4.08434e-05 ,  1.80063e-02 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  8.66729e-06 ,  8.45393e-06 ,  2.15555e-06 ) (not normalized)
+OPAL {+0}> * rms correlation = (  1.07867e-01 , -1.86223e-02 ,  9.49702e-01 )
+OPAL {+0}> * hr              = (  7.58084e-05 ,  7.51281e-05 ,  5.00602e-06 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    7.88711e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    9.09269e-06 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.01.42 Step    261 at    0.009 [mm] t=  7.917e-12 [s] E=    0.126 [keV] 
+ParallelTTracker {+0}> 09.01.43 Step    262 at    0.009 [mm] t=  7.948e-12 [s] E=    0.128 [keV] 
+ParallelTTracker {+0}> 09.01.43 Step    263 at    0.009 [mm] t=  7.978e-12 [s] E=    0.130 [keV] 
+ParallelTTracker {+0}> 09.01.44 Step    264 at    0.009 [mm] t=  8.008e-12 [s] E=    0.131 [keV] 
+ParallelTTracker {+0}> 09.01.44 Step    265 at    0.010 [mm] t=  8.039e-12 [s] E=    0.132 [keV] 
+ParallelTTracker {+0}> 09.01.44 Step    266 at    0.010 [mm] t=  8.069e-12 [s] E=    0.133 [keV] 
+ParallelTTracker {+0}> 09.01.45 Step    267 at    0.010 [mm] t=  8.099e-12 [s] E=    0.135 [keV] 
+ParallelTTracker {+0}> 09.01.45 Step    268 at    0.010 [mm] t=  8.130e-12 [s] E=    0.136 [keV] 
+ParallelTTracker {+0}> 09.01.46 Step    269 at    0.010 [mm] t=  8.160e-12 [s] E=    0.138 [keV] 
+ParallelTTracker {+0}> 09.01.46 Step    270 at    0.010 [mm] t=  8.190e-12 [s] E=    0.138 [keV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP              =   591
+OPAL {+0}> * Qtot            =    1.22337e-02 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    1.38321e-04 [MeV]      dEkin =  1.59356e-04 [MeV]
+OPAL {+0}> * rmax            = (  5.68962e-04 ,  5.62649e-04 ,  7.88591e-05 ) [m]
+OPAL {+0}> * rmin            = ( -5.68383e-04 , -5.64160e-04 , -2.36576e-06 ) [m]
+OPAL {+0}> * rms beam size   = (  2.66634e-04 ,  2.72580e-04 ,  1.27565e-05 ) [m]
+OPAL {+0}> * rms momenta     = (  7.13154e-04 ,  6.93878e-04 ,  1.34056e-02 ) [beta gamma]
+OPAL {+0}> * mean position   = (  3.64524e-06 ,  1.16391e-05 ,  1.00187e-05 ) [m]
+OPAL {+0}> * mean momenta    = (  1.78850e-05 ,  4.21345e-05 ,  1.89965e-02 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  8.13510e-06 ,  8.12699e-06 ,  2.27732e-06 ) (not normalized)
+OPAL {+0}> * rms correlation = (  9.47459e-02 , -1.78959e-02 ,  9.50779e-01 )
+OPAL {+0}> * hr              = (  7.58230e-05 ,  7.51206e-05 ,  5.41499e-06 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    8.19046e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    1.00187e-05 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.01.46 Step    271 at    0.010 [mm] t=  8.221e-12 [s] E=    0.140 [keV] 
+ParallelTTracker {+0}> 09.01.47 Step    272 at    0.010 [mm] t=  8.251e-12 [s] E=    0.141 [keV] 
+ParallelTTracker {+0}> 09.01.47 Step    273 at    0.010 [mm] t=  8.281e-12 [s] E=    0.143 [keV] 
+ParallelTTracker {+0}> 09.01.48 Step    274 at    0.011 [mm] t=  8.312e-12 [s] E=    0.145 [keV] 
+ParallelTTracker {+0}> 09.01.48 Step    275 at    0.011 [mm] t=  8.342e-12 [s] E=    0.145 [keV] 
+ParallelTTracker {+0}> 09.01.48 Step    276 at    0.011 [mm] t=  8.372e-12 [s] E=    0.146 [keV] 
+ParallelTTracker {+0}> 09.01.49 Step    277 at    0.011 [mm] t=  8.403e-12 [s] E=    0.148 [keV] 
+ParallelTTracker {+0}> 09.01.49 Step    278 at    0.011 [mm] t=  8.433e-12 [s] E=    0.149 [keV] 
+ParallelTTracker {+0}> 09.01.50 Step    279 at    0.011 [mm] t=  8.463e-12 [s] E=    0.149 [keV] 
+ParallelTTracker {+0}> 09.01.50 Step    280 at    0.011 [mm] t=  8.494e-12 [s] E=    0.151 [keV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP              =   641
+OPAL {+0}> * Qtot            =    1.32687e-02 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    1.50687e-04 [MeV]      dEkin =  1.73246e-04 [MeV]
+OPAL {+0}> * rmax            = (  5.69092e-04 ,  5.62610e-04 ,  8.50478e-05 ) [m]
+OPAL {+0}> * rmin            = ( -5.68474e-04 , -5.64087e-04 , -2.55141e-06 ) [m]
+OPAL {+0}> * rms beam size   = (  2.65066e-04 ,  2.72229e-04 ,  1.37369e-05 ) [m]
+OPAL {+0}> * rms momenta     = (  7.10848e-04 ,  7.01727e-04 ,  1.39636e-02 ) [beta gamma]
+OPAL {+0}> * mean position   = (  9.69288e-06 ,  1.13191e-05 ,  1.09335e-05 ) [m]
+OPAL {+0}> * mean momenta    = (  2.92655e-05 ,  3.71686e-05 ,  1.98499e-02 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  7.70792e-06 ,  7.86487e-06 ,  2.45087e-06 ) (not normalized)
+OPAL {+0}> * rms correlation = (  1.13568e-01 ,  1.29329e-02 ,  9.50632e-01 )
+OPAL {+0}> * hr              = (  7.58377e-05 ,  7.51131e-05 ,  5.83995e-06 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    8.49381e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    1.09335e-05 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.01.50 Step    281 at    0.011 [mm] t=  8.524e-12 [s] E=    0.152 [keV] 
+ParallelTTracker {+0}> 09.01.51 Step    282 at    0.011 [mm] t=  8.554e-12 [s] E=    0.154 [keV] 
+ParallelTTracker {+0}> 09.01.51 Step    283 at    0.011 [mm] t=  8.585e-12 [s] E=    0.154 [keV] 
+ParallelTTracker {+0}> 09.01.52 Step    284 at    0.011 [mm] t=  8.615e-12 [s] E=    0.156 [keV] 
+ParallelTTracker {+0}> 09.01.52 Step    285 at    0.011 [mm] t=  8.645e-12 [s] E=    0.157 [keV] 
+ParallelTTracker {+0}> 09.01.52 Step    286 at    0.012 [mm] t=  8.676e-12 [s] E=    0.160 [keV] 
+ParallelTTracker {+0}> 09.01.53 Step    287 at    0.012 [mm] t=  8.706e-12 [s] E=    0.162 [keV] 
+ParallelTTracker {+0}> 09.01.53 Step    288 at    0.012 [mm] t=  8.736e-12 [s] E=    0.163 [keV] 
+ParallelTTracker {+0}> 09.01.54 Step    289 at    0.012 [mm] t=  8.767e-12 [s] E=    0.165 [keV] 
+ParallelTTracker {+0}> 09.01.54 Step    290 at    0.012 [mm] t=  8.797e-12 [s] E=    0.165 [keV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP              =   685
+OPAL {+0}> * Qtot            =    1.41795e-02 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    1.65438e-04 [MeV]      dEkin =  1.87921e-04 [MeV]
+OPAL {+0}> * rmax            = (  5.69226e-04 ,  5.63779e-04 ,  9.14695e-05 ) [m]
+OPAL {+0}> * rmin            = ( -5.68565e-04 , -5.64050e-04 , -2.74397e-06 ) [m]
+OPAL {+0}> * rms beam size   = (  2.66601e-04 ,  2.71647e-04 ,  1.47971e-05 ) [m]
+OPAL {+0}> * rms momenta     = (  7.11395e-04 ,  7.01295e-04 ,  1.44557e-02 ) [beta gamma]
+OPAL {+0}> * mean position   = (  4.15052e-06 ,  9.56975e-06 ,  1.20252e-05 ) [m]
+OPAL {+0}> * mean momenta    = (  2.46708e-05 ,  4.57453e-05 ,  2.09239e-02 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  7.40178e-06 ,  7.48347e-06 ,  2.57258e-06 ) (not normalized)
+OPAL {+0}> * rms correlation = (  1.16716e-01 ,  2.59565e-02 ,  9.52011e-01 )
+OPAL {+0}> * hr              = (  7.58528e-05 ,  7.51886e-05 ,  6.28090e-06 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    8.79716e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    1.20252e-05 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.01.55 Step    291 at    0.012 [mm] t=  8.827e-12 [s] E=    0.167 [keV] 
+ParallelTTracker {+0}> 09.01.55 Step    292 at    0.012 [mm] t=  8.858e-12 [s] E=    0.169 [keV] 
+ParallelTTracker {+0}> 09.01.55 Step    293 at    0.012 [mm] t=  8.888e-12 [s] E=    0.170 [keV] 
+ParallelTTracker {+0}> 09.01.56 Step    294 at    0.012 [mm] t=  8.918e-12 [s] E=    0.172 [keV] 
+ParallelTTracker {+0}> 09.01.56 Step    295 at    0.013 [mm] t=  8.949e-12 [s] E=    0.173 [keV] 
+ParallelTTracker {+0}> 09.01.57 Step    296 at    0.013 [mm] t=  8.979e-12 [s] E=    0.175 [keV] 
+ParallelTTracker {+0}> 09.01.57 Step    297 at    0.013 [mm] t=  9.010e-12 [s] E=    0.177 [keV] 
+ParallelTTracker {+0}> 09.01.57 Step    298 at    0.013 [mm] t=  9.040e-12 [s] E=    0.178 [keV] 
+ParallelTTracker {+0}> 09.01.58 Step    299 at    0.013 [mm] t=  9.070e-12 [s] E=    0.180 [keV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP              =   722
+OPAL {+0}> * Qtot            =    1.49454e-02 [nC]       Qi    =  2.07000e-05 [nC]
+OPAL {+0}> * Ekin            =    1.80194e-04 [MeV]      dEkin =  2.02144e-04 [MeV]
+OPAL {+0}> * rmax            = (  5.69512e-04 ,  5.63839e-04 ,  9.77861e-05 ) [m]
+OPAL {+0}> * rmin            = ( -5.73984e-04 , -5.63984e-04 , -2.93346e-06 ) [m]
+OPAL {+0}> * rms beam size   = (  2.66738e-04 ,  2.73737e-04 ,  1.58086e-05 ) [m]
+OPAL {+0}> * rms momenta     = (  7.16133e-04 ,  7.02532e-04 ,  1.48998e-02 ) [beta gamma]
+OPAL {+0}> * mean position   = (  2.38574e-06 ,  7.23658e-06 ,  1.31186e-05 ) [m]
+OPAL {+0}> * mean momenta    = (  1.56160e-05 ,  4.88702e-05 ,  2.19672e-02 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  7.14572e-06 ,  7.23883e-06 ,  2.68158e-06 ) (not normalized)
+OPAL {+0}> * rms correlation = (  1.13567e-01 ,  2.33480e-02 ,  9.53192e-01 )
+OPAL {+0}> * hr              = (  7.62331e-05 ,  7.51882e-05 ,  6.71464e-06 ) [m]
+OPAL {+0}> * dh              =    3.00000e-02 [m]
+OPAL {+0}> * t               =    9.07017e-12 [s]        dT    =  3.03350e-14 [s]
+OPAL {+0}> * spos            =    1.31186e-05 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> Dump phase space of last step
 FM2DD {+0}> 
 FM2DD {+0}> * ************ I N F O *********************************************************
 FM2DD {+0}> * freed fieldmap '1T3.T7'                                                      *
@@ -1187,12 +2119,12 @@ FM2DD {+0}> * freed fieldmap '1T1.T7'                                           
 FM2DD {+0}> * ******************************************************************************
 FM2DD {+0}> 
 FM2DD {+0}> 
-OPAL {+0}> done executing ParallelTTracker at 12.55.40
+ParallelTTracker {+0}> done executing ParallelTTracker at 09.01.58
 OPAL {+0}> End of input stream "Scan-1.in".
 Timings{+0}> -----------------------------------------------------------------
 Timings{+0}>      Timing results for 4 nodes:
 Timings{+0}> -----------------------------------------------------------------
-Timings{+0}> mainTimer ........... Wall tot =    86.9098, CPU tot =      85.68
+Timings{+0}> mainTimer ........... Wall tot =    203.261, CPU tot =     190.95
 Timings{+0}> 
 Timings{+0}> Secondary emission .. Wall max =          0, CPU max =          0
 Timings{+0}>                       Wall avg =          0, CPU avg =          0
@@ -1218,21 +2150,21 @@ Timings{+0}> Pre Processing ...... Wall max =          0, CPU max =          0
 Timings{+0}>                       Wall avg =          0, CPU avg =          0
 Timings{+0}>                       Wall min =          0, CPU min =          0
 Timings{+0}> 
-Timings{+0}> SelfField ........... Wall max =    3.37154, CPU max =       3.18
-Timings{+0}>                       Wall avg =    3.36914, CPU avg =       3.09
-Timings{+0}>                       Wall min =    3.36765, CPU min =       2.99
+Timings{+0}> SelfField ........... Wall max =    110.894, CPU max =     103.44
+Timings{+0}>                       Wall avg =    110.875, CPU avg =    103.305
+Timings{+0}>                       Wall min =    110.858, CPU min =     103.21
 Timings{+0}> 
-Timings{+0}> Boundingbox ......... Wall max =   0.044826, CPU max =       0.07
-Timings{+0}>                       Wall avg =  0.0437192, CPU avg =       0.05
-Timings{+0}>                       Wall min =   0.042599, CPU min =       0.02
+Timings{+0}> Boundingbox ......... Wall max =   0.578009, CPU max =       0.51
+Timings{+0}>                       Wall avg =     0.5731, CPU avg =     0.4075
+Timings{+0}>                       Wall min =   0.564122, CPU min =       0.31
 Timings{+0}> 
-Timings{+0}> Statistics .......... Wall max =   0.062034, CPU max =       0.07
-Timings{+0}>                       Wall avg =  0.0594485, CPU avg =       0.05
-Timings{+0}>                       Wall min =   0.057771, CPU min =       0.02
+Timings{+0}> Statistics .......... Wall max =   0.295965, CPU max =       0.32
+Timings{+0}>                       Wall avg =   0.293083, CPU avg =     0.2825
+Timings{+0}>                       Wall min =   0.290639, CPU min =       0.22
 Timings{+0}> 
-Timings{+0}> Potential ........... Wall max =    2.85346, CPU max =       2.73
-Timings{+0}>                       Wall avg =    2.84621, CPU avg =       2.65
-Timings{+0}>                       Wall min =    2.83878, CPU min =       2.56
+Timings{+0}> Potential ........... Wall max =    91.4055, CPU max =      85.37
+Timings{+0}>                       Wall avg =    91.3856, CPU avg =    85.2475
+Timings{+0}>                       Wall min =    91.3707, CPU min =       85.1
 Timings{+0}> 
 Timings{+0}> Histogram ........... Wall max =          0, CPU max =          0
 Timings{+0}>                       Wall avg =          0, CPU avg =          0
@@ -1246,41 +2178,41 @@ Timings{+0}> LoadDistr ........... Wall max =          0, CPU max =          0
 Timings{+0}>                       Wall avg =          0, CPU avg =          0
 Timings{+0}>                       Wall min =          0, CPU min =          0
 Timings{+0}> 
-Timings{+0}> GreensFTotal ........ Wall max =    1.80968, CPU max =        1.7
-Timings{+0}>                       Wall avg =    1.80485, CPU avg =     1.6475
-Timings{+0}>                       Wall min =    1.79505, CPU min =       1.61
+Timings{+0}> GreensFTotal ........ Wall max =     70.261, CPU max =      65.88
+Timings{+0}>                       Wall avg =    70.1384, CPU avg =    65.7975
+Timings{+0}>                       Wall min =    70.0055, CPU min =      65.67
 Timings{+0}> 
-Timings{+0}> IntGreenF1 .......... Wall max =   0.346897, CPU max =       0.31
-Timings{+0}>                       Wall avg =   0.108709, CPU avg =     0.0875
-Timings{+0}>                       Wall min =   0.005662, CPU min =          0
+Timings{+0}> IntGreenF1 .......... Wall max =    16.8592, CPU max =      15.91
+Timings{+0}>                       Wall avg =    5.23863, CPU avg =     4.9575
+Timings{+0}>                       Wall min =   0.248228, CPU min =       0.26
 Timings{+0}> 
-Timings{+0}> IntGreenF2 .......... Wall max =   0.040175, CPU max =       0.03
-Timings{+0}>                       Wall avg =  0.0249565, CPU avg =     0.0175
-Timings{+0}>                       Wall min =   0.018343, CPU min =          0
+Timings{+0}> IntGreenF2 .......... Wall max =     2.3613, CPU max =       2.02
+Timings{+0}>                       Wall avg =   0.920188, CPU avg =     0.8325
+Timings{+0}>                       Wall min =   0.324022, CPU min =       0.32
 Timings{+0}> 
-Timings{+0}> IntGreenF3 .......... Wall max =   0.445361, CPU max =       0.45
-Timings{+0}>                       Wall avg =   0.338818, CPU avg =     0.3275
-Timings{+0}>                       Wall min =   0.094569, CPU min =       0.12
+Timings{+0}> IntGreenF3 .......... Wall max =    20.6577, CPU max =      19.24
+Timings{+0}>                       Wall avg =    15.0418, CPU avg =      14.05
+Timings{+0}>                       Wall min =    2.06843, CPU min =       1.82
 Timings{+0}> 
-Timings{+0}> IntGreenF4 .......... Wall max =   0.266279, CPU max =       0.29
-Timings{+0}>                       Wall avg =   0.255032, CPU avg =     0.2325
-Timings{+0}>                       Wall min =   0.234617, CPU min =       0.19
+Timings{+0}> IntGreenF4 .......... Wall max =    5.00259, CPU max =       4.45
+Timings{+0}>                       Wall avg =    4.82378, CPU avg =      4.305
+Timings{+0}>                       Wall min =    4.71644, CPU min =       4.05
 Timings{+0}> 
-Timings{+0}> ShIntGreenF1 ........ Wall max =   0.344771, CPU max =       0.29
-Timings{+0}>                       Wall avg =   0.107705, CPU avg =        0.1
-Timings{+0}>                       Wall min =   0.006071, CPU min =          0
+Timings{+0}> ShIntGreenF1 ........ Wall max =    16.4621, CPU max =      15.68
+Timings{+0}>                       Wall avg =    5.11508, CPU avg =      4.885
+Timings{+0}>                       Wall min =   0.241686, CPU min =       0.19
 Timings{+0}> 
-Timings{+0}> ShIntGreenF2 ........ Wall max =    0.35753, CPU max =       0.36
-Timings{+0}>                       Wall avg =   0.115851, CPU avg =       0.11
-Timings{+0}>                       Wall min =   0.005239, CPU min =          0
+Timings{+0}> ShIntGreenF2 ........ Wall max =    16.9127, CPU max =       16.1
+Timings{+0}>                       Wall avg =     5.2411, CPU avg =     4.9775
+Timings{+0}>                       Wall min =   0.238264, CPU min =       0.27
 Timings{+0}> 
-Timings{+0}> ShIntGreenF3 ........ Wall max =   0.851751, CPU max =       0.82
-Timings{+0}>                       Wall avg =    0.63326, CPU avg =       0.59
-Timings{+0}>                       Wall min =   0.168917, CPU min =       0.19
+Timings{+0}> ShIntGreenF3 ........ Wall max =    39.5511, CPU max =      37.28
+Timings{+0}>                       Wall avg =    29.4093, CPU avg =    27.8125
+Timings{+0}>                       Wall min =    6.62091, CPU min =       6.16
 Timings{+0}> 
-Timings{+0}> ShIntGreenF4 ........ Wall max =   0.236825, CPU max =       0.21
-Timings{+0}>                       Wall avg =   0.216035, CPU avg =       0.18
-Timings{+0}>                       Wall min =   0.202328, CPU min =       0.14
+Timings{+0}> ShIntGreenF4 ........ Wall max =    4.61379, CPU max =       4.14
+Timings{+0}>                       Wall avg =    4.29768, CPU avg =       3.91
+Timings{+0}>                       Wall min =    4.02342, CPU min =       3.68
 Timings{+0}> 
 Timings{+0}> GreenF1 ............. Wall max =          0, CPU max =          0
 Timings{+0}>                       Wall avg =          0, CPU avg =          0
@@ -1298,29 +2230,29 @@ Timings{+0}> GreenF4 ............. Wall max =          0, CPU max =          0
 Timings{+0}>                       Wall avg =          0, CPU avg =          0
 Timings{+0}>                       Wall min =          0, CPU min =          0
 Timings{+0}> 
-Timings{+0}> H5PartTimer ......... Wall max =   0.263055, CPU max =        0.2
-Timings{+0}>                       Wall avg =   0.255553, CPU avg =     0.1825
-Timings{+0}>                       Wall min =   0.252982, CPU min =       0.17
+Timings{+0}> H5PartTimer ......... Wall max =    1.10455, CPU max =       0.74
+Timings{+0}>                       Wall avg =    1.09208, CPU avg =       0.69
+Timings{+0}>                       Wall min =    1.08714, CPU min =       0.59
 Timings{+0}> 
 Timings{+0}> H5BlockTimer ........ Wall max =          0, CPU max =          0
 Timings{+0}>                       Wall avg =          0, CPU avg =          0
 Timings{+0}>                       Wall min =          0, CPU min =          0
 Timings{+0}> 
-Timings{+0}> StatMarkerTimer ..... Wall max =    0.00836, CPU max =       0.01
-Timings{+0}>                       Wall avg =   0.006446, CPU avg =      0.005
-Timings{+0}>                       Wall min =   0.005801, CPU min =          0
+Timings{+0}> StatMarkerTimer ..... Wall max =   0.027957, CPU max =       0.03
+Timings{+0}>                       Wall avg =  0.0199413, CPU avg =     0.0225
+Timings{+0}>                       Wall min =   0.016947, CPU min =       0.02
 Timings{+0}> 
-Timings{+0}> TIntegration1 ....... Wall max =   0.025413, CPU max =       0.04
-Timings{+0}>                       Wall avg =  0.0241245, CPU avg =      0.025
-Timings{+0}>                       Wall min =   0.023278, CPU min =       0.01
+Timings{+0}> TIntegration1 ....... Wall max =    173.547, CPU max =     162.96
+Timings{+0}>                       Wall avg =     173.51, CPU avg =     162.86
+Timings{+0}>                       Wall min =    173.442, CPU min =     162.76
 Timings{+0}> 
-Timings{+0}> TIntegration2 ....... Wall max =   0.852904, CPU max =       0.89
-Timings{+0}>                       Wall avg =   0.690303, CPU avg =     0.6725
-Timings{+0}>                       Wall min =   0.471899, CPU min =       0.43
+Timings{+0}> TIntegration2 ....... Wall max =    173.849, CPU max =     163.28
+Timings{+0}>                       Wall avg =    173.849, CPU avg =    163.187
+Timings{+0}>                       Wall min =    173.849, CPU min =     163.07
 Timings{+0}> 
-Timings{+0}> Fieldeval ........... Wall max =   0.087661, CPU max =       0.12
-Timings{+0}>                       Wall avg =  0.0832955, CPU avg =      0.105
-Timings{+0}>                       Wall min =   0.079449, CPU min =       0.07
+Timings{+0}> Fieldeval ........... Wall max =   0.187453, CPU max =       0.25
+Timings{+0}>                       Wall avg =   0.186727, CPU avg =     0.1925
+Timings{+0}>                       Wall min =   0.185649, CPU min =       0.16
 Timings{+0}> 
 Timings{+0}> Binaryrepart ........ Wall max =          0, CPU max =          0
 Timings{+0}>                       Wall avg =          0, CPU avg =          0
@@ -1330,24 +2262,24 @@ Timings{+0}> WakeField ........... Wall max =          0, CPU max =          0
 Timings{+0}>                       Wall avg =          0, CPU avg =          0
 Timings{+0}>                       Wall min =          0, CPU min =          0
 Timings{+0}> 
-Timings{+0}> RC-RRtranspose ...... Wall max =   0.171396, CPU max =       0.15
-Timings{+0}>                       Wall avg =   0.142011, CPU avg =     0.1125
-Timings{+0}>                       Wall min =   0.101135, CPU min =       0.06
+Timings{+0}> RC-RRtranspose ...... Wall max =    7.01201, CPU max =       6.34
+Timings{+0}>                       Wall avg =    6.55695, CPU avg =     6.1425
+Timings{+0}>                       Wall min =    5.96959, CPU min =       5.76
 Timings{+0}> 
-Timings{+0}> RC-CCtranspose ...... Wall max =   0.544801, CPU max =       0.49
-Timings{+0}>                       Wall avg =   0.534639, CPU avg =       0.48
-Timings{+0}>                       Wall min =   0.527387, CPU min =       0.46
+Timings{+0}> RC-CCtranspose ...... Wall max =    16.1053, CPU max =      14.43
+Timings{+0}>                       Wall avg =    15.7208, CPU avg =     14.145
+Timings{+0}>                       Wall min =    15.2726, CPU min =       13.7
 Timings{+0}> 
-Timings{+0}> RC-RC1Dfft .......... Wall max =   0.251933, CPU max =       0.26
-Timings{+0}>                       Wall avg =   0.245702, CPU avg =     0.2325
-Timings{+0}>                       Wall min =   0.242661, CPU min =       0.21
+Timings{+0}> RC-RC1Dfft .......... Wall max =    1.80522, CPU max =       1.77
+Timings{+0}>                       Wall avg =    1.76418, CPU avg =       1.65
+Timings{+0}>                       Wall min =    1.70632, CPU min =       1.49
 Timings{+0}> 
-Timings{+0}> RC-CC1Dfft .......... Wall max =   0.467405, CPU max =       0.54
-Timings{+0}>                       Wall avg =   0.448992, CPU avg =       0.45
-Timings{+0}>                       Wall min =   0.417064, CPU min =       0.38
+Timings{+0}> RC-CC1Dfft .......... Wall max =   0.960568, CPU max =       0.91
+Timings{+0}>                       Wall avg =   0.848639, CPU avg =     0.7925
+Timings{+0}>                       Wall min =    0.75651, CPU min =        0.6
 Timings{+0}> 
-Timings{+0}> RC-total ............ Wall max =    1.42231, CPU max =       1.39
-Timings{+0}>                       Wall avg =    1.38689, CPU avg =      1.285
-Timings{+0}>                       Wall min =    1.33058, CPU min =       1.15
+Timings{+0}> RC-total ............ Wall max =    27.3438, CPU max =      24.63
+Timings{+0}>                       Wall avg =    26.4591, CPU avg =     24.025
+Timings{+0}>                       Wall min =     25.577, CPU min =      23.54
 Timings{+0}> 
 Timings{+0}> -----------------------------------------------------------------
