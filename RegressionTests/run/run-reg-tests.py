@@ -68,6 +68,7 @@ def callback(arg, dirname, fnames):
                 if runtests:
                     if not simname in runtests:
                         rep.appendReport("User decided to skip regression test %s \n" % simname)
+                        rep.appendReport("\n\n")
                         return
 
                 d = datetime.date.today()
@@ -83,6 +84,7 @@ def callback(arg, dirname, fnames):
                 rt.run(simulation_report, arg[1])
                 totalNrTests += rt.totalNrTests
                 totalNrPassed += rt.totalNrPassed
+                rep.appendReport("\n\n")
 
 def bailout(runAsUser):
     rep = Reporter()
@@ -103,6 +105,8 @@ def bailout(runAsUser):
 
 def main(argv):
     rep = Reporter()
+    d = datetime.date.today()
+    rep.appendReport("Results: http://amas.web.psi.ch/regressiontests/results_%s_%s_%s.xml \n\n" % (d.day, d.month, d.year))
     #various paths needed
     www_folder = "/afs/psi.ch/project/amas/www/regressiontests"
     os.chdir(sys.path[0]) #chdir to path of script
