@@ -1,0 +1,51 @@
+Option, TFS=FALSE;
+Option, ECHO=FALSE;
+Option, PSDUMPFREQ=50;
+
+Title,string="iw2 transfer line CAD-Zeichnung 0-00101.25.336F";
+
+Edes=0.0724976;
+gamma=(Edes+PMASS)/PMASS;
+beta=sqrt(1-(1/gamma^2));
+gambet=gamma*beta;
+P0 = gamma*beta*PMASS;
+brho = (PMASS*1.0e9*gambet) / CLIGHT;
+
+value,{gamma,brho,Edes,beta,gambet};
+
+KX1IPHYS: SurfacePhysics, TYPE="Collimator",MATERIAL="Cu";
+KX2IPHYS: SurfacePhysics, TYPE="Collimator",MATERIAL="Graphite";
+KX3IPHYS: SurfacePhysics, TYPE="Collimator",MATERIAL="Mo";
+
+SM3:SBEND,L=1.8300,ELEMEDGE=0.62+0.04,E1=30,K0=-10.3592/10,K1=0.0055,FMAPFN='FSM4.T7',DESIGNENERGY=72.5026,E2=29;
+SM4:SBEND,L=1.8300,ELEMEDGE=1.840+0.04+4.286,E1=30,K0=-10.3592/10,K1=0.0055,FMAPFN='FSM4.T7',DESIGNENERGY=72.5026,E2=29;
+AXA:SBEND,L=0.600,ELEMEDGE=4.5440+0.03+4.286,E1=-2.7,K0=1.96907/10,FMAPFN='FAXA.T7',DESIGNENERGY=72.5026,E2=0.0;
+
+IW2Line: Line= (SM3,SM4,AXA);
+
+qb=0.0;
+rf=50.6328e6;  
+
+Dist1405bin:DISTRIBUTION, DISTRIBUTION=binomial,
+sigmax=0.0018, sigmapx=39.128, corrx=0.449, mx=20000.0,
+sigmay=0.001469, sigmapy=26, corry=0.9, my=20000.0,
+t=0.0032, sigmat=0.0032, pt=72.4976E6, sigmapt=22, corrt=0.3, mt=20000.0,r62=0.1, r61=-0.8, r51=-0.6,r52=-0.83;
+
+
+
+Fs1:FIELDSOLVER, FSTYPE=FFT, MX=32, MY=32, MT=32, 
+		 PARFFTX=true, PARFFTY=true, PARFFTT=true,
+		 BCFFTX=open, BCFFTY=open, BCFFTT=open, 
+  		 BBOXINCR=1, GREENSF=STANDARD;
+
+
+beam1: BEAM, PARTICLE=PROTON, pc=P0, NPART=500, BCURRENT=0.55e-03, BFREQ=rf, CHARGE=1;
+
+Select, Line=IW2Line;
+
+track,line=IW2Line, beam=beam1, MAXSTEPS=900000, DT=5.0e-11, ZSTOP=90.0;
+ run, method = "PARALLEL-T", beam=beam1, fieldsolver=Fs1, distribution=Dist1405bin;
+endtrack;
+
+Quit;
+

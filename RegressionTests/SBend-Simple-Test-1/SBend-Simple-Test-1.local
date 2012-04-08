@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd $REG_TEST_DIR
+mpirun -np 1 $OPAL_EXE_PATH/opal SBend-Simple-Test-1.in --commlib mpi --info 9 --warn 0 2>&1 

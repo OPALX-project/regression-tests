@@ -1,0 +1,291 @@
+Option, ECHO=FALSE;
+Option, INFO=FALSE;
+Option, AUTOPHASE=0;
+
+Title, string="SBend Test";
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//******************************************************************************************************************
+//******************************************************************************************************************
+// GLOBAL PARAMETERS
+//
+// Here we define some global simulation parameters.
+
+RF_FREQUENCY = 700.0e6;			     // Reference frequency of problem (Hz).
+RF_WAVELENGTH = CLIGHT / RF_FREQUENCY; 	     // Reference wavelength (m).
+
+Q_E = 1.60217653e-19;  	 		     // Elementary charge (C).
+E_MASS = 9.10938188e-31;		     // Mass of electron (kg).
+
+
+BEAM_BUNCH_CHARGE = 0.0e-15;     // Beam bunch charge (C).
+NUMBER_OF_PARTICLES = 10000; // Number of particles in simulation
+
+PS_DUMP_FREQUENCY = 1000;     // How often (time steps) that the phase space of the beam is output.
+STAT_DUMP_FREQUENCY = 10; // How often (time steps) beam statistical properties are output.
+
+value, {RF_FREQUENCY,
+        RF_WAVELENGTH,
+        BEAM_BUNCH_CHARGE,
+	NUMBER_OF_PARTICLES,
+	PS_DUMP_FREQUENCY,
+	STAT_DUMP_FREQUENCY};
+
+//============================================
+// Timestep information.
+//================================================
+
+// Time steps defined.
+//\\\\\\\\\\\\\\\\\\\\
+
+TIME_STEP_1 = 2.0 * 1.0e-12;   // Time step (s). We only need one for this simulation.
+
+value, {TIME_STEP_1};
+	
+//******************************************************************************************************************
+//******************************************************************************************************************
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//******************************************************************************************************************
+//******************************************************************************************************************
+// FIELD SOLVERS
+//
+// Here we define the field solvers (FS) to be used in the simulation.
+
+// First define the space charge (SC) mesh.
+
+// Space charge mesh.
+FS_SC1_X_BINS = 8; // Number of mesh bins in x direction for space charge field solver.
+FS_SC1_Y_BINS = 8; // Number of mesh bins in y direction for space charge field solver.
+FS_SC1_Z_BINS = 8; // Number of mesh bins in z direction for space charge field solver.
+
+value, {FS_SC1_X_BINS,
+        FS_SC1_Y_BINS,
+	FS_SC1_Z_BINS};
+
+
+//******************************************************************************************************************
+//******************************************************************************************************************
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//******************************************************************************************************************
+//******************************************************************************************************************
+// BEAM LINE
+//
+// Here we define lengths, positions, phases, field multipliers/strengths etc. for the various components of the
+// accelerator.
+
+// Beam line offset. This is global shift of the entire line (m).
+//===============================================================
+global_shift = 1.0;
+
+
+// Bend.
+//
+// We have one bend in the system for checking CSR
+// calculations.
+//================================================
+
+// Drift before bend (m).
+drift_before_bend = 0.25;
+
+// Drift after bend (m).
+drift_after_bend = 0.5;
+
+// Bend angle (degrees).
+bend_angle = 45.0;
+
+// Bend rotation about z axis (degrees).
+bend_rotation = 90.0;
+
+// Bend entrance angle (degrees).
+bend_e1 = 22.5;
+
+// Bend exit angle (degrees).
+bend_e2 = 22.5;
+
+// Bend gradient index (m^-1).
+bend_gradient = 0.0;
+
+// Bend design energy (MeV).
+bend_energy = 7.0;
+
+// Bend length (m).
+bend_length = 0.76536686473;
+
+// Bend gap (m).
+bend_gap = 0.02;
+
+
+value, {drift_before_bend,
+        bend_angle,
+	bend_rotation,
+	bend_e1,
+	bend_e2,
+	bend_energy,
+	bend_length,
+	bend_gap};
+
+//******************************************************************************************************************
+//******************************************************************************************************************
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//******************************************************************************************************************
+//******************************************************************************************************************
+// DEFINE FIELD SOLVERS
+//
+// Here we define field solvers (FS) using the parameters defined in the layout section.
+
+// First space charge field solver.
+
+FS_SC1: Fieldsolver, FSTYPE = NONE, MX = FS_SC1_X_BINS, MY = FS_SC1_Y_BINS, MT = FS_SC1_Z_BINS,
+		     PARFFTX = false, PARFFTY = false, PARFFTT = true,
+		     BCFFTX = open, BCFFTY = open, BCFFTT = open,
+		     BBOXINCR = 2, GREENSF = INTEGRATED;
+
+
+//******************************************************************************************************************
+//******************************************************************************************************************
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//******************************************************************************************************************
+//******************************************************************************************************************
+// COMPONENTS
+//
+// Here we define the actual accelerator components using the parameters from the layout section.
+//******************************************************************************************************************
+
+
+// Begin: Bend ///////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Definition of bend Bend.
+//
+
+// Dipole
+//
+// L:			physical element length (real in m)
+// K0: 		     	y magnetic field (real)
+// FMAPFN:	     	field file name (string)
+// ELEMEDGE:	     	physical start of the element on the floor (real in m)
+// ALPHA:            	entrance angle (degrees). Exit angle is calculated automatically (bend is rectangular).
+// DESIGNENERGY:     	energy of design beam
+// WAKEF:		wake function attached to dipole
+//
+
+Bend: SBend, ANGLE = bend_angle,
+   	     ROTATION = bend_rotation,
+	     E1 = bend_e1,
+	     E2 = bend_e2,
+	     K1 = bend_gradient,
+	     FMAPFN = "1DPROFILE1-DEFAULT",
+	     ELEMEDGE = global_shift + drift_before_bend,
+	     DESIGNENERGY = bend_energy,
+	     L = bend_length,
+	     GAP = bend_gap;
+
+
+// Calculate position of end of Bend.
+bend_end = global_shift + drift_before_bend + bend_length + drift_after_bend;
+
+value, {bend_end};
+
+// End: Bend ///////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//******************************************************************************************************************
+//******************************************************************************************************************
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//******************************************************************************************************************
+//******************************************************************************************************************
+// DEFINE BEAM LINES
+//
+// Here we define beam lines using previously defined elements.
+
+Beamline: Line = (bend);
+
+
+//******************************************************************************************************************
+//******************************************************************************************************************
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//******************************************************************************************************************
+//******************************************************************************************************************
+// INITIAL DISTRIBUTIONS
+//
+// Initial beam distributions.
+//
+// These are defined depending on how many particles are used and by what initial beam distribution files
+// are available.
+
+if (NUMBER_OF_PARTICLES == 10000) {
+
+   // Distribution at start.
+   Initial_Distribution: DISTRIBUTION, DISTRIBUTION = FROMFILE,
+			 	       FNAME = "SBend-Simple-Test-3.dat";
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//******************************************************************************************************************
+//******************************************************************************************************************
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//******************************************************************************************************************
+//******************************************************************************************************************
+// RUN SIMULATION
+//
+// Here we start simulation.
+
+MINSTEPFORREBIN = 750;
+
+Option, PSDUMPFREQ = PS_DUMP_FREQUENCY;
+Option, STATDUMPFREQ = STAT_DUMP_FREQUENCY;
+
+
+//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+// Here we define beam that will be transported.
+//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+beam_1: BEAM, PARTICLE = ELECTRON, 
+	      pc = P0, 
+	      NPART = NUMBER_OF_PARTICLES, 
+	      BFREQ = RF_FREQUENCY,
+      	      BCURRENT = BEAM_BUNCH_CHARGE * RF_FREQUENCY,
+	      CHARGE = -1;
+
+
+//\\\\\\\\\\\\\\\\
+// Run simulation.
+//\\\\\\\\\\\\\\\\
+
+TRACK, LINE = Beamline, 
+       BEAM = beam_1, 
+       MAXSTEPS = 1000000, 
+       DT = TIME_STEP_1,
+       ZSTOP = bend_end;
+
+RUN, METHOD = "PARALLEL-T", 
+     BEAM = beam_1, 
+     FIELDSOLVER = FS_SC1, 
+     DISTRIBUTION = Initial_Distribution;
+
+ENDTRACK;
+
+Stop;
+Quit;

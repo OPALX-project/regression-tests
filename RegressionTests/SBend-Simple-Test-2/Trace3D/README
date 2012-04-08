@@ -1,0 +1,20 @@
+This test was checked with the linear matrix optics code, Trace3D. Trace3D is
+an interactive graphical program and a screen shot of the short beam line for
+this test is included in this directory.
+
+Trace3D uses the following units:
+
+Length:      	 	   mm
+Emittance (transverse):    mm-mrad
+Emittance (longitudinal):  degress-keV
+
+Trace3D uses and diplays the unnormalized emittance. To convert the transverse
+emittance that Trace3D diplays to OPAL values multiply them by:
+
+14.66
+
+The longitudinal emittance is in degrees-keV, where the degrees refer to the
+reference RF frequency, which is 700 MHz in this case. To convert the
+longitudinal emittance in Trace3D to the OPAL units, multiply by:
+
+2.278 x 10^-6
