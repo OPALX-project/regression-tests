@@ -33,7 +33,7 @@ sigmax = 0.0005455, sigmapx = 0.0, corrx = 0.0,
 sigmay = 0.0005455, sigmapy = 0.0, corry = 0.0,
 sigmat = 0.0, pt = 0.0, sigmapt = 0.0, corrt = 0.0, tRise=4.15e-12, tFall=4.15e-12, tPulseFWHM=6.2e-12, ekin=0.4, NBIN=5, DEBIN=80;
 
-Fs1:FIELDSOLVER, FSTYPE=FFT, MX=16, MY=16, MT=16, 
+Fs1:FIELDSOLVER, FSTYPE=FFT, MX=8, MY=8, MT=8, 
 		 PARFFTX=true, PARFFTY=true, PARFFTT=true,
 		 BCFFTX=open, BCFFTY=open, BCFFTT=open, 
                  BBOXINCR=3, GREENSF=INTEGRATED;
@@ -62,12 +62,11 @@ WHILE (I < 3) {
    l1:   Line = (gun,sp1,sp2,sp3,sp4,sp5); 
 
    SELECT, Line=l1;
-   TRACK,line=l1, beam=beam1, MAXSTEPS=100, DT=1.0e-12;
+   TRACK,line=l1, beam=beam1, MAXSTEPS=100, DT=1.0e-11;
     RUN, method = "PARALLEL-T", beam=beam1, fieldsolver=Fs1, distribution:=Dist1;
    ENDTRACK;
 
-   //SYSTEM,"mkdir -p Scan-" & STRING(I);
-   //SYSTEM,"mv Scan.h5 Scan.stat Scan.lbal Scan-" & STRING(I);
+   //SYSTEM,"cp Scan-1.stat  Scan-1-" & STRING(I);
 
    I=EVAL(I+1.0);	
 }
