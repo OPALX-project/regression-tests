@@ -1,3 +1,2 @@
 #!/bin/bash
-FN=`basename $PWD`.in
-mpirun -np 1 $OPAL_EXE_PATH/opal $FN --commlib mpi --info 0 --warn 0 2>&1
+mpirun -np 1 $OPAL_EXE_PATH/opal DCGun-Cornell-1.in --commlib mpi --info 0 --warn 0 2>&1
