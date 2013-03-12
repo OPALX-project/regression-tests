@@ -1,0 +1,53 @@
+Option, ECHO=TRUE;
+//////////////////////////////////////////////////////////////////////////////
+// Input file for single bunch tracking through ERIT FFAG ring              //
+//////////////////////////////////////////////////////////////////////////////
+Title,string="ERIT test simulation using OPAL code";
+Option, ASCIIDUMP=TRUE;
+
+Edes=0.011;
+e_tot = (Edes+PMASS);
+p_tot = (e_tot^2-PMASS^2)^0.5;
+gamma = e_tot/PMASS;
+beta = p_tot/e_tot;
+gambet = gamma*beta;
+P0 = gamma*beta*PMASS;
+brho = (PMASS*1.0e9*gambet) / CLIGHT;
+x_closed_orbit = 2349.008;
+
+// print to terminal
+value,{gamma,brho,Edes,beta,gambet,x_closed_orbit};
+
+n_turns=100.0;
+revolution_period=327;
+
+step_size=0.1; // ns
+max_steps=n_turns*revolution_period/step_size;
+steps_per_turn=revolution_period/step_size;
+frequency=6000/revolution_period;
+
+value,{step_size_mm,n_turns,revolution_period,step_size};
+
+Probe1: PROBE, xstart=0, xend=+4000., ystart=0, yend=0.;
+
+ringdef: RINGDEFINITION, HARMONIC_NUMBER=6, LATTICE_RINIT=2350.0, LATTICE_PHIINIT=0.0,
+         LATTICE_THETAINIT=0.0, BEAM_PHIINIT=0.0, BEAM_PRINIT=0.0,
+         BEAM_RINIT=x_closed_orbit, SYMMETRY=8.0, RFFREQ=frequency, IS_CLOSED=true;
+
+triplet: SBEND3D, FMAPFN="data/OpalRingTest.field", LENGTH_UNITS=10., FIELD_UNITS=-1e-4;
+
+l1: Line = (ringdef, probe1, probe2, triplet);
+
+Dist1: DISTRIBUTION, DISTRIBUTION=fromfile, FNAME="data/beam.dat";
+
+Fs1:FIELDSOLVER, FSTYPE=FFT, MX=32, MY=32, MT=32, 
+		 PARFFTX=true, PARFFTY=true, PARFFTT=false,
+		 BCFFTX=open, BCFFTY=open, BCFFTT=open,BBOXINCR=2;
+
+beam1: BEAM, PARTICLE=PROTON, pc=P0, SPACECHARGE=false, NPART=30, BCURRENT=1.0E-19, CHARGE=1.0, BFREQ=frequency;
+
+track, line=l1, beam=beam1,MAXSTEPS=max_steps,STEPSPERTURN=steps_per_turn;
+run, file = "track_output", turns = 1, method = "CYCLOTRON-T", beam=beam1,
+     fieldsolver=Fs1, distribution=Dist1;
+endtrack;
+Stop;
