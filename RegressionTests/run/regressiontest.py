@@ -3,9 +3,11 @@ if sys.version_info < (3,0):
     import commands as subprocess
 else:
     import subprocess
+import glob
 import datetime
 import os
 import time
+import sys
 
 from reporter import Reporter
 from reporter import TempXMLElement
@@ -45,16 +47,29 @@ class RegressionTest:
         rep.appendChild(root)
 
         tests = tests[1::] #strip first line
-        for test in tests:
-            self.totalNrTests += 1
-            test_root = TempXMLElement("Test")
-            passed = self.checkTest(test, test_root)
-            if passed:
-                self.totalNrPassed += 1
-            root.appendChild(test_root)
+        for i, test in enumerate(tests):
+            try:
+                self.totalNrTests += 1
+                test_root = TempXMLElement("Test")
+                passed = self.checkTest(test, test_root)
+                if passed:
+                    self.totalNrPassed += 1
+                root.appendChild(test_root)
+            except Exception:
+                exc_info = sys.exc_info()
+                sys.excepthook(*exc_info)
+                rep.appendReport(
+                    "Error: failed to parse "+self.simname+".rt file line "+\
+                    str(i+2)+"\n    "+str(test)+"\nPython reports\n  "+\
+                    str(exc_info[1])+"\n\n"
+                )
+                sys.exc_clear()
 
 
     def mpirun(self):
+        if not os.access(self.simname+".local", os.X_OK):
+            rep = Reporter()
+            rep.appendReport("Error: "+self.simname+".local file could not be executed\n")
         run = "./" + self.simname + ".local | tee " + self.simname + "-RT.o"
         print(subprocess.getoutput(run))
         self.jobnr = 0
@@ -62,6 +77,9 @@ class RegressionTest:
 
     """
     handler for comparison of various output files with reference files
+
+    Note that we do something different for loss tests as the file name in
+    general is not <simname>.loss, rather it is <element_name>.loss
     """
     def checkTest(self, test, root):
         nameparams = str.split(test,"\"")
@@ -74,9 +92,11 @@ class RegressionTest:
             rtest = OutTest(var, params[0], float(params[1]), self.simname)
         elif "lbal" in test:
             rtest = LbalTest(var, params[0], float(params[1]), self.simname)
+        elif test.split()[0][-4:] == "loss":
+            rtest = LossTest(var, params[0], float(params[1]), test.split()[0])
         else:
             rep = Reporter()
-            rep.appendReport("Error: unknown test type %s " % testparams[0])
+            rep.appendReport("Error: unknown test type %s\n" % nameparams[0])
             return False
 
         return rtest.performTest(root)
@@ -148,8 +168,17 @@ class RegressionTest:
             allok = statout == self.simname + ".stat: OK" and outout == self.simname + ".out: OK" and lbalout == self.simname + ".lbal: OK"
 
         else:
-            rep.appendReport("\t Error: reference dir is incomplete! \n")
-
+            rep_string = "\t Error: reference dir for "+self.simname+" is incomplete!\n"
+            for file_suffix in [".stat", ".stat.md5",
+                                ".out", ".out.md5",
+                                ".lbal", ".lbal.md5"]:
+                file_name = self.simname+file_suffix
+                rep_string += "\t\t "+file_name+" "+str(os.path.isfile(file_name))+"\n"
+            rep.appendReport(rep_string)
+        for loss_file in glob.glob("*.loss"):
+            lossout = subprocess.getoutput("md5sum --check " + loss_file+".md5")
+            rep.appendReport("\t Checksum for reference %s \n" % lossout)
+            allok = allok and lossout == loss_file+": OK"
         os.chdir(olddir)
         return allok
 
@@ -497,4 +526,142 @@ class LbalTest:
 
         return False
 
+class LossTest:
+    """
+    A regression test based on .loss type files, specifically for PROBE elements
+    Member data:
+        - variable: the variable to be checked. Options are "x",  "y",  "z",
+                    "px",  "py",  "pz", "track_id", "turn",  "time"
+        - quantity: string that defines how the variable should be handled.
+          Options are "all" (other options not implemented)
+          + "all" test fails if any particles in any plane in the loss
+            file have variable - variable_(ref) > tolerance
+        - tolerance: floating point tolerance (absolute)
+        - file_name: name of the loss file to be checked
+    Note that
+        - Output in the loss file is assumed to be that of a PROBE element. 
+        - If a line of output is not compatible with PROBE output, test
+          will ignore the line (not fail).
+        - Test will always fail if no valid data was found in the loss file
+          or the loss file could not be opened.
+        - Particles are grouped into plane according to a unique combination
+          of <Turn id> and <Element id>
+    """
+
+    def __init__(self, variable, quantity, tolerance, loss_file_name):
+        """
+        Initialise the test
+        """
+        self.rep = Reporter()
+        self.variable = variable
+        if self.variable in self.variable_list.keys():
+            self.variable_int = self.variable_list[self.variable]
+        else:
+            raise KeyError(str(self.variable)+\
+                  " is not a valid variable type for loss file tests."+\
+                  " Try one of "+str(self.variable_list.keys()))
+        self.mode = quantity
+        self.test = None
+        if self.mode in self.mode_list.keys():
+            self.test = self.mode_list[self.mode]
+        else:
+            raise KeyError("Did not recognise LossTest mode "+str(self.mode)+\
+                           " Try one of "+str(self.mode_list.keys()))
+        self.tolerance = tolerance
+        self.file_name = loss_file_name
+
+    def performTest(self, root):
+        """
+        Run the test and add output to the report
+        """
+        test_result = self.test(self) # note test() is a function pointer set at
+                                      # initialisation
+        self.report(root, *test_result)
+
+    def report(self, root, has_passed, delta):
+        """
+        Add an entry to the XML document corresponding to the test result
+            - root node in an XML document tree? Not sure
+            - has_passed bool indicating whether the test passed or failed
+            - delta ?
+        """
+        root.addAttribute("type", "loss")
+        root.addAttribute("var", self.variable)
+        root.addAttribute("mode", self.mode)
+        passed_report = TempXMLElement("passed")
+        eps_report = TempXMLElement("eps")
+        delta_report = TempXMLElement("delta")
+        plot_report = TempXMLElement("plot")
+
+        passed_report.appendTextNode(str(has_passed).lower())
+        delta_report.appendTextNode(str(delta))
+        eps_report.appendTextNode(str(self.tolerance))
+
+        root.appendChild(passed_report)
+        root.appendChild(delta_report)
+
+
+    def testAll(self):
+        """
+        Read line-by-line through the loss file and check reference data against
+        test data
+
+        Return is a tuple like if data is out of tolerance
+        """
+        test = open(self.file_name)
+        ref = open("reference/"+self.file_name)
+        n = 1.
+        sum_squares = 0.
+        test_pass = True
+        while True:
+            test_data, ref_data = 'parse_error', 'parse_error'
+            while test_data == 'parse_error':
+                test_data = self.readOneLine(test.readline())[2]
+            while ref_data == 'parse_error':
+                ref_data = self.readOneLine(ref.readline())[2]
+            # if any file ends, both files must end (or we fail)
+            if test_data == 'end_of_file' or ref_data == 'end_of_file':
+                return (test_pass and \
+                        test_data == 'end_of_file' and\
+                        ref_data == 'end_of_file', str(sum_squares**0.5/n))
+            else:
+                test_value = abs(test_data - ref_data)
+                sum_squares += test_value**2
+                n += 1.
+                test_pass = test_pass and test_value < self.tolerance
+
+
+    def testLast(self):
+        raise NotImplementedError("LossTest.testLast not implemented yet")
+
+    def testError(self):
+        raise NotImplementedError("LossTest.testError not implemented yet")
+
+    def testMean(self):
+        raise NotImplementedError("LossTest.testMean not implemented yet")
+
+    def readOneLine(self, line):
+        """
+        Parse one line of the loss file.
+
+        Assume data format like element_id x y z px py pz track_id turn time 
+
+        Returns a tuple like (element, turn, variable), 'end_of_file' if the
+        file ended or 'parse_error' if the line could not be parsed.
+        """
+        if line == '':
+            return (0, 0, 'end_of_file')
+        try:
+            words = line.rstrip('\n').split(' ')
+            words = [x for x in words if x != '']
+            dynamic_variable = words[self.variable_int]
+            output = (words[0], int(words[8]), float(dynamic_variable))
+            return output
+        except Exception:
+            return (0, 0, 'parse_error')
+
+    variable_list = {"x":1, "y":2, "z":3, "px":4, "py":5, "pz":6,
+                     "track_id":7, "turn":8, "time":9}
+    mode_list = {"last":testLast, "all":testAll, "error":testError,
+                     "avg":testMean}
 
