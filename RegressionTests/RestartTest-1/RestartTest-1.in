@@ -92,9 +92,22 @@ Fs1:FIELDSOLVER, FSTYPE = FFT, MX = 32, MY = 32, MT = 64,
 // End: Fieldsolver ////////////////////////////////////////////
 
 Dist1:DISTRIBUTION, DISTRIBUTION = "GUNGAUSSFLATTOPTH",
-sigmax = 0.000395, sigmapx = 0.0, corrx = 0.0,
-sigmay = 0.000395, sigmapy = 0.0, corry = 0.0,
-sigmat = 0.0, pt = 0.0, sigmapt = 0.0, corrt = 0.0, tRise=7.45e-12, tFall=7.45e-12, tPulseFWHM=10.4e-12, ekin=0.4, NBIN=5, DEBIN=30;
+		    sigmax = 0.000395,
+		    sigmapx = 0.0,
+		    corrx = 0.0,
+		    sigmay = 0.000395,
+		    sigmapy = 0.0,
+		    corry = 0.0,
+		    sigmat = 0.0,
+		    pt = 0.0,
+		    sigmapt = 0.0,
+		    corrt = 0.0,
+		    tRise = 7.45e-12,
+		    tFall = 7.45e-12,
+		    tPulseFWHM = 10.4e-12,
+		    ekin = 0.4,
+		    NBIN = 5,
+		    DEBIN = 30;
 
 beam1: BEAM, PARTICLE = ELECTRON, pc = P0, NPART = 20000, BFREQ = BF , BCURRENT = BC, CHARGE = -1;
 

@@ -1,7 +1,5 @@
 Option, ECHO=FALSE;
-Option, TFS=FALSE;
 Option, PSDUMPFREQ=20;
-Option, FINEEMISSION=FALSE;
 //Option, AUTOPHASE=10;
 
 Title,string="OPAL External field test";
@@ -63,9 +61,23 @@ Dist2:DISTRIBUTION, DISTRIBUTION=fromfile, FNAME="ReferenceParticles.dat";
 
 
 Dist1:DISTRIBUTION, DISTRIBUTION = "GUNGAUSSFLATTOPTH",
-sigmax = 0.000395, sigmapx = 0.0, corrx = 0.0,
-sigmay = 0.000395, sigmapy = 0.0, corry = 0.0,
-sigmat = 0.0, pt = 0.0, sigmapt = 0.0, corrt = 0.0, tRise=7.45e-12, tFall=7.45e-12, tPulseFWHM=10.4e-12, ekin=0.4, NBIN=10, DEBIN=80;
+		    sigmax = 0.000395,
+		    sigmapx = 0.0,
+		    corrx = 0.0,
+		    sigmay = 0.000395,
+		    sigmapy = 0.0,
+		    corry = 0.0,
+		    sigmat = 0.0,
+		    pt = 0.0,
+		    sigmapt = 0.0,
+		    corrt = 0.0,
+		    tRise=7.45e-12,
+		    tFall=7.45e-12,
+		    tPulseFWHM=10.4e-12,
+		    ekin=0.4,
+		    NBIN=10,
+		    DEBIN=80;
+
 
 /*
  We can specity ONE field solver object

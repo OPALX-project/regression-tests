@@ -27,11 +27,23 @@ l1: Line = (FINSS_RGUN,FIND1_MSOL10,END);
 // Define initial uniform beam distribution (== laser distribution)
 // or use test particles for autophasing
 Dist1:DISTRIBUTION, DISTRIBUTION = "GUNGAUSSFLATTOPTH",
-    sigmax = 0.000275 * 2., sigmapx = 0.0, corrx = 0.0,
-    sigmay = 0.000275 * 2., sigmapy = 0.0, corry = 0.0,
-    sigmat = 0.0, pt = 0.0, sigmapt = 0.0, corrt = 0.0, ekin = 0.63,
-    tRise = 0.7e-12, tFall = 0.7e-12, tPulseFWHM = 9.9e-12,
-    NBIN = 50, DEBIN = 80, nbin = 101;
+    		    sigmax = 0.000275 * 2.,
+		    sigmapx = 0.0,
+		    corrx = 0.0,
+    		    sigmay = 0.000275 * 2.,
+		    sigmapy = 0.0,
+		    corry = 0.0,
+    		    sigmat = 0.0,
+		    pt = 0.0,
+		    sigmapt = 0.0,
+		    corrt = 0.0,
+		    ekin = 0.63,
+    		    tRise = 0.7e-12,
+		    tFall = 0.7e-12,
+		    tPulseFWHM = 9.9e-12,
+    		    NBIN = 50,
+		    DEBIN = 80,
+		    nbin = 101;
 
 MINSTEPFORREBIN = 300;
 
