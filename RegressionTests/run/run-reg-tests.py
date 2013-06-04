@@ -107,11 +107,17 @@ def main(argv):
     rep = Reporter()
     d = datetime.date.today()
     rep.appendReport("Results: http://amas.web.psi.ch/regressiontests/results_%s_%s_%s.xml \n\n" % (d.day, d.month, d.year))
+
     #various paths needed
-    www_folder = "/afs/psi.ch/project/amas/www/regressiontests"
+
+    www_folder = os.getenv("REGTEST_WWW")
+    if www_folder is None:
+        www_folder = "/afs/psi.ch/project/amas/www/regressiontests"
+
     os.chdir(sys.path[0]) #chdir to path of script
     rundir = os.getcwd()
     regdir = '/run'.join((rundir.split("/run"))[0:-1])
+
     #FIXME
     srcdir = os.getenv("OPAL_ROOT")
     if srcdir is None:
@@ -125,7 +131,8 @@ def main(argv):
     runAsUser = False
     runtests = list()
     run_local = False
-
+    publish_local = True
+    
     if "--run-local" in argv:
         run_local = True
 
@@ -219,6 +226,23 @@ def main(argv):
 
         #update doxygen
         OpalDoxygen()
+
+    if publish_local:
+        failedtests = rep.NrFailed()
+        brokentests = rep.NrBroken()
+        webfilename = "results_%s_%s_%s.xml" % (d.day, d.month, d.year)
+        subprocess.getoutput("cp results.xml " + www_folder + "/" + webfilename)
+        subprocess.getoutput("mv plots_" + d.isoformat() + " " + www_folder + "/")
+        indexhtml = open(www_folder + "/index.html").readlines()
+        for line in range(len(indexhtml)):
+            if "insert here" in indexhtml[line]:
+                indexhtml.insert(line+1, "<a href=\"%s\">%s.%s.%s</a> [passed:%d | broken:%d | failed:%d | total:%d] <br/>\n" % (webfilename, d.day, d.month, d.year, totalNrPassed, brokentests, failedtests, totalNrTests))
+                break
+        indexhtmlout = open(www_folder + "/index.html", "w")
+        indexhtmlout.writelines(indexhtml)
+        indexhtmlout.close()
+        #update xslt formating file
+        subprocess.getoutput("cp " + rundir + "/results.xslt " + www_folder + "/")
 
     #move xml results to result-dir
     if os.path.isfile('results.xml'):
