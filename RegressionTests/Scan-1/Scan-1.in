@@ -27,11 +27,6 @@ rf=1498.956e6;
 v0=beta*CLIGHT;
 lz  = 6.5E-12*v0;
 
-//Dist1:DISTRIBUTION, DISTRIBUTION = "GUNGAUSSFLATTOPTH",
-//sigmax = 0.0005455, sigmapx = 0.0, corrx = 0.0,
-//sigmay = 0.0005455, sigmapy = 0.0, corry = 0.0,
-//sigmat = 0.0, pt = 0.0, sigmapt = 0.0, corrt = 0.0, tRise=4.15e-12, tFall=4.15e-12, tPulseFWHM=6.2e-12, ekin=0.4, NBIN=5, DEBIN=80;
-
 Dist1:DISTRIBUTION, DISTRIBUTION = "GUNGAUSSFLATTOPTH",
 		    sigmax = 0.0005455,
 		    sigmapx = 0.0,
@@ -49,7 +44,8 @@ Dist1:DISTRIBUTION, DISTRIBUTION = "GUNGAUSSFLATTOPTH",
 		    ekin = 0.4,
 		    NBIN = 5,
 		    DEBIN = 80,
-		    EMISSIONSTEPS = 500;
+		    EMISSIONSTEPS = 500,
+		    INPUTMOUNITS = V;
 
 Fs1:FIELDSOLVER, FSTYPE=FFT, MX=8, MY=8, MT=8, 
 		 PARFFTX=true, PARFFTY=true, PARFFTT=true,
@@ -80,7 +76,7 @@ WHILE (I < 3) {
    l1:   Line = (gun,sp1,sp2,sp3,sp4,sp5); 
 
    SELECT, Line=l1;
-   TRACK,line=l1, beam=beam1, MAXSTEPS=100, DT=1.0e-11;
+   TRACK,line=l1, beam=beam1, MAXSTEPS=500, DT=5.0e-11;
     RUN, method = "PARALLEL-T", beam=beam1, fieldsolver=Fs1, distribution=Dist1;
    ENDTRACK;
 
