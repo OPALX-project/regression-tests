@@ -1,231 +1,47 @@
 Option, ECHO=FALSE;
 Option, INFO=FALSE;
 Option, AUTOPHASE=0;
+Option, PSDUMPFREQ=1000;
+Option, STATDUMPFREQ=1;
 
 Title, string="Quad Test";
 
+Edes   = 0.590;
+gamma  = (Edes+PMASS)/PMASS;
+beta   = sqrt(1-(1/gamma^2));
+gambet = gamma*beta;
+P0     = gamma*beta*PMASS;
+brho   = (PMASS*1.0e9*gambet) / CLIGHT;
+rf     = 50.6328e6;  //need to be confirmed
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//******************************************************************************************************************
-//******************************************************************************************************************
-// GLOBAL PARAMETERS
-//
-// Here we define some global simulation parameters.
+VALUE,{gamma,brho,Edes,beta,gambet};
 
-RF_FREQUENCY = 700.0e6;			     // Reference frequency of problem (Hz).
-RF_WAVELENGTH = CLIGHT / RF_FREQUENCY; 	     // Reference wavelength (m).
+QP1: Quadrupole, L=0.644, ELEMEDGE=2.0, K1=4.744;
+QP2: Quadrupole, L=0.644, ELEMEDGE=3.644, K1=-5.616;
+QP3: Quadrupole, L=0.644, ELEMEDGE=5.288, K1=4.744;
+D: Drift, L=2.0, ELEMEDGE=5.288+0.644;
 
-Q_E = 1.60217653e-19;  	 		     // Elementary charge (C).
-E_MASS = 9.10938188e-31;		     // Mass of electron (kg).
+QUADTEST: LINE=(QP1,QP2,QP3,D);
 
+D1: DISTRIBUTION, DISTRIBUTION=GAUSS,
+SIGMAX=  5*1.0e-03,   SIGMAPX=0.696*1.0e06,  CORRX=0.0,
+SIGMAY=  5*1.0e-03,   SIGMAPY=0.310*1.0e06,  CORRY=0.0,
+T     =  0.005,     SIGMAT= 0.0005, 
+//PT    = Edes*1e9, SIGMAPT=0.0, CORRT=0.0, R61=0.0, INPUTMOUNITS=EV;
+SIGMAPT=0.0, CORRT=0.0, R61=0.0, INPUTMOUNITS=EV;
 
-BEAM_BUNCH_CHARGE = 0.0e-9;     // Beam bunch charge (C).
-NUMBER_OF_PARTICLES = 10000; // Number of particles in simulation
+FS1:FIELDSOLVER, FSTYPE=NONE, MX=64, MY=64, MT=64, 
+                 PARFFTX=true, PARFFTY=true, PARFFTT=true,
+                 BCFFTX=open, BCFFTY=open, BCFFTT=open, 
+                 BBOXINCR=1, GREENSF=STANDARD;
 
-PS_DUMP_FREQUENCY = 1000;     // How often (time steps) that the phase space of the beam is output.
-STAT_DUMP_FREQUENCY = 10; // How often (time steps) beam statistical properties are output.
+BEAM1: BEAM, PARTICLE=PROTON, PC=P0, NPART=1000, BCURRENT=2.0e-03, BFREQ=rf, CHARGE=1;
 
-value, {RF_FREQUENCY,
-        RF_WAVELENGTH,
-        BEAM_BUNCH_CHARGE,
-	NUMBER_OF_PARTICLES,
-	PS_DUMP_FREQUENCY,
-	STAT_DUMP_FREQUENCY};
+SELECT, LINE=QUADTEST;
 
-//============================================
-// Timestep information.
-//================================================
-
-// Time steps defined.
-//\\\\\\\\\\\\\\\\\\\\
-
-TIME_STEP_1 = 2.0 * 1.0e-12;   // Time step (s). We only need one for this simulation.
-
-value, {TIME_STEP_1};
-	
-//******************************************************************************************************************
-//******************************************************************************************************************
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//******************************************************************************************************************
-//******************************************************************************************************************
-// FIELD SOLVERS
-//
-// Here we define the field solvers (FS) to be used in the simulation.
-
-// First define the space charge (SC) mesh.
-
-// Space charge mesh.
-FS_SC1_X_BINS = 8; // Number of mesh bins in x direction for space charge field solver.
-FS_SC1_Y_BINS = 8; // Number of mesh bins in y direction for space charge field solver.
-FS_SC1_Z_BINS = 8; // Number of mesh bins in z direction for space charge field solver.
-
-value, {FS_SC1_X_BINS,
-        FS_SC1_Y_BINS,
-	FS_SC1_Z_BINS};
-
-
-//******************************************************************************************************************
-//******************************************************************************************************************
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//******************************************************************************************************************
-//******************************************************************************************************************
-// BEAM LINE
-//
-// Here we define lengths, positions, phases, field multipliers/strengths etc. for the various components of the
-// accelerator.
-
-// Beam line offset. This is global shift of the entire line (m).
-//===============================================================
-global_shift = 1.0;
-
-
-//******************************************************************************************************************
-//******************************************************************************************************************
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//******************************************************************************************************************
-//******************************************************************************************************************
-// DEFINE FIELD SOLVERS
-//
-// Here we define field solvers (FS) using the parameters defined in the layout section.
-
-// First space charge field solver.
-
-FS_SC1: Fieldsolver, FSTYPE = NONE, MX = FS_SC1_X_BINS, MY = FS_SC1_Y_BINS, MT = FS_SC1_Z_BINS,
-		     PARFFTX = false, PARFFTY = false, PARFFTT = true,
-		     BCFFTX = open, BCFFTY = open, BCFFTT = open,
-		     BBOXINCR = 1, GREENSF = INTEGRATED;
-
-
-//******************************************************************************************************************
-//******************************************************************************************************************
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//******************************************************************************************************************
-//******************************************************************************************************************
-// COMPONENTS
-//
-// Here we define the actual accelerator components using the parameters from the layout section.
-//******************************************************************************************************************
-
-
-// Begin: Quad ///////////////////////////////////////////////////////////////////////////////////////////////////
-//
-// Definition of bend Quad.
-//
-
-// L:			0.2 physical element length (real in m)
-// K1: 		     	
-
-qf1: QUADRUPOLE, L=0.2, ELEMEDGE=0.1,     K1= 1.0;   // (pole tip field)/(half aperture)   [T/m]
-qd:  QUADRUPOLE, L=0.2, ELEMEDGE=0.4,     K1=-1.0;   // (pole tip field)/(half aperture)   [T/m]
-qf2: QUADRUPOLE, L=0.2, ELEMEDGE=0.7,     K1= 1.0;   // (pole tip field)/(half aperture)   [T/m]
-
-// End: Quad /////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-//******************************************************************************************************************
-//******************************************************************************************************************
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//******************************************************************************************************************
-//******************************************************************************************************************
-// DEFINE BEAM LINES
-//
-// Here we define beam lines using previously defined elements.
-
-Beamline: Line = (qf1,qd,qf2);
-
-
-//******************************************************************************************************************
-//******************************************************************************************************************
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//******************************************************************************************************************
-//******************************************************************************************************************
-// INITIAL DISTRIBUTIONS
-//
-// Initial beam distributions.
-//
-// These are defined depending on how many particles are used and by what initial beam distribution files
-// are available.
-
-   Initial_Distribution:DISTRIBUTION, DISTRIBUTION = GAUSS,
-                    SIGMAX   = 0.001,
-                    SIGMAPX  = 0.0001, 
-                    SIGMAY   = 0.001,
-                    SIGMAPY  = 0.0001, 
-                    SIGMAT   = 0.001,
-                    T        = 0.05,
-                    OFFSETPZ = 7*1e6,
-                    CORRX = 0.0,
-                    CORRY = 0.0,
-                    INPUTMOUNITS = EV;
-
-
-
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-//******************************************************************************************************************
-//******************************************************************************************************************
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//******************************************************************************************************************
-//******************************************************************************************************************
-// RUN SIMULATION
-//
-// Here we start simulation.
-
-MINSTEPFORREBIN = 750;
-
-Option, PSDUMPFREQ = PS_DUMP_FREQUENCY;
-Option, STATDUMPFREQ = STAT_DUMP_FREQUENCY;
-
-
-//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-// Here we define beam that will be transported.
-//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-beam_1: BEAM, PARTICLE = ELECTRON, 
-	      pc = P0, 
-	      NPART = NUMBER_OF_PARTICLES, 
-	      BFREQ = RF_FREQUENCY,
-      	      BCURRENT = BEAM_BUNCH_CHARGE * RF_FREQUENCY,
-	      CHARGE = -1;
-
-
-//\\\\\\\\\\\\\\\\
-// Run simulation.
-//\\\\\\\\\\\\\\\\
-
-TRACK, LINE = Beamline, 
-       BEAM = beam_1, 
-       MAXSTEPS = 1000000, 
-       DT = TIME_STEP_1,
-       ZSTOP = 1.5;
-
-RUN, METHOD = "PARALLEL-T", 
-     BEAM = beam_1, 
-     FIELDSOLVER = FS_SC1, 
-     DISTRIBUTION = Initial_Distribution;
-
+TRACK, LINE=QUADTEST, BEAM=BEAM1, MAXSTEPS=6000, DT=1.0e-11, ZSTOP=8.0;
+ RUN, METHOD = "PARALLEL-T", BEAM=BEAM1, FIELDSOLVER=FS1, DISTRIBUTION=D1;
 ENDTRACK;
 
-Stop;
-Quit;
+STOP;
+
