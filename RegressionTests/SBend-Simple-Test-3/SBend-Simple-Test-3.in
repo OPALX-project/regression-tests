@@ -105,9 +105,11 @@ bend_rotation = 90.0;
 
 // Bend entrance angle (degrees).
 bend_e1 = 22.5;
+//bend_e1 = 0.0;
 
 // Bend exit angle (degrees).
 bend_e2 = 22.5;
+//bend_e2 = 0.0;
 
 // Bend gradient index (m^-1).
 bend_gradient = 0.0;
@@ -116,7 +118,7 @@ bend_gradient = 0.0;
 bend_energy = 7.0;
 
 // Bend length (m).
-bend_length = 0.76536686473;
+bend_chord_length = 0.76536686473;
 
 // Bend gap (m).
 bend_gap = 0.02;
@@ -128,7 +130,7 @@ value, {drift_before_bend,
 	bend_e1,
 	bend_e2,
 	bend_energy,
-	bend_length,
+	bend_chord_length,
 	bend_gap};
 
 //******************************************************************************************************************
@@ -181,20 +183,20 @@ FS_SC1: Fieldsolver, FSTYPE = NONE, MX = FS_SC1_X_BINS, MY = FS_SC1_Y_BINS, MT =
 // WAKEF:		wake function attached to dipole
 //
 
-Bend: SBend, ANGLE = bend_angle,
-   	     ROTATION = bend_rotation,
-	     E1 = bend_e1,
-	     E2 = bend_e2,
+Bend: SBend, ANGLE = bend_angle * Pi / 180.0,
+   	     ROTATION = bend_rotation * Pi / 180.0,
+	     E1 = bend_e1 * Pi / 180.0,
+	     E2 = bend_e2 * Pi / 180.0,
 	     K1 = bend_gradient,
 	     FMAPFN = "1DPROFILE1-DEFAULT",
 	     ELEMEDGE = global_shift + drift_before_bend,
 	     DESIGNENERGY = bend_energy,
-	     L = bend_length,
+	     L = bend_chord_length,
 	     GAP = bend_gap;
 
 
 // Calculate position of end of Bend.
-bend_end = global_shift + drift_before_bend + bend_length + drift_after_bend;
+bend_end = global_shift + drift_before_bend + bend_chord_length + drift_after_bend;
 
 value, {bend_end};
 
