@@ -14,7 +14,6 @@ beta=sqrt(1-(1/gamma^2));
 gambet=gamma*beta;
 P0 = gamma*beta*EMASS;
 
-
 Q1: QUADRUPOLE, L=1.0, ELEMEDGE=0.0, K1=0.0;
 
 lattice: LINE = (Q1);
@@ -44,6 +43,8 @@ Dist2:DISTRIBUTION, DISTRIBUTION = GAUSS,
 		    CORRX = -0.5,
 		    CORRY = 0.5,
 		    INPUTMOUNITS = EV;
+
+value,{sigpx,sigpy,pzave};
 
 // pc:   momentum per particle in GeV/c
 beam1: BEAM, PARTICLE = ELECTRON, PC = P0, NPART = 1000000, BFREQ = BF*1E6, BCURRENT = BC;

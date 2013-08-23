@@ -4,7 +4,7 @@ OPTION, STATDUMPFREQ=1;
 
 TITLE, STRING="Binomial Distribution Protons";
 
-Edes   = 0.072;    // 0.5 GeV             
+Edes   = 0.072;    // 
 QB     = 0.77e-12;   // charge in Cb
 BF     = 1300.0;   // frequency in Mhz
 BC     = QB*BF;    // bunch current
@@ -35,18 +35,21 @@ sigpz = sqrt((11.96*1.0e-9 / PMASS + 1.0)^2 - 1.0);
 
 Dist2:DISTRIBUTION, DISTRIBUTION=BINOMIAL,
 		    SIGMAX = 2.15e-03,
-		    SIGMAPX = 33.56, 
+		    SIGMAPX = 1E-6, 
 		    CORRX = 0.0,
-		    MX = 2.0,
+		    MX = 0.01,
 		    SIGMAY = 0.50*23.e-03,
 		    SIGMAPY = 28.0,
-		    CORRY = 0.0,
-		    MY = 2.0,
+		    CORRY = 0.5,
+		    MY = 990.0,
 		    SIGMAT = 1.0e-1,
 		    SIGMAPT = 11.96,
+		    OFFSETPZ = Edes*1e9,
 		    CORRT = 0.0,
 		    MT = 2.0,
 		    INPUTMOUNITS = EV;
+
+value,{sigpx,sigpy,pzave};
 
 // pc:   momentum per particle in GeV/c
 beam1: BEAM, PARTICLE = PROTON, PC = P0, NPART = 1000000, BFREQ = BF*1E6, BCURRENT = BC;
