@@ -1,4 +1,3 @@
-Option, TFS=FALSE;
 Option, ECHO=FALSE;
 Option, INFO=TRUE;
 Option, PSDUMPFREQ=50;
@@ -41,11 +40,10 @@ Dist1:DISTRIBUTION, DISTRIBUTION = "GUNGAUSSFLATTOPTH",
     		    tRise = 0.7e-12,
 		    tFall = 0.7e-12,
 		    tPulseFWHM = 9.9e-12,
-    		    NBIN = 50,
 		    DEBIN = 80,
-		    nbin = 101;
+		    NBIN = 101 , INPUTMOUNITS=EV;
 
-MINSTEPFORREBIN = 300;
+MINSTEPFORREBIN = 1000;
 
 Fs1:FIELDSOLVER, FSTYPE=FFT, MX=16, MY=16, MT=32, 
     PARFFTX=true, PARFFTY=true, PARFFTT=true,
