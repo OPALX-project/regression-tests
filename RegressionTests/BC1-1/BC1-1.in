@@ -2,7 +2,6 @@ OPTION, ECHO=FALSE;
 OPTION, PSDUMPFREQ=50;
 OPTION, CSRDUMP=TRUE;
 
-
 TITLE,string="OPAL Bunch Compressor 1 test, no space charge";
 
 Edes=0.2479;
@@ -31,8 +30,9 @@ F10BC_MB01: RBend, K0=0.1585,
 	    	   FMAPFN="F10BC-MB01.T7",
 		   ELEMEDGE=29.9640000000,
 		   E1=3.035 * Pi / 180.0,
-		   DESIGNENERGY=247.6E5,
+		   DESIGNENERGY=247.6E6,
 		   WAKEF=CSRWAKE;
+
 F10BC_MB02: RBend, K0=-0.1585,
 	    	   FMAPFN="F10BC-MB01.T7",
 		   ELEMEDGE=34.4644203647,
@@ -74,7 +74,7 @@ Dist1:DISTRIBUTION, DISTRIBUTION = gauss,
 		    sigmapy = 0.0028,
 		    corry = 0.0,
                     OFFSETZ = 29.90000,
-		    sigmat = 0.00040,
+		    sigmapt = 0.00040,
 		    INPUTMOUNITS = EV;
 
 /*
