@@ -172,11 +172,11 @@ def genplot(simname, var):
 
         if sys.version_info < (3,0):
             plot.communicate(plotcmd)
-            commands.getoutput("convert -rotate 90 " + filename + ".ps " + filename + ".png")
+            os.system("convert -rotate 90 " + filename + ".ps " + filename + ".png")
             commands.getoutput("rm " + filename + ".ps data1.dat data2.dat")
         else:
             plot.communicate(bytes(plotcmd, "UTF-8"))
-            subprocess.getoutput("convert -rotate 90 " + filename + ".ps " + filename + ".png")
+            os.system("convert -rotate 90 " + filename + ".ps " + filename + ".png")
             subprocess.getoutput("rm " + filename + ".ps data1.dat data2.dat")
     else:
         print ("Error in genplot: Cannot find stat variable!")
