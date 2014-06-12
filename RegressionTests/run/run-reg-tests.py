@@ -57,8 +57,7 @@ def callback(arg, dirname, fnames):
         if os.path.isfile(dirname + "/" + simname + ".in") and \
            os.path.isfile(dirname + "/" + simname + ".rt") and \
            os.path.isfile(dirname + "/" + simname + ".sge") and \
-           os.path.isdir(dirname + "/" + "reference"):
-
+           os.path.isdir(dirname + "/" + "reference"):        
                 rep = Reporter()
                 rep.appendReport("Found valid test in %s \n" % dirname)
 
@@ -179,6 +178,7 @@ def main(argv):
     if env is None:
         os.environ["OPAL_EXE_PATH"] = builddir + "/src"
 
+
     rep.appendReport("\n")
     rep.appendReport("Start Regression Test on %s \n" % datetime.datetime.today())
     rep.appendReport("==========================================================\n")
@@ -209,7 +209,7 @@ def main(argv):
         brokentests = rep.NrBroken()
         webfilename = "results_%s_%s_%s.xml" % (d.day, d.month, d.year)
         subprocess.getoutput("cp results.xml " + www_folder + "/" + webfilename)
-        subprocess.getoutput("mv plots_" + d.isoformat() + " " + www_folder + "/")
+        subprocess.getoutput("cp -rf plots_" + d.isoformat() + " " + www_folder + "/")
         indexhtml = open(www_folder + "/index.html").readlines()
         for line in range(len(indexhtml)):
             if "insert here" in indexhtml[line]:
@@ -232,7 +232,7 @@ def main(argv):
         brokentests = rep.NrBroken()
         webfilename = "results_%s_%s_%s.xml" % (d.day, d.month, d.year)
         subprocess.getoutput("cp results.xml " + www_folder + "/" + webfilename)
-        subprocess.getoutput("mv plots_" + d.isoformat() + " " + www_folder + "/")
+        subprocess.getoutput("cp -rf plots_" + d.isoformat() + " " + www_folder + "/")
         indexhtml = open(www_folder + "/index.html").readlines()
         for line in range(len(indexhtml)):
             if "insert here" in indexhtml[line]:
@@ -250,7 +250,7 @@ def main(argv):
         if not os.path.isdir(resultdir):
             subprocess.getoutput("mkdir -p " + resultdir)
 
-        subprocess.getoutput("mv " + "results.xml " + resultdir)
+        subprocess.getoutput("cp -rf " + "results.xml " + resultdir)
 
     if runAsUser:
         subprocess.getoutput("rm -rf " + regdir + "/plots_" + d.isoformat())

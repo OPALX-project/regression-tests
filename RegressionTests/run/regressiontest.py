@@ -113,8 +113,7 @@ class RegressionTest:
             os.environ["REG_TEST_DIR"] = self.dirname
 
             # cleanup all OLD job files if there are any
-            subprocess.getoutput("rm " + self.simname + "-RT.*")
-
+            subprocess.getoutput("rm -rf " + self.simname + "-RT.*")
             if not run_local:
                 self.submitToSGE()
                 self.waitUntilCompletion()
@@ -122,7 +121,7 @@ class RegressionTest:
                 self.mpirun()
 
             # copy o to out file
-            subprocess.getoutput("cp " + self.simname + "-RT.o* " + self.simname + ".out")
+            subprocess.getoutput("cp -rf " + self.simname + "-RT.o* " + self.simname + ".out")
 
             self.performTests(root)
 
@@ -130,13 +129,13 @@ class RegressionTest:
             d = datetime.date.today()
             plotdir = "plots_" + d.isoformat()
             subprocess.getoutput("mkdir " + curd + "/" + plotdir)
-            subprocess.getoutput("mv *.png " + curd + "/" + plotdir)
+            subprocess.getoutput("cp -rf *.png " + curd + "/" + plotdir)
 
             #move tests to result folder
-            subprocess.getoutput("mv " + self.simname + ".stat " + curd + "/" + self.resultdir)
-            subprocess.getoutput("mv " + self.simname + ".lbal " + curd + "/" + self.resultdir)
-            subprocess.getoutput("mv " + self.simname + ".out " + curd + "/" + self.resultdir)
-            subprocess.getoutput("cp -R ../" + plotdir + " "  + curd + "/results/" + d.isoformat())
+            subprocess.getoutput("cp -rf " + self.simname + ".stat " + curd + "/" + self.resultdir)
+            subprocess.getoutput("cp -rf " + self.simname + ".lbal " + curd + "/" + self.resultdir)
+            subprocess.getoutput("cp -rf " + self.simname + ".out " + curd + "/" + self.resultdir)
+            subprocess.getoutput("cp -rf ../" + plotdir + " "  + curd + "/results/" + d.isoformat())
 
         os.chdir(curd)
 
