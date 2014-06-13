@@ -4,6 +4,7 @@ Option, ECHO=TRUE;
 //////////////////////////////////////////////////////////////////////////////
 Title,string="ERIT test simulation using OPAL code";
 Option, ASCIIDUMP=TRUE;
+OPTION, PSDUMPFREQ=100000; 
 
 Edes=0.011;
 e_tot = (Edes+PMASS);
@@ -44,7 +45,7 @@ Fs1:FIELDSOLVER, FSTYPE=FFT, MX=32, MY=32, MT=32,
 		 PARFFTX=true, PARFFTY=true, PARFFTT=false,
 		 BCFFTX=open, BCFFTY=open, BCFFTT=open,BBOXINCR=2;
 
-beam1: BEAM, PARTICLE=PROTON, pc=P0, NPART=30, BCURRENT=1.0E-19, CHARGE=1.0, BFREQ=frequency;
+beam1: BEAM, PARTICLE=PROTON, pc=P0, NPART=12, BCURRENT=1.0E-19, CHARGE=1.0, BFREQ=frequency;
 
 track, line=l1, beam=beam1,MAXSTEPS=max_steps,STEPSPERTURN=steps_per_turn;
 run, file = "track_output", turns = 1, method = "CYCLOTRON-T", beam=beam1,
