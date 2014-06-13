@@ -1,0 +1,245 @@
+Option, ECHO=FALSE;
+Option, INFO=FALSE;
+Option, AUTOPHASE=0;
+Option, CSRDUMP=TRUE;
+
+Title, string="FEL ERL";
+
+//******************************************************************************************************************
+// GLOBAL PARAMETERS
+//
+// Here we define some global simulation parameters.
+
+RF_FREQUENCY = 100.0e6;			     // Reference frequency of problem (Hz).
+RF_WAVELENGTH = CLIGHT / RF_FREQUENCY; 	     // Reference wavelength (m).
+
+Q_E = 1.60217653e-19;  	 		     // Elementary charge (C).
+E_MASS = 9.10938188e-31;		     // Mass of electron (kg).
+
+
+BEAM_BUNCH_CHARGE = 1.0e-9;     	     // Beam bunch charge (C).
+NUMBER_OF_PARTICLES = 5000; 	 	     // Number of particles in simulation
+
+PS_DUMP_FREQUENCY = 20;     		     // How often (time steps) that the phase space of the beam is output.
+STAT_DUMP_FREQUENCY = 1; 		     // How often (time steps) beam statistical properties are output.
+
+value, {RF_FREQUENCY,
+        RF_WAVELENGTH,
+        BEAM_BUNCH_CHARGE,
+	NUMBER_OF_PARTICLES,
+	PS_DUMP_FREQUENCY,
+	STAT_DUMP_FREQUENCY};
+
+//============================================
+// Timestep information.
+//================================================
+
+// Time steps defined.
+
+TIME_STEP_1 = 4.3734562802893905e-12;		// Time step (s). We only need one for this simulation.
+
+value, {TIME_STEP_1};
+	
+//******************************************************************************************************************
+// FIELD SOLVERS
+//
+// Here we define the field solvers (FS) to be used in the simulation.
+
+// First define the space charge (SC) mesh.
+
+// Space charge mesh.
+FS_SC1_X_BINS = 16; // Number of mesh bins in x direction for space charge field solver.
+FS_SC1_Y_BINS = 16; // Number of mesh bins in y direction for space charge field solver.
+FS_SC1_Z_BINS = 64; // Number of mesh bins in z direction for space charge field solver.
+
+value, {FS_SC1_X_BINS,
+        FS_SC1_Y_BINS,
+	FS_SC1_Z_BINS};
+
+
+// CSR.
+CSR_ON = 1;		       // If greater than 0, use the CSR calculation in the bends.
+
+CSR_FFT_FREQ = -1; 	       // Specifies the number of FFT frequencies to keep in FFT low pass filter.
+	       		       // If less than zero the FFT filter is not used.
+
+CSR_SG_NLEFT = 4;              // Number of points to the left of the mesh point to use in Savitzky-Golay smoothing.
+CSR_SG_NRIGHT = 4;             // Number of points to the the right of the mesh point to use in Savitzky-Golay smoothing.
+CSR_SG_POLYORDER = 4; 	       // The polynomial order to use in Savitzky-Golay smoothing.
+
+value, {CSR_ON,
+        CSR_FFT_FREQ,
+	CSR_SG_NLEFT,
+	CSR_SG_NRIGHT,
+	CSR_SG_POLYORDER};
+
+//******************************************************************************************************************
+// BEAM LINE
+//
+// Here we define lengths, positions, phases, field multipliers/strengths etc. for the various components of the
+// accelerator.
+
+// Beam line offset. This is global shift of the entire line (m).
+//===============================================================
+global_shift = 1.0;
+
+
+// Bend.
+//
+// We have one bend in the system for checking CSR
+// calculations.
+//================================================
+
+// drift before bend (m).
+drift_before_bend = 0.1;
+
+// Bend angle (radians).
+bend_angle = 0.5235987755982988;
+
+// Bend design energy (eV).
+bend_energy = 7.0e6;
+
+// Bend length (m).
+bend_length = 0.129409522551; 
+
+
+value, {drift_before_bend,
+        bend_angle,
+	bend_energy,
+	bend_length};
+
+//******************************************************************************************************************
+// DEFINE FIELD SOLVERS
+//
+// Here we define field solvers (FS) using the parameters defined in the layout section.
+
+// First space charge field solver.
+
+FS_SC1: Fieldsolver, FSTYPE = NONE,
+		     MX = FS_SC1_X_BINS,
+		     MY = FS_SC1_Y_BINS,
+		     MT = FS_SC1_Z_BINS,
+		     PARFFTX = true,
+		     PARFFTY = true,
+		     PARFFTT = false,
+		     BCFFTX = open,
+		     BCFFTY = open,
+		     BCFFTT = open,
+		     BBOXINCR = 2,
+		     GREENSF = INTEGRATED;
+
+
+// CSR wake solver (CSR).
+// Note that the maximum number of frequencies that can be used in FS_SC2_Z_BINS / 2 - 1.
+
+SG_FILTER: Filter, TYPE = "Savitzky-Golay",
+	   	   NPOINTS = CSR_SG_NLEFT + CSR_SG_NRIGHT + 1,
+		   NLEFT = CSR_SG_NLEFT,
+		   NRIGHT = CSR_SG_NRIGHT,
+		   POLYORDER = CSR_SG_POLYORDER;
+
+if (CSR_FFT_FREQ >= 1) {
+
+   if (CSR_FFT_FREQ > FS_SC2_Z_BINS / 2 - 1) {
+
+      CSR_FFT_FREQ = FS_SC2_Z_BINS / 2 - 1;
+
+}
+
+   FFT_Filter: Filter, TYPE = "FixedFFTLowPass",
+	 	       NFREQ = CSR_FFT_FREQ
+
+   FS_CSR_WAKE: Wake, TYPE = "1D-CSR",
+	  	   FILTERS = {FFT_Filter,
+		   	      SG_Filter};		   
+
+} else {
+
+   FS_CSR_WAKE: Wake, TYPE = "1D-CSR",	
+	  	   FILTERS = {SG_Filter};
+
+}
+
+//******************************************************************************************************************
+// COMPONENTS
+//
+// Here we define the actual accelerator components using the parameters from the layout section.
+//******************************************************************************************************************
+// Dipole
+//
+// L:			physical element length (real in m)
+// K0: 		     	y magnetic field (real)
+// FMAPFN:	     	field file name (string)
+// ELEMEDGE:	     	physical start of the element on the floor (real in m)
+// ALPHA:            	entrance angle (degrees). Exit angle is calculated automatically (bend is rectangular).
+// DESIGNENERGY:     	energy of design beam
+// WAKEF:		wake function attached to dipole
+//
+
+if (CSR_ON > 0) {
+   bend1: SBend, ANGLE = bend_angle,
+                E1 = 0.08726646259971647,
+                E2 = 0.08726646259971647,
+   	 	FMAPFN = "1DPROFILE1-DEFAULT",
+	       	ELEMEDGE = drift_before_bend,
+	       	DESIGNENERGY = bend_energy,
+		L = bend_length,
+                GAP = 0.02,
+	       	WAKEF = FS_CSR_WAKE;
+   drift2:DRIFT, L=0.4, ELEMEDGE=bend_length + drift_before_bend, WAKEF = FS_CSR_WAKE;
+} else {
+   bend1: SBend, ANGLE = bend_angle,
+                E1 = 0.08726646259971647,
+                E2 = 0.08726646259971647,
+   	 	FMAPFN = "1DPROFILE1-DEFAULT",
+	       	ELEMEDGE = drift_before_bend,
+	       	DESIGNENERGY = bend_energy,
+		L = bend_length,
+                GAP = 0.02;
+   drift2:DRIFT, L=0.4, ELEMEDGE=bend_length + drift_before_bend;
+}
+
+//******************************************************************************************************************
+// DEFINE BEAM LINES
+//
+// Here we define beam lines using previously defined elements.
+
+inputBeamline: Line = (bend1, drift2);
+
+//******************************************************************************************************************
+// INITIAL DISTRIBUTIONS
+//
+// Initial beam distributions.
+//
+
+dist1:DISTRIBUTION, DISTRIBUTION=FROMFILE,
+                    FNAME = "input_beam.dat";
+
+//******************************************************************************************************************
+// RUN SIMULATION
+//
+// Here we start simulation.
+
+Option, PSDUMPFREQ = PS_DUMP_FREQUENCY;
+Option, STATDUMPFREQ = STAT_DUMP_FREQUENCY;
+
+
+//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+// Here we define beam that will be transported.
+//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+beam1: BEAM, PARTICLE = ELECTRON, pc = P0, NPART = NUMBER_OF_PARTICLES, BFREQ = RF_FREQUENCY,
+      	BCURRENT = BEAM_BUNCH_CHARGE * RF_FREQUENCY, 
+        CHARGE = -1;
+
+
+//\\\\\\\\\\\\\\\\
+// Run simulation.
+//\\\\\\\\\\\\\\\\
+
+TRACK, LINE = inputBeamline, BEAM = beam1, MAXSTEPS = 2000, DT = TIME_STEP_1;
+  RUN, METHOD = "PARALLEL-T", BEAM = beam1, FIELDSOLVER = FS_SC1, 
+       DISTRIBUTION = dist1;
+ENDTRACK;
+
+Stop;
+Quit;
