@@ -115,13 +115,13 @@ value, {drift_before_bend,
 
 // First space charge field solver.
 
-FS_SC1: Fieldsolver, FSTYPE = NONE,
+FS_SC1: Fieldsolver, FSTYPE = FFT,
 		     MX = FS_SC1_X_BINS,
 		     MY = FS_SC1_Y_BINS,
 		     MT = FS_SC1_Z_BINS,
 		     PARFFTX = true,
 		     PARFFTY = true,
-		     PARFFTT = false,
+		     PARFFTT = true,
 		     BCFFTX = open,
 		     BCFFTY = open,
 		     BCFFTT = open,

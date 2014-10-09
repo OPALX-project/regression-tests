@@ -1,0 +1,107 @@
+OPTION, ECHO=FALSE;
+OPTION, PSDUMPFREQ=50;
+OPTION, CSRDUMP=TRUE;
+
+TITLE,string="OPAL Bunch Compressor 1 test, no space charge";
+
+Edes=0.2479;
+gamma=(Edes+EMASS)/EMASS;
+beta=sqrt(1-(1/gamma^2));
+gambet=gamma*beta;
+P0 = gamma*beta*EMASS;
+brho = (EMASS*1.0e9*gambet) / CLIGHT;
+
+value,{gamma,brho,Edes,beta,gambet};
+
+dt1 = 3.3355e-12;
+dt2 = 5.0e-12;
+cdt = dt2;
+
+// L:        physical element lenght (real)
+// KS:       field scaling factor (real)
+// FMAPFN:   field file name (string)
+// ELEMEDGE: physical start of the element on the floor (real)
+
+f1: Filter, TYPE="FixedFFTLowPass", NFREQ=9;
+f2: Filter, TYPE="Savitzky-Golay", NLEFT=64, NRIGHT=64, POLYORDER=1;
+CSRWAKE: Wake, TYPE="1D-CSR", FILTERS={f2, f1};
+
+F10BC_MB01: RBend, K0=0.1585,
+	    	   FMAPFN="F10BC-MB01.T7",
+		   ELEMEDGE=29.9640000000,
+		   E1=3.035 * Pi / 180.0,
+		   DESIGNENERGY=247.6E6,
+		   WAKEF=CSRWAKE;
+
+F10BC_MB02: RBend, K0=-0.1585,
+	    	   FMAPFN="F10BC-MB01.T7",
+		   ELEMEDGE=34.4644203647,
+		   E1=-3.035 * Pi / 180.0,
+		   DESIGNENERGY=247.6E6,
+		   WAKEF=CSRWAKE;
+F10BC_MB03: RBend, K0=-0.1585,
+	    	   FMAPFN="F10BC-MB01.T7",
+		   ELEMEDGE=35.2144203647,
+		   E1=-3.035 * Pi / 180.0,
+		   DESIGNENERGY=247.6E6,
+		   WAKEF=CSRWAKE;
+F10BC_MB04: RBend, K0=0.1585,
+	    	   FMAPFN="F10BC-MB01.T7",
+		   ELEMEDGE=39.7338407293,
+		   E1=3.035 * Pi / 180.0,
+		   DESIGNENERGY=247.6E6,
+		   WAKEF=CSRWAKE;
+
+l1:   Line = (F10BC_MB01, F10BC_MB02, F10BC_MB03, F10BC_MB04); 
+
+qb=0.20e-9;
+rf=1498.956e6;
+v0=beta*CLIGHT;
+T1s = 36.6e-12;
+lz  = T1s*v0;
+value,{v0,lz,qb,rf};
+
+sigpx = sqrt((0.0028*1.0e-9/EMASS + 1.0)^2 - 1.0);
+sigpy = sqrt((0.0028*1.0e-9/EMASS + 1.0)^2 - 1.0);
+sigpz = sqrt((2.78803e-3/EMASS + 1.0)^2 - 1.0);
+pzave = sqrt((248.14e-3/EMASS + 1.0)^2 - 1.0);
+
+Dist1:DISTRIBUTION, DISTRIBUTION = gauss,
+                    sigmax = 0.00018,
+		    sigmapx = 0.0028,
+		    corrx = 0.0,
+                    sigmay = 0.00018,
+		    sigmapy = 0.0028,
+		    corry = 0.0,
+                    OFFSETZ = 29.90000,
+		    sigmapt = 0.00040,
+		    INPUTMOUNITS = EV;
+
+/*
+   We can specity ONE field solver object
+*/
+
+Fs1:FIELDSOLVER, FSTYPE=FFT, MX=32, MY=32, MT=256, 
+                 PARFFTX=TRUE, PARFFTY=TRUE, PARFFTT=TRUE,
+                 BCFFTX=open, BCFFTY=open, BCFFTT=open, 
+                 BBOXINCR=1, GREENSF=INTEGRATED;
+
+beam1: BEAM, PARTICLE=ELECTRON, pc=P0, NPART=1e4, BCURRENT=qb*rf, BFREQ=rf, CHARGE=-1;
+
+SELECT, Line=l1;
+
+N1 = 402*dt1/cdt;
+N2 = N1 + (400*dt1/cdt);
+
+//TRACK,LINE=l1, BEAM=beam1, MAXSTEPS=N1+N1, DT=cdt;
+TRACK,LINE=l1, BEAM=beam1, MAXSTEPS=N1+N2, DT=cdt;
+ RUN, METHOD = "PARALLEL-T", BEAM=beam1, FIELDSOLVER=Fs1, DISTRIBUTION=Dist1;
+ENDTRACK;
+
+//TRACK,LINE=l1, BEAM=beam1, MAXSTEPS=N2, DT=cdt;
+// RUN, METHOD = "PARALLEL-T", BEAM=beam1, FIELDSOLVER=Fs1, DISTRIBUTION=Dist1;
+//ENDTRACK;
+
+STOP;
+
+

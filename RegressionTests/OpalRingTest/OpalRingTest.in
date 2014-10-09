@@ -39,7 +39,7 @@ triplet: SBEND3D, FMAPFN="data/OpalRingTest.field", LENGTH_UNITS=10., FIELD_UNIT
 
 l1: Line = (ringdef, probe1, probe2, triplet);
 
-Dist1: DISTRIBUTION, DISTRIBUTION=fromfile, FNAME="data/beam.dat";
+Dist1: DISTRIBUTION, DISTRIBUTION=fromfile, FNAME="data/beam.dat", INPUTMOUNITS=NONE;
 
 Fs1:FIELDSOLVER, FSTYPE=FFT, MX=32, MY=32, MT=32, 
 		 PARFFTX=true, PARFFTY=true, PARFFTT=false,
