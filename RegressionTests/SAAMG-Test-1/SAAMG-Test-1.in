@@ -1,0 +1,62 @@
+Title, string="Gaussian bunch test of simple beam pipe";
+
+OPTION, ECHO = FALSE, 
+        PSDUMPFREQ = 10,
+        STATDUMPFREQ = 10,
+        REPARTFREQ = 1000,
+        PSDUMPLOCALFRAME = FALSE;
+
+// Some local variables
+Ekin = 59940*1e-9;          // eV -> GeV
+H2mass = 1.876634889;       // GeV/c^2
+Etot = Ekin+H2mass;
+gamma = Etot/H2mass;        // Dimless
+beta = sqrt(1-(1/gamma^2)); // Dimless
+gambet = gamma*beta;        // Dimless
+P0 = gambet*H2mass;         // GeV/c
+brho = (H2mass*1.0e9*gambet)/CLIGHT;
+RF_FREQ = 8.2 * 1e6; // Hz (6th harmonic = 49.2 MHz)
+harmonic = 6;
+value,{Ekin, beta, gamma, brho, P0};
+
+// Input variables from data file
+CURRENT = 50e-4;     // Beam current in A (0.01 - 0.05)
+
+// Available Geometry Files
+// Geometry File 1:  "Pipe_1m_10cm.h5"
+
+INF_GEOM: GEOMETRY, FGEOM = "./Pipe_1m_10cm.h5", XYZSCALE = 0.001;
+
+D1: DRIFT, ELEMEDGE = -0.5, L = 1.0;
+
+L1: LINE = (D1);
+
+Fs1: FIELDSOLVER, FSTYPE = SAAMG, MX = 16, MY = 16, MT = 16,
+     PARFFTX = TRUE, PARFFTY = TRUE, PARFFTT = TRUE, GEOMETRY = INF_GEOM,
+     ITSOLVER = CG, INTERPL = CONSTANT, TOL = 1.0e-6, 
+     MAXITERS = 1000, PRECMODE = STD;
+
+Dist1: DISTRIBUTION, DISTRIBUTION = GAUSS, 
+       OFFSETX = 0.0, OFFSETY = 0.0, OFFSETZ = 15.0e-3,    // Centroid of bunch (m)
+       SIGMAX = 1.5e-3, SIGMAY = 1.5e-3, SIGMAZ = 5.0e-3,  // Sigmas of the Gaussian bunch (m)
+       OFFSETPX = 0.0, OFFSETPY = 0.0, OFFSETPZ = 0.0,     // Mean momenta (eV)
+       SIGMAPX = 0.0 , SIGMAPY = 0.0 , SIGMAPZ = 0.0 ,     // Sigmas of the momenta (eV)
+       CORRX = 0.0, CORRY = 0.0, CORRZ = 0.0;              // Correlations
+
+//Dist1:DISTRIBUTION, DISTRIBUTION = fromfile, FNAME="../fieldmaps/Benchmark.dat";
+
+// Units: Mass in GeV/c^2, Charge in multiples of e, PC in betagamma
+Beam1: BEAM, PARTICLE = H2, MASS = H2mass, CHARGE = 1.0, BFREQ = RF_FREQ*harmonic,
+       PC = P0, SPACECHARGE = TRUE, NPART = 4096, BCURRENT = CURRENT,
+       BUNCHED = TRUE, FIELDSOLVER = Fs1;
+
+Select, LINE = L1;
+
+track, LINE = L1, BEAM = Beam1, MAXSTEPS = 1000, ZSTOP = 0.1, DT = 1.0e-10;
+
+run, METHOD = "PARALLEL-T", BEAM = Beam1, FIELDSOLVER = Fs1, 
+     DISTRIBUTION = Dist1, BOUNDARYGEOMETRY = INF_GEOM;
+
+endtrack;
+
+Stop;
