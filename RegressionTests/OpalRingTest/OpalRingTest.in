@@ -35,7 +35,7 @@ ringdef: RINGDEFINITION, HARMONIC_NUMBER=6, LATTICE_RINIT=2350.0, LATTICE_PHIINI
          LATTICE_THETAINIT=0.0, BEAM_PHIINIT=0.0, BEAM_PRINIT=0.0,
          BEAM_RINIT=x_closed_orbit, SYMMETRY=8.0, RFFREQ=frequency, IS_CLOSED=true;
 
-triplet: SBEND3D, FMAPFN="data/OpalRingTest.field", LENGTH_UNITS=10., FIELD_UNITS=-1e-4;
+triplet: SBEND3D, FMAPFN="data/OpalRingTest.field", LENGTH_UNITS=10., FIELD_UNITS=1e-3;
 
 l1: Line = (ringdef, probe1, probe2, triplet);
 
