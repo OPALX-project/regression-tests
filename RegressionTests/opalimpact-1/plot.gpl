@@ -1,0 +1,51 @@
+FNO ='opalimpact-1.stat'
+FNIX='IMPACTref-1/fort.24'
+FNIY='IMPACTref-1/fort.25'
+FNIZ='IMPACTref-1/fort.26'
+
+#set title "OPAL ImpactT 1 MHz, 10 mA, H+"
+#set time
+
+set grid
+set key right bottom
+set pointsize 1.5
+set y2tics
+set xlabel "t (nS)"   font "Times,24"
+set ylabel "rms beam size [m]"   font "Times,24"
+set y2label 'rms emittance [mm-mr] ' font "Times,24"
+#
+plot FNO  every 2 u ($1*1E9):6 w linesp ls 2 lc 1 t 'OPAL x '
+repl FNIX every 2 u ($1*1E9):4 w linesp ls 2 lc 2 t 'ImpactT x'
+#
+repl FNO  every 2 u ($1*1E9):($12*1E6) axes x1y2 w linesp ls 5 lc 1 t 'OPAL {/Symbol e}_x'
+repl FNIX every 2 u ($1*1E9):($8*1E6)  axes x1y2 w linesp ls 5 lc 2 t 'ImpactT {/Symbol e}_x'
+
+set term post enh col
+set out '|ps2pdf - opal-impact-1MHz-x.pdf'
+repl
+# 
+set term aqua
+set out 
+#
+plot FNO  every 2 u ($1*1E9):7 w linesp ls 2 lc 1 t 'OPAL y '
+repl FNIY every 2 u ($1*1E9):4 w linesp ls 2 lc 2 t 'ImpactT y'
+#
+repl FNO  every 2 u ($1*1E9):($13*1E6) axes x1y2 w linesp ls 5 lc 1 t 'OPAL {/Symbol e}_y'
+repl FNIY every 2 u ($1*1E9):($8*1E6)  axes x1y2 w linesp ls 5 lc 2 t 'ImpactT {/Symbol e}_y'
+
+set term post enh col
+set out '|ps2pdf - opal-impact-1MHz-y.pdf'
+repl
+# 
+set term aqua
+set out 
+#
+plot FNO  every 2 u ($1*1E9):8 w linesp ls 2 lc 1 t 'OPAL z'
+repl FNIZ every 2 u ($1*1E9):3 w linesp ls 2 lc 2 t 'ImpactT z'
+#
+repl FNO  every 2 u ($1*1E9):($14*1E6) axes x1y2 w linesp ls 5 lc 1 t 'OPAL {/Symbol e}_z'
+repl FNIZ every 2 u ($1*1E9):($7*1E6)  axes x1y2 w linesp ls 5 lc 2 t 'ImpactT {/Symbol e}_z'
+
+set term post enh col
+set out '|ps2pdf - opal-impact-1MHz-z.pdf'
+repl
