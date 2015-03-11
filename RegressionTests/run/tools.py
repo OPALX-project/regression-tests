@@ -5,6 +5,7 @@ if sys.version_info < (3,0):
 import subprocess
 import os
 import datetime
+import re
 
 """
 parse linefile into list and strip newline
@@ -113,7 +114,11 @@ def genplot(simname, var):
 
         readLines += 1
 
-    opalRevision = lines[readLines + revLine]
+    m = re.search('(.* svn rev\. [A-Za-z0-9]{7})[A-Za-z0-9]*', lines[readLines + revLine]);
+    if (m != None):
+        opalRevision = m.group(1)
+    else:
+        opalRevision = lines[readLines + revLine]
 
     # a simple paste in gnuplot does not work since the
     # headers of the files do not necessarily have to have

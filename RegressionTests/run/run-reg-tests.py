@@ -57,7 +57,7 @@ def callback(arg, dirname, fnames):
         if os.path.isfile(dirname + "/" + simname + ".in") and \
            os.path.isfile(dirname + "/" + simname + ".rt") and \
            os.path.isfile(dirname + "/" + simname + ".sge") and \
-           os.path.isdir(dirname + "/" + "reference"):        
+           os.path.isdir(dirname + "/" + "reference"):
                 rep = Reporter()
                 rep.appendReport("Found valid test in %s \n" % dirname)
 
@@ -131,7 +131,7 @@ def main(argv):
     runtests = list()
     run_local = False
     publish_local = True
-    
+
     if "--run-local" in argv:
         run_local = True
 
@@ -171,6 +171,9 @@ def main(argv):
             rep.appendReport("Build-test failed! Exiting..")
             bailout(runAsUser)
             return
+
+    if "--dont-publish" in argv:
+        publish_local = False
 
     #check if user has already set an OPAL executable
     #if not use the one from the last build test
