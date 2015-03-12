@@ -6,7 +6,7 @@
 #$ -v MPIHOME=/opt/mpi/openmpi-1.2.6-intel-10.0,LD_LIBRARY_PATH=/opt/intel-mkl/mkl-10.0/lib/em64t:/opt/mpi/openmpi-1.2.6-intel-10.0/lib:/opt/intel/intel-10.0/fce-10.0/lib:/opt/intel/intel-10.0/cce-10.0/lib
 
 MACHINE_FILE=$TMPDIR/machinefile
-awk '/^felsim/ {print $1" slots="$2}' $PE_HOSTFILE > $MACHINE_FILE 
+awk '/^merlin/ {print $1" slots="$2}' $PE_HOSTFILE > $MACHINE_FILE 
 cp $MACHINE_FILE machinefile.last
 
 echo "PE_HOSTFILE:"

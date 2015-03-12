@@ -1,39 +1,15 @@
-#!/bin/bash 
-#$ -cwd 
-#$ -j y 
-#$ -N  SAAMG-Test-1
-#$ -pe openmpi 1 
-#$ -v LD_LIBRARY_PATH,OPAL_EXE_PATH,OPENMPI,OPENMPI_DIR
+#!/bin/bash
+#$ -cwd
+#$ -j y
+#$ -pe orte 4
+#$ -N SAAMG-Test-1-RT
+#$ -v LD_LIBRARY_PATH,OPAL_EXE_PATH,OPENMPI,REG_TEST_DIR
 
-MPIEXEC=$OPENMPI_DIR/bin/mpiexec 
-echo $MPIEXEC
+MACHINE_FILE=$TMPDIR/machinefile
+awk '/^merlin/ {print $1" slots="$2}' $PE_HOSTFILE > $MACHINE_FILE
+cp $MACHINE_FILE machinefile.last
 
-# OPENMPI is set by the mpi/openmpi-1.4.3-intel-12.1 module.
-export OMP_NUM_THREADS=1
-export OMPI_MCA_btl='self,sm,openib'
-export HDF5_DISABLE_VERSION_CHECK=1
-####################################################
-# BEGIN DEBUG 
-# Print the SGE environment on master host: 
-####################################################
-echo "=== SGE job  JOB_NAME=$JOB_NAME  JOB_ID=$JOB_ID" 
-####################################################
-echo DATE=`date`
-echo HOSTNAME=`hostname` 
-echo PWD=`pwd`
-echo "NSLOTS=$NSLOTS"
-echo "PE_HOSTFILE=$PE_HOSTFILE"
-cat $PE_HOSTFILE
-####################################################
-echo "Running environment:" 
-env 
-####################################################
-# The command to run with mpiexec:  
-CMD=$OPAL_EXE_PATH/opal 
-ARGS="SAAMG-Test-1.in --commlib mpi --info 0 --warn 0 2>&1"
-####################################################
-MPICMD="$MPIEXEC --prefix $OPENMPI_DIR -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -np $NSLOTS -machinefile $TMPDIR/machines $CMD $ARGS" 
-echo "Command to run:" 
-echo "$MPICMD" 
-$MPICMD 
-####################################################
+cd $REG_TEST_DIR
+OPAL="$OPAL_EXE_PATH/opal SAAMG-Test-1.in --commlib mpi --info 0 --warn 0 2>&1"
+CMD="$OPENMPI/bin/mpirun -x LD_LIBRARY_PATH -machinefile $MACHINE_FILE -np $NSLOTS $OPAL "
+$CMD
