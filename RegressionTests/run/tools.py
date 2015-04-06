@@ -109,11 +109,12 @@ def genplot(simname, var):
             if "name=revision" in line:
                 revLine = numScalars
 
-        elif "&data mode=ascii &end" in line:
+        elif "&data mode=ascii, no_row_counts=1 &end" in line:
             break
 
         readLines += 1
-
+        
+    
     m = re.search('(.* svn rev\. [A-Za-z0-9]{7})[A-Za-z0-9]*', lines[readLines + revLine]);
     if (m != None):
         opalRevision = m.group(1)
@@ -142,7 +143,7 @@ def genplot(simname, var):
             numScalars += 1
             if "name=revision" in line:
                 revLine = numScalars
-        elif "&data mode=ascii &end" in line:
+        elif "&data mode=ascii, no_row_counts=1 &end" in line:
             break
 
         readLines += 1
