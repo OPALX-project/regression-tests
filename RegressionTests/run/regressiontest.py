@@ -102,6 +102,7 @@ class RegressionTest:
         return rtest.performTest(root)
 
     def run(self, root, run_local):
+
         curd = os.getcwd()
         os.chdir(self.dirname)
 
@@ -112,7 +113,7 @@ class RegressionTest:
             rep.appendReport("\t run simulation\n")
             os.environ["REG_TEST_DIR"] = self.dirname
 
-            # cleanup all OLD job files if there are any
+            # ADA cleanup all OLD job files if there are any
             subprocess.getoutput("rm -rf " + self.simname + "-RT.*")
             if not run_local:
                 self.submitToSGE()
@@ -136,7 +137,6 @@ class RegressionTest:
             subprocess.getoutput("cp -rf " + self.simname + ".lbal " + curd + "/" + self.resultdir)
             subprocess.getoutput("cp -rf " + self.simname + ".out " + curd + "/" + self.resultdir)
             subprocess.getoutput("cp -rf ../" + plotdir + " "  + curd + "/results/" + d.isoformat())
-
         os.chdir(curd)
 
     """
@@ -209,7 +209,7 @@ class StatTest:
             elif "&parameter" in line:
                 numScalars += 1
 
-            elif "&data mode=ascii &end" in line:
+            elif "&data mode=ascii, no_row_counts=1 &end" in line:
                 hasReadHeader = True
 
             #FIXME: this is very ugly
