@@ -143,7 +143,7 @@ def genplot(simname, var):
             numScalars += 1
             if "name=revision" in line:
                 revLine = numScalars
-        elif "&data mode=ascii, no_row_counts=1 &end" in line:
+        elif "&data mode=ascii" in line:
             break
 
         readLines += 1

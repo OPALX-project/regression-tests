@@ -211,7 +211,7 @@ class StatTest:
             elif "&parameter" in line:
                 numScalars += 1
 
-            elif "&data mode=ascii, no_row_counts=1 &end" in line:
+            elif "&data mode=ascii" in line:
                 hasReadHeader = True
 
             #FIXME: this is very ugly
