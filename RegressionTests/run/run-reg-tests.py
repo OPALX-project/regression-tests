@@ -80,7 +80,7 @@ def callback(arg, dirname, fnames):
                 simulation_report.addAttribute("date", "%s" % d)
 
                 rt = RegressionTest(dirname, simname, resultdir)
-                rt.run(simulation_report, arg[1])
+                rt.run(simulation_report, arg[1], arg[2])
                 totalNrTests += rt.totalNrTests
                 totalNrPassed += rt.totalNrPassed
                 rep.appendReport("\n\n")
@@ -175,6 +175,15 @@ def main(argv):
     if "--dont-publish" in argv:
         publish_local = False
 
+    queue = ""
+    for arg in argv:
+        if arg.startswith("--queue"):
+            tmp = str.split(arg, "=")
+            if (len(tmp) < 2 or tmp[1] == ""):
+                print("no queue given, exiting")
+                sys.exit()
+            queue = "-q " + tmp[1]
+
     #check if user has already set an OPAL executable
     #if not use the one from the last build test
     env = os.getenv("OPAL_EXE_PATH")
@@ -194,7 +203,7 @@ def main(argv):
         if os.path.isdir(regdir + "/.svn") and not runAsUser:
             subprocess.getoutput("svn update")
         #walk the run dir tree
-        arglist = [runtests, run_local]
+        arglist = [runtests, run_local, queue]
         for root, dirs, files in os.walk("./"):
             callback(arglist, root, files)
     else:

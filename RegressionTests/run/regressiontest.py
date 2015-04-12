@@ -24,11 +24,11 @@ class RegressionTest:
         self.jobnr = -1
         self.totalNrTests = 0
         self.totalNrPassed = 0
+        self.queue = ""
 
     def submitToSGE(self):
         #FIXME: we could create a sge file on the fly if no sge is specified for a give test ("default sge")
-        #FIXME queue
-        qsub_command = "qsub " + self.simname + ".sge -v REG_TEST_DIR=" + self.dirname + ",OPAL_EXE_PATH=" + os.getenv("OPAL_EXE_PATH")
+        qsub_command = "qsub " + self.queue + " " + self.simname + ".sge -v REG_TEST_DIR=" + self.dirname + ",OPAL_EXE_PATH=" + os.getenv("OPAL_EXE_PATH")
         submit_out = subprocess.getoutput(qsub_command)
         self.jobnr = str.split(submit_out, " ")[2]
 
@@ -101,12 +101,14 @@ class RegressionTest:
 
         return rtest.performTest(root)
 
-    def run(self, root, run_local):
+    def run(self, root, run_local, q):
 
         curd = os.getcwd()
         os.chdir(self.dirname)
 
         isValid = self.validateReferenceFiles()
+
+        self.queue = q
 
         if isValid:
             rep = Reporter()
@@ -538,7 +540,7 @@ class LossTest:
         - tolerance: floating point tolerance (absolute)
         - file_name: name of the loss file to be checked
     Note that
-        - Output in the loss file is assumed to be that of a PROBE element. 
+        - Output in the loss file is assumed to be that of a PROBE element.
         - If a line of output is not compatible with PROBE output, test
           will ignore the line (not fail).
         - Test will always fail if no valid data was found in the loss file
@@ -643,7 +645,7 @@ class LossTest:
         """
         Parse one line of the loss file.
 
-        Assume data format like element_id x y z px py pz track_id turn time 
+        Assume data format like element_id x y z px py pz track_id turn time
 
         Returns a tuple like (element, turn, variable), 'end_of_file' if the
         file ended or 'parse_error' if the line could not be parsed.
