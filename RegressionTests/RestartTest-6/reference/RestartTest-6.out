@@ -1,0 +1,542 @@
+Ippl> CommMPI: Started job 3 on host `arvika'.
+Ippl> CommMPI: Parent process waiting for children ...
+Ippl> CommMPI: Child 2 ready.
+Ippl> CommMPI: Started job 1 on host `arvika'.
+Ippl> CommMPI: Started job 2 on host `arvika'.
+Ippl> CommMPI: Child 1 ready.
+Ippl> CommMPI: Child 3 ready.
+Ippl> CommMPI: Initialization complete.
+{0}>                ____  _____       ___ 
+{0}>               / __ \|  __ \ /\   | | 
+{0}>              | |  | | |__) /  \  | |
+{0}>              | |  | |  ___/ /\ \ | |
+{0}>              | |__| | |  / ____ \| |____
+{0}>               \____/|_| /_/    \_\______|
+OPAL{0}> 
+OPAL{0}> This is OPAL (Object Oriented Parallel Accelerator Library) Version 1.3.99
+OPAL{0}> 
+OPAL{0}>                 (c) PSI, http://amas.web.psi.ch
+OPAL{0}> 
+OPAL{0}> Please send cookies, goodies or other motivations (wine and beer ... ) 
+OPAL{0}> to the OPAL developers opal@lists.psi.ch
+OPAL{0}> 
+OPAL{0}> Time: 09.32.18 date: 18/05/2015
+OPAL{0}> 
+   +1 Option, PSDUMPFREQ=50;
+   +1 Option, PSDUMPFREQ=50;
+   +2   +2 Option, STATDUMPFREQ=1;
+   +3 Option, STATDUMPFREQ=1;
+   +3 Option, ECHO=FALSE;
+ Option, ECHO=FALSE;
+   +1 Option, PSDUMPFREQ=50;
+   +2 Option, STATDUMPFREQ=1;
+   +3 Option, ECHO=FALSE;
+OPAL{+0}> Couldn't find startup file "/home/baboch/init.opal".
+OPAL{+0}> Note: this is not mandatory for an OPAL simulation!
+OPAL{+0}> 
+   +1 Option, PSDUMPFREQ=50;
+OPAL{+0}> * Reading input stream "RestartTest-6.in".
+   +2 Option, STATDUMPFREQ=1;
+   +3 Option, ECHO=FALSE;
+OPAL{+0}> 
+OPAL{+0}> 8 elements selected.
+OPAL{+0}> 
+OPAL{+0}> * ********************************************************************************** 
+OPAL{+0}>   Selected Tracking Method == PARALLEL-T, NEW TRACK
+OPAL{+0}> * ********************************************************************************** 
+OPAL{+0}> Total number of particles in the h5 file = 5000 NPerBunch= 20000 Global step 21 Local step 21
+OPAL{+0}>  restart step= 1 time of restart = 1.06199e-10 phishift= 1.32492e-11
+OPAL{+0}> Creating new file for statistical data: RestartTest-6.stat
+OPAL{+0}> Appending load balance data to existing data file: RestartTest-6.lbal
+OPAL{+0}> Will append to RestartTest-6.h5
+OPAL{+0}> numStepsInFile 2
+OPAL{+0}> ********************** DISTRIBUTION **********************
+OPAL{+0}> 
+OPAL{+0}> * In restart. Distribution read in from .h5 file.
+OPAL{+0}> 
+OPAL{+0}> * *********************************************************
+OPAL{+0}> 
+OPAL{+0}> * ************* B E A M ************************************************************ 
+OPAL{+0}> * BEAM        BEAM1
+OPAL{+0}> * PARTICLE    ELECTRON
+OPAL{+0}> * CURRENT     5.996e-07 A
+OPAL{+0}> * FREQUENCY   2998 Hz
+OPAL{+0}> * CHARGE      -e * 1 
+OPAL{+0}> * REST MASS   0.000510999 GeV
+OPAL{+0}> * MOMENTUM    1
+OPAL{+0}> * NPART       20000
+OPAL{+0}> * ********************************************************************************** 
+OPAL{+0}> 
+OPAL{+0}> * ************* F I E L D S O L V E R ********************************************** 
+OPAL{+0}> * FIELDSOLVER  FS1
+OPAL{+0}> * TYPE         FFT
+OPAL{+0}> * N-PROCESSORS 4
+OPAL{+0}> * MX           32
+OPAL{+0}> * MY           32
+OPAL{+0}> * MT           64
+OPAL{+0}> * BBOXINCR     1
+OPAL{+0}> * GRRENSF      INTEGRATED
+OPAL{+0}> * XDIM is parallel  
+OPAL{+0}> * YDIM is parallel  
+OPAL{+0}> * Z(T)DIM is parallel  
+OPAL{+0}> 
+OPAL{+0}> * ********************************************************************************** 
+OPAL{+0}> 
+OPAL{+0}> 
+OPAL{+0}> * ************** B U N C H ********************************************************* 
+OPAL{+0}> * NP              =   20000
+OPAL{+0}> * Qtot            =    2.00000e-01 [nC]       Qi    =  1.00000e-05 [nC]
+OPAL{+0}> * Ekin            =    1.63891e+00 [MeV]      dEkin =  6.42925e-02 [MeV]
+OPAL{+0}> * rmax            = (  9.76594e-04 ,  9.71393e-04 ,  2.38618e-02 ) [m]
+OPAL{+0}> * rmin            = ( -9.84189e-04 , -9.64419e-04 ,  1.79304e-02 ) [m]
+OPAL{+0}> * rms beam size   = (  4.20023e-04 ,  4.19888e-04 ,  1.02935e-03 ) [m]
+OPAL{+0}> * rms momenta     = (  3.57677e-02 ,  3.57759e-02 ,  1.29529e-01 ) [beta gamma]
+OPAL{+0}> * mean position   = (  1.85948e-06 ,  8.79359e-07 ,  2.10330e-02 ) [m]
+OPAL{+0}> * mean momenta    = (  2.62327e-05 ,  1.12014e-05 ,  4.08627e+00 ) [beta gamma]
+OPAL{+0}> * rms emittance   = (  3.37320e-07 ,  3.48360e-07 ,  2.75308e-06 ) (not normalized)
+OPAL{+0}> * rms correlation = (  9.95781e-01 ,  9.95499e-01 ,  9.96433e-01 )
+OPAL{+0}> * hr              = (  6.32511e-05 ,  6.24455e-05 ,  9.41478e-05 ) [m]
+OPAL{+0}> * dh              =    1.00000e-02 [m]
+OPAL{+0}> * t               =    1.06199e-10 [s]        dT    =  5.00000e-12 [s]
+OPAL{+0}> * spos            =    2.10330e-02 [m]
+OPAL{+0}> * ********************************************************************************** 
+OPAL{+0}> 
+OPAL{+0}> Phase space dump frequency 50 and statistics dump frequency 1 w.r.t. the time step.
+RFCavity {+0}> FINSS_RGUN using file CTF3_Ez_ASTRA.opal (1D dynamic); zini= 0 m; zfinal= 0.17493 m;
+Solenoid {+0}> FIND1_MSOL10 using file NEW_SINGLE_SOL_NOFRINGE_ASTRA.opal (1D magnetostatic); zini= -0.3 m; zfinal= 0.3 m;
+Solenoid {+0}> END using file NEW_SINGLE_SOL_NOFRINGE_ASTRA.opal (1D magnetostatic); zini= -0.3 m; zfinal= 0.3 m;
+ParallelTTracker {+0}> 
+ParallelTTracker {+0}> -------------------------------------------------------------------------------------
+ParallelTTracker {+0}> FINSS_RGUN: phi = phi_nom + phi_maxE + global phase shift = 111.388 degree, (global phase shift = -14.2995 degree) 
+ParallelTTracker {+0}> -------------------------------------------------------------------------------------
+ParallelTTracker {+0}> 
+ParallelTTracker {+0}> Track start at: 09.32.18, t= 1.06199e-10; zstop at: 0.03 [m]
+ParallelTTracker {+0}> Executing ParallelTTracker, initial DT 5e-12 [s];
+ParallelTTracker {+0}> max integration steps 100, next step= 21
+ParallelTTracker {+0}> Using default (Boris-Buneman) integrator
+ParallelTTracker {+0}> 
+ParallelTTracker {+0}> --- BEGIN FIELD LIST ---------------------------------------------------------------
+ParallelTTracker {+0}> 
+ParallelTTracker {+0}> --- 0 m -- 0.17493 m -- alpha = 0 -- beta = 0 --------------------------------------
+ParallelTTracker {+0}> FINSS_RGUN
+ParallelTTracker {+0}> FIND1_MSOL10
+ParallelTTracker {+0}> --- 0.17493 m -- 0.6 m -- alpha = 0 -- beta = 0 ------------------------------------
+ParallelTTracker {+0}> FIND1_MSOL10
+ParallelTTracker {+0}> --- 1.38 m -- 1.48 m -- alpha = 0 -- beta = 0 --------------------------------------
+ParallelTTracker {+0}> FIND1_MQ10
+ParallelTTracker {+0}> --- 1.56 m -- 1.66 m -- alpha = 0 -- beta = 0 --------------------------------------
+ParallelTTracker {+0}> FIND1_MQ20
+ParallelTTracker {+0}> --- 1.74 m -- 1.84 m -- alpha = 0 -- beta = 0 --------------------------------------
+ParallelTTracker {+0}> FIND1_MQ30
+ParallelTTracker {+0}> --- 99.7 m -- 100.3 m -- alpha = 0 -- beta = 0 -------------------------------------
+ParallelTTracker {+0}> END
+ParallelTTracker {+0}> 
+ParallelTTracker {+0}> --- END FIELD LIST -----------------------------------------------------------------
+ParallelTTracker {+0}> 
+ParallelTTracker {+0}> MINBINEMITTED 10
+ParallelTTracker {+0}> MINSTEPFORREBIN 600
+ParallelTTracker {+0}> SURFACEEMISSIONSTOP after 1000 seconds
+ParallelTTracker {+0}> REPARTFREQ 100
+ParallelTTracker {+0}> 09.32.18 Step     21 at   22.490 [mm] t=  1.112e-10 [s] E=    1.703 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.18 Step     22 at   23.949 [mm] t=  1.162e-10 [s] E=    1.755 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.19 Step     23 at   25.410 [mm] t=  1.212e-10 [s] E=    1.793 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.19 Step     24 at   26.872 [mm] t=  1.262e-10 [s] E=    1.819 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.19 Step     25 at   28.334 [mm] t=  1.312e-10 [s] E=    1.835 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.19 Step     26 at   29.797 [mm] t=  1.362e-10 [s] E=    1.843 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.19 Step     27 at   31.260 [mm] t=  1.412e-10 [s] E=    1.846 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> 
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP              =   20000
+OPAL {+0}> * Qtot            =    2.00000e-01 [nC]       Qi    =  1.00000e-05 [nC]
+OPAL {+0}> * Ekin            =    1.84601e+00 [MeV]      dEkin =  3.92773e-02 [MeV]
+OPAL {+0}> * rmax            = (  1.24598e-03 ,  1.23845e-03 ,  3.41112e-02 ) [m]
+OPAL {+0}> * rmin            = ( -1.25481e-03 , -1.22840e-03 ,  2.81161e-02 ) [m]
+OPAL {+0}> * rms beam size   = (  5.32689e-04 ,  5.32538e-04 ,  1.04120e-03 ) [m]
+OPAL {+0}> * rms momenta     = (  5.80912e-02 ,  5.80866e-02 ,  7.87365e-02 ) [beta gamma]
+OPAL {+0}> * mean position   = (  2.04910e-06 ,  9.62650e-07 ,  3.12601e-02 ) [m]
+OPAL {+0}> * mean momenta    = (  1.21190e-04 ,  5.41241e-05 ,  4.50207e+00 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  3.13877e-07 ,  3.27035e-07 ,  2.97169e-06 ) (not normalized)
+OPAL {+0}> * rms correlation = (  9.98956e-01 ,  9.98866e-01 ,  9.86589e-01 )
+OPAL {+0}> * hr              = (  8.06705e-05 ,  7.95759e-05 ,  9.51603e-05 ) [m]
+OPAL {+0}> * dh              =    1.00000e-02 [m]
+OPAL {+0}> * t               =    1.41199e-10 [s]        dT    =  5.00000e-12 [s]
+OPAL {+0}> * spos            =    3.12601e-02 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> Dump phase space of last step
+ParallelTTracker {+0}> done executing ParallelTTracker at 09.32.22
+OPAL{+0}> * ********************************************************************************** 
+OPAL{+0}>   Selected Tracking Method == PARALLEL-T, FOLLOWUP TRACK
+OPAL{+0}> * ********************************************************************************** 
+OPAL{+0}> * ************* B E A M ************************************************************ 
+OPAL{+0}> * BEAM        BEAM1
+OPAL{+0}> * PARTICLE    ELECTRON
+OPAL{+0}> * CURRENT     5.996e-07 A
+OPAL{+0}> * FREQUENCY   2998 Hz
+OPAL{+0}> * CHARGE      -e * 1 
+OPAL{+0}> * REST MASS   0.000511 GeV
+OPAL{+0}> * MOMENTUM    1
+OPAL{+0}> * NPART       20000
+OPAL{+0}> * ********************************************************************************** 
+OPAL{+0}> 
+OPAL{+0}> * ************* F I E L D S O L V E R ********************************************** 
+OPAL{+0}> * FIELDSOLVER  FS1
+OPAL{+0}> * TYPE         FFT
+OPAL{+0}> * N-PROCESSORS 4
+OPAL{+0}> * MX           32
+OPAL{+0}> * MY           32
+OPAL{+0}> * MT           64
+OPAL{+0}> * BBOXINCR     1
+OPAL{+0}> * GRRENSF      INTEGRATED
+OPAL{+0}> * XDIM is parallel  
+OPAL{+0}> * YDIM is parallel  
+OPAL{+0}> * Z(T)DIM is parallel  
+OPAL{+0}> 
+OPAL{+0}> * ********************************************************************************** 
+OPAL{+0}> 
+OPAL{+0}> 
+OPAL{+0}> * ************** B U N C H ********************************************************* 
+OPAL{+0}> * NP              =   20000
+OPAL{+0}> * Qtot            =    2.00000e-01 [nC]       Qi    =  1.00000e-05 [nC]
+OPAL{+0}> * Ekin            =    1.84601e+00 [MeV]      dEkin =  3.92773e-02 [MeV]
+OPAL{+0}> * rmax            = (  1.24598e-03 ,  1.23845e-03 ,  3.41112e-02 ) [m]
+OPAL{+0}> * rmin            = ( -1.25481e-03 , -1.22840e-03 ,  2.81161e-02 ) [m]
+OPAL{+0}> * rms beam size   = (  5.32689e-04 ,  5.32538e-04 ,  1.04120e-03 ) [m]
+OPAL{+0}> * rms momenta     = (  5.80912e-02 ,  5.80866e-02 ,  7.87365e-02 ) [beta gamma]
+OPAL{+0}> * mean position   = (  2.04910e-06 ,  9.62650e-07 ,  3.12601e-02 ) [m]
+OPAL{+0}> * mean momenta    = (  1.21190e-04 ,  5.41241e-05 ,  4.50207e+00 ) [beta gamma]
+OPAL{+0}> * rms emittance   = (  3.13877e-07 ,  3.27035e-07 ,  2.97169e-06 ) (not normalized)
+OPAL{+0}> * rms correlation = (  9.98956e-01 ,  9.98866e-01 ,  9.86589e-01 )
+OPAL{+0}> * hr              = (  8.06705e-05 ,  7.95759e-05 ,  9.51603e-05 ) [m]
+OPAL{+0}> * dh              =    1.00000e-02 [m]
+OPAL{+0}> * t               =    1.41199e-10 [s]        dT    =  5.00000e-12 [s]
+OPAL{+0}> * spos            =    3.12601e-02 [m]
+OPAL{+0}> * ********************************************************************************** 
+OPAL{+0}> 
+OPAL{+0}> Phase space dump frequency 50 and statistics dump frequency 1 w.r.t. the time step.
+ErrorError{+3}> H5 rc= -2 in /home/baboch/gitwork/opal/src/Structure/DataSink.cpp @ line 486
+Error{{+2}> H5 rc= -2 in /home/baboch/gitwork/opal/src/Structure/DataSink.cpp @ line 486
+ErrorError{+1}> H5 rc= -2 in /home/baboch/gitwork/opal/src/Structure/DataSink.cpp @ line 486
++3}> H5 rc= -2 in /home/baboch/gitwork/opal/src/Structure/DataSink.cpp @ line 500
+Error{+3}> H5 rc= -2 in /home/baboch/gitwork/opal/src/Structure/DataSink.cpp @ line 503
+Error{+1}> H5 rc= -2 in /home/baboch/gitwork/opal/src/Structure/DataSink.cpp @ line 500
+Error{+1}> H5 rc= -2 in /home/baboch/gitwork/opal/src/Structure/DataSink.cpp @ line 503
+{+2RFCavity {+0}> FINSS_RGUN using file CTF3_Ez_ASTRA.opal (1D dynamic); zini= 0 m; zfinal= 0.17493 m;
+Solenoid {+0}> FIND1_MSOL10 using file NEW_SINGLE_SOL_NOFRINGE_ASTRA.opal (1D magnetostatic); zini= -0.3 m; zfinal= 0.3 m;
+Solenoid {+0}> END using file NEW_SINGLE_SOL_NOFRINGE_ASTRA.opal (1D magnetostatic); zini= -0.3 m; zfinal= 0.3 m;
+}> H5 rc= -2 in /home/baboch/gitwork/opal/src/Structure/DataSink.cpp @ line 500Error
+Error{+2}> H5 rc= -2 in /home/baboch/gitwork/opal/src/Structure/DataSink.cpp @ line 503
+{+0}> H5 rc= -2 in /home/baboch/gitwork/opal/src/Structure/DataSink.cpp @ line 486
+Error{+0}> H5 rc= -2 in /home/baboch/gitwork/opal/src/Structure/DataSink.cpp @ line 500
+Error{+0}> H5 rc= -2 in /home/baboch/gitwork/opal/src/Structure/DataSink.cpp @ line 503
+ParallelTTracker {+0}> 
+ParallelTTracker {+0}> -------------------------------------------------------------------------------------
+ParallelTTracker {+0}> FINSS_RGUN: phi = phi_nom + phi_maxE + global phase shift = 111.388 degree, (global phase shift = -14.2995 degree) 
+ParallelTTracker {+0}> -------------------------------------------------------------------------------------
+ParallelTTracker {+0}> 
+ParallelTTracker {+0}> Track start at: 09.32.22, t= 1.41199e-10; zstop at: 0.1 [m]
+ParallelTTracker {+0}> Executing ParallelTTracker, initial DT 5e-12 [s];
+ParallelTTracker {+0}> max integration steps 30, next step= 0
+ParallelTTracker {+0}> Using default (Boris-Buneman) integrator
+ParallelTTracker {+0}> 
+ParallelTTracker {+0}> --- BEGIN FIELD LIST ---------------------------------------------------------------
+ParallelTTracker {+0}> 
+ParallelTTracker {+0}> --- 0 m -- 0.17493 m -- alpha = 0 -- beta = 0 --------------------------------------
+ParallelTTracker {+0}> FINSS_RGUN
+ParallelTTracker {+0}> FIND1_MSOL10
+ParallelTTracker {+0}> --- 0.17493 m -- 0.6 m -- alpha = 0 -- beta = 0 ------------------------------------
+ParallelTTracker {+0}> FIND1_MSOL10
+ParallelTTracker {+0}> --- 1.38 m -- 1.48 m -- alpha = 0 -- beta = 0 --------------------------------------
+ParallelTTracker {+0}> FIND1_MQ10
+ParallelTTracker {+0}> --- 1.56 m -- 1.66 m -- alpha = 0 -- beta = 0 --------------------------------------
+ParallelTTracker {+0}> FIND1_MQ20
+ParallelTTracker {+0}> --- 1.74 m -- 1.84 m -- alpha = 0 -- beta = 0 --------------------------------------
+ParallelTTracker {+0}> FIND1_MQ30
+ParallelTTracker {+0}> --- 99.7 m -- 100.3 m -- alpha = 0 -- beta = 0 -------------------------------------
+ParallelTTracker {+0}> END
+ParallelTTracker {+0}> 
+ParallelTTracker {+0}> --- END FIELD LIST -----------------------------------------------------------------
+ParallelTTracker {+0}> 
+ParallelTTracker {+0}> MINBINEMITTED 10
+ParallelTTracker {+0}> MINSTEPFORREBIN 600
+ParallelTTracker {+0}> SURFACEEMISSIONSTOP after 1000 seconds
+ParallelTTracker {+0}> REPARTFREQ 100
+ParallelTTracker {+0}> 09.32.22 Step     28 at   32.723 [mm] t=  1.462e-10 [s] E=    1.846 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.22 Step     29 at   34.186 [mm] t=  1.512e-10 [s] E=    1.847 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.22 Step     30 at   35.649 [mm] t=  1.562e-10 [s] E=    1.851 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.22 Step     31 at   37.113 [mm] t=  1.612e-10 [s] E=    1.861 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.22 Step     32 at   38.577 [mm] t=  1.662e-10 [s] E=    1.881 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.22 Step     33 at   40.041 [mm] t=  1.712e-10 [s] E=    1.911 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.22 Step     34 at   41.507 [mm] t=  1.762e-10 [s] E=    1.954 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.22 Step     35 at   42.974 [mm] t=  1.812e-10 [s] E=    2.010 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.22 Step     36 at   44.442 [mm] t=  1.862e-10 [s] E=    2.080 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.22 Step     37 at   45.913 [mm] t=  1.912e-10 [s] E=    2.163 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.22 Step     38 at   47.385 [mm] t=  1.962e-10 [s] E=    2.260 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.23 Step     39 at   48.859 [mm] t=  2.012e-10 [s] E=    2.368 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.23 Step     40 at   50.335 [mm] t=  2.062e-10 [s] E=    2.487 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.23 Step     41 at   51.813 [mm] t=  2.112e-10 [s] E=    2.615 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.23 Step     42 at   53.293 [mm] t=  2.162e-10 [s] E=    2.748 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.23 Step     43 at   54.774 [mm] t=  2.212e-10 [s] E=    2.886 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.23 Step     44 at   56.256 [mm] t=  2.262e-10 [s] E=    3.026 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.23 Step     45 at   57.740 [mm] t=  2.312e-10 [s] E=    3.166 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.23 Step     46 at   59.225 [mm] t=  2.362e-10 [s] E=    3.302 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.23 Step     47 at   60.711 [mm] t=  2.412e-10 [s] E=    3.432 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.23 Step     48 at   62.198 [mm] t=  2.462e-10 [s] E=    3.556 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.23 Step     49 at   63.685 [mm] t=  2.512e-10 [s] E=    3.669 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.23 Step     50 at   65.173 [mm] t=  2.562e-10 [s] E=    3.772 [MeV] 
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> 
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP              =   20000
+OPAL {+0}> * Qtot            =    2.00000e-01 [nC]       Qi    =  1.00000e-05 [nC]
+OPAL {+0}> * Ekin            =    3.77165e+00 [MeV]      dEkin =  5.73432e-02 [MeV]
+OPAL {+0}> * rmax            = (  1.63812e-03 ,  1.62175e-03 ,  6.73210e-02 ) [m]
+OPAL {+0}> * rmin            = ( -1.64196e-03 , -1.60441e-03 ,  6.11986e-02 ) [m]
+OPAL {+0}> * rms beam size   = (  6.95217e-04 ,  6.95061e-04 ,  1.06482e-03 ) [m]
+OPAL {+0}> * rms momenta     = (  1.91810e-02 ,  1.91947e-02 ,  1.13025e-01 ) [beta gamma]
+OPAL {+0}> * mean position   = (  2.12929e-06 ,  9.77349e-07 ,  6.51729e-02 ) [m]
+OPAL {+0}> * mean momenta    = ( -3.26951e-05 , -1.34056e-05 ,  8.32100e+00 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  2.40623e-07 ,  2.41449e-07 ,  3.08049e-06 ) (not normalized)
+OPAL {+0}> * rms correlation = (  9.88663e-01 ,  9.88596e-01 ,  9.77056e-01 )
+OPAL {+0}> * hr              = (  1.05809e-04 ,  1.04070e-04 ,  9.71817e-05 ) [m]
+OPAL {+0}> * dh              =    1.00000e-02 [m]
+OPAL {+0}> * t               =    2.56199e-10 [s]        dT    =  5.00000e-12 [s]
+OPAL {+0}> * spos            =    6.51729e-02 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.26 Step     51 at   66.661 [mm] t=  2.612e-10 [s] E=    3.861 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.26 Step     52 at   68.150 [mm] t=  2.662e-10 [s] E=    3.938 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.26 Step     53 at   69.639 [mm] t=  2.712e-10 [s] E=    4.000 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.26 Step     54 at   71.129 [mm] t=  2.762e-10 [s] E=    4.049 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.26 Step     55 at   72.618 [mm] t=  2.812e-10 [s] E=    4.085 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.26 Step     56 at   74.108 [mm] t=  2.862e-10 [s] E=    4.109 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> 09.32.26 Step     57 at   75.598 [mm] t=  2.912e-10 [s] E=    4.123 [MeV] 
+OPAL {+0}> * Wrote beam statistics.
+OPAL {+0}> * Wrote beam phase space.
+OPAL {+0}> 
+OPAL {+0}> * ************** B U N C H ********************************************************* 
+OPAL {+0}> * NP              =   20000
+OPAL {+0}> * Qtot            =    2.00000e-01 [nC]       Qi    =  1.00000e-05 [nC]
+OPAL {+0}> * Ekin            =    4.12279e+00 [MeV]      dEkin =  2.09396e-02 [MeV]
+OPAL {+0}> * rmax            = (  1.75401e-03 ,  1.73904e-03 ,  7.84909e-02 ) [m]
+OPAL {+0}> * rmin            = ( -1.76203e-03 , -1.72197e-03 ,  7.23618e-02 ) [m]
+OPAL {+0}> * rms beam size   = (  7.42967e-04 ,  7.42821e-04 ,  1.06590e-03 ) [m]
+OPAL {+0}> * rms momenta     = (  6.00090e-02 ,  6.00119e-02 ,  4.12293e-02 ) [beta gamma]
+OPAL {+0}> * mean position   = (  2.16595e-06 ,  9.96129e-07 ,  7.55977e-02 ) [m]
+OPAL {+0}> * mean momenta    = (  9.14052e-05 ,  4.29318e-05 ,  9.01240e+00 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  2.03803e-07 ,  2.05697e-07 ,  3.15315e-06 ) (not normalized)
+OPAL {+0}> * rms correlation = (  9.99151e-01 ,  9.99135e-01 ,  7.62772e-01 )
+OPAL {+0}> * hr              = (  1.13421e-04 ,  1.11646e-04 ,  9.72859e-05 ) [m]
+OPAL {+0}> * dh              =    1.00000e-02 [m]
+OPAL {+0}> * t               =    2.91199e-10 [s]        dT    =  5.00000e-12 [s]
+OPAL {+0}> * spos            =    7.55977e-02 [m]
+OPAL {+0}> * ********************************************************************************** 
+OPAL {+0}> 
+OPAL {+0}> * Wrote beam statistics.
+ParallelTTracker {+0}> Dump phase space of last step
+ParallelTTracker {+0}> done executing ParallelTTracker at 09.32.28
+OPAL{+0}> * End of input stream "RestartTest-6.in".
+Timings{+0}> -----------------------------------------------------------------
+Timings{+0}>      Timing results for 4 nodes:
+Timings{+0}> -----------------------------------------------------------------
+Timings{+0}> mainTimer ........... Wall tot =    9.49852, CPU tot =          3
+Timings{+0}> 
+Timings{+0}> Secondary emission .. Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> Initialize geometry . Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> Inside test ......... Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> Fast inside test .... Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> Ray tracing ......... Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> Particle Inside ..... Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> SelfField ........... Wall max =     2.4946, CPU max =       2.46
+Timings{+0}>                       Wall avg =     2.4906, CPU avg =     2.3375
+Timings{+0}>                       Wall min =    2.48665, CPU min =       2.22
+Timings{+0}> 
+Timings{+0}> Boundingbox ......... Wall max =   0.014606, CPU max =       0.04
+Timings{+0}>                       Wall avg =   0.014306, CPU avg =      0.025
+Timings{+0}>                       Wall min =   0.013889, CPU min =          0
+Timings{+0}> 
+Timings{+0}> Statistics .......... Wall max =   0.051761, CPU max =       0.11
+Timings{+0}>                       Wall avg =  0.0498153, CPU avg =     0.0625
+Timings{+0}>                       Wall min =    0.04776, CPU min =       0.01
+Timings{+0}> 
+Timings{+0}> Potential ........... Wall max =    2.23481, CPU max =       2.18
+Timings{+0}>                       Wall avg =    2.23434, CPU avg =     2.0975
+Timings{+0}>                       Wall min =    2.23405, CPU min =       1.95
+Timings{+0}> 
+Timings{+0}> Histogram ........... Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> CreatDistr .......... Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> LoadDistr ........... Wall max =    0.03057, CPU max =       0.04
+Timings{+0}>                       Wall avg =  0.0272292, CPU avg =      0.035
+Timings{+0}>                       Wall min =   0.017875, CPU min =       0.02
+Timings{+0}> 
+Timings{+0}> GreensFTotal ........ Wall max =    1.20688, CPU max =       1.16
+Timings{+0}>                       Wall avg =    1.07593, CPU avg =     1.0425
+Timings{+0}>                       Wall min =    1.02383, CPU min =       0.99
+Timings{+0}> 
+Timings{+0}> IntGreenF1 .......... Wall max =   0.393577, CPU max =       0.38
+Timings{+0}>                       Wall avg =   0.359465, CPU avg =       0.35
+Timings{+0}>                       Wall min =   0.338586, CPU min =       0.33
+Timings{+0}> 
+Timings{+0}> IntGreenF2 .......... Wall max =   0.210896, CPU max =        0.2
+Timings{+0}>                       Wall avg =   0.119356, CPU avg =     0.1425
+Timings{+0}>                       Wall min =   0.075366, CPU min =       0.09
+Timings{+0}> 
+Timings{+0}> IntGreenF3 .......... Wall max =   0.556731, CPU max =       0.52
+Timings{+0}>                       Wall avg =   0.546447, CPU avg =     0.5025
+Timings{+0}>                       Wall min =   0.534053, CPU min =       0.48
+Timings{+0}> 
+Timings{+0}> MirrorRho1 .......... Wall max =   0.059925, CPU max =        0.1
+Timings{+0}>                       Wall avg =   0.049884, CPU avg =     0.0475
+Timings{+0}>                       Wall min =   0.037453, CPU min =          0
+Timings{+0}> 
+Timings{+0}> ShIntGreenF1 ........ Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> ShIntGreenF2 ........ Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> ShIntGreenF3 ........ Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> ShIntGreenF4 ........ Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> MirrorRho2 .......... Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> GreenF1 ............. Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> GreenF2 ............. Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> GreenF3 ............. Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> GreenF4 ............. Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> H5PartTimer ......... Wall max =    6.50823, CPU max =       0.06
+Timings{+0}>                       Wall avg =    6.50792, CPU avg =      0.045
+Timings{+0}>                       Wall min =    6.50749, CPU min =       0.03
+Timings{+0}> 
+Timings{+0}> H5BlockTimer ........ Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> StatMarkerTimer ..... Wall max =   0.025631, CPU max =       0.05
+Timings{+0}>                       Wall avg =   0.021261, CPU avg =     0.0325
+Timings{+0}>                       Wall min =   0.019633, CPU min =          0
+Timings{+0}> 
+Timings{+0}> TIntegration1 ....... Wall max =   0.076668, CPU max =       0.09
+Timings{+0}>                       Wall avg =  0.0724027, CPU avg =      0.065
+Timings{+0}>                       Wall min =   0.064656, CPU min =       0.02
+Timings{+0}> 
+Timings{+0}> TIntegration2 ....... Wall max =    0.07565, CPU max =       0.09
+Timings{+0}>                       Wall avg =  0.0754677, CPU avg =       0.07
+Timings{+0}>                       Wall min =   0.075133, CPU min =       0.06
+Timings{+0}> 
+Timings{+0}> Fieldeval ........... Wall max =   0.125935, CPU max =       0.15
+Timings{+0}>                       Wall avg =   0.119984, CPU avg =      0.125
+Timings{+0}>                       Wall min =    0.10761, CPU min =        0.1
+Timings{+0}> 
+Timings{+0}> Binaryrepart ........ Wall max =   0.039071, CPU max =       0.05
+Timings{+0}>                       Wall avg =  0.0376575, CPU avg =       0.04
+Timings{+0}>                       Wall min =   0.036508, CPU min =       0.02
+Timings{+0}> 
+Timings{+0}> WakeField ........... Wall max =          0, CPU max =          0
+Timings{+0}>                       Wall avg =          0, CPU avg =          0
+Timings{+0}>                       Wall min =          0, CPU min =          0
+Timings{+0}> 
+Timings{+0}> RC-RRtranspose ...... Wall max =   0.240651, CPU max =        0.2
+Timings{+0}>                       Wall avg =   0.222476, CPU avg =      0.165
+Timings{+0}>                       Wall min =   0.211856, CPU min =       0.14
+Timings{+0}> 
+Timings{+0}> RC-CCtranspose ...... Wall max =    1.04767, CPU max =       1.07
+Timings{+0}>                       Wall avg =   0.937469, CPU avg =     0.9475
+Timings{+0}>                       Wall min =   0.831275, CPU min =       0.82
+Timings{+0}> 
+Timings{+0}> RC-RC1Dfft .......... Wall max =   0.169796, CPU max =       0.19
+Timings{+0}>                       Wall avg =   0.169156, CPU avg =      0.165
+Timings{+0}>                       Wall min =   0.168273, CPU min =       0.14
+Timings{+0}> 
+Timings{+0}> RC-CC1Dfft .......... Wall max =   0.390526, CPU max =       0.26
+Timings{+0}>                       Wall avg =   0.295878, CPU avg =      0.205
+Timings{+0}>                       Wall min =   0.233411, CPU min =       0.16
+Timings{+0}> 
+Timings{+0}> RC-total ............ Wall max =    1.70358, CPU max =       1.65
+Timings{+0}>                       Wall avg =    1.63993, CPU avg =     1.4925
+Timings{+0}>                       Wall min =    1.50928, CPU min =       1.37
+Timings{+0}> 
+Timings{+0}> -----------------------------------------------------------------

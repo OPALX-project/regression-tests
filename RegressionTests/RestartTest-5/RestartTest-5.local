@@ -1,5 +1,5 @@
 #!/bin/bash 
 cp RestartTest-5.h5.bak RestartTest-5.h5
-rm -f RestartTest-5.stat 
+rm -f RestartTest-5.stat RestartTest-5.lbal
 mpirun -np 4 $OPAL_EXE_PATH/opal RestartTest-5.in -restart 0 --commlib mpi --info 0 --warn 0 2>&1
 
