@@ -6,6 +6,7 @@ if sys.version_info < (3,0):
 else:
     import subprocess
 import os
+import shutil
 
 from reporter import Reporter
 from reporter import TempXMLElement
@@ -46,42 +47,45 @@ def callback(arg, dirname, fnames):
     global totalNrPassed
     global totalNrTests
 
-    if not ".svn" in dirname and not "reference" in dirname: #exclude svn and reference dirs
+    if ".svn" in dirname or "reference" in dirname:
+        return   #exclude svn and reference dirs
 
-        dir = str.split(dirname, "/")
-        simname = dir[len(dir)-1]
+    dir = str.split(dirname, "/")
+    simname = dir[len(dir)-1]
 
-        # check if all files required are available
-        if os.path.isfile(dirname + "/" + simname + ".in") and \
-           os.path.isfile(dirname + "/" + simname + ".rt") and \
-           os.path.isfile(dirname + "/" + simname + ".sge") and \
-           os.path.isdir(dirname + "/" + "reference"):
-                rep = Reporter()
-                rep.appendReport("Found valid test in %s \n" % dirname)
+    # check if all files required are available
+    if not (os.path.isfile(dirname + "/" + simname + ".in") and \
+       os.path.isfile(dirname + "/" + simname + ".rt") and \
+       os.path.isfile(dirname + "/" + simname + ".sge") and \
+       os.path.isdir(dirname + "/" + "reference")):
+        return
 
-                # check if we really want to run this test
-                # empty list = run all
-                runtests = arg[0]
-                if runtests:
-                    if not simname in runtests:
-                        rep.appendReport("User decided to skip regression test %s \n" % simname)
-                        rep.appendReport("\n\n")
-                        return
+    rep = Reporter()
+    rep.appendReport("Found valid test in %s \n" % dirname)
 
-                d = datetime.date.today()
-                resultdir = "results/" + d.isoformat() + "/" + simname
-                if not os.path.isdir(resultdir):
-                    subprocess.getoutput("mkdir -p " + resultdir)
+    # check if we really want to run this test
+    # empty list = run all
+    runtests = arg[0]
+    if runtests:
+        if not simname in runtests:
+            rep.appendReport("User decided to skip regression test %s \n" % simname)
+            rep.appendReport("\n\n")
+            return
 
-                simulation_report = TempXMLElement("Simulation")
-                simulation_report.addAttribute("name", simname)
-                simulation_report.addAttribute("date", "%s" % d)
+    d = datetime.date.today()
+    resultdir = "results/" + d.isoformat() + "/" + simname
+    if not os.path.isdir(resultdir):
+        os.makedirs (resultdir)
 
-                rt = RegressionTest(dirname, simname, resultdir)
-                rt.run(simulation_report, arg[1], arg[2])
-                totalNrTests += rt.totalNrTests
-                totalNrPassed += rt.totalNrPassed
-                rep.appendReport("\n\n")
+    simulation_report = TempXMLElement("Simulation")
+    simulation_report.addAttribute("name", simname)
+    simulation_report.addAttribute("date", "%s" % d)
+
+    rt = RegressionTest(dirname, simname, resultdir)
+    rt.run(simulation_report, arg[1], arg[2])
+    totalNrTests += rt.totalNrTests
+    totalNrPassed += rt.totalNrPassed
+    rep.appendReport("\n\n")
 
 def bailout(runAsUser):
     rep = Reporter()
@@ -132,7 +136,7 @@ def main(argv):
     runAsUser = False
     runtests = list()
     run_local = False
-    publish_local = True
+    do_publish = True
 
     if "--run-local" in argv:
         run_local = True
@@ -155,14 +159,9 @@ def main(argv):
         os.environ["SGE_ROOT"]="/gpfs/homefelsim/export/sge"
         os.environ["SGE_CLUSTER_NAME"]="sgeclusterfelsim"
         os.environ["PATH"]= os.getenv("PATH") + ":/gpfs/homefelsim/export/sge/bin/lx24-amd64:/usr/kerberos/bin"
-        rep.appendReport(subprocess.getoutput("/bin/env"))
-
-        #klog to be able to do svn stuff
-        os.environ["KRB5_CONFIG"] = "/home2/l_felsimsvn/krb5.conf"
-        subprocess.getoutput("/usr/kerberos/bin/kinit -V -k -t ~/.krb5.keytab.D.PSI.CH l_felsimsvn@D.PSI.CH")
 
     if "--dont-publish" in argv:
-        publish_local = False
+        do_publish = False
 
     queue = ""
     for arg in argv:
@@ -172,7 +171,6 @@ def main(argv):
                 print("no queue given, exiting")
                 sys.exit()
             queue = "-q " + tmp[1]
-
 
     rep.appendReport("\n")
     rep.appendReport("Start Regression Test on %s \n" % datetime.datetime.today())
@@ -188,12 +186,10 @@ def main(argv):
 
     #cp report to webdir and add entry in index.html
     if not runAsUser:
-        subprocess.getoutput("/usr/kerberos/bin/kinit -V -k -t ~/.krb5.keytab.D.PSI.CH l_felsimsvn@D.PSI.CH")
-        subprocess.getoutput("/usr/bin/aklog")
         failedtests = rep.NrFailed()
         brokentests = rep.NrBroken()
         webfilename = "results_%s_%s_%s.xml" % (d.day, d.month, d.year)
-        subprocess.getoutput("cp results.xml " + www_folder + "/" + webfilename)
+        shutil.copy ("results.xml", www_folder + "/" + webfilename)
         subprocess.getoutput("cp -rf plots_" + d.isoformat() + " " + www_folder + "/")
         indexhtml = open(www_folder + "/index.html").readlines()
         for line in range(len(indexhtml)):
@@ -204,7 +200,7 @@ def main(argv):
         indexhtmlout.writelines(indexhtml)
         indexhtmlout.close()
         #update xslt formating file
-        subprocess.getoutput("cp " + rundir + "/results.xslt " + www_folder + "/")
+        shutil.copy (rundir + "/results.xslt", www_folder + "/")
 
         #update manual
         OpalDocumentation()
@@ -212,11 +208,11 @@ def main(argv):
         #update doxygen
         OpalDoxygen()
 
-    if publish_local:
+    if do_publish:
         failedtests = rep.NrFailed()
         brokentests = rep.NrBroken()
         webfilename = "results_%s_%s_%s.xml" % (d.day, d.month, d.year)
-        subprocess.getoutput("cp results.xml " + www_folder + "/" + webfilename)
+        shutil.copy ("results.xml", www_folder + "/" + webfilename)
         subprocess.getoutput("cp -rf plots_" + d.isoformat() + " " + www_folder + "/")
         indexhtml = open(www_folder + "/index.html").readlines()
         for line in range(len(indexhtml)):
@@ -227,21 +223,18 @@ def main(argv):
         indexhtmlout.writelines(indexhtml)
         indexhtmlout.close()
         #update xslt formating file
-        subprocess.getoutput("cp " + rundir + "/results.xslt " + www_folder + "/")
+        shutil.copy (rundir + "/results.xslt", www_folder + "/")
 
     #move xml results to result-dir
     if os.path.isfile('results.xml'):
         resultdir = regdir + "/results/" + d.isoformat()
         if not os.path.isdir(resultdir):
-            subprocess.getoutput("mkdir -p " + resultdir)
+            os.mkdir (resultdir)
 
         subprocess.getoutput("cp -rf " + "results.xml " + resultdir)
 
     if runAsUser:
         subprocess.getoutput("rm -rf " + regdir + "/plots_" + d.isoformat())
-    else:
-        subprocess.getoutput("kdestroy")
-
     bailout(runAsUser)
 
 #call main
