@@ -10,8 +10,6 @@ import os
 from reporter import Reporter
 from reporter import TempXMLElement
 
-from builder import Builder
-
 from regressiontest import RegressionTest
 
 from documentation import OpalDocumentation
@@ -107,22 +105,26 @@ def main(argv):
     d = datetime.date.today()
     rep.appendReport("Results: http://amas.web.psi.ch/regressiontests/results_%s_%s_%s.xml \n\n" % (d.day, d.month, d.year))
 
-    #various paths needed
-
     www_folder = os.getenv("REGTEST_WWW")
     if www_folder is None:
-        www_folder = "/afs/psi.ch/project/amas/www/regressiontests"
+        rep.appendReport("Error: REGTEST_WWW not set")
+        bailout(runAsUser)
+        return
 
-    os.chdir(sys.path[0]) #chdir to path of script
-    rundir = os.getcwd()
-    regdir = '/run'.join((rundir.split("/run"))[0:-1])
+    if not os.getenv("OPAL_EXE_PATH"):
+        rep.appendReport("Error: OPAL_EXE_PATH not set")
+        bailout(runAsUser)
+        return
 
-    #FIXME
-    srcdir = os.getenv("OPAL_ROOT")
-    if srcdir is None:
-        srcdir = "/gpfs/homefelsim/l_felsimsvn/work/opal/"
-    builddir = rundir + "/build"
-    d = datetime.date.today()
+    if not os.path.isfile(os.getenv("OPAL_EXE_PATH") + "/opal"):
+        rep.appendReport("Error: OPAL_EXE_PATH is invalid")
+        bailout(runAsUser)
+        return
+
+    # tests are one level up starting from directory of this script
+    rundir = sys.path[0]   # get absolute path name of this script
+    regdir = os.path.dirname (rundir)
+
     global totalNrPassed
     global totalNrTests
     totalNrTests = 0
@@ -147,30 +149,17 @@ def main(argv):
         modules = readfile("modules")
         for module in modules:
             module_load(module)
-            os.environ["SGE_CELL"]="sgefelsim"
-            os.environ["SGE_EXECD_PORT"]="6445"
-            os.environ["SGE_QMASTER_PORT"]="6444"
-            os.environ["SGE_ROOT"]="/gpfs/homefelsim/export/sge"
-            os.environ["SGE_CLUSTER_NAME"]="sgeclusterfelsim"
-            os.environ["PATH"]= os.getenv("PATH") + ":/gpfs/homefelsim/export/sge/bin/lx24-amd64:/usr/kerberos/bin"
-            print (subprocess.getoutput("/bin/env"))
-        #rep.appendReport(subprocess.getoutput("/bin/env"))
+        os.environ["SGE_CELL"]="sgefelsim"
+        os.environ["SGE_EXECD_PORT"]="6445"
+        os.environ["SGE_QMASTER_PORT"]="6444"
+        os.environ["SGE_ROOT"]="/gpfs/homefelsim/export/sge"
+        os.environ["SGE_CLUSTER_NAME"]="sgeclusterfelsim"
+        os.environ["PATH"]= os.getenv("PATH") + ":/gpfs/homefelsim/export/sge/bin/lx24-amd64:/usr/kerberos/bin"
+        rep.appendReport(subprocess.getoutput("/bin/env"))
 
         #klog to be able to do svn stuff
         os.environ["KRB5_CONFIG"] = "/home2/l_felsimsvn/krb5.conf"
         subprocess.getoutput("/usr/kerberos/bin/kinit -V -k -t ~/.krb5.keytab.D.PSI.CH l_felsimsvn@D.PSI.CH")
-        #subprocess.getoutput("kinit -k -t ~/.krb5.keytab l_felsimsvn")
-
-    #check if user also wants build test
-    if "--build" in argv:
-        buildopal = Builder(srcdir, "OPAL", "src/opal", builddir)
-        totalNrTests += 1
-        if buildopal.build():
-            totalNrPassed += 1
-        else:
-            rep.appendReport("Build-test failed! Exiting..")
-            bailout(runAsUser)
-            return
 
     if "--dont-publish" in argv:
         publish_local = False
@@ -184,32 +173,16 @@ def main(argv):
                 sys.exit()
             queue = "-q " + tmp[1]
 
-    #check if user has already set an OPAL executable
-    #if not use the one from the last build test
-    env = os.getenv("OPAL_EXE_PATH")
-    if env is None:
-        os.environ["OPAL_EXE_PATH"] = builddir + "/src"
-
 
     rep.appendReport("\n")
     rep.appendReport("Start Regression Test on %s \n" % datetime.datetime.today())
     rep.appendReport("==========================================================\n")
 
-    #only run regression tests if opal executable is valid
-    if os.path.isfile(os.getenv("OPAL_EXE_PATH") + "/opal"):
-        os.chdir(regdir)
-        #first update all tests and regression test files
-        #FIXME: detect SCM
-        if os.path.isdir(regdir + "/.svn") and not runAsUser:
-            subprocess.getoutput("svn update")
-        #walk the run dir tree
-        arglist = [runtests, run_local, queue]
-        for root, dirs, files in os.walk("./"):
-            callback(arglist, root, files)
-    else:
-        rep.appendReport("Error: OPAL_EXE_PATH is invalid")
-        bailout(runAsUser)
-        return
+    os.chdir(regdir)
+    #walk the run dir tree
+    arglist = [runtests, run_local, queue]
+    for root, dirs, files in os.walk("./"):
+        callback(arglist, root, files)
 
     rep.dumpXML("results.xml")
 
