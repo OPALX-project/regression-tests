@@ -1,0 +1,17 @@
+#!/bin/bash
+#$ -cwd
+#$ -j y
+#$ -pe orte 1
+#$ -N RestartTest-8-RT
+#$ -v LD_LIBRARY_PATH,OPENMPI,OPAL_EXE_PATH,REG_TEST_DIR
+
+for X in lbal stat h5;do cp RestartTest-8.$X.bak RestartTest-8.$X;done
+
+MACHINE_FILE=$TMPDIR/machinefile
+awk '/^merlin/ {print $1" slots="$2}' $PE_HOSTFILE > $MACHINE_FILE 
+cp $MACHINE_FILE machinefile.last
+
+cd $REG_TEST_DIR
+OPAL="$OPAL_EXE_PATH/opal RestartTest-8.in --commlib mpi --info 0 --warn 0 "
+CMD="$OPENMPI/bin/mpirun -x LD_LIBRARY_PATH -machinefile $MACHINE_FILE -np $NSLOTS $OPAL "
+$CMD
