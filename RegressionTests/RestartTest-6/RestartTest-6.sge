@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 #$ -cwd
 #$ -j y
 #$ -pe orte 4
@@ -12,6 +12,14 @@ cp $MACHINE_FILE machinefile.last
 cd $REG_TEST_DIR
 cp RestartTest-6.h5.bak RestartTest-6.h5
 rm -f RestartTest-6.stat
+rm -f RestartTest-6.lbal
+
 OPAL="$OPAL_EXE_PATH/opal RestartTest-6.in -restart -1 --commlib mpi --info 0 --warn 0 2>&1"
 CMD="$OPENMPI/bin/mpirun -x LD_LIBRARY_PATH -machinefile $MACHINE_FILE -np $NSLOTS $OPAL "
 $CMD
+for X in h5 stat lbal;do mv RestartTest-6.$X RestartTest-6.2.$X;done
+
+OPAL="$OPAL_EXE_PATH/opal RestartTest-6.2.in -restart -1 --commlib mpi --info 0 --warn 0 2>&1"
+CMD="$OPENMPI/bin/mpirun -x LD_LIBRARY_PATH -machinefile $MACHINE_FILE -np $NSLOTS $OPAL "
+$CMD
+for X in h5 stat lbal;do mv RestartTest-6.2.$X RestartTest-6.$X;done
