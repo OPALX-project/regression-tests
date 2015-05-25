@@ -61,11 +61,8 @@ beam1: BEAM, PARTICLE=ELECTRON, GAMMA=gamma, pc=P0, NSLICE=101, BFREQ=bfreq, BCU
 Select, Line = l1;
 
 // Simulation of the gun with step size 0.1 ps
-track, line=l1, beam=beam1, MAXSTEPS=1000000, DT=1.0e-12, ZSTOP=0.75;
+track, line=l1, beam=beam1, MAXSTEPS=1000000, DT=1.0e-12, ZSTOP=0.5;
 run, method = "PARALLEL-SLICE", beam = beam1, fieldsolver = Fs1, distribution = Dist1;
-endtrack;
-track, line=l1, beam=beam1, MAXSTEPS=1000000, DT=1.0e-12, ZSTOP=1.0;
-run, method = "PARALLEL-SLICE", beam = beam1, fieldsolver = Fs1;
 endtrack;
 
 Quit;

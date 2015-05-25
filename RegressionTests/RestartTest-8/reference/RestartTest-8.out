@@ -1,358 +1,654 @@
+/gpfs/home/gridengine/sge6.2u5p2/spool/merlinc02/job_scripts/1362683: line 14: cd: ./RestartTest-8: No such file or directory
 Ippl> CommMPI: Parent process waiting for children ...
-Ippl> CommMPI: Started job 1 on host `arvika'.
-Ippl> CommMPI: Started job 2 on host `arvika'.
-Ippl> CommMPI: Started job 3 on host `arvika'.
-Ippl> CommMPI: Child 1 ready.
-Ippl> CommMPI: Child 3 ready.
-Ippl> CommMPI: Child 2 ready.
 Ippl> CommMPI: Initialization complete.
-{0}>                ____  _____       ___ 
-{0}>               / __ \|  __ \ /\   | | 
-{0}>              | |  | | |__) /  \  | |
-{0}>              | |  | |  ___/ /\ \ | |
-{0}>              | |__| | |  / ____ \| |____
-{0}>               \____/|_| /_/    \_\______|
-OPAL{0}> 
-OPAL{0}> This is OPAL (Object Oriented Parallel Accelerator Library) Version 1.3.99.1
-OPAL{0}> 
-OPAL{0}>                 (c) PSI, http://amas.web.psi.ch
-OPAL{0}> 
-OPAL{0}> Please send cookies, goodies or other motivations (wine and beer ... ) 
-OPAL{0}> to the OPAL developers opal@lists.psi.ch
-OPAL{0}> 
-OPAL{0}> Time: 22.42.47 date: 24/05/2015
-OPAL{0}> 
-OPAL{+0}> Couldn't find startup file "/home/baboch/init.opal".
-OPAL{+0}> Note: this is not mandatory for an OPAL simulation!
-OPAL{+0}> 
-OPAL{+0}> * Reading input stream "RestartTest-8.in".
-OPAL{+0}> 
-OPAL{+0}> value: {FINSS_RGUN_PHI,FINSB01_RACC_PHI,FINSB02_RACC_PHI,REPARTFREQ}={2.22368,-0.313154,5.835,100}
-OPAL{+0}> 
-OPAL{+0}> 
-OPAL{+0}> 5 elements selected.
-OPAL{+0}> 
-OPAL{+0}> * ********************************************************************************** 
-OPAL{+0}>   Selected Tracking Method == PARALLEL-SLICE, NEW TRACK
-OPAL{+0}> * ********************************************************************************** 
-OPAL{+0}> total number of slices = 101 total steps 34
-OPAL{+0}> Appending statistical data to existing data file: RestartTest-8.stat
-OPAL{+0}> Appending load balance data to existing data file: RestartTest-8.lbal
-OPAL{+0}> Will append to RestartTest-8.h5
-OPAL{+0}> numStepsInFile 34
-OPAL{+0}> ********************** DISTRIBUTION **********************
-OPAL{+0}> 
-OPAL{+0}> * In restart. Distribution read in from .h5 file.
-OPAL{+0}> 
-OPAL{+0}> * *********************************************************
-OPAL{+0}> 
-OPAL{+0}> * ************* B E A M ************************************************************ 
-OPAL{+0}> * BEAM        BEAM1
-OPAL{+0}> * PARTICLE    ELECTRON
-OPAL{+0}> * CURRENT     5.996e-07 A
-OPAL{+0}> * FREQUENCY   2998 Hz
-OPAL{+0}> * CHARGE      -e * 1 
-OPAL{+0}> * REST MASS   0.000510999 GeV
-OPAL{+0}> * MOMENTUM    1
-OPAL{+0}> * NPART       0
-OPAL{+0}> * ********************************************************************************** 
-OPAL{+0}> 
-OPAL{+0}> * ************** S L B U N C H ***************************************************** 
-OPAL{+0}> * NSlices= 101 Qtot= 2e-10
-OPAL{+0}> * Emean= 6.49361 [MeV]
-OPAL{+0}> * dT= 1e-12 [s]
-OPAL{+0}> * spos= 0.499321 [m]
-OPAL{+0}> * ********************************************************************************** 
-OPAL{+0}> 
-OPAL{+0}> Phase space dump frequency is set to 100 Inputfile is RestartTest-8.in
-ParallelSliceTracker{+0}> Track start at: t= 0 zstop@ 0.75 [m]
-ParallelSliceTracker{+0}> executing ParallelSliceTracker, initial DT 1e-12 [s]; max integration steps 1001651 step= 1651
-ParallelSliceTracker{+0}> the mass is: 0.510999 MeV, its charge: -1
-RFCavity {+0}> FINSS_RGUN using file FINSS-RGUN.dat (1D dynamic); zini= 0 m; zfinal= 0.17493 m;
-Solenoid {+0}> FIND1_MSOL10 using file FIND1-MSOL10.T7 (1D magnetostatic); zini= 0 m; zfinal= 0.6 m;
-ParallelSliceTracker{+0}> 
-ParallelSliceTracker{+0}> --- BEGIN FIELD LIST ---------------------------------------------------------------
-ParallelSliceTracker{+0}> 
-ParallelSliceTracker{+0}> --- 0 m -- 0.17493 m -- alpha = 0 -- beta = 0 --------------------------------------
-ParallelSliceTracker{+0}> FINSS_RGUN
-ParallelSliceTracker{+0}> FIND1_MSOL10
-ParallelSliceTracker{+0}> --- 0.17493 m -- 0.6 m -- alpha = 0 -- beta = 0 ------------------------------------
-ParallelSliceTracker{+0}> FIND1_MSOL10
-ParallelSliceTracker{+0}> 
-ParallelSliceTracker{+0}> --- END FIELD LIST -----------------------------------------------------------------
-ParallelSliceTracker{+0}> 
-ParallelSliceTracker{+0}>  Step 1700 at 0.514271 [m] t= 5e-11 [s] E=6.49362 [MeV]
-ParallelSliceTracker{+0}> * ************** S L B U N C H ***************************************************** 
-ParallelSliceTracker{+0}> * NSlices= 101 Qtot= 2e-10
-ParallelSliceTracker{+0}> * Emean= 6.49362 [MeV]
-ParallelSliceTracker{+0}> * dT= 1e-12 [s]
-ParallelSliceTracker{+0}> * spos= 0.514271 [m]
-ParallelSliceTracker{+0}> * ********************************************************************************** 
-ParallelSliceTracker{+0}> 
-ParallelSliceTracker{+0}>  Step 1800 at 0.54417 [m] t= 1.5e-10 [s] E=6.49364 [MeV]
-ParallelSliceTracker{+0}> * ************** S L B U N C H ***************************************************** 
-ParallelSliceTracker{+0}> * NSlices= 101 Qtot= 2e-10
-ParallelSliceTracker{+0}> * Emean= 6.49364 [MeV]
-ParallelSliceTracker{+0}> * dT= 1e-12 [s]
-ParallelSliceTracker{+0}> * spos= 0.54417 [m]
-ParallelSliceTracker{+0}> * ********************************************************************************** 
-ParallelSliceTracker{+0}> 
-ParallelSliceTracker{+0}>  Step 1900 at 0.57407 [m] t= 2.5e-10 [s] E=6.49366 [MeV]
-ParallelSliceTracker{+0}> * ************** S L B U N C H ***************************************************** 
-ParallelSliceTracker{+0}> * NSlices= 101 Qtot= 2e-10
-ParallelSliceTracker{+0}> * Emean= 6.49366 [MeV]
-ParallelSliceTracker{+0}> * dT= 1e-12 [s]
-ParallelSliceTracker{+0}> * spos= 0.57407 [m]
-ParallelSliceTracker{+0}> * ********************************************************************************** 
-ParallelSliceTracker{+0}> 
-ParallelSliceTracker{+0}>  Step 2000 at 0.603969 [m] t= 3.5e-10 [s] E=6.49368 [MeV]
-ParallelSliceTracker{+0}> * ************** S L B U N C H ***************************************************** 
-ParallelSliceTracker{+0}> * NSlices= 101 Qtot= 2e-10
-ParallelSliceTracker{+0}> * Emean= 6.49368 [MeV]
-ParallelSliceTracker{+0}> * dT= 1e-12 [s]
-ParallelSliceTracker{+0}> * spos= 0.603969 [m]
-ParallelSliceTracker{+0}> * ********************************************************************************** 
-ParallelSliceTracker{+0}> 
-ParallelSliceTracker{+0}>  Step 2100 at 0.633868 [m] t= 4.5e-10 [s] E=6.4937 [MeV]
-ParallelSliceTracker{+0}> * ************** S L B U N C H ***************************************************** 
-ParallelSliceTracker{+0}> * NSlices= 101 Qtot= 2e-10
-ParallelSliceTracker{+0}> * Emean= 6.4937 [MeV]
-ParallelSliceTracker{+0}> * dT= 1e-12 [s]
-ParallelSliceTracker{+0}> * spos= 0.633868 [m]
-ParallelSliceTracker{+0}> * ********************************************************************************** 
-ParallelSliceTracker{+0}> 
-ParallelSliceTracker{+0}>  Step 2200 at 0.663768 [m] t= 5.5e-10 [s] E=6.49372 [MeV]
-ParallelSliceTracker{+0}> * ************** S L B U N C H ***************************************************** 
-ParallelSliceTracker{+0}> * NSlices= 101 Qtot= 2e-10
-ParallelSliceTracker{+0}> * Emean= 6.49372 [MeV]
-ParallelSliceTracker{+0}> * dT= 1e-12 [s]
-ParallelSliceTracker{+0}> * spos= 0.663768 [m]
-ParallelSliceTracker{+0}> * ********************************************************************************** 
-ParallelSliceTracker{+0}> 
-ParallelSliceTracker{+0}>  Step 2300 at 0.693667 [m] t= 6.5e-10 [s] E=6.49374 [MeV]
-ParallelSliceTracker{+0}> * ************** S L B U N C H ***************************************************** 
-ParallelSliceTracker{+0}> * NSlices= 101 Qtot= 2e-10
-ParallelSliceTracker{+0}> * Emean= 6.49374 [MeV]
-ParallelSliceTracker{+0}> * dT= 1e-12 [s]
-ParallelSliceTracker{+0}> * spos= 0.693667 [m]
-ParallelSliceTracker{+0}> * ********************************************************************************** 
-ParallelSliceTracker{+0}> 
-ParallelSliceTracker{+0}>  Step 2400 at 0.723566 [m] t= 7.5e-10 [s] E=6.49376 [MeV]
-ParallelSliceTracker{+0}> * ************** S L B U N C H ***************************************************** 
-ParallelSliceTracker{+0}> * NSlices= 101 Qtot= 2e-10
-ParallelSliceTracker{+0}> * Emean= 6.49376 [MeV]
-ParallelSliceTracker{+0}> * dT= 1e-12 [s]
-ParallelSliceTracker{+0}> * spos= 0.723566 [m]
-ParallelSliceTracker{+0}> * ********************************************************************************** 
-ParallelSliceTracker{+0}> 
-ParallelSliceTracker{+0}> done executing ParallelSliceTracker
-OPAL{+0}> * ********************************************************************************** 
-OPAL{+0}>   Selected Tracking Method == PARALLEL-SLICE, FOLLOWUP TRACK
-OPAL{+0}> * ********************************************************************************** 
-OPAL{+0}> * ************* B E A M ************************************************************ 
-OPAL{+0}> * BEAM        BEAM1
-OPAL{+0}> * PARTICLE    ELECTRON
-OPAL{+0}> * CURRENT     5.996e-07 A
-OPAL{+0}> * FREQUENCY   2998 Hz
-OPAL{+0}> * CHARGE      -e * 1 
-OPAL{+0}> * REST MASS   0.000510999 GeV
-OPAL{+0}> * MOMENTUM    1
-OPAL{+0}> * NPART       0
-OPAL{+0}> * ********************************************************************************** 
-OPAL{+0}> 
-OPAL{+0}> * ************** S L B U N C H ***************************************************** 
-OPAL{+0}> * NSlices= 101 Qtot= 2e-10
-OPAL{+0}> * Emean= 6.49378 [MeV]
-OPAL{+0}> * dT= 1e-12 [s]
-OPAL{+0}> * spos= 0.750177 [m]
-OPAL{+0}> * ********************************************************************************** 
-OPAL{+0}> 
-OPAL{+0}> Phase space dump frequency is set to 100 Inputfile is RestartTest-8.in
-ParallelSliceTracker{+0}> Track start at: t= 8.39e-10 zstop@ 1 [m]
-ParallelSliceTracker{+0}> executing ParallelSliceTracker, initial DT 1e-12 [s]; max integration steps 1002490 step= 2490
-ParallelSliceTracker{+0}> the mass is: 0.510999 MeV, its charge: -1
-RFCavity {+0}> FINSS_RGUN using file FINSS-RGUN.dat (1D dynamic); zini= 0 m; zfinal= 0.17493 m;
-Solenoid {+0}> FIND1_MSOL10 using file FIND1-MSOL10.T7 (1D magnetostatic); zini= 0 m; zfinal= 0.6 m;
-ParallelSliceTracker{+0}> 
-ParallelSliceTracker{+0}> --- BEGIN FIELD LIST ---------------------------------------------------------------
-ParallelSliceTracker{+0}> 
-ParallelSliceTracker{+0}> --- 0 m -- 0.17493 m -- alpha = 0 -- beta = 0 --------------------------------------
-ParallelSliceTracker{+0}> FINSS_RGUN
-ParallelSliceTracker{+0}> FIND1_MSOL10
-ParallelSliceTracker{+0}> --- 0.17493 m -- 0.6 m -- alpha = 0 -- beta = 0 ------------------------------------
-ParallelSliceTracker{+0}> FIND1_MSOL10
-ParallelSliceTracker{+0}> 
-ParallelSliceTracker{+0}> --- END FIELD LIST -----------------------------------------------------------------
-ParallelSliceTracker{+0}> 
-ParallelSliceTracker{+0}>  Step 2500 at 0.753466 [m] t= 8.5e-10 [s] E=6.49378 [MeV]
-ParallelSliceTracker{+0}> * ************** S L B U N C H ***************************************************** 
-ParallelSliceTracker{+0}> * NSlices= 101 Qtot= 2e-10
-ParallelSliceTracker{+0}> * Emean= 6.49378 [MeV]
-ParallelSliceTracker{+0}> * dT= 1e-12 [s]
-ParallelSliceTracker{+0}> * spos= 0.753466 [m]
-ParallelSliceTracker{+0}> * ********************************************************************************** 
-ParallelSliceTracker{+0}> 
-ParallelSliceTracker{+0}>  Step 2600 at 0.783365 [m] t= 9.5e-10 [s] E=6.4938 [MeV]
-ParallelSliceTracker{+0}> * ************** S L B U N C H ***************************************************** 
-ParallelSliceTracker{+0}> * NSlices= 101 Qtot= 2e-10
-ParallelSliceTracker{+0}> * Emean= 6.4938 [MeV]
-ParallelSliceTracker{+0}> * dT= 1e-12 [s]
-ParallelSliceTracker{+0}> * spos= 0.783365 [m]
-ParallelSliceTracker{+0}> * ********************************************************************************** 
-ParallelSliceTracker{+0}> 
-ParallelSliceTracker{+0}>  Step 2700 at 0.813264 [m] t= 1.05e-09 [s] E=6.49382 [MeV]
-ParallelSliceTracker{+0}> * ************** S L B U N C H ***************************************************** 
-ParallelSliceTracker{+0}> * NSlices= 101 Qtot= 2e-10
-ParallelSliceTracker{+0}> * Emean= 6.49382 [MeV]
-ParallelSliceTracker{+0}> * dT= 1e-12 [s]
-ParallelSliceTracker{+0}> * spos= 0.813264 [m]
-ParallelSliceTracker{+0}> * ********************************************************************************** 
-ParallelSliceTracker{+0}> 
-ParallelSliceTracker{+0}>  Step 2800 at 0.843164 [m] t= 1.15e-09 [s] E=6.49384 [MeV]
-ParallelSliceTracker{+0}> * ************** S L B U N C H ***************************************************** 
-ParallelSliceTracker{+0}> * NSlices= 101 Qtot= 2e-10
-ParallelSliceTracker{+0}> * Emean= 6.49384 [MeV]
-ParallelSliceTracker{+0}> * dT= 1e-12 [s]
-ParallelSliceTracker{+0}> * spos= 0.843164 [m]
-ParallelSliceTracker{+0}> * ********************************************************************************** 
-ParallelSliceTracker{+0}> 
-ParallelSliceTracker{+0}>  Step 2900 at 0.873063 [m] t= 1.25e-09 [s] E=6.49386 [MeV]
-ParallelSliceTracker{+0}> * ************** S L B U N C H ***************************************************** 
-ParallelSliceTracker{+0}> * NSlices= 101 Qtot= 2e-10
-ParallelSliceTracker{+0}> * Emean= 6.49386 [MeV]
-ParallelSliceTracker{+0}> * dT= 1e-12 [s]
-ParallelSliceTracker{+0}> * spos= 0.873063 [m]
-ParallelSliceTracker{+0}> * ********************************************************************************** 
-ParallelSliceTracker{+0}> 
-ParallelSliceTracker{+0}>  Step 3000 at 0.902962 [m] t= 1.35e-09 [s] E=6.49388 [MeV]
-ParallelSliceTracker{+0}> * ************** S L B U N C H ***************************************************** 
-ParallelSliceTracker{+0}> * NSlices= 101 Qtot= 2e-10
-ParallelSliceTracker{+0}> * Emean= 6.49388 [MeV]
-ParallelSliceTracker{+0}> * dT= 1e-12 [s]
-ParallelSliceTracker{+0}> * spos= 0.902962 [m]
-ParallelSliceTracker{+0}> * ********************************************************************************** 
-ParallelSliceTracker{+0}> 
-ParallelSliceTracker{+0}>  Step 3100 at 0.932862 [m] t= 1.45e-09 [s] E=6.49389 [MeV]
-ParallelSliceTracker{+0}> * ************** S L B U N C H ***************************************************** 
-ParallelSliceTracker{+0}> * NSlices= 101 Qtot= 2e-10
-ParallelSliceTracker{+0}> * Emean= 6.49389 [MeV]
-ParallelSliceTracker{+0}> * dT= 1e-12 [s]
-ParallelSliceTracker{+0}> * spos= 0.932862 [m]
-ParallelSliceTracker{+0}> * ********************************************************************************** 
-ParallelSliceTracker{+0}> 
-ParallelSliceTracker{+0}>  Step 3200 at 0.962761 [m] t= 1.55e-09 [s] E=6.4939 [MeV]
-ParallelSliceTracker{+0}> * ************** S L B U N C H ***************************************************** 
-ParallelSliceTracker{+0}> * NSlices= 101 Qtot= 2e-10
-ParallelSliceTracker{+0}> * Emean= 6.4939 [MeV]
-ParallelSliceTracker{+0}> * dT= 1e-12 [s]
-ParallelSliceTracker{+0}> * spos= 0.962761 [m]
-ParallelSliceTracker{+0}> * ********************************************************************************** 
-ParallelSliceTracker{+0}> 
-ParallelSliceTracker{+0}>  Step 3300 at 0.99266 [m] t= 1.65e-09 [s] E=6.49391 [MeV]
-ParallelSliceTracker{+0}> * ************** S L B U N C H ***************************************************** 
-ParallelSliceTracker{+0}> * NSlices= 101 Qtot= 2e-10
-ParallelSliceTracker{+0}> * Emean= 6.49391 [MeV]
-ParallelSliceTracker{+0}> * dT= 1e-12 [s]
-ParallelSliceTracker{+0}> * spos= 0.99266 [m]
-ParallelSliceTracker{+0}> * ********************************************************************************** 
-ParallelSliceTracker{+0}> 
-ParallelSliceTracker{+0}> done executing ParallelSliceTracker
-OPAL{+0}> * End of input stream "RestartTest-8.in".
-Timings{+0}> -----------------------------------------------------------------
-Timings{+0}>      Timing results for 4 nodes:
-Timings{+0}> -----------------------------------------------------------------
-Timings{+0}> mainTimer ........... Wall tot =    25.7655, CPU tot =       1.03
-Timings{+0}> 
-Timings{+0}> Secondary emission .. Wall max =          0, CPU max =          0
-Timings{+0}>                       Wall avg =          0, CPU avg =          0
-Timings{+0}>                       Wall min =          0, CPU min =          0
-Timings{+0}> 
-Timings{+0}> Initialize geometry . Wall max =          0, CPU max =          0
-Timings{+0}>                       Wall avg =          0, CPU avg =          0
-Timings{+0}>                       Wall min =          0, CPU min =          0
-Timings{+0}> 
-Timings{+0}> Inside test ......... Wall max =          0, CPU max =          0
-Timings{+0}>                       Wall avg =          0, CPU avg =          0
-Timings{+0}>                       Wall min =          0, CPU min =          0
-Timings{+0}> 
-Timings{+0}> Fast inside test .... Wall max =          0, CPU max =          0
-Timings{+0}>                       Wall avg =          0, CPU avg =          0
-Timings{+0}>                       Wall min =          0, CPU min =          0
-Timings{+0}> 
-Timings{+0}> Ray tracing ......... Wall max =          0, CPU max =          0
-Timings{+0}>                       Wall avg =          0, CPU avg =          0
-Timings{+0}>                       Wall min =          0, CPU min =          0
-Timings{+0}> 
-Timings{+0}> Particle Inside ..... Wall max =          0, CPU max =          0
-Timings{+0}>                       Wall avg =          0, CPU avg =          0
-Timings{+0}>                       Wall min =          0, CPU min =          0
-Timings{+0}> 
-Timings{+0}> SelfField ........... Wall max =   0.029756, CPU max =       0.02
-Timings{+0}>                       Wall avg =  0.0295358, CPU avg =       0.01
-Timings{+0}>                       Wall min =    0.02936, CPU min =          0
-Timings{+0}> 
-Timings{+0}> Boundingbox ......... Wall max =          0, CPU max =          0
-Timings{+0}>                       Wall avg =          0, CPU avg =          0
-Timings{+0}>                       Wall min =          0, CPU min =          0
-Timings{+0}> 
-Timings{+0}> Statistics .......... Wall max =   0.078397, CPU max =        0.1
-Timings{+0}>                       Wall avg =  0.0778042, CPU avg =     0.0825
-Timings{+0}>                       Wall min =   0.076572, CPU min =       0.04
-Timings{+0}> 
-Timings{+0}> Potential ........... Wall max =          0, CPU max =          0
-Timings{+0}>                       Wall avg =          0, CPU avg =          0
-Timings{+0}>                       Wall min =          0, CPU min =          0
-Timings{+0}> 
-Timings{+0}> Histogram ........... Wall max =          0, CPU max =          0
-Timings{+0}>                       Wall avg =          0, CPU avg =          0
-Timings{+0}>                       Wall min =          0, CPU min =          0
-Timings{+0}> 
-Timings{+0}> CreatDistr .......... Wall max =          0, CPU max =          0
-Timings{+0}>                       Wall avg =          0, CPU avg =          0
-Timings{+0}>                       Wall min =          0, CPU min =          0
-Timings{+0}> 
-Timings{+0}> LoadDistr ........... Wall max =   0.008583, CPU max =       0.01
-Timings{+0}>                       Wall avg = 0.00798575, CPU avg =      0.005
-Timings{+0}>                       Wall min =   0.006381, CPU min =          0
-Timings{+0}> 
-Timings{+0}> calcI ............... Wall max =   0.000468, CPU max =          0
-Timings{+0}>                       Wall avg = 0.00044125, CPU avg =          0
-Timings{+0}>                       Wall min =   0.000425, CPU min =          0
-Timings{+0}> 
-Timings{+0}> spaceCharge ......... Wall max =   0.027649, CPU max =       0.02
-Timings{+0}>                       Wall avg =  0.0274405, CPU avg =       0.01
-Timings{+0}>                       Wall min =   0.027238, CPU min =          0
-Timings{+0}> 
-Timings{+0}> H5PartTimer ......... Wall max =    24.8639, CPU max =       0.21
-Timings{+0}>                       Wall avg =    24.8591, CPU avg =     0.1775
-Timings{+0}>                       Wall min =    24.8569, CPU min =       0.14
-Timings{+0}> 
-Timings{+0}> H5BlockTimer ........ Wall max =          0, CPU max =          0
-Timings{+0}>                       Wall avg =          0, CPU avg =          0
-Timings{+0}>                       Wall min =          0, CPU min =          0
-Timings{+0}> 
-Timings{+0}> StatMarkerTimer ..... Wall max =   0.099352, CPU max =        0.1
-Timings{+0}>                       Wall avg =  0.0840995, CPU avg =     0.0825
-Timings{+0}>                       Wall min =   0.078945, CPU min =       0.04
-Timings{+0}> 
-Timings{+0}> Time integration1 ... Wall max =   0.267218, CPU max =       0.29
-Timings{+0}>                       Wall avg =   0.258553, CPU avg =     0.2425
-Timings{+0}>                       Wall min =   0.249763, CPU min =       0.19
-Timings{+0}> 
-Timings{+0}> Time integration2 ... Wall max =          0, CPU max =          0
-Timings{+0}>                       Wall avg =          0, CPU avg =          0
-Timings{+0}>                       Wall min =          0, CPU min =          0
-Timings{+0}> 
-Timings{+0}> Field evaluation .... Wall max =     0.0365, CPU max =       0.04
-Timings{+0}>                       Wall avg =  0.0344768, CPU avg =     0.0225
-Timings{+0}>                       Wall min =   0.032711, CPU min =       0.01
-Timings{+0}> 
-Timings{+0}> Time of Binary repart.  Wall max =          0, CPU max =          0
-Timings{+0}>                       Wall avg =          0, CPU avg =          0
-Timings{+0}>                       Wall min =          0, CPU min =          0
-Timings{+0}> 
-Timings{+0}> Time of Wake Field calc.  Wall max =          0, CPU max =          0
-Timings{+0}>                       Wall avg =          0, CPU avg =          0
-Timings{+0}>                       Wall min =          0, CPU min =          0
-Timings{+0}> 
-Timings{+0}> -----------------------------------------------------------------
+>                ____  _____       ___ 
+>               / __ \|  __ \ /\   | | 
+>              | |  | | |__) /  \  | |
+>              | |  | |  ___/ /\ \ | |
+>              | |__| | |  / ____ \| |____
+>               \____/|_| /_/    \_\______|
+OPAL> 
+OPAL> This is OPAL (Object Oriented Parallel Accelerator Library) Version 1.3.99.1
+OPAL> 
+OPAL>                 (c) PSI, http://amas.web.psi.ch
+OPAL> 
+OPAL> Please send cookies, goodies or other motivations (wine and beer ... ) 
+OPAL> to the OPAL developers opal@lists.psi.ch
+OPAL> 
+OPAL> Time: 15.28.59 date: 25/05/2015
+OPAL> 
+OPAL> Couldn't find startup file "/gpfs/home/kraus/init.opal".
+OPAL> Note: this is not mandatory for an OPAL simulation!
+OPAL> 
+OPAL> * Reading input stream "RestartTest-8.in".
+   +1 Option, ECHO=FALSE;
+
+Start reading input stream "FinPhase1.phases".
+
+
+End reading input stream "FinPhase1.phases".
+
+OPAL> 
+OPAL> value: {FINSS_RGUN_PHI,FINSB01_RACC_PHI,FINSB02_RACC_PHI,REPARTFREQ}={2.22368,-0.313154,5.835,100}
+OPAL> 
+OPAL> 
+OPAL> 5 elements selected.
+OPAL> 
+OPAL> * ********************************************************************************** 
+OPAL>   Selected Tracking Method == PARALLEL-SLICE, NEW TRACK
+OPAL> * ********************************************************************************** 
+OPAL> * Using HOMDYN space-charge model
+OPAL> ********************** DISTRIBUTION **********************
+OPAL> 
+OPAL> * Distribution type: GUNGAUSSFLATTOPTH
+OPAL> 
+OPAL> * SIGMAX                        = 0.00055 [m]
+OPAL> * SIGMAY                        = 0.00055 [m]
+OPAL> * Sigma Time Rise               = 4.14957e-13 [sec]
+OPAL> * TPULSEFWHM                    = 9.9e-12 [sec]
+OPAL> * Sigma Time Fall               = 4.14957e-13 [sec]
+OPAL> * Longitudinal cutoff           = 3 [units of Sigma Time]
+OPAL> * Flat top modulation amplitude = 0 [Percent of distribution amplitude]
+OPAL> * Flat top modulation periods   = 0
+OPAL> 
+OPAL> * Number of energy bins    = 101
+OPAL> * Distribution is emitted. 
+OPAL> * Emission time            = 1.14126e-11 [sec]
+OPAL> * Time per bin             = 1.12996e-13 [sec]
+OPAL> * Bin delta t              = 0 [sec]
+OPAL> 
+OPAL> * ----------------THERMAL EMITTANCE MODEL----------------
+OPAL> *  THERMAL EMITTANCE in NONE MODE
+OPAL> *  Kinetic energy added to longitudinal momentum = 0.63 [eV]  
+OPAL> * -------------------------------------------------------
+OPAL> 
+OPAL> 
+OPAL> * *********************************************************
+OPAL> 
+OPAL> * ************* B E A M ************************************************************ 
+OPAL> * BEAM        BEAM1
+OPAL> * PARTICLE    ELECTRON
+OPAL> * CURRENT     5.996e-07 A
+OPAL> * FREQUENCY   2998 Hz
+OPAL> * CHARGE      -e * 1 
+OPAL> * REST MASS   0.000510999 GeV
+OPAL> * MOMENTUM    1
+OPAL> * NPART       0
+OPAL> * ********************************************************************************** 
+OPAL> 
+OPAL> * ************** S L B U N C H ***************************************************** 
+OPAL> * NSlices= 101 Qtot= 2e-10
+OPAL> * Emean= 0 [MeV]
+OPAL> * dT= 1e-12 [s]
+OPAL> * spos= -2.65967e-06 [m]
+OPAL> * ********************************************************************************** 
+OPAL> 
+OPAL> Phase space dump frequency is set to 100 Inputfile is RestartTest-8.in
+ParallelSliceTracker> Track start at: t= 0 zstop@ 0.5 [m]
+ParallelSliceTracker> executing ParallelSliceTracker, initial DT 1e-12 [s]; max integration steps 1000001 step= 1
+ParallelSliceTracker> the mass is: 0.510999 MeV, its charge: -1
+RFCavity > FINSS_RGUN using file FINSS-RGUN.dat (1D dynamic); zini= 0 m; zfinal= 0.17493 m;
+Solenoid > FIND1_MSOL10 using file FIND1-MSOL10.T7 (1D magnetostatic); zini= 0 m; zfinal= 0.6 m;
+ParallelSliceTracker> 
+ParallelSliceTracker> --- BEGIN FIELD LIST ---------------------------------------------------------------
+ParallelSliceTracker> 
+ParallelSliceTracker> --- 0 m -- 0.17493 m -- alpha = 0 -- beta = 0 --------------------------------------
+ParallelSliceTracker> FINSS_RGUN
+ParallelSliceTracker> FIND1_MSOL10
+ParallelSliceTracker> --- 0.17493 m -- 0.6 m -- alpha = 0 -- beta = 0 ------------------------------------
+ParallelSliceTracker> FIND1_MSOL10
+ParallelSliceTracker> 
+ParallelSliceTracker> --- END FIELD LIST -----------------------------------------------------------------
+ParallelSliceTracker> 
+ParallelSliceTracker>  Step 100 at 0.0218041 [m] t= 1e-10 [s] E=1.60601 [MeV]
+ParallelSliceTracker> * ************** S L B U N C H ***************************************************** 
+ParallelSliceTracker> * NSlices= 101 Qtot= 2e-10
+ParallelSliceTracker> * Emean= 1.60601 [MeV]
+ParallelSliceTracker> * dT= 1e-12 [s]
+ParallelSliceTracker> * spos= 0.0218041 [m]
+ParallelSliceTracker> * ********************************************************************************** 
+ParallelSliceTracker> 
+ParallelSliceTracker>  Step 200 at 0.0510622 [m] t= 2e-10 [s] E=2.55353 [MeV]
+ParallelSliceTracker> * ************** S L B U N C H ***************************************************** 
+ParallelSliceTracker> * NSlices= 101 Qtot= 2e-10
+ParallelSliceTracker> * Emean= 2.55353 [MeV]
+ParallelSliceTracker> * dT= 1e-12 [s]
+ParallelSliceTracker> * spos= 0.0510622 [m]
+ParallelSliceTracker> * ********************************************************************************** 
+ParallelSliceTracker> 
+ParallelSliceTracker>  Step 300 at 0.080798 [m] t= 3e-10 [s] E=4.03562 [MeV]
+ParallelSliceTracker> * ************** S L B U N C H ***************************************************** 
+ParallelSliceTracker> * NSlices= 101 Qtot= 2e-10
+ParallelSliceTracker> * Emean= 4.03562 [MeV]
+ParallelSliceTracker> * dT= 1e-12 [s]
+ParallelSliceTracker> * spos= 0.080798 [m]
+ParallelSliceTracker> * ********************************************************************************** 
+ParallelSliceTracker> 
+ParallelSliceTracker>  Step 400 at 0.110629 [m] t= 4e-10 [s] E=5.97513 [MeV]
+ParallelSliceTracker> * ************** S L B U N C H ***************************************************** 
+ParallelSliceTracker> * NSlices= 101 Qtot= 2e-10
+ParallelSliceTracker> * Emean= 5.97513 [MeV]
+ParallelSliceTracker> * dT= 1e-12 [s]
+ParallelSliceTracker> * spos= 0.110629 [m]
+ParallelSliceTracker> * ********************************************************************************** 
+ParallelSliceTracker> 
+ParallelSliceTracker>  Step 500 at 0.140529 [m] t= 5e-10 [s] E=6.59 [MeV]
+ParallelSliceTracker> * ************** S L B U N C H ***************************************************** 
+ParallelSliceTracker> * NSlices= 101 Qtot= 2e-10
+ParallelSliceTracker> * Emean= 6.59 [MeV]
+ParallelSliceTracker> * dT= 1e-12 [s]
+ParallelSliceTracker> * spos= 0.140529 [m]
+ParallelSliceTracker> * ********************************************************************************** 
+ParallelSliceTracker> 
+ParallelSliceTracker>  Step 600 at 0.170429 [m] t= 6e-10 [s] E=6.49457 [MeV]
+ParallelSliceTracker> * ************** S L B U N C H ***************************************************** 
+ParallelSliceTracker> * NSlices= 101 Qtot= 2e-10
+ParallelSliceTracker> * Emean= 6.49457 [MeV]
+ParallelSliceTracker> * dT= 1e-12 [s]
+ParallelSliceTracker> * spos= 0.170429 [m]
+ParallelSliceTracker> * ********************************************************************************** 
+ParallelSliceTracker> 
+ParallelSliceTracker>  Step 700 at 0.200328 [m] t= 7e-10 [s] E=6.49341 [MeV]
+ParallelSliceTracker> * ************** S L B U N C H ***************************************************** 
+ParallelSliceTracker> * NSlices= 101 Qtot= 2e-10
+ParallelSliceTracker> * Emean= 6.49341 [MeV]
+ParallelSliceTracker> * dT= 1e-12 [s]
+ParallelSliceTracker> * spos= 0.200328 [m]
+ParallelSliceTracker> * ********************************************************************************** 
+ParallelSliceTracker> 
+ParallelSliceTracker>  Step 800 at 0.230228 [m] t= 8e-10 [s] E=6.49344 [MeV]
+ParallelSliceTracker> * ************** S L B U N C H ***************************************************** 
+ParallelSliceTracker> * NSlices= 101 Qtot= 2e-10
+ParallelSliceTracker> * Emean= 6.49344 [MeV]
+ParallelSliceTracker> * dT= 1e-12 [s]
+ParallelSliceTracker> * spos= 0.230228 [m]
+ParallelSliceTracker> * ********************************************************************************** 
+ParallelSliceTracker> 
+ParallelSliceTracker>  Step 900 at 0.260127 [m] t= 9e-10 [s] E=6.49347 [MeV]
+ParallelSliceTracker> * ************** S L B U N C H ***************************************************** 
+ParallelSliceTracker> * NSlices= 101 Qtot= 2e-10
+ParallelSliceTracker> * Emean= 6.49347 [MeV]
+ParallelSliceTracker> * dT= 1e-12 [s]
+ParallelSliceTracker> * spos= 0.260127 [m]
+ParallelSliceTracker> * ********************************************************************************** 
+ParallelSliceTracker> 
+ParallelSliceTracker>  Step 1000 at 0.290026 [m] t= 1e-09 [s] E=6.49349 [MeV]
+ParallelSliceTracker> * ************** S L B U N C H ***************************************************** 
+ParallelSliceTracker> * NSlices= 101 Qtot= 2e-10
+ParallelSliceTracker> * Emean= 6.49349 [MeV]
+ParallelSliceTracker> * dT= 1e-12 [s]
+ParallelSliceTracker> * spos= 0.290026 [m]
+ParallelSliceTracker> * ********************************************************************************** 
+ParallelSliceTracker> 
+ParallelSliceTracker>  Step 1100 at 0.319925 [m] t= 1.1e-09 [s] E=6.49351 [MeV]
+ParallelSliceTracker> * ************** S L B U N C H ***************************************************** 
+ParallelSliceTracker> * NSlices= 101 Qtot= 2e-10
+ParallelSliceTracker> * Emean= 6.49351 [MeV]
+ParallelSliceTracker> * dT= 1e-12 [s]
+ParallelSliceTracker> * spos= 0.319925 [m]
+ParallelSliceTracker> * ********************************************************************************** 
+ParallelSliceTracker> 
+ParallelSliceTracker>  Step 1200 at 0.349825 [m] t= 1.2e-09 [s] E=6.49352 [MeV]
+ParallelSliceTracker> * ************** S L B U N C H ***************************************************** 
+ParallelSliceTracker> * NSlices= 101 Qtot= 2e-10
+ParallelSliceTracker> * Emean= 6.49352 [MeV]
+ParallelSliceTracker> * dT= 1e-12 [s]
+ParallelSliceTracker> * spos= 0.349825 [m]
+ParallelSliceTracker> * ********************************************************************************** 
+ParallelSliceTracker> 
+ParallelSliceTracker>  Step 1300 at 0.379724 [m] t= 1.3e-09 [s] E=6.49354 [MeV]
+ParallelSliceTracker> * ************** S L B U N C H ***************************************************** 
+ParallelSliceTracker> * NSlices= 101 Qtot= 2e-10
+ParallelSliceTracker> * Emean= 6.49354 [MeV]
+ParallelSliceTracker> * dT= 1e-12 [s]
+ParallelSliceTracker> * spos= 0.379724 [m]
+ParallelSliceTracker> * ********************************************************************************** 
+ParallelSliceTracker> 
+ParallelSliceTracker>  Step 1400 at 0.409623 [m] t= 1.4e-09 [s] E=6.49356 [MeV]
+ParallelSliceTracker> * ************** S L B U N C H ***************************************************** 
+ParallelSliceTracker> * NSlices= 101 Qtot= 2e-10
+ParallelSliceTracker> * Emean= 6.49356 [MeV]
+ParallelSliceTracker> * dT= 1e-12 [s]
+ParallelSliceTracker> * spos= 0.409623 [m]
+ParallelSliceTracker> * ********************************************************************************** 
+ParallelSliceTracker> 
+ParallelSliceTracker>  Step 1500 at 0.439523 [m] t= 1.5e-09 [s] E=6.49358 [MeV]
+ParallelSliceTracker> * ************** S L B U N C H ***************************************************** 
+ParallelSliceTracker> * NSlices= 101 Qtot= 2e-10
+ParallelSliceTracker> * Emean= 6.49358 [MeV]
+ParallelSliceTracker> * dT= 1e-12 [s]
+ParallelSliceTracker> * spos= 0.439523 [m]
+ParallelSliceTracker> * ********************************************************************************** 
+ParallelSliceTracker> 
+ParallelSliceTracker>  Step 1600 at 0.469422 [m] t= 1.6e-09 [s] E=6.49359 [MeV]
+ParallelSliceTracker> * ************** S L B U N C H ***************************************************** 
+ParallelSliceTracker> * NSlices= 101 Qtot= 2e-10
+ParallelSliceTracker> * Emean= 6.49359 [MeV]
+ParallelSliceTracker> * dT= 1e-12 [s]
+ParallelSliceTracker> * spos= 0.469422 [m]
+ParallelSliceTracker> * ********************************************************************************** 
+ParallelSliceTracker> 
+ParallelSliceTracker>  Step 1700 at 0.499321 [m] t= 1.7e-09 [s] E=6.49361 [MeV]
+ParallelSliceTracker> * ************** S L B U N C H ***************************************************** 
+ParallelSliceTracker> * NSlices= 101 Qtot= 2e-10
+ParallelSliceTracker> * Emean= 6.49361 [MeV]
+ParallelSliceTracker> * dT= 1e-12 [s]
+ParallelSliceTracker> * spos= 0.499321 [m]
+ParallelSliceTracker> * ********************************************************************************** 
+ParallelSliceTracker> 
+ParallelSliceTracker> done executing ParallelSliceTracker
+OPAL> * End of input stream "RestartTest-8.in".
+Timings> -----------------------------------------------------------------
+Timings>      Timing results for 1 nodes:
+Timings> -----------------------------------------------------------------
+Timings> mainTimer ........... Wall tot =    7.90647, CPU tot =       3.98
+Timings> 
+Timings> Secondary emission .. Wall max =          0, CPU max =          0
+Timings>                       Wall avg =          0, CPU avg =          0
+Timings>                       Wall min =          0, CPU min =          0
+Timings> 
+Timings> Initialize geometry . Wall max =          0, CPU max =          0
+Timings>                       Wall avg =          0, CPU avg =          0
+Timings>                       Wall min =          0, CPU min =          0
+Timings> 
+Timings> Inside test ......... Wall max =          0, CPU max =          0
+Timings>                       Wall avg =          0, CPU avg =          0
+Timings>                       Wall min =          0, CPU min =          0
+Timings> 
+Timings> Fast inside test .... Wall max =          0, CPU max =          0
+Timings>                       Wall avg =          0, CPU avg =          0
+Timings>                       Wall min =          0, CPU min =          0
+Timings> 
+Timings> Ray tracing ......... Wall max =          0, CPU max =          0
+Timings>                       Wall avg =          0, CPU avg =          0
+Timings>                       Wall min =          0, CPU min =          0
+Timings> 
+Timings> Particle Inside ..... Wall max =          0, CPU max =          0
+Timings>                       Wall avg =          0, CPU avg =          0
+Timings>                       Wall min =          0, CPU min =          0
+Timings> 
+Timings> SelfField ........... Wall max =    0.07877, CPU max =       0.05
+Timings>                       Wall avg =    0.07877, CPU avg =       0.05
+Timings>                       Wall min =    0.07877, CPU min =       0.05
+Timings> 
+Timings> Boundingbox ......... Wall max =          0, CPU max =          0
+Timings>                       Wall avg =          0, CPU avg =          0
+Timings>                       Wall min =          0, CPU min =          0
+Timings> 
+Timings> Statistics .......... Wall max =   0.021408, CPU max =       0.02
+Timings>                       Wall avg =   0.021408, CPU avg =       0.02
+Timings>                       Wall min =   0.021408, CPU min =       0.02
+Timings> 
+Timings> Potential ........... Wall max =          0, CPU max =          0
+Timings>                       Wall avg =          0, CPU avg =          0
+Timings>                       Wall min =          0, CPU min =          0
+Timings> 
+Timings> Histogram ........... Wall max =          0, CPU max =          0
+Timings>                       Wall avg =          0, CPU avg =          0
+Timings>                       Wall min =          0, CPU min =          0
+Timings> 
+Timings> CreatDistr .......... Wall max =   0.000422, CPU max =          0
+Timings>                       Wall avg =   0.000422, CPU avg =          0
+Timings>                       Wall min =   0.000422, CPU min =          0
+Timings> 
+Timings> LoadDistr ........... Wall max =          0, CPU max =          0
+Timings>                       Wall avg =          0, CPU avg =          0
+Timings>                       Wall min =          0, CPU min =          0
+Timings> 
+Timings> calcI ............... Wall max =   0.000347, CPU max =          0
+Timings>                       Wall avg =   0.000347, CPU avg =          0
+Timings>                       Wall min =   0.000347, CPU min =          0
+Timings> 
+Timings> spaceCharge ......... Wall max =   0.077241, CPU max =       0.04
+Timings>                       Wall avg =   0.077241, CPU avg =       0.04
+Timings>                       Wall min =   0.077241, CPU min =       0.04
+Timings> 
+Timings> H5PartTimer ......... Wall max =    3.75681, CPU max =       0.08
+Timings>                       Wall avg =    3.75681, CPU avg =       0.08
+Timings>                       Wall min =    3.75681, CPU min =       0.08
+Timings> 
+Timings> H5BlockTimer ........ Wall max =          0, CPU max =          0
+Timings>                       Wall avg =          0, CPU avg =          0
+Timings>                       Wall min =          0, CPU min =          0
+Timings> 
+Timings> StatMarkerTimer ..... Wall max =   0.035808, CPU max =       0.01
+Timings>                       Wall avg =   0.035808, CPU avg =       0.01
+Timings>                       Wall min =   0.035808, CPU min =       0.01
+Timings> 
+Timings> Time integration1 ... Wall max =    1.54942, CPU max =       1.58
+Timings>                       Wall avg =    1.54942, CPU avg =       1.58
+Timings>                       Wall min =    1.54942, CPU min =       1.58
+Timings> 
+Timings> Time integration2 ... Wall max =          0, CPU max =          0
+Timings>                       Wall avg =          0, CPU avg =          0
+Timings>                       Wall min =          0, CPU min =          0
+Timings> 
+Timings> Field evaluation .... Wall max =    1.98753, CPU max =       1.94
+Timings>                       Wall avg =    1.98753, CPU avg =       1.94
+Timings>                       Wall min =    1.98753, CPU min =       1.94
+Timings> 
+Timings> Time of Binary repart.  Wall max =          0, CPU max =          0
+Timings>                       Wall avg =          0, CPU avg =          0
+Timings>                       Wall min =          0, CPU min =          0
+Timings> 
+Timings> Time of Wake Field calc.  Wall max =          0, CPU max =          0
+Timings>                       Wall avg =          0, CPU avg =          0
+Timings>                       Wall min =          0, CPU min =          0
+Timings> 
+Timings> -----------------------------------------------------------------
+Ippl> CommMPI: Parent process waiting for children ...
+Ippl> CommMPI: Initialization complete.
+>                ____  _____       ___ 
+>               / __ \|  __ \ /\   | | 
+>              | |  | | |__) /  \  | |
+>              | |  | |  ___/ /\ \ | |
+>              | |__| | |  / ____ \| |____
+>               \____/|_| /_/    \_\______|
+OPAL> 
+OPAL> This is OPAL (Object Oriented Parallel Accelerator Library) Version 1.3.99.1
+OPAL> 
+OPAL>                 (c) PSI, http://amas.web.psi.ch
+OPAL> 
+OPAL> Please send cookies, goodies or other motivations (wine and beer ... ) 
+OPAL> to the OPAL developers opal@lists.psi.ch
+OPAL> 
+OPAL> Time: 15.29.07 date: 25/05/2015
+OPAL> 
+OPAL> Couldn't find startup file "/gpfs/home/kraus/init.opal".
+OPAL> Note: this is not mandatory for an OPAL simulation!
+OPAL> 
+OPAL> * Reading input stream "RestartTest-8.2.in".
+   +1 Option, ECHO=FALSE;
+
+Start reading input stream "FinPhase1.phases".
+
+
+End reading input stream "FinPhase1.phases".
+
+OPAL> 
+OPAL> value: {FINSS_RGUN_PHI,FINSB01_RACC_PHI,FINSB02_RACC_PHI,REPARTFREQ}={2.22368,-0.313154,5.835,100}
+OPAL> 
+OPAL> 
+OPAL> 5 elements selected.
+OPAL> 
+OPAL> * ********************************************************************************** 
+OPAL>   Selected Tracking Method == PARALLEL-SLICE, NEW TRACK
+OPAL> * ********************************************************************************** 
+Error> H5 rc= -2 in /gpfs/home/kraus/gitwork/opal/src/Distribution/Distribution.cpp @ line 1023
+Error> H5 rc= -2 in /gpfs/home/kraus/gitwork/opal/src/Distribution/Distribution.cpp @ line 1027
+OPAL> total number of slices = 101 total steps 17
+OPAL> /gpfs/home/kraus/gitwork/opal/src/Distribution/Distribution.cpp: 1011	101	101
+Error> H5 rc= -2 in /gpfs/home/kraus/gitwork/opal/src/Distribution/Distribution.cpp @ line 1074
+OPAL> Appending statistical data to existing data file: RestartTest-8.2.stat
+OPAL> Appending load balance data to existing data file: RestartTest-8.2.lbal
+OPAL> Will append to RestartTest-8.2.h5
+OPAL> numStepsInFile 17
+OPAL> ********************** DISTRIBUTION **********************
+OPAL> 
+OPAL> * In restart. Distribution read in from .h5 file.
+OPAL> 
+OPAL> * *********************************************************
+OPAL> 
+OPAL> * ************* B E A M ************************************************************ 
+OPAL> * BEAM        BEAM1
+OPAL> * PARTICLE    ELECTRON
+OPAL> * CURRENT     5.996e-07 A
+OPAL> * FREQUENCY   2998 Hz
+OPAL> * CHARGE      -e * 1 
+OPAL> * REST MASS   0.000510999 GeV
+OPAL> * MOMENTUM    1
+OPAL> * NPART       0
+OPAL> * ********************************************************************************** 
+OPAL> 
+OPAL> * ************** S L B U N C H ***************************************************** 
+OPAL> * NSlices= 101 Qtot= 2e-10
+OPAL> * Emean= 6.49361 [MeV]
+OPAL> * dT= 1e-12 [s]
+OPAL> * spos= 0.499321 [m]
+OPAL> * ********************************************************************************** 
+OPAL> 
+OPAL> Phase space dump frequency is set to 100 Inputfile is RestartTest-8.2.in
+ParallelSliceTracker> Track start at: t= 0 zstop@ 1 [m]
+ParallelSliceTracker> executing ParallelSliceTracker, initial DT 1e-12 [s]; max integration steps 1001601 step= 1601
+ParallelSliceTracker> the mass is: 0.510999 MeV, its charge: -1
+RFCavity > FINSS_RGUN using file FINSS-RGUN.dat (1D dynamic); zini= 0 m; zfinal= 0.17493 m;
+Solenoid > FIND1_MSOL10 using file FIND1-MSOL10.T7 (1D magnetostatic); zini= 0 m; zfinal= 0.6 m;
+ParallelSliceTracker> 
+ParallelSliceTracker> --- BEGIN FIELD LIST ---------------------------------------------------------------
+ParallelSliceTracker> 
+ParallelSliceTracker> --- 0 m -- 0.17493 m -- alpha = 0 -- beta = 0 --------------------------------------
+ParallelSliceTracker> FINSS_RGUN
+ParallelSliceTracker> FIND1_MSOL10
+ParallelSliceTracker> --- 0.17493 m -- 0.6 m -- alpha = 0 -- beta = 0 ------------------------------------
+ParallelSliceTracker> FIND1_MSOL10
+ParallelSliceTracker> 
+ParallelSliceTracker> --- END FIELD LIST -----------------------------------------------------------------
+ParallelSliceTracker> 
+ParallelSliceTracker>  Step 1700 at 0.529221 [m] t= 1e-10 [s] E=6.49363 [MeV]
+ParallelSliceTracker> * ************** S L B U N C H ***************************************************** 
+ParallelSliceTracker> * NSlices= 101 Qtot= 2e-10
+ParallelSliceTracker> * Emean= 6.49363 [MeV]
+ParallelSliceTracker> * dT= 1e-12 [s]
+ParallelSliceTracker> * spos= 0.529221 [m]
+ParallelSliceTracker> * ********************************************************************************** 
+ParallelSliceTracker> 
+ParallelSliceTracker>  Step 1800 at 0.55912 [m] t= 2e-10 [s] E=6.49365 [MeV]
+ParallelSliceTracker> * ************** S L B U N C H ***************************************************** 
+ParallelSliceTracker> * NSlices= 101 Qtot= 2e-10
+ParallelSliceTracker> * Emean= 6.49365 [MeV]
+ParallelSliceTracker> * dT= 1e-12 [s]
+ParallelSliceTracker> * spos= 0.55912 [m]
+ParallelSliceTracker> * ********************************************************************************** 
+ParallelSliceTracker> 
+ParallelSliceTracker>  Step 1900 at 0.589019 [m] t= 3e-10 [s] E=6.49367 [MeV]
+ParallelSliceTracker> * ************** S L B U N C H ***************************************************** 
+ParallelSliceTracker> * NSlices= 101 Qtot= 2e-10
+ParallelSliceTracker> * Emean= 6.49367 [MeV]
+ParallelSliceTracker> * dT= 1e-12 [s]
+ParallelSliceTracker> * spos= 0.589019 [m]
+ParallelSliceTracker> * ********************************************************************************** 
+ParallelSliceTracker> 
+ParallelSliceTracker>  Step 2000 at 0.618919 [m] t= 4e-10 [s] E=6.49369 [MeV]
+ParallelSliceTracker> * ************** S L B U N C H ***************************************************** 
+ParallelSliceTracker> * NSlices= 101 Qtot= 2e-10
+ParallelSliceTracker> * Emean= 6.49369 [MeV]
+ParallelSliceTracker> * dT= 1e-12 [s]
+ParallelSliceTracker> * spos= 0.618919 [m]
+ParallelSliceTracker> * ********************************************************************************** 
+ParallelSliceTracker> 
+ParallelSliceTracker>  Step 2100 at 0.648818 [m] t= 5e-10 [s] E=6.49371 [MeV]
+ParallelSliceTracker> * ************** S L B U N C H ***************************************************** 
+ParallelSliceTracker> * NSlices= 101 Qtot= 2e-10
+ParallelSliceTracker> * Emean= 6.49371 [MeV]
+ParallelSliceTracker> * dT= 1e-12 [s]
+ParallelSliceTracker> * spos= 0.648818 [m]
+ParallelSliceTracker> * ********************************************************************************** 
+ParallelSliceTracker> 
+ParallelSliceTracker>  Step 2200 at 0.678717 [m] t= 6e-10 [s] E=6.49373 [MeV]
+ParallelSliceTracker> * ************** S L B U N C H ***************************************************** 
+ParallelSliceTracker> * NSlices= 101 Qtot= 2e-10
+ParallelSliceTracker> * Emean= 6.49373 [MeV]
+ParallelSliceTracker> * dT= 1e-12 [s]
+ParallelSliceTracker> * spos= 0.678717 [m]
+ParallelSliceTracker> * ********************************************************************************** 
+ParallelSliceTracker> 
+ParallelSliceTracker>  Step 2300 at 0.708617 [m] t= 7e-10 [s] E=6.49375 [MeV]
+ParallelSliceTracker> * ************** S L B U N C H ***************************************************** 
+ParallelSliceTracker> * NSlices= 101 Qtot= 2e-10
+ParallelSliceTracker> * Emean= 6.49375 [MeV]
+ParallelSliceTracker> * dT= 1e-12 [s]
+ParallelSliceTracker> * spos= 0.708617 [m]
+ParallelSliceTracker> * ********************************************************************************** 
+ParallelSliceTracker> 
+ParallelSliceTracker>  Step 2400 at 0.738516 [m] t= 8e-10 [s] E=6.49377 [MeV]
+ParallelSliceTracker> * ************** S L B U N C H ***************************************************** 
+ParallelSliceTracker> * NSlices= 101 Qtot= 2e-10
+ParallelSliceTracker> * Emean= 6.49377 [MeV]
+ParallelSliceTracker> * dT= 1e-12 [s]
+ParallelSliceTracker> * spos= 0.738516 [m]
+ParallelSliceTracker> * ********************************************************************************** 
+ParallelSliceTracker> 
+ParallelSliceTracker>  Step 2500 at 0.768415 [m] t= 9e-10 [s] E=6.49379 [MeV]
+ParallelSliceTracker> * ************** S L B U N C H ***************************************************** 
+ParallelSliceTracker> * NSlices= 101 Qtot= 2e-10
+ParallelSliceTracker> * Emean= 6.49379 [MeV]
+ParallelSliceTracker> * dT= 1e-12 [s]
+ParallelSliceTracker> * spos= 0.768415 [m]
+ParallelSliceTracker> * ********************************************************************************** 
+ParallelSliceTracker> 
+ParallelSliceTracker>  Step 2600 at 0.798315 [m] t= 1e-09 [s] E=6.49381 [MeV]
+ParallelSliceTracker> * ************** S L B U N C H ***************************************************** 
+ParallelSliceTracker> * NSlices= 101 Qtot= 2e-10
+ParallelSliceTracker> * Emean= 6.49381 [MeV]
+ParallelSliceTracker> * dT= 1e-12 [s]
+ParallelSliceTracker> * spos= 0.798315 [m]
+ParallelSliceTracker> * ********************************************************************************** 
+ParallelSliceTracker> 
+ParallelSliceTracker>  Step 2700 at 0.828214 [m] t= 1.1e-09 [s] E=6.49383 [MeV]
+ParallelSliceTracker> * ************** S L B U N C H ***************************************************** 
+ParallelSliceTracker> * NSlices= 101 Qtot= 2e-10
+ParallelSliceTracker> * Emean= 6.49383 [MeV]
+ParallelSliceTracker> * dT= 1e-12 [s]
+ParallelSliceTracker> * spos= 0.828214 [m]
+ParallelSliceTracker> * ********************************************************************************** 
+ParallelSliceTracker> 
+ParallelSliceTracker>  Step 2800 at 0.858113 [m] t= 1.2e-09 [s] E=6.49385 [MeV]
+ParallelSliceTracker> * ************** S L B U N C H ***************************************************** 
+ParallelSliceTracker> * NSlices= 101 Qtot= 2e-10
+ParallelSliceTracker> * Emean= 6.49385 [MeV]
+ParallelSliceTracker> * dT= 1e-12 [s]
+ParallelSliceTracker> * spos= 0.858113 [m]
+ParallelSliceTracker> * ********************************************************************************** 
+ParallelSliceTracker> 
+ParallelSliceTracker>  Step 2900 at 0.888013 [m] t= 1.3e-09 [s] E=6.49387 [MeV]
+ParallelSliceTracker> * ************** S L B U N C H ***************************************************** 
+ParallelSliceTracker> * NSlices= 101 Qtot= 2e-10
+ParallelSliceTracker> * Emean= 6.49387 [MeV]
+ParallelSliceTracker> * dT= 1e-12 [s]
+ParallelSliceTracker> * spos= 0.888013 [m]
+ParallelSliceTracker> * ********************************************************************************** 
+ParallelSliceTracker> 
+ParallelSliceTracker>  Step 3000 at 0.917912 [m] t= 1.4e-09 [s] E=6.49388 [MeV]
+ParallelSliceTracker> * ************** S L B U N C H ***************************************************** 
+ParallelSliceTracker> * NSlices= 101 Qtot= 2e-10
+ParallelSliceTracker> * Emean= 6.49388 [MeV]
+ParallelSliceTracker> * dT= 1e-12 [s]
+ParallelSliceTracker> * spos= 0.917912 [m]
+ParallelSliceTracker> * ********************************************************************************** 
+ParallelSliceTracker> 
+ParallelSliceTracker>  Step 3100 at 0.947811 [m] t= 1.5e-09 [s] E=6.4939 [MeV]
+ParallelSliceTracker> * ************** S L B U N C H ***************************************************** 
+ParallelSliceTracker> * NSlices= 101 Qtot= 2e-10
+ParallelSliceTracker> * Emean= 6.4939 [MeV]
+ParallelSliceTracker> * dT= 1e-12 [s]
+ParallelSliceTracker> * spos= 0.947811 [m]
+ParallelSliceTracker> * ********************************************************************************** 
+ParallelSliceTracker> 
+ParallelSliceTracker>  Step 3200 at 0.977711 [m] t= 1.6e-09 [s] E=6.49391 [MeV]
+ParallelSliceTracker> * ************** S L B U N C H ***************************************************** 
+ParallelSliceTracker> * NSlices= 101 Qtot= 2e-10
+ParallelSliceTracker> * Emean= 6.49391 [MeV]
+ParallelSliceTracker> * dT= 1e-12 [s]
+ParallelSliceTracker> * spos= 0.977711 [m]
+ParallelSliceTracker> * ********************************************************************************** 
+ParallelSliceTracker> 
+ParallelSliceTracker> done executing ParallelSliceTracker
+OPAL> * End of input stream "RestartTest-8.2.in".
+Timings> -----------------------------------------------------------------
+Timings>      Timing results for 1 nodes:
+Timings> -----------------------------------------------------------------
+Timings> mainTimer ........... Wall tot =    5.30582, CPU tot =       2.43
+Timings> 
+Timings> Secondary emission .. Wall max =          0, CPU max =          0
+Timings>                       Wall avg =          0, CPU avg =          0
+Timings>                       Wall min =          0, CPU min =          0
+Timings> 
+Timings> Initialize geometry . Wall max =          0, CPU max =          0
+Timings>                       Wall avg =          0, CPU avg =          0
+Timings>                       Wall min =          0, CPU min =          0
+Timings> 
+Timings> Inside test ......... Wall max =          0, CPU max =          0
+Timings>                       Wall avg =          0, CPU avg =          0
+Timings>                       Wall min =          0, CPU min =          0
+Timings> 
+Timings> Fast inside test .... Wall max =          0, CPU max =          0
+Timings>                       Wall avg =          0, CPU avg =          0
+Timings>                       Wall min =          0, CPU min =          0
+Timings> 
+Timings> Ray tracing ......... Wall max =          0, CPU max =          0
+Timings>                       Wall avg =          0, CPU avg =          0
+Timings>                       Wall min =          0, CPU min =          0
+Timings> 
+Timings> Particle Inside ..... Wall max =          0, CPU max =          0
+Timings>                       Wall avg =          0, CPU avg =          0
+Timings>                       Wall min =          0, CPU min =          0
+Timings> 
+Timings> SelfField ........... Wall max =    0.07798, CPU max =       0.12
+Timings>                       Wall avg =    0.07798, CPU avg =       0.12
+Timings>                       Wall min =    0.07798, CPU min =       0.12
+Timings> 
+Timings> Boundingbox ......... Wall max =          0, CPU max =          0
+Timings>                       Wall avg =          0, CPU avg =          0
+Timings>                       Wall min =          0, CPU min =          0
+Timings> 
+Timings> Statistics .......... Wall max =   0.020651, CPU max =          0
+Timings>                       Wall avg =   0.020651, CPU avg =          0
+Timings>                       Wall min =   0.020651, CPU min =          0
+Timings> 
+Timings> Potential ........... Wall max =          0, CPU max =          0
+Timings>                       Wall avg =          0, CPU avg =          0
+Timings>                       Wall min =          0, CPU min =          0
+Timings> 
+Timings> Histogram ........... Wall max =          0, CPU max =          0
+Timings>                       Wall avg =          0, CPU avg =          0
+Timings>                       Wall min =          0, CPU min =          0
+Timings> 
+Timings> CreatDistr .......... Wall max =          0, CPU max =          0
+Timings>                       Wall avg =          0, CPU avg =          0
+Timings>                       Wall min =          0, CPU min =          0
+Timings> 
+Timings> LoadDistr ........... Wall max =   0.004103, CPU max =          0
+Timings>                       Wall avg =   0.004103, CPU avg =          0
+Timings>                       Wall min =   0.004103, CPU min =          0
+Timings> 
+Timings> calcI ............... Wall max =    0.00031, CPU max =          0
+Timings>                       Wall avg =    0.00031, CPU avg =          0
+Timings>                       Wall min =    0.00031, CPU min =          0
+Timings> 
+Timings> spaceCharge ......... Wall max =   0.076491, CPU max =       0.12
+Timings>                       Wall avg =   0.076491, CPU avg =       0.12
+Timings>                       Wall min =   0.076491, CPU min =       0.12
+Timings> 
+Timings> H5PartTimer ......... Wall max =    2.86061, CPU max =       0.02
+Timings>                       Wall avg =    2.86061, CPU avg =       0.02
+Timings>                       Wall min =    2.86061, CPU min =       0.02
+Timings> 
+Timings> H5BlockTimer ........ Wall max =          0, CPU max =          0
+Timings>                       Wall avg =          0, CPU avg =          0
+Timings>                       Wall min =          0, CPU min =          0
+Timings> 
+Timings> StatMarkerTimer ..... Wall max =    0.03513, CPU max =       0.05
+Timings>                       Wall avg =    0.03513, CPU avg =       0.05
+Timings>                       Wall min =    0.03513, CPU min =       0.05
+Timings> 
+Timings> Time integration1 ... Wall max =      1.544, CPU max =       1.48
+Timings>                       Wall avg =      1.544, CPU avg =       1.48
+Timings>                       Wall min =      1.544, CPU min =       1.48
+Timings> 
+Timings> Time integration2 ... Wall max =          0, CPU max =          0
+Timings>                       Wall avg =          0, CPU avg =          0
+Timings>                       Wall min =          0, CPU min =          0
+Timings> 
+Timings> Field evaluation .... Wall max =   0.451851, CPU max =       0.44
+Timings>                       Wall avg =   0.451851, CPU avg =       0.44
+Timings>                       Wall min =   0.451851, CPU min =       0.44
+Timings> 
+Timings> Time of Binary repart.  Wall max =          0, CPU max =          0
+Timings>                       Wall avg =          0, CPU avg =          0
+Timings>                       Wall min =          0, CPU min =          0
+Timings> 
+Timings> Time of Wake Field calc.  Wall max =          0, CPU max =          0
+Timings>                       Wall avg =          0, CPU avg =          0
+Timings>                       Wall min =          0, CPU min =          0
+Timings> 
+Timings> -----------------------------------------------------------------
