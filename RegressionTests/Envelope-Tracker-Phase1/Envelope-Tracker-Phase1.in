@@ -1,6 +1,6 @@
 Option, ECHO=FALSE;
 Option, INFO=TRUE;
-Option, PSDUMPFREQ=50;
+Option, PSDUMPFREQ=200;
 
 Title, string="SwissFEL Injector, Phase 1 (Feb. 2010)";
 
@@ -61,7 +61,7 @@ beam1: BEAM, PARTICLE=ELECTRON, GAMMA=gamma, pc=P0, NSLICE=101, BFREQ=bfreq, BCU
 Select, Line = l1;
 
 // Simulation of the gun with step size 0.1 ps
-track, line=l1, beam=beam1, MAXSTEPS=1000000, DT=1.0e-13, ZSTOP=1.5;
+track, line=l1, beam=beam1, MAXSTEPS=1000000, DT=1.0e-13, ZSTOP=0.5;
 run, method = "PARALLEL-SLICE", beam = beam1, fieldsolver = Fs1, distribution = Dist1;
 endtrack;
 
