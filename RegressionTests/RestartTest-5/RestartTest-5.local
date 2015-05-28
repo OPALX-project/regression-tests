@@ -1,5 +1,5 @@
-#!/bin/bash 
-cp RestartTest-5.h5.bak RestartTest-5.h5
-rm -f RestartTest-5.stat RestartTest-5.lbal
+#!/bin/bash
+for X in h5 lbal stat;do cp RestartTest-5.$X.bak RestartTest-5.$X;done
+
 mpirun -np 4 $OPAL_EXE_PATH/opal RestartTest-5.in -restart 0 --commlib mpi --info 0 --warn 0 2>&1
 
