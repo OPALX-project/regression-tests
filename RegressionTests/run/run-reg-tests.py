@@ -109,22 +109,6 @@ def main(argv):
     d = datetime.date.today()
     rep.appendReport("Results: http://amas.web.psi.ch/regressiontests/results_%s_%s_%s.xml \n\n" % (d.day, d.month, d.year))
 
-    www_folder = os.getenv("REGTEST_WWW")
-    if www_folder is None:
-        rep.appendReport("Error: REGTEST_WWW not set")
-        bailout(runAsUser)
-        return
-
-    if not os.getenv("OPAL_EXE_PATH"):
-        rep.appendReport("Error: OPAL_EXE_PATH not set")
-        bailout(runAsUser)
-        return
-
-    if not os.path.isfile(os.getenv("OPAL_EXE_PATH") + "/opal"):
-        rep.appendReport("Error: OPAL_EXE_PATH is invalid")
-        bailout(runAsUser)
-        return
-
     # tests are one level up starting from directory of this script
     rundir = sys.path[0]   # get absolute path name of this script
     regdir = os.path.dirname (rundir)
@@ -137,6 +121,9 @@ def main(argv):
     runtests = list()
     run_local = False
     do_publish = True
+
+    if "--dont-publish" in argv:
+        do_publish = False
 
     if "--run-local" in argv:
         run_local = True
@@ -160,8 +147,21 @@ def main(argv):
         os.environ["SGE_CLUSTER_NAME"]="sgeclusterfelsim"
         os.environ["PATH"]= os.getenv("PATH") + ":/gpfs/homefelsim/export/sge/bin/lx24-amd64:/usr/kerberos/bin"
 
-    if "--dont-publish" in argv:
-        do_publish = False
+    www_folder = os.getenv("REGTEST_WWW")
+    if do_publish and www_folder is None:
+        rep.appendReport("Error: REGTEST_WWW not set")
+        bailout(runAsUser)
+        return
+
+    if not os.getenv("OPAL_EXE_PATH"):
+        rep.appendReport("Error: OPAL_EXE_PATH not set")
+        bailout(runAsUser)
+        return
+
+    if not os.path.isfile(os.getenv("OPAL_EXE_PATH") + "/opal"):
+        rep.appendReport("Error: OPAL_EXE_PATH is invalid")
+        bailout(runAsUser)
+        return
 
     queue = ""
     for arg in argv:
@@ -185,29 +185,6 @@ def main(argv):
     rep.dumpXML("results.xml")
 
     #cp report to webdir and add entry in index.html
-    if not runAsUser:
-        failedtests = rep.NrFailed()
-        brokentests = rep.NrBroken()
-        webfilename = "results_%s_%s_%s.xml" % (d.day, d.month, d.year)
-        shutil.copy ("results.xml", www_folder + "/" + webfilename)
-        subprocess.getoutput("cp -rf plots_" + d.isoformat() + " " + www_folder + "/")
-        indexhtml = open(www_folder + "/index.html").readlines()
-        for line in range(len(indexhtml)):
-            if "insert here" in indexhtml[line]:
-                indexhtml.insert(line+1, "<a href=\"%s\">%s.%s.%s</a> [passed:%d | broken:%d | failed:%d | total:%d] <br/>\n" % (webfilename, d.day, d.month, d.year, totalNrPassed, brokentests, failedtests, totalNrTests))
-                break
-        indexhtmlout = open(www_folder + "/index.html", "w")
-        indexhtmlout.writelines(indexhtml)
-        indexhtmlout.close()
-        #update xslt formating file
-        shutil.copy (rundir + "/results.xslt", www_folder + "/")
-
-        #update manual
-        OpalDocumentation()
-
-        #update doxygen
-        OpalDoxygen()
-
     if do_publish:
         failedtests = rep.NrFailed()
         brokentests = rep.NrBroken()
@@ -224,6 +201,13 @@ def main(argv):
         indexhtmlout.close()
         #update xslt formating file
         shutil.copy (rundir + "/results.xslt", www_folder + "/")
+
+        if not runAsUser:
+            #update manual
+            OpalDocumentation()
+
+            #update doxygen
+            OpalDoxygen()
 
     #move xml results to result-dir
     if os.path.isfile('results.xml'):
