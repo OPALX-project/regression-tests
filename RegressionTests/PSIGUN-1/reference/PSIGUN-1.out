@@ -1,11 +1,11 @@
+Ippl> CommMPI: Started job 3 on host `merlinl02'.
 Ippl> CommMPI: Parent process waiting for children ...
 Ippl> CommMPI: Child 2 ready.
 Ippl> CommMPI: Child 1 ready.
 Ippl> CommMPI: Child 3 ready.
 Ippl> CommMPI: Initialization complete.
-Ippl> CommMPI: Started job 1 on host `merlinl01'.
-Ippl> CommMPI: Started job 2 on host `merlinl01'.
-Ippl> CommMPI: Started job 3 on host `merlinl01'.
+Ippl> CommMPI: Started job 1 on host `merlinl02'.
+Ippl> CommMPI: Started job 2 on host `merlinl02'.
 {0}>                ____  _____       ___ 
 {0}>               / __ \|  __ \ /\   | | 
 {0}>              | |  | | |__) /  \  | |
@@ -20,24 +20,24 @@ OPAL{0}>
 OPAL{0}> Please send cookies, goodies or other motivations (wine and beer ... ) 
 OPAL{0}> to the OPAL developers opal@lists.psi.ch
 OPAL{0}> 
-OPAL{0}> Time: 08.03.22 date: 05/05/2015
+OPAL{0}> Time: 16.02.14 date: 01/06/2015
 OPAL{0}> 
-OPAL{+0}> Couldn't find startup file "/gpfs/home/adelmann/init.opal".
+OPAL{+0}> Couldn't find startup file "/gpfs/home/kraus/init.opal".
 OPAL{+0}> Note: this is not mandatory for an OPAL simulation!
 OPAL{+0}> 
 OPAL{+0}> * Reading input stream "PSIGUN-1.in".
-   +1 Option, PSDUMPFREQ=50;
-   +1 Option, PSDUMPFREQ=50;
-   +1    +1 Option, PSDUMPFREQ=50;
-Option, PSDUMPFREQ=50;
+   +1 Option, PSDUMPFREQ=500;
+   +1 Option, PSDUMPFREQ=500;
+   +1 Option, PSDUMPFREQ=500;
+   +1 Option, PSDUMPFREQ=500;
    +2 Option, STATDUMPFREQ=1;
    +2 Option, STATDUMPFREQ=1;
    +2 Option, STATDUMPFREQ=1;
    +2 Option, STATDUMPFREQ=1;
+   +3   +3 Option, ECHO=FALSE;
    +3 Option, ECHO=FALSE;
    +3 Option, ECHO=FALSE;
-   +3 Option, ECHO=FALSE;
-   +3 Option, ECHO=FALSE;
+ Option, ECHO=FALSE;
 OPAL{+0}> 
 OPAL{+0}> 8 elements selected.
 OPAL{+0}> 
@@ -88,9 +88,9 @@ OPAL{+0}> * ************* F I E L D S O L V E R ********************************
 OPAL{+0}> * FIELDSOLVER  FS1
 OPAL{+0}> * TYPE         FFT
 OPAL{+0}> * N-PROCESSORS 4
-OPAL{+0}> * MX           32
-OPAL{+0}> * MY           32
-OPAL{+0}> * MT           64
+OPAL{+0}> * MX           16
+OPAL{+0}> * MY           16
+OPAL{+0}> * MT           32
 OPAL{+0}> * BBOXINCR     1
 OPAL{+0}> * GRRENSF      INTEGRATED
 OPAL{+0}> * XDIM is parallel  
@@ -107,7 +107,7 @@ FM2DD {+0}> * read in fieldmap 'PHINGU1.T7'                                     
 FM2DD {+0}> * ******************************************************************************
 FM2DD {+0}> 
 FM2DD {+0}> 
-OPAL{+0}> Phase space dump frequency 50 and statistics dump frequency 1 w.r.t. the time step.
+OPAL{+0}> Phase space dump frequency 500 and statistics dump frequency 1 w.r.t. the time step.
 RFCavity {+0}> FINSS_RGUN using file PHINGU1.T7 (2D dynamic); zini= 0 m; zfinal= 0.175 m;
 Solenoid {+0}> FIND1_MSOL10 using file NEW_SINGLE_SOL_NOFRINGE_ASTRA.opal (1D magnetostatic); zini= -0.3 m; zfinal= 0.3 m;
 Solenoid {+0}> END using file NEW_SINGLE_SOL_NOFRINGE_ASTRA.opal (1D magnetostatic); zini= -0.3 m; zfinal= 0.3 m;
@@ -116,7 +116,7 @@ ParallelTTracker {+0}> ---------------------------------------------------------
 ParallelTTracker {+0}> FINSS_RGUN: phi = phi_nom + phi_maxE + global phase shift = 123.432 degree, (global phase shift = -14.2992 degree) 
 ParallelTTracker {+0}> -------------------------------------------------------------------------------------
 ParallelTTracker {+0}> 
-ParallelTTracker {+0}> Track start at: 08.03.23, t= 0; zstop at: 0.14 [m]
+ParallelTTracker {+0}> Track start at: 16.02.15, t= 0; zstop at: 0.14 [m]
 ParallelTTracker {+0}> Do emission for 2.64983e-11 [s] using 5 energy bins 
 ParallelTTracker {+0}> Change dT from 1e-12 [s] to 5.29966e-12 [s] during emission 
 ParallelTTracker {+0}> Executing ParallelTTracker, initial DT 1e-12 [s];
@@ -146,7 +146,7 @@ ParallelTTracker {+0}> MINSTEPFORREBIN 600
 ParallelTTracker {+0}> SURFACEEMISSIONSTOP after 1000 seconds
 ParallelTTracker {+0}> REPARTFREQ 100
 OPAL{+0}> *Bin number: 1 has emitted all particles (new emit).
-ParallelTTracker {+0}> 08.03.24 Step      0 at    0.022 [mm] t=  5.300e-12 [s] E=    1.249 [keV] 
+ParallelTTracker {+0}> 16.02.16 Step      0 at    0.022 [mm] t=  5.300e-12 [s] E=    1.249 [keV] 
 OPAL {+0}> * Wrote beam phase space.
 OPAL {+0}> 
 OPAL {+0}> * ************** B U N C H ********************************************************* 
@@ -161,7 +161,7 @@ OPAL {+0}> * mean position   = ( -1.14410e-06 , -1.73611e-07 ,  2.15675e-05 ) [m
 OPAL {+0}> * mean momenta    = ( -1.53757e-05 , -3.67669e-05 ,  5.43956e-02 ) [beta gamma]
 OPAL {+0}> * rms emittance   = (  2.07849e-06 ,  2.02553e-06 ,  5.74101e-06 ) (not normalized)
 OPAL {+0}> * rms correlation = ( -6.73543e-02 , -5.50671e-02 ,  9.54879e-01 )
-OPAL {+0}> * hr              = (  2.50214e-05 ,  2.55916e-05 ,  1.45160e-08 ) [m]
+OPAL {+0}> * hr              = (  5.17110e-05 ,  5.28893e-05 ,  2.95003e-08 ) [m]
 OPAL {+0}> * dh              =    1.00000e-02 [m]
 OPAL {+0}> * t               =    5.29966e-12 [s]        dT    =  5.29966e-12 [s]
 OPAL {+0}> * spos            =    2.15675e-05 [m]
@@ -169,1184 +169,995 @@ OPAL {+0}> * *******************************************************************
 OPAL {+0}> 
 OPAL {+0}> * Wrote beam statistics.
 OPAL{+0}> *Bin number: 2 has emitted all particles (new emit).
-ParallelTTracker {+0}> 08.03.24 Step      1 at    0.064 [mm] t=  1.060e-11 [s] E=    4.248 [keV] 
+ParallelTTracker {+0}> 16.02.16 Step      1 at    0.064 [mm] t=  1.060e-11 [s] E=    4.250 [keV] 
 OPAL {+0}> * Wrote beam statistics.
 OPAL{+0}> *Bin number: 3 has emitted all particles (new emit).
-ParallelTTracker {+0}> 08.03.25 Step      2 at    0.180 [mm] t=  1.590e-11 [s] E=   13.028 [keV] 
+ParallelTTracker {+0}> 16.02.17 Step      2 at    0.180 [mm] t=  1.590e-11 [s] E=   13.034 [keV] 
 OPAL {+0}> * Wrote beam statistics.
 OPAL{+0}> *Bin number: 4 has emitted all particles (new emit).
-ParallelTTracker {+0}> 08.03.25 Step      3 at    0.501 [mm] t=  2.120e-11 [s] E=   38.864 [keV] 
+ParallelTTracker {+0}> 16.02.17 Step      3 at    0.501 [mm] t=  2.120e-11 [s] E=   38.867 [keV] 
 OPAL {+0}> * Wrote beam statistics.
 OPAL{+0}> *Bin number: 5 has emitted all particles (new emit).
-ParallelTTracker {+0}> 08.03.25 Step      4 at    1.137 [mm] t=  2.220e-11 [s] E=   93.965 [keV] 
+ParallelTTracker {+0}> 16.02.18 Step      4 at    1.137 [mm] t=  2.220e-11 [s] E=   93.967 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.26 Step      5 at    1.293 [mm] t=  2.320e-11 [s] E=  107.196 [keV] 
+ParallelTTracker {+0}> 16.02.18 Step      5 at    1.294 [mm] t=  2.320e-11 [s] E=  107.198 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.26 Step      6 at    1.458 [mm] t=  2.420e-11 [s] E=  121.331 [keV] 
+ParallelTTracker {+0}> 16.02.19 Step      6 at    1.459 [mm] t=  2.420e-11 [s] E=  121.334 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.27 Step      7 at    1.632 [mm] t=  2.520e-11 [s] E=  136.340 [keV] 
+ParallelTTracker {+0}> 16.02.19 Step      7 at    1.632 [mm] t=  2.520e-11 [s] E=  136.343 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.27 Step      8 at    1.813 [mm] t=  2.620e-11 [s] E=  152.190 [keV] 
+ParallelTTracker {+0}> 16.02.20 Step      8 at    1.813 [mm] t=  2.620e-11 [s] E=  152.194 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.28 Step      9 at    2.002 [mm] t=  2.720e-11 [s] E=  168.846 [keV] 
+ParallelTTracker {+0}> 16.02.20 Step      9 at    2.002 [mm] t=  2.720e-11 [s] E=  168.851 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.28 Step     10 at    2.197 [mm] t=  2.820e-11 [s] E=  186.273 [keV] 
+ParallelTTracker {+0}> 16.02.21 Step     10 at    2.198 [mm] t=  2.820e-11 [s] E=  186.279 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.29 Step     11 at    2.399 [mm] t=  2.920e-11 [s] E=  204.433 [keV] 
+ParallelTTracker {+0}> 16.02.21 Step     11 at    2.400 [mm] t=  2.920e-11 [s] E=  204.440 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.29 Step     12 at    2.608 [mm] t=  3.020e-11 [s] E=  223.289 [keV] 
+ParallelTTracker {+0}> 16.02.22 Step     12 at    2.608 [mm] t=  3.020e-11 [s] E=  223.297 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.30 Step     13 at    2.822 [mm] t=  3.120e-11 [s] E=  242.803 [keV] 
+ParallelTTracker {+0}> 16.02.22 Step     13 at    2.822 [mm] t=  3.120e-11 [s] E=  242.811 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.30 Step     14 at    3.041 [mm] t=  3.220e-11 [s] E=  262.937 [keV] 
+ParallelTTracker {+0}> 16.02.23 Step     14 at    3.042 [mm] t=  3.220e-11 [s] E=  262.946 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.31 Step     15 at    3.265 [mm] t=  3.320e-11 [s] E=  283.654 [keV] 
+ParallelTTracker {+0}> 16.02.23 Step     15 at    3.266 [mm] t=  3.320e-11 [s] E=  283.664 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.31 Step     16 at    3.494 [mm] t=  3.420e-11 [s] E=  304.917 [keV] 
+ParallelTTracker {+0}> 16.02.24 Step     16 at    3.495 [mm] t=  3.420e-11 [s] E=  304.927 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.32 Step     17 at    3.727 [mm] t=  3.520e-11 [s] E=  326.690 [keV] 
+ParallelTTracker {+0}> 16.02.25 Step     17 at    3.728 [mm] t=  3.520e-11 [s] E=  326.701 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.32 Step     18 at    3.964 [mm] t=  3.620e-11 [s] E=  348.937 [keV] 
+ParallelTTracker {+0}> 16.02.25 Step     18 at    3.965 [mm] t=  3.620e-11 [s] E=  348.949 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.33 Step     19 at    4.205 [mm] t=  3.720e-11 [s] E=  371.624 [keV] 
+ParallelTTracker {+0}> 16.02.26 Step     19 at    4.205 [mm] t=  3.720e-11 [s] E=  371.636 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.33 Step     20 at    4.449 [mm] t=  3.820e-11 [s] E=  394.718 [keV] 
+ParallelTTracker {+0}> 16.02.26 Step     20 at    4.450 [mm] t=  3.820e-11 [s] E=  394.730 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.34 Step     21 at    4.696 [mm] t=  3.920e-11 [s] E=  418.184 [keV] 
+ParallelTTracker {+0}> 16.02.27 Step     21 at    4.697 [mm] t=  3.920e-11 [s] E=  418.197 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.34 Step     22 at    4.946 [mm] t=  4.020e-11 [s] E=  441.993 [keV] 
+ParallelTTracker {+0}> 16.02.27 Step     22 at    4.947 [mm] t=  4.020e-11 [s] E=  442.006 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.35 Step     23 at    5.199 [mm] t=  4.120e-11 [s] E=  466.112 [keV] 
+ParallelTTracker {+0}> 16.02.28 Step     23 at    5.200 [mm] t=  4.120e-11 [s] E=  466.125 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.35 Step     24 at    5.455 [mm] t=  4.220e-11 [s] E=  490.512 [keV] 
+ParallelTTracker {+0}> 16.02.28 Step     24 at    5.455 [mm] t=  4.220e-11 [s] E=  490.525 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.36 Step     25 at    5.712 [mm] t=  4.320e-11 [s] E=  515.163 [keV] 
+ParallelTTracker {+0}> 16.02.29 Step     25 at    5.713 [mm] t=  4.320e-11 [s] E=  515.177 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.36 Step     26 at    5.972 [mm] t=  4.420e-11 [s] E=  540.038 [keV] 
+ParallelTTracker {+0}> 16.02.29 Step     26 at    5.973 [mm] t=  4.420e-11 [s] E=  540.052 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.37 Step     27 at    6.234 [mm] t=  4.520e-11 [s] E=  565.108 [keV] 
+ParallelTTracker {+0}> 16.02.30 Step     27 at    6.235 [mm] t=  4.520e-11 [s] E=  565.122 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.37 Step     28 at    6.498 [mm] t=  4.620e-11 [s] E=  590.348 [keV] 
+ParallelTTracker {+0}> 16.02.30 Step     28 at    6.499 [mm] t=  4.620e-11 [s] E=  590.362 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.38 Step     29 at    6.764 [mm] t=  4.720e-11 [s] E=  615.731 [keV] 
+ParallelTTracker {+0}> 16.02.31 Step     29 at    6.765 [mm] t=  4.720e-11 [s] E=  615.744 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.38 Step     30 at    7.031 [mm] t=  4.820e-11 [s] E=  641.231 [keV] 
+ParallelTTracker {+0}> 16.02.32 Step     30 at    7.032 [mm] t=  4.820e-11 [s] E=  641.245 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.39 Step     31 at    7.300 [mm] t=  4.920e-11 [s] E=  666.825 [keV] 
+ParallelTTracker {+0}> 16.02.32 Step     31 at    7.301 [mm] t=  4.920e-11 [s] E=  666.839 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.39 Step     32 at    7.570 [mm] t=  5.020e-11 [s] E=  692.488 [keV] 
+ParallelTTracker {+0}> 16.02.33 Step     32 at    7.571 [mm] t=  5.020e-11 [s] E=  692.502 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.39 Step     33 at    7.842 [mm] t=  5.120e-11 [s] E=  718.197 [keV] 
+ParallelTTracker {+0}> 16.02.33 Step     33 at    7.842 [mm] t=  5.120e-11 [s] E=  718.210 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.40 Step     34 at    8.114 [mm] t=  5.220e-11 [s] E=  743.929 [keV] 
+ParallelTTracker {+0}> 16.02.34 Step     34 at    8.115 [mm] t=  5.220e-11 [s] E=  743.942 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.40 Step     35 at    8.388 [mm] t=  5.320e-11 [s] E=  769.662 [keV] 
+ParallelTTracker {+0}> 16.02.34 Step     35 at    8.389 [mm] t=  5.320e-11 [s] E=  769.675 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.41 Step     36 at    8.663 [mm] t=  5.420e-11 [s] E=  795.374 [keV] 
+ParallelTTracker {+0}> 16.02.35 Step     36 at    8.664 [mm] t=  5.420e-11 [s] E=  795.387 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.41 Step     37 at    8.939 [mm] t=  5.520e-11 [s] E=  821.044 [keV] 
+ParallelTTracker {+0}> 16.02.35 Step     37 at    8.940 [mm] t=  5.520e-11 [s] E=  821.056 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.42 Step     38 at    9.216 [mm] t=  5.620e-11 [s] E=  846.651 [keV] 
+ParallelTTracker {+0}> 16.02.36 Step     38 at    9.217 [mm] t=  5.620e-11 [s] E=  846.663 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.42 Step     39 at    9.494 [mm] t=  5.720e-11 [s] E=  872.175 [keV] 
+ParallelTTracker {+0}> 16.02.36 Step     39 at    9.495 [mm] t=  5.720e-11 [s] E=  872.187 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.43 Step     40 at    9.773 [mm] t=  5.820e-11 [s] E=  897.596 [keV] 
+ParallelTTracker {+0}> 16.02.37 Step     40 at    9.774 [mm] t=  5.820e-11 [s] E=  897.607 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.43 Step     41 at   10.052 [mm] t=  5.920e-11 [s] E=  922.895 [keV] 
+ParallelTTracker {+0}> 16.02.37 Step     41 at   10.053 [mm] t=  5.920e-11 [s] E=  922.906 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.44 Step     42 at   10.332 [mm] t=  6.020e-11 [s] E=  948.052 [keV] 
+ParallelTTracker {+0}> 16.02.38 Step     42 at   10.333 [mm] t=  6.020e-11 [s] E=  948.063 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.44 Step     43 at   10.613 [mm] t=  6.120e-11 [s] E=  973.050 [keV] 
+ParallelTTracker {+0}> 16.02.38 Step     43 at   10.614 [mm] t=  6.120e-11 [s] E=  973.060 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.45 Step     44 at   10.895 [mm] t=  6.220e-11 [s] E=  997.870 [keV] 
+ParallelTTracker {+0}> 16.02.39 Step     44 at   10.896 [mm] t=  6.220e-11 [s] E=  997.880 [keV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.45 Step     45 at   11.177 [mm] t=  6.320e-11 [s] E=    1.022 [MeV] 
+ParallelTTracker {+0}> 16.02.40 Step     45 at   11.178 [mm] t=  6.320e-11 [s] E=    1.023 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.46 Step     46 at   11.460 [mm] t=  6.420e-11 [s] E=    1.047 [MeV] 
+ParallelTTracker {+0}> 16.02.40 Step     46 at   11.461 [mm] t=  6.420e-11 [s] E=    1.047 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.46 Step     47 at   11.743 [mm] t=  6.520e-11 [s] E=    1.071 [MeV] 
+ParallelTTracker {+0}> 16.02.41 Step     47 at   11.744 [mm] t=  6.520e-11 [s] E=    1.071 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.47 Step     48 at   12.027 [mm] t=  6.620e-11 [s] E=    1.095 [MeV] 
+ParallelTTracker {+0}> 16.02.41 Step     48 at   12.028 [mm] t=  6.620e-11 [s] E=    1.095 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.47 Step     49 at   12.311 [mm] t=  6.720e-11 [s] E=    1.119 [MeV] 
+ParallelTTracker {+0}> 16.02.42 Step     49 at   12.312 [mm] t=  6.720e-11 [s] E=    1.119 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.48 Step     50 at   12.596 [mm] t=  6.820e-11 [s] E=    1.142 [MeV] 
-OPAL {+0}> * Wrote beam phase space.
-OPAL {+0}> 
-OPAL {+0}> * ************** B U N C H ********************************************************* 
-OPAL {+0}> * NP              =   20000
-OPAL {+0}> * Qtot            =    2.00000e-01 [nC]       Qi    =  1.00000e-05 [nC]
-OPAL {+0}> * Ekin            =    1.14209e+00 [MeV]      dEkin =  8.30686e-02 [MeV]
-OPAL {+0}> * rmax            = (  6.84184e-04 ,  6.88518e-04 ,  1.56803e-02 ) [m]
-OPAL {+0}> * rmin            = ( -6.99447e-04 , -6.95117e-04 ,  9.07681e-03 ) [m]
-OPAL {+0}> * rms beam size   = (  3.03142e-04 ,  3.02549e-04 ,  1.09678e-03 ) [m]
-OPAL {+0}> * rms momenta     = (  2.04852e-02 ,  2.05211e-02 ,  1.70933e-01 ) [beta gamma]
-OPAL {+0}> * mean position   = ( -1.59674e-06 ,  5.22312e-07 ,  1.25960e-02 ) [m]
-OPAL {+0}> * mean momenta    = ( -2.26488e-05 , -9.85538e-06 ,  3.07599e+00 ) [beta gamma]
-OPAL {+0}> * rms emittance   = (  3.68525e-07 ,  3.64376e-07 ,  3.46589e-06 ) (not normalized)
-OPAL {+0}> * rms correlation = (  9.83191e-01 ,  9.83564e-01 ,  9.98381e-01 )
-OPAL {+0}> * hr              = (  4.46332e-05 ,  4.46334e-05 ,  1.04817e-04 ) [m]
-OPAL {+0}> * dh              =    1.00000e-02 [m]
-OPAL {+0}> * t               =    6.81986e-11 [s]        dT    =  1.00000e-12 [s]
-OPAL {+0}> * spos            =    1.25960e-02 [m]
-OPAL {+0}> * ********************************************************************************** 
-OPAL {+0}> 
+ParallelTTracker {+0}> 16.02.42 Step     50 at   12.597 [mm] t=  6.820e-11 [s] E=    1.142 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.49 Step     51 at   12.881 [mm] t=  6.920e-11 [s] E=    1.165 [MeV] 
+ParallelTTracker {+0}> 16.02.43 Step     51 at   12.882 [mm] t=  6.920e-11 [s] E=    1.165 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.49 Step     52 at   13.167 [mm] t=  7.020e-11 [s] E=    1.188 [MeV] 
+ParallelTTracker {+0}> 16.02.43 Step     52 at   13.168 [mm] t=  7.020e-11 [s] E=    1.188 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.50 Step     53 at   13.453 [mm] t=  7.120e-11 [s] E=    1.210 [MeV] 
+ParallelTTracker {+0}> 16.02.44 Step     53 at   13.454 [mm] t=  7.120e-11 [s] E=    1.210 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.50 Step     54 at   13.739 [mm] t=  7.220e-11 [s] E=    1.233 [MeV] 
+ParallelTTracker {+0}> 16.02.44 Step     54 at   13.740 [mm] t=  7.220e-11 [s] E=    1.233 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.51 Step     55 at   14.026 [mm] t=  7.320e-11 [s] E=    1.254 [MeV] 
+ParallelTTracker {+0}> 16.02.45 Step     55 at   14.027 [mm] t=  7.320e-11 [s] E=    1.254 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.51 Step     56 at   14.313 [mm] t=  7.420e-11 [s] E=    1.276 [MeV] 
+ParallelTTracker {+0}> 16.02.45 Step     56 at   14.314 [mm] t=  7.420e-11 [s] E=    1.276 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.52 Step     57 at   14.600 [mm] t=  7.520e-11 [s] E=    1.297 [MeV] 
+ParallelTTracker {+0}> 16.02.46 Step     57 at   14.601 [mm] t=  7.520e-11 [s] E=    1.297 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.52 Step     58 at   14.888 [mm] t=  7.620e-11 [s] E=    1.318 [MeV] 
+ParallelTTracker {+0}> 16.02.47 Step     58 at   14.889 [mm] t=  7.620e-11 [s] E=    1.318 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.53 Step     59 at   15.176 [mm] t=  7.720e-11 [s] E=    1.338 [MeV] 
+ParallelTTracker {+0}> 16.02.47 Step     59 at   15.176 [mm] t=  7.720e-11 [s] E=    1.338 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.53 Step     60 at   15.464 [mm] t=  7.820e-11 [s] E=    1.358 [MeV] 
+ParallelTTracker {+0}> 16.02.48 Step     60 at   15.465 [mm] t=  7.820e-11 [s] E=    1.358 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.54 Step     61 at   15.752 [mm] t=  7.920e-11 [s] E=    1.377 [MeV] 
+ParallelTTracker {+0}> 16.02.48 Step     61 at   15.753 [mm] t=  7.920e-11 [s] E=    1.377 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.54 Step     62 at   16.041 [mm] t=  8.020e-11 [s] E=    1.396 [MeV] 
+ParallelTTracker {+0}> 16.02.49 Step     62 at   16.042 [mm] t=  8.020e-11 [s] E=    1.396 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.55 Step     63 at   16.330 [mm] t=  8.120e-11 [s] E=    1.415 [MeV] 
+ParallelTTracker {+0}> 16.02.49 Step     63 at   16.331 [mm] t=  8.120e-11 [s] E=    1.415 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.55 Step     64 at   16.619 [mm] t=  8.220e-11 [s] E=    1.433 [MeV] 
+ParallelTTracker {+0}> 16.02.50 Step     64 at   16.620 [mm] t=  8.220e-11 [s] E=    1.433 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.56 Step     65 at   16.908 [mm] t=  8.320e-11 [s] E=    1.450 [MeV] 
+ParallelTTracker {+0}> 16.02.50 Step     65 at   16.909 [mm] t=  8.320e-11 [s] E=    1.450 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.56 Step     66 at   17.198 [mm] t=  8.420e-11 [s] E=    1.468 [MeV] 
+ParallelTTracker {+0}> 16.02.51 Step     66 at   17.198 [mm] t=  8.420e-11 [s] E=    1.468 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.57 Step     67 at   17.487 [mm] t=  8.520e-11 [s] E=    1.484 [MeV] 
+ParallelTTracker {+0}> 16.02.51 Step     67 at   17.488 [mm] t=  8.520e-11 [s] E=    1.484 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.57 Step     68 at   17.777 [mm] t=  8.620e-11 [s] E=    1.501 [MeV] 
+ParallelTTracker {+0}> 16.02.52 Step     68 at   17.778 [mm] t=  8.620e-11 [s] E=    1.501 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.58 Step     69 at   18.067 [mm] t=  8.720e-11 [s] E=    1.516 [MeV] 
+ParallelTTracker {+0}> 16.02.52 Step     69 at   18.068 [mm] t=  8.720e-11 [s] E=    1.516 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.58 Step     70 at   18.357 [mm] t=  8.820e-11 [s] E=    1.532 [MeV] 
+ParallelTTracker {+0}> 16.02.53 Step     70 at   18.358 [mm] t=  8.820e-11 [s] E=    1.532 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.59 Step     71 at   18.647 [mm] t=  8.920e-11 [s] E=    1.547 [MeV] 
+ParallelTTracker {+0}> 16.02.54 Step     71 at   18.648 [mm] t=  8.920e-11 [s] E=    1.547 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.03.59 Step     72 at   18.938 [mm] t=  9.020e-11 [s] E=    1.561 [MeV] 
+ParallelTTracker {+0}> 16.02.54 Step     72 at   18.939 [mm] t=  9.020e-11 [s] E=    1.561 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.00 Step     73 at   19.228 [mm] t=  9.120e-11 [s] E=    1.575 [MeV] 
+ParallelTTracker {+0}> 16.02.55 Step     73 at   19.229 [mm] t=  9.120e-11 [s] E=    1.575 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.00 Step     74 at   19.519 [mm] t=  9.220e-11 [s] E=    1.588 [MeV] 
+ParallelTTracker {+0}> 16.02.55 Step     74 at   19.520 [mm] t=  9.220e-11 [s] E=    1.588 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.01 Step     75 at   19.810 [mm] t=  9.320e-11 [s] E=    1.601 [MeV] 
+ParallelTTracker {+0}> 16.02.56 Step     75 at   19.811 [mm] t=  9.320e-11 [s] E=    1.601 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.01 Step     76 at   20.101 [mm] t=  9.420e-11 [s] E=    1.613 [MeV] 
+ParallelTTracker {+0}> 16.02.56 Step     76 at   20.102 [mm] t=  9.420e-11 [s] E=    1.613 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.01 Step     77 at   20.392 [mm] t=  9.520e-11 [s] E=    1.625 [MeV] 
+ParallelTTracker {+0}> 16.02.57 Step     77 at   20.393 [mm] t=  9.520e-11 [s] E=    1.625 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.02 Step     78 at   20.683 [mm] t=  9.620e-11 [s] E=    1.636 [MeV] 
+ParallelTTracker {+0}> 16.02.57 Step     78 at   20.684 [mm] t=  9.620e-11 [s] E=    1.636 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.02 Step     79 at   20.974 [mm] t=  9.720e-11 [s] E=    1.647 [MeV] 
+ParallelTTracker {+0}> 16.02.58 Step     79 at   20.975 [mm] t=  9.720e-11 [s] E=    1.647 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.03 Step     80 at   21.265 [mm] t=  9.820e-11 [s] E=    1.657 [MeV] 
+ParallelTTracker {+0}> 16.02.58 Step     80 at   21.266 [mm] t=  9.820e-11 [s] E=    1.657 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.03 Step     81 at   21.557 [mm] t=  9.920e-11 [s] E=    1.667 [MeV] 
+ParallelTTracker {+0}> 16.02.59 Step     81 at   21.557 [mm] t=  9.920e-11 [s] E=    1.667 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.04 Step     82 at   21.848 [mm] t=  1.002e-10 [s] E=    1.676 [MeV] 
+ParallelTTracker {+0}> 16.02.59 Step     82 at   21.849 [mm] t=  1.002e-10 [s] E=    1.676 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.04 Step     83 at   22.140 [mm] t=  1.012e-10 [s] E=    1.685 [MeV] 
+ParallelTTracker {+0}> 16.03.00 Step     83 at   22.140 [mm] t=  1.012e-10 [s] E=    1.685 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.05 Step     84 at   22.431 [mm] t=  1.022e-10 [s] E=    1.693 [MeV] 
+ParallelTTracker {+0}> 16.03.01 Step     84 at   22.432 [mm] t=  1.022e-10 [s] E=    1.693 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.05 Step     85 at   22.723 [mm] t=  1.032e-10 [s] E=    1.701 [MeV] 
+ParallelTTracker {+0}> 16.03.01 Step     85 at   22.724 [mm] t=  1.032e-10 [s] E=    1.701 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.06 Step     86 at   23.014 [mm] t=  1.042e-10 [s] E=    1.708 [MeV] 
+ParallelTTracker {+0}> 16.03.02 Step     86 at   23.015 [mm] t=  1.042e-10 [s] E=    1.708 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.06 Step     87 at   23.306 [mm] t=  1.052e-10 [s] E=    1.715 [MeV] 
+ParallelTTracker {+0}> 16.03.02 Step     87 at   23.307 [mm] t=  1.052e-10 [s] E=    1.715 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.07 Step     88 at   23.598 [mm] t=  1.062e-10 [s] E=    1.722 [MeV] 
+ParallelTTracker {+0}> 16.03.03 Step     88 at   23.599 [mm] t=  1.062e-10 [s] E=    1.722 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.07 Step     89 at   23.890 [mm] t=  1.072e-10 [s] E=    1.728 [MeV] 
+ParallelTTracker {+0}> 16.03.03 Step     89 at   23.891 [mm] t=  1.072e-10 [s] E=    1.728 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.08 Step     90 at   24.182 [mm] t=  1.082e-10 [s] E=    1.733 [MeV] 
+ParallelTTracker {+0}> 16.03.04 Step     90 at   24.182 [mm] t=  1.082e-10 [s] E=    1.733 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.08 Step     91 at   24.473 [mm] t=  1.092e-10 [s] E=    1.738 [MeV] 
+ParallelTTracker {+0}> 16.03.04 Step     91 at   24.474 [mm] t=  1.092e-10 [s] E=    1.738 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.09 Step     92 at   24.765 [mm] t=  1.102e-10 [s] E=    1.743 [MeV] 
+ParallelTTracker {+0}> 16.03.05 Step     92 at   24.766 [mm] t=  1.102e-10 [s] E=    1.743 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.09 Step     93 at   25.057 [mm] t=  1.112e-10 [s] E=    1.747 [MeV] 
+ParallelTTracker {+0}> 16.03.05 Step     93 at   25.058 [mm] t=  1.112e-10 [s] E=    1.747 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.10 Step     94 at   25.349 [mm] t=  1.122e-10 [s] E=    1.751 [MeV] 
+ParallelTTracker {+0}> 16.03.06 Step     94 at   25.350 [mm] t=  1.122e-10 [s] E=    1.751 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.10 Step     95 at   25.641 [mm] t=  1.132e-10 [s] E=    1.755 [MeV] 
+ParallelTTracker {+0}> 16.03.06 Step     95 at   25.642 [mm] t=  1.132e-10 [s] E=    1.755 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.11 Step     96 at   25.933 [mm] t=  1.142e-10 [s] E=    1.758 [MeV] 
+ParallelTTracker {+0}> 16.03.07 Step     96 at   25.934 [mm] t=  1.142e-10 [s] E=    1.758 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.11 Step     97 at   26.225 [mm] t=  1.152e-10 [s] E=    1.761 [MeV] 
+ParallelTTracker {+0}> 16.03.08 Step     97 at   26.226 [mm] t=  1.152e-10 [s] E=    1.761 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.12 Step     98 at   26.518 [mm] t=  1.162e-10 [s] E=    1.763 [MeV] 
+ParallelTTracker {+0}> 16.03.08 Step     98 at   26.518 [mm] t=  1.162e-10 [s] E=    1.763 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.12 Step     99 at   26.810 [mm] t=  1.172e-10 [s] E=    1.765 [MeV] 
+ParallelTTracker {+0}> 16.03.09 Step     99 at   26.810 [mm] t=  1.172e-10 [s] E=    1.765 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.13 Step    100 at   27.102 [mm] t=  1.182e-10 [s] E=    1.767 [MeV] 
-OPAL {+0}> * Wrote beam phase space.
-OPAL {+0}> 
-OPAL {+0}> * ************** B U N C H ********************************************************* 
-OPAL {+0}> * NP              =   20000
-OPAL {+0}> * Qtot            =    2.00000e-01 [nC]       Qi    =  1.00000e-05 [nC]
-OPAL {+0}> * Ekin            =    1.76724e+00 [MeV]      dEkin =  3.79917e-02 [MeV]
-OPAL {+0}> * rmax            = (  9.82156e-04 ,  9.87559e-04 ,  3.02497e-02 ) [m]
-OPAL {+0}> * rmin            = ( -1.00487e-03 , -9.96832e-04 ,  2.34512e-02 ) [m]
-OPAL {+0}> * rms beam size   = (  4.26474e-04 ,  4.25966e-04 ,  1.12899e-03 ) [m]
-OPAL {+0}> * rms momenta     = (  4.81380e-02 ,  4.81383e-02 ,  7.62917e-02 ) [beta gamma]
-OPAL {+0}> * mean position   = ( -1.90360e-06 ,  5.55346e-07 ,  2.71017e-02 ) [m]
-OPAL {+0}> * mean momenta    = ( -1.50058e-04 ,  2.92016e-05 ,  4.34424e+00 ) [beta gamma]
-OPAL {+0}> * rms emittance   = (  2.79941e-07 ,  2.76723e-07 ,  3.63136e-06 ) (not normalized)
-OPAL {+0}> * rms correlation = (  9.98243e-01 ,  9.98280e-01 ,  9.83080e-01 )
-OPAL {+0}> * hr              = (  6.40977e-05 ,  6.40126e-05 ,  1.07913e-04 ) [m]
-OPAL {+0}> * dh              =    1.00000e-02 [m]
-OPAL {+0}> * t               =    1.18199e-10 [s]        dT    =  1.00000e-12 [s]
-OPAL {+0}> * spos            =    2.71017e-02 [m]
-OPAL {+0}> * ********************************************************************************** 
-OPAL {+0}> 
+ParallelTTracker {+0}> 16.03.09 Step    100 at   27.103 [mm] t=  1.182e-10 [s] E=    1.767 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.13 Step    101 at   27.394 [mm] t=  1.192e-10 [s] E=    1.769 [MeV] 
+ParallelTTracker {+0}> 16.03.10 Step    101 at   27.395 [mm] t=  1.192e-10 [s] E=    1.769 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.14 Step    102 at   27.686 [mm] t=  1.202e-10 [s] E=    1.770 [MeV] 
+ParallelTTracker {+0}> 16.03.10 Step    102 at   27.687 [mm] t=  1.202e-10 [s] E=    1.770 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.14 Step    103 at   27.978 [mm] t=  1.212e-10 [s] E=    1.771 [MeV] 
+ParallelTTracker {+0}> 16.03.11 Step    103 at   27.979 [mm] t=  1.212e-10 [s] E=    1.771 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.15 Step    104 at   28.270 [mm] t=  1.222e-10 [s] E=    1.772 [MeV] 
+ParallelTTracker {+0}> 16.03.11 Step    104 at   28.271 [mm] t=  1.222e-10 [s] E=    1.772 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.15 Step    105 at   28.562 [mm] t=  1.232e-10 [s] E=    1.773 [MeV] 
+ParallelTTracker {+0}> 16.03.12 Step    105 at   28.563 [mm] t=  1.232e-10 [s] E=    1.773 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.16 Step    106 at   28.855 [mm] t=  1.242e-10 [s] E=    1.773 [MeV] 
+ParallelTTracker {+0}> 16.03.12 Step    106 at   28.855 [mm] t=  1.242e-10 [s] E=    1.773 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.16 Step    107 at   29.147 [mm] t=  1.252e-10 [s] E=    1.774 [MeV] 
+ParallelTTracker {+0}> 16.03.13 Step    107 at   29.148 [mm] t=  1.252e-10 [s] E=    1.774 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.17 Step    108 at   29.439 [mm] t=  1.262e-10 [s] E=    1.774 [MeV] 
+ParallelTTracker {+0}> 16.03.14 Step    108 at   29.440 [mm] t=  1.262e-10 [s] E=    1.774 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.17 Step    109 at   29.731 [mm] t=  1.272e-10 [s] E=    1.774 [MeV] 
+ParallelTTracker {+0}> 16.03.14 Step    109 at   29.732 [mm] t=  1.272e-10 [s] E=    1.774 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.18 Step    110 at   30.023 [mm] t=  1.282e-10 [s] E=    1.774 [MeV] 
+ParallelTTracker {+0}> 16.03.15 Step    110 at   30.024 [mm] t=  1.282e-10 [s] E=    1.774 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.18 Step    111 at   30.315 [mm] t=  1.292e-10 [s] E=    1.774 [MeV] 
+ParallelTTracker {+0}> 16.03.15 Step    111 at   30.316 [mm] t=  1.292e-10 [s] E=    1.774 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.19 Step    112 at   30.607 [mm] t=  1.302e-10 [s] E=    1.773 [MeV] 
+ParallelTTracker {+0}> 16.03.16 Step    112 at   30.608 [mm] t=  1.302e-10 [s] E=    1.773 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.19 Step    113 at   30.900 [mm] t=  1.312e-10 [s] E=    1.773 [MeV] 
+ParallelTTracker {+0}> 16.03.16 Step    113 at   30.901 [mm] t=  1.312e-10 [s] E=    1.773 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.20 Step    114 at   31.192 [mm] t=  1.322e-10 [s] E=    1.773 [MeV] 
+ParallelTTracker {+0}> 16.03.17 Step    114 at   31.193 [mm] t=  1.322e-10 [s] E=    1.773 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.20 Step    115 at   31.484 [mm] t=  1.332e-10 [s] E=    1.773 [MeV] 
+ParallelTTracker {+0}> 16.03.17 Step    115 at   31.485 [mm] t=  1.332e-10 [s] E=    1.773 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.21 Step    116 at   31.776 [mm] t=  1.342e-10 [s] E=    1.773 [MeV] 
+ParallelTTracker {+0}> 16.03.18 Step    116 at   31.777 [mm] t=  1.342e-10 [s] E=    1.773 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.21 Step    117 at   32.068 [mm] t=  1.352e-10 [s] E=    1.773 [MeV] 
+ParallelTTracker {+0}> 16.03.18 Step    117 at   32.069 [mm] t=  1.352e-10 [s] E=    1.773 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.22 Step    118 at   32.360 [mm] t=  1.362e-10 [s] E=    1.773 [MeV] 
+ParallelTTracker {+0}> 16.03.19 Step    118 at   32.361 [mm] t=  1.362e-10 [s] E=    1.773 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.22 Step    119 at   32.652 [mm] t=  1.372e-10 [s] E=    1.773 [MeV] 
+ParallelTTracker {+0}> 16.03.19 Step    119 at   32.653 [mm] t=  1.372e-10 [s] E=    1.773 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.23 Step    120 at   32.945 [mm] t=  1.382e-10 [s] E=    1.773 [MeV] 
+ParallelTTracker {+0}> 16.03.20 Step    120 at   32.946 [mm] t=  1.382e-10 [s] E=    1.773 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.23 Step    121 at   33.237 [mm] t=  1.392e-10 [s] E=    1.773 [MeV] 
+ParallelTTracker {+0}> 16.03.21 Step    121 at   33.238 [mm] t=  1.392e-10 [s] E=    1.773 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.24 Step    122 at   33.529 [mm] t=  1.402e-10 [s] E=    1.774 [MeV] 
+ParallelTTracker {+0}> 16.03.21 Step    122 at   33.530 [mm] t=  1.402e-10 [s] E=    1.774 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.24 Step    123 at   33.821 [mm] t=  1.412e-10 [s] E=    1.775 [MeV] 
+ParallelTTracker {+0}> 16.03.22 Step    123 at   33.822 [mm] t=  1.412e-10 [s] E=    1.775 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.25 Step    124 at   34.113 [mm] t=  1.422e-10 [s] E=    1.776 [MeV] 
+ParallelTTracker {+0}> 16.03.22 Step    124 at   34.114 [mm] t=  1.422e-10 [s] E=    1.776 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.25 Step    125 at   34.405 [mm] t=  1.432e-10 [s] E=    1.777 [MeV] 
+ParallelTTracker {+0}> 16.03.23 Step    125 at   34.406 [mm] t=  1.432e-10 [s] E=    1.777 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.26 Step    126 at   34.698 [mm] t=  1.442e-10 [s] E=    1.778 [MeV] 
+ParallelTTracker {+0}> 16.03.23 Step    126 at   34.699 [mm] t=  1.442e-10 [s] E=    1.778 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.26 Step    127 at   34.990 [mm] t=  1.452e-10 [s] E=    1.780 [MeV] 
+ParallelTTracker {+0}> 16.03.24 Step    127 at   34.991 [mm] t=  1.452e-10 [s] E=    1.780 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.26 Step    128 at   35.282 [mm] t=  1.462e-10 [s] E=    1.782 [MeV] 
+ParallelTTracker {+0}> 16.03.24 Step    128 at   35.283 [mm] t=  1.462e-10 [s] E=    1.782 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.27 Step    129 at   35.574 [mm] t=  1.472e-10 [s] E=    1.784 [MeV] 
+ParallelTTracker {+0}> 16.03.25 Step    129 at   35.575 [mm] t=  1.472e-10 [s] E=    1.784 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.27 Step    130 at   35.866 [mm] t=  1.482e-10 [s] E=    1.787 [MeV] 
+ParallelTTracker {+0}> 16.03.25 Step    130 at   35.867 [mm] t=  1.482e-10 [s] E=    1.787 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.28 Step    131 at   36.159 [mm] t=  1.492e-10 [s] E=    1.790 [MeV] 
+ParallelTTracker {+0}> 16.03.26 Step    131 at   36.160 [mm] t=  1.492e-10 [s] E=    1.790 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.28 Step    132 at   36.451 [mm] t=  1.502e-10 [s] E=    1.793 [MeV] 
+ParallelTTracker {+0}> 16.03.26 Step    132 at   36.452 [mm] t=  1.502e-10 [s] E=    1.793 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.29 Step    133 at   36.743 [mm] t=  1.512e-10 [s] E=    1.797 [MeV] 
+ParallelTTracker {+0}> 16.03.27 Step    133 at   36.744 [mm] t=  1.512e-10 [s] E=    1.797 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.29 Step    134 at   37.036 [mm] t=  1.522e-10 [s] E=    1.801 [MeV] 
+ParallelTTracker {+0}> 16.03.28 Step    134 at   37.037 [mm] t=  1.522e-10 [s] E=    1.801 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.30 Step    135 at   37.328 [mm] t=  1.532e-10 [s] E=    1.806 [MeV] 
+ParallelTTracker {+0}> 16.03.28 Step    135 at   37.329 [mm] t=  1.532e-10 [s] E=    1.806 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.30 Step    136 at   37.620 [mm] t=  1.542e-10 [s] E=    1.811 [MeV] 
+ParallelTTracker {+0}> 16.03.29 Step    136 at   37.621 [mm] t=  1.542e-10 [s] E=    1.811 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.31 Step    137 at   37.913 [mm] t=  1.552e-10 [s] E=    1.816 [MeV] 
+ParallelTTracker {+0}> 16.03.29 Step    137 at   37.914 [mm] t=  1.552e-10 [s] E=    1.816 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.31 Step    138 at   38.205 [mm] t=  1.562e-10 [s] E=    1.822 [MeV] 
+ParallelTTracker {+0}> 16.03.30 Step    138 at   38.206 [mm] t=  1.562e-10 [s] E=    1.822 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.32 Step    139 at   38.498 [mm] t=  1.572e-10 [s] E=    1.829 [MeV] 
+ParallelTTracker {+0}> 16.03.30 Step    139 at   38.499 [mm] t=  1.572e-10 [s] E=    1.829 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.32 Step    140 at   38.790 [mm] t=  1.582e-10 [s] E=    1.836 [MeV] 
+ParallelTTracker {+0}> 16.03.31 Step    140 at   38.791 [mm] t=  1.582e-10 [s] E=    1.836 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.33 Step    141 at   39.083 [mm] t=  1.592e-10 [s] E=    1.843 [MeV] 
+ParallelTTracker {+0}> 16.03.31 Step    141 at   39.084 [mm] t=  1.592e-10 [s] E=    1.843 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.33 Step    142 at   39.376 [mm] t=  1.602e-10 [s] E=    1.851 [MeV] 
+ParallelTTracker {+0}> 16.03.32 Step    142 at   39.377 [mm] t=  1.602e-10 [s] E=    1.851 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.34 Step    143 at   39.668 [mm] t=  1.612e-10 [s] E=    1.859 [MeV] 
+ParallelTTracker {+0}> 16.03.32 Step    143 at   39.669 [mm] t=  1.612e-10 [s] E=    1.859 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.34 Step    144 at   39.961 [mm] t=  1.622e-10 [s] E=    1.868 [MeV] 
+ParallelTTracker {+0}> 16.03.33 Step    144 at   39.962 [mm] t=  1.622e-10 [s] E=    1.868 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.35 Step    145 at   40.254 [mm] t=  1.632e-10 [s] E=    1.878 [MeV] 
+ParallelTTracker {+0}> 16.03.33 Step    145 at   40.255 [mm] t=  1.632e-10 [s] E=    1.878 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.35 Step    146 at   40.547 [mm] t=  1.642e-10 [s] E=    1.888 [MeV] 
+ParallelTTracker {+0}> 16.03.34 Step    146 at   40.548 [mm] t=  1.642e-10 [s] E=    1.888 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.36 Step    147 at   40.840 [mm] t=  1.652e-10 [s] E=    1.898 [MeV] 
+ParallelTTracker {+0}> 16.03.35 Step    147 at   40.841 [mm] t=  1.652e-10 [s] E=    1.898 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.36 Step    148 at   41.133 [mm] t=  1.662e-10 [s] E=    1.909 [MeV] 
+ParallelTTracker {+0}> 16.03.35 Step    148 at   41.134 [mm] t=  1.662e-10 [s] E=    1.909 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.37 Step    149 at   41.426 [mm] t=  1.672e-10 [s] E=    1.921 [MeV] 
+ParallelTTracker {+0}> 16.03.36 Step    149 at   41.427 [mm] t=  1.672e-10 [s] E=    1.921 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.37 Step    150 at   41.719 [mm] t=  1.682e-10 [s] E=    1.933 [MeV] 
-OPAL {+0}> * Wrote beam phase space.
-OPAL {+0}> 
-OPAL {+0}> * ************** B U N C H ********************************************************* 
-OPAL {+0}> * NP              =   20000
-OPAL {+0}> * Qtot            =    2.00000e-01 [nC]       Qi    =  1.00000e-05 [nC]
-OPAL {+0}> * Ekin            =    1.93319e+00 [MeV]      dEkin =  4.97967e-02 [MeV]
-OPAL {+0}> * rmax            = (  1.34280e-03 ,  1.34736e-03 ,  4.48835e-02 ) [m]
-OPAL {+0}> * rmin            = ( -1.37295e-03 , -1.36208e-03 ,  3.80210e-02 ) [m]
-OPAL {+0}> * rms beam size   = (  5.76249e-04 ,  5.75750e-04 ,  1.14080e-03 ) [m]
-OPAL {+0}> * rms momenta     = (  2.88045e-02 ,  2.88205e-02 ,  9.96520e-02 ) [beta gamma]
-OPAL {+0}> * mean position   = ( -2.34384e-06 ,  6.54724e-07 ,  4.17187e-02 ) [m]
-OPAL {+0}> * mean momenta    = ( -6.15474e-05 ,  1.18393e-05 ,  4.67724e+00 ) [beta gamma]
-OPAL {+0}> * rms emittance   = (  3.17075e-07 ,  3.14860e-07 ,  3.85240e-06 ) (not normalized)
-OPAL {+0}> * rms correlation = (  9.96000e-01 ,  9.96054e-01 ,  9.87358e-01 )
-OPAL {+0}> * hr              = (  8.76046e-05 ,  8.74013e-05 ,  1.08929e-04 ) [m]
-OPAL {+0}> * dh              =    1.00000e-02 [m]
-OPAL {+0}> * t               =    1.68199e-10 [s]        dT    =  1.00000e-12 [s]
-OPAL {+0}> * spos            =    4.17187e-02 [m]
-OPAL {+0}> * ********************************************************************************** 
-OPAL {+0}> 
+ParallelTTracker {+0}> 16.03.36 Step    150 at   41.720 [mm] t=  1.682e-10 [s] E=    1.933 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.38 Step    151 at   42.012 [mm] t=  1.692e-10 [s] E=    1.946 [MeV] 
+ParallelTTracker {+0}> 16.03.37 Step    151 at   42.013 [mm] t=  1.692e-10 [s] E=    1.946 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.38 Step    152 at   42.305 [mm] t=  1.702e-10 [s] E=    1.959 [MeV] 
+ParallelTTracker {+0}> 16.03.37 Step    152 at   42.306 [mm] t=  1.702e-10 [s] E=    1.959 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.39 Step    153 at   42.599 [mm] t=  1.712e-10 [s] E=    1.973 [MeV] 
+ParallelTTracker {+0}> 16.03.38 Step    153 at   42.599 [mm] t=  1.712e-10 [s] E=    1.973 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.39 Step    154 at   42.892 [mm] t=  1.722e-10 [s] E=    1.988 [MeV] 
+ParallelTTracker {+0}> 16.03.38 Step    154 at   42.893 [mm] t=  1.722e-10 [s] E=    1.987 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.40 Step    155 at   43.185 [mm] t=  1.732e-10 [s] E=    2.002 [MeV] 
+ParallelTTracker {+0}> 16.03.39 Step    155 at   43.186 [mm] t=  1.732e-10 [s] E=    2.002 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.40 Step    156 at   43.479 [mm] t=  1.742e-10 [s] E=    2.018 [MeV] 
+ParallelTTracker {+0}> 16.03.39 Step    156 at   43.480 [mm] t=  1.742e-10 [s] E=    2.018 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.41 Step    157 at   43.773 [mm] t=  1.752e-10 [s] E=    2.034 [MeV] 
+ParallelTTracker {+0}> 16.03.40 Step    157 at   43.774 [mm] t=  1.752e-10 [s] E=    2.034 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.41 Step    158 at   44.066 [mm] t=  1.762e-10 [s] E=    2.051 [MeV] 
+ParallelTTracker {+0}> 16.03.40 Step    158 at   44.067 [mm] t=  1.762e-10 [s] E=    2.051 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.42 Step    159 at   44.360 [mm] t=  1.772e-10 [s] E=    2.068 [MeV] 
+ParallelTTracker {+0}> 16.03.41 Step    159 at   44.361 [mm] t=  1.772e-10 [s] E=    2.068 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.42 Step    160 at   44.654 [mm] t=  1.782e-10 [s] E=    2.086 [MeV] 
+ParallelTTracker {+0}> 16.03.42 Step    160 at   44.655 [mm] t=  1.782e-10 [s] E=    2.086 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.43 Step    161 at   44.948 [mm] t=  1.792e-10 [s] E=    2.104 [MeV] 
+ParallelTTracker {+0}> 16.03.42 Step    161 at   44.949 [mm] t=  1.792e-10 [s] E=    2.104 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.43 Step    162 at   45.242 [mm] t=  1.802e-10 [s] E=    2.123 [MeV] 
+ParallelTTracker {+0}> 16.03.43 Step    162 at   45.243 [mm] t=  1.802e-10 [s] E=    2.123 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.44 Step    163 at   45.536 [mm] t=  1.812e-10 [s] E=    2.142 [MeV] 
+ParallelTTracker {+0}> 16.03.43 Step    163 at   45.537 [mm] t=  1.812e-10 [s] E=    2.142 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.44 Step    164 at   45.830 [mm] t=  1.822e-10 [s] E=    2.162 [MeV] 
+ParallelTTracker {+0}> 16.03.44 Step    164 at   45.831 [mm] t=  1.822e-10 [s] E=    2.162 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.45 Step    165 at   46.125 [mm] t=  1.832e-10 [s] E=    2.182 [MeV] 
+ParallelTTracker {+0}> 16.03.44 Step    165 at   46.126 [mm] t=  1.832e-10 [s] E=    2.182 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.45 Step    166 at   46.419 [mm] t=  1.842e-10 [s] E=    2.203 [MeV] 
+ParallelTTracker {+0}> 16.03.45 Step    166 at   46.420 [mm] t=  1.842e-10 [s] E=    2.203 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.46 Step    167 at   46.713 [mm] t=  1.852e-10 [s] E=    2.225 [MeV] 
+ParallelTTracker {+0}> 16.03.45 Step    167 at   46.714 [mm] t=  1.852e-10 [s] E=    2.225 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.46 Step    168 at   47.008 [mm] t=  1.862e-10 [s] E=    2.246 [MeV] 
+ParallelTTracker {+0}> 16.03.46 Step    168 at   47.009 [mm] t=  1.862e-10 [s] E=    2.246 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.47 Step    169 at   47.303 [mm] t=  1.872e-10 [s] E=    2.269 [MeV] 
+ParallelTTracker {+0}> 16.03.46 Step    169 at   47.304 [mm] t=  1.872e-10 [s] E=    2.269 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.47 Step    170 at   47.597 [mm] t=  1.882e-10 [s] E=    2.291 [MeV] 
+ParallelTTracker {+0}> 16.03.47 Step    170 at   47.598 [mm] t=  1.882e-10 [s] E=    2.291 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.48 Step    171 at   47.892 [mm] t=  1.892e-10 [s] E=    2.315 [MeV] 
+ParallelTTracker {+0}> 16.03.48 Step    171 at   47.893 [mm] t=  1.892e-10 [s] E=    2.315 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.48 Step    172 at   48.187 [mm] t=  1.902e-10 [s] E=    2.338 [MeV] 
+ParallelTTracker {+0}> 16.03.48 Step    172 at   48.188 [mm] t=  1.902e-10 [s] E=    2.338 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.49 Step    173 at   48.482 [mm] t=  1.912e-10 [s] E=    2.362 [MeV] 
+ParallelTTracker {+0}> 16.03.49 Step    173 at   48.483 [mm] t=  1.912e-10 [s] E=    2.362 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.49 Step    174 at   48.777 [mm] t=  1.922e-10 [s] E=    2.387 [MeV] 
+ParallelTTracker {+0}> 16.03.49 Step    174 at   48.778 [mm] t=  1.922e-10 [s] E=    2.387 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.50 Step    175 at   49.072 [mm] t=  1.932e-10 [s] E=    2.412 [MeV] 
+ParallelTTracker {+0}> 16.03.50 Step    175 at   49.073 [mm] t=  1.932e-10 [s] E=    2.412 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.50 Step    176 at   49.367 [mm] t=  1.942e-10 [s] E=    2.437 [MeV] 
+ParallelTTracker {+0}> 16.03.50 Step    176 at   49.368 [mm] t=  1.942e-10 [s] E=    2.437 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.51 Step    177 at   49.663 [mm] t=  1.952e-10 [s] E=    2.463 [MeV] 
+ParallelTTracker {+0}> 16.03.51 Step    177 at   49.664 [mm] t=  1.952e-10 [s] E=    2.463 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.51 Step    178 at   49.958 [mm] t=  1.962e-10 [s] E=    2.489 [MeV] 
+ParallelTTracker {+0}> 16.03.51 Step    178 at   49.959 [mm] t=  1.962e-10 [s] E=    2.489 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.51 Step    179 at   50.253 [mm] t=  1.972e-10 [s] E=    2.515 [MeV] 
+ParallelTTracker {+0}> 16.03.52 Step    179 at   50.254 [mm] t=  1.972e-10 [s] E=    2.515 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.52 Step    180 at   50.549 [mm] t=  1.982e-10 [s] E=    2.542 [MeV] 
+ParallelTTracker {+0}> 16.03.52 Step    180 at   50.550 [mm] t=  1.982e-10 [s] E=    2.542 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.52 Step    181 at   50.845 [mm] t=  1.992e-10 [s] E=    2.569 [MeV] 
+ParallelTTracker {+0}> 16.03.53 Step    181 at   50.846 [mm] t=  1.992e-10 [s] E=    2.569 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.53 Step    182 at   51.140 [mm] t=  2.002e-10 [s] E=    2.596 [MeV] 
+ParallelTTracker {+0}> 16.03.53 Step    182 at   51.141 [mm] t=  2.002e-10 [s] E=    2.596 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.53 Step    183 at   51.436 [mm] t=  2.012e-10 [s] E=    2.623 [MeV] 
+ParallelTTracker {+0}> 16.03.54 Step    183 at   51.437 [mm] t=  2.012e-10 [s] E=    2.623 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.54 Step    184 at   51.732 [mm] t=  2.022e-10 [s] E=    2.651 [MeV] 
+ParallelTTracker {+0}> 16.03.55 Step    184 at   51.733 [mm] t=  2.022e-10 [s] E=    2.651 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.54 Step    185 at   52.028 [mm] t=  2.032e-10 [s] E=    2.679 [MeV] 
+ParallelTTracker {+0}> 16.03.55 Step    185 at   52.029 [mm] t=  2.032e-10 [s] E=    2.679 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.55 Step    186 at   52.324 [mm] t=  2.042e-10 [s] E=    2.707 [MeV] 
+ParallelTTracker {+0}> 16.03.56 Step    186 at   52.325 [mm] t=  2.042e-10 [s] E=    2.707 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.55 Step    187 at   52.620 [mm] t=  2.052e-10 [s] E=    2.736 [MeV] 
+ParallelTTracker {+0}> 16.03.56 Step    187 at   52.621 [mm] t=  2.052e-10 [s] E=    2.736 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.56 Step    188 at   52.916 [mm] t=  2.062e-10 [s] E=    2.764 [MeV] 
+ParallelTTracker {+0}> 16.03.57 Step    188 at   52.917 [mm] t=  2.062e-10 [s] E=    2.764 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.56 Step    189 at   53.212 [mm] t=  2.072e-10 [s] E=    2.793 [MeV] 
+ParallelTTracker {+0}> 16.03.57 Step    189 at   53.213 [mm] t=  2.072e-10 [s] E=    2.793 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.57 Step    190 at   53.508 [mm] t=  2.082e-10 [s] E=    2.822 [MeV] 
+ParallelTTracker {+0}> 16.03.58 Step    190 at   53.509 [mm] t=  2.082e-10 [s] E=    2.822 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.57 Step    191 at   53.804 [mm] t=  2.092e-10 [s] E=    2.851 [MeV] 
+ParallelTTracker {+0}> 16.03.58 Step    191 at   53.805 [mm] t=  2.092e-10 [s] E=    2.851 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.58 Step    192 at   54.101 [mm] t=  2.102e-10 [s] E=    2.880 [MeV] 
+ParallelTTracker {+0}> 16.03.59 Step    192 at   54.102 [mm] t=  2.102e-10 [s] E=    2.880 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.58 Step    193 at   54.397 [mm] t=  2.112e-10 [s] E=    2.909 [MeV] 
+ParallelTTracker {+0}> 16.03.59 Step    193 at   54.398 [mm] t=  2.112e-10 [s] E=    2.909 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.59 Step    194 at   54.693 [mm] t=  2.122e-10 [s] E=    2.938 [MeV] 
+ParallelTTracker {+0}> 16.04.00 Step    194 at   54.694 [mm] t=  2.122e-10 [s] E=    2.938 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.04.59 Step    195 at   54.990 [mm] t=  2.132e-10 [s] E=    2.967 [MeV] 
+ParallelTTracker {+0}> 16.04.00 Step    195 at   54.991 [mm] t=  2.132e-10 [s] E=    2.967 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.00 Step    196 at   55.287 [mm] t=  2.142e-10 [s] E=    2.997 [MeV] 
+ParallelTTracker {+0}> 16.04.01 Step    196 at   55.288 [mm] t=  2.142e-10 [s] E=    2.997 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.00 Step    197 at   55.583 [mm] t=  2.152e-10 [s] E=    3.026 [MeV] 
+ParallelTTracker {+0}> 16.04.02 Step    197 at   55.584 [mm] t=  2.152e-10 [s] E=    3.026 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.01 Step    198 at   55.880 [mm] t=  2.162e-10 [s] E=    3.055 [MeV] 
+ParallelTTracker {+0}> 16.04.02 Step    198 at   55.881 [mm] t=  2.162e-10 [s] E=    3.055 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.01 Step    199 at   56.177 [mm] t=  2.172e-10 [s] E=    3.084 [MeV] 
+ParallelTTracker {+0}> 16.04.03 Step    199 at   56.178 [mm] t=  2.172e-10 [s] E=    3.084 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.02 Step    200 at   56.473 [mm] t=  2.182e-10 [s] E=    3.113 [MeV] 
-OPAL {+0}> * Wrote beam phase space.
-OPAL {+0}> 
-OPAL {+0}> * ************** B U N C H ********************************************************* 
-OPAL {+0}> * NP              =   20000
-OPAL {+0}> * Qtot            =    2.00000e-01 [nC]       Qi    =  1.00000e-05 [nC]
-OPAL {+0}> * Ekin            =    3.11345e+00 [MeV]      dEkin =  7.12616e-02 [MeV]
-OPAL {+0}> * rmax            = (  1.40384e-03 ,  1.40712e-03 ,  5.96549e-02 ) [m]
-OPAL {+0}> * rmin            = ( -1.43479e-03 , -1.42349e-03 ,  5.27302e-02 ) [m]
-OPAL {+0}> * rms beam size   = (  5.98524e-04 ,  5.98115e-04 ,  1.15143e-03 ) [m]
-OPAL {+0}> * rms momenta     = (  3.66018e-03 ,  3.61082e-03 ,  1.40862e-01 ) [beta gamma]
-OPAL {+0}> * mean position   = ( -2.29808e-06 ,  6.20851e-07 ,  5.64733e-02 ) [m]
-OPAL {+0}> * mean momenta    = (  6.01513e-05 , -2.87968e-05 ,  7.02199e+00 ) [beta gamma]
-OPAL {+0}> * rms emittance   = (  1.83048e-07 ,  1.80977e-07 ,  3.81395e-06 ) (not normalized)
-OPAL {+0}> * rms correlation = ( -8.09777e-01 , -8.08548e-01 ,  9.86273e-01 )
-OPAL {+0}> * hr              = (  9.15686e-05 ,  9.13098e-05 ,  1.09917e-04 ) [m]
-OPAL {+0}> * dh              =    1.00000e-02 [m]
-OPAL {+0}> * t               =    2.18199e-10 [s]        dT    =  1.00000e-12 [s]
-OPAL {+0}> * spos            =    5.64733e-02 [m]
-OPAL {+0}> * ********************************************************************************** 
-OPAL {+0}> 
+ParallelTTracker {+0}> 16.04.03 Step    200 at   56.474 [mm] t=  2.182e-10 [s] E=    3.113 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.03 Step    201 at   56.770 [mm] t=  2.192e-10 [s] E=    3.142 [MeV] 
+ParallelTTracker {+0}> 16.04.04 Step    201 at   56.771 [mm] t=  2.192e-10 [s] E=    3.142 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.03 Step    202 at   57.067 [mm] t=  2.202e-10 [s] E=    3.171 [MeV] 
+ParallelTTracker {+0}> 16.04.04 Step    202 at   57.068 [mm] t=  2.202e-10 [s] E=    3.171 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.04 Step    203 at   57.364 [mm] t=  2.212e-10 [s] E=    3.200 [MeV] 
+ParallelTTracker {+0}> 16.04.05 Step    203 at   57.365 [mm] t=  2.212e-10 [s] E=    3.200 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.04 Step    204 at   57.661 [mm] t=  2.222e-10 [s] E=    3.229 [MeV] 
+ParallelTTracker {+0}> 16.04.06 Step    204 at   57.662 [mm] t=  2.222e-10 [s] E=    3.229 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.05 Step    205 at   57.958 [mm] t=  2.232e-10 [s] E=    3.257 [MeV] 
+ParallelTTracker {+0}> 16.04.06 Step    205 at   57.959 [mm] t=  2.232e-10 [s] E=    3.257 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.05 Step    206 at   58.255 [mm] t=  2.242e-10 [s] E=    3.286 [MeV] 
+ParallelTTracker {+0}> 16.04.07 Step    206 at   58.256 [mm] t=  2.242e-10 [s] E=    3.286 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.06 Step    207 at   58.552 [mm] t=  2.252e-10 [s] E=    3.314 [MeV] 
+ParallelTTracker {+0}> 16.04.07 Step    207 at   58.553 [mm] t=  2.252e-10 [s] E=    3.314 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.06 Step    208 at   58.849 [mm] t=  2.262e-10 [s] E=    3.342 [MeV] 
+ParallelTTracker {+0}> 16.04.08 Step    208 at   58.850 [mm] t=  2.262e-10 [s] E=    3.342 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.07 Step    209 at   59.146 [mm] t=  2.272e-10 [s] E=    3.369 [MeV] 
+ParallelTTracker {+0}> 16.04.08 Step    209 at   59.147 [mm] t=  2.272e-10 [s] E=    3.369 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.07 Step    210 at   59.443 [mm] t=  2.282e-10 [s] E=    3.397 [MeV] 
+ParallelTTracker {+0}> 16.04.09 Step    210 at   59.444 [mm] t=  2.282e-10 [s] E=    3.397 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.08 Step    211 at   59.741 [mm] t=  2.292e-10 [s] E=    3.424 [MeV] 
+ParallelTTracker {+0}> 16.04.10 Step    211 at   59.742 [mm] t=  2.292e-10 [s] E=    3.424 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.08 Step    212 at   60.038 [mm] t=  2.302e-10 [s] E=    3.451 [MeV] 
+ParallelTTracker {+0}> 16.04.10 Step    212 at   60.039 [mm] t=  2.302e-10 [s] E=    3.451 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.09 Step    213 at   60.335 [mm] t=  2.312e-10 [s] E=    3.477 [MeV] 
+ParallelTTracker {+0}> 16.04.11 Step    213 at   60.336 [mm] t=  2.312e-10 [s] E=    3.477 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.09 Step    214 at   60.633 [mm] t=  2.322e-10 [s] E=    3.503 [MeV] 
+ParallelTTracker {+0}> 16.04.11 Step    214 at   60.634 [mm] t=  2.322e-10 [s] E=    3.503 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.09 Step    215 at   60.930 [mm] t=  2.332e-10 [s] E=    3.529 [MeV] 
+ParallelTTracker {+0}> 16.04.12 Step    215 at   60.931 [mm] t=  2.332e-10 [s] E=    3.529 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.10 Step    216 at   61.227 [mm] t=  2.342e-10 [s] E=    3.554 [MeV] 
+ParallelTTracker {+0}> 16.04.13 Step    216 at   61.228 [mm] t=  2.342e-10 [s] E=    3.554 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.10 Step    217 at   61.525 [mm] t=  2.352e-10 [s] E=    3.579 [MeV] 
+ParallelTTracker {+0}> 16.04.13 Step    217 at   61.526 [mm] t=  2.352e-10 [s] E=    3.579 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.11 Step    218 at   61.822 [mm] t=  2.362e-10 [s] E=    3.604 [MeV] 
+ParallelTTracker {+0}> 16.04.14 Step    218 at   61.823 [mm] t=  2.362e-10 [s] E=    3.604 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.11 Step    219 at   62.120 [mm] t=  2.372e-10 [s] E=    3.628 [MeV] 
+ParallelTTracker {+0}> 16.04.14 Step    219 at   62.121 [mm] t=  2.372e-10 [s] E=    3.628 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.12 Step    220 at   62.417 [mm] t=  2.382e-10 [s] E=    3.652 [MeV] 
+ParallelTTracker {+0}> 16.04.15 Step    220 at   62.418 [mm] t=  2.382e-10 [s] E=    3.652 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.12 Step    221 at   62.715 [mm] t=  2.392e-10 [s] E=    3.675 [MeV] 
+ParallelTTracker {+0}> 16.04.15 Step    221 at   62.716 [mm] t=  2.392e-10 [s] E=    3.675 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.13 Step    222 at   63.012 [mm] t=  2.402e-10 [s] E=    3.698 [MeV] 
+ParallelTTracker {+0}> 16.04.16 Step    222 at   63.013 [mm] t=  2.402e-10 [s] E=    3.698 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.13 Step    223 at   63.310 [mm] t=  2.412e-10 [s] E=    3.721 [MeV] 
+ParallelTTracker {+0}> 16.04.17 Step    223 at   63.311 [mm] t=  2.412e-10 [s] E=    3.721 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.14 Step    224 at   63.608 [mm] t=  2.422e-10 [s] E=    3.743 [MeV] 
+ParallelTTracker {+0}> 16.04.17 Step    224 at   63.609 [mm] t=  2.422e-10 [s] E=    3.742 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.14 Step    225 at   63.905 [mm] t=  2.432e-10 [s] E=    3.764 [MeV] 
+ParallelTTracker {+0}> 16.04.18 Step    225 at   63.906 [mm] t=  2.432e-10 [s] E=    3.764 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.15 Step    226 at   64.203 [mm] t=  2.442e-10 [s] E=    3.785 [MeV] 
+ParallelTTracker {+0}> 16.04.18 Step    226 at   64.204 [mm] t=  2.442e-10 [s] E=    3.785 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.15 Step    227 at   64.501 [mm] t=  2.452e-10 [s] E=    3.805 [MeV] 
+ParallelTTracker {+0}> 16.04.19 Step    227 at   64.501 [mm] t=  2.452e-10 [s] E=    3.805 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.16 Step    228 at   64.798 [mm] t=  2.462e-10 [s] E=    3.825 [MeV] 
+ParallelTTracker {+0}> 16.04.19 Step    228 at   64.799 [mm] t=  2.462e-10 [s] E=    3.825 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.16 Step    229 at   65.096 [mm] t=  2.472e-10 [s] E=    3.844 [MeV] 
+ParallelTTracker {+0}> 16.04.20 Step    229 at   65.097 [mm] t=  2.472e-10 [s] E=    3.844 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.17 Step    230 at   65.394 [mm] t=  2.482e-10 [s] E=    3.863 [MeV] 
+ParallelTTracker {+0}> 16.04.21 Step    230 at   65.395 [mm] t=  2.482e-10 [s] E=    3.863 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.17 Step    231 at   65.691 [mm] t=  2.492e-10 [s] E=    3.881 [MeV] 
+ParallelTTracker {+0}> 16.04.21 Step    231 at   65.692 [mm] t=  2.492e-10 [s] E=    3.881 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.18 Step    232 at   65.989 [mm] t=  2.502e-10 [s] E=    3.899 [MeV] 
+ParallelTTracker {+0}> 16.04.22 Step    232 at   65.990 [mm] t=  2.502e-10 [s] E=    3.899 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.18 Step    233 at   66.287 [mm] t=  2.512e-10 [s] E=    3.916 [MeV] 
+ParallelTTracker {+0}> 16.04.22 Step    233 at   66.288 [mm] t=  2.512e-10 [s] E=    3.916 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.19 Step    234 at   66.585 [mm] t=  2.522e-10 [s] E=    3.932 [MeV] 
+ParallelTTracker {+0}> 16.04.23 Step    234 at   66.586 [mm] t=  2.522e-10 [s] E=    3.932 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.19 Step    235 at   66.883 [mm] t=  2.532e-10 [s] E=    3.948 [MeV] 
+ParallelTTracker {+0}> 16.04.23 Step    235 at   66.884 [mm] t=  2.532e-10 [s] E=    3.948 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.20 Step    236 at   67.180 [mm] t=  2.542e-10 [s] E=    3.963 [MeV] 
+ParallelTTracker {+0}> 16.04.24 Step    236 at   67.181 [mm] t=  2.542e-10 [s] E=    3.963 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.20 Step    237 at   67.478 [mm] t=  2.552e-10 [s] E=    3.978 [MeV] 
+ParallelTTracker {+0}> 16.04.25 Step    237 at   67.479 [mm] t=  2.552e-10 [s] E=    3.978 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.21 Step    238 at   67.776 [mm] t=  2.562e-10 [s] E=    3.992 [MeV] 
+ParallelTTracker {+0}> 16.04.25 Step    238 at   67.777 [mm] t=  2.562e-10 [s] E=    3.992 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.21 Step    239 at   68.074 [mm] t=  2.572e-10 [s] E=    4.005 [MeV] 
+ParallelTTracker {+0}> 16.04.26 Step    239 at   68.075 [mm] t=  2.572e-10 [s] E=    4.005 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.22 Step    240 at   68.372 [mm] t=  2.582e-10 [s] E=    4.018 [MeV] 
+ParallelTTracker {+0}> 16.04.26 Step    240 at   68.373 [mm] t=  2.582e-10 [s] E=    4.018 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.22 Step    241 at   68.670 [mm] t=  2.592e-10 [s] E=    4.031 [MeV] 
+ParallelTTracker {+0}> 16.04.27 Step    241 at   68.671 [mm] t=  2.592e-10 [s] E=    4.031 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.23 Step    242 at   68.968 [mm] t=  2.602e-10 [s] E=    4.042 [MeV] 
+ParallelTTracker {+0}> 16.04.28 Step    242 at   68.969 [mm] t=  2.602e-10 [s] E=    4.042 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.23 Step    243 at   69.265 [mm] t=  2.612e-10 [s] E=    4.053 [MeV] 
+ParallelTTracker {+0}> 16.04.28 Step    243 at   69.266 [mm] t=  2.612e-10 [s] E=    4.053 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.24 Step    244 at   69.563 [mm] t=  2.622e-10 [s] E=    4.064 [MeV] 
+ParallelTTracker {+0}> 16.04.29 Step    244 at   69.564 [mm] t=  2.622e-10 [s] E=    4.064 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.24 Step    245 at   69.861 [mm] t=  2.632e-10 [s] E=    4.074 [MeV] 
+ParallelTTracker {+0}> 16.04.29 Step    245 at   69.862 [mm] t=  2.632e-10 [s] E=    4.074 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.24 Step    246 at   70.159 [mm] t=  2.642e-10 [s] E=    4.083 [MeV] 
+ParallelTTracker {+0}> 16.04.30 Step    246 at   70.160 [mm] t=  2.642e-10 [s] E=    4.083 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.25 Step    247 at   70.457 [mm] t=  2.652e-10 [s] E=    4.092 [MeV] 
+ParallelTTracker {+0}> 16.04.30 Step    247 at   70.458 [mm] t=  2.652e-10 [s] E=    4.092 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.25 Step    248 at   70.755 [mm] t=  2.662e-10 [s] E=    4.100 [MeV] 
+ParallelTTracker {+0}> 16.04.31 Step    248 at   70.756 [mm] t=  2.662e-10 [s] E=    4.100 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.26 Step    249 at   71.053 [mm] t=  2.672e-10 [s] E=    4.108 [MeV] 
+ParallelTTracker {+0}> 16.04.32 Step    249 at   71.054 [mm] t=  2.672e-10 [s] E=    4.108 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.26 Step    250 at   71.351 [mm] t=  2.682e-10 [s] E=    4.115 [MeV] 
-OPAL {+0}> * Wrote beam phase space.
-OPAL {+0}> 
-OPAL {+0}> * ************** B U N C H ********************************************************* 
-OPAL {+0}> * NP              =   20000
-OPAL {+0}> * Qtot            =    2.00000e-01 [nC]       Qi    =  1.00000e-05 [nC]
-OPAL {+0}> * Ekin            =    4.11491e+00 [MeV]      dEkin =  2.14490e-02 [MeV]
-OPAL {+0}> * rmax            = (  1.46540e-03 ,  1.47044e-03 ,  7.45349e-02 ) [m]
-OPAL {+0}> * rmin            = ( -1.49867e-03 , -1.48568e-03 ,  6.75940e-02 ) [m]
-OPAL {+0}> * rms beam size   = (  6.24558e-04 ,  6.24212e-04 ,  1.15419e-03 ) [m]
-OPAL {+0}> * rms momenta     = (  4.20010e-02 ,  4.20178e-02 ,  4.22331e-02 ) [beta gamma]
-OPAL {+0}> * mean position   = ( -2.31264e-06 ,  5.93701e-07 ,  7.13509e-02 ) [m]
-OPAL {+0}> * mean momenta    = ( -1.11951e-04 ,  1.08123e-05 ,  8.99708e+00 ) [beta gamma]
-OPAL {+0}> * rms emittance   = (  2.04197e-07 ,  2.02074e-07 ,  4.03494e-06 ) (not normalized)
-OPAL {+0}> * rms correlation = (  9.97544e-01 ,  9.97595e-01 ,  6.67333e-01 )
-OPAL {+0}> * hr              = (  9.56153e-05 ,  9.53587e-05 ,  1.10173e-04 ) [m]
-OPAL {+0}> * dh              =    1.00000e-02 [m]
-OPAL {+0}> * t               =    2.68199e-10 [s]        dT    =  1.00000e-12 [s]
-OPAL {+0}> * spos            =    7.13509e-02 [m]
-OPAL {+0}> * ********************************************************************************** 
-OPAL {+0}> 
+ParallelTTracker {+0}> 16.04.32 Step    250 at   71.352 [mm] t=  2.682e-10 [s] E=    4.115 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.27 Step    251 at   71.649 [mm] t=  2.692e-10 [s] E=    4.121 [MeV] 
+ParallelTTracker {+0}> 16.04.33 Step    251 at   71.650 [mm] t=  2.692e-10 [s] E=    4.121 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.28 Step    252 at   71.947 [mm] t=  2.702e-10 [s] E=    4.128 [MeV] 
+ParallelTTracker {+0}> 16.04.33 Step    252 at   71.948 [mm] t=  2.702e-10 [s] E=    4.128 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.28 Step    253 at   72.245 [mm] t=  2.712e-10 [s] E=    4.133 [MeV] 
+ParallelTTracker {+0}> 16.04.34 Step    253 at   72.246 [mm] t=  2.712e-10 [s] E=    4.133 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.29 Step    254 at   72.543 [mm] t=  2.722e-10 [s] E=    4.138 [MeV] 
+ParallelTTracker {+0}> 16.04.34 Step    254 at   72.544 [mm] t=  2.722e-10 [s] E=    4.138 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.29 Step    255 at   72.841 [mm] t=  2.732e-10 [s] E=    4.143 [MeV] 
+ParallelTTracker {+0}> 16.04.35 Step    255 at   72.842 [mm] t=  2.732e-10 [s] E=    4.143 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.30 Step    256 at   73.139 [mm] t=  2.742e-10 [s] E=    4.147 [MeV] 
+ParallelTTracker {+0}> 16.04.36 Step    256 at   73.140 [mm] t=  2.742e-10 [s] E=    4.147 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.30 Step    257 at   73.437 [mm] t=  2.752e-10 [s] E=    4.151 [MeV] 
+ParallelTTracker {+0}> 16.04.36 Step    257 at   73.438 [mm] t=  2.752e-10 [s] E=    4.150 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.31 Step    258 at   73.735 [mm] t=  2.762e-10 [s] E=    4.154 [MeV] 
+ParallelTTracker {+0}> 16.04.37 Step    258 at   73.736 [mm] t=  2.762e-10 [s] E=    4.154 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.31 Step    259 at   74.033 [mm] t=  2.772e-10 [s] E=    4.157 [MeV] 
+ParallelTTracker {+0}> 16.04.37 Step    259 at   74.034 [mm] t=  2.772e-10 [s] E=    4.157 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.32 Step    260 at   74.331 [mm] t=  2.782e-10 [s] E=    4.159 [MeV] 
+ParallelTTracker {+0}> 16.04.38 Step    260 at   74.332 [mm] t=  2.782e-10 [s] E=    4.159 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.32 Step    261 at   74.629 [mm] t=  2.792e-10 [s] E=    4.161 [MeV] 
+ParallelTTracker {+0}> 16.04.38 Step    261 at   74.630 [mm] t=  2.792e-10 [s] E=    4.161 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.33 Step    262 at   74.927 [mm] t=  2.802e-10 [s] E=    4.163 [MeV] 
+ParallelTTracker {+0}> 16.04.39 Step    262 at   74.928 [mm] t=  2.802e-10 [s] E=    4.163 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.33 Step    263 at   75.225 [mm] t=  2.812e-10 [s] E=    4.164 [MeV] 
+ParallelTTracker {+0}> 16.04.40 Step    263 at   75.226 [mm] t=  2.812e-10 [s] E=    4.164 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.34 Step    264 at   75.523 [mm] t=  2.822e-10 [s] E=    4.165 [MeV] 
+ParallelTTracker {+0}> 16.04.40 Step    264 at   75.524 [mm] t=  2.822e-10 [s] E=    4.165 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.34 Step    265 at   75.821 [mm] t=  2.832e-10 [s] E=    4.166 [MeV] 
+ParallelTTracker {+0}> 16.04.41 Step    265 at   75.822 [mm] t=  2.832e-10 [s] E=    4.166 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.35 Step    266 at   76.119 [mm] t=  2.842e-10 [s] E=    4.166 [MeV] 
+ParallelTTracker {+0}> 16.04.41 Step    266 at   76.120 [mm] t=  2.842e-10 [s] E=    4.166 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.35 Step    267 at   76.417 [mm] t=  2.852e-10 [s] E=    4.167 [MeV] 
+ParallelTTracker {+0}> 16.04.42 Step    267 at   76.418 [mm] t=  2.852e-10 [s] E=    4.167 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.36 Step    268 at   76.715 [mm] t=  2.862e-10 [s] E=    4.167 [MeV] 
+ParallelTTracker {+0}> 16.04.43 Step    268 at   76.716 [mm] t=  2.862e-10 [s] E=    4.167 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.36 Step    269 at   77.013 [mm] t=  2.872e-10 [s] E=    4.167 [MeV] 
+ParallelTTracker {+0}> 16.04.43 Step    269 at   77.013 [mm] t=  2.872e-10 [s] E=    4.167 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.37 Step    270 at   77.311 [mm] t=  2.882e-10 [s] E=    4.166 [MeV] 
+ParallelTTracker {+0}> 16.04.44 Step    270 at   77.311 [mm] t=  2.882e-10 [s] E=    4.166 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.37 Step    271 at   77.608 [mm] t=  2.892e-10 [s] E=    4.166 [MeV] 
+ParallelTTracker {+0}> 16.04.44 Step    271 at   77.609 [mm] t=  2.892e-10 [s] E=    4.166 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.38 Step    272 at   77.906 [mm] t=  2.902e-10 [s] E=    4.165 [MeV] 
+ParallelTTracker {+0}> 16.04.45 Step    272 at   77.907 [mm] t=  2.902e-10 [s] E=    4.165 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.38 Step    273 at   78.204 [mm] t=  2.912e-10 [s] E=    4.164 [MeV] 
+ParallelTTracker {+0}> 16.04.45 Step    273 at   78.205 [mm] t=  2.912e-10 [s] E=    4.164 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.39 Step    274 at   78.502 [mm] t=  2.922e-10 [s] E=    4.164 [MeV] 
+ParallelTTracker {+0}> 16.04.46 Step    274 at   78.503 [mm] t=  2.922e-10 [s] E=    4.164 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.39 Step    275 at   78.800 [mm] t=  2.932e-10 [s] E=    4.163 [MeV] 
+ParallelTTracker {+0}> 16.04.47 Step    275 at   78.801 [mm] t=  2.932e-10 [s] E=    4.163 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.39 Step    276 at   79.098 [mm] t=  2.942e-10 [s] E=    4.162 [MeV] 
+ParallelTTracker {+0}> 16.04.47 Step    276 at   79.099 [mm] t=  2.942e-10 [s] E=    4.162 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.40 Step    277 at   79.396 [mm] t=  2.952e-10 [s] E=    4.161 [MeV] 
+ParallelTTracker {+0}> 16.04.48 Step    277 at   79.397 [mm] t=  2.952e-10 [s] E=    4.161 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.40 Step    278 at   79.694 [mm] t=  2.962e-10 [s] E=    4.160 [MeV] 
+ParallelTTracker {+0}> 16.04.48 Step    278 at   79.695 [mm] t=  2.962e-10 [s] E=    4.160 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.41 Step    279 at   79.992 [mm] t=  2.972e-10 [s] E=    4.159 [MeV] 
+ParallelTTracker {+0}> 16.04.49 Step    279 at   79.993 [mm] t=  2.972e-10 [s] E=    4.159 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.41 Step    280 at   80.290 [mm] t=  2.982e-10 [s] E=    4.159 [MeV] 
+ParallelTTracker {+0}> 16.04.49 Step    280 at   80.291 [mm] t=  2.982e-10 [s] E=    4.159 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.42 Step    281 at   80.588 [mm] t=  2.992e-10 [s] E=    4.158 [MeV] 
+ParallelTTracker {+0}> 16.04.50 Step    281 at   80.589 [mm] t=  2.992e-10 [s] E=    4.158 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.42 Step    282 at   80.886 [mm] t=  3.002e-10 [s] E=    4.158 [MeV] 
+ParallelTTracker {+0}> 16.04.51 Step    282 at   80.887 [mm] t=  3.002e-10 [s] E=    4.158 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.43 Step    283 at   81.184 [mm] t=  3.012e-10 [s] E=    4.157 [MeV] 
+ParallelTTracker {+0}> 16.04.51 Step    283 at   81.185 [mm] t=  3.012e-10 [s] E=    4.157 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.43 Step    284 at   81.482 [mm] t=  3.022e-10 [s] E=    4.157 [MeV] 
+ParallelTTracker {+0}> 16.04.52 Step    284 at   81.483 [mm] t=  3.022e-10 [s] E=    4.157 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.44 Step    285 at   81.780 [mm] t=  3.032e-10 [s] E=    4.157 [MeV] 
+ParallelTTracker {+0}> 16.04.52 Step    285 at   81.781 [mm] t=  3.032e-10 [s] E=    4.157 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.44 Step    286 at   82.078 [mm] t=  3.042e-10 [s] E=    4.157 [MeV] 
+ParallelTTracker {+0}> 16.04.53 Step    286 at   82.079 [mm] t=  3.042e-10 [s] E=    4.157 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.45 Step    287 at   82.376 [mm] t=  3.052e-10 [s] E=    4.158 [MeV] 
+ParallelTTracker {+0}> 16.04.53 Step    287 at   82.377 [mm] t=  3.052e-10 [s] E=    4.158 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.45 Step    288 at   82.674 [mm] t=  3.062e-10 [s] E=    4.159 [MeV] 
+ParallelTTracker {+0}> 16.04.54 Step    288 at   82.675 [mm] t=  3.062e-10 [s] E=    4.159 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.46 Step    289 at   82.972 [mm] t=  3.072e-10 [s] E=    4.160 [MeV] 
+ParallelTTracker {+0}> 16.04.55 Step    289 at   82.973 [mm] t=  3.072e-10 [s] E=    4.160 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.46 Step    290 at   83.270 [mm] t=  3.082e-10 [s] E=    4.161 [MeV] 
+ParallelTTracker {+0}> 16.04.55 Step    290 at   83.271 [mm] t=  3.082e-10 [s] E=    4.161 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.47 Step    291 at   83.568 [mm] t=  3.092e-10 [s] E=    4.163 [MeV] 
+ParallelTTracker {+0}> 16.04.56 Step    291 at   83.569 [mm] t=  3.092e-10 [s] E=    4.163 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.47 Step    292 at   83.866 [mm] t=  3.102e-10 [s] E=    4.165 [MeV] 
+ParallelTTracker {+0}> 16.04.56 Step    292 at   83.867 [mm] t=  3.102e-10 [s] E=    4.164 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.48 Step    293 at   84.164 [mm] t=  3.112e-10 [s] E=    4.167 [MeV] 
+ParallelTTracker {+0}> 16.04.57 Step    293 at   84.165 [mm] t=  3.112e-10 [s] E=    4.167 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.48 Step    294 at   84.462 [mm] t=  3.122e-10 [s] E=    4.170 [MeV] 
+ParallelTTracker {+0}> 16.04.58 Step    294 at   84.463 [mm] t=  3.122e-10 [s] E=    4.170 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.49 Step    295 at   84.760 [mm] t=  3.132e-10 [s] E=    4.173 [MeV] 
+ParallelTTracker {+0}> 16.04.58 Step    295 at   84.761 [mm] t=  3.132e-10 [s] E=    4.173 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.49 Step    296 at   85.058 [mm] t=  3.142e-10 [s] E=    4.176 [MeV] 
+ParallelTTracker {+0}> 16.04.59 Step    296 at   85.059 [mm] t=  3.142e-10 [s] E=    4.176 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.50 Step    297 at   85.356 [mm] t=  3.152e-10 [s] E=    4.180 [MeV] 
+ParallelTTracker {+0}> 16.04.59 Step    297 at   85.357 [mm] t=  3.152e-10 [s] E=    4.180 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.50 Step    298 at   85.654 [mm] t=  3.162e-10 [s] E=    4.185 [MeV] 
+ParallelTTracker {+0}> 16.05.00 Step    298 at   85.655 [mm] t=  3.162e-10 [s] E=    4.185 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.51 Step    299 at   85.952 [mm] t=  3.172e-10 [s] E=    4.189 [MeV] 
+ParallelTTracker {+0}> 16.05.00 Step    299 at   85.953 [mm] t=  3.172e-10 [s] E=    4.189 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.51 Step    300 at   86.250 [mm] t=  3.182e-10 [s] E=    4.195 [MeV] 
-OPAL {+0}> * Wrote beam phase space.
-OPAL {+0}> 
-OPAL {+0}> * ************** B U N C H ********************************************************* 
-OPAL {+0}> * NP              =   20000
-OPAL {+0}> * Qtot            =    2.00000e-01 [nC]       Qi    =  1.00000e-05 [nC]
-OPAL {+0}> * Ekin            =    4.19476e+00 [MeV]      dEkin =  1.82527e-02 [MeV]
-OPAL {+0}> * rmax            = (  1.67115e-03 ,  1.67738e-03 ,  8.94295e-02 ) [m]
-OPAL {+0}> * rmin            = ( -1.70941e-03 , -1.69402e-03 ,  8.24910e-02 ) [m]
-OPAL {+0}> * rms beam size   = (  7.11043e-04 ,  7.10716e-04 ,  1.15396e-03 ) [m]
-OPAL {+0}> * rms momenta     = (  4.36346e-02 ,  4.36485e-02 ,  3.59322e-02 ) [beta gamma]
-OPAL {+0}> * mean position   = ( -2.55531e-06 ,  6.34160e-07 ,  8.62501e-02 ) [m]
-OPAL {+0}> * mean momenta    = ( -1.10327e-04 ,  2.05913e-05 ,  9.15428e+00 ) [beta gamma]
-OPAL {+0}> * rms emittance   = (  1.71745e-07 ,  1.70690e-07 ,  4.09441e-06 ) (not normalized)
-OPAL {+0}> * rms correlation = (  9.98715e-01 ,  9.98731e-01 , -4.27607e-01 )
-OPAL {+0}> * hr              = (  1.09050e-04 ,  1.08755e-04 ,  1.10135e-04 ) [m]
-OPAL {+0}> * dh              =    1.00000e-02 [m]
-OPAL {+0}> * t               =    3.18199e-10 [s]        dT    =  1.00000e-12 [s]
-OPAL {+0}> * spos            =    8.62501e-02 [m]
-OPAL {+0}> * ********************************************************************************** 
-OPAL {+0}> 
+ParallelTTracker {+0}> 16.05.01 Step    300 at   86.251 [mm] t=  3.182e-10 [s] E=    4.195 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.52 Step    301 at   86.548 [mm] t=  3.192e-10 [s] E=    4.201 [MeV] 
+ParallelTTracker {+0}> 16.05.02 Step    301 at   86.549 [mm] t=  3.192e-10 [s] E=    4.200 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.53 Step    302 at   86.846 [mm] t=  3.202e-10 [s] E=    4.207 [MeV] 
+ParallelTTracker {+0}> 16.05.02 Step    302 at   86.847 [mm] t=  3.202e-10 [s] E=    4.207 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.53 Step    303 at   87.144 [mm] t=  3.212e-10 [s] E=    4.214 [MeV] 
+ParallelTTracker {+0}> 16.05.03 Step    303 at   87.145 [mm] t=  3.212e-10 [s] E=    4.214 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.53 Step    304 at   87.442 [mm] t=  3.222e-10 [s] E=    4.221 [MeV] 
+ParallelTTracker {+0}> 16.05.03 Step    304 at   87.443 [mm] t=  3.222e-10 [s] E=    4.221 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.54 Step    305 at   87.740 [mm] t=  3.232e-10 [s] E=    4.229 [MeV] 
+ParallelTTracker {+0}> 16.05.04 Step    305 at   87.741 [mm] t=  3.232e-10 [s] E=    4.229 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.54 Step    306 at   88.038 [mm] t=  3.242e-10 [s] E=    4.237 [MeV] 
+ParallelTTracker {+0}> 16.05.04 Step    306 at   88.039 [mm] t=  3.242e-10 [s] E=    4.237 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.55 Step    307 at   88.336 [mm] t=  3.252e-10 [s] E=    4.246 [MeV] 
+ParallelTTracker {+0}> 16.05.05 Step    307 at   88.337 [mm] t=  3.252e-10 [s] E=    4.246 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.55 Step    308 at   88.634 [mm] t=  3.262e-10 [s] E=    4.255 [MeV] 
+ParallelTTracker {+0}> 16.05.06 Step    308 at   88.635 [mm] t=  3.262e-10 [s] E=    4.255 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.56 Step    309 at   88.932 [mm] t=  3.272e-10 [s] E=    4.265 [MeV] 
+ParallelTTracker {+0}> 16.05.06 Step    309 at   88.933 [mm] t=  3.272e-10 [s] E=    4.265 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.56 Step    310 at   89.231 [mm] t=  3.282e-10 [s] E=    4.276 [MeV] 
+ParallelTTracker {+0}> 16.05.07 Step    310 at   89.232 [mm] t=  3.282e-10 [s] E=    4.276 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.57 Step    311 at   89.529 [mm] t=  3.292e-10 [s] E=    4.287 [MeV] 
+ParallelTTracker {+0}> 16.05.07 Step    311 at   89.530 [mm] t=  3.292e-10 [s] E=    4.287 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.57 Step    312 at   89.827 [mm] t=  3.302e-10 [s] E=    4.298 [MeV] 
+ParallelTTracker {+0}> 16.05.08 Step    312 at   89.828 [mm] t=  3.302e-10 [s] E=    4.298 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.58 Step    313 at   90.125 [mm] t=  3.312e-10 [s] E=    4.311 [MeV] 
+ParallelTTracker {+0}> 16.05.09 Step    313 at   90.126 [mm] t=  3.312e-10 [s] E=    4.311 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.58 Step    314 at   90.423 [mm] t=  3.322e-10 [s] E=    4.323 [MeV] 
+ParallelTTracker {+0}> 16.05.09 Step    314 at   90.424 [mm] t=  3.322e-10 [s] E=    4.323 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.59 Step    315 at   90.721 [mm] t=  3.332e-10 [s] E=    4.337 [MeV] 
+ParallelTTracker {+0}> 16.05.10 Step    315 at   90.722 [mm] t=  3.332e-10 [s] E=    4.337 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.05.59 Step    316 at   91.019 [mm] t=  3.342e-10 [s] E=    4.350 [MeV] 
+ParallelTTracker {+0}> 16.05.10 Step    316 at   91.020 [mm] t=  3.342e-10 [s] E=    4.350 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.00 Step    317 at   91.317 [mm] t=  3.352e-10 [s] E=    4.365 [MeV] 
+ParallelTTracker {+0}> 16.05.11 Step    317 at   91.318 [mm] t=  3.352e-10 [s] E=    4.365 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.00 Step    318 at   91.615 [mm] t=  3.362e-10 [s] E=    4.380 [MeV] 
+ParallelTTracker {+0}> 16.05.11 Step    318 at   91.616 [mm] t=  3.362e-10 [s] E=    4.380 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.01 Step    319 at   91.914 [mm] t=  3.372e-10 [s] E=    4.395 [MeV] 
+ParallelTTracker {+0}> 16.05.12 Step    319 at   91.915 [mm] t=  3.372e-10 [s] E=    4.395 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.01 Step    320 at   92.212 [mm] t=  3.382e-10 [s] E=    4.411 [MeV] 
+ParallelTTracker {+0}> 16.05.13 Step    320 at   92.213 [mm] t=  3.382e-10 [s] E=    4.411 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.02 Step    321 at   92.510 [mm] t=  3.392e-10 [s] E=    4.428 [MeV] 
+ParallelTTracker {+0}> 16.05.13 Step    321 at   92.511 [mm] t=  3.392e-10 [s] E=    4.428 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.02 Step    322 at   92.808 [mm] t=  3.402e-10 [s] E=    4.445 [MeV] 
+ParallelTTracker {+0}> 16.05.14 Step    322 at   92.809 [mm] t=  3.402e-10 [s] E=    4.445 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.03 Step    323 at   93.106 [mm] t=  3.412e-10 [s] E=    4.463 [MeV] 
+ParallelTTracker {+0}> 16.05.14 Step    323 at   93.107 [mm] t=  3.412e-10 [s] E=    4.463 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.03 Step    324 at   93.404 [mm] t=  3.422e-10 [s] E=    4.481 [MeV] 
+ParallelTTracker {+0}> 16.05.15 Step    324 at   93.405 [mm] t=  3.422e-10 [s] E=    4.481 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.04 Step    325 at   93.703 [mm] t=  3.432e-10 [s] E=    4.500 [MeV] 
+ParallelTTracker {+0}> 16.05.15 Step    325 at   93.704 [mm] t=  3.432e-10 [s] E=    4.500 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.04 Step    326 at   94.001 [mm] t=  3.442e-10 [s] E=    4.519 [MeV] 
+ParallelTTracker {+0}> 16.05.16 Step    326 at   94.002 [mm] t=  3.442e-10 [s] E=    4.519 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.05 Step    327 at   94.299 [mm] t=  3.452e-10 [s] E=    4.539 [MeV] 
+ParallelTTracker {+0}> 16.05.17 Step    327 at   94.300 [mm] t=  3.452e-10 [s] E=    4.539 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.05 Step    328 at   94.597 [mm] t=  3.462e-10 [s] E=    4.559 [MeV] 
+ParallelTTracker {+0}> 16.05.17 Step    328 at   94.598 [mm] t=  3.462e-10 [s] E=    4.559 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.06 Step    329 at   94.896 [mm] t=  3.472e-10 [s] E=    4.580 [MeV] 
+ParallelTTracker {+0}> 16.05.18 Step    329 at   94.897 [mm] t=  3.472e-10 [s] E=    4.580 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.06 Step    330 at   95.194 [mm] t=  3.482e-10 [s] E=    4.601 [MeV] 
+ParallelTTracker {+0}> 16.05.18 Step    330 at   95.195 [mm] t=  3.482e-10 [s] E=    4.601 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.07 Step    331 at   95.492 [mm] t=  3.492e-10 [s] E=    4.623 [MeV] 
+ParallelTTracker {+0}> 16.05.19 Step    331 at   95.493 [mm] t=  3.492e-10 [s] E=    4.623 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.07 Step    332 at   95.791 [mm] t=  3.502e-10 [s] E=    4.645 [MeV] 
+ParallelTTracker {+0}> 16.05.19 Step    332 at   95.792 [mm] t=  3.502e-10 [s] E=    4.645 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.08 Step    333 at   96.089 [mm] t=  3.512e-10 [s] E=    4.668 [MeV] 
+ParallelTTracker {+0}> 16.05.20 Step    333 at   96.090 [mm] t=  3.512e-10 [s] E=    4.668 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.08 Step    334 at   96.387 [mm] t=  3.522e-10 [s] E=    4.691 [MeV] 
+ParallelTTracker {+0}> 16.05.21 Step    334 at   96.388 [mm] t=  3.522e-10 [s] E=    4.691 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.09 Step    335 at   96.686 [mm] t=  3.532e-10 [s] E=    4.714 [MeV] 
+ParallelTTracker {+0}> 16.05.21 Step    335 at   96.687 [mm] t=  3.532e-10 [s] E=    4.714 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.09 Step    336 at   96.984 [mm] t=  3.542e-10 [s] E=    4.738 [MeV] 
+ParallelTTracker {+0}> 16.05.22 Step    336 at   96.985 [mm] t=  3.542e-10 [s] E=    4.738 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.10 Step    337 at   97.282 [mm] t=  3.552e-10 [s] E=    4.763 [MeV] 
+ParallelTTracker {+0}> 16.05.22 Step    337 at   97.283 [mm] t=  3.552e-10 [s] E=    4.762 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.10 Step    338 at   97.581 [mm] t=  3.562e-10 [s] E=    4.787 [MeV] 
+ParallelTTracker {+0}> 16.05.23 Step    338 at   97.582 [mm] t=  3.562e-10 [s] E=    4.787 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.10 Step    339 at   97.879 [mm] t=  3.572e-10 [s] E=    4.812 [MeV] 
+ParallelTTracker {+0}> 16.05.24 Step    339 at   97.880 [mm] t=  3.572e-10 [s] E=    4.812 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.11 Step    340 at   98.178 [mm] t=  3.582e-10 [s] E=    4.838 [MeV] 
+ParallelTTracker {+0}> 16.05.24 Step    340 at   98.179 [mm] t=  3.582e-10 [s] E=    4.838 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.11 Step    341 at   98.476 [mm] t=  3.592e-10 [s] E=    4.863 [MeV] 
+ParallelTTracker {+0}> 16.05.25 Step    341 at   98.477 [mm] t=  3.592e-10 [s] E=    4.863 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.12 Step    342 at   98.774 [mm] t=  3.602e-10 [s] E=    4.889 [MeV] 
+ParallelTTracker {+0}> 16.05.25 Step    342 at   98.775 [mm] t=  3.602e-10 [s] E=    4.889 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.12 Step    343 at   99.073 [mm] t=  3.612e-10 [s] E=    4.916 [MeV] 
+ParallelTTracker {+0}> 16.05.26 Step    343 at   99.074 [mm] t=  3.612e-10 [s] E=    4.916 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.13 Step    344 at   99.371 [mm] t=  3.622e-10 [s] E=    4.942 [MeV] 
+ParallelTTracker {+0}> 16.05.26 Step    344 at   99.372 [mm] t=  3.622e-10 [s] E=    4.942 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.13 Step    345 at   99.670 [mm] t=  3.632e-10 [s] E=    4.969 [MeV] 
+ParallelTTracker {+0}> 16.05.27 Step    345 at   99.671 [mm] t=  3.632e-10 [s] E=    4.969 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.14 Step    346 at   99.968 [mm] t=  3.642e-10 [s] E=    4.996 [MeV] 
+ParallelTTracker {+0}> 16.05.28 Step    346 at   99.969 [mm] t=  3.642e-10 [s] E=    4.996 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.14 Step    347 at  100.267 [mm] t=  3.652e-10 [s] E=    5.024 [MeV] 
+ParallelTTracker {+0}> 16.05.28 Step    347 at  100.268 [mm] t=  3.652e-10 [s] E=    5.024 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.15 Step    348 at  100.565 [mm] t=  3.662e-10 [s] E=    5.051 [MeV] 
+ParallelTTracker {+0}> 16.05.29 Step    348 at  100.566 [mm] t=  3.662e-10 [s] E=    5.051 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.15 Step    349 at  100.864 [mm] t=  3.672e-10 [s] E=    5.079 [MeV] 
+ParallelTTracker {+0}> 16.05.29 Step    349 at  100.865 [mm] t=  3.672e-10 [s] E=    5.079 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.16 Step    350 at  101.162 [mm] t=  3.682e-10 [s] E=    5.107 [MeV] 
-OPAL {+0}> * Wrote beam phase space.
-OPAL {+0}> 
-OPAL {+0}> * ************** B U N C H ********************************************************* 
-OPAL {+0}> * NP              =   20000
-OPAL {+0}> * Qtot            =    2.00000e-01 [nC]       Qi    =  1.00000e-05 [nC]
-OPAL {+0}> * Ekin            =    5.10727e+00 [MeV]      dEkin =  2.44005e-02 [MeV]
-OPAL {+0}> * rmax            = (  1.72755e-03 ,  1.73294e-03 ,  1.04338e-01 ) [m]
-OPAL {+0}> * rmin            = ( -1.76649e-03 , -1.75084e-03 ,  9.73998e-02 ) [m]
-OPAL {+0}> * rms beam size   = (  7.32709e-04 ,  7.32423e-04 ,  1.15412e-03 ) [m]
-OPAL {+0}> * rms momenta     = (  1.01661e-02 ,  1.01266e-02 ,  4.79493e-02 ) [beta gamma]
-OPAL {+0}> * mean position   = ( -2.56508e-06 ,  6.25266e-07 ,  1.01162e-01 ) [m]
-OPAL {+0}> * mean momenta    = (  7.72006e-05 , -2.95422e-05 ,  1.09491e+01 ) [beta gamma]
-OPAL {+0}> * rms emittance   = (  1.18104e-07 ,  1.17098e-07 ,  4.05575e-06 ) (not normalized)
-OPAL {+0}> * rms correlation = ( -9.84816e-01 , -9.84946e-01 ,  5.96721e-01 )
-OPAL {+0}> * hr              = (  1.12711e-04 ,  1.12380e-04 ,  1.10137e-04 ) [m]
-OPAL {+0}> * dh              =    1.00000e-02 [m]
-OPAL {+0}> * t               =    3.68199e-10 [s]        dT    =  1.00000e-12 [s]
-OPAL {+0}> * spos            =    1.01162e-01 [m]
-OPAL {+0}> * ********************************************************************************** 
-OPAL {+0}> 
+ParallelTTracker {+0}> 16.05.30 Step    350 at  101.163 [mm] t=  3.682e-10 [s] E=    5.107 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.17 Step    351 at  101.461 [mm] t=  3.692e-10 [s] E=    5.135 [MeV] 
+ParallelTTracker {+0}> 16.05.30 Step    351 at  101.462 [mm] t=  3.692e-10 [s] E=    5.135 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.17 Step    352 at  101.760 [mm] t=  3.702e-10 [s] E=    5.164 [MeV] 
+ParallelTTracker {+0}> 16.05.31 Step    352 at  101.761 [mm] t=  3.702e-10 [s] E=    5.164 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.18 Step    353 at  102.058 [mm] t=  3.712e-10 [s] E=    5.192 [MeV] 
+ParallelTTracker {+0}> 16.05.32 Step    353 at  102.059 [mm] t=  3.712e-10 [s] E=    5.192 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.18 Step    354 at  102.357 [mm] t=  3.722e-10 [s] E=    5.221 [MeV] 
+ParallelTTracker {+0}> 16.05.32 Step    354 at  102.358 [mm] t=  3.722e-10 [s] E=    5.221 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.19 Step    355 at  102.655 [mm] t=  3.732e-10 [s] E=    5.249 [MeV] 
+ParallelTTracker {+0}> 16.05.33 Step    355 at  102.656 [mm] t=  3.732e-10 [s] E=    5.249 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.19 Step    356 at  102.954 [mm] t=  3.742e-10 [s] E=    5.278 [MeV] 
+ParallelTTracker {+0}> 16.05.33 Step    356 at  102.955 [mm] t=  3.742e-10 [s] E=    5.278 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.20 Step    357 at  103.253 [mm] t=  3.752e-10 [s] E=    5.307 [MeV] 
+ParallelTTracker {+0}> 16.05.34 Step    357 at  103.254 [mm] t=  3.752e-10 [s] E=    5.307 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.20 Step    358 at  103.551 [mm] t=  3.762e-10 [s] E=    5.336 [MeV] 
+ParallelTTracker {+0}> 16.05.34 Step    358 at  103.552 [mm] t=  3.762e-10 [s] E=    5.336 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.21 Step    359 at  103.850 [mm] t=  3.772e-10 [s] E=    5.365 [MeV] 
+ParallelTTracker {+0}> 16.05.35 Step    359 at  103.851 [mm] t=  3.772e-10 [s] E=    5.364 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.21 Step    360 at  104.149 [mm] t=  3.782e-10 [s] E=    5.393 [MeV] 
+ParallelTTracker {+0}> 16.05.36 Step    360 at  104.150 [mm] t=  3.782e-10 [s] E=    5.393 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.22 Step    361 at  104.447 [mm] t=  3.792e-10 [s] E=    5.422 [MeV] 
+ParallelTTracker {+0}> 16.05.36 Step    361 at  104.448 [mm] t=  3.792e-10 [s] E=    5.422 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.22 Step    362 at  104.746 [mm] t=  3.802e-10 [s] E=    5.451 [MeV] 
+ParallelTTracker {+0}> 16.05.37 Step    362 at  104.747 [mm] t=  3.802e-10 [s] E=    5.451 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.23 Step    363 at  105.045 [mm] t=  3.812e-10 [s] E=    5.480 [MeV] 
+ParallelTTracker {+0}> 16.05.37 Step    363 at  105.046 [mm] t=  3.812e-10 [s] E=    5.479 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.23 Step    364 at  105.343 [mm] t=  3.822e-10 [s] E=    5.508 [MeV] 
+ParallelTTracker {+0}> 16.05.38 Step    364 at  105.344 [mm] t=  3.822e-10 [s] E=    5.508 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.24 Step    365 at  105.642 [mm] t=  3.832e-10 [s] E=    5.537 [MeV] 
+ParallelTTracker {+0}> 16.05.39 Step    365 at  105.643 [mm] t=  3.832e-10 [s] E=    5.537 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.24 Step    366 at  105.941 [mm] t=  3.842e-10 [s] E=    5.565 [MeV] 
+ParallelTTracker {+0}> 16.05.39 Step    366 at  105.942 [mm] t=  3.842e-10 [s] E=    5.565 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.25 Step    367 at  106.239 [mm] t=  3.852e-10 [s] E=    5.593 [MeV] 
+ParallelTTracker {+0}> 16.05.40 Step    367 at  106.240 [mm] t=  3.852e-10 [s] E=    5.593 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.25 Step    368 at  106.538 [mm] t=  3.862e-10 [s] E=    5.621 [MeV] 
+ParallelTTracker {+0}> 16.05.40 Step    368 at  106.539 [mm] t=  3.862e-10 [s] E=    5.621 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.25 Step    369 at  106.837 [mm] t=  3.872e-10 [s] E=    5.649 [MeV] 
+ParallelTTracker {+0}> 16.05.41 Step    369 at  106.838 [mm] t=  3.872e-10 [s] E=    5.649 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.26 Step    370 at  107.136 [mm] t=  3.882e-10 [s] E=    5.677 [MeV] 
+ParallelTTracker {+0}> 16.05.41 Step    370 at  107.137 [mm] t=  3.882e-10 [s] E=    5.677 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.26 Step    371 at  107.434 [mm] t=  3.892e-10 [s] E=    5.705 [MeV] 
+ParallelTTracker {+0}> 16.05.42 Step    371 at  107.435 [mm] t=  3.892e-10 [s] E=    5.705 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.27 Step    372 at  107.733 [mm] t=  3.902e-10 [s] E=    5.732 [MeV] 
+ParallelTTracker {+0}> 16.05.43 Step    372 at  107.734 [mm] t=  3.902e-10 [s] E=    5.732 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.27 Step    373 at  108.032 [mm] t=  3.912e-10 [s] E=    5.759 [MeV] 
+ParallelTTracker {+0}> 16.05.43 Step    373 at  108.033 [mm] t=  3.912e-10 [s] E=    5.759 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.28 Step    374 at  108.331 [mm] t=  3.922e-10 [s] E=    5.786 [MeV] 
+ParallelTTracker {+0}> 16.05.44 Step    374 at  108.332 [mm] t=  3.922e-10 [s] E=    5.786 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.28 Step    375 at  108.630 [mm] t=  3.932e-10 [s] E=    5.812 [MeV] 
+ParallelTTracker {+0}> 16.05.44 Step    375 at  108.631 [mm] t=  3.932e-10 [s] E=    5.812 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.29 Step    376 at  108.928 [mm] t=  3.942e-10 [s] E=    5.838 [MeV] 
+ParallelTTracker {+0}> 16.05.45 Step    376 at  108.929 [mm] t=  3.942e-10 [s] E=    5.838 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.29 Step    377 at  109.227 [mm] t=  3.952e-10 [s] E=    5.864 [MeV] 
+ParallelTTracker {+0}> 16.05.45 Step    377 at  109.228 [mm] t=  3.952e-10 [s] E=    5.864 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.30 Step    378 at  109.526 [mm] t=  3.962e-10 [s] E=    5.890 [MeV] 
+ParallelTTracker {+0}> 16.05.46 Step    378 at  109.527 [mm] t=  3.962e-10 [s] E=    5.890 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.30 Step    379 at  109.825 [mm] t=  3.972e-10 [s] E=    5.915 [MeV] 
+ParallelTTracker {+0}> 16.05.47 Step    379 at  109.826 [mm] t=  3.972e-10 [s] E=    5.915 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.31 Step    380 at  110.124 [mm] t=  3.982e-10 [s] E=    5.940 [MeV] 
+ParallelTTracker {+0}> 16.05.47 Step    380 at  110.125 [mm] t=  3.982e-10 [s] E=    5.940 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.31 Step    381 at  110.423 [mm] t=  3.992e-10 [s] E=    5.965 [MeV] 
+ParallelTTracker {+0}> 16.05.48 Step    381 at  110.424 [mm] t=  3.992e-10 [s] E=    5.965 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.32 Step    382 at  110.722 [mm] t=  4.002e-10 [s] E=    5.989 [MeV] 
+ParallelTTracker {+0}> 16.05.48 Step    382 at  110.723 [mm] t=  4.002e-10 [s] E=    5.989 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.32 Step    383 at  111.020 [mm] t=  4.012e-10 [s] E=    6.013 [MeV] 
+ParallelTTracker {+0}> 16.05.49 Step    383 at  111.021 [mm] t=  4.012e-10 [s] E=    6.012 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.33 Step    384 at  111.319 [mm] t=  4.022e-10 [s] E=    6.036 [MeV] 
+ParallelTTracker {+0}> 16.05.49 Step    384 at  111.320 [mm] t=  4.022e-10 [s] E=    6.036 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.33 Step    385 at  111.618 [mm] t=  4.032e-10 [s] E=    6.059 [MeV] 
+ParallelTTracker {+0}> 16.05.50 Step    385 at  111.619 [mm] t=  4.032e-10 [s] E=    6.059 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.34 Step    386 at  111.917 [mm] t=  4.042e-10 [s] E=    6.081 [MeV] 
+ParallelTTracker {+0}> 16.05.51 Step    386 at  111.918 [mm] t=  4.042e-10 [s] E=    6.081 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.34 Step    387 at  112.216 [mm] t=  4.052e-10 [s] E=    6.103 [MeV] 
+ParallelTTracker {+0}> 16.05.51 Step    387 at  112.217 [mm] t=  4.052e-10 [s] E=    6.103 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.35 Step    388 at  112.515 [mm] t=  4.062e-10 [s] E=    6.125 [MeV] 
+ParallelTTracker {+0}> 16.05.52 Step    388 at  112.516 [mm] t=  4.062e-10 [s] E=    6.125 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.35 Step    389 at  112.814 [mm] t=  4.072e-10 [s] E=    6.146 [MeV] 
+ParallelTTracker {+0}> 16.05.52 Step    389 at  112.815 [mm] t=  4.072e-10 [s] E=    6.146 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.36 Step    390 at  113.113 [mm] t=  4.082e-10 [s] E=    6.167 [MeV] 
+ParallelTTracker {+0}> 16.05.53 Step    390 at  113.114 [mm] t=  4.082e-10 [s] E=    6.167 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.36 Step    391 at  113.412 [mm] t=  4.092e-10 [s] E=    6.187 [MeV] 
+ParallelTTracker {+0}> 16.05.54 Step    391 at  113.413 [mm] t=  4.092e-10 [s] E=    6.187 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.37 Step    392 at  113.711 [mm] t=  4.102e-10 [s] E=    6.207 [MeV] 
+ParallelTTracker {+0}> 16.05.54 Step    392 at  113.711 [mm] t=  4.102e-10 [s] E=    6.207 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.37 Step    393 at  114.009 [mm] t=  4.112e-10 [s] E=    6.226 [MeV] 
+ParallelTTracker {+0}> 16.05.55 Step    393 at  114.010 [mm] t=  4.112e-10 [s] E=    6.226 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.38 Step    394 at  114.308 [mm] t=  4.122e-10 [s] E=    6.245 [MeV] 
+ParallelTTracker {+0}> 16.05.55 Step    394 at  114.309 [mm] t=  4.122e-10 [s] E=    6.245 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.38 Step    395 at  114.607 [mm] t=  4.132e-10 [s] E=    6.263 [MeV] 
+ParallelTTracker {+0}> 16.05.56 Step    395 at  114.608 [mm] t=  4.132e-10 [s] E=    6.263 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.39 Step    396 at  114.906 [mm] t=  4.142e-10 [s] E=    6.281 [MeV] 
+ParallelTTracker {+0}> 16.05.56 Step    396 at  114.907 [mm] t=  4.142e-10 [s] E=    6.281 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.39 Step    397 at  115.205 [mm] t=  4.152e-10 [s] E=    6.299 [MeV] 
+ParallelTTracker {+0}> 16.05.57 Step    397 at  115.206 [mm] t=  4.152e-10 [s] E=    6.299 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.40 Step    398 at  115.504 [mm] t=  4.162e-10 [s] E=    6.315 [MeV] 
+ParallelTTracker {+0}> 16.05.58 Step    398 at  115.505 [mm] t=  4.162e-10 [s] E=    6.315 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.40 Step    399 at  115.803 [mm] t=  4.172e-10 [s] E=    6.332 [MeV] 
+ParallelTTracker {+0}> 16.05.58 Step    399 at  115.804 [mm] t=  4.172e-10 [s] E=    6.332 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.41 Step    400 at  116.102 [mm] t=  4.182e-10 [s] E=    6.348 [MeV] 
-OPAL {+0}> * Wrote beam phase space.
-OPAL {+0}> 
-OPAL {+0}> * ************** B U N C H ********************************************************* 
-OPAL {+0}> * NP              =   20000
-OPAL {+0}> * Qtot            =    2.00000e-01 [nC]       Qi    =  1.00000e-05 [nC]
-OPAL {+0}> * Ekin            =    6.34760e+00 [MeV]      dEkin =  3.33520e-02 [MeV]
-OPAL {+0}> * rmax            = (  1.72070e-03 ,  1.72684e-03 ,  1.19276e-01 ) [m]
-OPAL {+0}> * rmin            = ( -1.75975e-03 , -1.74366e-03 ,  1.12337e-01 ) [m]
-OPAL {+0}> * rms beam size   = (  7.29570e-04 ,  7.29328e-04 ,  1.15415e-03 ) [m]
-OPAL {+0}> * rms momenta     = (  2.02611e-02 ,  2.02862e-02 ,  6.54502e-02 ) [beta gamma]
-OPAL {+0}> * mean position   = ( -2.50613e-06 ,  5.92326e-07 ,  1.16102e-01 ) [m]
-OPAL {+0}> * mean momenta    = ( -3.15828e-05 , -1.06081e-05 ,  1.33846e+01 ) [beta gamma]
-OPAL {+0}> * rms emittance   = (  1.49220e-07 ,  1.47926e-07 ,  3.83635e-06 ) (not normalized)
-OPAL {+0}> * rms correlation = (  9.90830e-01 ,  9.91005e-01 , -7.33440e-01 )
-OPAL {+0}> * hr              = (  1.12273e-04 ,  1.11952e-04 ,  1.10135e-04 ) [m]
-OPAL {+0}> * dh              =    1.00000e-02 [m]
-OPAL {+0}> * t               =    4.18199e-10 [s]        dT    =  1.00000e-12 [s]
-OPAL {+0}> * spos            =    1.16102e-01 [m]
-OPAL {+0}> * ********************************************************************************** 
-OPAL {+0}> 
+ParallelTTracker {+0}> 16.05.59 Step    400 at  116.103 [mm] t=  4.182e-10 [s] E=    6.348 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.42 Step    401 at  116.401 [mm] t=  4.192e-10 [s] E=    6.363 [MeV] 
+ParallelTTracker {+0}> 16.05.59 Step    401 at  116.402 [mm] t=  4.192e-10 [s] E=    6.363 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.42 Step    402 at  116.700 [mm] t=  4.202e-10 [s] E=    6.378 [MeV] 
+ParallelTTracker {+0}> 16.06.00 Step    402 at  116.701 [mm] t=  4.202e-10 [s] E=    6.378 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.43 Step    403 at  116.999 [mm] t=  4.212e-10 [s] E=    6.392 [MeV] 
+ParallelTTracker {+0}> 16.06.00 Step    403 at  117.000 [mm] t=  4.212e-10 [s] E=    6.392 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.43 Step    404 at  117.298 [mm] t=  4.222e-10 [s] E=    6.406 [MeV] 
+ParallelTTracker {+0}> 16.06.01 Step    404 at  117.299 [mm] t=  4.222e-10 [s] E=    6.406 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.44 Step    405 at  117.597 [mm] t=  4.232e-10 [s] E=    6.419 [MeV] 
+ParallelTTracker {+0}> 16.06.02 Step    405 at  117.598 [mm] t=  4.232e-10 [s] E=    6.419 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.44 Step    406 at  117.896 [mm] t=  4.242e-10 [s] E=    6.432 [MeV] 
+ParallelTTracker {+0}> 16.06.02 Step    406 at  117.897 [mm] t=  4.242e-10 [s] E=    6.432 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.45 Step    407 at  118.195 [mm] t=  4.252e-10 [s] E=    6.444 [MeV] 
+ParallelTTracker {+0}> 16.06.03 Step    407 at  118.196 [mm] t=  4.252e-10 [s] E=    6.444 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.45 Step    408 at  118.494 [mm] t=  4.262e-10 [s] E=    6.456 [MeV] 
+ParallelTTracker {+0}> 16.06.03 Step    408 at  118.495 [mm] t=  4.262e-10 [s] E=    6.456 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.45 Step    409 at  118.793 [mm] t=  4.272e-10 [s] E=    6.468 [MeV] 
+ParallelTTracker {+0}> 16.06.04 Step    409 at  118.794 [mm] t=  4.272e-10 [s] E=    6.468 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.46 Step    410 at  119.092 [mm] t=  4.282e-10 [s] E=    6.479 [MeV] 
+ParallelTTracker {+0}> 16.06.04 Step    410 at  119.093 [mm] t=  4.282e-10 [s] E=    6.478 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.46 Step    411 at  119.391 [mm] t=  4.292e-10 [s] E=    6.489 [MeV] 
+ParallelTTracker {+0}> 16.06.05 Step    411 at  119.392 [mm] t=  4.292e-10 [s] E=    6.489 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.47 Step    412 at  119.690 [mm] t=  4.302e-10 [s] E=    6.499 [MeV] 
+ParallelTTracker {+0}> 16.06.06 Step    412 at  119.691 [mm] t=  4.302e-10 [s] E=    6.499 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.47 Step    413 at  119.989 [mm] t=  4.312e-10 [s] E=    6.509 [MeV] 
+ParallelTTracker {+0}> 16.06.06 Step    413 at  119.990 [mm] t=  4.312e-10 [s] E=    6.508 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.48 Step    414 at  120.288 [mm] t=  4.322e-10 [s] E=    6.518 [MeV] 
+ParallelTTracker {+0}> 16.06.07 Step    414 at  120.289 [mm] t=  4.322e-10 [s] E=    6.518 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.48 Step    415 at  120.587 [mm] t=  4.332e-10 [s] E=    6.526 [MeV] 
+ParallelTTracker {+0}> 16.06.07 Step    415 at  120.588 [mm] t=  4.332e-10 [s] E=    6.526 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.49 Step    416 at  120.886 [mm] t=  4.342e-10 [s] E=    6.535 [MeV] 
+ParallelTTracker {+0}> 16.06.08 Step    416 at  120.887 [mm] t=  4.342e-10 [s] E=    6.535 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.49 Step    417 at  121.185 [mm] t=  4.352e-10 [s] E=    6.542 [MeV] 
+ParallelTTracker {+0}> 16.06.09 Step    417 at  121.186 [mm] t=  4.352e-10 [s] E=    6.542 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.50 Step    418 at  121.484 [mm] t=  4.362e-10 [s] E=    6.550 [MeV] 
+ParallelTTracker {+0}> 16.06.09 Step    418 at  121.485 [mm] t=  4.362e-10 [s] E=    6.550 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.50 Step    419 at  121.783 [mm] t=  4.372e-10 [s] E=    6.557 [MeV] 
+ParallelTTracker {+0}> 16.06.10 Step    419 at  121.784 [mm] t=  4.372e-10 [s] E=    6.557 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.51 Step    420 at  122.082 [mm] t=  4.382e-10 [s] E=    6.564 [MeV] 
+ParallelTTracker {+0}> 16.06.10 Step    420 at  122.083 [mm] t=  4.382e-10 [s] E=    6.564 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.51 Step    421 at  122.381 [mm] t=  4.392e-10 [s] E=    6.570 [MeV] 
+ParallelTTracker {+0}> 16.06.11 Step    421 at  122.382 [mm] t=  4.392e-10 [s] E=    6.570 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.52 Step    422 at  122.680 [mm] t=  4.402e-10 [s] E=    6.576 [MeV] 
+ParallelTTracker {+0}> 16.06.11 Step    422 at  122.681 [mm] t=  4.402e-10 [s] E=    6.576 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.52 Step    423 at  122.979 [mm] t=  4.412e-10 [s] E=    6.581 [MeV] 
+ParallelTTracker {+0}> 16.06.12 Step    423 at  122.980 [mm] t=  4.412e-10 [s] E=    6.581 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.53 Step    424 at  123.278 [mm] t=  4.422e-10 [s] E=    6.587 [MeV] 
+ParallelTTracker {+0}> 16.06.13 Step    424 at  123.279 [mm] t=  4.422e-10 [s] E=    6.587 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.53 Step    425 at  123.577 [mm] t=  4.432e-10 [s] E=    6.592 [MeV] 
+ParallelTTracker {+0}> 16.06.13 Step    425 at  123.578 [mm] t=  4.432e-10 [s] E=    6.592 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.54 Step    426 at  123.876 [mm] t=  4.442e-10 [s] E=    6.596 [MeV] 
+ParallelTTracker {+0}> 16.06.14 Step    426 at  123.877 [mm] t=  4.442e-10 [s] E=    6.596 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.54 Step    427 at  124.175 [mm] t=  4.452e-10 [s] E=    6.601 [MeV] 
+ParallelTTracker {+0}> 16.06.14 Step    427 at  124.176 [mm] t=  4.452e-10 [s] E=    6.601 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.55 Step    428 at  124.474 [mm] t=  4.462e-10 [s] E=    6.605 [MeV] 
+ParallelTTracker {+0}> 16.06.15 Step    428 at  124.475 [mm] t=  4.462e-10 [s] E=    6.605 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.55 Step    429 at  124.773 [mm] t=  4.472e-10 [s] E=    6.608 [MeV] 
+ParallelTTracker {+0}> 16.06.15 Step    429 at  124.774 [mm] t=  4.472e-10 [s] E=    6.608 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.56 Step    430 at  125.072 [mm] t=  4.482e-10 [s] E=    6.612 [MeV] 
+ParallelTTracker {+0}> 16.06.16 Step    430 at  125.073 [mm] t=  4.482e-10 [s] E=    6.612 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.56 Step    431 at  125.371 [mm] t=  4.492e-10 [s] E=    6.615 [MeV] 
+ParallelTTracker {+0}> 16.06.17 Step    431 at  125.372 [mm] t=  4.492e-10 [s] E=    6.615 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.57 Step    432 at  125.670 [mm] t=  4.502e-10 [s] E=    6.618 [MeV] 
+ParallelTTracker {+0}> 16.06.17 Step    432 at  125.671 [mm] t=  4.502e-10 [s] E=    6.618 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.57 Step    433 at  125.969 [mm] t=  4.512e-10 [s] E=    6.621 [MeV] 
+ParallelTTracker {+0}> 16.06.18 Step    433 at  125.970 [mm] t=  4.512e-10 [s] E=    6.621 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.58 Step    434 at  126.268 [mm] t=  4.522e-10 [s] E=    6.623 [MeV] 
+ParallelTTracker {+0}> 16.06.18 Step    434 at  126.269 [mm] t=  4.522e-10 [s] E=    6.623 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.58 Step    435 at  126.567 [mm] t=  4.532e-10 [s] E=    6.626 [MeV] 
+ParallelTTracker {+0}> 16.06.19 Step    435 at  126.568 [mm] t=  4.532e-10 [s] E=    6.625 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.59 Step    436 at  126.866 [mm] t=  4.542e-10 [s] E=    6.628 [MeV] 
+ParallelTTracker {+0}> 16.06.19 Step    436 at  126.867 [mm] t=  4.542e-10 [s] E=    6.628 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.06.59 Step    437 at  127.165 [mm] t=  4.552e-10 [s] E=    6.629 [MeV] 
+ParallelTTracker {+0}> 16.06.20 Step    437 at  127.166 [mm] t=  4.552e-10 [s] E=    6.629 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.00 Step    438 at  127.464 [mm] t=  4.562e-10 [s] E=    6.631 [MeV] 
+ParallelTTracker {+0}> 16.06.21 Step    438 at  127.465 [mm] t=  4.562e-10 [s] E=    6.631 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.00 Step    439 at  127.763 [mm] t=  4.572e-10 [s] E=    6.633 [MeV] 
+ParallelTTracker {+0}> 16.06.21 Step    439 at  127.764 [mm] t=  4.572e-10 [s] E=    6.633 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.01 Step    440 at  128.062 [mm] t=  4.582e-10 [s] E=    6.634 [MeV] 
+ParallelTTracker {+0}> 16.06.22 Step    440 at  128.063 [mm] t=  4.582e-10 [s] E=    6.634 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.01 Step    441 at  128.361 [mm] t=  4.592e-10 [s] E=    6.635 [MeV] 
+ParallelTTracker {+0}> 16.06.22 Step    441 at  128.362 [mm] t=  4.592e-10 [s] E=    6.635 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.02 Step    442 at  128.660 [mm] t=  4.602e-10 [s] E=    6.636 [MeV] 
+ParallelTTracker {+0}> 16.06.23 Step    442 at  128.661 [mm] t=  4.602e-10 [s] E=    6.636 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.02 Step    443 at  128.959 [mm] t=  4.612e-10 [s] E=    6.637 [MeV] 
+ParallelTTracker {+0}> 16.06.24 Step    443 at  128.960 [mm] t=  4.612e-10 [s] E=    6.637 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.03 Step    444 at  129.258 [mm] t=  4.622e-10 [s] E=    6.638 [MeV] 
+ParallelTTracker {+0}> 16.06.24 Step    444 at  129.259 [mm] t=  4.622e-10 [s] E=    6.638 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.03 Step    445 at  129.557 [mm] t=  4.632e-10 [s] E=    6.639 [MeV] 
+ParallelTTracker {+0}> 16.06.25 Step    445 at  129.558 [mm] t=  4.632e-10 [s] E=    6.639 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.04 Step    446 at  129.856 [mm] t=  4.642e-10 [s] E=    6.639 [MeV] 
+ParallelTTracker {+0}> 16.06.25 Step    446 at  129.857 [mm] t=  4.642e-10 [s] E=    6.639 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.04 Step    447 at  130.155 [mm] t=  4.652e-10 [s] E=    6.640 [MeV] 
+ParallelTTracker {+0}> 16.06.26 Step    447 at  130.156 [mm] t=  4.652e-10 [s] E=    6.640 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.05 Step    448 at  130.454 [mm] t=  4.662e-10 [s] E=    6.640 [MeV] 
+ParallelTTracker {+0}> 16.06.26 Step    448 at  130.455 [mm] t=  4.662e-10 [s] E=    6.640 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.05 Step    449 at  130.753 [mm] t=  4.672e-10 [s] E=    6.640 [MeV] 
+ParallelTTracker {+0}> 16.06.27 Step    449 at  130.754 [mm] t=  4.672e-10 [s] E=    6.640 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.05 Step    450 at  131.052 [mm] t=  4.682e-10 [s] E=    6.640 [MeV] 
-OPAL {+0}> * Wrote beam phase space.
-OPAL {+0}> 
-OPAL {+0}> * ************** B U N C H ********************************************************* 
-OPAL {+0}> * NP              =   20000
-OPAL {+0}> * Qtot            =    2.00000e-01 [nC]       Qi    =  1.00000e-05 [nC]
-OPAL {+0}> * Ekin            =    6.64029e+00 [MeV]      dEkin =  5.77269e-02 [MeV]
-OPAL {+0}> * rmax            = (  1.83224e-03 ,  1.83940e-03 ,  1.34223e-01 ) [m]
-OPAL {+0}> * rmin            = ( -1.87385e-03 , -1.85637e-03 ,  1.27288e-01 ) [m]
-OPAL {+0}> * rms beam size   = (  7.76615e-04 ,  7.76395e-04 ,  1.15365e-03 ) [m]
-OPAL {+0}> * rms momenta     = (  5.77801e-02 ,  5.77949e-02 ,  1.13258e-01 ) [beta gamma]
-OPAL {+0}> * mean position   = ( -2.62469e-06 ,  6.02201e-07 ,  1.31052e-01 ) [m]
-OPAL {+0}> * mean momenta    = ( -1.55166e-04 ,  2.18757e-05 ,  1.39587e+01 ) [beta gamma]
-OPAL {+0}> * rms emittance   = (  1.22751e-07 ,  1.22555e-07 ,  3.54294e-06 ) (not normalized)
-OPAL {+0}> * rms correlation = (  9.99271e-01 ,  9.99273e-01 , -9.25598e-01 )
-OPAL {+0}> * hr              = (  1.19551e-04 ,  1.19218e-04 ,  1.10082e-04 ) [m]
-OPAL {+0}> * dh              =    1.00000e-02 [m]
-OPAL {+0}> * t               =    4.68199e-10 [s]        dT    =  1.00000e-12 [s]
-OPAL {+0}> * spos            =    1.31052e-01 [m]
-OPAL {+0}> * ********************************************************************************** 
-OPAL {+0}> 
+ParallelTTracker {+0}> 16.06.28 Step    450 at  131.053 [mm] t=  4.682e-10 [s] E=    6.640 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.06 Step    451 at  131.351 [mm] t=  4.692e-10 [s] E=    6.640 [MeV] 
+ParallelTTracker {+0}> 16.06.28 Step    451 at  131.352 [mm] t=  4.692e-10 [s] E=    6.640 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.07 Step    452 at  131.650 [mm] t=  4.702e-10 [s] E=    6.640 [MeV] 
+ParallelTTracker {+0}> 16.06.29 Step    452 at  131.651 [mm] t=  4.702e-10 [s] E=    6.640 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.07 Step    453 at  131.949 [mm] t=  4.712e-10 [s] E=    6.640 [MeV] 
+ParallelTTracker {+0}> 16.06.29 Step    453 at  131.950 [mm] t=  4.712e-10 [s] E=    6.640 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.08 Step    454 at  132.248 [mm] t=  4.722e-10 [s] E=    6.640 [MeV] 
+ParallelTTracker {+0}> 16.06.30 Step    454 at  132.249 [mm] t=  4.722e-10 [s] E=    6.640 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.08 Step    455 at  132.547 [mm] t=  4.732e-10 [s] E=    6.640 [MeV] 
+ParallelTTracker {+0}> 16.06.30 Step    455 at  132.548 [mm] t=  4.732e-10 [s] E=    6.640 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.09 Step    456 at  132.846 [mm] t=  4.742e-10 [s] E=    6.640 [MeV] 
+ParallelTTracker {+0}> 16.06.31 Step    456 at  132.847 [mm] t=  4.742e-10 [s] E=    6.639 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.09 Step    457 at  133.145 [mm] t=  4.752e-10 [s] E=    6.639 [MeV] 
+ParallelTTracker {+0}> 16.06.32 Step    457 at  133.146 [mm] t=  4.752e-10 [s] E=    6.639 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.10 Step    458 at  133.444 [mm] t=  4.762e-10 [s] E=    6.639 [MeV] 
+ParallelTTracker {+0}> 16.06.32 Step    458 at  133.445 [mm] t=  4.762e-10 [s] E=    6.639 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.10 Step    459 at  133.743 [mm] t=  4.772e-10 [s] E=    6.638 [MeV] 
+ParallelTTracker {+0}> 16.06.33 Step    459 at  133.744 [mm] t=  4.772e-10 [s] E=    6.638 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.11 Step    460 at  134.042 [mm] t=  4.782e-10 [s] E=    6.638 [MeV] 
+ParallelTTracker {+0}> 16.06.33 Step    460 at  134.043 [mm] t=  4.782e-10 [s] E=    6.638 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.11 Step    461 at  134.342 [mm] t=  4.792e-10 [s] E=    6.637 [MeV] 
+ParallelTTracker {+0}> 16.06.34 Step    461 at  134.343 [mm] t=  4.792e-10 [s] E=    6.637 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.12 Step    462 at  134.641 [mm] t=  4.802e-10 [s] E=    6.637 [MeV] 
+ParallelTTracker {+0}> 16.06.35 Step    462 at  134.642 [mm] t=  4.802e-10 [s] E=    6.637 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.12 Step    463 at  134.940 [mm] t=  4.812e-10 [s] E=    6.636 [MeV] 
+ParallelTTracker {+0}> 16.06.35 Step    463 at  134.941 [mm] t=  4.812e-10 [s] E=    6.636 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.13 Step    464 at  135.239 [mm] t=  4.822e-10 [s] E=    6.636 [MeV] 
+ParallelTTracker {+0}> 16.06.36 Step    464 at  135.240 [mm] t=  4.822e-10 [s] E=    6.636 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.13 Step    465 at  135.538 [mm] t=  4.832e-10 [s] E=    6.635 [MeV] 
+ParallelTTracker {+0}> 16.06.36 Step    465 at  135.539 [mm] t=  4.832e-10 [s] E=    6.635 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.14 Step    466 at  135.837 [mm] t=  4.842e-10 [s] E=    6.635 [MeV] 
+ParallelTTracker {+0}> 16.06.37 Step    466 at  135.838 [mm] t=  4.842e-10 [s] E=    6.635 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.14 Step    467 at  136.136 [mm] t=  4.852e-10 [s] E=    6.634 [MeV] 
+ParallelTTracker {+0}> 16.06.37 Step    467 at  136.137 [mm] t=  4.852e-10 [s] E=    6.634 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.15 Step    468 at  136.435 [mm] t=  4.862e-10 [s] E=    6.633 [MeV] 
+ParallelTTracker {+0}> 16.06.38 Step    468 at  136.436 [mm] t=  4.862e-10 [s] E=    6.633 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.15 Step    469 at  136.734 [mm] t=  4.872e-10 [s] E=    6.633 [MeV] 
+ParallelTTracker {+0}> 16.06.39 Step    469 at  136.735 [mm] t=  4.872e-10 [s] E=    6.633 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.16 Step    470 at  137.033 [mm] t=  4.882e-10 [s] E=    6.632 [MeV] 
+ParallelTTracker {+0}> 16.06.39 Step    470 at  137.034 [mm] t=  4.882e-10 [s] E=    6.632 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.16 Step    471 at  137.332 [mm] t=  4.892e-10 [s] E=    6.631 [MeV] 
+ParallelTTracker {+0}> 16.06.40 Step    471 at  137.333 [mm] t=  4.892e-10 [s] E=    6.631 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.17 Step    472 at  137.631 [mm] t=  4.902e-10 [s] E=    6.631 [MeV] 
+ParallelTTracker {+0}> 16.06.40 Step    472 at  137.632 [mm] t=  4.902e-10 [s] E=    6.631 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.17 Step    473 at  137.930 [mm] t=  4.912e-10 [s] E=    6.630 [MeV] 
+ParallelTTracker {+0}> 16.06.41 Step    473 at  137.931 [mm] t=  4.912e-10 [s] E=    6.630 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.18 Step    474 at  138.229 [mm] t=  4.922e-10 [s] E=    6.629 [MeV] 
+ParallelTTracker {+0}> 16.06.41 Step    474 at  138.230 [mm] t=  4.922e-10 [s] E=    6.629 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.18 Step    475 at  138.528 [mm] t=  4.932e-10 [s] E=    6.629 [MeV] 
+ParallelTTracker {+0}> 16.06.42 Step    475 at  138.529 [mm] t=  4.932e-10 [s] E=    6.629 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.19 Step    476 at  138.827 [mm] t=  4.942e-10 [s] E=    6.628 [MeV] 
+ParallelTTracker {+0}> 16.06.43 Step    476 at  138.828 [mm] t=  4.942e-10 [s] E=    6.628 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.19 Step    477 at  139.126 [mm] t=  4.952e-10 [s] E=    6.627 [MeV] 
+ParallelTTracker {+0}> 16.06.43 Step    477 at  139.127 [mm] t=  4.952e-10 [s] E=    6.627 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.20 Step    478 at  139.425 [mm] t=  4.962e-10 [s] E=    6.627 [MeV] 
+ParallelTTracker {+0}> 16.06.44 Step    478 at  139.426 [mm] t=  4.962e-10 [s] E=    6.626 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.20 Step    479 at  139.724 [mm] t=  4.972e-10 [s] E=    6.626 [MeV] 
+ParallelTTracker {+0}> 16.06.44 Step    479 at  139.725 [mm] t=  4.972e-10 [s] E=    6.626 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.21 Step    480 at  140.023 [mm] t=  4.982e-10 [s] E=    6.625 [MeV] 
+ParallelTTracker {+0}> 16.06.45 Step    480 at  140.024 [mm] t=  4.982e-10 [s] E=    6.625 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
 OPAL {+0}> * Wrote beam phase space.
 OPAL {+0}> 
 OPAL {+0}> * ************** B U N C H ********************************************************* 
 OPAL {+0}> * NP              =   20000
 OPAL {+0}> * Qtot            =    2.00000e-01 [nC]       Qi    =  1.00000e-05 [nC]
-OPAL {+0}> * Ekin            =    6.62521e+00 [MeV]      dEkin =  5.56396e-02 [MeV]
-OPAL {+0}> * rmax            = (  1.92492e-03 ,  1.93235e-03 ,  1.43341e-01 ) [m]
-OPAL {+0}> * rmin            = ( -1.96821e-03 , -1.94995e-03 ,  1.36408e-01 ) [m]
-OPAL {+0}> * rms beam size   = (  8.14696e-04 ,  8.14485e-04 ,  1.15330e-03 ) [m]
-OPAL {+0}> * rms momenta     = (  5.97582e-02 ,  5.97718e-02 ,  1.09164e-01 ) [beta gamma]
-OPAL {+0}> * mean position   = ( -2.72808e-06 ,  6.15906e-07 ,  1.40023e-01 ) [m]
-OPAL {+0}> * mean momenta    = ( -1.61704e-04 ,  2.07322e-05 ,  1.39291e+01 ) [beta gamma]
-OPAL {+0}> * rms emittance   = (  1.62094e-07 ,  1.62417e-07 ,  3.59144e-06 ) (not normalized)
-OPAL {+0}> * rms correlation = (  9.98924e-01 ,  9.98920e-01 , -9.17666e-01 )
-OPAL {+0}> * hr              = (  1.25585e-04 ,  1.25235e-04 ,  1.10046e-04 ) [m]
+OPAL {+0}> * Ekin            =    6.62513e+00 [MeV]      dEkin =  5.56463e-02 [MeV]
+OPAL {+0}> * rmax            = (  1.81962e-03 ,  1.86784e-03 ,  1.43341e-01 ) [m]
+OPAL {+0}> * rmin            = ( -1.87992e-03 , -1.84117e-03 ,  1.36409e-01 ) [m]
+OPAL {+0}> * rms beam size   = (  7.94215e-04 ,  7.94149e-04 ,  1.15175e-03 ) [m]
+OPAL {+0}> * rms momenta     = (  5.80813e-02 ,  5.81060e-02 ,  1.09177e-01 ) [beta gamma]
+OPAL {+0}> * mean position   = ( -2.71398e-06 ,  6.09775e-07 ,  1.40024e-01 ) [m]
+OPAL {+0}> * mean momenta    = ( -1.60192e-04 ,  2.03384e-05 ,  1.39290e+01 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  1.55298e-07 ,  1.55712e-07 ,  3.56733e-06 ) (not normalized)
+OPAL {+0}> * rms correlation = (  9.98900e-01 ,  9.98895e-01 , -9.18609e-01 )
+OPAL {+0}> * hr              = (  2.46636e-04 ,  2.47267e-04 ,  2.23624e-04 ) [m]
 OPAL {+0}> * dh              =    1.00000e-02 [m]
 OPAL {+0}> * t               =    4.98199e-10 [s]        dT    =  1.00000e-12 [s]
-OPAL {+0}> * spos            =    1.40023e-01 [m]
+OPAL {+0}> * spos            =    1.40024e-01 [m]
 OPAL {+0}> * ********************************************************************************** 
 OPAL {+0}> 
 OPAL {+0}> * Wrote beam statistics.
 ParallelTTracker {+0}> Dump phase space of last step
-ParallelTTracker {+0}> done executing ParallelTTracker at 08.07.21
+ParallelTTracker {+0}> done executing ParallelTTracker at 16.06.45
 OPAL{+0}> * ********************************************************************************** 
 OPAL{+0}>   Selected Tracking Method == PARALLEL-T, FOLLOWUP TRACK
 OPAL{+0}> * ********************************************************************************** 
-Error{+2}> H5 rc= -2 in /gpfs/home/adelmann/git/opal-src/src/Structure/DataSink.cpp @ line 486
-Error{+2}> H5 rc= -2 in /gpfs/home/adelmann/git/opal-src/src/Structure/DataSink.cpp @ line 500Error{+1}> H5 rc= -2 in /gpfs/home/adelmann/git/opal-src/src/Structure/DataSink.cpp @ line 486
-Error{+1}> H5 rc= -2 in /gpfs/home/adelmann/git/opal-src/src/Structure/DataSink.cpp @ line 500
-Error{+3}> H5 rc= -2 in /gpfs/home/adelmann/git/opal-src/src/Structure/DataSink.cpp @ line 486
-Error{+3}> H5 rc= -2 in /gpfs/home/adelmann/git/opal-src/src/Structure/DataSink.cpp @ line 500
-Error{+3}> H5 rc= -2 in /gpfs/home/adelmann/git/opal-src/src/Structure/DataSink.cpp @ line 503
-
-Error{+2}> H5 rc= -2 in /gpfs/home/adelmann/git/opal-src/src/Structure/DataSink.cpp @ line 503
-Error{+1}> H5 rc= -2 in /gpfs/home/adelmann/git/opal-src/src/Structure/DataSink.cpp @ line 503
 OPAL{+0}> * ************* B E A M ************************************************************ 
 OPAL{+0}> * BEAM        BEAM1
 OPAL{+0}> * PARTICLE    ELECTRON
@@ -1362,9 +1173,9 @@ OPAL{+0}> * ************* F I E L D S O L V E R ********************************
 OPAL{+0}> * FIELDSOLVER  FS1
 OPAL{+0}> * TYPE         FFT
 OPAL{+0}> * N-PROCESSORS 4
-OPAL{+0}> * MX           32
-OPAL{+0}> * MY           32
-OPAL{+0}> * MT           64
+OPAL{+0}> * MX           16
+OPAL{+0}> * MY           16
+OPAL{+0}> * MT           32
 OPAL{+0}> * BBOXINCR     1
 OPAL{+0}> * GRRENSF      INTEGRATED
 OPAL{+0}> * XDIM is parallel  
@@ -1377,34 +1188,43 @@ OPAL{+0}>
 OPAL{+0}> * ************** B U N C H ********************************************************* 
 OPAL{+0}> * NP              =   20000
 OPAL{+0}> * Qtot            =    2.00000e-01 [nC]       Qi    =  1.00000e-05 [nC]
-OPAL{+0}> * Ekin            =    6.62521e+00 [MeV]      dEkin =  5.56396e-02 [MeV]
-OPAL{+0}> * rmax            = (  1.92492e-03 ,  1.93235e-03 ,  1.43341e-01 ) [m]
-OPAL{+0}> * rmin            = ( -1.96821e-03 , -1.94995e-03 ,  1.36408e-01 ) [m]
-OPAL{+0}> * rms beam size   = (  8.14696e-04 ,  8.14485e-04 ,  1.15330e-03 ) [m]
-OPAL{+0}> * rms momenta     = (  5.97582e-02 ,  5.97718e-02 ,  1.09164e-01 ) [beta gamma]
-OPAL{+0}> * mean position   = ( -2.72808e-06 ,  6.15906e-07 ,  1.40023e-01 ) [m]
-OPAL{+0}> * mean momenta    = ( -1.61704e-04 ,  2.07322e-05 ,  1.39291e+01 ) [beta gamma]
-OPAL{+0}> * rms emittance   = (  1.62094e-07 ,  1.62417e-07 ,  3.59144e-06 ) (not normalized)
-OPAL{+0}> * rms correlation = (  9.98924e-01 ,  9.98920e-01 , -9.17666e-01 )
-OPAL{+0}> * hr              = (  1.25585e-04 ,  1.25235e-04 ,  1.10046e-04 ) [m]
+OPAL{+0}> * Ekin            =    6.62513e+00 [MeV]      dEkin =  5.56463e-02 [MeV]
+OPAL{+0}> * rmax            = (  1.81962e-03 ,  1.86784e-03 ,  1.43341e-01 ) [m]
+OPAL{+0}> * rmin            = ( -1.87992e-03 , -1.84117e-03 ,  1.36409e-01 ) [m]
+OPAL{+0}> * rms beam size   = (  7.94215e-04 ,  7.94149e-04 ,  1.15175e-03 ) [m]
+OPAL{+0}> * rms momenta     = (  5.80813e-02 ,  5.81060e-02 ,  1.09177e-01 ) [beta gamma]
+OPAL{+0}> * mean position   = ( -2.71398e-06 ,  6.09775e-07 ,  1.40024e-01 ) [m]
+OPAL{+0}> * mean momenta    = ( -1.60192e-04 ,  2.03384e-05 ,  1.39290e+01 ) [beta gamma]
+OPAL{+0}> * rms emittance   = (  1.55298e-07 ,  1.55712e-07 ,  3.56733e-06 ) (not normalized)
+OPAL{+0}> * rms correlation = (  9.98900e-01 ,  9.98895e-01 , -9.18609e-01 )
+OPAL{+0}> * hr              = (  2.46636e-04 ,  2.47267e-04 ,  2.23624e-04 ) [m]
 OPAL{+0}> * dh              =    1.00000e-02 [m]
 OPAL{+0}> * t               =    4.98199e-10 [s]        dT    =  1.00000e-11 [s]
-OPAL{+0}> * spos            =    1.40023e-01 [m]
+Error{+1}> H5 rc= -2 in /gpfs/home/kraus/gitwork/opal/src/Structure/DataSink.cpp @ line 486
+Error{+2}> H5 rc= -2 in /gpfs/home/kraus/gitwork/opal/src/Structure/DataSink.cpp @ line 486
+Error{+3}> H5 rc= -2 in /gpfs/home/kraus/gitwork/opal/src/Structure/DataSink.cpp @ line 486
+Error{+1}> H5 rc= -2 in /gpfs/home/kraus/gitwork/opal/src/Structure/DataSink.cpp @ line 500Error{+2}> H5 rc= -2 in /gpfs/home/kraus/gitwork/opal/src/Structure/DataSink.cpp @ line 500
+Error{+2}> H5 rc= -2 in /gpfs/home/kraus/gitwork/opal/src/Structure/DataSink.cpp @ line 503
+OPAL{+0}> * spos            =    1.40024e-01 [m]
 OPAL{+0}> * ********************************************************************************** 
 OPAL{+0}> 
-OPAL{+0}> Phase space dump frequency 50 and statistics dump frequency 1 w.r.t. the time step.
+OPAL{+0}> Phase space dump frequency 500 and statistics dump frequency 1 w.r.t. the time step.
 RFCavity {+0}> FINSS_RGUN using file PHINGU1.T7 (2D dynamic); zini= 0 m; zfinal= 0.175 m;
 Solenoid {+0}> FIND1_MSOL10 using file NEW_SINGLE_SOL_NOFRINGE_ASTRA.opal (1D magnetostatic); zini= -0.3 m; zfinal= 0.3 m;
 Solenoid {+0}> END using file NEW_SINGLE_SOL_NOFRINGE_ASTRA.opal (1D magnetostatic); zini= -0.3 m; zfinal= 0.3 m;
-Error{+0}> H5 rc= -2 in /gpfs/home/adelmann/git/opal-src/src/Structure/DataSink.cpp @ line 486
-Error{+0}> H5 rc= -2 in /gpfs/home/adelmann/git/opal-src/src/Structure/DataSink.cpp @ line 500
-Error{+0}> H5 rc= -2 in /gpfs/home/adelmann/git/opal-src/src/Structure/DataSink.cpp @ line 503
+Error{+3}> H5 rc= -2 in /gpfs/home/kraus/gitwork/opal/src/Structure/DataSink.cpp @ line 500
+Error{+3}> H5 rc= -2 in /gpfs/home/kraus/gitwork/opal/src/Structure/DataSink.cpp @ line 503
+
+Error{+1}> H5 rc= -2 in /gpfs/home/kraus/gitwork/opal/src/Structure/DataSink.cpp @ line 503
+Error{+0}> H5 rc= -2 in /gpfs/home/kraus/gitwork/opal/src/Structure/DataSink.cpp @ line 486
+Error{+0}> H5 rc= -2 in /gpfs/home/kraus/gitwork/opal/src/Structure/DataSink.cpp @ line 500
+Error{+0}> H5 rc= -2 in /gpfs/home/kraus/gitwork/opal/src/Structure/DataSink.cpp @ line 503
 ParallelTTracker {+0}> 
 ParallelTTracker {+0}> -------------------------------------------------------------------------------------
 ParallelTTracker {+0}> FINSS_RGUN: phi = phi_nom + phi_maxE + global phase shift = 123.432 degree, (global phase shift = -14.2992 degree) 
 ParallelTTracker {+0}> -------------------------------------------------------------------------------------
 ParallelTTracker {+0}> 
-ParallelTTracker {+0}> Track start at: 08.07.21, t= 4.98199e-10; zstop at: 0.3 [m]
+ParallelTTracker {+0}> Track start at: 16.06.45, t= 4.98199e-10; zstop at: 0.3 [m]
 ParallelTTracker {+0}> Executing ParallelTTracker, initial DT 1e-11 [s];
 ParallelTTracker {+0}> max integration steps 5000, next step= 0
 ParallelTTracker {+0}> Using default (Boris-Buneman) integrator
@@ -1431,162 +1251,162 @@ ParallelTTracker {+0}> MINBINEMITTED 10
 ParallelTTracker {+0}> MINSTEPFORREBIN 600
 ParallelTTracker {+0}> SURFACEEMISSIONSTOP after 1000 seconds
 ParallelTTracker {+0}> REPARTFREQ 100
-ParallelTTracker {+0}> 08.07.21 Step    481 at  143.013 [mm] t=  5.082e-10 [s] E=    6.619 [MeV] 
+ParallelTTracker {+0}> 16.06.46 Step    481 at  143.014 [mm] t=  5.082e-10 [s] E=    6.619 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.22 Step    482 at  146.003 [mm] t=  5.182e-10 [s] E=    6.614 [MeV] 
+ParallelTTracker {+0}> 16.06.46 Step    482 at  146.004 [mm] t=  5.182e-10 [s] E=    6.614 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.22 Step    483 at  148.993 [mm] t=  5.282e-10 [s] E=    6.610 [MeV] 
+ParallelTTracker {+0}> 16.06.47 Step    483 at  148.994 [mm] t=  5.282e-10 [s] E=    6.610 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.23 Step    484 at  151.983 [mm] t=  5.382e-10 [s] E=    6.607 [MeV] 
+ParallelTTracker {+0}> 16.06.47 Step    484 at  151.984 [mm] t=  5.382e-10 [s] E=    6.607 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.23 Step    485 at  154.974 [mm] t=  5.482e-10 [s] E=    6.605 [MeV] 
+ParallelTTracker {+0}> 16.06.48 Step    485 at  154.975 [mm] t=  5.482e-10 [s] E=    6.605 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.24 Step    486 at  157.964 [mm] t=  5.582e-10 [s] E=    6.603 [MeV] 
+ParallelTTracker {+0}> 16.06.48 Step    486 at  157.965 [mm] t=  5.582e-10 [s] E=    6.603 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.24 Step    487 at  160.954 [mm] t=  5.682e-10 [s] E=    6.603 [MeV] 
+ParallelTTracker {+0}> 16.06.49 Step    487 at  160.955 [mm] t=  5.682e-10 [s] E=    6.602 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.25 Step    488 at  163.944 [mm] t=  5.782e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.06.50 Step    488 at  163.945 [mm] t=  5.782e-10 [s] E=    6.602 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.25 Step    489 at  166.934 [mm] t=  5.882e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.06.50 Step    489 at  166.935 [mm] t=  5.882e-10 [s] E=    6.602 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.26 Step    490 at  169.924 [mm] t=  5.982e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.06.51 Step    490 at  169.925 [mm] t=  5.982e-10 [s] E=    6.601 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.26 Step    491 at  172.914 [mm] t=  6.082e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.06.51 Step    491 at  172.915 [mm] t=  6.082e-10 [s] E=    6.601 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.27 Step    492 at  175.904 [mm] t=  6.182e-10 [s] E=    6.601 [MeV] 
+ParallelTTracker {+0}> 16.06.52 Step    492 at  175.906 [mm] t=  6.182e-10 [s] E=    6.601 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.27 Step    493 at  178.895 [mm] t=  6.282e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.06.53 Step    493 at  178.896 [mm] t=  6.282e-10 [s] E=    6.601 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.28 Step    494 at  181.885 [mm] t=  6.382e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.06.53 Step    494 at  181.886 [mm] t=  6.382e-10 [s] E=    6.601 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.28 Step    495 at  184.875 [mm] t=  6.482e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.06.54 Step    495 at  184.876 [mm] t=  6.482e-10 [s] E=    6.601 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.29 Step    496 at  187.865 [mm] t=  6.582e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.06.54 Step    496 at  187.866 [mm] t=  6.582e-10 [s] E=    6.601 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.29 Step    497 at  190.855 [mm] t=  6.682e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.06.55 Step    497 at  190.856 [mm] t=  6.682e-10 [s] E=    6.601 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.30 Step    498 at  193.845 [mm] t=  6.782e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.06.55 Step    498 at  193.846 [mm] t=  6.782e-10 [s] E=    6.601 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.30 Step    499 at  196.835 [mm] t=  6.882e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.06.56 Step    499 at  196.836 [mm] t=  6.882e-10 [s] E=    6.601 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.31 Step    500 at  199.825 [mm] t=  6.982e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.06.57 Step    500 at  199.826 [mm] t=  6.982e-10 [s] E=    6.601 [MeV] 
 OPAL {+0}> * Wrote beam phase space.
 OPAL {+0}> 
 OPAL {+0}> * ************** B U N C H ********************************************************* 
 OPAL {+0}> * NP              =   20000
 OPAL {+0}> * Qtot            =    2.00000e-01 [nC]       Qi    =  1.00000e-05 [nC]
-OPAL {+0}> * Ekin            =    6.60154e+00 [MeV]      dEkin =  5.21096e-02 [MeV]
-OPAL {+0}> * rmax            = (  2.52055e-03 ,  2.52836e-03 ,  2.01637e-01 ) [m]
-OPAL {+0}> * rmin            = ( -2.55012e-03 , -2.53766e-03 ,  1.94718e-01 ) [m]
-OPAL {+0}> * rms beam size   = (  1.06364e-03 ,  1.06343e-03 ,  1.15117e-03 ) [m]
-OPAL {+0}> * rms momenta     = (  7.12697e-02 ,  7.12695e-02 ,  1.02240e-01 ) [beta gamma]
-OPAL {+0}> * mean position   = ( -3.43286e-06 ,  4.72442e-07 ,  1.99825e-01 ) [m]
-OPAL {+0}> * mean momenta    = ( -1.67473e-04 , -1.29286e-04 ,  1.38825e+01 ) [beta gamma]
-OPAL {+0}> * rms emittance   = (  3.36677e-06 ,  3.36765e-06 ,  3.67750e-06 ) (not normalized)
-OPAL {+0}> * rms correlation = (  7.87288e-01 ,  7.87065e-01 , -9.01018e-01 )
-OPAL {+0}> * hr              = (  1.63570e-04 ,  1.63420e-04 ,  1.09830e-04 ) [m]
+OPAL {+0}> * Ekin            =    6.60145e+00 [MeV]      dEkin =  5.21129e-02 [MeV]
+OPAL {+0}> * rmax            = (  2.37199e-03 ,  2.42892e-03 ,  2.01637e-01 ) [m]
+OPAL {+0}> * rmin            = ( -2.43317e-03 , -2.39385e-03 ,  1.94718e-01 ) [m]
+OPAL {+0}> * rms beam size   = (  1.03617e-03 ,  1.03614e-03 ,  1.14961e-03 ) [m]
+OPAL {+0}> * rms momenta     = (  6.93343e-02 ,  6.93314e-02 ,  1.02247e-01 ) [beta gamma]
+OPAL {+0}> * mean position   = ( -3.41100e-06 ,  4.65916e-07 ,  1.99826e-01 ) [m]
+OPAL {+0}> * mean momenta    = ( -1.65304e-04 , -1.28677e-04 ,  1.38824e+01 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  3.19622e-06 ,  3.19708e-06 ,  3.65157e-06 ) (not normalized)
+OPAL {+0}> * rms correlation = (  7.86464e-01 ,  7.86301e-01 , -9.02219e-01 )
+OPAL {+0}> * hr              = (  3.20344e-04 ,  3.21518e-04 ,  2.23185e-04 ) [m]
 OPAL {+0}> * dh              =    1.00000e-02 [m]
 OPAL {+0}> * t               =    6.98199e-10 [s]        dT    =  1.00000e-11 [s]
-OPAL {+0}> * spos            =    1.99825e-01 [m]
+OPAL {+0}> * spos            =    1.99826e-01 [m]
 OPAL {+0}> * ********************************************************************************** 
 OPAL {+0}> 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.32 Step    501 at  202.815 [mm] t=  7.082e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.06.57 Step    501 at  202.817 [mm] t=  7.082e-10 [s] E=    6.601 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.33 Step    502 at  205.806 [mm] t=  7.182e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.06.58 Step    502 at  205.807 [mm] t=  7.182e-10 [s] E=    6.601 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.33 Step    503 at  208.796 [mm] t=  7.282e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.06.58 Step    503 at  208.797 [mm] t=  7.282e-10 [s] E=    6.601 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.34 Step    504 at  211.786 [mm] t=  7.382e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.06.59 Step    504 at  211.787 [mm] t=  7.382e-10 [s] E=    6.601 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.34 Step    505 at  214.776 [mm] t=  7.482e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.06.59 Step    505 at  214.777 [mm] t=  7.482e-10 [s] E=    6.601 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.35 Step    506 at  217.766 [mm] t=  7.582e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.07.00 Step    506 at  217.767 [mm] t=  7.582e-10 [s] E=    6.601 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.35 Step    507 at  220.756 [mm] t=  7.682e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.07.01 Step    507 at  220.757 [mm] t=  7.682e-10 [s] E=    6.601 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.35 Step    508 at  223.746 [mm] t=  7.782e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.07.01 Step    508 at  223.747 [mm] t=  7.782e-10 [s] E=    6.601 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.36 Step    509 at  226.736 [mm] t=  7.882e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.07.02 Step    509 at  226.737 [mm] t=  7.882e-10 [s] E=    6.601 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.36 Step    510 at  229.726 [mm] t=  7.982e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.07.02 Step    510 at  229.727 [mm] t=  7.982e-10 [s] E=    6.601 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.37 Step    511 at  232.716 [mm] t=  8.082e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.07.03 Step    511 at  232.717 [mm] t=  8.082e-10 [s] E=    6.601 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.37 Step    512 at  235.706 [mm] t=  8.182e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.07.03 Step    512 at  235.707 [mm] t=  8.182e-10 [s] E=    6.601 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.38 Step    513 at  238.696 [mm] t=  8.282e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.07.04 Step    513 at  238.697 [mm] t=  8.282e-10 [s] E=    6.601 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.38 Step    514 at  241.686 [mm] t=  8.382e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.07.05 Step    514 at  241.688 [mm] t=  8.382e-10 [s] E=    6.601 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.39 Step    515 at  244.676 [mm] t=  8.482e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.07.05 Step    515 at  244.678 [mm] t=  8.482e-10 [s] E=    6.602 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.39 Step    516 at  247.667 [mm] t=  8.582e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.07.06 Step    516 at  247.668 [mm] t=  8.582e-10 [s] E=    6.602 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.40 Step    517 at  250.657 [mm] t=  8.682e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.07.06 Step    517 at  250.658 [mm] t=  8.682e-10 [s] E=    6.602 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.40 Step    518 at  253.647 [mm] t=  8.782e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.07.07 Step    518 at  253.648 [mm] t=  8.782e-10 [s] E=    6.602 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.41 Step    519 at  256.637 [mm] t=  8.882e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.07.08 Step    519 at  256.638 [mm] t=  8.882e-10 [s] E=    6.602 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.41 Step    520 at  259.627 [mm] t=  8.982e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.07.08 Step    520 at  259.628 [mm] t=  8.982e-10 [s] E=    6.602 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.42 Step    521 at  262.617 [mm] t=  9.082e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.07.09 Step    521 at  262.618 [mm] t=  9.082e-10 [s] E=    6.602 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.42 Step    522 at  265.607 [mm] t=  9.182e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.07.09 Step    522 at  265.608 [mm] t=  9.182e-10 [s] E=    6.602 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.43 Step    523 at  268.597 [mm] t=  9.282e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.07.10 Step    523 at  268.598 [mm] t=  9.282e-10 [s] E=    6.602 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.43 Step    524 at  271.587 [mm] t=  9.382e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.07.10 Step    524 at  271.588 [mm] t=  9.382e-10 [s] E=    6.602 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.44 Step    525 at  274.577 [mm] t=  9.482e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.07.11 Step    525 at  274.578 [mm] t=  9.482e-10 [s] E=    6.602 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.44 Step    526 at  277.567 [mm] t=  9.582e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.07.12 Step    526 at  277.568 [mm] t=  9.582e-10 [s] E=    6.602 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.45 Step    527 at  280.557 [mm] t=  9.682e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.07.12 Step    527 at  280.558 [mm] t=  9.682e-10 [s] E=    6.602 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.45 Step    528 at  283.547 [mm] t=  9.782e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.07.13 Step    528 at  283.548 [mm] t=  9.782e-10 [s] E=    6.602 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.46 Step    529 at  286.537 [mm] t=  9.882e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.07.13 Step    529 at  286.539 [mm] t=  9.882e-10 [s] E=    6.602 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.46 Step    530 at  289.527 [mm] t=  9.982e-10 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.07.14 Step    530 at  289.529 [mm] t=  9.982e-10 [s] E=    6.602 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.47 Step    531 at  292.517 [mm] t=  1.008e-09 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.07.14 Step    531 at  292.519 [mm] t=  1.008e-09 [s] E=    6.602 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.47 Step    532 at  295.508 [mm] t=  1.018e-09 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.07.15 Step    532 at  295.509 [mm] t=  1.018e-09 [s] E=    6.602 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.48 Step    533 at  298.498 [mm] t=  1.028e-09 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.07.16 Step    533 at  298.499 [mm] t=  1.028e-09 [s] E=    6.602 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
-ParallelTTracker {+0}> 08.07.48 Step    534 at  301.488 [mm] t=  1.038e-09 [s] E=    6.602 [MeV] 
+ParallelTTracker {+0}> 16.07.16 Step    534 at  301.489 [mm] t=  1.038e-09 [s] E=    6.602 [MeV] 
 OPAL {+0}> * Wrote beam statistics.
 OPAL {+0}> * Wrote beam phase space.
 OPAL {+0}> 
 OPAL {+0}> * ************** B U N C H ********************************************************* 
 OPAL {+0}> * NP              =   20000
 OPAL {+0}> * Qtot            =    2.00000e-01 [nC]       Qi    =  1.00000e-05 [nC]
-OPAL {+0}> * Ekin            =    6.60164e+00 [MeV]      dEkin =  5.17294e-02 [MeV]
-OPAL {+0}> * rmax            = (  3.24919e-03 ,  3.32783e-03 ,  3.04775e-01 ) [m]
-OPAL {+0}> * rmin            = ( -3.27789e-03 , -3.31571e-03 ,  2.97880e-01 ) [m]
-OPAL {+0}> * rms beam size   = (  1.37879e-03 ,  1.37846e-03 ,  1.14757e-03 ) [m]
-OPAL {+0}> * rms momenta     = (  8.74429e-02 ,  8.74527e-02 ,  1.01494e-01 ) [beta gamma]
-OPAL {+0}> * mean position   = ( -4.07172e-06 , -1.22102e-06 ,  3.01488e-01 ) [m]
-OPAL {+0}> * mean momenta    = (  2.10090e-05 , -2.66447e-04 ,  1.38826e+01 ) [beta gamma]
-OPAL {+0}> * rms emittance   = (  8.27443e-06 ,  8.27360e-06 ,  3.67300e-06 ) (not normalized)
-OPAL {+0}> * rms correlation = (  3.03584e-01 ,  3.03502e-01 , -8.99067e-01 )
-OPAL {+0}> * hr              = (  2.10551e-04 ,  2.14308e-04 ,  1.09454e-04 ) [m]
+OPAL {+0}> * Ekin            =    6.60155e+00 [MeV]      dEkin =  5.17317e-02 [MeV]
+OPAL {+0}> * rmax            = (  3.03791e-03 ,  3.11170e-03 ,  3.04775e-01 ) [m]
+OPAL {+0}> * rmin            = ( -3.06617e-03 , -3.05459e-03 ,  2.97880e-01 ) [m]
+OPAL {+0}> * rms beam size   = (  1.34231e-03 ,  1.34205e-03 ,  1.14598e-03 ) [m]
+OPAL {+0}> * rms momenta     = (  8.51057e-02 ,  8.51027e-02 ,  1.01499e-01 ) [beta gamma]
+OPAL {+0}> * mean position   = ( -4.03564e-06 , -1.21412e-06 ,  3.01489e-01 ) [m]
+OPAL {+0}> * mean momenta    = (  2.23523e-05 , -2.63715e-04 ,  1.38824e+01 ) [beta gamma]
+OPAL {+0}> * rms emittance   = (  7.84294e-06 ,  7.84213e-06 ,  3.64586e-06 ) (not normalized)
+OPAL {+0}> * rms correlation = (  3.02587e-01 ,  3.02216e-01 , -9.00356e-01 )
+OPAL {+0}> * hr              = (  4.06939e-04 ,  4.11086e-04 ,  2.22420e-04 ) [m]
 OPAL {+0}> * dh              =    1.00000e-02 [m]
 OPAL {+0}> * t               =    1.03820e-09 [s]        dT    =  1.00000e-11 [s]
-OPAL {+0}> * spos            =    3.01488e-01 [m]
+OPAL {+0}> * spos            =    3.01489e-01 [m]
 OPAL {+0}> * ********************************************************************************** 
 OPAL {+0}> 
 OPAL {+0}> * Wrote beam statistics.
 ParallelTTracker {+0}> Dump phase space of last step
-ParallelTTracker {+0}> done executing ParallelTTracker at 08.07.49
+ParallelTTracker {+0}> done executing ParallelTTracker at 16.07.16
 OPAL{+0}> * End of input stream "PSIGUN-1.in".
 Timings{+0}> -----------------------------------------------------------------
 Timings{+0}>      Timing results for 4 nodes:
 Timings{+0}> -----------------------------------------------------------------
-Timings{+0}> mainTimer ........... Wall tot =    267.602, CPU tot =     260.46
+Timings{+0}> mainTimer ........... Wall tot =    302.415, CPU tot =     301.84
 Timings{+0}> 
 Timings{+0}> Secondary emission .. Wall max =          0, CPU max =          0
 Timings{+0}>                       Wall avg =          0, CPU avg =          0
@@ -1612,21 +1432,21 @@ Timings{+0}> Particle Inside ..... Wall max =          0, CPU max =          0
 Timings{+0}>                       Wall avg =          0, CPU avg =          0
 Timings{+0}>                       Wall min =          0, CPU min =          0
 Timings{+0}> 
-Timings{+0}> SelfField ........... Wall max =    255.487, CPU max =      255.3
-Timings{+0}>                       Wall avg =    255.453, CPU avg =     255.14
-Timings{+0}>                       Wall min =    255.433, CPU min =     254.94
+Timings{+0}> SelfField ........... Wall max =    274.286, CPU max =     273.92
+Timings{+0}>                       Wall avg =    272.472, CPU avg =    272.193
+Timings{+0}>                       Wall min =    271.118, CPU min =     270.85
 Timings{+0}> 
-Timings{+0}> Boundingbox ......... Wall max =   0.127261, CPU max =       0.14
-Timings{+0}>                       Wall avg =   0.127105, CPU avg =      0.115
-Timings{+0}>                       Wall min =   0.127006, CPU min =        0.1
+Timings{+0}> Boundingbox ......... Wall max =    2.05611, CPU max =       2.09
+Timings{+0}>                       Wall avg =    2.01525, CPU avg =     1.9975
+Timings{+0}>                       Wall min =    1.96244, CPU min =        1.9
 Timings{+0}> 
-Timings{+0}> Statistics .......... Wall max =   0.391029, CPU max =       0.46
-Timings{+0}>                       Wall avg =   0.388562, CPU avg =     0.3925
-Timings{+0}>                       Wall min =   0.386078, CPU min =       0.33
+Timings{+0}> Statistics .......... Wall max =     3.0527, CPU max =       3.25
+Timings{+0}>                       Wall avg =    2.91765, CPU avg =     3.0025
+Timings{+0}>                       Wall min =    2.73563, CPU min =       2.76
 Timings{+0}> 
-Timings{+0}> Potential ........... Wall max =    233.969, CPU max =     233.88
-Timings{+0}>                       Wall avg =    233.902, CPU avg =    233.743
-Timings{+0}>                       Wall min =    233.863, CPU min =     233.49
+Timings{+0}> Potential ........... Wall max =    155.316, CPU max =     155.53
+Timings{+0}>                       Wall avg =    155.215, CPU avg =    155.098
+Timings{+0}>                       Wall min =    155.115, CPU min =     154.81
 Timings{+0}> 
 Timings{+0}> Histogram ........... Wall max =          0, CPU max =          0
 Timings{+0}>                       Wall avg =          0, CPU avg =          0
@@ -1640,45 +1460,45 @@ Timings{+0}> LoadDistr ........... Wall max =          0, CPU max =          0
 Timings{+0}>                       Wall avg =          0, CPU avg =          0
 Timings{+0}>                       Wall min =          0, CPU min =          0
 Timings{+0}> 
-Timings{+0}> GreensFTotal ........ Wall max =    132.749, CPU max =     132.65
-Timings{+0}>                       Wall avg =    132.338, CPU avg =    132.245
-Timings{+0}>                       Wall min =    131.547, CPU min =     131.56
+Timings{+0}> GreensFTotal ........ Wall max =    87.4824, CPU max =      87.59
+Timings{+0}>                       Wall avg =    86.8299, CPU avg =      86.94
+Timings{+0}>                       Wall min =     85.876, CPU min =      86.09
 Timings{+0}> 
-Timings{+0}> IntGreenF1 .......... Wall max =     18.654, CPU max =      18.95
-Timings{+0}>                       Wall avg =    17.6243, CPU avg =    17.6975
-Timings{+0}>                       Wall min =    16.6532, CPU min =      16.74
+Timings{+0}> IntGreenF1 .......... Wall max =    12.0486, CPU max =      12.02
+Timings{+0}>                       Wall avg =    10.8129, CPU avg =     10.795
+Timings{+0}>                       Wall min =    9.71086, CPU min =       9.75
 Timings{+0}> 
-Timings{+0}> IntGreenF2 .......... Wall max =    10.0934, CPU max =       9.83
-Timings{+0}>                       Wall avg =    7.35746, CPU avg =       7.29
-Timings{+0}>                       Wall min =    5.67531, CPU min =       5.51
+Timings{+0}> IntGreenF2 .......... Wall max =    10.4718, CPU max =      10.35
+Timings{+0}>                       Wall avg =    8.76472, CPU avg =       8.68
+Timings{+0}>                       Wall min =    7.46941, CPU min =       7.15
 Timings{+0}> 
-Timings{+0}> IntGreenF3 .......... Wall max =    27.5646, CPU max =       27.7
-Timings{+0}>                       Wall avg =    26.8908, CPU avg =    27.0225
-Timings{+0}>                       Wall min =    25.4132, CPU min =       25.5
+Timings{+0}> IntGreenF3 .......... Wall max =    14.5565, CPU max =       14.6
+Timings{+0}>                       Wall avg =    13.8719, CPU avg =    13.9275
+Timings{+0}>                       Wall min =     12.867, CPU min =      12.96
 Timings{+0}> 
-Timings{+0}> MirrorRho1 .......... Wall max =    4.09952, CPU max =       4.02
-Timings{+0}>                       Wall avg =    3.98933, CPU avg =     3.9475
-Timings{+0}>                       Wall min =    3.87561, CPU min =       3.86
+Timings{+0}> MirrorRho1 .......... Wall max =    4.22414, CPU max =       4.41
+Timings{+0}>                       Wall avg =     3.3088, CPU avg =     3.3425
+Timings{+0}>                       Wall min =    2.32322, CPU min =       2.45
 Timings{+0}> 
-Timings{+0}> ShIntGreenF1 ........ Wall max =    16.2115, CPU max =      16.11
-Timings{+0}>                       Wall avg =    15.4595, CPU avg =    15.2525
-Timings{+0}>                       Wall min =    14.6442, CPU min =      14.46
+Timings{+0}> ShIntGreenF1 ........ Wall max =    10.1941, CPU max =      10.33
+Timings{+0}>                       Wall avg =     9.1182, CPU avg =      9.185
+Timings{+0}>                       Wall min =    8.14628, CPU min =       8.08
 Timings{+0}> 
-Timings{+0}> ShIntGreenF2 ........ Wall max =    16.2504, CPU max =       16.1
-Timings{+0}>                       Wall avg =    15.4749, CPU avg =    15.5125
-Timings{+0}>                       Wall min =    14.7046, CPU min =      14.72
+Timings{+0}> ShIntGreenF2 ........ Wall max =    10.2115, CPU max =      10.28
+Timings{+0}>                       Wall avg =    9.13539, CPU avg =       9.05
+Timings{+0}>                       Wall min =    8.15633, CPU min =       7.99
 Timings{+0}> 
-Timings{+0}> ShIntGreenF3 ........ Wall max =    12.3341, CPU max =      12.46
-Timings{+0}>                       Wall avg =    9.07237, CPU avg =       8.99
-Timings{+0}>                       Wall min =     6.9728, CPU min =       6.93
+Timings{+0}> ShIntGreenF3 ........ Wall max =    14.4376, CPU max =      14.55
+Timings{+0}>                       Wall avg =    12.1258, CPU avg =     12.105
+Timings{+0}>                       Wall min =    10.1919, CPU min =       9.99
 Timings{+0}> 
-Timings{+0}> ShIntGreenF4 ........ Wall max =    28.1333, CPU max =      28.18
-Timings{+0}>                       Wall avg =    27.3484, CPU avg =     27.315
-Timings{+0}>                       Wall min =    25.8339, CPU min =      25.95
+Timings{+0}> ShIntGreenF4 ........ Wall max =    15.8869, CPU max =      15.94
+Timings{+0}>                       Wall avg =    14.4228, CPU avg =    14.5675
+Timings{+0}>                       Wall min =    12.6304, CPU min =      12.63
 Timings{+0}> 
-Timings{+0}> MirrorRho2 .......... Wall max =    9.17245, CPU max =       9.49
-Timings{+0}>                       Wall avg =    9.03337, CPU avg =     9.1225
-Timings{+0}>                       Wall min =    8.88571, CPU min =       8.66
+Timings{+0}> MirrorRho2 .......... Wall max =    6.60207, CPU max =       6.67
+Timings{+0}>                       Wall avg =    5.20913, CPU avg =       5.24
+Timings{+0}>                       Wall min =    3.73271, CPU min =       3.84
 Timings{+0}> 
 Timings{+0}> GreenF1 ............. Wall max =          0, CPU max =          0
 Timings{+0}>                       Wall avg =          0, CPU avg =          0
@@ -1696,56 +1516,56 @@ Timings{+0}> GreenF4 ............. Wall max =          0, CPU max =          0
 Timings{+0}>                       Wall avg =          0, CPU avg =          0
 Timings{+0}>                       Wall min =          0, CPU min =          0
 Timings{+0}> 
-Timings{+0}> H5PartTimer ......... Wall max =    6.75568, CPU max =       0.09
-Timings{+0}>                       Wall avg =    6.75547, CPU avg =       0.07
-Timings{+0}>                       Wall min =    6.75528, CPU min =       0.03
+Timings{+0}> H5PartTimer ......... Wall max =   0.237149, CPU max =       0.05
+Timings{+0}>                       Wall avg =   0.237093, CPU avg =     0.0325
+Timings{+0}>                       Wall min =    0.23705, CPU min =       0.02
 Timings{+0}> 
 Timings{+0}> H5BlockTimer ........ Wall max =          0, CPU max =          0
 Timings{+0}>                       Wall avg =          0, CPU avg =          0
 Timings{+0}>                       Wall min =          0, CPU min =          0
 Timings{+0}> 
-Timings{+0}> StatMarkerTimer ..... Wall max =   0.337696, CPU max =       0.37
-Timings{+0}>                       Wall avg =   0.191017, CPU avg =     0.2075
-Timings{+0}>                       Wall min =   0.141832, CPU min =       0.13
+Timings{+0}> StatMarkerTimer ..... Wall max =    1.11077, CPU max =       1.17
+Timings{+0}>                       Wall avg =    1.05087, CPU avg =       1.11
+Timings{+0}>                       Wall min =    1.03026, CPU min =       1.01
 Timings{+0}> 
-Timings{+0}> TIntegration1 ....... Wall max =   0.605419, CPU max =        0.7
-Timings{+0}>                       Wall avg =   0.605098, CPU avg =     0.6475
-Timings{+0}>                       Wall min =   0.604745, CPU min =       0.53
+Timings{+0}> TIntegration1 ....... Wall max =     4.8139, CPU max =       4.85
+Timings{+0}>                       Wall avg =    4.81376, CPU avg =     4.7925
+Timings{+0}>                       Wall min =    4.81357, CPU min =       4.73
 Timings{+0}> 
-Timings{+0}> TIntegration2 ....... Wall max =   0.783782, CPU max =       0.75
-Timings{+0}>                       Wall avg =   0.783194, CPU avg =       0.68
-Timings{+0}>                       Wall min =   0.782879, CPU min =       0.61
+Timings{+0}> TIntegration2 ....... Wall max =    6.09833, CPU max =       6.07
+Timings{+0}>                       Wall avg =    6.04291, CPU avg =       6.04
+Timings{+0}>                       Wall min =    5.99955, CPU min =       6.01
 Timings{+0}> 
-Timings{+0}> Fieldeval ........... Wall max =     0.8269, CPU max =       0.92
-Timings{+0}>                       Wall avg =   0.792828, CPU avg =     0.8275
-Timings{+0}>                       Wall min =   0.769424, CPU min =       0.72
+Timings{+0}> Fieldeval ........... Wall max =    4.54619, CPU max =       4.53
+Timings{+0}>                       Wall avg =    4.16984, CPU avg =       4.16
+Timings{+0}>                       Wall min =    3.88076, CPU min =       3.84
 Timings{+0}> 
-Timings{+0}> Binaryrepart ........ Wall max =   0.027936, CPU max =       0.04
-Timings{+0}>                       Wall avg =  0.0279292, CPU avg =     0.0275
-Timings{+0}>                       Wall min =   0.027924, CPU min =       0.02
+Timings{+0}> Binaryrepart ........ Wall max =    0.20933, CPU max =       0.21
+Timings{+0}>                       Wall avg =   0.208919, CPU avg =        0.2
+Timings{+0}>                       Wall min =   0.208549, CPU min =       0.19
 Timings{+0}> 
 Timings{+0}> WakeField ........... Wall max =          0, CPU max =          0
 Timings{+0}>                       Wall avg =          0, CPU avg =          0
 Timings{+0}>                       Wall min =          0, CPU min =          0
 Timings{+0}> 
-Timings{+0}> RC-RRtranspose ...... Wall max =    25.3574, CPU max =      25.66
-Timings{+0}>                       Wall avg =    23.5275, CPU avg =    23.7025
-Timings{+0}>                       Wall min =    20.3626, CPU min =      20.43
+Timings{+0}> RC-RRtranspose ...... Wall max =    20.1598, CPU max =      19.84
+Timings{+0}>                       Wall avg =    18.7915, CPU avg =      18.83
+Timings{+0}>                       Wall min =     16.851, CPU min =      17.59
 Timings{+0}> 
-Timings{+0}> RC-CCtranspose ...... Wall max =    89.3804, CPU max =      88.66
-Timings{+0}>                       Wall avg =    87.6897, CPU avg =      87.22
-Timings{+0}>                       Wall min =     85.573, CPU min =       84.6
+Timings{+0}> RC-CCtranspose ...... Wall max =    39.4106, CPU max =      39.32
+Timings{+0}>                       Wall avg =    38.1575, CPU avg =    37.9975
+Timings{+0}>                       Wall min =    36.0754, CPU min =      34.87
 Timings{+0}> 
-Timings{+0}> RC-RC1Dfft .......... Wall max =    16.1753, CPU max =      16.43
-Timings{+0}>                       Wall avg =    15.8131, CPU avg =     15.985
-Timings{+0}>                       Wall min =    14.7813, CPU min =      15.07
+Timings{+0}> RC-RC1Dfft .......... Wall max =    11.5161, CPU max =      11.97
+Timings{+0}>                       Wall avg =    11.3432, CPU avg =    11.4075
+Timings{+0}>                       Wall min =    11.2318, CPU min =       10.9
 Timings{+0}> 
-Timings{+0}> RC-CC1Dfft .......... Wall max =    22.5507, CPU max =      22.92
-Timings{+0}>                       Wall avg =    20.2275, CPU avg =    20.3975
-Timings{+0}>                       Wall min =    18.3978, CPU min =      18.71
+Timings{+0}> RC-CC1Dfft .......... Wall max =    14.4701, CPU max =      14.92
+Timings{+0}>                       Wall avg =    13.4536, CPU avg =     13.495
+Timings{+0}>                       Wall min =    12.4025, CPU min =      12.05
 Timings{+0}> 
-Timings{+0}> RC-total ............ Wall max =    150.888, CPU max =     150.67
-Timings{+0}>                       Wall avg =    148.114, CPU avg =    148.193
-Timings{+0}>                       Wall min =    141.537, CPU min =     142.33
+Timings{+0}> RC-total ............ Wall max =     89.648, CPU max =      89.78
+Timings{+0}>                       Wall avg =    87.6327, CPU avg =      87.75
+Timings{+0}>                       Wall min =    84.8093, CPU min =      85.35
 Timings{+0}> 
 Timings{+0}> -----------------------------------------------------------------
