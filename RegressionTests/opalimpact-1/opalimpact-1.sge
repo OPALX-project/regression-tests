@@ -1,7 +1,7 @@
 #!/bin/bash
 #$ -cwd
 #$ -j y
-#$ -pe mpi 1
+#$ -pe orte 1
 #$ -N opalimpact-1-RT
 #$ -v OPENMPI,LD_LIBRARY_PATH,OPAL_EXE_PATH,REG_TEST_DIR
 
@@ -17,5 +17,5 @@ echo "SLOTS=$NSLOTS"
 
 cd $REG_TEST_DIR
 OPAL="$OPAL_EXE_PATH/opal opalimpact-1.in --info 0 --warn 0 2>&1"
-CMD="$MPIHOME/bin/mpirun -machinefile $MACHINE_FILE -np $NSLOTS  --mca ras localhost --mca pls rsh  $OPAL "
+CMD="$OPENMPI/bin/mpirun -x LD_LIBRARY_PATH -machinefile $MACHINE_FILE -np $NSLOTS $OPAL "
 $CMD
