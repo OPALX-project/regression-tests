@@ -197,7 +197,7 @@ class StatTest:
     """
     def readStatVariable(self, filename):
         vars = []
-        nrCol = 0
+        nrCol = -1
         numScalars = 0
         hasReadHeader = False
         lines = readfile(filename + ".stat")
@@ -219,7 +219,7 @@ class StatTest:
                 numScalars -= 1
                 continue
 
-            elif hasReadHeader == True and numScalars == 0:
+            elif hasReadHeader == True and numScalars == 0 and nrCol > -1:
                 values = str.split(line, "\t")
                 vars.append(float(values[nrCol]))
 
