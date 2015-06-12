@@ -70,7 +70,7 @@ def writeSgeFile(regtestname):
     sgefile += "echo \"SLOTS=$NSLOTS\"\n"
     sgefile += "\n"
     sgefile += "cd $REG_TEST_DIR\n"
-    sgefile += "OPAL=\"$OPAL_EXE_PATH/opal " + regtestname + ".in --commlib mpi --info 0 --warn 0 2>&1\"\n"
+    sgefile += "OPAL=\"$OPAL_EXE_PATH/opal " + regtestname + ".in --commlib mpi --info 3 --warn 0 2>&1\"\n"
     sgefile += "CMD=\"$MPIHOME/bin/mpirun -machinefile $MACHINE_FILE -np $NSLOTS  --mca ras localhost --mca pls rsh  $OPAL \"\n"
     sgefile += "$CMD"
     

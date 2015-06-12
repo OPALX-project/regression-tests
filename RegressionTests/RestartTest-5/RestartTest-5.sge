@@ -12,6 +12,6 @@ cp $MACHINE_FILE machinefile.last
 cd $REG_TEST_DIR
 for X in h5 lbal stat;do cp RestartTest-5.$X.bak RestartTest-5.$X;done
 
-OPAL="$OPAL_EXE_PATH/opal RestartTest-5.in -restart 0 --commlib mpi --info 0 --warn 0 2>&1"
+OPAL="$OPAL_EXE_PATH/opal RestartTest-5.in -restart 0 --commlib mpi --info 3 --warn 0 2>&1"
 CMD="$OPENMPI/bin/mpirun -x LD_LIBRARY_PATH -machinefile $MACHINE_FILE -np $NSLOTS $OPAL "
 $CMD

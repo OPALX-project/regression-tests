@@ -149,7 +149,12 @@ def genplot(simname, var):
         readLines += 1
 
     if revLine > 0:
-        refRevision += ": " + lines[readLines + revLine]
+        m = re.search('(.* git rev\. [A-Za-z0-9]{7})[A-Za-z0-9]*', lines[readLines + revLine]);
+
+        if (m != None):
+            refRevision += ": " + m.group(1)
+        else:
+            refRevision += ": " + lines[readLines + revLine]
 
     if nrCol > -1:
         data2 = open('data2.dat','w')

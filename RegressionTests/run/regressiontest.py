@@ -116,7 +116,7 @@ class RegressionTest:
             os.environ["REG_TEST_DIR"] = self.dirname
 
             # ADA cleanup all OLD job files if there are any
-            subprocess.getoutput("rm -rf " + self.simname + "-RT.*")
+            subprocess.getoutput("rm -rf " + self.simname + "-RT.* " + self.simname + "*.png")
             if not run_local:
                 self.submitToSGE()
                 self.waitUntilCompletion()
@@ -130,7 +130,8 @@ class RegressionTest:
 
             # move plots to plot dir
             d = datetime.date.today()
-            plotdir = "plots_" + d.isoformat()
+            plotdir = "results/" + d.isoformat() + "/plots_" + d.isoformat()
+
             subprocess.getoutput("mkdir " + curd + "/" + plotdir)
             subprocess.getoutput("cp -rf *.png " + curd + "/" + plotdir)
 
@@ -138,7 +139,6 @@ class RegressionTest:
             subprocess.getoutput("cp -rf " + self.simname + ".stat " + curd + "/" + self.resultdir)
             subprocess.getoutput("cp -rf " + self.simname + ".lbal " + curd + "/" + self.resultdir)
             subprocess.getoutput("cp -rf " + self.simname + ".out " + curd + "/" + self.resultdir)
-            subprocess.getoutput("cp -rf ../" + plotdir + " "  + curd + "/results/" + d.isoformat())
         os.chdir(curd)
 
     """

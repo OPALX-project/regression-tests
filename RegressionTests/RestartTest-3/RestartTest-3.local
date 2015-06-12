@@ -2,5 +2,5 @@
 rm -f RestartTest-3.stat RestartTest-3.lbal RestartTest-3.h5
 for X in lbal stat;do cp RestartTest-3.$X.bak RestartTest-3.$X;done
 
-mpirun -np 4 $OPAL_EXE_PATH/opal RestartTest-3.in -restart -1 -restartfn RestartTest-3.h5.bak --commlib mpi --info 0 --warn 0 2>&1
+mpirun -np 4 $OPAL_EXE_PATH/opal RestartTest-3.in -restart -1 -restartfn RestartTest-3.h5.bak --commlib mpi --info 3 --warn 0 2>&1
 

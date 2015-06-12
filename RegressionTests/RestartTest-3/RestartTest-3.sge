@@ -13,6 +13,6 @@ cd $REG_TEST_DIR
 rm -f RestartTest-3.stat RestartTest-3.lbal RestartTest-3.h5
 for X in lbal stat;do cp RestartTest-3.$X.bak RestartTest-3.$X;done
 
-OPAL="$OPAL_EXE_PATH/opal RestartTest-3.in -restart -1 -restartfn RestartTest-3.h5.bak --commlib mpi --info 0 --warn 0 2>&1"
+OPAL="$OPAL_EXE_PATH/opal RestartTest-3.in -restart -1 -restartfn RestartTest-3.h5.bak --commlib mpi --info 3 --warn 0 2>&1"
 CMD="$OPENMPI/bin/mpirun -x LD_LIBRARY_PATH -machinefile $MACHINE_FILE -np $NSLOTS $OPAL "
 $CMD

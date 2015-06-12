@@ -16,6 +16,6 @@ cat $MACHINE_FILE
 echo "SLOTS=$NSLOTS"
 
 cd $REG_TEST_DIR
-OPAL="$OPAL_EXE_PATH/opal opalimpact-1.in --info 0 --warn 0 2>&1"
+OPAL="$OPAL_EXE_PATH/opal opalimpact-1.in --info 3 --warn 0 2>&1"
 CMD="$OPENMPI/bin/mpirun -x LD_LIBRARY_PATH -machinefile $MACHINE_FILE -np $NSLOTS $OPAL "
 $CMD
