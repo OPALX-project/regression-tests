@@ -130,7 +130,7 @@ class RegressionTest:
 
             # move plots to plot dir
             d = datetime.date.today()
-            plotdir = "results/" + d.isoformat() + "/plots_" + d.isoformat()
+            plotdir = "results/" + d.isoformat() + "/plots"
 
             subprocess.getoutput("mkdir " + curd + "/" + plotdir)
             subprocess.getoutput("cp -rf *.png " + curd + "/" + plotdir)
@@ -665,4 +665,3 @@ class LossTest:
                      "track_id":7, "turn":8, "time":9}
     mode_list = {"last":testLast, "all":testAll, "error":testError,
                      "avg":testMean}
-

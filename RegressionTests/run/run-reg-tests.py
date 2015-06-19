@@ -190,7 +190,7 @@ def main(argv):
         brokentests = rep.NrBroken()
         webfilename = "results_%s_%s_%s.xml" % (d.day, d.month, d.year)
         shutil.copy ("results.xml", www_folder + "/" + webfilename)
-        subprocess.getoutput("cp -rf plots_" + d.isoformat() + " " + www_folder + "/")
+        subprocess.getoutput("cp -rf results/" + d.isoformat() + "/plots " + www_folder + "/plots_" + d.isoformat())
         indexhtml = open(www_folder + "/index.html").readlines()
         for line in range(len(indexhtml)):
             if "insert here" in indexhtml[line]:
@@ -217,8 +217,6 @@ def main(argv):
 
         subprocess.getoutput("cp -rf " + "results.xml " + resultdir)
 
-    if runAsUser:
-        subprocess.getoutput("rm -rf " + regdir + "/plots_" + d.isoformat())
     bailout(runAsUser)
 
 #call main
