@@ -47,8 +47,7 @@ Fs1:FIELDSOLVER, FSTYPE=FFT, MX=32, MY=32, MT=32,
 
 beam1: BEAM, PARTICLE=PROTON, pc=P0, NPART=12, BCURRENT=1.0E-19, CHARGE=1.0, BFREQ=frequency;
 
-track, line=l1, beam=beam1,MAXSTEPS=max_steps,STEPSPERTURN=steps_per_turn;
-run, file = "track_output", turns = 1, method = "CYCLOTRON-T", beam=beam1,
-     fieldsolver=Fs1, distribution=Dist1;
-endtrack;
-Stop;
+TRACK, LINE=l1, BEAM=beam1, MAXSTEPS=max_steps, STEPSPERTURN=steps_per_turn;
+RUN, METHOD="CYCLOTRON-T", BEAM=beam1, FIELDSOLVER=Fs1, DISTRIBUTION=Dist1;
+ENDTRACK;
+STOP;
