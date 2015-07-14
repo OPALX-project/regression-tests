@@ -94,7 +94,7 @@ beam1: BEAM, PARTICLE=ELECTRON, pc=P0, NPART=1e3, BFREQ=1498.953425154e6, BCURRE
 Select, Line=l1;
 
 track,line=l1, beam=beam1, ZSTOP=5.0, MAXSTEPS=14226, DT=1.0e-11;
- run, file = "track_output", method = "PARALLEL-T", beam=beam1, fieldsolver=Fs1, distribution=Dist1;
+ run, method = "PARALLEL-T", beam=beam1, fieldsolver=Fs1, distribution=Dist1;
 endtrack;
 Stop;
 
