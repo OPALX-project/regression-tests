@@ -37,15 +37,12 @@ TFall    = 10.0e-12;
 TPulseFWHM = 31.85607e-12;
 
 Dist1:DISTRIBUTION, DISTRIBUTION = "FLATTOP",
-                    SIGMAX = 0.0008102, SIGMAPX = 0.0, CORRX = 0.0,
-                    SIGMAY = 0.0008102, SIGMAPY = 0.0, CORRY = 0.0,
+                    SIGMAX = 0.0006102, SIGMAPX = 0.0, CORRX = 0.0,
+                    SIGMAY = 0.0006102, SIGMAPY = 0.0, CORRY = 0.0,
                     SIGMAT = 0.0, PT = 0.0, SIGMAPT = 0.0, CORRT = 0.0, EKIN = 0.23,
                     TRISE = TRise, TFALL = TFall, TPULSEFWHM = TPulseFWHM,
                     EMISSIONMODEL = ASTRA, EMISSIONSTEPS=300, NBIN = 10, EMITTED = TRUE, WRITETOFILE = TRUE,
-                    LASERPROFFN = "TruncatedGauss.h5", IMAGENAME = "/entry1/OBLA/Laser/FINLS_TR_SCACAT", INTENSITYCUT = 0.01;
-//                    LASERPROFFN = "Gauss.h5", IMAGENAME = "/entry1/OBLA/Laser/FINLS_TR_SCACAT", INTENSITYCUT = 0.01;
-//                    LASERPROFFN = "Uniform.h5", IMAGENAME = "/entry1/OBLA/Laser/FINLS_TR_SCACAT", INTENSITYCUT = 0.01;
-//                    LASERPROFFN = "QuickSave.h5", IMAGENAME = "/entry1/OBLA/Laser/FINLS_TR_SCACAT", INTENSITYCUT = 0.45;
+                    LASERPROFFN = "QuickSave.h5", IMAGENAME = "/entry1/OBLA/Laser/FINLS_TR_SCACAT", INTENSITYCUT = 0.45;
 
 MINSTEPFORREBIN=600;
 
