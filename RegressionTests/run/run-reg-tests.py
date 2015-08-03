@@ -19,6 +19,8 @@ from documentation import OpalDoxygen
 from tools import readfile
 from tools import module_load
 from tools import sendmails
+from tools import getRevisionTests
+from tools import getRevisionOpal
 
 #FIXME: ugly global variables
 totalNrTests = 0
@@ -104,6 +106,18 @@ def bailout(runAsUser):
         print (rep.getReport())
 
 
+def addRevisionStrings(rep):
+    revision_report = TempXMLElement("Revisions")
+    code_report = TempXMLElement("code")
+    code_report.appendTextNode(getRevisionOpal())
+    revision_report.appendChild(code_report)
+
+    tests_report = TempXMLElement("tests")
+    tests_report.appendTextNode(getRevisionTests())
+    revision_report.appendChild(tests_report)
+
+    rep.appendChild(revision_report)
+
 def main(argv):
     rep = Reporter()
     d = datetime.date.today()
@@ -181,6 +195,8 @@ def main(argv):
     arglist = [runtests, run_local, queue]
     for root, dirs, files in os.walk("./"):
         callback(arglist, root, files)
+
+    addRevisionStrings(rep)
 
     rep.dumpXML("results.xml")
 

@@ -11,33 +11,17 @@
     .no-hover:hover {text-decoration:none; color:#000;}
     </style>
     <body>
-        <h2><a name="build_tests" class="no-hover">Build Tests</a></h2>
+        <h2>Revisions</h2>
         <table border="0">
-            <tr bgcolor="#9acd32">
-                <th>Name</th>
-                <th>Revision</th>
-                <th>Status</th>
-            </tr>
-        <xsl:for-each select="Tests/Build">
-            <xsl:choose>
-                <xsl:when test="contains(@status,'OK')">
-                    <tr>
-                        <td><xsl:value-of select="@name"/></td>
-                        <td>r<xsl:value-of select="@revision"/></td>
-                        <td align="center"><img src="ok.png"/></td>
-                    </tr>
-                    </xsl:when>
-                    <xsl:otherwise>
-                    <tr bgcolor="#cdba2d">
-                        <td><xsl:value-of select="@name"/></td>
-                        <td>r<xsl:value-of select="@revision"/></td>
-                        <td align="center"><img src="nok.png"/></td>
-                    </tr>
-                    </xsl:otherwise>
-                </xsl:choose>
-        </xsl:for-each> 
-        </table><br/>
-
+          <tr>
+            <td bgcolor="#9acd32">Code: </td>
+            <td><b><xsl:value-of select="Tests/Revisions/code"/></b></td>
+          </tr>
+          <tr>
+            <td bgcolor="#9acd32">Tests: </td>
+            <td><b><xsl:value-of select="Tests/Revisions/tests"/></b></td>
+          </tr>
+        </table>
         <h2>Regression Tests</h2>
         <xsl:for-each select="Tests/Simulation">
             <xsl:variable name="simname" select="@name"/>
@@ -103,8 +87,8 @@
                     <!--<xsl:value-of select="@var"/>:<br/>-->
                     <xsl:variable name="varname" select="@var"/>
                     <a name="{$simname}_{$varname}">
-                        <img style="margin-right:3px; margin-bottom:3px;" src="{plot}" alt="" title="" /> 
-                    </a> 
+                        <img style="margin-right:3px; margin-bottom:3px;" src="{plot}" alt="" title="" />
+                    </a>
 <!--                    <div style="width:100%; text-align:right">-->
                         <a href="#build_tests">
                             top &#8593;
@@ -112,7 +96,7 @@
 <!--                    </div>-->
                     <br/><br/>
                 </xsl:if>
-            
+
             </xsl:for-each>
         <br/>
         </xsl:for-each>

@@ -193,3 +193,29 @@ def genplot(simname, var):
         print ("Error in genplot: Cannot find stat variable!")
 
     return "plots_" + d.isoformat() + "/" + filename + ".png"
+
+def getRevisionTests():
+    if sys.version_info < (3,0):
+        revision = commands.getoutput("git rev-parse HEAD")
+    else:
+        revision = subprocess.getoutput("git rev-parse HEAD")
+
+    return revision[0:7]
+
+def getRevisionOpal():
+    fh = open("testRevision.in","w")
+    fh.write("WHAT, GITREVISION;\nQUIT;")
+    fh.close()
+    exe = os.getenv("OPAL_EXE_PATH") + "/opal"
+    if sys.version_info < (3,0):
+        output = commands.getoutput(exe + " testRevision.in 1>/dev/null")
+        commands.getoutput("rm testRevision.in")
+    else:
+        output = subprocess.getoutput(exe + " testRevision.in 1>/dev/null")
+        subprocess.getoutput("rm testRevision.in")
+
+    revRe = re.search('GITREVISION="(.{40})";$',output)
+    if (revRe != None):
+        return (revRe.group(1))[0:7]
+    else:
+        return ""
