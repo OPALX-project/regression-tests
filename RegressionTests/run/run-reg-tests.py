@@ -89,6 +89,11 @@ def callback(arg, dirname, fnames):
     totalNrPassed += rt.totalNrPassed
     rep.appendReport("\n\n")
 
+    if runtests:
+        if simname in runtests:
+            runtests.remove(simname)
+            runtests.append("DONE")
+
 def bailout(runAsUser):
     rep = Reporter()
     d = datetime.date.today()
@@ -133,6 +138,7 @@ def main(argv):
     totalNrPassed = 0
     runAsUser = False
     runtests = list()
+    run_with_tests = False
     run_local = False
     do_publish = True
 
@@ -149,6 +155,7 @@ def main(argv):
             if arg.startswith("--tests"):
                 tests = str.split(arg, "=")[1]
                 runtests = str.split(tests, ",")
+                run_with_tests = True
     else:
         #"load" modules need to compile and run regression tests
         modules = readfile("modules")
@@ -195,6 +202,15 @@ def main(argv):
     arglist = [runtests, run_local, queue]
     for root, dirs, files in os.walk("./"):
         callback(arglist, root, files)
+
+    if run_with_tests and len(runtests) > 0:
+        unknownExist = False
+        for test in runtests:
+            if test != "DONE":
+                rep.appendReport(">>> NO TEST CALLED '" + test + "'\n")
+                unknownExist = True
+        if unknownExist:
+            rep.appendReport("\n\n")
 
     addRevisionStrings(rep)
 
