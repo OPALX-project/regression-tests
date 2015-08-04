@@ -13,13 +13,13 @@
     <body>
         <h2>Revisions</h2>
         <table border="0">
-          <tr>
-            <td bgcolor="#9acd32">Code: </td>
-            <td><b><xsl:value-of select="Tests/Revisions/code"/></b></td>
+          <tr bgcolor="#9acd32">
+            <th>Code</th>
+            <th>Tests</th>
           </tr>
           <tr>
-            <td bgcolor="#9acd32">Tests: </td>
-            <td><b><xsl:value-of select="Tests/Revisions/tests"/></b></td>
+            <td style="padding: 0px 10px 0px 10px"><xsl:value-of select="Tests/Revisions/code"/></td>
+            <td style="padding: 0px 10px 0px 10px"><xsl:value-of select="Tests/Revisions/tests"/></td>
           </tr>
         </table>
         <h2>Regression Tests</h2>
