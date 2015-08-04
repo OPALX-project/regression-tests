@@ -1,8 +1,8 @@
 SDDS1
-&description text="Statistics data Distribution-Gauss-1.in 17/06/2013 07.14.52" 
+&description text="Statistics data Distribution-Gauss-1.in 04/08/2015 12:52:31" 
 , contents="stat parameters" &end
-&parameter name=processors, type=long, description="Number of Processors" &end
-&parameter name=revision, type=string, description="svn revision of opal" &end
+&parameter name=processors, type=long, description="Number of Cores used" &end
+&parameter name=revision, type=string, description="git revision of opal" &end
 &column name=t, type=double, units=s, description="1 Time" &end
 &column name=s, type=double, units=m, description="2 Average Longitudinal Position" &end
 &column name=numParticles, type=long, units=1, description="3 Number of Macro Particles" &end
@@ -23,35 +23,36 @@ SDDS1
 &column name=max_x, type=double, units=m , description="18 Max Beamsize in x  " &end
 &column name=max_y, type=double, units=m , description="19 Max Beamsize in y  " &end
 &column name=max_s, type=double, units=m , description="20 Max Beamsize in s  " &end
-&column name=beta_x, type=double, units=m , description="21 Beta function in x  " &end
-&column name=beta_y, type=double, units=m , description="22 Beta function in y  " &end
-&column name=alpha_x, type=double, units=1 , description="23 Alpha function in x  " &end
-&column name=alpha_y, type=double, units=1 , description="24 Alpha function in y  " &end
-&column name=Dx, type=double, units=m , description="25 Dispersion in x  " &end
-&column name=DDx, type=double, units=1 , description="26 Derivative of dispersion in x  " &end
-&column name=Dy, type=double, units=m , description="27 Dispersion in y  " &end
-&column name=DDy, type=double, units=1 , description="28 Derivative of dispersion in y  " &end
-&column name=Bx_head, type=double, units=T , description="29 Bx-Field component of head particle  " &end
-&column name=By_head, type=double, units=T , description="30 By-Field component of head particle  " &end
-&column name=Bz_head, type=double, units=T , description="31 Bz-Field component of head particle  " &end
-&column name=Ex_head, type=double, units=MV/m , description="32 Ex-Field component of head particle  " &end
-&column name=Ey_head, type=double, units=MV/m , description="33 Ey-Field component of head particle  " &end
-&column name=Ez_head, type=double, units=MV/m , description="34 Ez-Field component of head particle  " &end
-&column name=Bx_ref, type=double, units=T , description="35 Bx-Field component of ref particle  " &end
-&column name=By_ref, type=double, units=T , description="36 By-Field component of ref particle  " &end
-&column name=Bz_ref, type=double, units=T , description="37 Bz-Field component of ref particle  " &end
-&column name=Ex_ref, type=double, units=MV/m , description="38 Ex-Field component of ref particle  " &end
-&column name=Ey_ref, type=double, units=MV/m , description="39 Ey-Field component of ref particle  " &end
-&column name=Ez_ref, type=double, units=MV/m , description="40 Ez-Field component of ref particle  " &end
-&column name=Bx_tail, type=double, units=T , description="41 Bx-Field component of tail particle  " &end
-&column name=By_tail, type=double, units=T , description="42 By-Field component of tail particle  " &end
-&column name=Bz_tail, type=double, units=T , description="43 Bz-Field component of tail particle  " &end
-&column name=Ex_tail, type=double, units=MV/m , description="44 Ex-Field component of tail particle  " &end
-&column name=Ey_tail, type=double, units=MV/m , description="45 Ey-Field component of tail particle  " &end
-&column name=Ez_tail, type=double, units=MV/m , description="46 Ez-Field component of tail particle  " &end
-&column name=dE, type=double, units=MeV , description="47 energy spread of the beam  " &end
+&column name=xpx, type=double, units=1 , description="21 Correlation xpx  " &end
+&column name=ypy, type=double, units=1 , description="22 Correlation ypyy  " &end
+&column name=zpz, type=double, units=1 , description="23 Correlation zpz  " &end
+&column name=notused1, type=double, units=1 , description="24 notused1 in y  " &end
+&column name=notused2, type=double, units=1 , description="25 notused2 in y  " &end
+&column name=Dx, type=double, units=m , description="26 Dispersion in x  " &end
+&column name=DDx, type=double, units=1 , description="27 Derivative of dispersion in x  " &end
+&column name=Dy, type=double, units=m , description="28 Dispersion in y  " &end
+&column name=DDy, type=double, units=1 , description="29 Derivative of dispersion in y  " &end
+&column name=Bx_head, type=double, units=T , description="30 Bx-Field component of head particle  " &end
+&column name=By_head, type=double, units=T , description="31 By-Field component of head particle  " &end
+&column name=Bz_head, type=double, units=T , description="32 Bz-Field component of head particle  " &end
+&column name=Ex_head, type=double, units=MV/m , description="33 Ex-Field component of head particle  " &end
+&column name=Ey_head, type=double, units=MV/m , description="34 Ey-Field component of head particle  " &end
+&column name=Ez_head, type=double, units=MV/m , description="35 Ez-Field component of head particle  " &end
+&column name=Bx_ref, type=double, units=T , description="36 Bx-Field component of ref particle  " &end
+&column name=By_ref, type=double, units=T , description="37 By-Field component of ref particle  " &end
+&column name=Bz_ref, type=double, units=T , description="38 Bz-Field component of ref particle  " &end
+&column name=Ex_ref, type=double, units=MV/m , description="39 Ex-Field component of ref particle  " &end
+&column name=Ey_ref, type=double, units=MV/m , description="40 Ey-Field component of ref particle  " &end
+&column name=Ez_ref, type=double, units=MV/m , description="41 Ez-Field component of ref particle  " &end
+&column name=Bx_tail, type=double, units=T , description="42 Bx-Field component of tail particle  " &end
+&column name=By_tail, type=double, units=T , description="43 By-Field component of tail particle  " &end
+&column name=Bz_tail, type=double, units=T , description="44 Bz-Field component of tail particle  " &end
+&column name=Ex_tail, type=double, units=MV/m , description="45 Ex-Field component of tail particle  " &end
+&column name=Ey_tail, type=double, units=MV/m , description="46 Ey-Field component of tail particle  " &end
+&column name=Ez_tail, type=double, units=MV/m , description="47 Ez-Field component of tail particle  " &end
+&column name=dE, type=double, units=MeV , description="48 energy spread of the beam  " &end
 &data mode=ascii, no_row_counts=1 &end
-Cores used 4
-OPAL 1.2.0 r13869
-1.000000000000000e-11         	2.753762122025677e-03         	1000000         	7.700000000037871e-19         	1.435215454393967e+03         	9.858752719788617e-06         	9.861696968612246e-06         	9.853217488668409e-09         	1.441233222811720e-07         	1.439850835070379e-07         	0.000000000000000e+00         	1.229803107233706e-12         	1.230226258771670e-12         	0.000000000000000e+00         	-4.920443390696638e-09         	6.166854654462206e-09         	2.753762122025677e-03         	3.059923773881884e-05         	3.059763739423572e-05         	1.376926658324180e-03         	1.836400683329387e+02         	1.836865673967019e+02         	7.261715038376091e-03         	7.232165299059164e-03         	-1.143308215060301e-08         	-2.366514192941871e-15         	1.432922813587734e-08         	5.495910365693746e-15         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	
-1.000000000000000e-11         	2.753762122025676e-03         	1000000         	7.700000000037871e-19         	1.435215454393967e+03         	9.858752719788617e-06         	9.861696968612246e-06         	9.853307629209615e-09         	1.441233222811720e-07         	1.439850835070379e-07         	0.000000000000000e+00         	1.229803107233706e-12         	1.230226258771670e-12         	0.000000000000000e+00         	-4.920443390696416e-09         	6.166854654462428e-09         	2.753762122025676e-03         	3.059922628502837e-05         	3.059786819078350e-05         	2.753792716980863e-03         	1.836400683329388e+02         	1.836865673967019e+02         	7.261494418872486e-03         	7.232199752445866e-03         	-1.143308215060301e-08         	-2.366514213758553e-15         	1.432922813587556e-08         	5.495910386510428e-15         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	
+4
+OPAL 1.3.99.1 git rev. 434d3e2e6b4ff29945d0abe85929fe7dfa75c2bc
+1.000000000000000e-11         	2.272183007438623e-03         	1000000         	7.700000000037871e-19         	4.999999999965613e+02         	9.739122288009320e-06         	9.697171513613727e-06         	9.856777413239953e-09         	1.424103813648780e-07         	1.413835679232330e-07         	0.000000000000000e+00         	1.386952083436321e-12         	1.201504137726396e-12         	0.000000000000000e+00         	-9.587112653561159e-09         	-9.630526461712030e-09         	2.272183007438623e-03         	3.055709960864302e-05         	3.058022705450936e-05         	1.136137099473511e-03         	-2.270766653797445e-04         	4.816614096018068e-01         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	-1.113824891865356e-08         	-7.004864887687099e-15         	-1.118868681617080e-08         	-7.569900133813646e-15         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	
+1.000000000000000e-11         	2.272183007438623e-03         	1000000         	7.700000000037871e-19         	4.999999999965613e+02         	9.739122288009320e-06         	9.697171513613727e-06         	9.856687304430323e-09         	1.424103813648780e-07         	1.413835679232330e-07         	0.000000000000000e+00         	1.386952083436321e-12         	1.201504137726395e-12         	0.000000000000000e+00         	-9.587112653561380e-09         	-9.630526461711808e-09         	2.272183007438624e-03         	3.055704932620677e-05         	3.058052435142488e-05         	2.272213599292600e-03         	-2.270766653797445e-04         	4.816614096018068e-01         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	-1.113824891865356e-08         	-7.004864887644113e-15         	-1.118868681617036e-08         	-7.569900147691433e-15         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	
