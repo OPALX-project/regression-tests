@@ -113,6 +113,11 @@ def bailout(runAsUser):
 
 def addRevisionStrings(rep):
     revision_report = TempXMLElement("Revisions")
+    date_report = TempXMLElement("date")
+    d = datetime.datetime.today()
+    date_report.appendTextNode("%02d-%02d-%02d %02d:%02d:%02d" % (d.year, d.month, d.day, d.hour, d.minute, d.second))
+    revision_report.appendChild(date_report)
+
     code_report = TempXMLElement("code")
     code_report.appendTextNode(getRevisionOpal())
     revision_report.appendChild(code_report)
@@ -197,6 +202,8 @@ def main(argv):
     rep.appendReport("Start Regression Test on %s \n" % datetime.datetime.today())
     rep.appendReport("==========================================================\n")
 
+    addRevisionStrings(rep)
+
     os.chdir(regdir)
     #walk the run dir tree
     arglist = [runtests, run_local, queue]
@@ -211,8 +218,6 @@ def main(argv):
                 unknownExist = True
         if unknownExist:
             rep.appendReport("\n\n")
-
-    addRevisionStrings(rep)
 
     rep.dumpXML("results.xml")
 

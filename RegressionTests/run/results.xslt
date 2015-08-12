@@ -14,10 +14,12 @@
         <h2>Revisions</h2>
         <table border="0">
           <tr bgcolor="#9acd32">
+            <th>Date</th>
             <th>Code</th>
             <th>Tests</th>
           </tr>
           <tr>
+            <td style="padding: 0px 10px 0px 10px"><xsl:value-of select="Tests/Revisions/date"/></td>
             <td style="padding: 0px 10px 0px 10px"><xsl:value-of select="Tests/Revisions/code"/></td>
             <td style="padding: 0px 10px 0px 10px"><xsl:value-of select="Tests/Revisions/tests"/></td>
           </tr>
