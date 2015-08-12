@@ -7,6 +7,7 @@ else:
     import subprocess
 import os
 import shutil
+import re
 
 from reporter import Reporter
 from reporter import TempXMLElement
@@ -231,7 +232,12 @@ def main(argv):
         indexhtml = open(www_folder + "/index.html").readlines()
         for line in range(len(indexhtml)):
             if "insert here" in indexhtml[line]:
-                indexhtml.insert(line+1, "<a href=\"%s\">%s.%s.%s</a> [passed:%d | broken:%d | failed:%d | total:%d] <br/>\n" % (webfilename, d.day, d.month, d.year, totalNrPassed, brokentests, failedtests, totalNrTests))
+                m = re.search(webfilename, indexhtml[line + 1])
+                if m != None:
+                    indexhtml[line+1] = "<a href=\"%s\">%s.%s.%s</a> [passed:%d | broken:%d | failed:%d | total:%d] <br/>\n" % (webfilename, d.day, d.month, d.year, totalNrPassed, brokentests, failedtests, totalNrTests)
+                else:
+                    indexhtml.insert(line+1, "<a href=\"%s\">%s.%s.%s</a> [passed:%d | broken:%d | failed:%d | total:%d] <br/>\n" % (webfilename, d.day, d.month, d.year, totalNrPassed, brokentests, failedtests, totalNrTests))
+
                 break
         indexhtmlout = open(www_folder + "/index.html", "w")
         indexhtmlout.writelines(indexhtml)
