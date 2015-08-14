@@ -19,7 +19,7 @@
             <th>Tests</th>
           </tr>
           <tr>
-            <td style="padding: 0px 10px 0px 10px"><xsl:value-of select="Tests/Revisions/date"/></td>
+            <td style="padding: 0px 10px 0px 10px"><xsl:value-of select="Tests/Date/start"/></td>
             <td style="padding: 0px 10px 0px 10px"><xsl:value-of select="Tests/Revisions/code"/></td>
             <td style="padding: 0px 10px 0px 10px"><xsl:value-of select="Tests/Revisions/tests"/></td>
           </tr>
