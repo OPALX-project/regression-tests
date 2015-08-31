@@ -11,7 +11,7 @@
     .no-hover:hover {text-decoration:none; color:#000;}
     </style>
     <body>
-        <h2>Revisions</h2>
+        <h2><a name="test_revision" class="no-hover">Revisions</a></h2>
         <table border="0">
           <tr bgcolor="#9acd32">
             <th>Date</th>
@@ -92,7 +92,7 @@
                         <img style="margin-right:3px; margin-bottom:3px;" src="{plot}" alt="" title="" />
                     </a>
 <!--                    <div style="width:100%; text-align:right">-->
-                        <a href="#build_tests">
+                        <a href="#test_revision">
                             top &#8593;
                         </a>
 <!--                    </div>-->
