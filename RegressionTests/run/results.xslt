@@ -11,33 +11,19 @@
     .no-hover:hover {text-decoration:none; color:#000;}
     </style>
     <body>
-        <h2><a name="build_tests" class="no-hover">Build Tests</a></h2>
+        <h2><a name="test_revision" class="no-hover">Revisions</a></h2>
         <table border="0">
-            <tr bgcolor="#9acd32">
-                <th>Name</th>
-                <th>Revision</th>
-                <th>Status</th>
-            </tr>
-        <xsl:for-each select="Tests/Build">
-            <xsl:choose>
-                <xsl:when test="contains(@status,'OK')">
-                    <tr>
-                        <td><xsl:value-of select="@name"/></td>
-                        <td>r<xsl:value-of select="@revision"/></td>
-                        <td align="center"><img src="ok.png"/></td>
-                    </tr>
-                    </xsl:when>
-                    <xsl:otherwise>
-                    <tr bgcolor="#cdba2d">
-                        <td><xsl:value-of select="@name"/></td>
-                        <td>r<xsl:value-of select="@revision"/></td>
-                        <td align="center"><img src="nok.png"/></td>
-                    </tr>
-                    </xsl:otherwise>
-                </xsl:choose>
-        </xsl:for-each> 
-        </table><br/>
-
+          <tr bgcolor="#9acd32">
+            <th>Date</th>
+            <th>Code</th>
+            <th>Tests</th>
+          </tr>
+          <tr>
+            <td style="padding: 0px 10px 0px 10px"><xsl:value-of select="Tests/Date/start"/></td>
+            <td style="padding: 0px 10px 0px 10px"><xsl:value-of select="Tests/Revisions/code"/></td>
+            <td style="padding: 0px 10px 0px 10px"><xsl:value-of select="Tests/Revisions/tests"/></td>
+          </tr>
+        </table>
         <h2>Regression Tests</h2>
         <xsl:for-each select="Tests/Simulation">
             <xsl:variable name="simname" select="@name"/>
@@ -103,16 +89,16 @@
                     <!--<xsl:value-of select="@var"/>:<br/>-->
                     <xsl:variable name="varname" select="@var"/>
                     <a name="{$simname}_{$varname}">
-                        <img style="margin-right:3px; margin-bottom:3px;" src="{plot}" alt="" title="" /> 
-                    </a> 
+                        <img style="margin-right:3px; margin-bottom:3px;" src="{plot}" alt="" title="" />
+                    </a>
 <!--                    <div style="width:100%; text-align:right">-->
-                        <a href="#build_tests">
+                        <a href="#test_revision">
                             top &#8593;
                         </a>
 <!--                    </div>-->
                     <br/><br/>
                 </xsl:if>
-            
+
             </xsl:for-each>
         <br/>
         </xsl:for-each>
