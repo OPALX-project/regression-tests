@@ -1,14 +1,12 @@
 Option, ECHO=FALSE;
 Option, PSDUMPFREQ=10;
 Option, STATDUMPFREQ=10;
-//Option, INFO=TRUE;
-//Option, PPDEBUG=TRUE;
-//Option, TELL=TRUE;
-
+Option, PPDEBUG=TRUE;
+Option, SURFDUMPFREQ=10;
 Title, string="Parallel Plate Benchmark Furman Pivi model constant number of particles";
 
 Phi=0;    
-ppvolt=0.0012;
+ppvolt=0.00012;
 pplength=0.005;
 ppfreq=200;
 
@@ -20,7 +18,7 @@ DistSurf: DISTRIBUTION, DISTRIBUTION = "SURFACEEMISSION", NPDARKCUR=0, FNBETA=0.
 DistSurf1: DISTRIBUTION, DISTRIBUTION = "SURFACERANDCREATE", INWARDMARGIN=0.0, NPDARKCUR=10000, 
 							     VW=1.6e-19*ppvolt*1e6/9.10938188/1e-31/2/3.1415926/ppfreq/1e6/pplength, VVTHERMAL=7.268929821*1e5; // randomly generate more electrons
 
-ge: GEOMETRY, FGEOM="parallel-plat5mm-hut.h5", S=0.0,ZSHIFT=0, DISTRS={DistSurf, DistSurf1};
+ge: GEOMETRY, FGEOM="../parallel-plat1mm-hut.h5", S=0.0,ZSHIFT=0, DISTRS={DistSurf, DistSurf1};
 
 value,{Phi};
 
@@ -48,7 +46,7 @@ beam1: BEAM, PARTICLE = ELECTRON, pc = P0, NPART = 3000, BFREQ = bfreq , BCURREN
 
 Select, Line=Benchmark;
 
-track, line= Benchmark, beam=beam1, MAXSTEPS=20, DT=2e-12, ZSTOP=0.9;  
+track, line= Benchmark, beam=beam1, MAXSTEPS=12000, DT=5e-12, ZSTOP=0.9;  
  run, method = "PARALLEL-T", beam = beam1, fieldsolver = Fs1, MULTIPACTING=TRUE;
 endtrack;
 Quit;
