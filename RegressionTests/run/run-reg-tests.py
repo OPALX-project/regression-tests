@@ -6,11 +6,11 @@ if sys.version_info < (3,0):
 else:
     import subprocess
 import os
+import shutil
+import re
 
 from reporter import Reporter
 from reporter import TempXMLElement
-
-from builder import Builder
 
 from regressiontest import RegressionTest
 
@@ -20,6 +20,8 @@ from documentation import OpalDoxygen
 from tools import readfile
 from tools import module_load
 from tools import sendmails
+from tools import getRevisionTests
+from tools import getRevisionOpal
 
 #FIXME: ugly global variables
 totalNrTests = 0
@@ -48,42 +50,50 @@ def callback(arg, dirname, fnames):
     global totalNrPassed
     global totalNrTests
 
-    if not ".svn" in dirname and not "reference" in dirname: #exclude svn and reference dirs
+    if ".svn" in dirname or "reference" in dirname:
+        return   #exclude svn and reference dirs
 
-        dir = str.split(dirname, "/")
-        simname = dir[len(dir)-1]
+    dir = str.split(dirname, "/")
+    simname = dir[len(dir)-1]
 
-        # check if all files required are available
-        if os.path.isfile(dirname + "/" + simname + ".in") and \
-           os.path.isfile(dirname + "/" + simname + ".rt") and \
-           os.path.isfile(dirname + "/" + simname + ".sge") and \
-           os.path.isdir(dirname + "/" + "reference"):
-                rep = Reporter()
-                rep.appendReport("Found valid test in %s \n" % dirname)
+    # check if all files required are available
+    if not (os.path.isfile(dirname + "/" + simname + ".in") and \
+       os.path.isfile(dirname + "/" + simname + ".rt") and \
+       os.path.isfile(dirname + "/" + simname + ".sge") and \
+       os.path.isdir(dirname + "/" + "reference")):
+        return
 
-                # check if we really want to run this test
-                # empty list = run all
-                runtests = arg[0]
-                if runtests:
-                    if not simname in runtests:
-                        rep.appendReport("User decided to skip regression test %s \n" % simname)
-                        rep.appendReport("\n\n")
-                        return
+    rep = Reporter()
+    rep.appendReport("Found valid test in %s \n" % dirname)
 
-                d = datetime.date.today()
-                resultdir = "results/" + d.isoformat() + "/" + simname
-                if not os.path.isdir(resultdir):
-                    subprocess.getoutput("mkdir -p " + resultdir)
+    # check if we really want to run this test
+    # empty list = run all
+    runtests = arg[0]
+    if runtests:
+        if not simname in runtests:
+            rep.appendReport("User decided to skip regression test %s \n" % simname)
+            rep.appendReport("\n\n")
+            return
 
-                simulation_report = TempXMLElement("Simulation")
-                simulation_report.addAttribute("name", simname)
-                simulation_report.addAttribute("date", "%s" % d)
+    d = datetime.date.today()
+    resultdir = "results/" + d.isoformat() + "/" + simname
+    if not os.path.isdir(resultdir):
+        os.makedirs (resultdir)
 
-                rt = RegressionTest(dirname, simname, resultdir)
-                rt.run(simulation_report, arg[1], arg[2])
-                totalNrTests += rt.totalNrTests
-                totalNrPassed += rt.totalNrPassed
-                rep.appendReport("\n\n")
+    simulation_report = TempXMLElement("Simulation")
+    simulation_report.addAttribute("name", simname)
+    simulation_report.addAttribute("date", "%s" % d)
+
+    rt = RegressionTest(dirname, simname, resultdir)
+    rt.run(simulation_report, arg[1], arg[2])
+    totalNrTests += rt.totalNrTests
+    totalNrPassed += rt.totalNrPassed
+    rep.appendReport("\n\n")
+
+    if runtests:
+        if simname in runtests:
+            runtests.remove(simname)
+            runtests.append("DONE")
 
 def bailout(runAsUser):
     rep = Reporter()
@@ -101,36 +111,48 @@ def bailout(runAsUser):
     else:
         print (rep.getReport())
 
+def addDate(rep):
+    date_report = TempXMLElement("Date")
+    startDate_report = TempXMLElement("start")
+    d = datetime.datetime.today()
+    startDate_report.appendTextNode("%02d-%02d-%02d %02d:%02d:%02d" % (d.year, d.month, d.day, d.hour, d.minute, d.second))
+    date_report.appendChild(startDate_report)
+    rep.appendChild(date_report)
+
+def addRevisionStrings(rep):
+    revision_report = TempXMLElement("Revisions")
+
+    code_report = TempXMLElement("code")
+    code_report.appendTextNode(getRevisionOpal())
+    revision_report.appendChild(code_report)
+
+    tests_report = TempXMLElement("tests")
+    tests_report.appendTextNode(getRevisionTests())
+    revision_report.appendChild(tests_report)
+
+    rep.appendChild(revision_report)
 
 def main(argv):
     rep = Reporter()
     d = datetime.date.today()
     rep.appendReport("Results: http://amas.web.psi.ch/regressiontests/results_%s_%s_%s.xml \n\n" % (d.day, d.month, d.year))
 
-    #various paths needed
+    # tests are one level up starting from directory of this script
+    rundir = sys.path[0]   # get absolute path name of this script
+    regdir = os.path.dirname (rundir)
 
-    www_folder = os.getenv("REGTEST_WWW")
-    if www_folder is None:
-        www_folder = "/afs/psi.ch/project/amas/www/regressiontests"
-
-    os.chdir(sys.path[0]) #chdir to path of script
-    rundir = os.getcwd()
-    regdir = '/run'.join((rundir.split("/run"))[0:-1])
-
-    #FIXME
-    srcdir = os.getenv("OPAL_ROOT")
-    if srcdir is None:
-        srcdir = "/gpfs/homefelsim/l_felsimsvn/work/opal/"
-    builddir = rundir + "/build"
-    d = datetime.date.today()
     global totalNrPassed
     global totalNrTests
     totalNrTests = 0
     totalNrPassed = 0
     runAsUser = False
     runtests = list()
+    run_with_tests = False
     run_local = False
-    publish_local = True
+    do_publish = True
+
+    if "--dont-publish" in argv:
+        do_publish = False
 
     if "--run-local" in argv:
         run_local = True
@@ -142,38 +164,34 @@ def main(argv):
             if arg.startswith("--tests"):
                 tests = str.split(arg, "=")[1]
                 runtests = str.split(tests, ",")
+                run_with_tests = True
     else:
         #"load" modules need to compile and run regression tests
         modules = readfile("modules")
         for module in modules:
             module_load(module)
-            os.environ["SGE_CELL"]="sgefelsim"
-            os.environ["SGE_EXECD_PORT"]="6445"
-            os.environ["SGE_QMASTER_PORT"]="6444"
-            os.environ["SGE_ROOT"]="/gpfs/homefelsim/export/sge"
-            os.environ["SGE_CLUSTER_NAME"]="sgeclusterfelsim"
-            os.environ["PATH"]= os.getenv("PATH") + ":/gpfs/homefelsim/export/sge/bin/lx24-amd64:/usr/kerberos/bin"
-            print (subprocess.getoutput("/bin/env"))
-        #rep.appendReport(subprocess.getoutput("/bin/env"))
+        os.environ["SGE_CELL"]="sgefelsim"
+        os.environ["SGE_EXECD_PORT"]="6445"
+        os.environ["SGE_QMASTER_PORT"]="6444"
+        os.environ["SGE_ROOT"]="/gpfs/homefelsim/export/sge"
+        os.environ["SGE_CLUSTER_NAME"]="sgeclusterfelsim"
+        os.environ["PATH"]= os.getenv("PATH") + ":/gpfs/homefelsim/export/sge/bin/lx24-amd64:/usr/kerberos/bin"
 
-        #klog to be able to do svn stuff
-        os.environ["KRB5_CONFIG"] = "/home2/l_felsimsvn/krb5.conf"
-        subprocess.getoutput("/usr/kerberos/bin/kinit -V -k -t ~/.krb5.keytab.D.PSI.CH l_felsimsvn@D.PSI.CH")
-        #subprocess.getoutput("kinit -k -t ~/.krb5.keytab l_felsimsvn")
+    www_folder = os.getenv("REGTEST_WWW")
+    if do_publish and www_folder is None:
+        rep.appendReport("Error: REGTEST_WWW not set")
+        bailout(runAsUser)
+        return
 
-    #check if user also wants build test
-    if "--build" in argv:
-        buildopal = Builder(srcdir, "OPAL", "src/opal", builddir)
-        totalNrTests += 1
-        if buildopal.build():
-            totalNrPassed += 1
-        else:
-            rep.appendReport("Build-test failed! Exiting..")
-            bailout(runAsUser)
-            return
+    if not os.getenv("OPAL_EXE_PATH"):
+        rep.appendReport("Error: OPAL_EXE_PATH not set")
+        bailout(runAsUser)
+        return
 
-    if "--dont-publish" in argv:
-        publish_local = False
+    if not os.path.isfile(os.getenv("OPAL_EXE_PATH") + "/opal"):
+        rep.appendReport("Error: OPAL_EXE_PATH is invalid")
+        bailout(runAsUser)
+        return
 
     queue = ""
     for arg in argv:
@@ -184,90 +202,68 @@ def main(argv):
                 sys.exit()
             queue = "-q " + tmp[1]
 
-    #check if user has already set an OPAL executable
-    #if not use the one from the last build test
-    env = os.getenv("OPAL_EXE_PATH")
-    if env is None:
-        os.environ["OPAL_EXE_PATH"] = builddir + "/src"
-
-
     rep.appendReport("\n")
     rep.appendReport("Start Regression Test on %s \n" % datetime.datetime.today())
     rep.appendReport("==========================================================\n")
 
-    #only run regression tests if opal executable is valid
-    if os.path.isfile(os.getenv("OPAL_EXE_PATH") + "/opal"):
-        os.chdir(regdir)
-        #first update all tests and regression test files
-        #FIXME: detect SCM
-        if os.path.isdir(regdir + "/.svn") and not runAsUser:
-            subprocess.getoutput("svn update")
-        #walk the run dir tree
-        arglist = [runtests, run_local, queue]
-        for root, dirs, files in os.walk("./"):
-            callback(arglist, root, files)
-    else:
-        rep.appendReport("Error: OPAL_EXE_PATH is invalid")
-        bailout(runAsUser)
-        return
+    addDate(rep)
+
+    os.chdir(regdir)
+    #walk the run dir tree
+    arglist = [runtests, run_local, queue]
+    for root, dirs, files in os.walk("./"):
+        callback(arglist, root, files)
+
+    if run_with_tests and len(runtests) > 0:
+        unknownExist = False
+        for test in runtests:
+            if test != "DONE":
+                rep.appendReport(">>> NO TEST CALLED '" + test + "'\n")
+                unknownExist = True
+        if unknownExist:
+            rep.appendReport("\n\n")
+
+    addRevisionStrings(rep)
 
     rep.dumpXML("results.xml")
 
     #cp report to webdir and add entry in index.html
-    if not runAsUser:
-        subprocess.getoutput("/usr/kerberos/bin/kinit -V -k -t ~/.krb5.keytab.D.PSI.CH l_felsimsvn@D.PSI.CH")
-        subprocess.getoutput("/usr/bin/aklog")
+    if do_publish:
         failedtests = rep.NrFailed()
         brokentests = rep.NrBroken()
         webfilename = "results_%s_%s_%s.xml" % (d.day, d.month, d.year)
-        subprocess.getoutput("cp results.xml " + www_folder + "/" + webfilename)
-        subprocess.getoutput("cp -rf plots_" + d.isoformat() + " " + www_folder + "/")
+        shutil.copy ("results.xml", www_folder + "/" + webfilename)
+        subprocess.getoutput("cp -rf results/" + d.isoformat() + "/plots " + www_folder + "/plots_" + d.isoformat())
         indexhtml = open(www_folder + "/index.html").readlines()
         for line in range(len(indexhtml)):
             if "insert here" in indexhtml[line]:
-                indexhtml.insert(line+1, "<a href=\"%s\">%s.%s.%s</a> [passed:%d | broken:%d | failed:%d | total:%d] <br/>\n" % (webfilename, d.day, d.month, d.year, totalNrPassed, brokentests, failedtests, totalNrTests))
+                m = re.search(webfilename, indexhtml[line + 1])
+                if m != None:
+                    indexhtml[line+1] = "<a href=\"%s\">%s.%s.%s</a> [passed:%d | broken:%d | failed:%d | total:%d] <br/>\n" % (webfilename, d.day, d.month, d.year, totalNrPassed, brokentests, failedtests, totalNrTests)
+                else:
+                    indexhtml.insert(line+1, "<a href=\"%s\">%s.%s.%s</a> [passed:%d | broken:%d | failed:%d | total:%d] <br/>\n" % (webfilename, d.day, d.month, d.year, totalNrPassed, brokentests, failedtests, totalNrTests))
+
                 break
         indexhtmlout = open(www_folder + "/index.html", "w")
         indexhtmlout.writelines(indexhtml)
         indexhtmlout.close()
         #update xslt formating file
-        subprocess.getoutput("cp " + rundir + "/results.xslt " + www_folder + "/")
+        shutil.copy (rundir + "/results.xslt", www_folder + "/")
 
-        #update manual
-        OpalDocumentation()
+        if not runAsUser:
+            #update manual
+            OpalDocumentation()
 
-        #update doxygen
-        OpalDoxygen()
-
-    if publish_local:
-        failedtests = rep.NrFailed()
-        brokentests = rep.NrBroken()
-        webfilename = "results_%s_%s_%s.xml" % (d.day, d.month, d.year)
-        subprocess.getoutput("cp results.xml " + www_folder + "/" + webfilename)
-        subprocess.getoutput("cp -rf plots_" + d.isoformat() + " " + www_folder + "/")
-        indexhtml = open(www_folder + "/index.html").readlines()
-        for line in range(len(indexhtml)):
-            if "insert here" in indexhtml[line]:
-                indexhtml.insert(line+1, "<a href=\"%s\">%s.%s.%s</a> [passed:%d | broken:%d | failed:%d | total:%d] <br/>\n" % (webfilename, d.day, d.month, d.year, totalNrPassed, brokentests, failedtests, totalNrTests))
-                break
-        indexhtmlout = open(www_folder + "/index.html", "w")
-        indexhtmlout.writelines(indexhtml)
-        indexhtmlout.close()
-        #update xslt formating file
-        subprocess.getoutput("cp " + rundir + "/results.xslt " + www_folder + "/")
+            #update doxygen
+            OpalDoxygen()
 
     #move xml results to result-dir
     if os.path.isfile('results.xml'):
         resultdir = regdir + "/results/" + d.isoformat()
         if not os.path.isdir(resultdir):
-            subprocess.getoutput("mkdir -p " + resultdir)
+            os.mkdir (resultdir)
 
         subprocess.getoutput("cp -rf " + "results.xml " + resultdir)
-
-    if runAsUser:
-        subprocess.getoutput("rm -rf " + regdir + "/plots_" + d.isoformat())
-    else:
-        subprocess.getoutput("kdestroy")
 
     bailout(runAsUser)
 

@@ -1,0 +1,155 @@
+Ippl> CommMPI: Parent process waiting for children ...
+Ippl> CommMPI: Initialization complete.
+>                ____  _____       ___ 
+>               / __ \|  __ \ /\   | | 
+>              | |  | | |__) /  \  | |
+>              | |  | |  ___/ /\ \ | |
+>              | |__| | |  / ____ \| |____
+>               \____/|_| /_/    \_\______|
+OPAL> 
+OPAL> This is OPAL (Object Oriented Parallel Accelerator Library) Version 1.3.99
+OPAL> 
+OPAL>                 (c) PSI, http://amas.web.psi.ch
+OPAL> 
+OPAL> Please send cookies, goodies or other motivations (wine and beer ... ) 
+OPAL> to the OPAL developers opal@lists.psi.ch
+OPAL> 
+OPAL> Time: 16.14.53 date: 11/05/2015
+OPAL> 
+OPAL> Couldn't find startup file "/home/baboch/init.opal".
+OPAL> Note: this is not mandatory for an OPAL simulation!
+OPAL> 
+OPAL> * Reading input stream "HKick-Test-2.in".
+   +1 Option, ECHO=FALSE;
+OPAL> 
+OPAL> value: {RF_FREQUENCY,RF_WAVELENGTH,BEAM_BUNCH_CHARGE,NUMBER_OF_PARTICLES,PS_DUMP_FREQUENCY,STAT_DUMP_FREQUENCY}={7e+08,0.428275,0,10000,100000,10}
+OPAL> 
+OPAL> 
+OPAL> value: {TIME_STEP_1}={1e-12}
+OPAL> 
+OPAL> 
+OPAL> value: {FS_SC1_X_BINS,FS_SC1_Y_BINS,FS_SC1_Z_BINS}={8,8,8}
+OPAL> 
+OPAL> 
+OPAL> value: {DRIFT_BEFORE_KICK,DRIFT_AFTER_KICK,KICK_ANGLE,KICK_LENGTH}={0.25,0.5,3,0.000299792}
+OPAL> 
+OPAL> 
+OPAL> value: {KICK_END}={1.7503}
+OPAL> 
+OPAL> * ********************************************************************************** 
+OPAL>   Selected Tracking Method == PARALLEL-T, NEW TRACK
+OPAL> * ********************************************************************************** 
+Ippl> no solver attached
+Ippl> BC set for normal Beam
+OPAL> 
+OPAL> -------------------------------------------------
+OPAL> READ INITIAL DISTRIBUTION FROM FILE "HKick-Test-2.dat"
+OPAL> -------------------------------------------------
+OPAL> 
+OPAL> ********************** DISTRIBUTION **********************
+OPAL> 
+OPAL> Number of particles: 10000
+OPAL> 
+OPAL> * Distribution type: FROMFILE
+OPAL> 
+OPAL> * Input file:        HKick-Test-2.dat
+OPAL> 
+OPAL> * Distribution is injected.
+OPAL> 
+OPAL> * *********************************************************
+OPAL> 
+OPAL> * ************* B E A M ************************************************************ 
+OPAL> * BEAM        BEAM_1
+OPAL> * PARTICLE    ELECTRON
+OPAL> * CURRENT     0 A
+OPAL> * FREQUENCY   7e+08 Hz
+OPAL> * CHARGE      -e * 1 
+OPAL> * REST MASS   0.000510999 GeV
+OPAL> * MOMENTUM    1
+OPAL> * NPART       10000
+OPAL> * ********************************************************************************** 
+OPAL> 
+OPAL> * ************* F I E L D S O L V E R ********************************************** 
+OPAL> * FIELDSOLVER  FS_SC1
+OPAL> * TYPE         NONE
+OPAL> * N-PROCESSORS 1
+OPAL> * MX           8
+OPAL> * MY           8
+OPAL> * MT           8
+OPAL> * BBOXINCR     2
+OPAL> * GEOMETRY     
+OPAL> * ITSOLVER     CG
+OPAL> * INTERPL      LINEAR
+OPAL> * TOL          1e-08
+OPAL> * MAXITERS     100
+OPAL> * PRECMODE     HIERARCHY
+OPAL> * XDIM is serial  
+OPAL> * YDIM is serial  
+OPAL> * Z(T)DIM is parallel  
+Ippl> ======UniformCartesian<3,MFLOAT>==begin======
+Ippl> gridSizes[0] = 9
+Ippl> gridSizes[1] = 9
+Ippl> gridSizes[2] = 9
+Ippl> origin = ( -0.00785001 , -0.00710225 , 0.996511 )
+Ippl> meshSpacing[0] = 0.0018561
+Ippl> meshSpacing[1] = 0.00193333
+Ippl> meshSpacing[2] = 0.000902816
+Ippl> Dvc[0] = ( -134.691 , -129.311 , -276.911 )
+Ippl> Dvc[1] = ( 134.691 , -129.311 , -276.911 )
+Ippl> Dvc[2] = ( -134.691 , 129.311 , -276.911 )
+Ippl> Dvc[3] = ( 134.691 , 129.311 , -276.911 )
+Ippl> Dvc[4] = ( -134.691 , -129.311 , 276.911 )
+Ippl> Dvc[5] = ( 134.691 , -129.311 , 276.911 )
+Ippl> Dvc[6] = ( -134.691 , 129.311 , 276.911 )
+Ippl> Dvc[7] = ( 134.691 , 129.311 , 276.911 )
+Ippl> cell volume = 3.2397e-09
+Ippl> ======UniformCartesian<3,MFLOAT>==end========
+Ippl> 
+Ippl> ParticleSpatialLayout, with particle distribution:
+Ippl>     Number of particles 10000  
+Ippl> SpatialLayout decomposition = Total Domain = {[-0.00785001,0.00699877),[-0.00710225,0.00836435),[0.996511,1.00373)}
+Ippl> Local Rnodes = 1
+Ippl>  rnode 0 : {[-0.00785001,0.00699877),[-0.00710225,0.00836435),[0.996511,1.00373)}
+Ippl> Remote Rnodes = 0
+Ippl> Internal FieldLayout = Domain = {[0:7:1],[0:7:1],[0:7:1]}
+Ippl> FieldLayoutUsers = 3
+Ippl> Total number of vnodes = 1
+Ippl> Local Vnodes = 1
+Ippl>  vnode 0: Node = 0 ; vnode_m = 0 ; Domain = {[0:7:1],[0:7:1],[0:7:1]}
+Ippl> Remote Vnodes = 0
+Ippl> 
+OPAL> * ********************************************************************************** 
+OPAL> 
+OPAL> 
+OPAL> * ************** B U N C H ********************************************************* 
+OPAL> * NP              =   10000
+OPAL> * Qtot            =    0.00000e+00 [nC]       Qi    =  0.00000e+00 [nC]
+OPAL> * Ekin            =    6.99992e+00 [MeV]      dEkin =  9.92361e-03 [MeV]
+OPAL> * rmax            = (  6.07072e-03 ,  7.39769e-03 ,  1.00328e+00 ) [m]
+OPAL> * rmin            = ( -6.92196e-03 , -6.13559e-03 ,  9.96962e-01 ) [m]
+OPAL> * rms beam size   = (  1.70676e-03 ,  1.71817e-03 ,  8.84811e-04 ) [m]
+OPAL> * rms momenta     = (  6.28595e-03 ,  6.28213e-03 ,  1.94651e-02 ) [beta gamma]
+OPAL> * mean position   = ( -8.99926e-06 ,  9.91690e-07 ,  1.00000e+00 ) [m]
+OPAL> * mean momenta    = ( -2.52396e-05 ,  9.64048e-05 ,  1.46644e+01 ) [beta gamma]
+OPAL> * rms emittance   = (  7.31497e-07 ,  7.36038e-07 ,  1.17443e-06 ) (not normalized)
+OPAL> * rms correlation = (  1.74753e-02 , -5.55037e-03 ,  7.86162e-03 )
+OPAL> * hr              = (  1.85610e-03 ,  1.93333e-03 ,  9.02816e-04 ) [m]
+OPAL> * dh              =    0.00000e+00 [m]
+OPAL> * t               =    0.00000e+00 [s]        dT    =  1.00000e-12 [s]
+OPAL> * spos            =    1.00000e+00 [m]
+OPAL> * ********************************************************************************** 
+OPAL> 
+OPAL> Phase space dump frequency 100000 and statistics dump frequency 10 w.r.t. the time step.
+ParallelTTracker > Track start at: 16.14.53, t= 0; zstop at: 1.7503 [m]
+ParallelTTracker > Executing ParallelTTracker, initial DT 1e-12 [s];
+ParallelTTracker > max integration steps 1000000, next step= 0
+ParallelTTracker > Using default (Boris-Buneman) integrator
+ParallelTTracker > Silent track ... 
+Ippl> Corrector::goOnline at Ekin= 6.99991 MeV, B= ( -0 , 4.36559 , -0 ) T
+Ippl> KICK1 gone live
+Ippl> DRIFT1 gone live
+ParallelTTracker > Dump phase space of last step
+Ippl> KICK1 gone off
+Ippl> DRIFT1 gone off
+ParallelTTracker > done executing ParallelTTracker at 16.15.09
+OPAL> * End of input stream "HKick-Test-2.in".
