@@ -2,6 +2,7 @@ Option, ECHO=FALSE;
 Option, INFO=FALSE;
 Option, AUTOPHASE=0;
 Option, CSRDUMP=TRUE;
+Option, VERSION=10600;
 
 Title, string="FEL ERL";
 
@@ -39,7 +40,7 @@ value, {RF_FREQUENCY,
 TIME_STEP_1 = 4.3734562802893905e-12;		// Time step (s). We only need one for this simulation.
 
 value, {TIME_STEP_1};
-	
+
 //******************************************************************************************************************
 // FIELD SOLVERS
 //
@@ -100,7 +101,7 @@ bend_angle = 0.5235987755982988;
 bend_energy = 7.0e6;
 
 // Bend length (m).
-bend_length = 0.129409522551; 
+bend_length = 0.129409522551;
 
 
 value, {drift_before_bend,
@@ -151,11 +152,11 @@ if (CSR_FFT_FREQ >= 1) {
 
    FS_CSR_WAKE: Wake, TYPE = "1D-CSR",
 	  	   FILTERS = {FFT_Filter,
-		   	      SG_Filter};		   
+		   	      SG_Filter};
 
 } else {
 
-   FS_CSR_WAKE: Wake, TYPE = "1D-CSR",	
+   FS_CSR_WAKE: Wake, TYPE = "1D-CSR",
 	  	   FILTERS = {SG_Filter};
 
 }
@@ -228,7 +229,7 @@ Option, STATDUMPFREQ = STAT_DUMP_FREQUENCY;
 // Here we define beam that will be transported.
 //\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 beam1: BEAM, PARTICLE = ELECTRON, pc = P0, NPART = NUMBER_OF_PARTICLES, BFREQ = RF_FREQUENCY,
-      	BCURRENT = BEAM_BUNCH_CHARGE * RF_FREQUENCY, 
+      	BCURRENT = BEAM_BUNCH_CHARGE * RF_FREQUENCY,
         CHARGE = -1;
 
 
@@ -237,7 +238,7 @@ beam1: BEAM, PARTICLE = ELECTRON, pc = P0, NPART = NUMBER_OF_PARTICLES, BFREQ = 
 //\\\\\\\\\\\\\\\\
 
 TRACK, LINE = inputBeamline, BEAM = beam1, MAXSTEPS = 2000, DT = TIME_STEP_1;
-  RUN, METHOD = "PARALLEL-T", BEAM = beam1, FIELDSOLVER = FS_SC1, 
+  RUN, METHOD = "PARALLEL-T", BEAM = beam1, FIELDSOLVER = FS_SC1,
        DISTRIBUTION = dist1;
 ENDTRACK;
 

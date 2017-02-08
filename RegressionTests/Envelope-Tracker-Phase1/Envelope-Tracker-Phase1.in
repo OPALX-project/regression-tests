@@ -1,12 +1,13 @@
 Option, ECHO=FALSE;
 Option, INFO=TRUE;
 Option, PSDUMPFREQ=200;
+Option, VERSION=10600;
 
 Title, string="SwissFEL Injector, Phase 1 (Feb. 2010)";
 
-FINSS_RGUN_phi= 0;    
-FINSB01_RACC_phi= 0; 
-FINSB02_RACC_phi= 0;    
+FINSS_RGUN_phi= 0;
+FINSB01_RACC_phi= 0;
+FINSB02_RACC_phi= 0;
 
 call, "FinPhase1.phases";
 
@@ -45,9 +46,9 @@ Dist1:DISTRIBUTION, DISTRIBUTION = "GUNGAUSSFLATTOPTH",
 
 MINSTEPFORREBIN = 1000;
 
-Fs1:FIELDSOLVER, FSTYPE=FFT, MX=16, MY=16, MT=32, 
+Fs1:FIELDSOLVER, FSTYPE=FFT, MX=16, MY=16, MT=32,
     PARFFTX=true, PARFFTY=true, PARFFTT=true,
-    BCFFTX=open, BCFFTY=open, BCFFTT=open, 
+    BCFFTX=open, BCFFTY=open, BCFFTT=open,
     BBOXINCR=1, GREENSF=INTEGRATED;
 
 qb=0.2e-9;

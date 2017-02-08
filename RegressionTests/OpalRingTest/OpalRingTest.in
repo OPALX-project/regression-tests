@@ -4,7 +4,8 @@ Option, ECHO=TRUE;
 //////////////////////////////////////////////////////////////////////////////
 Title,string="ERIT test simulation using OPAL code";
 Option, ASCIIDUMP=TRUE;
-OPTION, PSDUMPFREQ=100000; 
+OPTION, PSDUMPFREQ=100000;
+Option, VERSION=10600;
 
 Edes=0.011;
 e_tot = (Edes+PMASS);
@@ -41,7 +42,7 @@ l1: Line = (ringdef, probe1, probe2, triplet);
 
 Dist1: DISTRIBUTION, DISTRIBUTION=fromfile, FNAME="data/beam.dat", INPUTMOUNITS=NONE;
 
-Fs1:FIELDSOLVER, FSTYPE=FFT, MX=32, MY=32, MT=32, 
+Fs1:FIELDSOLVER, FSTYPE=FFT, MX=32, MY=32, MT=32,
 		 PARFFTX=true, PARFFTY=true, PARFFTT=false,
 		 BCFFTX=open, BCFFTY=open, BCFFTT=open,BBOXINCR=2;
 

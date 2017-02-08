@@ -1,10 +1,11 @@
 OPTION, ECHO=FALSE; //ECHO Controls printing of an echo of input lines on the standard error file.
 OPTION, INFO=FALSE; //INFO If this option is turned off, OPAL suppresses all information messages.
 OPTION, STATDUMPFREQ=1;
+Option, VERSION=10600;
 
 TITLE, STRING="Gauss Distribution Protons";
 
-Edes   = 0.500;    // 0.5 GeV             
+Edes   = 0.500;    // 0.5 GeV
 QB     = 0.77e-12;   // charge in Cb
 BF     = 1300.0;   // frequency in Mhz
 BC     = QB*BF;    // bunch current
@@ -26,8 +27,8 @@ BBOXINCR = 1, GREENSF = INTEGRATED;
 
 
 //Dist2:DISTRIBUTION, DISTRIBUTION = GAUSS,
-//SIGMAX = 0.00001, SIGMAPX=0.00001, 
-//SIGMAY = 0.00001, SIGMAPY=0.00001, 
+//SIGMAX = 0.00001, SIGMAPX=0.00001,
+//SIGMAY = 0.00001, SIGMAPY=0.00001,
 //SIGMAT = 1e-8 , PT=Edes*1e9;
 
 sigpx = sqrt((0.00001*1.0e-9/PMASS + 1.0)^2 - 1.0);
@@ -36,9 +37,9 @@ pzave = sqrt((Edes/PMASS + 1.0)^2 - 1.0);
 
 Dist2:DISTRIBUTION, DISTRIBUTION = GAUSS,
 		    SIGMAX = 0.00001,
-		    SIGMAPX = 0.00001, 
+		    SIGMAPX = 0.00001,
 		    SIGMAY = 0.00001,
-		    SIGMAPY = 0.00001, 
+		    SIGMAPY = 0.00001,
 		    SIGMAT = 1e-8 ,
 		    CORRX = -0.0,
 		    CORRY = 0.5,
@@ -50,7 +51,7 @@ beam1: BEAM, PARTICLE = PROTON, PC = P0, NPART = 1000000, BFREQ = BF*1E6, BCURRE
 
 SELECT, LINE=lattice;
 
-TRACK, LINE=lattice, BEAM=beam1, MAXSTEPS=1, DT=1e-11, ZSTOP=0.25;  
+TRACK, LINE=lattice, BEAM=beam1, MAXSTEPS=1, DT=1e-11, ZSTOP=0.25;
  RUN, METHOD = "PARALLEL-T", BEAM = beam1, FIELDSOLVER = Fs1, DISTRIBUTION = Dist2;
 ENDTRACK;
 QUIT;

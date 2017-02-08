@@ -9,6 +9,7 @@ OPTION, ECHO=TRUE; //ECHO Controls printing of an echo of input lines on the sta
 OPTION, INFO=TRUE; //INFO If this option is turned off, OPAL suppresses all information messages.
 OPTION, PSDUMPFREQ=10000; //Defines after how many time steps the phase space is dumped into the H5Part file. Default value is 10.
 OPTION, AUTOPHASE = 1;
+Option, VERSION=10600;
 
 
 QB               = 100e-12;
@@ -27,7 +28,7 @@ no_fieldsolver:FIELDSOLVER,
 	BBOXINCR = 1, GREENSF = INTEGRATED;
 
 my_beam: BEAM,
-	PARTICLE=ELECTRON, 
+	PARTICLE=ELECTRON,
 	//pc = 10,          // momentum per particle in GeV/c
 	NPART = 20,     //number of test particles simulated
 	BCURRENT = BCURRENT, // beam current in A
@@ -36,15 +37,15 @@ my_beam: BEAM,
 SELECT, LINE=lattice;
 
 // Simulation
-TRACK, 	LINE = lattice, 
-	BEAM = my_beam, 
+TRACK, 	LINE = lattice,
+	BEAM = my_beam,
 	MAXSTEPS = 100000,
 	DT=1.0e-12, //Timestep size in s
-        T0=5.0e-11, 
+        T0=5.0e-11,
 	ZSTOP=12.0; //Stopping position z in meters
-RUN,	METHOD = "PARALLEL-T",  
-	BEAM = my_beam, 
-	FIELDSOLVER = no_fieldsolver, 
+RUN,	METHOD = "PARALLEL-T",
+	BEAM = my_beam,
+	FIELDSOLVER = no_fieldsolver,
 	DISTRIBUTION = file_distribution;
 ENDTRACK;
 

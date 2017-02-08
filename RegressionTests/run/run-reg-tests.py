@@ -151,6 +151,10 @@ def main(argv):
     run_local = False
     do_publish = True
 
+    if "--help" in argv:
+        print "./run-reg-tests.py [--dont-publish] [--queue=<SGE-QUEUE>] [--run-local] [--user [--tests=<TEST1,TEST2,...,TESTN>]]"
+        sys.exit()
+
     if "--dont-publish" in argv:
         do_publish = False
 

@@ -1,10 +1,11 @@
 Title, string="Gaussian bunch test of simple beam pipe";
 
-OPTION, ECHO = FALSE, 
+OPTION, ECHO = FALSE,
         PSDUMPFREQ = 10,
         STATDUMPFREQ = 10,
         REPARTFREQ = 1000,
         PSDUMPLOCALFRAME = FALSE;
+Option, VERSION=10600;
 
 // Some local variables
 Ekin = 59940*1e-9;          // eV -> GeV
@@ -33,10 +34,10 @@ L1: LINE = (D1);
 
 Fs1: FIELDSOLVER, FSTYPE = SAAMG, MX = 16, MY = 16, MT = 16,
      PARFFTX = TRUE, PARFFTY = TRUE, PARFFTT = TRUE, GEOMETRY = INF_GEOM,
-     ITSOLVER = CG, INTERPL = CONSTANT, TOL = 1.0e-6, 
+     ITSOLVER = CG, INTERPL = CONSTANT, TOL = 1.0e-6,
      MAXITERS = 1000, PRECMODE = STD;
 
-Dist1: DISTRIBUTION, DISTRIBUTION = GAUSS, 
+Dist1: DISTRIBUTION, DISTRIBUTION = GAUSS,
        OFFSETX = 0.0, OFFSETY = 0.0, OFFSETZ = 15.0e-3,    // Centroid of bunch (m)
        SIGMAX = 1.5e-3, SIGMAY = 1.5e-3, SIGMAZ = 5.0e-3,  // Sigmas of the Gaussian bunch (m)
        OFFSETPX = 0.0, OFFSETPY = 0.0, OFFSETPZ = 0.0,     // Mean momenta (eV)
@@ -54,7 +55,7 @@ Select, LINE = L1;
 
 track, LINE = L1, BEAM = Beam1, MAXSTEPS = 1000, ZSTOP = 0.1, DT = 1.0e-10;
 
-run, METHOD = "PARALLEL-T", BEAM = Beam1, FIELDSOLVER = Fs1, 
+run, METHOD = "PARALLEL-T", BEAM = Beam1, FIELDSOLVER = Fs1,
      DISTRIBUTION = Dist1, BOUNDARYGEOMETRY = INF_GEOM;
 
 endtrack;

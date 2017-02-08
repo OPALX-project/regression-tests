@@ -1,6 +1,7 @@
 Option, ECHO=FALSE;
 Option, INFO=FALSE;
 Option, AUTOPHASE=0;
+Option, VERSION=10600;
 
 Title, string="SBend Test";
 
@@ -42,7 +43,7 @@ value, {RF_FREQUENCY,
 TIME_STEP_1 = 2.0 * 1.0e-12;   // Time step (s). We only need one for this simulation.
 
 value, {TIME_STEP_1};
-	
+
 //******************************************************************************************************************
 //******************************************************************************************************************
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -190,7 +191,7 @@ Bend: SBend, ANGLE = bend_angle * Pi / 180.0,
 	     ELEMEDGE = global_shift + drift_before_bend,
 	     DESIGNENERGY = bend_energy,
 	     L = bend_chord_length,
-	     GAP = bend_gap, 
+	     GAP = bend_gap,
              dx = 0.005;
 
 
@@ -263,9 +264,9 @@ Option, STATDUMPFREQ = STAT_DUMP_FREQUENCY;
 //\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 // Here we define beam that will be transported.
 //\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-beam_1: BEAM, PARTICLE = ELECTRON, 
-	      pc = P0, 
-	      NPART = NUMBER_OF_PARTICLES, 
+beam_1: BEAM, PARTICLE = ELECTRON,
+	      pc = P0,
+	      NPART = NUMBER_OF_PARTICLES,
 	      BFREQ = RF_FREQUENCY,
       	      BCURRENT = BEAM_BUNCH_CHARGE * RF_FREQUENCY,
 	      CHARGE = -1;
@@ -275,15 +276,15 @@ beam_1: BEAM, PARTICLE = ELECTRON,
 // Run simulation.
 //\\\\\\\\\\\\\\\\
 
-TRACK, LINE = Beamline, 
-       BEAM = beam_1, 
-       MAXSTEPS = 1000000, 
+TRACK, LINE = Beamline,
+       BEAM = beam_1,
+       MAXSTEPS = 1000000,
        DT = TIME_STEP_1,
        ZSTOP = bend_end;
 
-RUN, METHOD = "PARALLEL-T", 
-     BEAM = beam_1, 
-     FIELDSOLVER = FS_SC1, 
+RUN, METHOD = "PARALLEL-T",
+     BEAM = beam_1,
+     FIELDSOLVER = FS_SC1,
      DISTRIBUTION = Initial_Distribution;
 
 ENDTRACK;

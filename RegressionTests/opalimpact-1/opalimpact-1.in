@@ -1,8 +1,9 @@
-OPTION, ECHO = FALSE, 
+OPTION, ECHO = FALSE,
         PSDUMPFREQ = 10,
         STATDUMPFREQ = 10,
         REPARTFREQ = 1000,
         PSDUMPLOCALFRAME = FALSE;
+Option, VERSION=10600;
 
 TITLE, string="Gaussian bunch drift test";
 
@@ -21,7 +22,7 @@ L1: LINE = (D1);
 
 Fs1: FIELDSOLVER, FSTYPE = FFT, MX = 16, MY = 16, MT = 16, BBOXINCR=0.1;
 
-Dist1: DISTRIBUTION, DISTRIBUTION = GAUSS, 
+Dist1: DISTRIBUTION, DISTRIBUTION = GAUSS,
        OFFSETX = 0.0, OFFSETY = 0.0, OFFSETZ = 15.0e-3,   // Centroid of bunch (m)
        SIGMAX = 5.0e-3, SIGMAY = 5.0e-3, SIGMAZ = 5.0e-3,   // Sigmas of the Gaussian bunch (m)
        OFFSETPX = 0.0, OFFSETPY = 0.0, OFFSETPZ = 0.0,    // Mean momenta (eV)

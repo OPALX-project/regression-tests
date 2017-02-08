@@ -3,21 +3,22 @@ Option, INFO=FALSE;
 Option, PSDUMPFREQ=1;
 Option, STATDUMPFREQ=1;
 Option, PPDEBUG=TRUE;
+Option, VERSION=10600;
 
 Title, string="Parallel Plate Benchmark Vaughan model constant number of particles";
 
-Phi=0;    
+Phi=0;
 ppvolt=0.00012;
 pplength=0.001;
 ppfreq=1640;
 
-DistSurf: DISTRIBUTION, DISTRIBUTION = "SURFACEEMISSION", NPDARKCUR=0, FNBETA=0.1, FNMAXEMI=2, SECONDARYFLAG=2, NEMISSIONMODE=FALSE, VSEYZERO=0.5, 
-					VEZERO=12.5, VSEYMAX=2.22, VEMAX=165.0, VKENERGY=1.0, VKTHETA=1.0, 
-					VW=1.6e-19*ppvolt*1e6/9.10938188/1e-31/2/3.1415926/ppfreq/1e6/pplength, 
+DistSurf: DISTRIBUTION, DISTRIBUTION = "SURFACEEMISSION", NPDARKCUR=0, FNBETA=0.1, FNMAXEMI=2, SECONDARYFLAG=2, NEMISSIONMODE=FALSE, VSEYZERO=0.5,
+					VEZERO=12.5, VSEYMAX=2.22, VEMAX=165.0, VKENERGY=1.0, VKTHETA=1.0,
+					VW=1.6e-19*ppvolt*1e6/9.10938188/1e-31/2/3.1415926/ppfreq/1e6/pplength,
 					VVTHERMAL=7.268929821*1e5, SURFMATERIAL=0; // initial conditions
 
 DistSurf1: DISTRIBUTION, DISTRIBUTION = "SURFACERANDCREATE",
-					INWARDMARGIN=0.0, NPDARKCUR=20000, VW=1.6e-19*ppvolt*1e6/9.10938188/1e-31/2/3.1415926/ppfreq/1e6/pplength, 
+					INWARDMARGIN=0.0, NPDARKCUR=20000, VW=1.6e-19*ppvolt*1e6/9.10938188/1e-31/2/3.1415926/ppfreq/1e6/pplength,
 					VVTHERMAL=7.268929821*1e5; // randomly generate more electrons
 
 ge: GEOMETRY, FGEOM="parallel-plat1mm-hut.h5", S=0.0, ZSHIFT=0, DISTRS={DistSurf, DistSurf1};
@@ -49,10 +50,7 @@ beam1: BEAM, PARTICLE = ELECTRON, pc = P0, NPART = 3000, BFREQ = bfreq , BCURREN
 
 Select, Line=Benchmark;
 
-track, line= Benchmark, beam=beam1, MAXSTEPS=10, DT=2e-12, ZSTOP=0.9;  
+track, line= Benchmark, beam=beam1, MAXSTEPS=10, DT=2e-12, ZSTOP=0.9;
  run, method = "PARALLEL-T", beam = beam1, fieldsolver = Fs1, MULTIPACTING=TRUE;
 endtrack;
 Quit;
-
-
-

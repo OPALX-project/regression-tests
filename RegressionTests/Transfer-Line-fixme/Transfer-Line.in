@@ -1,5 +1,6 @@
 Option, ECHO=FALSE;
 Option, PSDUMPFREQ=50;
+Option, VERSION=10600;
 
 Title,string="iw2 transfer line CAD-Zeichnung 0-00101.25.336F";
 
@@ -43,7 +44,7 @@ IW2Line: Line= (SM3,SM4,AXA);
 //IW2Line: Line= (SM3);
 
 qb=0.0;
-rf=50.6328e6;  
+rf=50.6328e6;
 
 //Dist1405bin:DISTRIBUTION, DISTRIBUTION=binomial,
 //sigmax=0.0018, sigmapx=39.128, corrx=0.449, mx=20000.0,
@@ -63,7 +64,7 @@ Dist1405bin:DISTRIBUTION, DISTRIBUTION=binomial,
 			  mx = 20000.0,
 			  sigmay = 0.001469,
 			  sigmapy = 26.0,
-			  corry = 0.9, 
+			  corry = 0.9,
 			  my = 20000.0,
 			  sigmat = 0.0032,
 			  sigmapt = 22.0,
@@ -77,9 +78,9 @@ Dist1405bin:DISTRIBUTION, DISTRIBUTION=binomial,
 
 
 
-Fs1:FIELDSOLVER, FSTYPE=FFT, MX=32, MY=32, MT=32, 
+Fs1:FIELDSOLVER, FSTYPE=FFT, MX=32, MY=32, MT=32,
 		 PARFFTX=true, PARFFTY=true, PARFFTT=true,
-		 BCFFTX=open, BCFFTY=open, BCFFTT=open, 
+		 BCFFTX=open, BCFFTY=open, BCFFTT=open,
   		 BBOXINCR=1, GREENSF=STANDARD;
 
 
@@ -92,4 +93,3 @@ track,line=IW2Line, beam=beam1, MAXSTEPS=900000, DT=5.0e-11, ZSTOP=90.0;
 endtrack;
 
 Quit;
-
