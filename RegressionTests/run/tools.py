@@ -81,7 +81,9 @@ def genplot(simname, var):
     simnames = simname + ".stat"
     reference = "reference/" + simnames
 
+    name = "name=" + var
     vars = []
+    numberColumns = 0
     nrCol = -1
     varUnit = ''
     varParts = str.split(var, "_")
@@ -95,21 +97,28 @@ def genplot(simname, var):
     opalRevision = ''
     refRevision = 'reference'
     lines = readfile(simname + ".stat")
+    length = len(lines)
 
-    for line in lines:
-        name = "name=" + var
-        if line.find(name) != -1: #find offset in stat list
-            param = str.split(line, "description=\"")[1]
-            nrCol = int(str.split(param, " ")[0]) - 1
-            unit = str.split(line, "units=")[1]
-            varUnit = str.split(unit, " ")[0]
+    for i in range(length):
+        line = lines[i]
+
+        if "&column" in line:
+            numberColumns += 1
+            line = lines[i + 1]
+            if line.find(name) != -1:
+                nrCol = numberColumns - 1
+                line = lines[i + 3]
+                unit = str.split(line, "units=")[1]
+                varUnit = str.split(unit, ",")[0]
 
         elif "&parameter" in line:
             numScalars += 1
+            line = lines[i + 1]
             if "name=revision" in line:
                 revLine = numScalars
 
-        elif "&data mode=ascii" in line:
+        elif "&data" in line:
+            readLines += 3
             break
 
         readLines += 1

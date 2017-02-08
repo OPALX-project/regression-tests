@@ -197,6 +197,7 @@ class StatTest:
     """
     def readStatVariable(self, filename):
         vars = []
+        numColumns = 0
         nrCol = -1
         numScalars = 0
         hasReadHeader = False
@@ -204,9 +205,12 @@ class StatTest:
 
         for line in lines:
             name = "name=" + self.var
-            if line.find(name) != -1: #find offset in stat list
-                param = str.split(line, "description=\"")[1]
-                nrCol = int(str.split(param, " ")[0])-1
+
+            if "&column" in line:
+                numColumns += 1
+
+            if line.find(name) != -1:
+                nrCol = numColumns - 1
 
             elif "&parameter" in line:
                 numScalars += 1
@@ -220,7 +224,7 @@ class StatTest:
                 continue
 
             elif hasReadHeader == True and numScalars == 0 and nrCol > -1:
-                values = str.split(line, "\t")
+                values = str.split(line) #, "\t")
                 vars.append(float(values[nrCol]))
 
         return vars
