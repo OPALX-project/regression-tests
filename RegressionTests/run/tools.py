@@ -6,6 +6,7 @@ import subprocess
 import os
 import datetime
 import re
+import pprint
 
 """
 parse linefile into list and strip newline
@@ -74,6 +75,71 @@ def module_load(module):
                 os.environ[envadd[0]] = envadd[1]
 
 """
+parse header of .stat file (ASCII SDDS format)
+"""
+def readStatHeader(simname):
+    header = {'number of lines': 0,
+              'columns': {},
+              'parameters': {}
+              }
+    numColumns = 0
+    numScalars = 0
+    readLines = 0
+    lines = readfile(simname)
+    length = len(lines)
+
+    for i in range(length):
+        line = lines[i]
+
+        if "&column" in line:
+            j = i
+            column = ""
+            while not "&end" in line:
+                column += line
+                j += 1
+                line = lines[j]
+            column += line
+
+            name = str.split(column, "name=")[1]
+            name = str.split(name, ",")[0]
+            unit = str.split(column, "units=")[1]
+            unit = str.split(unit, ",")[0]
+
+            header['columns'][name] = {'units': unit, 'column': len(header['columns'])}
+            numColumns += 1
+
+        elif "&parameter" in line:
+            j = i
+            parameter = ""
+            while not "&end" in line:
+                parameter += line
+                j += 1
+                line = lines[j]
+            parameter += line
+
+            name = str.split(parameter, "name=")[1]
+            name = str.split(name, ",")[0]
+
+            header['parameters'][name] = {'row': len(header['parameters'])}
+
+
+        elif "&data" in line:
+            j = i
+            while not "&end" in line:
+                j += 1
+                readLines += 1
+                line = lines[j]
+
+            readLines += 1
+            break
+
+        readLines += 1
+
+    header['number of lines'] = readLines
+
+    return header
+
+"""
 generate stat plot with gnuplot
 returns fileame
 """
@@ -84,44 +150,27 @@ def genplot(simname, var):
     name = "name=" + var
     vars = []
     numberColumns = 0
-    nrCol = -1
+    varCol = -1
     varUnit = ''
     varParts = str.split(var, "_")
     prettyVar = varParts[0]
     if len(varParts) == 2:
         prettyVar = varParts[0] + "(" + varParts[1] + ")"
-    numScalars = 0
-    revLine = 0
-    hasReadHeader = False
-    readLines = 0
     opalRevision = ''
     refRevision = 'reference'
-    lines = readfile(simname + ".stat")
-    length = len(lines)
 
-    for i in range(length):
-        line = lines[i]
+    header = readStatHeader(simnames)
+    readLines = header['number of lines']
+    revLine = header['parameters']['revision']['row']
+    numScalars = len(header['parameters'])
+    sCol = header['columns']['s']['column']
 
-        if "&column" in line:
-            numberColumns += 1
-            line = lines[i + 1]
-            if line.find(name) != -1:
-                nrCol = numberColumns - 1
-                line = lines[i + 3]
-                unit = str.split(line, "units=")[1]
-                varUnit = str.split(unit, ",")[0]
+    if header['columns'].has_key(var):
+        varData = header['columns'][var]
+        varCol = varData['column']
+        varUnit = varData['units']
 
-        elif "&parameter" in line:
-            numScalars += 1
-            line = lines[i + 1]
-            if "name=revision" in line:
-                revLine = numScalars
-
-        elif "&data" in line:
-            readLines += 3
-            break
-
-        readLines += 1
+    lines = readfile(simnames)
 
     m = re.search('(.* git rev\. [A-Za-z0-9]{7})[A-Za-z0-9]*', lines[readLines + revLine]);
 
@@ -134,47 +183,49 @@ def genplot(simname, var):
     # headers of the files do not necessarily have to have
     # the same length. therefore copy the data in temporary
     # files, delete them in the end
-    if nrCol > -1:
+    if varCol > -1:
         data1 = open('data1.dat','w')
-        for line in lines[readLines + numScalars + 1:]:
+        for line in lines[(readLines + numScalars):]:
             values = line.split()
-            data1.write(values[1] + "\t" + values[nrCol] + "\n")
+            data1.write(values[sCol] + "\t" + values[varCol] + "\n")
         data1.close()
 
-    revLine = 0
-    readLines = 0
-    numScalars = 0
+    varCol = -1
+
+    header = readStatHeader(reference)
+    readLines = header['number of lines']
+    revLine = header['parameters']['revision']['row']
+    numScalars = len(header['parameters'])
+    sCol = header['columns']['s']['column']
+
+    if header['columns'].has_key(var):
+        varData = header['columns'][var]
+        varCol = varData['column']
+        varUnit = varData['units']
 
     lines = readfile(reference)
 
-    for line in lines:
-        if "&parameter" in line:
-            numScalars += 1
-            if "name=revision" in line:
-                revLine = numScalars
-        elif "&data mode=ascii" in line:
-            break
+    m = re.search('(.* git rev\. [A-Za-z0-9]{7})[A-Za-z0-9]*', lines[readLines + revLine]);
 
-        readLines += 1
-
-    if revLine > 0:
-        m = re.search('(.* git rev\. [A-Za-z0-9]{7})[A-Za-z0-9]*', lines[readLines + revLine]);
-
+    if (m != None):
+        refRevision = m.group(1)
+    else:
+        m = re.search('(.* svn rev\. [A-Za-z0-9]{7})[A-Za-z0-9]*', lines[readLines + revLine]);
         if (m != None):
-            refRevision += ": " + m.group(1)
+            refRevision = 'reference: ' + m.group(1)
         else:
-            refRevision += ": " + lines[readLines + revLine]
+            refRevision = 'reference: ' + lines[readLines + revLine]
 
-    if nrCol > -1:
+    if varCol > -1:
         data2 = open('data2.dat','w')
-        for line in lines[readLines + numScalars + 1:]:
+        for line in lines[(readLines + numScalars):]:
             values = line.split()
-            data2.write(values[1] + "\t" + values[nrCol] + "\n")
+            data2.write(values[sCol] + "\t" + values[varCol] + "\n")
         data2.close()
 
     filename = ""
     d = datetime.date.today()
-    if nrCol > -1:
+    if varCol > -1:
         filename = simname + "_" + var + "_" + str(d.day) + "_" + str(d.month) + "_" + str(d.year)
         plotcmd = "set terminal post enh col 20\n"
         plotcmd += "set output '" + filename + ".ps'\n"

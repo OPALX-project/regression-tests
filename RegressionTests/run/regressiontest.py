@@ -14,6 +14,7 @@ from reporter import TempXMLElement
 
 from tools import genplot
 from tools import readfile
+from tools import readStatHeader
 
 class RegressionTest:
 
@@ -197,34 +198,21 @@ class StatTest:
     """
     def readStatVariable(self, filename):
         vars = []
-        numColumns = 0
         nrCol = -1
-        numScalars = 0
-        hasReadHeader = False
+
+        header = readStatHeader(filename + ".stat")
+        readLines = header['number of lines']
+        numScalars = len(header['parameters'])
+
+        if header['columns'].has_key(self.var):
+            varData = header['columns'][self.var]
+            nrCol = varData['column']
+
         lines = readfile(filename + ".stat")
 
-        for line in lines:
-            name = "name=" + self.var
-
-            if "&column" in line:
-                numColumns += 1
-
-            if line.find(name) != -1:
-                nrCol = numColumns - 1
-
-            elif "&parameter" in line:
-                numScalars += 1
-
-            elif "&data mode=ascii" in line:
-                hasReadHeader = True
-
-            #FIXME: this is very ugly
-            elif hasReadHeader == True and numScalars > 0:
-                numScalars -= 1
-                continue
-
-            elif hasReadHeader == True and numScalars == 0 and nrCol > -1:
-                values = str.split(line) #, "\t")
+        if nrCol > -1:
+            for line in lines[(readLines + numScalars):]:
+                values = line.split()
                 vars.append(float(values[nrCol]))
 
         return vars
