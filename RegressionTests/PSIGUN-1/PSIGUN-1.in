@@ -29,6 +29,7 @@ BC               = QB*BF;
 // TYPE:	specifies "STANDING" (default), "TRAVELLING" or "SINGLE GAP" structure
 // FREQ:	RF frequency of cavity (real in MHz).
 //
+GUNSOURCE: SOURCE, ELEMEDGE = 0.0;
 
 FINSS_RGUN: RFCavity, L = 0.34986, VOLT = 100.0, FMAPFN = "PHINGU1.T7",
 		ELEMEDGE =0.0, TYPE = "STANDING", FREQ = BF,
@@ -53,7 +54,7 @@ FIND1_MQ30: Quadrupole, L=0.1, K1= 0.0, ELEMEDGE=1.74;
 //elemento fittizio utilizzato per prolungare la linea del fascio
 END: Solenoid, L=0.01, KS = 0.01, ELEMEDGE=100., FMAPFN="NEW_SINGLE_SOL_NOFRINGE_ASTRA.opal";
 
-Injector: Line = (FINSS_RGUN, FIND1_MSOL10, FIND1_MQ10, FIND1_MQ20, FIND1_MQ30, END);
+Injector: Line = (GUNSOURCE, FINSS_RGUN, FIND1_MSOL10, FIND1_MQ10, FIND1_MQ20, FIND1_MQ30, END);
 // End: CTF3 //////////////////////////////////////////////////////////////////////////////////////////////////
 
 
