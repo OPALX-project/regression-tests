@@ -264,6 +264,7 @@ class StatTest:
 
         if len(readvar_sim) != len(readvar_ref):
             rep.appendReport("Error: size of stat variables (%s) dont agree!\n" % self.var)
+            rep.appendReport("       size reference: %d, size simulation: %d\n" % (len(readvar_ref), len(readvar_sim)))
             rep.appendReport("\t Test %s(%s) broken: %s (eps=%s) \n" % (self.var,self.quant,val,self.eps))
             passed_report.appendTextNode("false")
             delta_report.appendTextNode("-")
