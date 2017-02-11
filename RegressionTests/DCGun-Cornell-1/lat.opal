@@ -2,7 +2,6 @@
 // Bmad Lattice File: lat.bmad
 // Bmad Lattice Name:
 
-GUNSOURCE: SOURCE, ELEMEDGE = 0.0;
 IN.MAR.BEG: marker, elemedge = 0;
 IN.A1.MAR.BEG: marker, elemedge = 1.50000E-01;
 IN.A1.BUN01: rfcavity, type = "STANDING", l =  2.00000E-01,
@@ -71,7 +70,7 @@ IN.A1.PIP02: drift, l =  4.06300E-01, elemedge = 8.14000E-01;
 IN.A1.SOL02: solenoid, l =  6.00000E-01, fmapfn = "fieldgrid_5.t7",
    ks = 8.289195E-03, elemedge = 8.28000E-01;
 
-lattice: line = (GUNSOURCE, IN.MAR.BEG, IN.A1.MAR.BEG, IN.A1.BUN01, IN.A1.MAR.END,
+lattice: line = (IN.MAR.BEG, IN.A1.MAR.BEG, IN.A1.BUN01, IN.A1.MAR.END,
    IN.CRMOD.MAR.BEG, IN.CRMOD.DRI01_part_1, IN.CRMOD.RFC01, IN.CRMOD.DRI01_part_2,
    IN.CRMOD.RFC02, IN.CRMOD.DRI01_part_3, IN.CRMOD.RFC03, IN.CRMOD.DRI01_part_4,
    IN.CRMOD.RFC04, IN.CRMOD.DRI01_part_5, IN.CRMOD.RFC05, IN.CRMOD.DRI01_part_6,
