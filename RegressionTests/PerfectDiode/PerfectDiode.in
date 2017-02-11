@@ -1,5 +1,5 @@
 Option, ECHO=FALSE;
-Option, PSDUMPFREQ=5;
+Option, PSDUMPFREQ=15;
 Option, STATDUMPFREQ=10;
 Option, VERSION=10900;
 
@@ -13,7 +13,7 @@ P0 = gambet * EMASS;
 brho = (EMASS * 1.0e9 * gambet) / CLIGHT;
 
 value,{gamma,brho,Edes,beta,gambet};
-
+GUNSOURCE: SOURCE, ELEMEDGE=0.0;
 // Begin: Diode-Field ////////////////////////////////////////////////////////////////////////////////////////////
 //
 // Artificial "perfect" diode field. No radial component, just z field.
@@ -29,7 +29,7 @@ value,{gamma,brho,Edes,beta,gambet};
 DiodeEField: RFCavity, L = 0.02, VOLT = -100.0, FMAPFN = "ideal-diode.T7",
 		      ELEMEDGE = 0.0, TYPE = "STANDING", FREQ = 0.0;
 
-Diode: Line = (DiodeEField);
+Diode: Line = (GUNSOURCE,DiodeEField);
 
 // End: Diode-Field ////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -90,7 +90,8 @@ Dist2:DISTRIBUTION, DISTRIBUTION = "GUNGAUSSFLATTOPTH",
 		    NBIN=5,
 		    DEBIN=30,
 		    EMISSIONSTEPS=500,
-		    EMISSIONMODEL=ASTRA;
+		    EMISSIONMODEL=ASTRA,
+                    WRITETOFILE=TRUE;
 
 
 
