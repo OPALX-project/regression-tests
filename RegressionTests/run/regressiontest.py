@@ -346,9 +346,9 @@ class OutTest:
                         if self.valueIsVector(value):
                             vars.append(self.parseVector(value))
                         else:
-                            parsed_value = str.split(value, " ")[0]
-                            parsed_value = parsed_value.lstrip().rstrip()
-                            vars.append((float(parsed_value),))
+                            # parsed_value = str.split(value, " ")[0]
+                            # parsed_value = parsed_value.lstrip().rstrip()
+                            vars.append((self.parseScalar(value),)) #(float(parsed_value),))
 
                         break;
         return vars
@@ -360,17 +360,64 @@ class OutTest:
     def parseVector(self, value_str):
         # remove vector brackets
         value_str = value_str.split("(")[1]
+        rest = value_str
         value_str = value_str.split(")")[0]
         values = value_str.lstrip().rstrip()
 
+        factor = self.getUnitConversion(rest)
+
         vector_values = values.split(",")
-        x = float(vector_values[0].lstrip().rstrip())
-        y = float(vector_values[1].lstrip().rstrip())
-        z = float(vector_values[2].lstrip().rstrip())
+        x = float(vector_values[0].lstrip().rstrip()) * factor
+        y = float(vector_values[1].lstrip().rstrip()) * factor
+        z = float(vector_values[2].lstrip().rstrip()) * factor
 
         parsed_value = (x, y, z)
         return parsed_value
 
+    def parseScalar(self, value_str):
+        parsed_value_str = str.split(value_str, " ")[0]
+        parsed_value = float(parsed_value_str.lstrip().rstrip())
+
+        parsed_value *= self.getUnitConversion(value_str)
+
+        return parsed_value
+
+    def parseUnits(self, units_str):
+        split_str = str.split(units_str, "]")
+        if len(split_str) > 1:
+            parsed_units = str.split(split_str[0], "[")[1]
+            parsed_units = parsed_units.lstrip().rstrip()
+            return parsed_units
+
+        return ""
+
+    def getUnitConversion(self, unit_str):
+        unit_conversion = {'eV': 1e-3,
+                           'keV': 1,
+                           'MeV': 1e3,
+                           'um': 1e-6,
+                           'mm': 1e-3,
+                           'm': 1,
+                           'fs': 1e-6,
+                           'ps': 1e-3,
+                           'ns': 1,
+                           'us': 1e3,
+                           'ms': 1e6,
+                           's': 1e9,
+                           'pC': 1e-3,
+                           'nC': 1,
+                           'uC': 1e3,
+                           'mC': 1e6,
+                           'C': 1e9,
+                           '%': 1,
+                           'beta gamma': 1}
+
+        parsed_units = self.parseUnits(unit_str)
+
+        if unit_conversion.has_key(parsed_units):
+            return unit_conversion[parsed_units]
+
+        return 1
 
     """
     method performs a test for "var" with reference file in a specific mode ("quant") for a specific accuracy ("eps")
