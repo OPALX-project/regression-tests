@@ -18,7 +18,7 @@ BCURRENT         = QB*BFREQ;
 
 call, file = "lat.opal";
 
-file_distribution:DISTRIBUTION, DISTRIBUTION=fromfile, FNAME="lat.opal_particles";
+file_distribution:DISTRIBUTION, TYPE=fromfile, FNAME="lat.opal_particles";
 
 no_fieldsolver:FIELDSOLVER,
 	FSTYPE = NONE, MX = 16, MY = 16, MT = 32,

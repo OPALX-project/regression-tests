@@ -93,7 +93,7 @@ Fs1:FIELDSOLVER, FSTYPE = FFT, MX = 16, MY = 16, MT = 32,
 // End: Fieldsolver ////////////////////////////////////////////
 
 
-Dist1:DISTRIBUTION, DISTRIBUTION = "GUNGAUSSFLATTOPTH",
+Dist1:DISTRIBUTION, TYPE = "GUNGAUSSFLATTOPTH",
 		    sigmax = 0.000395,
 		    sigmapx = 0.0,
 		    corrx = 0.0,
@@ -111,7 +111,7 @@ Dist1:DISTRIBUTION, DISTRIBUTION = "GUNGAUSSFLATTOPTH",
 		    NBIN=5,
 		    DEBIN=30;
 
-Dist2:DISTRIBUTION, DISTRIBUTION=fromfile,
+Dist2:DISTRIBUTION, TYPE=fromfile,
 		    FNAME="ReferenceParticles.dat";
 
 beam1: BEAM, PARTICLE = ELECTRON, pc = P0, NPART = 20000, BFREQ = BF , BCURRENT = BC, CHARGE = -1;

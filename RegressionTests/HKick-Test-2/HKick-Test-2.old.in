@@ -1,9 +1,8 @@
 Option, ECHO=FALSE;
 Option, INFO=FALSE;
 Option, AUTOPHASE=0;
-Option, VERSION=10900;
 
-Title, string="RBend Test";
+Title, string="HKick Test";
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -23,7 +22,7 @@ E_MASS = 9.10938188e-31;		     // Mass of electron (kg).
 BEAM_BUNCH_CHARGE = 0.0e-15;     // Beam bunch charge (C).
 NUMBER_OF_PARTICLES = 10000; // Number of particles in simulation
 
-PS_DUMP_FREQUENCY = 100000;     // How often (time steps) that the phase space of the beam is output.
+PS_DUMP_FREQUENCY = 100;     // How often (time steps) that the phase space of the beam is output.
 STAT_DUMP_FREQUENCY = 10; // How often (time steps) beam statistical properties are output.
 
 value, {RF_FREQUENCY,
@@ -40,7 +39,7 @@ value, {RF_FREQUENCY,
 // Time steps defined.
 //\\\\\\\\\\\\\\\\\\\\
 
-TIME_STEP_1 = 2.0 * 1.0e-12;   // Time step (s). We only need one for this simulation.
+TIME_STEP_1 = 1.0 * 1.0e-12;   // Time step (s). We only need one for this simulation.
 
 value, {TIME_STEP_1};
 
@@ -86,44 +85,27 @@ value, {FS_SC1_X_BINS,
 global_shift = 1.0;
 
 
-// Bend.
+// Kick.
 //
-// We have one bend in the system.
+// We have one kick in the system.
 //================================
 
-// Drift before bend (m).
-drift_before_bend = 0.25;
+// Drift before kick (m).
+drift_before_kick = 0.25;
 
-// Drift after bend (m).
-drift_after_bend = 0.5;
+// Drift after kick (m).
+drift_after_kick = 0.5;
 
-// Bend angle (degrees).
-bend_angle = 45.0;
+// Kick angle (degrees).
+kick_angle = 3.0;
 
-// Bend rotation about z axis (degrees).
-bend_rotation = 0.0;
+// Kick length (m).
+kick_length = CLIGHT * TIME_STEP_1;
 
-// Bend entrance angle (degrees).
-bend_e1 = 22.5;
-
-// Bend design energy (MeV).
-bend_energy = 7.0;
-
-// Bend length (m).
-bend_length = 0.5;
-
-// Bend gap (m).
-bend_gap = 0.02;
-
-
-value, {drift_before_bend,
-        bend_angle,
-	bend_rotation,
-	bend_e1,
-	bend_e2,
-	bend_energy,
-	bend_length,
-	bend_gap};
+value, {drift_before_kick,
+        drift_after_kick,
+        kick_angle,
+	kick_length};
 
 //******************************************************************************************************************
 //******************************************************************************************************************
@@ -159,38 +141,30 @@ FS_SC1: Fieldsolver, FSTYPE = NONE, MX = FS_SC1_X_BINS, MY = FS_SC1_Y_BINS, MT =
 //******************************************************************************************************************
 
 
-// Begin: Bend ///////////////////////////////////////////////////////////////////////////////////////////////////
+// Begin: Kick ///////////////////////////////////////////////////////////////////////////////////////////////////
 //
-// Definition of bend Bend.
+// Definition of kick Kick.
 //
 
-// Dipole
 //
 // L:			physical element length (real in m)
-// K0: 		     	y magnetic field (real)
-// FMAPFN:	     	field file name (string)
+// KICK:                kick angle (rad)
 // ELEMEDGE:	     	physical start of the element on the floor (real in m)
-// ALPHA:            	entrance angle (degrees). Exit angle is calculated automatically (bend is rectangular).
-// DESIGNENERGY:     	energy of design beam
-// WAKEF:		wake function attached to dipole
 //
 
-Bend: RBend, ANGLE = bend_angle * Pi / 180.0,
-   	     PSI = bend_rotation * Pi / 180.0,
-	     E1 = bend_e1 * Pi / 180.0,
-	     FMAPFN = "1DPROFILE1-DEFAULT",
-	     ELEMEDGE = global_shift + drift_before_bend,
-	     DESIGNENERGY = bend_energy,
-	     L = bend_length,
-	     GAP = bend_gap;
+kick1: HKICKER, KICK = kick_angle * Pi / 180.0,
+	        ELEMEDGE = global_shift + drift_before_kick,
+	        L = kick_length;
 
+drift1: DRIFT, ELEMEDGE = global_shift + drift_before_kick + kick_length,
+	       L = drift_after_kick;
 
-// Calculate position of end of Bend.
-bend_end = global_shift + drift_before_bend + bend_length + drift_after_bend;
+// Calculate position of end of Kick.
+kick_end = global_shift + drift_before_kick + kick_length + drift_after_kick;
 
-value, {bend_end};
+value, {kick_end};
 
-// End: Bend ///////////////////////////////////////////////////////////////////////////////////////////////////
+// End: Kick ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 //******************************************************************************************************************
@@ -205,7 +179,7 @@ value, {bend_end};
 //
 // Here we define beam lines using previously defined elements.
 
-Beamline: Line = (bend);
+Beamline: Line = (kick1, drift1);
 
 
 //******************************************************************************************************************
@@ -222,7 +196,7 @@ Beamline: Line = (bend);
 //
 
 Initial_Distribution: DISTRIBUTION, TYPE = FROMFILE,
-			 	    FNAME = "RBend-Simple-Test-3.dat";
+			 	    FNAME = "HKick-Test-2.old.dat";
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -264,8 +238,7 @@ TRACK, LINE = Beamline,
        BEAM = beam_1,
        MAXSTEPS = 1000000,
        DT = TIME_STEP_1,
-       ZSTART = 1.0,
-       ZSTOP = bend_end;
+       ZSTOP = kick_end;
 
 RUN, METHOD = "PARALLEL-T",
      BEAM = beam_1,

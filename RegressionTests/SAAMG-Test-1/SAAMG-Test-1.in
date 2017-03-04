@@ -37,14 +37,14 @@ Fs1: FIELDSOLVER, FSTYPE = SAAMG, MX = 16, MY = 16, MT = 16,
      ITSOLVER = CG, INTERPL = CONSTANT, TOL = 1.0e-6,
      MAXITERS = 1000, PRECMODE = STD;
 
-Dist1: DISTRIBUTION, DISTRIBUTION = GAUSS,
+Dist1: DISTRIBUTION, TYPE = GAUSS,
        OFFSETX = 0.0, OFFSETY = 0.0, OFFSETZ = 15.0e-3,    // Centroid of bunch (m)
        SIGMAX = 1.5e-3, SIGMAY = 1.5e-3, SIGMAZ = 5.0e-3,  // Sigmas of the Gaussian bunch (m)
        OFFSETPX = 0.0, OFFSETPY = 0.0, OFFSETPZ = 0.0,     // Mean momenta (eV)
        SIGMAPX = 0.0 , SIGMAPY = 0.0 , SIGMAPZ = 0.0 ,     // Sigmas of the momenta (eV)
        CORRX = 0.0, CORRY = 0.0, CORRZ = 0.0;              // Correlations
 
-//Dist1:DISTRIBUTION, DISTRIBUTION = fromfile, FNAME="../fieldmaps/Benchmark.dat";
+//Dist1:DISTRIBUTION, TYPE = fromfile, FNAME="../fieldmaps/Benchmark.dat";
 
 // Units: Mass in GeV/c^2, Charge in multiples of e, PC in betagamma
 Beam1: BEAM, PARTICLE = H2, MASS = H2mass, CHARGE = 1.0, BFREQ = RF_FREQ*harmonic,

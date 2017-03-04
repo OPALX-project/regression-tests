@@ -58,10 +58,10 @@ l1:   Line = (Injector,FINLB02);
 /*
  We can specity ONE distribution
 */
-Dist2:DISTRIBUTION, DISTRIBUTION=fromfile, FNAME="ReferenceParticles.dat";
+Dist2:DISTRIBUTION, TYPE=fromfile, FNAME="ReferenceParticles.dat";
 
 
-Dist1:DISTRIBUTION, DISTRIBUTION = "GUNGAUSSFLATTOPTH",
+Dist1:DISTRIBUTION, TYPE = "GUNGAUSSFLATTOPTH",
 		    sigmax = 0.000395,
 		    sigmapx = 0.0,
 		    corrx = 0.0,
