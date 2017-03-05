@@ -19,9 +19,19 @@
             <th>Tests</th>
           </tr>
           <tr>
+            <xsl:variable name="code_hash" select="Tests/Revisions/code_full"/>
+            <xsl:variable name="tests_hash" select="Tests/Revisions/tests_full"/>
             <td style="padding: 0px 10px 0px 10px"><xsl:value-of select="Tests/Date/start"/></td>
-            <td style="padding: 0px 10px 0px 10px"><xsl:value-of select="Tests/Revisions/code"/></td>
-            <td style="padding: 0px 10px 0px 10px"><xsl:value-of select="Tests/Revisions/tests"/></td>
+            <td style="padding: 0px 10px 0px 10px">
+              <a href="https://gitlab.psi.ch/OPAL/src/commit/{$code_hash}">
+                <xsl:value-of select="Tests/Revisions/code"/>
+              </a>
+            </td>
+            <td style="padding: 0px 10px 0px 10px">
+              <a href="https://gitlab.psi.ch/OPAL/regression-tests/commit/{$tests_hash}">
+                <xsl:value-of select="Tests/Revisions/tests"/>
+              </a>
+            </td>
           </tr>
         </table>
         <h2>Regression Tests</h2>

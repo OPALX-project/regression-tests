@@ -122,13 +122,23 @@ def addDate(rep):
 def addRevisionStrings(rep):
     revision_report = TempXMLElement("Revisions")
 
+    revisionCode = getRevisionOpal()
     code_report = TempXMLElement("code")
-    code_report.appendTextNode(getRevisionOpal())
+    code_report.appendTextNode(revisionCode[0:7])
     revision_report.appendChild(code_report)
 
+    full_code_report = TempXMLElement("code_full")
+    full_code_report.appendTextNode(revisionCode)
+    revision_report.appendChild(full_code_report)
+
+    revisionTests = getRevisionTests()
     tests_report = TempXMLElement("tests")
-    tests_report.appendTextNode(getRevisionTests())
+    tests_report.appendTextNode(revisionTests[0:7])
     revision_report.appendChild(tests_report)
+
+    full_tests_report = TempXMLElement("tests_full")
+    full_tests_report.appendTextNode(revisionTests)
+    revision_report.appendChild(full_tests_report)
 
     rep.appendChild(revision_report)
 

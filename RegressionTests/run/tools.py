@@ -260,7 +260,7 @@ def getRevisionTests():
     else:
         revision = subprocess.getoutput("git rev-parse HEAD")
 
-    return revision[0:7]
+    return revision
 
 def getRevisionOpal():
     fh = open("testRevision.in","w")
@@ -276,6 +276,6 @@ def getRevisionOpal():
 
     revRe = re.search('GITREVISION="(.{40})";$',output)
     if (revRe != None):
-        return (revRe.group(1))[0:7]
+        return (revRe.group(1))
     else:
         return ""
