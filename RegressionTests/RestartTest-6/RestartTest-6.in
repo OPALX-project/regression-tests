@@ -21,7 +21,7 @@ BC               = QB*BF;
 //
 // Definition of CTF3 RF photoinjector.
 //
-
+GUN: SOURCE, ELEMEDGE=0.0;
 //
 // L:		physical element length (real in m)
 // VOLT:	field scaling factor (real)
@@ -53,7 +53,7 @@ FIND1_MQ30: Quadrupole, L=0.1, K1= 0.0, ELEMEDGE=1.74;
 //elemento fittizio utilizzato per prolungare la linea del fascio
 END: Solenoid, L=0.01, KS = 0.01, ELEMEDGE=100., FMAPFN="NEW_SINGLE_SOL_NOFRINGE_ASTRA.opal";
 
-Injector: Line = (FINSS_RGUN, FIND1_MSOL10, FIND1_MQ10, FIND1_MQ20, FIND1_MQ30, END);
+Injector: Line = (GUN, FINSS_RGUN, FIND1_MSOL10, FIND1_MQ10, FIND1_MQ20, FIND1_MQ30, END);
 // End: CTF3 //////////////////////////////////////////////////////////////////////////////////////////////////
 
 

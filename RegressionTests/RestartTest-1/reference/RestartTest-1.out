@@ -1,3 +1,5 @@
+Ippl> CommMPI: Started job 1 on host `merlinl01'.
+Ippl> CommMPI: Started job 2 on host `merlinl01'.
 Ippl> CommMPI: Started job 3 on host `merlinl01'.
 Ippl> CommMPI: Parent process waiting for children ...
 Ippl> CommMPI: Child 2 ready.
@@ -18,16 +20,14 @@ OPAL{0}>
 OPAL{0}> Please send cookies, goodies or other motivations (wine and beer ... ) 
 OPAL{0}> to the OPAL developers opal@lists.psi.ch
 OPAL{0}> 
-OPAL{0}> Time: 21:07:01 date: 04/03/2017
+OPAL{0}> Time: 21:17:52 date: 04/03/2017
 OPAL{0}> 
-Ippl> CommMPI: Started job 1 on host `merlinl01'.
-Ippl> CommMPI: Started job 2 on host `merlinl01'.
 OPAL{0}> Couldn't find startup file "/gpfs/home/kraus/init.opal".
 OPAL{0}> Note: this is not mandatory for an OPAL simulation!
 OPAL{0}> 
 OPAL{0}> * Reading input stream "RestartTest-1.in".
 OPAL{0}[3]> 
-OPAL{0}[3]> 8 elements selected.
+OPAL{0}[3]> 9 elements selected.
 OPAL{0}[3]> 
 OPAL{0}> * ********************************************************************************** 
 OPAL{0}> * Selected Tracking Method == PARALLEL-T, NEW TRACK
@@ -154,23 +154,23 @@ OPAL{0}> * t               =       92.949 [ps]         dT    =        5.000 [ps]
 OPAL{0}> * spos            =       21.033 [mm]
 OPAL{0}> * ********************************************************************************** 
 OPAL{0}> 
-OPAL{0}> Track start at: 21:07:01, t= 92.949 [ps]; zstart at: 21.033 [mm]
+OPAL{0}> Track start at: 21:17:52, t= 92.949 [ps]; zstart at: 21.033 [mm]
 OPAL{0}> Executing ParallelTTracker, initial dt= 5.000 [ps];
 OPAL{0}> max integration steps 100, next step= 22
 ParallelTTracker {0}[2]> MINBINEMITTED 10
 ParallelTTracker {0}[2]> MINSTEPFORREBIN 600
 ParallelTTracker {0}[2]> REPARTFREQ 100
-ParallelTTracker {0}[3]> 21:07:02 Step     22 at 22.491 [mm], t= 97.949 [ps], E=1.702 [MeV]
+ParallelTTracker {0}[3]> 21:17:52 Step     22 at 22.491 [mm], t= 97.949 [ps], E=1.702 [MeV]
 OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 21:07:02 Step     23 at 23.950 [mm], t= 102.949 [ps], E=1.755 [MeV]
+ParallelTTracker {0}[3]> 21:17:52 Step     23 at 23.950 [mm], t= 102.949 [ps], E=1.755 [MeV]
 OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 21:07:02 Step     24 at 25.412 [mm], t= 107.949 [ps], E=1.796 [MeV]
+ParallelTTracker {0}[3]> 21:17:52 Step     24 at 25.412 [mm], t= 107.949 [ps], E=1.796 [MeV]
 OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 21:07:02 Step     25 at 26.874 [mm], t= 112.949 [ps], E=1.824 [MeV]
+ParallelTTracker {0}[3]> 21:17:52 Step     25 at 26.874 [mm], t= 112.949 [ps], E=1.824 [MeV]
 OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 21:07:02 Step     26 at 28.337 [mm], t= 117.949 [ps], E=1.842 [MeV]
+ParallelTTracker {0}[3]> 21:17:52 Step     26 at 28.337 [mm], t= 117.949 [ps], E=1.842 [MeV]
 OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 21:07:02 Step     27 at 29.801 [mm], t= 122.949 [ps], E=1.851 [MeV]
+ParallelTTracker {0}[3]> 21:17:52 Step     27 at 29.801 [mm], t= 122.949 [ps], E=1.851 [MeV]
 OPAL {0}[3]> * Wrote beam statistics.
 OPAL {0}> 
 OPAL {0}> * ************** B U N C H ********************************************************* 
@@ -209,36 +209,36 @@ Ippl{0}[3]> * freed fieldmap 'NEW_SINGLE_SOL_NOFRINGE_ASTRA.opal'               
 Ippl{0}[3]> * ******************************************************************************
 Ippl{0}[3]> 
 Ippl{0}[3]> END gone off
-OPAL{0}> done executing ParallelTTracker at 21:07:02
+OPAL{0}> done executing ParallelTTracker at 21:17:52
 OPAL{0}> * End of input stream "RestartTest-1.in".
 Timings{0}> -----------------------------------------------------------------
 Timings{0}>      Timing results for 4 nodes:
 Timings{0}> -----------------------------------------------------------------
-Timings{0}> mainTimer........... Wall tot =   0.424601, CPU tot =       0.39
+Timings{0}> mainTimer........... Wall tot =   0.429126, CPU tot =        0.4
 Timings{0}> 
 Timings{0}> Binaryrepart........ Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
 Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
-Timings{0}> Boundingbox......... Wall max =   0.002207, CPU max =          0
-Timings{0}>                      Wall avg =    0.00216, CPU avg =          0
-Timings{0}>                      Wall min =   0.002125, CPU min =          0
+Timings{0}> Boundingbox......... Wall max =   0.002177, CPU max =       0.01
+Timings{0}>                      Wall avg = 0.00213825, CPU avg =      0.005
+Timings{0}>                      Wall min =   0.002101, CPU min =          0
 Timings{0}> 
-Timings{0}> Compute Statistics.. Wall max =    0.00405, CPU max =       0.01
-Timings{0}>                      Wall avg =    0.00401, CPU avg =      0.005
-Timings{0}>                      Wall min =   0.003979, CPU min =          0
+Timings{0}> Compute Statistics.. Wall max =   0.003959, CPU max =          0
+Timings{0}>                      Wall avg = 0.00391375, CPU avg =          0
+Timings{0}>                      Wall min =   0.003877, CPU min =          0
 Timings{0}> 
-Timings{0}> ComputePotential.... Wall max =   0.267445, CPU max =       0.27
-Timings{0}>                      Wall avg =   0.267409, CPU avg =     0.2625
-Timings{0}>                      Wall min =   0.267377, CPU min =       0.25
+Timings{0}> ComputePotential.... Wall max =   0.268919, CPU max =       0.29
+Timings{0}>                      Wall avg =   0.268886, CPU avg =      0.275
+Timings{0}>                      Wall min =   0.268864, CPU min =       0.27
 Timings{0}> 
 Timings{0}> Create Distr........ Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
 Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
-Timings{0}> External field eval. Wall max =   0.014243, CPU max =       0.02
-Timings{0}>                      Wall avg =  0.0140405, CPU avg =      0.015
-Timings{0}>                      Wall min =   0.013767, CPU min =       0.01
+Timings{0}> External field eval. Wall max =   0.014167, CPU max =       0.03
+Timings{0}>                      Wall avg =   0.013994, CPU avg =     0.0125
+Timings{0}>                      Wall min =   0.013819, CPU min =          0
 Timings{0}> 
 Timings{0}> Fast inside test.... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
@@ -256,9 +256,9 @@ Timings{0}> Inside test......... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
 Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
-Timings{0}> Load Distr.......... Wall max =   0.003424, CPU max =       0.01
-Timings{0}>                      Wall avg = 0.00341575, CPU avg =     0.0025
-Timings{0}>                      Wall min =   0.003406, CPU min =          0
+Timings{0}> Load Distr.......... Wall max =   0.003368, CPU max =          0
+Timings{0}>                      Wall avg = 0.00334175, CPU avg =          0
+Timings{0}>                      Wall min =   0.003326, CPU min =          0
 Timings{0}> 
 Timings{0}> Particle Inside..... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
@@ -268,61 +268,61 @@ Timings{0}> Ray tracing......... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
 Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
-Timings{0}> RC-CC1Dfft.......... Wall max =   0.024964, CPU max =       0.05
-Timings{0}>                      Wall avg =  0.0229785, CPU avg =     0.0325
-Timings{0}>                      Wall min =   0.021364, CPU min =       0.02
+Timings{0}> RC-CC1Dfft.......... Wall max =   0.024612, CPU max =       0.03
+Timings{0}>                      Wall avg =  0.0229132, CPU avg =       0.02
+Timings{0}>                      Wall min =   0.021282, CPU min =       0.01
 Timings{0}> 
-Timings{0}> RC-CCtranspose...... Wall max =   0.117922, CPU max =       0.14
-Timings{0}>                      Wall avg =   0.115134, CPU avg =       0.13
-Timings{0}>                      Wall min =   0.113185, CPU min =       0.12
+Timings{0}> RC-CCtranspose...... Wall max =   0.119821, CPU max =       0.14
+Timings{0}>                      Wall avg =   0.117108, CPU avg =     0.1125
+Timings{0}>                      Wall min =   0.115611, CPU min =       0.08
 Timings{0}> 
-Timings{0}> RC-RC1Dfft.......... Wall max =   0.018622, CPU max =       0.02
-Timings{0}>                      Wall avg =   0.018089, CPU avg =      0.015
-Timings{0}>                      Wall min =   0.016943, CPU min =       0.01
+Timings{0}> RC-RC1Dfft.......... Wall max =    0.01863, CPU max =       0.05
+Timings{0}>                      Wall avg =   0.018157, CPU avg =      0.035
+Timings{0}>                      Wall min =   0.016914, CPU min =       0.02
 Timings{0}> 
-Timings{0}> RC-RRtranspose...... Wall max =   0.030352, CPU max =       0.02
-Timings{0}>                      Wall avg =  0.0282673, CPU avg =       0.01
-Timings{0}>                      Wall min =   0.025951, CPU min =          0
+Timings{0}> RC-RRtranspose...... Wall max =   0.030441, CPU max =       0.04
+Timings{0}>                      Wall avg =  0.0286528, CPU avg =     0.0275
+Timings{0}>                      Wall min =   0.026469, CPU min =       0.01
 Timings{0}> 
-Timings{0}> RC-total............ Wall max =   0.189022, CPU max =        0.2
-Timings{0}>                      Wall avg =   0.185427, CPU avg =       0.19
-Timings{0}>                      Wall min =   0.180358, CPU min =       0.18
+Timings{0}> RC-total............ Wall max =   0.191409, CPU max =       0.21
+Timings{0}>                      Wall avg =   0.187792, CPU avg =      0.195
+Timings{0}>                      Wall min =   0.182737, CPU min =       0.18
 Timings{0}> 
 Timings{0}> Secondary emission.. Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
 Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
-Timings{0}> SelfField total..... Wall max =   0.296927, CPU max =       0.29
-Timings{0}>                      Wall avg =   0.296886, CPU avg =       0.29
-Timings{0}>                      Wall min =   0.296854, CPU min =       0.29
+Timings{0}> SelfField total..... Wall max =   0.298566, CPU max =       0.31
+Timings{0}>                      Wall avg =   0.298525, CPU avg =     0.2975
+Timings{0}>                      Wall min =   0.298485, CPU min =       0.28
 Timings{0}> 
-Timings{0}> SF: GreensFTotal.... Wall max =   0.140991, CPU max =       0.14
-Timings{0}>                      Wall avg =   0.140463, CPU avg =       0.13
-Timings{0}>                      Wall min =   0.139025, CPU min =       0.12
+Timings{0}> SF: GreensFTotal.... Wall max =   0.141152, CPU max =       0.15
+Timings{0}>                      Wall avg =   0.140578, CPU avg =     0.1375
+Timings{0}>                      Wall min =   0.139033, CPU min =       0.12
 Timings{0}> 
-Timings{0}> SF: IntGreenF1...... Wall max =   0.047649, CPU max =       0.05
-Timings{0}>                      Wall avg =  0.0451185, CPU avg =     0.0375
-Timings{0}>                      Wall min =   0.042731, CPU min =       0.03
+Timings{0}> SF: IntGreenF1...... Wall max =   0.047659, CPU max =       0.06
+Timings{0}>                      Wall avg =  0.0450143, CPU avg =     0.0525
+Timings{0}>                      Wall min =   0.042608, CPU min =       0.04
 Timings{0}> 
-Timings{0}> SF: IntGreenF2...... Wall max =   0.023353, CPU max =       0.03
-Timings{0}>                      Wall avg =  0.0181295, CPU avg =       0.02
-Timings{0}>                      Wall min =   0.015833, CPU min =       0.01
+Timings{0}> SF: IntGreenF2...... Wall max =    0.02279, CPU max =       0.02
+Timings{0}>                      Wall avg =  0.0171157, CPU avg =     0.0075
+Timings{0}>                      Wall min =   0.014693, CPU min =          0
 Timings{0}> 
-Timings{0}> SF: IntGreenF3...... Wall max =   0.069377, CPU max =       0.07
-Timings{0}>                      Wall avg =  0.0679737, CPU avg =     0.0625
-Timings{0}>                      Wall min =   0.065788, CPU min =       0.06
+Timings{0}> SF: IntGreenF3...... Wall max =   0.070426, CPU max =       0.08
+Timings{0}>                      Wall avg =  0.0690677, CPU avg =     0.0675
+Timings{0}>                      Wall min =   0.066895, CPU min =       0.06
 Timings{0}> 
-Timings{0}> SF: MirrorRho1...... Wall max =   0.009366, CPU max =       0.02
-Timings{0}>                      Wall avg =  0.0092125, CPU avg =       0.01
-Timings{0}>                      Wall min =   0.009043, CPU min =          0
+Timings{0}> SF: MirrorRho1...... Wall max =   0.009786, CPU max =       0.02
+Timings{0}>                      Wall avg =  0.0093365, CPU avg =       0.01
+Timings{0}>                      Wall min =   0.008829, CPU min =          0
 Timings{0}> 
 Timings{0}> SF: MirrorRho2...... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
 Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
-Timings{0}> SF: Potential....... Wall max =   0.267465, CPU max =       0.27
-Timings{0}>                      Wall avg =   0.267425, CPU avg =     0.2625
-Timings{0}>                      Wall min =   0.267393, CPU min =       0.25
+Timings{0}> SF: Potential....... Wall max =   0.268937, CPU max =       0.29
+Timings{0}>                      Wall avg =   0.268903, CPU avg =      0.275
+Timings{0}>                      Wall min =   0.268881, CPU min =       0.27
 Timings{0}> 
 Timings{0}> SF: ShIntGreenF1.... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
@@ -340,24 +340,24 @@ Timings{0}> SF: ShIntGreenF4.... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
 Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
-Timings{0}> TIntegration1....... Wall max =   0.002879, CPU max =       0.01
-Timings{0}>                      Wall avg =  0.0026095, CPU avg =      0.005
-Timings{0}>                      Wall min =   0.001806, CPU min =          0
+Timings{0}> TIntegration1....... Wall max =   0.002876, CPU max =       0.01
+Timings{0}>                      Wall avg =   0.002596, CPU avg =      0.005
+Timings{0}>                      Wall min =   0.001773, CPU min =          0
 Timings{0}> 
-Timings{0}> TIntegration2....... Wall max =   0.003742, CPU max =       0.02
-Timings{0}>                      Wall avg =   0.003739, CPU avg =     0.0075
-Timings{0}>                      Wall min =   0.003737, CPU min =          0
+Timings{0}> TIntegration2....... Wall max =   0.003719, CPU max =       0.01
+Timings{0}>                      Wall avg =   0.003717, CPU avg =      0.005
+Timings{0}>                      Wall min =   0.003715, CPU min =          0
 Timings{0}> 
 Timings{0}> WakeField........... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
 Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
-Timings{0}> Write H5-File....... Wall max =   0.034618, CPU max =          0
-Timings{0}>                      Wall avg =   0.034581, CPU avg =          0
-Timings{0}>                      Wall min =    0.03452, CPU min =          0
+Timings{0}> Write H5-File....... Wall max =   0.038845, CPU max =       0.01
+Timings{0}>                      Wall avg =  0.0388117, CPU avg =     0.0025
+Timings{0}>                      Wall min =   0.038792, CPU min =          0
 Timings{0}> 
-Timings{0}> Write Stat.......... Wall max =    0.00287, CPU max =       0.01
-Timings{0}>                      Wall avg =   0.002015, CPU avg =      0.005
-Timings{0}>                      Wall min =   0.001728, CPU min =          0
+Timings{0}> Write Stat.......... Wall max =   0.002796, CPU max =          0
+Timings{0}>                      Wall avg = 0.00194025, CPU avg =          0
+Timings{0}>                      Wall min =   0.001653, CPU min =          0
 Timings{0}> 
 Timings{0}> -----------------------------------------------------------------
