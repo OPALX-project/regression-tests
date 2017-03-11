@@ -5,16 +5,16 @@ Option, VERSION=10900;
 
 Title,string="OPAL External field test";
 
-FINSS_RGUN_phi   = 0;
-FINSB01_RACC_phi = 0;
-FINSB02_RACC_phi = 0;
+REAL FINSS_RGUN_phi   = 0;
+REAL FINSB01_RACC_phi = 0;
+REAL FINSB02_RACC_phi = 0;
 
-REPARTFREQ       = 100;
-MINSTEPFORREBIN  = 600;
+REAL REPARTFREQ       = 100;
+REAL MINSTEPFORREBIN  = 600;
 
-QB               = 0.2e-9;
-BF               = 2998.0;
-BC               = QB*BF;
+REAL QB               = 0.2e-9;
+REAL BF               = 2998.0;
+REAL BC               = QB*BF;
 
 call, "ExternalFieldTest.phases";
 

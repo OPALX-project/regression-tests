@@ -5,15 +5,15 @@ Option, VERSION=10900;
 
 TITLE, STRING="Binomial Distribution Protons";
 
-Edes   = 0.072;    //
-QB     = 0.77e-12;   // charge in Cb
-BF     = 1300.0;   // frequency in Mhz
-BC     = QB*BF;    // bunch current
+REAL Edes   = 0.072;    //
+REAL QB     = 0.77e-12;   // charge in Cb
+REAL BF     = 1300.0;   // frequency in Mhz
+REAL BC     = QB*BF;    // bunch current
 
-gamma=(Edes+PMASS)/PMASS;
-beta=sqrt(1-(1/gamma^2));
-gambet=gamma*beta;
-P0 = gamma*beta*PMASS;
+REAL gamma=(Edes+PMASS)/PMASS;
+REAL beta=sqrt(1-(1/gamma^2));
+REAL gambet=gamma*beta;
+REAL P0 = gamma*beta*PMASS;
 
 
 Q1: QUADRUPOLE, L=1.0, ELEMEDGE=0.0, K1=0.0;
@@ -30,9 +30,9 @@ BBOXINCR = 1, GREENSF = INTEGRATED;
 //SIGMAY=  0.50*23.e-03, SIGMAPY=28.00, CORRY=0.0, MY=2.0,
 //SIGMAT=  1.0e-4,     SIGMAPT=11.96, CORRT=0.0, MT=2.0;
 
-sigpx = sqrt((33.56*1.0e-9 / PMASS + 1.0)^2 - 1.0);
-sigpy = sqrt((28.0*1.0e-9 / PMASS + 1.0)^2 - 1.0);
-sigpz = sqrt((11.96*1.0e-9 / PMASS + 1.0)^2 - 1.0);
+REAL sigpx = sqrt((33.56*1.0e-9 / PMASS + 1.0)^2 - 1.0);
+REAL sigpy = sqrt((28.0*1.0e-9 / PMASS + 1.0)^2 - 1.0);
+REAL sigpz = sqrt((11.96*1.0e-9 / PMASS + 1.0)^2 - 1.0);
 
 Dist2:DISTRIBUTION, TYPE=BINOMIAL,
 		    SIGMAX = 2.15e-03,

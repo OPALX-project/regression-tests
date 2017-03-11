@@ -5,15 +5,15 @@ Option, VERSION=10900;
 
 TITLE, STRING="Gauss Distribution Electrons";
 
-Edes   = 0.500;    // 0.5 GeV
-QB     = 0.77e-12;   // charge in Cb
-BF     = 1300.0;   // frequency in Mhz
-BC     = QB*BF;    // bunch current
+REAL Edes   = 0.500;    // 0.5 GeV
+REAL QB     = 0.77e-12;   // charge in Cb
+REAL BF     = 1300.0;   // frequency in Mhz
+REAL BC     = QB*BF;    // bunch current
 
-gamma=(Edes+EMASS)/EMASS;
-beta=sqrt(1-(1/gamma^2));
-gambet=gamma*beta;
-P0 = gamma*beta*EMASS;
+REAL gamma=(Edes+EMASS)/EMASS;
+REAL beta=sqrt(1-(1/gamma^2));
+REAL gambet=gamma*beta;
+REAL P0 = gamma*beta*EMASS;
 
 Q1: QUADRUPOLE, L=1.0, ELEMEDGE=0.0, K1=0.0;
 
@@ -30,9 +30,9 @@ BBOXINCR = 1, GREENSF = INTEGRATED;
 //SIGMAY = 0.00001, SIGMAPY=0.00001,
 //SIGMAT = 1e-8 , PT=Edes*1e9;
 
-sigpx = sqrt((0.00001*1.0e-9/PMASS + 1.0)^2 - 1.0);
-sigpy = sqrt((0.00001*1.0e-9/PMASS + 1.0)^2 - 1.0);
-pzave = sqrt((Edes/EMASS + 1.0)^2 - 1.0);
+REAL sigpx = sqrt((0.00001*1.0e-9/PMASS + 1.0)^2 - 1.0);
+REAL sigpy = sqrt((0.00001*1.0e-9/PMASS + 1.0)^2 - 1.0);
+REAL pzave = sqrt((Edes/EMASS + 1.0)^2 - 1.0);
 
 Dist2:DISTRIBUTION, TYPE = GAUSS,
 		    SIGMAX = 0.00001,

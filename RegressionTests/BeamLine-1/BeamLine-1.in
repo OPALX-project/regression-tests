@@ -3,16 +3,16 @@ OPTION, PSDUMPFREQ=1000000;
 OPTION, TELL=TRUE;
 Option, VERSION=10900;
 
-DT = 1.0E-10;
-Edes = 0.102715;
-gamma = (Edes+PMASS)/PMASS;
-beta = sqrt(1-(1/gamma^2));
-gambet = gamma*beta;
-P0 = gamma*beta*PMASS;
-brho = (PMASS*1.0e9*gambet) / CLIGHT;
-NStep = 16.144190/(beta*CLIGHT*DT);
-rf = 50.6328e6;  //need to be confirmed
-Qtot = 3562*1.6e-19;
+REAL DT = 1.0E-10;
+REAL Edes = 0.102715;
+REAL gamma = (Edes+PMASS)/PMASS;
+REAL beta = sqrt(1-(1/gamma^2));
+REAL gambet = gamma*beta;
+REAL P0 = gamma*beta*PMASS;
+REAL brho = (PMASS*1.0e9*gambet) / CLIGHT;
+REAL NStep = 16.144190/(beta*CLIGHT*DT);
+REAL rf = 50.6328e6;  //need to be confirmed
+REAL Qtot = 3562*1.6e-19;
 
 VALUE,{gamma,brho,Edes,beta,gambet};
 

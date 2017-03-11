@@ -6,24 +6,24 @@ OPTION, TELL=FALSE;
 Option, VERSION=10900;
 
 // OPAL Input forLA1line
-TFast = 5e-11;
-TSlow = 5e-12;
-TDeg = 1e-12;
-Edes = 0.249489;
-gamma = (Edes+PMASS)/PMASS;
-beta = sqrt(1-(1/gamma^2));
-gambet = gamma*beta;
-P0 = gamma*beta*PMASS;
-brho = (PMASS*1.0e9*gambet) / CLIGHT;
+REAL TFast = 5e-11;
+REAL TSlow = 5e-12;
+REAL TDeg = 1e-12;
+REAL Edes = 0.249489;
+REAL gamma = (Edes+PMASS)/PMASS;
+REAL beta = sqrt(1-(1/gamma^2));
+REAL gambet = gamma*beta;
+REAL P0 = gamma*beta*PMASS;
+REAL brho = (PMASS*1.0e9*gambet) / CLIGHT;
 VALUE,{gamma,brho,Edes,beta,gambet};
 
-rf = 50.6328e6;
-NProt =50000.0;
+REAL rf = 50.6328e6;
+REAL NProt =50000.0;
 
-OX = 0.1e-3;
-KX = 0.343e-3;
-OY = 0.1e-3;
-KY = 0.29e-3;
+REAL OX = 0.1e-3;
+REAL KX = 0.343e-3;
+REAL OY = 0.1e-3;
+REAL KY = 0.29e-3;
 
 DISTRIB1: DISTRIBUTION,
 SIGMAX = 0.001861, SIGMAPX = 0.001485*gambet,

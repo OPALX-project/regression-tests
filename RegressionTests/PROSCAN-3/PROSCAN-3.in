@@ -5,18 +5,18 @@ OPTION, TELL=TRUE;
 Option, VERSION=10900;
 
 // OPAL Input forLA2line
-TFast = 5e-11;
-TSlow = 5e-12;
-Edes = 0.074283;
-gamma = (Edes+PMASS)/PMASS;
-beta = sqrt(1-(1/gamma^2));
-gambet = gamma*beta;
-P0 = gamma*beta*PMASS;
-brho = (PMASS*1.0e9*gambet) / CLIGHT;
+REAL TFast = 5e-11;
+REAL TSlow = 5e-12;
+REAL Edes = 0.074283;
+REAL gamma = (Edes+PMASS)/PMASS;
+REAL beta = sqrt(1-(1/gamma^2));
+REAL gambet = gamma*beta;
+REAL P0 = gamma*beta*PMASS;
+REAL brho = (PMASS*1.0e9*gambet) / CLIGHT;
 VALUE,{gamma,brho,Edes,beta,gambet};
 
-rf = 50.6328e6;
-NProt = 300000;
+REAL rf = 50.6328e6;
+REAL NProt = 300000;
 
 DISTRIB1: DISTRIBUTION,
 SIGMAX = 0.00465705, SIGMAPX = 0.0477732*gambet,
@@ -206,8 +206,8 @@ BEAMLINE_A2: LINE=(D16,KMA3i,D17,KMA3o,D18,KMA4i,D19,KMA4o,D20,SMA2,D21,MMAP9X,M
 FS1:FIELDSOLVER, FSTYPE=NONE, MX=64, MY=64, MT=64, PARFFTX=true, PARFFTY=true, PARFFTT=true, BCFFTX=open, BCFFTY=open, BCFFTT=open, BBOXINCR=1, GREENSF=STANDARD;
 BEAM_A2: BEAM, PARTICLE=PROTON, PC=P0, NPART=NProt, BCURRENT=NProt*1.6e-19*rf, BFREQ=rf,  CHARGE=1;
 
-STEP0= (5.631- 4.20585)/(beta*CLIGHT*TSlow);
-STEP1= (6.855- 5.631)/(beta*CLIGHT*TFast);
+REAL STEP0= (5.631- 4.20585)/(beta*CLIGHT*TSlow);
+REAL STEP1= (6.855- 5.631)/(beta*CLIGHT*TFast);
 
 SELECT, LINE=BEAMLINE_A2;
 TRACK, LINE=BEAMLINE_A2, BEAM=BEAM_A2,

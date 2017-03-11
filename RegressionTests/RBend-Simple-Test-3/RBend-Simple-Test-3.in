@@ -13,18 +13,18 @@ Title, string="RBend Test";
 //
 // Here we define some global simulation parameters.
 
-RF_FREQUENCY = 700.0e6;			     // Reference frequency of problem (Hz).
-RF_WAVELENGTH = CLIGHT / RF_FREQUENCY; 	     // Reference wavelength (m).
+REAL RF_FREQUENCY = 700.0e6;			     // Reference frequency of problem (Hz).
+REAL RF_WAVELENGTH = CLIGHT / RF_FREQUENCY; 	     // Reference wavelength (m).
 
-Q_E = 1.60217653e-19;  	 		     // Elementary charge (C).
-E_MASS = 9.10938188e-31;		     // Mass of electron (kg).
+REAL Q_E = 1.60217653e-19;  	 		     // Elementary charge (C).
+REAL E_MASS = 9.10938188e-31;		     // Mass of electron (kg).
 
 
-BEAM_BUNCH_CHARGE = 0.0e-15;     // Beam bunch charge (C).
-NUMBER_OF_PARTICLES = 10000; // Number of particles in simulation
+REAL BEAM_BUNCH_CHARGE = 0.0e-15;     // Beam bunch charge (C).
+REAL NUMBER_OF_PARTICLES = 10000; // Number of particles in simulation
 
-PS_DUMP_FREQUENCY = 100000;     // How often (time steps) that the phase space of the beam is output.
-STAT_DUMP_FREQUENCY = 10; // How often (time steps) beam statistical properties are output.
+REAL PS_DUMP_FREQUENCY = 100000;     // How often (time steps) that the phase space of the beam is output.
+REAL STAT_DUMP_FREQUENCY = 10; // How often (time steps) beam statistical properties are output.
 
 value, {RF_FREQUENCY,
         RF_WAVELENGTH,
@@ -40,7 +40,7 @@ value, {RF_FREQUENCY,
 // Time steps defined.
 //\\\\\\\\\\\\\\\\\\\\
 
-TIME_STEP_1 = 2.0 * 1.0e-12;   // Time step (s). We only need one for this simulation.
+REAL TIME_STEP_1 = 2.0 * 1.0e-12;   // Time step (s). We only need one for this simulation.
 
 value, {TIME_STEP_1};
 
@@ -59,9 +59,9 @@ value, {TIME_STEP_1};
 // First define the space charge (SC) mesh.
 
 // Space charge mesh.
-FS_SC1_X_BINS = 8; // Number of mesh bins in x direction for space charge field solver.
-FS_SC1_Y_BINS = 8; // Number of mesh bins in y direction for space charge field solver.
-FS_SC1_Z_BINS = 8; // Number of mesh bins in z direction for space charge field solver.
+REAL FS_SC1_X_BINS = 8; // Number of mesh bins in x direction for space charge field solver.
+REAL FS_SC1_Y_BINS = 8; // Number of mesh bins in y direction for space charge field solver.
+REAL FS_SC1_Z_BINS = 8; // Number of mesh bins in z direction for space charge field solver.
 
 value, {FS_SC1_X_BINS,
         FS_SC1_Y_BINS,
@@ -83,7 +83,7 @@ value, {FS_SC1_X_BINS,
 
 // Beam line offset. This is global shift of the entire line (m).
 //===============================================================
-global_shift = 1.0;
+REAL global_shift = 1.0;
 
 
 // Bend.
@@ -92,28 +92,28 @@ global_shift = 1.0;
 //================================
 
 // Drift before bend (m).
-drift_before_bend = 0.25;
+REAL drift_before_bend = 0.25;
 
 // Drift after bend (m).
-drift_after_bend = 0.5;
+REAL drift_after_bend = 0.5;
 
 // Bend angle (degrees).
-bend_angle = 45.0;
+REAL bend_angle = 45.0;
 
 // Bend rotation about z axis (degrees).
-bend_rotation = 0.0;
+REAL bend_rotation = 0.0;
 
 // Bend entrance angle (degrees).
-bend_e1 = 22.5;
+REAL bend_e1 = 22.5;
 
 // Bend design energy (MeV).
-bend_energy = 7.0;
+REAL bend_energy = 7.0;
 
 // Bend length (m).
-bend_length = 0.5;
+REAL bend_length = 0.5;
 
 // Bend gap (m).
-bend_gap = 0.02;
+REAL bend_gap = 0.02;
 
 
 value, {drift_before_bend,
@@ -186,7 +186,7 @@ Bend: RBend, ANGLE = bend_angle * Pi / 180.0,
 
 
 // Calculate position of end of Bend.
-bend_end = global_shift + drift_before_bend + bend_length + drift_after_bend;
+REAL bend_end = global_shift + drift_before_bend + bend_length + drift_after_bend;
 
 value, {bend_end};
 
@@ -239,7 +239,7 @@ Initial_Distribution: DISTRIBUTION, TYPE = FROMFILE,
 //
 // Here we start simulation.
 
-MINSTEPFORREBIN = 750;
+REAL MINSTEPFORREBIN = 750;
 
 Option, PSDUMPFREQ = PS_DUMP_FREQUENCY;
 Option, STATDUMPFREQ = STAT_DUMP_FREQUENCY;

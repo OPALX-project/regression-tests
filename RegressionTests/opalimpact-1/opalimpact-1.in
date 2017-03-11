@@ -7,14 +7,14 @@ Option, VERSION=10900;
 
 TITLE, string="Gaussian bunch drift test";
 
-Edes    = 0.001;
-CURRENT = 0.01;
+REAL Edes    = 0.001;
+REAL CURRENT = 0.01;
 
-gamma=(Edes+PMASS)/PMASS;
-beta=sqrt(1-(1/gamma^2));
-gambet=gamma*beta;
-P0 = gamma*beta*PMASS;
-brho = (PMASS*1.0e9*gambet) / CLIGHT;
+REAL gamma=(Edes+PMASS)/PMASS;
+REAL beta=sqrt(1-(1/gamma^2));
+REAL gambet=gamma*beta;
+REAL P0 = gamma*beta*PMASS;
+REAL brho = (PMASS*1.0e9*gambet) / CLIGHT;
 
 D1: DRIFT, ELEMEDGE = 0.0, L = 1.0;
 
