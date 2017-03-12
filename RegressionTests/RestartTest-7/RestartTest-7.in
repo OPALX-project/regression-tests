@@ -5,13 +5,13 @@ Option, VERSION=10900;
 
 Title, string="SwissFEL Injector, Phase 1 (Feb. 2010)";
 
-FINSS_RGUN_phi= 0;
-FINSB01_RACC_phi= 0;
-FINSB02_RACC_phi= 0;
+REAL FINSS_RGUN_phi= 0;
+REAL FINSB01_RACC_phi= 0;
+REAL FINSB02_RACC_phi= 0;
 
 call, "FinPhase1.phases";
 
-REPARTFREQ= 100;
+REAL REPARTFREQ= 100;
 
 value,{FINSS_RGUN_phi, FINSB01_RACC_phi, FINSB02_RACC_phi, REPARTFREQ};
 
@@ -45,18 +45,18 @@ Dist1:DISTRIBUTION, TYPE = "GUNGAUSSFLATTOPTH",
 		    DEBIN = 80,
 		    NBIN = 101 , INPUTMOUNITS=EV;
 
-MINSTEPFORREBIN = 1000;
+REAL MINSTEPFORREBIN = 1000;
 
 Fs1:FIELDSOLVER, FSTYPE=FFT, MX=16, MY=16, MT=32,
     PARFFTX=true, PARFFTY=true, PARFFTT=true,
     BCFFTX=open, BCFFTY=open, BCFFTT=open,
     BBOXINCR=1, GREENSF=INTEGRATED;
 
-qb=0.2e-9;
-bfreq=2998.0;
-bcurrent=qb*bfreq;
-Edes=0.63;
-gamma=(Edes+EMASS)/EMASS;
+REAL qb=0.2e-9;
+REAL bfreq=2998.0;
+REAL bcurrent=qb*bfreq;
+REAL Edes=0.63;
+REAL gamma=(Edes+EMASS)/EMASS;
 
 beam1: BEAM, PARTICLE=ELECTRON, GAMMA=gamma, pc=P0, NSLICE=101, BFREQ=bfreq, BCURRENT=bcurrent, CHARGE=-1;
 
