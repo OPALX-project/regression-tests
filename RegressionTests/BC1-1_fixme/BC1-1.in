@@ -5,18 +5,18 @@ Option, VERSION=10900;
 
 TITLE,string="OPAL Bunch Compressor 1 test, no space charge";
 
-Edes=0.2479;
-gamma=(Edes+EMASS)/EMASS;
-beta=sqrt(1-(1/gamma^2));
-gambet=gamma*beta;
-P0 = gamma*beta*EMASS;
-brho = (EMASS*1.0e9*gambet) / CLIGHT;
+REAL Edes=0.2479;
+REAL gamma=(Edes+EMASS)/EMASS;
+REAL beta=sqrt(1-(1/gamma^2));
+REAL gambet=gamma*beta;
+REAL P0 = gamma*beta*EMASS;
+REAL brho = (EMASS*1.0e9*gambet) / CLIGHT;
 
 value,{gamma,brho,Edes,beta,gambet};
 
-dt1 = 3.3355e-12;
-dt2 = 5.0e-12;
-cdt = dt2;
+REAL dt1 = 3.3355e-12;
+REAL dt2 = 5.0e-12;
+REAL cdt = dt2;
 
 // L:        physical element lenght (real)
 // KS:       field scaling factor (real)
@@ -55,17 +55,17 @@ F10BC_MB04: RBend, K0=0.1585,
 
 l1:   Line = (F10BC_MB01, F10BC_MB02, F10BC_MB03, F10BC_MB04);
 
-qb=0.20e-9;
-rf=1498.956e6;
-v0=beta*CLIGHT;
-T1s = 36.6e-12;
-lz  = T1s*v0;
+REAL qb=0.20e-9;
+REAL rf=1498.956e6;
+REAL v0=beta*CLIGHT;
+REAL T1s = 36.6e-12;
+REAL lz  = T1s*v0;
 value,{v0,lz,qb,rf};
 
-sigpx = sqrt((0.0028*1.0e-9/EMASS + 1.0)^2 - 1.0);
-sigpy = sqrt((0.0028*1.0e-9/EMASS + 1.0)^2 - 1.0);
-sigpz = sqrt((2.78803e-3/EMASS + 1.0)^2 - 1.0);
-pzave = sqrt((248.14e-3/EMASS + 1.0)^2 - 1.0);
+REAL sigpx = sqrt((0.0028*1.0e-9/EMASS + 1.0)^2 - 1.0);
+REAL sigpy = sqrt((0.0028*1.0e-9/EMASS + 1.0)^2 - 1.0);
+REAL sigpz = sqrt((2.78803e-3/EMASS + 1.0)^2 - 1.0);
+REAL pzave = sqrt((248.14e-3/EMASS + 1.0)^2 - 1.0);
 
 Dist1:DISTRIBUTION, TYPE = gauss,
                     sigmax = 0.00018,
@@ -91,8 +91,8 @@ beam1: BEAM, PARTICLE=ELECTRON, pc=P0, NPART=1e4, BCURRENT=qb*rf, BFREQ=rf, CHAR
 
 SELECT, Line=l1;
 
-N1 = 402*dt1/cdt;
-N2 = N1 + (400*dt1/cdt);
+REAL N1 = 402*dt1/cdt;
+REAL N2 = N1 + (400*dt1/cdt);
 
 //TRACK,LINE=l1, BEAM=beam1, MAXSTEPS=N1+N1, DT=cdt;
 TRACK,LINE=l1, BEAM=beam1, MAXSTEPS=N1+N2, DT=cdt;

@@ -6,15 +6,15 @@ Option, VERSION=10900;
 
 Title, string="PSIGUN-1 ";
 
-FINSB01_RACC_phi = 0;
-FINSB02_RACC_phi = 0;
+REAL FINSB01_RACC_phi = 0;
+REAL FINSB02_RACC_phi = 0;
 
-REPARTFREQ       = 100;
-MINSTEPFORREBIN  = 600;
+REAL REPARTFREQ       = 100;
+REAL MINSTEPFORREBIN  = 600;
 
-QB               = 0.2e-9;
-BF               = 2997.922938148;
-BC               = QB*BF;
+REAL QB               = 0.2e-9;
+REAL BF               = 2997.922938148;
+REAL BC               = QB*BF;
 
 // Begin: PSIGUN-1 /////////////////////////////////////////////////////////////////////////////////////////////////
 //
@@ -87,15 +87,15 @@ SCREENS: Line = (SCREEN1,SCREEN2,SCREEN3,SCREEN4,SCREEN5,SCREEN6,SCREEN7,SCREEN8
 // Definition of first field solver.
 //
 Fs1:FIELDSOLVER, FSTYPE = FFT, MX = 16, MY = 16, MT = 32,
-		 PARFFTX = true, PARFFTY = true, PARFFTT = true,
-		 BCFFTX = open, BCFFTY = open, BCFFTT = open,
-		 BBOXINCR = 1, GREENSF = INTEGRATED;
+		PARFFTX = true, PARFFTY = true, PARFFTT = true,
+		BCFFTX = open, BCFFTY = open, BCFFTT = open,
+		BBOXINCR = 1, GREENSF = INTEGRATED;
 // End: Fieldsolver ////////////////////////////////////////////
 
 Dist1:DISTRIBUTION, TYPE = "GUNGAUSSFLATTOPTH",
-sigmax = 0.000395, sigmapx = 0.0, corrx = 0.0,
-sigmay = 0.000395, sigmapy = 0.0, corry = 0.0,
-sigmat = 0.0, pt = 0.0, sigmapt = 0.0, corrt = 0.0, tRise=7.45e-12, tFall=7.45e-12, tPulseFWHM=10.4e-12, ekin=0.4, NBIN=5, DEBIN=30;
+		sigmax = 0.000395, sigmapx = 0.0, corrx = 0.0,
+		sigmay = 0.000395, sigmapy = 0.0, corry = 0.0,
+		sigmat = 0.0, pt = 0.0, sigmapt = 0.0, corrt = 0.0, tRise=7.45e-12, tFall=7.45e-12, tPulseFWHM=10.4e-12, ekin=0.4, NBIN=5, DEBIN=30;
 
 Dist2:DISTRIBUTION, TYPE=fromfile, FNAME="ReferenceParticles.dat";
 
@@ -105,12 +105,12 @@ SELECT, LINE=Injector;
 
 // Simulation of the gun with step size DTGUN
 TRACK, LINE= Injector, BEAM=beam1, MAXSTEPS=1000, DT=1.0e-12, ZSTOP=0.14;
- RUN, METHOD = "PARALLEL-T", BEAM = beam1, FIELDSOLVER = Fs1, DISTRIBUTION = Dist1;
+	RUN, METHOD = "PARALLEL-T", BEAM = beam1, FIELDSOLVER = Fs1, DISTRIBUTION = Dist1;
 ENDTRACK;
 
 // Simulation of the beam with step size DT
 TRACK,LINE= Injector, BEAM=beam1, MAXSTEPS=5000, DT=1.0e-11, ZSTOP=0.30;
- RUN, METHOD = "PARALLEL-T", BEAM=beam1, FIELDSOLVER=Fs1;
+	RUN, METHOD = "PARALLEL-T", BEAM=beam1, FIELDSOLVER=Fs1;
 ENDTRACK;
 
 QUIT;
