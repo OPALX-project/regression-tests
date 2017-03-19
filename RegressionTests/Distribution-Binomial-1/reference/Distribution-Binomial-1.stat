@@ -1,8 +1,8 @@
 SDDS1
-&description text="Statistics data Distribution-Binomial-1.in 12/06/2014 15.52.28" 
+&description text="Statistics data Distribution-Binomial-1.in 19/03/2017 10:33:41" 
 , contents="stat parameters" &end
-&parameter name=processors, type=long, description="Number of Processors" &end
-&parameter name=revision, type=string, description="svn revision of opal" &end
+&parameter name=processors, type=long, description="Number of Cores used" &end
+&parameter name=revision, type=string, description="git revision of opal" &end
 &column name=t, type=double, units=s, description="1 Time" &end
 &column name=s, type=double, units=m, description="2 Average Longitudinal Position" &end
 &column name=numParticles, type=long, units=1, description="3 Number of Macro Particles" &end
@@ -26,7 +26,7 @@ SDDS1
 &column name=xpx, type=double, units=1 , description="21 Correlation xpx  " &end
 &column name=ypy, type=double, units=1 , description="22 Correlation ypyy  " &end
 &column name=zpz, type=double, units=1 , description="23 Correlation zpz  " &end
-&column name=notused2, type=double, units=1 , description="24 notused1 in y  " &end
+&column name=notused1, type=double, units=1 , description="24 notused1 in y  " &end
 &column name=notused2, type=double, units=1 , description="25 notused2 in y  " &end
 &column name=Dx, type=double, units=m , description="26 Dispersion in x  " &end
 &column name=DDx, type=double, units=1 , description="27 Derivative of dispersion in x  " &end
@@ -51,7 +51,8 @@ SDDS1
 &column name=Ey_tail, type=double, units=MV/m , description="46 Ey-Field component of tail particle  " &end
 &column name=Ez_tail, type=double, units=MV/m , description="47 Ez-Field component of tail particle  " &end
 &column name=dE, type=double, units=MeV , description="48 energy spread of the beam  " &end
+&column name=partsOutside, type=double, units=1 , description="49 outside n*sigma of the beam  " &end
 &data mode=ascii, no_row_counts=1 &end
-Cores used 4
-OPAL 1.2.1 r14097
-1.000000000000000e-11         	2.123987111550649e-01         	1000000         	7.700000000037871e-19         	7.200002593072189e+01         	1.861331914328669e-03         	9.959752428032438e-03         	8.666262323779583e-02         	4.081949236574751e-08         	2.117049352655430e-04         	5.516119675600084e-05         	7.597859642547906e-11         	1.825291980384564e-06         	4.142481782787840e-06         	1.821539593607156e-06         	2.159118065179554e-06         	2.123987111550649e-01         	2.699261430704413e-03         	5.035622714888906e-02         	4.270972342938487e-01         	-8.499117263955486e-04         	5.006135117968437e-01         	-4.990851774455806e-01         	0.000000000000000e+00         	0.000000000000000e+00         	7.271375894989660e-07         	1.519430917246341e-16         	8.614812624921932e-07         	-1.361788512468931e-11         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	1.918870320508428e-02         	
+4
+OPAL 1.5.1 git rev. 99af44d21248d6a091bca797f71cfd3b29231ffa
+1.000000000000000e-11         	2.123987111269831e-01         	1000000         	7.700000000037871e-19         	7.200000114350638e+01         	1.861331426449169e-03         	9.959745881550512e-03         	8.666281169128696e-02         	4.081946179322919e-08         	2.117049627862765e-04         	4.029946792499478e-04         	7.597851954761561e-11         	1.825290850389903e-06         	3.484876614321034e-05         	1.822885441228209e-06         	2.147696423785613e-06         	2.123983871517477e-01         	2.699261430725001e-03         	5.035622716401454e-02         	4.270972342805038e-01         	-8.507987348142658e-04         	5.006136491827762e-01         	-6.588602920332647e-02         	0.000000000000000e+00         	0.000000000000000e+00         	7.276748569820484e-07         	1.528297253290331e-16         	8.569214934229268e-07         	-1.361854942778795e-11         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	1.401880910398456e-01         	0         	
