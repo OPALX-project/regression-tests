@@ -1,0 +1,194 @@
+SDDS1
+&description 
+        text="Statistics data of monitors", 
+        contents="stat parameters"
+&end
+&parameter 
+        name=revision, 
+        type=string, 
+        description="git revision of opal"
+&end
+&column 
+        name=name, 
+        type=string 
+        description="1 Monitor name"
+&end
+&column 
+        name=s, 
+        type=double, 
+        units=m, 
+        description="2 Longitudinal Position"
+&end
+&column 
+        name=t, 
+        type=double, 
+        units=ns, 
+        description="3 Passage Time Reference Particle"
+&end
+&column 
+        name=numParticles, 
+        type=long, 
+        units=1, 
+        description="4 Number of Macro Particles"
+&end
+&column 
+        name=rms_x, 
+        type=double, 
+        units=m, 
+        description="5 RMS Beamsize in x"
+&end
+&column 
+        name=rms_y, 
+        type=double, 
+        units=m, 
+        description="6 RMS Beamsize in y"
+&end
+&column 
+        name=rms_s, 
+        type=double, 
+        units=m, 
+        description="7 RMS Beamsize in s"
+&end
+&column 
+        name=rms_t, 
+        type=double, 
+        units=ns, 
+        description="8 RMS Passage Time"
+&end
+&column 
+        name=rms_px, 
+        type=double, 
+        units=1, 
+        description="9 RMS Momenta in x"
+&end
+&column 
+        name=rms_py, 
+        type=double, 
+        units=1, 
+        description="10 RMS Momenta in y"
+&end
+&column 
+        name=rms_ps, 
+        type=double, 
+        units=1, 
+        description="11 RMS Momenta in s"
+&end
+&column 
+        name=emit_x, 
+        type=double, 
+        units=m, 
+        description="12 Normalized Emittance x"
+&end
+&column 
+        name=emit_y, 
+        type=double, 
+        units=m, 
+        description="13 Normalized Emittance y"
+&end
+&column 
+        name=emit_s, 
+        type=double, 
+        units=m, 
+        description="14 Normalized Emittance s"
+&end
+&column 
+        name=mean_x, 
+        type=double, 
+        units=m, 
+        description="15 Mean Beam Position in x"
+&end
+&column 
+        name=mean_y, 
+        type=double, 
+        units=m, 
+        description="16 Mean Beam Position in y"
+&end
+&column 
+        name=mean_s, 
+        type=double, 
+        units=m, 
+        description="17 Mean Beam Position in s"
+&end
+&column 
+        name=mean_t, 
+        type=double, 
+        units=ns, 
+        description="18 Mean Passage Time"
+&end
+&column 
+        name=ref_x, 
+        type=double, 
+        units=m, 
+        description="19 x coordinate of reference particle in lab cs"
+&end
+&column 
+        name=ref_y, 
+        type=double, 
+        units=m, 
+        description="20 y coordinate of reference particle in lab cs"
+&end
+&column 
+        name=ref_z, 
+        type=double, 
+        units=m, 
+        description="21 z coordinate of reference particle in lab cs"
+&end
+&column 
+        name=ref_px, 
+        type=double, 
+        units=1, 
+        description="22 x momentum of reference particle in lab cs"
+&end
+&column 
+        name=ref_py, 
+        type=double, 
+        units=1, 
+        description="23 y momentum of reference particle in lab cs"
+&end
+&column 
+        name=ref_pz, 
+        type=double, 
+        units=1, 
+        description="24 z momentum of reference particle in lab cs"
+&end
+&column 
+        name=max_x, 
+        type=double, 
+        units=m, 
+        description="25 Max Beamsize in x"
+&end
+&column 
+        name=max_y, 
+        type=double, 
+        units=m, 
+        description="26 Max Beamsize in y"
+&end
+&column 
+        name=max_s, 
+        type=double, 
+        units=m, 
+        description="27 Max Beamsize in s"
+&end
+&column 
+        name=xpx, 
+        type=double, 
+        units=1, 
+        description="28 Correlation xpx"
+&end
+&column 
+        name=ypy, 
+        type=double, 
+        units=1, 
+        description="29 Correlation ypyy"
+&end
+&column 
+        name=zpz, 
+        type=double, 
+        units=1, 
+        description="30 Correlation zpz"
+&end
+&data 
+        mode=ascii,
+        no_row_counts=1
+&end
+OPAL 1090 git rev. 57c90f128bae54bfbf51968238932960677d6d56

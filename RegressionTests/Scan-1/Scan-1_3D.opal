@@ -1,0 +1,61 @@
+Option, ECHO=FALSE;
+Option, PSDUMPFREQ=1000;
+
+Option, SCAN=TRUE;
+Option, SEED=12345;
+Option, VERSION=10900;
+
+REAL REPARTFREQ=1000;
+REAL MINSTEPFORREBIN=1500;
+
+Title,string="Error study test";
+
+REAL Edes=1.0E-9;
+REAL gamma=(Edes+EMASS)/EMASS;
+REAL beta=sqrt(1-(1/gamma^2));
+REAL gambet=gamma*beta;
+REAL P0 = gamma*beta*EMASS;
+REAL brho = (EMASS*1.0e9*gambet) / CLIGHT;
+
+value,{gamma,brho,Edes,beta,gambet};
+
+REAL qb=20.7E-12;
+REAL rf=1498.956e6;
+REAL v0=beta*CLIGHT;
+REAL lz  = 6.5E-12*v0;
+
+Dist1:DISTRIBUTION, TYPE = "GUNGAUSSFLATTOPTH",		    sigmax = 0.0005455,		    sigmapx = 0.0,		    corrx = 0.0,		    sigmay = 0.0005455,		    sigmapy = 0.0,		    corry = 0.0,		    sigmat = 0.0,		    pt = 0.0,		    sigmapt = 0.0,		    corrt = 0.0,		    tRise = 4.15e-12,		    tFall = 4.15e-12,		    tPulseFWHM = 6.2e-12,		    ekin = 0.4,		    NBIN = 5,		    DEBIN = 80,		    EMISSIONSTEPS = 500,		    INPUTMOUNITS = V;
+
+Fs1:FIELDSOLVER, FSTYPE=FFT, MX=8, MY=8, MT=8,		 PARFFTX=true, PARFFTY=true, PARFFTT=true,		 BCFFTX=open, BCFFTY=open, BCFFTT=open,                 BBOXINCR=3, GREENSF=INTEGRATED;
+
+beam1: BEAM, PARTICLE=ELECTRON, pc=P0, NPART=1000, BCURRENT=0.0310283892, BFREQ=rf, CHARGE=-1;
+
+REAL I=0;
+WHILE (I < 3) {   REAL rv1:= (RANF()*1.39535572971);
+   REAL rv2:=0.0;
+    REAL rv3:=0.0;
+    REAL rv4:=0.0;
+    REAL rv5:=0.0;
+ 
+   Col: ECollimator, L=3.0E-3, ELEMEDGE=7.0E-3, XSIZE=7.5E-4, YSIZE=7.5E-4, OUTFN="Coll.h5";
+   SP1: Solenoid, L=1.20, Z = -0.5315, FMAPFN="1T2.T7", KS=8.246e-05 + rv2;
+   SP2: Solenoid, L=1.20, Z = -0.397,  FMAPFN="1T3.T7", KS=1.615e-05 + rv3;
+   SP3: Solenoid, L=1.20, Z = -0.267,  FMAPFN="1T3.T7", KS=1.016e-05 + rv4;
+   SP4: Solenoid, L=1.20, Z = -0.157,  FMAPFN="1T3.T7", KS=4.750e-05 + rv5;
+   SP5: Solenoid, L=1.20, Z = -0.047,  FMAPFN="1T3.T7", KS=0.0;
+
+   gun: RFCavity, L=0.013, VOLT=(-14.1062666403 + rv1), FMAPFN="1T1.T7", , TYPE="STANDING", FREQ=1.0e-6;
+
+   value,{I,rv1,rv2,rv3,rv4,rv5};
+
+   l1:   Line = (gun,sp1,sp2,sp3,sp4,sp5);
+
+   SELECT, Line=l1;
+   TRACK,line=l1, beam=beam1, MAXSTEPS=500, DT=5.0e-11;
+    RUN, method = "PARALLEL-T", beam=beam1, fieldsolver=Fs1, distribution=Dist1;
+   ENDTRACK;
+
+   REAL I=EVAL(I+1.0);
+}
+Quit;
+
