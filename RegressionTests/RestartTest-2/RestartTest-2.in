@@ -74,7 +74,7 @@ Dist1:DISTRIBUTION, TYPE=gauss,
 		    corrt=0.0;
 
 Fs1:FIELDSOLVER, FSTYPE=FFT, MX=8, MY=8, MT=8,
-		 PARFFTX=true, PARFFTY=true, PARFFTT=true,
+		 PARFFTX=false, PARFFTY=false, PARFFTT=true,
 		 BCFFTX=open, BCFFTY=open, BCFFTT=open, BBOXINCR=2;
 
 beam1: BEAM, PARTICLE=PROTON, pc=P0, SPACECHARGE=true, NPART=1e3, BCURRENT=1.0E-3, CHARGE=1.0, BFREQ= frequency;
