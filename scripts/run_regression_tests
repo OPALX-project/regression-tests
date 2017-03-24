@@ -28,8 +28,7 @@ declare -r keytab="${bindir}/.keytab"
 # read configuration and tests to run
 source "${bindir}/regression_tests.conf"
 
-# these shell variables must be set for the tests
-declare -rx REGTEST_WWW='/afs/psi.ch/project/amas/webhosting/opal/regressionTests/${OPAL_VERSION}'
+# these shell variable must be set for the tests
 declare -rx OPAL_EXE_PATH="${basedir}/build/src"
 
 declare -r run_tests="${basedir}/tests/RegressionTests/run/run-reg-tests.py"
@@ -37,9 +36,28 @@ declare -r run_tests="${basedir}/tests/RegressionTests/run/run-reg-tests.py"
 # 
 declare	force_run='no'
 declare	new_opal_binary='no'
+declare	use_afs='no'
+declare do_publish='yes'
+declare	opts=''
 
 while (( $# > 0 )); do
 	case $1 in
+		--do-publish )
+			do_publish=='yes'
+			;;
+		--dont-publish )
+			publish=='no'
+			;;
+		--publish-dir )
+			REGTEST_WWW="$2"
+			shift 1
+			;;
+		--publish-dir=* )
+			REGTEST_WWW="${1#*=}"
+			;;
+		--use-afs )
+			use_afs='yes'
+			;;
 		-f | --force )
 			force_run='yes'
 			;;
@@ -55,22 +73,15 @@ while (( $# > 0 )); do
 	shift 1
 done
 
+[[ ${do_publish} == 'yes' ]] && opts+=" --do-publish"
+
 
 
 load_modules() {
 	source /opt/psi/config/profile.bash
 	module purge
 	module use unstable
-	module load git/2.3.3
-	module load cmake/3.6.3
-	module load gcc/5.4.0
-	module load openmpi/1.10.4
-	module load boost/1.62.0
-	module load hdf5/1.8.18
-	module load H5hut/2.0.0rc3
-	module load gsl/2.2.1
-	module load trilinos/12.10.1
-	module load OpenBLAS/0.2.19
+	source "${bindir}/modules.conf"
 }
 
 update_repo() {
@@ -113,14 +124,18 @@ compile_opal() {
 }
 
 run_regressiontests() {
-	declare -rx KRB5CCNAME=$(mktemp /tmp/krb5cc_$(id -u)_XXXXXX)
-	/usr/bin/kinit -t "${keytab}" -k "${PRINCIPAL_NAME}"	|| exit 2
-	/usr/bin/aklog						|| exit 2
+	if [[ ${use_afs} == 'yes' ]]; then
+		declare -rx KRB5CCNAME=$(mktemp /tmp/krb5cc_$(id -u)_XXXXXX)
+		/usr/bin/kinit -t "${keytab}" -k "${PRINCIPAL_NAME}"	|| exit 2
+		/usr/bin/aklog						|| exit 2
+	fi
 
 	"${run_tests}" --user --run-local --tests="${tests}"
 
-	/usr/bin/unlog
-	/usr/bin/kdestroy
+	if [[ ${use_afs} == 'yes' ]]; then
+		/usr/bin/unlog
+		/usr/bin/kdestroy
+	fi
 }
 
 main() {
