@@ -2,18 +2,19 @@ Option, PSDUMPFREQ=50;
 Option, STATDUMPFREQ=1;
 Option, ECHO=FALSE;
 Option, AUTOPHASE=4;
+OPtion, VERSION=10500;
 
 Title, string="Phase 1 of PSI FEL 250 Injector with CTF3 RF Photoinjector";
 
-FINSB01_RACC_phi = 0; 
-FINSB02_RACC_phi = 0;    
+REAL FINSB01_RACC_phi = 0; 
+REAL FINSB02_RACC_phi = 0;    
 
-REPARTFREQ       = 100;
-MINSTEPFORREBIN  = 600;
+REAL REPARTFREQ       = 100;
+REAL MINSTEPFORREBIN  = 600;
 
-QB               = 0.2e-9;
-BF               = 2998.0;
-BC               = QB*BF;
+REAL QB               = 0.2e-9;
+REAL BF               = 2998.0;
+REAL BC               = QB*BF;
 
 
 // Begin: CTF3 /////////////////////////////////////////////////////////////////////////////////////////////////

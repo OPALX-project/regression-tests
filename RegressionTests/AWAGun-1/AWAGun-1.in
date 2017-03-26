@@ -3,21 +3,21 @@ OPTION, STATDUMPFREQ = 10;  // Beam Stats written every 10 time steps (stat).
 OPTION, BOUNDPDESTROYFQ=10; // Delete lost particles, if any
 OPTION, AUTOPHASE=4;        // Autophase is on, and phase of max energy
                             // gain will be found automatically for cavities.
-
+OPTION, VERION=10500;
 Title, string="AWA Photoinjector";
 
 //----------------------------------------------------------------------------
 //Global Parameters
 
-rf_freq             = 1.3e9;     //RF frequency. (Hz)
-n_particles         = 1E4;      //Number of particles in simulation.
-beam_bunch_charge   = 1e-9;      //Charge of bunch. (C)
+REAL rf_freq             = 1.3e9;     //RF frequency. (Hz)
+REAL n_particles         = 1E4;      //Number of particles in simulation.
+REAL beam_bunch_charge   = 1e-9;      //Charge of bunch. (C)
 
 //Initial Momentum Calculation
-Edes    = 1.4e-9; //initial energy in GeV
-gamma   = (Edes+EMASS)/EMASS; 
-beta    = sqrt(1-(1/gamma^2));
-P0      = gamma*beta*EMASS;    //inital z momentum
+REAL Edes    = 1.4e-9; //initial energy in GeV
+REAL gamma   = (Edes+EMASS)/EMASS; 
+REAL beta    = sqrt(1-(1/gamma^2));
+REAL P0      = gamma*beta*EMASS;    //inital z momentum
 
 //Printing initial energy and momentum to terminal output.
 value , {Edes, P0};
@@ -36,7 +36,7 @@ value , {Edes, P0};
 // LAG:      cavity phase (radians)
 //
 
-gun_inj_phase = 0.0;  // Rf injection phase (in degrees) with restpect 
+REAL gun_inj_phase = 0.0;  // Rf injection phase (in degrees) with restpect 
                       // to max phase. i.e. 0.0 inj phase corresponds 
                       // to running on crest (max energy).
 
@@ -58,7 +58,7 @@ GUN:    RFCavity, L = 0.2927, VOLT = 60.0, ELEMEDGE = 0.0, TYPE = "STANDING",
 // i.e. The max value in the BF_559 file = 0.162544398 [T]. 
 // Therefore, setting KS = 0.162544398 runs the magnet at max current.
 
-KSBF = 0.162544398;
+REAL KSBF = 0.162544398;
 if (OPALVERSION>15000)
  KSBF = KSBF/1.3528; 
 
@@ -72,8 +72,8 @@ BF: Solenoid, L = 0.5, ELEMEDGE=0.0, KS = KSBF,
 // Scaling Factor (KS) = (I / Imax) * 1.973966
 // Where Imax for this Matching solenoid = 440 [A]
 
-I  = 273; //[A]
-SF = (I/440)*1.973966;
+REAL I  = 273; //[A]
+REAL SF = (I/440)*1.973966;
 if (OPALVERSION>15000)
  SF = SF/3.2306;
 

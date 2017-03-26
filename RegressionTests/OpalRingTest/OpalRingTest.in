@@ -5,27 +5,29 @@ Option, ECHO=TRUE;
 Title,string="ERIT test simulation using OPAL code";
 Option, ASCIIDUMP=TRUE;
 OPTION, PSDUMPFREQ=100000; 
+Option, PSDUMPLOCALFRAME=TRUE;
+Option, VERSION=10500;
 
-Edes=0.011;
-e_tot = (Edes+PMASS);
-p_tot = (e_tot^2-PMASS^2)^0.5;
-gamma = e_tot/PMASS;
-beta = p_tot/e_tot;
-gambet = gamma*beta;
-P0 = gamma*beta*PMASS;
-brho = (PMASS*1.0e9*gambet) / CLIGHT;
-x_closed_orbit = 2349.008;
+REAL Edes=0.011;
+REAL e_tot = (Edes+PMASS);
+REAL p_tot = (e_tot^2-PMASS^2)^0.5;
+REAL gamma = e_tot/PMASS;
+REAL beta = p_tot/e_tot;
+REAL gambet = gamma*beta;
+REAL P0 = gamma*beta*PMASS;
+REAL brho = (PMASS*1.0e9*gambet) / CLIGHT;
+REAL x_closed_orbit = 2349.008;
 
 // print to terminal
 value,{gamma,brho,Edes,beta,gambet,x_closed_orbit};
 
-n_turns=100.0;
-revolution_period=327;
+REAL n_turns=100.0;
+REAL revolution_period=327;
 
-step_size=0.1; // ns
-max_steps=n_turns*revolution_period/step_size;
-steps_per_turn=revolution_period/step_size;
-frequency=6000/revolution_period;
+REAL step_size=0.1; // ns
+REAL max_steps=n_turns*revolution_period/step_size;
+REAL steps_per_turn=revolution_period/step_size;
+REAL frequency=6000/revolution_period;
 
 value,{step_size_mm,n_turns,revolution_period,step_size};
 
@@ -41,7 +43,7 @@ l1: Line = (ringdef, probe1, probe2, triplet);
 
 Dist1: DISTRIBUTION, DISTRIBUTION=fromfile, FNAME="data/beam.dat", INPUTMOUNITS=NONE;
 
-Fs1:FIELDSOLVER, FSTYPE=FFT, MX=32, MY=32, MT=32, 
+Fs1:FIELDSOLVER, FSTYPE=NONE, MX=2, MY=2, MT=2, 
 		 PARFFTX=true, PARFFTY=true, PARFFTT=false,
 		 BCFFTX=open, BCFFTY=open, BCFFTT=open,BBOXINCR=2;
 

@@ -1,20 +1,20 @@
 Option, ECHO=FALSE;
 Option, PSDUMPFREQ=1000;
-//Option, STATDUMPFREQ=1;
 Option, SCAN=TRUE;
 Option, SEED=12345;
+OPTION, VERSION=10500;
 
-REPARTFREQ=1000;
-MINSTEPFORREBIN=1500;
+REAL REPARTFREQ=1000;
+REAL MINSTEPFORREBIN=1500;
 
 Title,string="Error study test";
 
-Edes=1.0E-9;
-gamma=(Edes+EMASS)/EMASS;
-beta=sqrt(1-(1/gamma^2));
-gambet=gamma*beta;
-P0 = gamma*beta*EMASS;
-brho = (EMASS*1.0e9*gambet) / CLIGHT;
+REAL Edes=1.0E-9;
+REAL gamma=(Edes+EMASS)/EMASS;
+REAL beta=sqrt(1-(1/gamma^2));
+REAL gambet=gamma*beta;
+REAL P0 = gamma*beta*EMASS;
+REAL brho = (EMASS*1.0e9*gambet) / CLIGHT;
 
 value,{gamma,brho,Edes,beta,gambet};
 
@@ -23,10 +23,10 @@ value,{gamma,brho,Edes,beta,gambet};
 // FMAPFN:   field file name (string)
 // ELEMEDGE: physical start of the element on the floor (real)
 
-qb=20.7E-12;
-rf=1498.956e6;
-v0=beta*CLIGHT;
-lz  = 6.5E-12*v0;
+REAL qb=20.7E-12;
+REAL rf=1498.956e6;
+REAL v0=beta*CLIGHT;
+REAL lz  = 6.5E-12*v0;
 
 Dist1:DISTRIBUTION, DISTRIBUTION = "GUNGAUSSFLATTOPTH",
 		    sigmax = 0.0005455,
@@ -55,13 +55,13 @@ Fs1:FIELDSOLVER, FSTYPE=FFT, MX=8, MY=8, MT=8,
 
 beam1: BEAM, PARTICLE=ELECTRON, pc=P0, NPART=1000, BCURRENT=0.0310283892, BFREQ=rf, CHARGE=-1;
 
-I=0;
+REAL I=0;
 WHILE (I < 3) {
-   rv1:= (RANF()*1.39535572971);
-   rv2:=0.0; //(RANF()*8.246e-07);
-   rv3:=0.0; //(RANF()*1.615e-07);
-   rv4:=0.0; //(RANF()*1.016e-07);
-   rv5:=0.0; //(RANF()*4.750e-07);
+   REAL rv1:= (RANF()*1.39535572971);
+   REAL rv2:=0.0; //(RANF()*8.246e-07);
+   REAL rv3:=0.0; //(RANF()*1.615e-07);
+   REAL rv4:=0.0; //(RANF()*1.016e-07);
+   REAL rv5:=0.0; //(RANF()*4.750e-07);
 
    Col: ECollimator, L=3.0E-3, ELEMEDGE=7.0E-3, XSIZE=7.5E-4, YSIZE=7.5E-4, OUTFN="Coll.h5";
    SP1: Solenoid, L=1.20, ELEMEDGE=-0.5315, FMAPFN="1T2.T7", KS=8.246e-05 + rv2;

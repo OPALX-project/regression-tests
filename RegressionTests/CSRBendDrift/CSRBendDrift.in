@@ -2,6 +2,7 @@ Option, ECHO=FALSE;
 Option, INFO=FALSE;
 Option, AUTOPHASE=0;
 Option, CSRDUMP=TRUE;
+Option, VERSION=10500;
 
 Title, string="FEL ERL";
 
@@ -10,18 +11,18 @@ Title, string="FEL ERL";
 //
 // Here we define some global simulation parameters.
 
-RF_FREQUENCY = 100.0e6;			     // Reference frequency of problem (Hz).
-RF_WAVELENGTH = CLIGHT / RF_FREQUENCY; 	     // Reference wavelength (m).
+REAL RF_FREQUENCY = 100.0e6;			     // Reference frequency of problem (Hz).
+REAL RF_WAVELENGTH = CLIGHT / RF_FREQUENCY; 	     // Reference wavelength (m).
 
-Q_E = 1.60217653e-19;  	 		     // Elementary charge (C).
-E_MASS = 9.10938188e-31;		     // Mass of electron (kg).
+REAL Q_E = 1.60217653e-19;  	 		     // Elementary charge (C).
+REAL E_MASS = 9.10938188e-31;		     // Mass of electron (kg).
 
 
-BEAM_BUNCH_CHARGE = 1.0e-9;     	     // Beam bunch charge (C).
-NUMBER_OF_PARTICLES = 5000; 	 	     // Number of particles in simulation
+REAL BEAM_BUNCH_CHARGE = 1.0e-9;     	     // Beam bunch charge (C).
+REAL NUMBER_OF_PARTICLES = 5000; 	 	     // Number of particles in simulation
 
-PS_DUMP_FREQUENCY = 20;     		     // How often (time steps) that the phase space of the beam is output.
-STAT_DUMP_FREQUENCY = 1; 		     // How often (time steps) beam statistical properties are output.
+REAL PS_DUMP_FREQUENCY = 20;     		     // How often (time steps) that the phase space of the beam is output.
+REAL STAT_DUMP_FREQUENCY = 1; 		     // How often (time steps) beam statistical properties are output.
 
 value, {RF_FREQUENCY,
         RF_WAVELENGTH,
@@ -36,7 +37,7 @@ value, {RF_FREQUENCY,
 
 // Time steps defined.
 
-TIME_STEP_1 = 4.3734562802893905e-12;		// Time step (s). We only need one for this simulation.
+REAL TIME_STEP_1 = 4.3734562802893905e-12;		// Time step (s). We only need one for this simulation.
 
 value, {TIME_STEP_1};
 	
@@ -48,9 +49,9 @@ value, {TIME_STEP_1};
 // First define the space charge (SC) mesh.
 
 // Space charge mesh.
-FS_SC1_X_BINS = 16; // Number of mesh bins in x direction for space charge field solver.
-FS_SC1_Y_BINS = 16; // Number of mesh bins in y direction for space charge field solver.
-FS_SC1_Z_BINS = 64; // Number of mesh bins in z direction for space charge field solver.
+REAL FS_SC1_X_BINS = 16; // Number of mesh bins in x direction for space charge field solver.
+REAL FS_SC1_Y_BINS = 16; // Number of mesh bins in y direction for space charge field solver.
+REAL FS_SC1_Z_BINS = 64; // Number of mesh bins in z direction for space charge field solver.
 
 value, {FS_SC1_X_BINS,
         FS_SC1_Y_BINS,
@@ -58,14 +59,14 @@ value, {FS_SC1_X_BINS,
 
 
 // CSR.
-CSR_ON = 1;		       // If greater than 0, use the CSR calculation in the bends.
+REAL CSR_ON = 1;		       // If greater than 0, use the CSR calculation in the bends.
 
-CSR_FFT_FREQ = -1; 	       // Specifies the number of FFT frequencies to keep in FFT low pass filter.
+REAL CSR_FFT_FREQ = -1; 	       // Specifies the number of FFT frequencies to keep in FFT low pass filter.
 	       		       // If less than zero the FFT filter is not used.
 
-CSR_SG_NLEFT = 4;              // Number of points to the left of the mesh point to use in Savitzky-Golay smoothing.
-CSR_SG_NRIGHT = 4;             // Number of points to the the right of the mesh point to use in Savitzky-Golay smoothing.
-CSR_SG_POLYORDER = 4; 	       // The polynomial order to use in Savitzky-Golay smoothing.
+REAL CSR_SG_NLEFT = 4;              // Number of points to the left of the mesh point to use in Savitzky-Golay smoothing.
+REAL CSR_SG_NRIGHT = 4;             // Number of points to the the right of the mesh point to use in Savitzky-Golay smoothing.
+REAL CSR_SG_POLYORDER = 4; 	       // The polynomial order to use in Savitzky-Golay smoothing.
 
 value, {CSR_ON,
         CSR_FFT_FREQ,
@@ -81,7 +82,7 @@ value, {CSR_ON,
 
 // Beam line offset. This is global shift of the entire line (m).
 //===============================================================
-global_shift = 1.0;
+REAL global_shift = 1.0;
 
 
 // Bend.
@@ -91,16 +92,16 @@ global_shift = 1.0;
 //================================================
 
 // drift before bend (m).
-drift_before_bend = 0.1;
+REAL drift_before_bend = 0.1;
 
 // Bend angle (radians).
-bend_angle = 0.5235987755982988;
+REAL bend_angle = 0.5235987755982988;
 
 // Bend design energy (eV).
-bend_energy = 7.0e6;
+REAL bend_energy = 7.0e6;
 
 // Bend length (m).
-bend_length = 0.129409522551; 
+REAL bend_length = 0.129409522551; 
 
 
 value, {drift_before_bend,

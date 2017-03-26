@@ -2,16 +2,17 @@ OPTION, ECHO=FALSE;
 OPTION, INFO=FALSE;
 OPTION, PSDUMPFREQ=1000;
 OPTION, STATDUMPFREQ=1;
+OPTION, VERSION=10500;
 
 TITLE, STRING="Quad Test";
 
-Edes   = 0.590;
-gamma  = (Edes+PMASS)/PMASS;
-beta   = sqrt(1-(1/gamma^2));
-gambet = gamma*beta;
-P0     = gamma*beta*PMASS;
-brho   = (PMASS*1.0e9*gambet) / CLIGHT;
-rf     = 50.6328e6;  //need to be confirmed
+REAL Edes   = 0.590;
+REAL gamma  = (Edes+PMASS)/PMASS;
+REAL beta   = sqrt(1-(1/gamma^2));
+REAL gambet = gamma*beta;
+REAL P0     = gamma*beta*PMASS;
+REAL brho   = (PMASS*1.0e9*gambet) / CLIGHT;
+REAL rf     = 50.6328e6;  //need to be confirmed
 
 VALUE,{gamma,brho,Edes,beta,gambet};
 

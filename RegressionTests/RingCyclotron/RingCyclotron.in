@@ -8,31 +8,33 @@ Option, ECHO=FALSE;
 Option, STATDUMPFREQ=1;
 Option, CZERO=FALSE;
 Option, TELL=TRUE;
+Option, VERSION=10500;
+
 Title,string="OPAL-cycl: the first turn acceleration in PSI 590MeV Ring";
 
-Edes=.072;
-gamma=(Edes+PMASS)/PMASS;
-beta=sqrt(1-(1/gamma^2));
-gambet=gamma*beta;
-P0 = gamma*beta*PMASS;
-brho = (PMASS*1.0e9*gambet) / CLIGHT;
+REAL Edes=.072;
+REAL gamma=(Edes+PMASS)/PMASS;
+REAL beta=sqrt(1-(1/gamma^2));
+REAL gambet=gamma*beta;
+REAL P0 = gamma*beta*PMASS;
+REAL brho = (PMASS*1.0e9*gambet) / CLIGHT;
 
 //value,{gamma,brho,Edes,beta,gambet};
 
-phi01=139.4281;
-phi02=phi01+180.0;
-phi04=phi01;
-phi05=phi01+180.0;
-phi03=phi01+10.0;
+REAL phi01=139.4281;
+REAL phi02=phi01+180.0;
+REAL phi04=phi01;
+REAL phi05=phi01+180.0;
+REAL phi03=phi01+10.0;
 
-volt1st=0.9;
-volt3rd=0.9*4.0*0.112;
+REAL volt1st=0.9;
+REAL volt3rd=0.9*4.0*0.112;
 
-turns = 1;
-nstep=2000;
+REAL turns = 1;
+REAL nstep=2000;
 
-frequency=50.650;
-frequency3=3.0*frequency;
+REAL frequency=50.650;
+REAL frequency3=3.0*frequency;
 
 ring: Cyclotron, TYPE="RING", CYHARMON=6, PHIINIT=0.0,  
 PRINIT=-0.000174, RINIT=2130.0, SYMMETRY=8.0, RFFREQ=frequency, 

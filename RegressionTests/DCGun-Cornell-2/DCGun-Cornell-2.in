@@ -4,16 +4,16 @@
 //-----------------
 TITLE, STRING="DCGun-Cornell";
 
-
 OPTION, ECHO=TRUE; //ECHO Controls printing of an echo of input lines on the standard error file.
 OPTION, INFO=TRUE; //INFO If this option is turned off, OPAL suppresses all information messages.
 OPTION, PSDUMPFREQ=10000; //Defines after how many time steps the phase space is dumped into the H5Part file. Default value is 10.
 OPTION, AUTOPHASE = 1;
+OPTION, VERSION=10500;
 
 
-QB               = 100e-12;
-BFREQ            = 1.3e9;
-BCURRENT         = QB*BFREQ;
+REAL QB               = 100e-12;
+REAL BFREQ            = 1.3e9;
+REAL BCURRENT         = QB*BFREQ;
 
 call, file = "lat.opal";
 

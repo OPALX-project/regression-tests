@@ -1,6 +1,7 @@
 OPTION, ECHO=FALSE;
 OPTION, PSDUMPFREQ=300;
 OPTION, STATDUMPFREQ=10;
+OPTION, VERSION=10500;
 
 TITLE,string="OBLA 4 MeV Gun and Beam";
 
@@ -11,9 +12,9 @@ TITLE,string="OBLA 4 MeV Gun and Beam";
 
 VALUE,{gamma,Edes,gambet};
 
-QB = 2e-9;
-BF = 1498.956;
-BC = QB*BF;
+REAL QB = 2e-9;
+REAL BF = 1498.956;
+REAL BC = QB*BF;
 
 // L:        physical element length (real)
 // KS:       field scaling factor (real)
@@ -32,9 +33,9 @@ end: SOLENOID, L=0.01, ELEMEDGE=100., FMAPFN="1T5.T7", KS=0.009874;
 l1:   LINE = (gun,psl,rac,sl10,sl11,sl20,sl21,end);
 l2:   LINE = (gun,psl,rac,sl10);
 
-TRise    = 10.0e-12;
-TFall    = 10.0e-12;
-TPulseFWHM = 31.85607e-12;
+REAL TRise    = 10.0e-12;
+REAL TFall    = 10.0e-12;
+REAL TPulseFWHM = 31.85607e-12;
 
 Dist1:DISTRIBUTION, DISTRIBUTION = "FLATTOP",
                     SIGMAX = 0.0006102, SIGMAPX = 0.0, CORRX = 0.0,
@@ -44,7 +45,7 @@ Dist1:DISTRIBUTION, DISTRIBUTION = "FLATTOP",
                     EMISSIONMODEL = ASTRA, EMISSIONSTEPS=300, NBIN = 10, EMITTED = TRUE, WRITETOFILE = TRUE,
                     LASERPROFFN = "QuickSave.h5", IMAGENAME = "/entry1/OBLA/Laser/FINLS_TR_SCACAT", INTENSITYCUT = 0.45;
 
-MINSTEPFORREBIN=600;
+REAL MINSTEPFORREBIN=600;
 
 Fs1:FIELDSOLVER, FSTYPE=NONE, MX=16, MY=16, MT=32,
 		 PARFFTX=true, PARFFTY=true, PARFFTT=true,

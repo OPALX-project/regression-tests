@@ -4,23 +4,24 @@ OPTION, ECHO = FALSE,
         PSDUMPFREQ = 10,
         STATDUMPFREQ = 10,
         REPARTFREQ = 1000,
-        PSDUMPLOCALFRAME = FALSE;
+        PSDUMPLOCALFRAME = FALSE,
+	VERSION=10500;
 
 // Some local variables
-Ekin = 59940*1e-9;          // eV -> GeV
-H2mass = 1.876634889;       // GeV/c^2
-Etot = Ekin+H2mass;
-gamma = Etot/H2mass;        // Dimless
-beta = sqrt(1-(1/gamma^2)); // Dimless
-gambet = gamma*beta;        // Dimless
-P0 = gambet*H2mass;         // GeV/c
-brho = (H2mass*1.0e9*gambet)/CLIGHT;
-RF_FREQ = 8.2 * 1e6; // Hz (6th harmonic = 49.2 MHz)
+REAL Ekin = 59940*1e-9;          // eV -> GeV
+REAL H2mass = 1.876634889;       // GeV/c^2
+REAL Etot = Ekin+H2mass;
+REAL gamma = Etot/H2mass;        // Dimless
+REAL beta = sqrt(1-(1/gamma^2)); // Dimless
+REAL gambet = gamma*beta;        // Dimless
+REAL P0 = gambet*H2mass;         // GeV/c
+REAL brho = (H2mass*1.0e9*gambet)/CLIGHT;
+REAL RF_FREQ = 8.2 * 1e6; // Hz (6th harmonic = 49.2 MHz)
 harmonic = 6;
 value,{Ekin, beta, gamma, brho, P0};
 
 // Input variables from data file
-CURRENT = 30e-1;     // Beam current in A (0.01 - 0.05)
+REAL CURRENT = 30e-1;     // Beam current in A (0.01 - 0.05)
 
 // Available Geometry Files
 // Geometry File 1:  "Pipe_1m_10cm.h5"

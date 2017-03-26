@@ -1,18 +1,19 @@
 OPTION, ECHO=FALSE; //ECHO Controls printing of an echo of input lines on the standard error file.
 OPTION, INFO=FALSE; //INFO If this option is turned off, OPAL suppresses all information messages.
 OPTION, STATDUMPFREQ=1;
+OPTION, VERSION=10500;
 
 TITLE, STRING="Gauss Distribution Protons";
 
-Edes   = 0.500;    // 0.5 GeV             
-QB     = 0.77e-12;   // charge in Cb
-BF     = 1300.0;   // frequency in Mhz
-BC     = QB*BF;    // bunch current
+REAL Edes   = 0.500;    // 0.5 GeV             
+REAL QB     = 0.77e-12;   // charge in Cb
+REAL BF     = 1300.0;   // frequency in Mhz
+REAL BC     = QB*BF;    // bunch current
 
-gamma=(Edes+PMASS)/PMASS;
-beta=sqrt(1-(1/gamma^2));
-gambet=gamma*beta;
-P0 = gamma*beta*PMASS;
+REAL gamma=(Edes+PMASS)/PMASS;
+REAL beta=sqrt(1-(1/gamma^2));
+REAL gambet=gamma*beta;
+REAL P0 = gamma*beta*PMASS;
 
 
 Q1: QUADRUPOLE, L=1.0, ELEMEDGE=0.0, K1=0.0;
@@ -30,9 +31,9 @@ BBOXINCR = 1, GREENSF = INTEGRATED;
 //SIGMAY = 0.00001, SIGMAPY=0.00001, 
 //SIGMAT = 1e-8 , PT=Edes*1e9;
 
-sigpx = sqrt((0.00001*1.0e-9/PMASS + 1.0)^2 - 1.0);
-sigpy = sqrt((0.00001*1.0e-9/PMASS + 1.0)^2 - 1.0);
-pzave = sqrt((Edes/PMASS + 1.0)^2 - 1.0);
+REAL sigpx = sqrt((0.00001*1.0e-9/PMASS + 1.0)^2 - 1.0);
+REAL sigpy = sqrt((0.00001*1.0e-9/PMASS + 1.0)^2 - 1.0);
+REAL pzave = sqrt((Edes/PMASS + 1.0)^2 - 1.0);
 
 Dist2:DISTRIBUTION, DISTRIBUTION = GAUSS,
 		    SIGMAX = 0.00001,
