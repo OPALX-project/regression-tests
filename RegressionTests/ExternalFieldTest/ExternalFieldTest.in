@@ -1,19 +1,22 @@
 Option, ECHO=FALSE;
 Option, PSDUMPFREQ=2000;
+Option, VERSION=10500;
+
 //Option, AUTOPHASE=10;
 
 Title,string="OPAL External field test";
 
-FINSS_RGUN_phi   = 0;
-FINSB01_RACC_phi = 0;
-FINSB02_RACC_phi = 0;
 
-REPARTFREQ       = 100;
-MINSTEPFORREBIN  = 600;
+REAL FINSS_RGUN_phi   = 0;
+REAL FINSB01_RACC_phi = 0;
+REAL FINSB02_RACC_phi = 0;
 
-QB               = 0.2e-9;
-BF               = 2998.0;
-BC               = QB*BF;
+REAL REPARTFREQ       = 100;
+REAL MINSTEPFORREBIN  = 600;
+
+REAL QB               = 0.2e-9;
+REAL BF               = 2998.0;
+REAL BC               = QB*BF;
 
 call, "ExternalFieldTest.phases";
 

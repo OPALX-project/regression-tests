@@ -195,7 +195,7 @@ Bend: SBend, ANGLE = bend_angle * Pi / 180.0,
 
 
 // Calculate position of end of Bend.
-bend_end = global_shift + drift_before_bend + bend_chord_length + drift_after_bend;
+REAL bend_end = global_shift + drift_before_bend + bend_chord_length + drift_after_bend;
 
 value, {bend_end};
 
@@ -254,7 +254,7 @@ if (NUMBER_OF_PARTICLES == 10000) {
 //
 // Here we start simulation.
 
-MINSTEPFORREBIN = 750;
+REAL MINSTEPFORREBIN = 750;
 
 Option, PSDUMPFREQ = PS_DUMP_FREQUENCY;
 Option, STATDUMPFREQ = STAT_DUMP_FREQUENCY;
