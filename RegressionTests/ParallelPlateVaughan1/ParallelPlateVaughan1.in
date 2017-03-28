@@ -50,7 +50,7 @@ beam1: BEAM, PARTICLE = ELECTRON, pc = P0, NPART = 3000, BFREQ = bfreq , BCURREN
 
 Select, Line=Benchmark;
 
-track, line= Benchmark, beam=beam1, MAXSTEPS=10, DT=2e-12, ZSTOP=0.9;  
+track, line= Benchmark, beam=beam1, MAXSTEPS=200, DT=2e-12, ZSTOP=0.9;  
  run, method = "PARALLEL-T", beam = beam1, fieldsolver = Fs1, MULTIPACTING=TRUE;
 endtrack;
 Quit;
