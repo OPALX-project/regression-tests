@@ -23,7 +23,7 @@ declare -r srcdir="${basedir}/src"
 declare -r testsdir="${basedir}/tests"
 
 
-declare -r keytab="${bindir}/.keytab"
+declare -r keytab="${HOME}/.keytab"
 
 # read configuration and tests to run
 source "${bindir}/regression_tests.conf"
@@ -36,7 +36,7 @@ declare -r run_tests="${basedir}/tests/RegressionTests/run/run-reg-tests.py"
 # 
 declare	force_run='no'
 declare	new_opal_binary='no'
-declare	use_afs='no'
+declare	use_afs='yes'
 declare do_publish='yes'
 declare	opts=''
 
