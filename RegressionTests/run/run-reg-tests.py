@@ -8,6 +8,7 @@ else:
 import os
 import shutil
 import re
+import argparse
 
 from reporter import Reporter
 from reporter import TempXMLElement
@@ -50,7 +51,7 @@ def callback(arg, dirname, fnames):
     global totalNrPassed
     global totalNrTests
 
-    if ".svn" in dirname or "reference" in dirname:
+    if "reference" in dirname:
         return   #exclude svn and reference dirs
 
     dir = str.split(dirname, "/")
@@ -155,44 +156,27 @@ def main(argv):
     global totalNrTests
     totalNrTests = 0
     totalNrPassed = 0
-    runAsUser = False
+    runAsUser = True
     runtests = list()
     run_with_tests = False
-    run_local = False
-    do_publish = True
+    run_local = True
 
-    if "--help" in argv:
-        print "./run-reg-tests.py [--dont-publish] [--queue=<SGE-QUEUE>] [--run-local] [--user [--tests=<TEST1,TEST2,...,TESTN>]]"
-        sys.exit()
+    parser = argparse.ArgumentParser(description='Run regression tests.')
+    parser.add_argument('tests', metavar='tests', type=str, nargs='+',
+                    help='a regression test to run')
+    parser.add_argument('--dont-publish', dest='publish_results', action='store_false',
+			default='True', help='do not publish results to web')
 
-    if "--dont-publish" in argv:
-        do_publish = False
 
-    if "--run-local" in argv:
-        run_local = True
 
-    if "--user" in argv:
-        runAsUser = True
-        #build a list of tests user wants to run
-        for arg in argv:
-            if arg.startswith("--tests"):
-                tests = str.split(arg, "=")[1]
-                runtests = str.split(tests, ",")
-                run_with_tests = True
-    else:
-        #"load" modules need to compile and run regression tests
-        modules = readfile("modules")
-        for module in modules:
-            module_load(module)
-        os.environ["SGE_CELL"]="sgefelsim"
-        os.environ["SGE_EXECD_PORT"]="6445"
-        os.environ["SGE_QMASTER_PORT"]="6444"
-        os.environ["SGE_ROOT"]="/gpfs/homefelsim/export/sge"
-        os.environ["SGE_CLUSTER_NAME"]="sgeclusterfelsim"
-        os.environ["PATH"]= os.getenv("PATH") + ":/gpfs/homefelsim/export/sge/bin/lx24-amd64:/usr/kerberos/bin"
+    args = parser.parse_args()
+    print args
+
+    runtests = args.tests
+    run_with_tests = True
 
     www_folder = os.getenv("REGTEST_WWW")
-    if do_publish and www_folder is None:
+    if args.publish_results and www_folder is None:
         rep.appendReport("Error: REGTEST_WWW not set")
         bailout(runAsUser)
         return
@@ -207,15 +191,6 @@ def main(argv):
         bailout(runAsUser)
         return
 
-    queue = ""
-    for arg in argv:
-        if arg.startswith("--queue"):
-            tmp = str.split(arg, "=")
-            if (len(tmp) < 2 or tmp[1] == ""):
-                print("no queue given, exiting")
-                sys.exit()
-            queue = "-q " + tmp[1]
-
     rep.appendReport("\n")
     rep.appendReport("Start Regression Test on %s \n" % datetime.datetime.today())
     rep.appendReport("==========================================================\n")
@@ -224,7 +199,7 @@ def main(argv):
 
     os.chdir(regdir)
     #walk the run dir tree
-    arglist = [runtests, run_local, queue]
+    arglist = [runtests, True, '']
     for root, dirs, files in os.walk("./"):
         callback(arglist, root, files)
 
@@ -242,7 +217,7 @@ def main(argv):
     rep.dumpXML("results.xml")
 
     #cp report to webdir and add entry in index.html
-    if do_publish:
+    if args.publish_results:
         failedtests = rep.NrFailed()
         brokentests = rep.NrBroken()
         webfilename = "results_%s_%s_%s.xml" % (d.day, d.month, d.year)
@@ -252,10 +227,11 @@ def main(argv):
         for line in range(len(indexhtml)):
             if "insert here" in indexhtml[line]:
                 m = re.search(webfilename, indexhtml[line + 1])
+		fmt="<a href=\"%s\">%s.%s.%s</a> [passed:%d | broken:%d | failed:%d | total:%d] <br/>\n"
                 if m != None:
-                    indexhtml[line+1] = "<a href=\"%s\">%s.%s.%s</a> [passed:%d | broken:%d | failed:%d | total:%d] <br/>\n" % (webfilename, d.day, d.month, d.year, totalNrPassed, brokentests, failedtests, totalNrTests)
+                    indexhtml[line+1] = fmt % (webfilename, d.day, d.month, d.year, totalNrPassed, brokentests, failedtests, totalNrTests)
                 else:
-                    indexhtml.insert(line+1, "<a href=\"%s\">%s.%s.%s</a> [passed:%d | broken:%d | failed:%d | total:%d] <br/>\n" % (webfilename, d.day, d.month, d.year, totalNrPassed, brokentests, failedtests, totalNrTests))
+                    indexhtml.insert(line+1, fmt % (webfilename, d.day, d.month, d.year, totalNrPassed, brokentests, failedtests, totalNrTests))
 
                 break
         indexhtmlout = open(www_folder + "/index.html", "w")
