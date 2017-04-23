@@ -28,7 +28,7 @@ REAL max_steps=n_turns*revolution_period/step_size;
 REAL steps_per_turn=revolution_period/step_size;
 REAL frequency=6000/revolution_period;
 
-value,{step_size_mm,n_turns,revolution_period,step_size};
+value,{step_size_mm,n_turns,revolution_period,step_size,frequency};
 
 Probe1: PROBE, xstart=0, xend=+4000., ystart=0, yend=0.;
 
@@ -36,13 +36,13 @@ ringdef: RINGDEFINITION, HARMONIC_NUMBER=6, LAT_RINIT=2350.0, LAT_PHIINIT=0.0,
          LAT_THETAINIT=0.0, BEAM_PHIINIT=0.0, BEAM_PRINIT=0.0,
          BEAM_RINIT=x_closed_orbit, SYMMETRY=8.0, RFFREQ=frequency, IS_CLOSED=true;
 
-triplet: SBEND3D, FMAPFN="data/OpalRingTest.field", LENGTH_UNITS=10., FIELD_UNITS=1e-3;
+triplet: SBEND3D, FMAPFN="OpalRingTest.field", LENGTH_UNITS=10., FIELD_UNITS=1e-3;
 
 l1: Line = (ringdef, probe1, triplet);
 
-Dist1: DISTRIBUTION, TYPE=fromfile, FNAME="data/beam.dat", INPUTMOUNITS=NONE;
+Dist1: DISTRIBUTION, TYPE=fromfile, FNAME="beam.dat", INPUTMOUNITS=NONE;
 
-Fs1:FIELDSOLVER, FSTYPE=FFT, MX=32, MY=32, MT=32,
+Fs1:FIELDSOLVER, FSTYPE=NONE, MX=2, MY=2, MT=2,
 		 PARFFTX=true, PARFFTY=true, PARFFTT=false,
 		 BCFFTX=open, BCFFTY=open, BCFFTT=open,BBOXINCR=2;
 
