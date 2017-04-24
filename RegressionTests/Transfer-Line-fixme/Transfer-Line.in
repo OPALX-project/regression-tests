@@ -13,9 +13,9 @@ REAL brho = (PMASS*1.0e9*gambet) / CLIGHT;
 
 value,{gamma,brho,Edes,beta,gambet};
 
-KX1IPHYS: SurfacePhysics, TYPE="Collimator",MATERIAL="Cu";
-KX2IPHYS: SurfacePhysics, TYPE="Collimator",MATERIAL="Graphite";
-KX3IPHYS: SurfacePhysics, TYPE="Collimator",MATERIAL="Mo";
+KX1IPHYS: ParticleMaterInteraction, TYPE="Collimator",MATERIAL="Cu";
+KX2IPHYS: ParticleMaterInteraction, TYPE="Collimator",MATERIAL="Graphite";
+KX3IPHYS: ParticleMaterInteraction, TYPE="Collimator",MATERIAL="Mo";
 
 SM3:SBEND, ELEMEDGE=0.62+0.04,
 	   E1=30 * Pi / 180.0,
