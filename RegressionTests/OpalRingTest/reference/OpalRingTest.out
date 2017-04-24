@@ -7,86 +7,94 @@ Ippl> CommMPI: Initialization complete.
 >              | |__| | |  / ____ \| |____
 >               \____/|_| /_/    \_\______|
 OPAL> 
-OPAL> This is OPAL (Object Oriented Parallel Accelerator Library) Version 1.2.1 SVN version 14097  (c) PSI, http://amas.web.psi.ch
+OPAL> This is OPAL (Object Oriented Parallel Accelerator Library) Version 1.09.0
 OPAL> 
-OPAL> Please send cookies, goodies or other motivations (wine and beer ... ) to the OPAL developers opal@lists.psi.ch
-OPAL> Time: 09.47.12 date: 13/06/2014
-OPAL> NOTE 17: unable to mkdir; File exists
-OPAL> No startup file "/Users/adelmann/init.opal" found. Note: this is not mandatory for an OPAL simulation!
+OPAL>                 (c) PSI, http://amas.web.psi.ch
+OPAL> 
+OPAL> Please send cookies, goodies or other motivations (wine and beer ... ) 
+OPAL> to the OPAL developers opal@lists.psi.ch
+OPAL> 
+OPAL> Time: 14:12:46 date: 24/04/2017
+OPAL> 
+OPAL> Couldn't find startup file "/Users/adelmann/init.opal".
+OPAL> Note: this is not mandatory for an OPAL simulation!
+OPAL> 
 OPAL> * Reading input stream "OpalRingTest.in".
-   +2 //////////////////////////////////////////////////////////////////////////////
-   +3 // Input file for single bunch tracking through ERIT FFAG ring              //
-   +4 //////////////////////////////////////////////////////////////////////////////
-   +5 Title,string="ERIT test simulation using OPAL code";
-   +6 Option, ASCIIDUMP=TRUE;
-   +7 OPTION, PSDUMPFREQ=100000; 
-   +8 
-   +9 Edes=0.011;
-  +10 e_tot = (Edes+PMASS);
-  +11 p_tot = (e_tot^2-PMASS^2)^0.5;
-  +12 gamma = e_tot/PMASS;
-  +13 beta = p_tot/e_tot;
-  +14 gambet = gamma*beta;
-  +15 P0 = gamma*beta*PMASS;
-  +16 brho = (PMASS*1.0e9*gambet) / CLIGHT;
-  +17 x_closed_orbit = 2349.008;
-  +18 
-  +19 // print to terminal
-  +20 value,{gamma,brho,Edes,beta,gambet,x_closed_orbit};
+    2 //////////////////////////////////////////////////////////////////////////////
+    3 // Input file for single bunch tracking through ERIT FFAG ring              //
+    4 //////////////////////////////////////////////////////////////////////////////
+    5 Title,string="ERIT test simulation using OPAL code";
+    6 Option, ASCIIDUMP=TRUE;
+    7 OPTION, PSDUMPFREQ=100000;
+    8 Option, VERSION=10900;
+    9 
+   10 REAL Edes=0.011;
+   11 REAL e_tot = (Edes+PMASS);
+   12 REAL p_tot = (e_tot^2-PMASS^2)^0.5;
+   13 REAL gamma = e_tot/PMASS;
+   14 REAL beta = p_tot/e_tot;
+   15 REAL gambet = gamma*beta;
+   16 REAL P0 = gamma*beta*PMASS;
+   17 REAL brho = (PMASS*1.0e9*gambet) / CLIGHT;
+   18 REAL x_closed_orbit = 2349.008;
+   19 
+   20 // print to terminal
+   21 value,{gamma,brho,Edes,beta,gambet,x_closed_orbit};
 OPAL> 
 OPAL> value: {GAMMA,BRHO,EDES,BETA,GAMBET,X_CLOSED_ORBIT}={1.01172,0.480645,0.011,0.151794,0.153573,2349.01}
 OPAL> 
-  +21 
-  +22 n_turns=100.0;
-  +23 revolution_period=327;
-  +24 
-  +25 step_size=0.1; // ns
-  +26 max_steps=n_turns*revolution_period/step_size;
-  +27 steps_per_turn=revolution_period/step_size;
-  +28 frequency=6000/revolution_period;
-  +29 
-  +30 value,{step_size_mm,n_turns,revolution_period,step_size};
+   22 
+   23 REAL n_turns=100.0;
+   24 REAL revolution_period=327;
+   25 
+   26 REAL step_size=0.1; // ns
+   27 REAL max_steps=n_turns*revolution_period/step_size;
+   28 REAL steps_per_turn=revolution_period/step_size;
+   29 REAL frequency=6000/revolution_period;
+   30 
+   31 value,{step_size_mm,n_turns,revolution_period,step_size,frequency};
 OPAL> 
-OPAL> value: {STEP_SIZE_MM,N_TURNS,REVOLUTION_PERIOD,STEP_SIZE}={0,100,327,0.1}
+OPAL> value: {STEP_SIZE_MM,N_TURNS,REVOLUTION_PERIOD,STEP_SIZE,FREQUENCY}={0,100,327,0.1,18.3486}
 OPAL> 
-  +31 
-  +32 Probe1: PROBE, xstart=0, xend=+4000., ystart=0, yend=0.;
-  +33 
-  +34 ringdef: RINGDEFINITION, HARMONIC_NUMBER=6, LATTICE_RINIT=2350.0, LATTICE_PHIINIT=0.0,
-  +35          LATTICE_THETAINIT=0.0, BEAM_PHIINIT=0.0, BEAM_PRINIT=0.0,
-  +36          BEAM_RINIT=x_closed_orbit, SYMMETRY=8.0, RFFREQ=frequency, IS_CLOSED=true;
-  +37 
-  +38 triplet: SBEND3D, FMAPFN="data/OpalRingTest.field", LENGTH_UNITS=10., FIELD_UNITS=-1e-4;
-  +39 
-  +40 l1: Line = (ringdef, probe1, probe2, triplet);
-  +41 
-  +42 Dist1: DISTRIBUTION, DISTRIBUTION=fromfile, FNAME="data/beam.dat";
-  +43 
-  +44 Fs1:FIELDSOLVER, FSTYPE=FFT, MX=32, MY=32, MT=32, 
-  +45 		 PARFFTX=true, PARFFTY=true, PARFFTT=false,
-  +46 		 BCFFTX=open, BCFFTY=open, BCFFTT=open,BBOXINCR=2;
-  +47 
-  +48 beam1: BEAM, PARTICLE=PROTON, pc=P0, NPART=12, BCURRENT=1.0E-19, CHARGE=1.0, BFREQ=frequency;
-  +49 
-  +50 track, line=l1, beam=beam1,MAXSTEPS=max_steps,STEPSPERTURN=steps_per_turn;
-Ippl> Opening sector field map data/OpalRingTest.field
-Ippl> Opened data/OpalRingTest.field
-Ippl> Read 433857 lines
-Ippl> Grid size (r, y, phi) = (51, 93, 181)
-Ippl> Grid min (r [mm], y [mm], phi [rad]) = (2100, -115, -0.392699)
-Ippl> Grid max (r [mm], y [mm], phi [rad]) = (2600, 115, 0.392699)
-  +51 run, file = "track_output", turns = 1, method = "CYCLOTRON-T", beam=beam1,
-  +52      fieldsolver=Fs1, distribution=Dist1;
-Ippl> BC set for normal Beam
-OPAL> 
-OPAL> -------------------------------------------------
-OPAL> READ INITIAL DISTRIBUTION FROM FILE "data/beam.dat"
-OPAL> -------------------------------------------------
-OPAL> 
-OPAL> * Mass of simulation particle= 2.65971e-09 GeV/c^2
+   32 
+   33 Probe1: PROBE, xstart=0, xend=+4000., ystart=0, yend=0.;
+   34 
+   35 ringdef: RINGDEFINITION, HARMONIC_NUMBER=6, LAT_RINIT=2350.0, LAT_PHIINIT=0.0,
+   36          LAT_THETAINIT=0.0, BEAM_PHIINIT=0.0, BEAM_PRINIT=0.0,
+   37          BEAM_RINIT=x_closed_orbit, SYMMETRY=8.0, RFFREQ=frequency, IS_CLOSED=true;
+   38 
+   39 triplet: SBEND3D, FMAPFN="OpalRingTest.field", LENGTH_UNITS=10., FIELD_UNITS=1e-3;
+   40 
+   41 l1: Line = (ringdef, probe1, triplet);
+   42 
+   43 Dist1: DISTRIBUTION, TYPE=fromfile, FNAME="beam.dat", INPUTMOUNITS=NONE;
+   44 
+   45 Fs1:FIELDSOLVER, FSTYPE=FFT, MX=2, MY=2, MT=2,
+   46 		 PARFFTX=true, PARFFTY=true, PARFFTT=false,
+   47 		 BCFFTX=open, BCFFTY=open, BCFFTT=open,BBOXINCR=2;
+   48 
+   49 beam1: BEAM, PARTICLE=PROTON, pc=P0, NPART=12, BCURRENT=1.0E-19, CHARGE=1.0, BFREQ=frequency;
+   50 
+   51 TRACK, LINE=l1, BEAM=beam1, MAXSTEPS=max_steps, STEPSPERTURN=steps_per_turn;
+OPAL> * Opening sector field map OpalRingTest.field fit order 1 smoothing order 1
+OPAL> * Opened OpalRingTest.field
+OPAL> * Read 433857 lines
+OPAL> * Grid size (r, y, phi) = (51, 47, 181)
+OPAL> * Grid min (r [mm], y [mm], phi [rad]) = (2100, 0, -0.392699)
+OPAL> * Grid max (r [mm], y [mm], phi [rad]) = (2600, 115, 0.392699)
+OPAL>  (3D Sector Magnetostatic);
+OPAL>   zini=   -115 mm;  zfinal= 115 mm;
+OPAL>   phiini= -0.392699 rad; phifinal= 0.392699 rad;
+OPAL>   rini=   2100 mm;  rfinal=  2600 mm;
+OPAL>  (3D Sector Magnetostatic);
+OPAL>   zini=   -115 mm;  zfinal= 115 mm;
+OPAL>   phiini= -0.392699 rad; phifinal= 0.392699 rad;
+OPAL>   rini=   2100 mm;  rfinal=  2600 mm;
+   52 RUN, METHOD="CYCLOTRON-T", BEAM=beam1, FIELDSOLVER=Fs1, DISTRIBUTION=Dist1;
+OPAL> * Mass of simulation particle= 2.6597e-09 GeV/c^2
 OPAL> * Charge of simulation particle= 4.54167e-28 [C]
 OPAL> * ********************************************************************************** 
-OPAL>   Selected Tracking Method == CYCLOTRON-T, NEW TRACK
+OPAL> * Selected Tracking Method == CYCLOTRON-T, NEW TRACK
 OPAL> * ********************************************************************************** 
 OPAL> * Number of neighbour bunches= 1
 OPAL> * DT                         = 1e-12
@@ -94,21 +102,21 @@ OPAL> * MAXSTEPS                   = 327000
 OPAL> * Phase space dump frequency = 100000
 OPAL> * Statistics dump frequency  = 10 w.r.t. the time step.
 OPAL> * ********************************************************************************** 
-OPAL> ********************** DISTRIBUTION **********************
-OPAL> 
+OPAL> * ************* D I S T R I B U T I O N ********************************************
+OPAL> * 
 OPAL> * Distribution type: FROMFILE
-OPAL> 
-OPAL> * Input file:        data/beam.dat
-OPAL> 
+OPAL> * 
+OPAL> * Input file:        beam.dat
+OPAL> * 
 OPAL> * Distribution is injected.
-OPAL> 
-OPAL> * *********************************************************
+OPAL> * 
+OPAL> * **********************************************************************************
 OPAL> 
 OPAL> * ************* B E A M ************************************************************ 
 OPAL> * BEAM        BEAM1
 OPAL> * PARTICLE    PROTON
 OPAL> * CURRENT     1e-19 A
-OPAL> * FREQENCY    18.3486 Hz
+OPAL> * FREQUENCY   18.3486 MHz
 OPAL> * CHARGE      +e * 1 
 OPAL> * REST MASS   0.938272 GeV
 OPAL> * MOMENTUM    0.144094
@@ -119,50 +127,18 @@ OPAL> * ************* F I E L D S O L V E R ************************************
 OPAL> * FIELDSOLVER  FS1
 OPAL> * TYPE         FFT
 OPAL> * N-PROCESSORS 1
-OPAL> * MX           32
-OPAL> * MY           32
-OPAL> * MT           32
+OPAL> * MX           2
+OPAL> * MY           2
+OPAL> * MT           2
 OPAL> * BBOXINCR     2
 OPAL> * GRRENSF      INTEGRATED
-OPAL> * XDIM is parallel  
-OPAL> * YDIM is parallel  
-OPAL> * Z(T)DIM is serial  
-Ippl> ======UniformCartesian<3,MFLOAT>==begin======
-Ippl> gridSizes[0] = 33
-Ippl> gridSizes[1] = 33
-Ippl> gridSizes[2] = 33
-Ippl> origin = ( 0 , 0 , 0 )
-Ippl> meshSpacing[0] = 1
-Ippl> meshSpacing[1] = 1
-Ippl> meshSpacing[2] = 1
-Ippl> Dvc[0] = ( -0.25 , -0.25 , -0.25 )
-Ippl> Dvc[1] = ( 0.25 , -0.25 , -0.25 )
-Ippl> Dvc[2] = ( -0.25 , 0.25 , -0.25 )
-Ippl> Dvc[3] = ( 0.25 , 0.25 , -0.25 )
-Ippl> Dvc[4] = ( -0.25 , -0.25 , 0.25 )
-Ippl> Dvc[5] = ( 0.25 , -0.25 , 0.25 )
-Ippl> Dvc[6] = ( -0.25 , 0.25 , 0.25 )
-Ippl> Dvc[7] = ( 0.25 , 0.25 , 0.25 )
-Ippl> cell volume = 1
-Ippl> ======UniformCartesian<3,MFLOAT>==end========
-Ippl> 
-Ippl> ParticleSpatialLayout, with particle distribution:
-Ippl>     Number of particles 12  
-Ippl> SpatialLayout decomposition = Total Domain = {[0,32),[0,32),[0,32)}
-Ippl> Local Rnodes = 1
-Ippl>  rnode 0 : {[0,32),[0,32),[0,32)}
-Ippl> Remote Rnodes = 0
-Ippl> Internal FieldLayout = Domain = {[0:31:1],[0:31:1],[0:31:1]}
-Ippl> FieldLayoutUsers = 1
-Ippl> Total number of vnodes = 1
-Ippl> Local Vnodes = 1
-Ippl>  vnode 0: Node = 0 ; vnode_m = 0 ; Domain = {[0:31:1],[0:31:1],[0:31:1]}
-Ippl> Remote Vnodes = 0
-Ippl> 
+OPAL> * XDIM         parallel  
+OPAL> * YDIM         parallel  
+OPAL> * Z(T)DIM      serial  
 OPAL> 
 OPAL> * ********************************************************************************** 
 OPAL> 
-OPAL> Adding OpalRing
+OPAL> * ----------------------------- Adding Ring ------------------------------ *
 OPAL> * Initial beam radius = 2349.01 [mm] 
 OPAL> * Initial gamma = 1.01172
 OPAL> * Initial beta = 0.151794
@@ -179,337 +155,521 @@ OPAL> YEnd= 0 [mm]
 OPAL> Width= 0 [mm]
 OPAL> * Initialize probe
 OPAL> Adding SBend3D
-OPAL > Added TRIPLET to OpalRing
-OPAL >   Start position (2350, 0, 0) normal (0, 1, 0), dphi -0
-OPAL >   End position (1661.7, 1661.7, 1.0175e-13) normal (-0.707107, 0.707107, 0)
-OPAL > Applying symmetry to OpalRing
-OPAL > Added TRIPLET to OpalRing
-OPAL >   Start position (1661.7, 1661.7, 1.0175e-13) normal (-0.707107, 0.707107, 0), dphi 0.785398
-OPAL >   End position (9.08369e-06, 2350, 2.035e-13) normal (-1, 6.99462e-10, 0)
-OPAL > Added TRIPLET to OpalRing
-OPAL >   Start position (9.08369e-06, 2350, 2.035e-13) normal (-1, 6.99462e-10, 0), dphi 1.5708
-OPAL >   End position (-1661.7, 1661.7, 3.0525e-13) normal (-0.707107, -0.707107, 0)
-OPAL > Added TRIPLET to OpalRing
-OPAL >   Start position (-1661.7, 1661.7, 3.0525e-13) normal (-0.707107, -0.707107, 0), dphi 2.35619
-OPAL >   End position (-2350, 3.28747e-06, 4.06999e-13) normal (-1.39892e-09, -1, 0)
-OPAL > Added TRIPLET to OpalRing
-OPAL >   Start position (-2350, 3.28747e-06, 4.06999e-13) normal (-1.39892e-09, -1, 0), dphi 3.14159
-OPAL >   End position (-1661.7, -1661.7, 5.08749e-13) normal (0.707107, -0.707107, 0)
-OPAL > Added TRIPLET to OpalRing
-OPAL >   Start position (-1661.7, -1661.7, 5.08749e-13) normal (0.707107, -0.707107, 0), dphi -2.35619
-OPAL >   End position (2.50875e-06, -2350, 6.10499e-13) normal (1, -2.09838e-09, 0)
-OPAL > Added TRIPLET to OpalRing
-OPAL >   Start position (2.50875e-06, -2350, 6.10499e-13) normal (1, -2.09838e-09, 0), dphi -1.5708
-OPAL >   End position (1661.7, -1661.7, 7.12249e-13) normal (0.707107, 0.707107, 0)
-OPAL > Added TRIPLET to OpalRing
-OPAL >   Start position (1661.7, -1661.7, 7.12249e-13) normal (0.707107, 0.707107, 0), dphi -0.785398
-OPAL >   End position (2350, -6.57494e-06, 8.13999e-13) normal (2.79785e-09, 1, 0)
-OPAL> * -----------------------------
+OPAL>  (3D Sector Magnetostatic);
+OPAL>   zini=   -115 mm;  zfinal= 115 mm;
+OPAL>   phiini= -0.392699 rad; phifinal= 0.392699 rad;
+OPAL>   rini=   2100 mm;  rfinal=  2600 mm;
+OPAL> * Added TRIPLET to Ring
+OPAL> * Start position (0, 2350, 0) normal (1, -0, 0), phi 1.5708
+OPAL> * End position (1661.7, 1661.7, 0) normal (0.707107, -0.707107, 0)
+OPAL > Applying symmetry to Ring
+OPAL>  (3D Sector Magnetostatic);
+OPAL>   zini=   -115 mm;  zfinal= 115 mm;
+OPAL>   phiini= -0.392699 rad; phifinal= 0.392699 rad;
+OPAL>   rini=   2100 mm;  rfinal=  2600 mm;
+OPAL> * Added TRIPLET to Ring
+OPAL> * Start position (1661.7, 1661.7, 0) normal (0.707107, -0.707107, 0), phi 2.35619
+OPAL> * End position (2350, 9.08369e-06, 0) normal (6.99462e-10, -1, 0)
+OPAL>  (3D Sector Magnetostatic);
+OPAL>   zini=   -115 mm;  zfinal= 115 mm;
+OPAL>   phiini= -0.392699 rad; phifinal= 0.392699 rad;
+OPAL>   rini=   2100 mm;  rfinal=  2600 mm;
+OPAL> * Added TRIPLET to Ring
+OPAL> * Start position (2350, 9.08369e-06, 0) normal (6.99462e-10, -1, 0), phi 3.14159
+OPAL> * End position (1661.7, -1661.7, 0) normal (-0.707107, -0.707107, 0)
+OPAL>  (3D Sector Magnetostatic);
+OPAL>   zini=   -115 mm;  zfinal= 115 mm;
+OPAL>   phiini= -0.392699 rad; phifinal= 0.392699 rad;
+OPAL>   rini=   2100 mm;  rfinal=  2600 mm;
+OPAL> * Added TRIPLET to Ring
+OPAL> * Start position (1661.7, -1661.7, 0) normal (-0.707107, -0.707107, 0), phi -2.35619
+OPAL> * End position (3.28747e-06, -2350, 0) normal (-1, -1.39892e-09, 0)
+OPAL>  (3D Sector Magnetostatic);
+OPAL>   zini=   -115 mm;  zfinal= 115 mm;
+OPAL>   phiini= -0.392699 rad; phifinal= 0.392699 rad;
+OPAL>   rini=   2100 mm;  rfinal=  2600 mm;
+OPAL> * Added TRIPLET to Ring
+OPAL> * Start position (3.28747e-06, -2350, 0) normal (-1, -1.39892e-09, 0), phi -1.5708
+OPAL> * End position (-1661.7, -1661.7, 0) normal (-0.707107, 0.707107, 0)
+OPAL>  (3D Sector Magnetostatic);
+OPAL>   zini=   -115 mm;  zfinal= 115 mm;
+OPAL>   phiini= -0.392699 rad; phifinal= 0.392699 rad;
+OPAL>   rini=   2100 mm;  rfinal=  2600 mm;
+OPAL> * Added TRIPLET to Ring
+OPAL> * Start position (-1661.7, -1661.7, 0) normal (-0.707107, 0.707107, 0), phi -0.785398
+OPAL> * End position (-2350, 2.50875e-06, 0) normal (-2.09839e-09, 1, 0)
+OPAL>  (3D Sector Magnetostatic);
+OPAL>   zini=   -115 mm;  zfinal= 115 mm;
+OPAL>   phiini= -0.392699 rad; phifinal= 0.392699 rad;
+OPAL>   rini=   2100 mm;  rfinal=  2600 mm;
+OPAL> * Added TRIPLET to Ring
+OPAL> * Start position (-2350, 2.50875e-06, 0) normal (-2.09839e-09, 1, 0), phi -2.09839e-09
+OPAL> * End position (-1661.7, 1661.7, 0) normal (0.707107, 0.707107, 0)
+OPAL>  (3D Sector Magnetostatic);
+OPAL>   zini=   -115 mm;  zfinal= 115 mm;
+OPAL>   phiini= -0.392699 rad; phifinal= 0.392699 rad;
+OPAL>   rini=   2100 mm;  rfinal=  2600 mm;
+OPAL> * Added TRIPLET to Ring
+OPAL> * Start position (-1661.7, 1661.7, 0) normal (0.707107, 0.707107, 0), phi 0.785398
+OPAL> * End position (-6.57494e-06, 2350, 0) normal (1, 2.79785e-09, 0)
+OPAL> * -------------------------------------
 OPAL> * The selected Beam line elements are :
-OPAL> * -> OPALRING
-OPAL> * -> PROBE
-OPAL> * -----------------------------
+OPAL> * -> Ring
+OPAL> * -> Probe
+OPAL> * -------------------------------------
+OPAL> * 4th order Runge-Kutta integrator
+OPAL> * Before repartition:  min local particle number 12 max local particle number: 12
+OPAL> * After repartition:  min local particle number 12 max local particle number: 12
+OPAL> 
+OPAL> * *********************** Bunch information in local frame: ************************
 OPAL> * ************** B U N C H ********************************************************* 
-OPAL> * NP              =   12
-OPAL> * Qtot            =    5.45000e-18 [nC]       Qi    =  4.54167e-19 [nC]
-OPAL> * Ekin            =    0.00000e+00 [MeV]      dEkin =  0.00000e+00 [MeV]
-OPAL> * rmax            = (  1.53000e-01 ,  0.00000e+00 ,  5.10000e-02 ) [m]
-OPAL> * rmin            = ( -3.06000e-03 ,  0.00000e+00 , -1.02000e-03 ) [m]
-OPAL> * rms beam size   = (  5.39322e-02 ,  0.00000e+00 ,  1.73227e-02 ) [m]
-OPAL> * rms momenta     = (  0.00000e+00 ,  0.00000e+00 ,  0.00000e+00 ) [beta gamma]
-OPAL> * mean position   = (  3.17500e-02 ,  0.00000e+00 ,  1.25833e-02 ) [m]
-OPAL> * mean momenta    = (  0.00000e+00 ,  0.00000e+00 ,  0.00000e+00 ) [beta gamma]
-OPAL> * rms emittance   = (          nan ,          nan ,          nan ) (not normalized)
+OPAL> * NP              = 12
+OPAL> * Qtot            =        0.000 [fC]         Qi    =        0.000 [fC]
+OPAL> * Ekin            =      11.000 [MeV]         dEkin =        0.000 [eV]
+OPAL> * rmax            = (    118.25000 ,      0.00000 ,     37.41667 ) [mm]
+OPAL> * rmin            = (    -31.75000 ,      0.00000 ,    -12.58333 ) [mm]
+OPAL> * rms beam size   = (     53.08184 ,      0.00000 ,     16.90508 ) [mm]
+OPAL> * rms momenta     = (  0.00000e+00 ,  4.24455e-02 ,  0.00000e+00 ) [beta gamma]
+OPAL> * mean position   = (      2.64583 ,      0.00000 ,      1.04861 ) [mm]
+OPAL> * mean momenta    = (  0.00000e+00 ,  1.40776e-01 ,  0.00000e+00 ) [beta gamma]
+OPAL> * rms emittance   = (  0.00000e+00 ,  0.00000e+00 ,  0.00000e+00 ) (not normalized)
 OPAL> * rms correlation = (  0.00000e+00 ,  0.00000e+00 ,  0.00000e+00 )
-OPAL> * hr              = (  5.03419e-03 ,  0.00000e+00 ,  1.67806e-03 ) [m]
-OPAL> * dh              =    2.00000e-02 [m]
-OPAL> * t               =    0.00000e+00 [s]        dT    =  1.66667e-11 [s]
-OPAL> * spos            =    1.25833e-02 [m]
+OPAL> * hr              = (    156.00000 ,      0.00000 ,     52.00000 ) [mm]
+OPAL> * dh              =   2.00000e+00 [%]
+OPAL> * t               =        0.000 [fs]         dT    =       16.667 [ps]
+OPAL> * spos            =        0.000 [um]
 OPAL> * ********************************************************************************** 
 OPAL> 
-OPAL> * 4th order Runge-Kutta integrator
+OPAL> 
+OPAL> * Phase space dump 0 (global frame) at integration step 0
+OPAL> * T = 0 ns, Live Particles: 12
+OPAL> * E = 11 MeV, beta * gamma = 0.15357
+OPAL> * Bunch position: R =  2349 mm, Theta = 0 Deg, Z = 0 mm
+OPAL> * Local Azimuth = 0 Deg, Local Elevation = 0 Deg
+OPAL> 
+OPAL> * *********************** Bunch information in global frame: ***********************
+OPAL> * ************** B U N C H ********************************************************* 
+OPAL> * NP              = 12
+OPAL> * Qtot            =        0.000 [fC]         Qi    =        0.000 [fC]
+OPAL> * Ekin            =      11.000 [MeV]         dEkin =        0.000 [eV]
+OPAL> * rmax            = (      2.49901 ,      0.00000 ,      0.05000 ) [m]
+OPAL> * rmin            = (      2.34901 ,      0.00000 ,      0.00000 ) [m]
+OPAL> * rms beam size   = (    660.93904 ,      0.00000 ,     17.32271 ) [mm]
+OPAL> * rms momenta     = (  0.00000e+00 ,  4.24455e-02 ,  0.00000e+00 ) [beta gamma]
+OPAL> * mean position   = (      2.18501 ,      0.00000 ,      0.01258 ) [m]
+OPAL> * mean momenta    = (  0.00000e+00 ,  1.40776e-01 ,  0.00000e+00 ) [beta gamma]
+OPAL> * rms emittance   = (  0.00000e+00 ,  0.00000e+00 ,  0.00000e+00 ) (not normalized)
+OPAL> * rms correlation = (  0.00000e+00 ,  0.00000e+00 ,  0.00000e+00 )
+OPAL> * hr              = (    156.00000 ,      0.00000 ,     52.00000 ) [mm]
+OPAL> * dh              =   2.00000e+00 [%]
+OPAL> * t               =        0.000 [fs]         dT    =       16.667 [ps]
+OPAL> * spos            =        0.000 [um]
+OPAL> * ********************************************************************************** 
+OPAL> 
 OPAL> * Beginning of this run is at t = 0 [ns]
 OPAL> * The time step is set to dt = 0.1 [ns]
-OPAL> * Phase space dump 0 (global frame) at integration step 0, T = 0 ns, E = 11 MeV, Local Azim. = 0 Deg, Local Elev. = 0 Deg
-OPAL> * Before repartation:  min local particle number 12 max local particle number: 12
-OPAL> * After repartation:  min local particle number 12 max local particle number: 12
 OPAL> * Single particle trajectory dump frequency is set to 1
 OPAL> * The frequency to solve space charge fields is set to 1
 OPAL> * The repartition frequency is set to 10
-OPAL> * ---------------------------- Start tracking ----------------------------
-OPAL> Turn 2 total particles 12
-OPAL> Turn 3 total particles 12
-OPAL> Turn 4 total particles 12
-OPAL> Turn 5 total particles 12
-OPAL> Turn 6 total particles 12
-OPAL> Turn 7 total particles 12
-OPAL> Turn 8 total particles 12
-OPAL> Turn 9 total particles 12
-OPAL> Turn 10 total particles 12
-OPAL> Turn 11 total particles 12
-OPAL> Turn 12 total particles 12
-OPAL> Turn 13 total particles 12
-OPAL> Turn 14 total particles 12
-OPAL> Turn 15 total particles 12
-OPAL> Turn 16 total particles 12
-OPAL> Turn 17 total particles 12
-OPAL> Turn 18 total particles 12
-OPAL> Turn 19 total particles 12
-OPAL> Turn 20 total particles 12
-OPAL> Turn 21 total particles 12
-OPAL> Turn 22 total particles 12
-OPAL> Turn 23 total particles 12
-OPAL> Turn 24 total particles 12
-OPAL> Turn 25 total particles 12
-OPAL> Turn 26 total particles 12
-OPAL> Turn 27 total particles 12
-OPAL> Turn 28 total particles 12
-OPAL> Turn 29 total particles 12
-OPAL> Turn 30 total particles 12
-OPAL> Turn 31 total particles 12
-OPAL> * Phase space dump 1 (global frame) at integration step 100000, T = 10000 ns, E = 11 MeV, Local Azim. = 153.76 Deg, Local Elev. = 0.15686 Deg
-OPAL> Turn 32 total particles 12
-OPAL> Turn 33 total particles 12
-OPAL> Turn 34 total particles 12
-OPAL> Turn 35 total particles 12
-OPAL> Turn 36 total particles 12
-OPAL> Turn 37 total particles 12
-OPAL> Turn 38 total particles 12
-OPAL> Turn 39 total particles 12
-OPAL> Turn 40 total particles 12
-OPAL> Turn 41 total particles 12
-OPAL> Turn 42 total particles 12
-OPAL> Turn 43 total particles 12
-OPAL> Turn 44 total particles 12
-OPAL> Turn 45 total particles 12
-OPAL> Turn 46 total particles 12
-OPAL> Turn 47 total particles 12
-OPAL> Turn 48 total particles 12
-OPAL> Turn 49 total particles 12
-OPAL> Turn 50 total particles 12
-OPAL> Turn 51 total particles 12
-OPAL> Turn 52 total particles 12
-OPAL> Turn 53 total particles 12
-OPAL> Turn 54 total particles 12
-OPAL> Turn 55 total particles 12
-OPAL> Turn 56 total particles 12
-OPAL> Turn 57 total particles 12
-OPAL> Turn 58 total particles 12
-OPAL> Turn 59 total particles 12
-OPAL> Turn 60 total particles 12
-OPAL> Turn 61 total particles 12
-OPAL> Turn 62 total particles 12
-OPAL> * Phase space dump 2 (global frame) at integration step 200000, T = 20000 ns, E = 11 MeV, Local Azim. = -68.351 Deg, Local Elev. = -0.36156 Deg
-OPAL> Turn 63 total particles 12
-OPAL> Turn 64 total particles 12
-OPAL> Turn 65 total particles 12
-OPAL> Turn 66 total particles 12
-OPAL> Turn 67 total particles 12
-OPAL> Turn 68 total particles 12
-OPAL> Turn 69 total particles 12
-OPAL> Turn 70 total particles 12
-OPAL> Turn 71 total particles 12
-OPAL> Turn 72 total particles 12
-OPAL> Turn 73 total particles 12
-OPAL> Turn 74 total particles 12
-OPAL> Turn 75 total particles 12
-OPAL> Turn 76 total particles 12
-OPAL> Turn 77 total particles 12
-OPAL> Turn 78 total particles 12
-OPAL> Turn 79 total particles 12
-OPAL> Turn 80 total particles 12
-OPAL> Turn 81 total particles 12
-OPAL> Turn 82 total particles 12
-OPAL> Turn 83 total particles 12
-OPAL> Turn 84 total particles 12
-OPAL> Turn 85 total particles 12
-OPAL> Turn 86 total particles 12
-OPAL> Turn 87 total particles 12
-OPAL> Turn 88 total particles 12
-OPAL> Turn 89 total particles 12
-OPAL> Turn 90 total particles 12
-OPAL> Turn 91 total particles 12
-OPAL> Turn 92 total particles 12
-OPAL> * Phase space dump 3 (global frame) at integration step 300000, T = 30000 ns, E = 11 MeV, Local Azim. = 83.325 Deg, Local Elev. = -0.047942 Deg
-OPAL> Turn 93 total particles 12
-OPAL> Turn 94 total particles 12
-OPAL> Turn 95 total particles 12
-OPAL> Turn 96 total particles 12
-OPAL> Turn 97 total particles 12
-OPAL> Turn 98 total particles 12
-OPAL> Turn 99 total particles 12
-OPAL> Turn 100 total particles 12
-OPAL> Turn 101 total particles 12
-OPAL> * *---------------------------- PARTICLES TRACK DONE------ ----------------------------*** 
+OPAL> 
+OPAL> * --------------------------------- Start tracking ------------------------------------ *
+OPAL> 
+OPAL> *** Finished turn 1, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 2, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 3, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 4, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 5, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 6, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 7, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 8, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 9, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 10, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 11, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 12, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 13, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 14, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 15, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 16, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 17, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 18, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 19, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 20, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 21, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 22, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 23, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 24, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 25, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 26, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 27, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 28, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 29, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 30, Total number of live particles: 12
+OPAL> 
+OPAL> * Phase space dump 1 (global frame) at integration step 100000
+OPAL> * T = 10000 ns, Live Particles: 12
+OPAL> * E = 11 MeV, beta * gamma = 0.15357
+OPAL> * Bunch position: R =  2377.5 mm, Theta = 149.2 Deg, Z = 4.1405e-13 mm
+OPAL> * Local Azimuth = 157.44 Deg, Local Elevation = 4.58e-13 Deg
+OPAL> 
+OPAL> *** Finished turn 31, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 32, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 33, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 34, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 35, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 36, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 37, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 38, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 39, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 40, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 41, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 42, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 43, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 44, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 45, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 46, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 47, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 48, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 49, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 50, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 51, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 52, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 53, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 54, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 55, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 56, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 57, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 58, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 59, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 60, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 61, Total number of live particles: 12
+OPAL> 
+OPAL> * Phase space dump 2 (global frame) at integration step 200000
+OPAL> * T = 20000 ns, Live Particles: 12
+OPAL> * E = 11 MeV, beta * gamma = 0.15357
+OPAL> * Bunch position: R =  2355.9 mm, Theta = -61.664 Deg, Z = 8.1723e-12 mm
+OPAL> * Local Azimuth = -76.677 Deg, Local Elevation = 5.2161e-13 Deg
+OPAL> 
+OPAL> *** Finished turn 62, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 63, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 64, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 65, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 66, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 67, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 68, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 69, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 70, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 71, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 72, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 73, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 74, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 75, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 76, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 77, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 78, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 79, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 80, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 81, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 82, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 83, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 84, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 85, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 86, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 87, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 88, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 89, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 90, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 91, Total number of live particles: 12
+OPAL> 
+OPAL> * Phase space dump 3 (global frame) at integration step 300000
+OPAL> * T = 30000 ns, Live Particles: 12
+OPAL> * E = 11 MeV, beta * gamma = 0.15357
+OPAL> * Bunch position: R =  2351.3 mm, Theta = 87.459 Deg, Z = -6.6979e-10 mm
+OPAL> * Local Azimuth = 89.993 Deg, Local Elevation = -1.3587e-11 Deg
+OPAL> 
+OPAL> *** Finished turn 92, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 93, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 94, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 95, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 96, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 97, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 98, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 99, Total number of live particles: 12
+OPAL> 
+OPAL> *** Finished turn 100, Total number of live particles: 12
+OPAL> 
+OPAL> * ---------------------------- DONE TRACKING PARTICLES -------------------------------- * 
 OPAL> * Final energy of reference particle = 11 [MeV]
 OPAL> * Total phase space dump number(includes the initial distribution) = 4
-OPAL> * One can restart simulation from the last dump step ( -restart 3 )
-OPAL> * Total finished turn number (not correct for restart mode) = 101
+OPAL> * One can restart simulation from the last dump step (-restart 3)
+OPAL> *
+OPAL> * Finished during turn 101 (100 turns completed)
+OPAL> * Cave: Turn number is not correct for restart mode
+OPAL> 
+OPAL> * *********************** Bunch information in global frame: ***********************
 OPAL> * ************** B U N C H ********************************************************* 
-OPAL> * NP              =   12
-OPAL> * Qtot            =    5.45000e-18 [nC]       Qi    =  4.54167e-19 [nC]
-OPAL> * Ekin            =    1.10000e+01 [MeV]      dEkin =  3.42760e-01 [MeV]
-OPAL> * rmax            = (  1.21250e-01 ,  0.00000e+00 ,  3.84167e-02 ) [m]
-OPAL> * rmin            = ( -3.48100e-02 ,  0.00000e+00 , -1.36033e-02 ) [m]
-OPAL> * rms beam size   = (  7.14958e-01 ,  3.00193e-01 ,  2.38088e-02 ) [m]
-OPAL> * rms momenta     = (  1.68278e-02 ,  4.30015e-02 ,  2.40662e-03 ) [beta gamma]
-OPAL> * mean position   = (  1.84447e-01 ,  2.21589e+00 , -2.02292e-03 ) [m]
-OPAL> * mean momenta    = ( -1.45454e-01 ,  1.70231e-02 , -1.22538e-04 ) [beta gamma]
-OPAL> * rms emittance   = (  4.13247e-02 ,  5.78730e-02 ,  3.48696e-04 ) (not normalized)
-OPAL> * rms correlation = (  8.49559e-01 , -7.25231e-01 , -3.55734e-01 )
-OPAL> * hr              = (  5.03419e-03 ,  0.00000e+00 ,  1.67806e-03 ) [m]
-OPAL> * dh              =    2.00000e-02 [m]
-OPAL> * t               =    3.27000e-05 [s]        dT    =  1.66667e-11 [s]
-OPAL> * spos            =    4.96354e+00 [m]
+OPAL> * NP              = 12
+OPAL> * Qtot            =        0.000 [fC]         Qi    =        0.000 [fC]
+OPAL> * Ekin            =      11.000 [MeV]         dEkin =     350.302 [keV]
+OPAL> * rmax            = (     -0.59615 ,      2.15118 ,      0.06993 ) [m]
+OPAL> * rmin            = (     -2.34923 ,     -0.67504 ,     -0.00693 ) [m]
+OPAL> * rms beam size   = (    740.28241 ,    713.88274 ,     21.20840 ) [mm]
+OPAL> * rms momenta     = (  5.74327e-02 ,  4.19179e-02 ,  2.45957e-03 ) [beta gamma]
+OPAL> * mean position   = (     -1.90838 ,      0.64904 ,      0.01105 ) [m]
+OPAL> * mean momenta    = ( -4.77755e-02 , -1.19476e-01 ,  8.85825e-04 ) [beta gamma]
+OPAL> * rms emittance   = (  2.74341e-01 ,  1.93740e-01 ,  3.13365e-04 ) (not normalized)
+OPAL> * rms correlation = ( -1.34254e-01 ,  1.06787e-01 ,  3.85834e-01 )
+OPAL> * hr              = (      1.03137 ,      3.38088 ,      0.08942 ) [m]
+OPAL> * dh              =   2.00000e+00 [%]
+OPAL> * t               =       32.700 [ms]         dT    =       16.667 [ps]
+OPAL> * spos            =        0.000 [um]
 OPAL> * ********************************************************************************** 
 OPAL> 
-OPAL> * -----------------------------
+OPAL> * ----------------------------------------------- *
 OPAL> * Finalizing i.e. write data and close files :
 Ippl> Save PROBE1.loss
 OPAL> * Finalize probe
-OPAL> * -----------------------------
-  +53 endtrack;
-  +54 Stop;
+OPAL> * ----------------------------------------------- *
+   53 ENDTRACK;
+   54 STOP;
 OPAL> * End of input stream "OpalRingTest.in".
 Timings> -----------------------------------------------------------------
 Timings>      Timing results for 1 nodes:
 Timings> -----------------------------------------------------------------
-Timings> mainTimer ........... Wall tot =    27.8978, CPU tot =       27.8
+Timings> mainTimer........... Wall tot =    115.011, CPU tot =     114.48
 Timings> 
-Timings> Secondary emission .. Wall max =          0, CPU max =          0
-Timings>                       Wall avg =          0, CPU avg =          0
-Timings>                       Wall min =          0, CPU min =          0
+Timings> Binaryrepart........ Wall max =     0.7979, CPU max =       0.64
+Timings>                      Wall avg =     0.7979, CPU avg =       0.64
+Timings>                      Wall min =     0.7979, CPU min =       0.64
 Timings> 
-Timings> Particle Inside ..... Wall max =          0, CPU max =          0
-Timings>                       Wall avg =          0, CPU avg =          0
-Timings>                       Wall min =          0, CPU min =          0
+Timings> Boundingbox......... Wall max =    1.31867, CPU max =       1.33
+Timings>                      Wall avg =    1.31867, CPU avg =       1.33
+Timings>                      Wall min =    1.31867, CPU min =       1.33
 Timings> 
-Timings> zshiftPre Processing  Wall max =          0, CPU max =          0
-Timings>                       Wall avg =          0, CPU avg =          0
-Timings>                       Wall min =          0, CPU min =          0
+Timings> Compute Statistics.. Wall max =    0.17396, CPU max =       0.17
+Timings>                      Wall avg =    0.17396, CPU avg =       0.17
+Timings>                      Wall min =    0.17396, CPU min =       0.17
 Timings> 
-Timings> Ray tracing ......... Wall max =          0, CPU max =          0
-Timings>                       Wall avg =          0, CPU avg =          0
-Timings>                       Wall min =          0, CPU min =          0
+Timings> ComputePotential.... Wall max =    19.9664, CPU max =      19.08
+Timings>                      Wall avg =    19.9664, CPU avg =      19.08
+Timings>                      Wall min =    19.9664, CPU min =      19.08
 Timings> 
-Timings> Check inward ........ Wall max =          0, CPU max =          0
-Timings>                       Wall avg =          0, CPU avg =          0
-Timings>                       Wall min =          0, CPU min =          0
+Timings> Create Distr........ Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
 Timings> 
-Timings> Pre Processing ...... Wall max =          0, CPU max =          0
-Timings>                       Wall avg =          0, CPU avg =          0
-Timings>                       Wall min =          0, CPU min =          0
+Timings> Dump................ Wall max =    8.77615, CPU max =       8.25
+Timings>                      Wall avg =    8.77615, CPU avg =       8.25
+Timings>                      Wall min =    8.77615, CPU min =       8.25
 Timings> 
-Timings> SelfField ........... Wall max =          0, CPU max =          0
-Timings>                       Wall avg =          0, CPU avg =          0
-Timings>                       Wall min =          0, CPU min =          0
+Timings> Fast inside test.... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
 Timings> 
-Timings> Boundingbox ......... Wall max =    2.9e-05, CPU max =          0
-Timings>                       Wall avg =    2.9e-05, CPU avg =          0
-Timings>                       Wall min =    2.9e-05, CPU min =          0
+Timings> Frametransform...... Wall max =    2.19595, CPU max =       2.19
+Timings>                      Wall avg =    2.19595, CPU avg =       2.19
+Timings>                      Wall min =    2.19595, CPU min =       2.19
 Timings> 
-Timings> Statistics .......... Wall max =      6e-05, CPU max =          0
-Timings>                       Wall avg =      6e-05, CPU avg =          0
-Timings>                       Wall min =      6e-05, CPU min =          0
+Timings> Histogram........... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
 Timings> 
-Timings> Potential ........... Wall max =          0, CPU max =          0
-Timings>                       Wall avg =          0, CPU avg =          0
-Timings>                       Wall min =          0, CPU min =          0
+Timings> Initialize geometry. Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
 Timings> 
-Timings> Histogram ........... Wall max =          0, CPU max =          0
-Timings>                       Wall avg =          0, CPU avg =          0
-Timings>                       Wall min =          0, CPU min =          0
+Timings> Inside test......... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
 Timings> 
-Timings> CreatDistr .......... Wall max =          0, CPU max =          0
-Timings>                       Wall avg =          0, CPU avg =          0
-Timings>                       Wall min =          0, CPU min =          0
+Timings> Integration......... Wall max =    63.4855, CPU max =      64.25
+Timings>                      Wall avg =    63.4855, CPU avg =      64.25
+Timings>                      Wall min =    63.4855, CPU min =      64.25
 Timings> 
-Timings> LoadDistr ........... Wall max =          0, CPU max =          0
-Timings>                       Wall avg =          0, CPU avg =          0
-Timings>                       Wall min =          0, CPU min =          0
+Timings> Load Distr.......... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
 Timings> 
-Timings> GreensFTotal ........ Wall max =          0, CPU max =          0
-Timings>                       Wall avg =          0, CPU avg =          0
-Timings>                       Wall min =          0, CPU min =          0
+Timings> Particle Inside..... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
 Timings> 
-Timings> IntGreenF1 .......... Wall max =          0, CPU max =          0
-Timings>                       Wall avg =          0, CPU avg =          0
-Timings>                       Wall min =          0, CPU min =          0
+Timings> Ray tracing......... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
 Timings> 
-Timings> IntGreenF2 .......... Wall max =          0, CPU max =          0
-Timings>                       Wall avg =          0, CPU avg =          0
-Timings>                       Wall min =          0, CPU min =          0
+Timings> RC-CC1Dfft.......... Wall max =    2.26905, CPU max =       2.24
+Timings>                      Wall avg =    2.26905, CPU avg =       2.24
+Timings>                      Wall min =    2.26905, CPU min =       2.24
 Timings> 
-Timings> IntGreenF3 .......... Wall max =          0, CPU max =          0
-Timings>                       Wall avg =          0, CPU avg =          0
-Timings>                       Wall min =          0, CPU min =          0
+Timings> RC-CCtranspose...... Wall max =    2.23818, CPU max =       2.23
+Timings>                      Wall avg =    2.23818, CPU avg =       2.23
+Timings>                      Wall min =    2.23818, CPU min =       2.23
 Timings> 
-Timings> MirrorRho1 .......... Wall max =          0, CPU max =          0
-Timings>                       Wall avg =          0, CPU avg =          0
-Timings>                       Wall min =          0, CPU min =          0
+Timings> RC-RC1Dfft.......... Wall max =   0.962901, CPU max =       0.84
+Timings>                      Wall avg =   0.962901, CPU avg =       0.84
+Timings>                      Wall min =   0.962901, CPU min =       0.84
 Timings> 
-Timings> ShIntGreenF1 ........ Wall max =          0, CPU max =          0
-Timings>                       Wall avg =          0, CPU avg =          0
-Timings>                       Wall min =          0, CPU min =          0
+Timings> RC-RRtranspose...... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
 Timings> 
-Timings> ShIntGreenF2 ........ Wall max =          0, CPU max =          0
-Timings>                       Wall avg =          0, CPU avg =          0
-Timings>                       Wall min =          0, CPU min =          0
+Timings> RC-total............ Wall max =    9.51262, CPU max =       8.85
+Timings>                      Wall avg =    9.51262, CPU avg =       8.85
+Timings>                      Wall min =    9.51262, CPU min =       8.85
 Timings> 
-Timings> ShIntGreenF3 ........ Wall max =          0, CPU max =          0
-Timings>                       Wall avg =          0, CPU avg =          0
-Timings>                       Wall min =          0, CPU min =          0
+Timings> Secondary emission.. Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
 Timings> 
-Timings> ShIntGreenF4 ........ Wall max =          0, CPU max =          0
-Timings>                       Wall avg =          0, CPU avg =          0
-Timings>                       Wall min =          0, CPU min =          0
+Timings> SelfField total..... Wall max =    32.9631, CPU max =      32.19
+Timings>                      Wall avg =    32.9631, CPU avg =      32.19
+Timings>                      Wall min =    32.9631, CPU min =      32.19
 Timings> 
-Timings> MirrorRho2 .......... Wall max =          0, CPU max =          0
-Timings>                       Wall avg =          0, CPU avg =          0
-Timings>                       Wall min =          0, CPU min =          0
+Timings> SF: GreensFTotal.... Wall max =    11.4707, CPU max =      11.11
+Timings>                      Wall avg =    11.4707, CPU avg =      11.11
+Timings>                      Wall min =    11.4707, CPU min =      11.11
 Timings> 
-Timings> GreenF1 ............. Wall max =          0, CPU max =          0
-Timings>                       Wall avg =          0, CPU avg =          0
-Timings>                       Wall min =          0, CPU min =          0
+Timings> SF: IntGreenF1...... Wall max =    4.53047, CPU max =        4.3
+Timings>                      Wall avg =    4.53047, CPU avg =        4.3
+Timings>                      Wall min =    4.53047, CPU min =        4.3
 Timings> 
-Timings> GreenF2 ............. Wall max =          0, CPU max =          0
-Timings>                       Wall avg =          0, CPU avg =          0
-Timings>                       Wall min =          0, CPU min =          0
+Timings> SF: IntGreenF2...... Wall max =    1.50663, CPU max =       1.33
+Timings>                      Wall avg =    1.50663, CPU avg =       1.33
+Timings>                      Wall min =    1.50663, CPU min =       1.33
 Timings> 
-Timings> GreenF3 ............. Wall max =          0, CPU max =          0
-Timings>                       Wall avg =          0, CPU avg =          0
-Timings>                       Wall min =          0, CPU min =          0
+Timings> SF: IntGreenF3...... Wall max =    3.44257, CPU max =       3.47
+Timings>                      Wall avg =    3.44257, CPU avg =       3.47
+Timings>                      Wall min =    3.44257, CPU min =       3.47
 Timings> 
-Timings> GreenF4 ............. Wall max =          0, CPU max =          0
-Timings>                       Wall avg =          0, CPU avg =          0
-Timings>                       Wall min =          0, CPU min =          0
+Timings> SF: MirrorRho1...... Wall max =   0.852816, CPU max =       0.78
+Timings>                      Wall avg =   0.852816, CPU avg =       0.78
+Timings>                      Wall min =   0.852816, CPU min =       0.78
 Timings> 
-Timings> H5PartTimer ......... Wall max =   0.031951, CPU max =       0.01
-Timings>                       Wall avg =   0.031951, CPU avg =       0.01
-Timings>                       Wall min =   0.031951, CPU min =       0.01
+Timings> SF: MirrorRho2...... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
 Timings> 
-Timings> H5BlockTimer ........ Wall max =          0, CPU max =          0
-Timings>                       Wall avg =          0, CPU avg =          0
-Timings>                       Wall min =          0, CPU min =          0
+Timings> SF: Potential....... Wall max =     20.414, CPU max =      19.59
+Timings>                      Wall avg =     20.414, CPU avg =      19.59
+Timings>                      Wall min =     20.414, CPU min =      19.59
 Timings> 
-Timings> StatMarkerTimer ..... Wall max =    0.09929, CPU max =        0.1
-Timings>                       Wall avg =    0.09929, CPU avg =        0.1
-Timings>                       Wall min =    0.09929, CPU min =        0.1
+Timings> SF: ShIntGreenF1.... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
 Timings> 
-Timings> Integration ......... Wall max =    9.14102, CPU max =       9.21
-Timings>                       Wall avg =    9.14102, CPU avg =       9.21
-Timings>                       Wall min =    9.14102, CPU min =       9.21
+Timings> SF: ShIntGreenF2.... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
 Timings> 
-Timings> Frametransform ...... Wall max =          0, CPU max =          0
-Timings>                       Wall avg =          0, CPU avg =          0
-Timings>                       Wall min =          0, CPU min =          0
+Timings> SF: ShIntGreenF3.... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
 Timings> 
-Timings> Dump ................ Wall max =    5.91389, CPU max =       5.82
-Timings>                       Wall avg =    5.91389, CPU avg =       5.82
-Timings>                       Wall min =    5.91389, CPU min =       5.82
+Timings> SF: ShIntGreenF4.... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
 Timings> 
-Timings> Binaryrepart ........ Wall max =   0.000168, CPU max =          0
-Timings>                       Wall avg =   0.000168, CPU avg =          0
-Timings>                       Wall min =   0.000168, CPU min =          0
+Timings> Write H5-File....... Wall max =   0.010563, CPU max =          0
+Timings>                      Wall avg =   0.010563, CPU avg =          0
+Timings>                      Wall min =   0.010563, CPU min =          0
+Timings> 
+Timings> Write Stat.......... Wall max =    4.11644, CPU max =       3.91
+Timings>                      Wall avg =    4.11644, CPU avg =       3.91
+Timings>                      Wall min =    4.11644, CPU min =       3.91
 Timings> 
 Timings> -----------------------------------------------------------------
