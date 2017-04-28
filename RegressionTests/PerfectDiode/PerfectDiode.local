@@ -1,2 +1,2 @@
 #!/bin/bash 
-mpirun -np 2 $OPAL_EXE_PATH/opal PerfectDiode.in --commlib mpi --info 3 --warn 0 2>&1
+mpirun -np 2 "$OPAL_EXE_PATH/opal" "$@" PerfectDiode.in --commlib mpi --info 3 --warn 0 2>&1
