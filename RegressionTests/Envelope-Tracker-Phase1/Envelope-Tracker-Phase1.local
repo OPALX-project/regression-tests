@@ -1,2 +1,2 @@
 #!/bin/bash
-mpirun -np 4 $OPAL_EXE_PATH/opal Envelope-Tracker-Phase1.in --commlib mpi --info 3 --warn 0
+mpirun -np 4 "$OPAL_EXE_PATH/opal" "$@" Envelope-Tracker-Phase1.in --commlib mpi --info 3 --warn 0

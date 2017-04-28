@@ -1,2 +1,2 @@
 #!/bin/bash 
-mpirun -np 1 $OPAL_EXE_PATH/opal Quad-Simple-Test-1.in --commlib mpi --info 3 --warn 0 2>&1
+mpirun -np 1 "$OPAL_EXE_PATH/opal" "$@" Quad-Simple-Test-1.in --commlib mpi --info 3 --warn 0 2>&1
