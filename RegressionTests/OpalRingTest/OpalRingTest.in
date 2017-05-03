@@ -37,11 +37,11 @@ ringdef: RINGDEFINITION, HARMONIC_NUMBER=6, LAT_RINIT=2350.0, LAT_PHIINIT=0.0,
          LAT_THETAINIT=0.0, BEAM_PHIINIT=0.0, BEAM_PRINIT=0.0,
          BEAM_RINIT=x_closed_orbit, SYMMETRY=8.0, RFFREQ=frequency, IS_CLOSED=true;
 
-triplet: SBEND3D, FMAPFN="data/OpalRingTest.field", LENGTH_UNITS=10., FIELD_UNITS=1e-3;
+triplet: SBEND3D, FMAPFN="OpalRingTest.field", LENGTH_UNITS=10., FIELD_UNITS=1e-3;
 
 l1: Line = (ringdef, probe1, triplet);
 
-Dist1: DISTRIBUTION, DISTRIBUTION=fromfile, FNAME="data/beam.dat", INPUTMOUNITS=NONE;
+Dist1: DISTRIBUTION, DISTRIBUTION=fromfile, FNAME="beam.dat", INPUTMOUNITS=NONE;
 
 Fs1:FIELDSOLVER, FSTYPE=NONE, MX=2, MY=2, MT=2, 
 		 PARFFTX=true, PARFFTY=true, PARFFTT=false,
