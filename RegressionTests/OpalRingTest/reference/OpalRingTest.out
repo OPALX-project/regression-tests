@@ -7,31 +7,93 @@ Ippl> CommMPI: Initialization complete.
 >              | |__| | |  / ____ \| |____
 >               \____/|_| /_/    \_\______|
 OPAL> 
-OPAL> This is OPAL (Object Oriented Parallel Accelerator Library) Version 1.5.2
+OPAL> This is OPAL (Object Oriented Parallel Accelerator Library) Version 1.6.0
 OPAL> 
 OPAL>                 (c) PSI, http://amas.web.psi.ch
 OPAL> 
 OPAL> Please send cookies, goodies or other motivations (wine and beer ... ) 
 OPAL> to the OPAL developers opal@lists.psi.ch
 OPAL> 
-OPAL> Time: 16:35:41 date: 28/04/2017
+OPAL> Time: 18:40:47 date: 03/05/2017
 OPAL> 
 OPAL> Couldn't find startup file "/Users/adelmann/init.opal".
 OPAL> Note: this is not mandatory for an OPAL simulation!
 OPAL> 
 OPAL> * Reading input stream "OpalRingTest.in".
+    2 //////////////////////////////////////////////////////////////////////////////
+    3 // Input file for single bunch tracking through ERIT FFAG ring              //
+    4 //////////////////////////////////////////////////////////////////////////////
+    5 Title,string="ERIT test simulation using OPAL code";
+    6 Option, ASCIIDUMP=TRUE;
+    7 OPTION, PSDUMPFREQ=100000; 
+    8 Option, PSDUMPLOCALFRAME=TRUE;
+    9 OPTION, VERSION=10600;
+   10 
+   11 REAL Edes=0.011;
+   12 REAL e_tot = (Edes+PMASS);
+   13 REAL p_tot = (e_tot^2-PMASS^2)^0.5;
+   14 REAL gamma = e_tot/PMASS;
+   15 REAL beta = p_tot/e_tot;
+   16 REAL gambet = gamma*beta;
+   17 REAL P0 = gamma*beta*PMASS;
+   18 REAL brho = (PMASS*1.0e9*gambet) / CLIGHT;
+   19 REAL x_closed_orbit = 2349.008;
+   20 
+   21 // print to terminal
+   22 value,{gamma,brho,Edes,beta,gambet,x_closed_orbit};
 OPAL> 
 OPAL> value: {GAMMA,BRHO,EDES,BETA,GAMBET,X_CLOSED_ORBIT}={1.01172,0.480645,0.011,0.151794,0.153573,2349.01}
 OPAL> 
+   23 
+   24 REAL n_turns=100.0;
+   25 REAL revolution_period=327;
+   26 
+   27 REAL step_size=0.1; // ns
+   28 REAL max_steps=n_turns*revolution_period/step_size;
+   29 REAL steps_per_turn=revolution_period/step_size;
+   30 REAL frequency=6000/revolution_period;
+   31 
+   32 value,{step_size_mm,n_turns,revolution_period,step_size};
 OPAL> 
 OPAL> value: {STEP_SIZE_MM,N_TURNS,REVOLUTION_PERIOD,STEP_SIZE}={0,100,327,0.1}
 OPAL> 
-OPAL> * Opening sector field map data/OpalRingTest.field fit order 1 smoothing order 1
-OPAL> * Opened data/OpalRingTest.field
+   33 
+   34 Probe1: PROBE, xstart=0, xend=+4000., ystart=0, yend=0.;
+   35 
+   36 ringdef: RINGDEFINITION, HARMONIC_NUMBER=6, LAT_RINIT=2350.0, LAT_PHIINIT=0.0,
+   37          LAT_THETAINIT=0.0, BEAM_PHIINIT=0.0, BEAM_PRINIT=0.0,
+   38          BEAM_RINIT=x_closed_orbit, SYMMETRY=8.0, RFFREQ=frequency, IS_CLOSED=true;
+   39 
+   40 triplet: SBEND3D, FMAPFN="OpalRingTest.field", LENGTH_UNITS=10., FIELD_UNITS=1e-3;
+   41 
+   42 l1: Line = (ringdef, probe1, triplet);
+   43 
+   44 Dist1: DISTRIBUTION, DISTRIBUTION=fromfile, FNAME="beam.dat", INPUTMOUNITS=NONE;
+   45 
+   46 Fs1:FIELDSOLVER, FSTYPE=NONE, MX=2, MY=2, MT=2, 
+   47 		 PARFFTX=true, PARFFTY=true, PARFFTT=false,
+   48 		 BCFFTX=open, BCFFTY=open, BCFFTT=open,BBOXINCR=2;
+   49 
+   50 beam1: BEAM, PARTICLE=PROTON, pc=P0, NPART=12, BCURRENT=1.0E-19, CHARGE=1.0, BFREQ=frequency;
+   51 
+   52 TRACK, LINE=l1, BEAM=beam1, MAXSTEPS=max_steps, STEPSPERTURN=steps_per_turn;
+OPAL> * Opening sector field map OpalRingTest.field fit order 1 smoothing order 1
+OPAL> * Opened OpalRingTest.field
 OPAL> * Read 433857 lines
 OPAL> * Grid size (r, y, phi) = (51, 47, 181)
 OPAL> * Grid min (r [mm], y [mm], phi [rad]) = (2100, 0, -0.392699)
 OPAL> * Grid max (r [mm], y [mm], phi [rad]) = (2600, 115, 0.392699)
+ (3D Sector Magnetostatic);
+  zini= -1.1500000000000000e+02 m; zfinal= 1.1500000000000000e+02 mm;
+  phiini= -3.9269908152385868e-01 rad; phifinal= 3.9269908152385868e-01 rad;
+  rini= 2.0999999800685810e+03 m; rfinal= 2.6000000050515096e+03 mm;
+
+ (3D Sector Magnetostatic);
+  zini= -1.1500000000000000e+02 m; zfinal= 1.1500000000000000e+02 mm;
+  phiini= -3.9269908152385868e-01 rad; phifinal= 3.9269908152385868e-01 rad;
+  rini= 2.0999999800685810e+03 m; rfinal= 2.6000000050515096e+03 mm;
+
+   53 RUN, METHOD="CYCLOTRON-T", BEAM=beam1, FIELDSOLVER=Fs1, DISTRIBUTION=Dist1;
 Ippl> no solver attached
 OPAL> * Mass of simulation particle= 2.6597e-09 GeV/c^2
 OPAL> * Charge of simulation particle= 4.54167e-28 [C]
@@ -48,7 +110,7 @@ OPAL> * ************* D I S T R I B U T I O N **********************************
 OPAL> * 
 OPAL> * Distribution type: FROMFILE
 OPAL> * 
-OPAL> * Input file:        data/beam.dat
+OPAL> * Input file:        beam.dat
 OPAL> * 
 OPAL> * Distribution is injected.
 OPAL> * 
@@ -89,28 +151,68 @@ OPAL> * 8 fold field symmetry
 OPAL> * Harmonic number h= 6 
 OPAL> * Probe PROBE1 XStart= 0 XEnd= 4000 YStart= 0 YEnd= 0 Width= 0 all in [mm]
 OPAL> Adding SBend3D
+ (3D Sector Magnetostatic);
+  zini= -1.1500000000000000e+02 m; zfinal= 1.1500000000000000e+02 mm;
+  phiini= -3.9269908152385868e-01 rad; phifinal= 3.9269908152385868e-01 rad;
+  rini= 2.0999999800685810e+03 m; rfinal= 2.6000000050515096e+03 mm;
+
 OPAL> * Added TRIPLET to Ring
 OPAL> * Start position (0, 2350, 0) normal (1, -0, 0), phi 1.5708
 OPAL> * End position (1661.7, 1661.7, 0) normal (0.707107, -0.707107, 0)
 OPAL > Applying symmetry to Ring
+ (3D Sector Magnetostatic);
+  zini= -1.1500000000000000e+02 m; zfinal= 1.1500000000000000e+02 mm;
+  phiini= -3.9269908152385868e-01 rad; phifinal= 3.9269908152385868e-01 rad;
+  rini= 2.0999999800685810e+03 m; rfinal= 2.6000000050515096e+03 mm;
+
 OPAL> * Added TRIPLET to Ring
 OPAL> * Start position (1661.7, 1661.7, 0) normal (0.707107, -0.707107, 0), phi 2.35619
 OPAL> * End position (2350, 9.08369e-06, 0) normal (6.99462e-10, -1, 0)
+ (3D Sector Magnetostatic);
+  zini= -1.1500000000000000e+02 m; zfinal= 1.1500000000000000e+02 mm;
+  phiini= -3.9269908152385868e-01 rad; phifinal= 3.9269908152385868e-01 rad;
+  rini= 2.0999999800685810e+03 m; rfinal= 2.6000000050515096e+03 mm;
+
 OPAL> * Added TRIPLET to Ring
 OPAL> * Start position (2350, 9.08369e-06, 0) normal (6.99462e-10, -1, 0), phi 3.14159
 OPAL> * End position (1661.7, -1661.7, 0) normal (-0.707107, -0.707107, 0)
+ (3D Sector Magnetostatic);
+  zini= -1.1500000000000000e+02 m; zfinal= 1.1500000000000000e+02 mm;
+  phiini= -3.9269908152385868e-01 rad; phifinal= 3.9269908152385868e-01 rad;
+  rini= 2.0999999800685810e+03 m; rfinal= 2.6000000050515096e+03 mm;
+
 OPAL> * Added TRIPLET to Ring
 OPAL> * Start position (1661.7, -1661.7, 0) normal (-0.707107, -0.707107, 0), phi -2.35619
 OPAL> * End position (3.28747e-06, -2350, 0) normal (-1, -1.39892e-09, 0)
+ (3D Sector Magnetostatic);
+  zini= -1.1500000000000000e+02 m; zfinal= 1.1500000000000000e+02 mm;
+  phiini= -3.9269908152385868e-01 rad; phifinal= 3.9269908152385868e-01 rad;
+  rini= 2.0999999800685810e+03 m; rfinal= 2.6000000050515096e+03 mm;
+
 OPAL> * Added TRIPLET to Ring
 OPAL> * Start position (3.28747e-06, -2350, 0) normal (-1, -1.39892e-09, 0), phi -1.5708
 OPAL> * End position (-1661.7, -1661.7, 0) normal (-0.707107, 0.707107, 0)
+ (3D Sector Magnetostatic);
+  zini= -1.1500000000000000e+02 m; zfinal= 1.1500000000000000e+02 mm;
+  phiini= -3.9269908152385868e-01 rad; phifinal= 3.9269908152385868e-01 rad;
+  rini= 2.0999999800685810e+03 m; rfinal= 2.6000000050515096e+03 mm;
+
 OPAL> * Added TRIPLET to Ring
 OPAL> * Start position (-1661.7, -1661.7, 0) normal (-0.707107, 0.707107, 0), phi -0.785398
 OPAL> * End position (-2350, 2.50875e-06, 0) normal (-2.09839e-09, 1, 0)
+ (3D Sector Magnetostatic);
+  zini= -1.1500000000000000e+02 m; zfinal= 1.1500000000000000e+02 mm;
+  phiini= -3.9269908152385868e-01 rad; phifinal= 3.9269908152385868e-01 rad;
+  rini= 2.0999999800685810e+03 m; rfinal= 2.6000000050515096e+03 mm;
+
 OPAL> * Added TRIPLET to Ring
 OPAL> * Start position (-2350, 2.50875e-06, 0) normal (-2.09839e-09, 1, 0), phi -2.09839e-09
 OPAL> * End position (-1661.7, 1661.7, 0) normal (0.707107, 0.707107, 0)
+ (3D Sector Magnetostatic);
+  zini= -1.1500000000000000e+02 m; zfinal= 1.1500000000000000e+02 mm;
+  phiini= -3.9269908152385868e-01 rad; phifinal= 3.9269908152385868e-01 rad;
+  rini= 2.0999999800685810e+03 m; rfinal= 2.6000000050515096e+03 mm;
+
 OPAL> * Added TRIPLET to Ring
 OPAL> * Start position (-1661.7, 1661.7, 0) normal (0.707107, 0.707107, 0), phi 0.785398
 OPAL> * End position (-6.57494e-06, 2350, 0) normal (1, 2.79785e-09, 0)
@@ -426,27 +528,29 @@ OPAL> * Finalizing i.e. write data and close files :
 Ippl> Save PROBE1.loss
 OPAL> * Finalize probe PROBE1
 OPAL> * ----------------------------------------------- *
+   54 ENDTRACK;
+   55 STOP;
 OPAL> * End of input stream "OpalRingTest.in".
 Timings> -----------------------------------------------------------------
 Timings>      Timing results for 1 nodes:
 Timings> -----------------------------------------------------------------
-Timings> mainTimer........... Wall tot =    76.6744, CPU tot =      76.41
+Timings> mainTimer........... Wall tot =      77.28, CPU tot =      77.09
 Timings> 
-Timings> Binaryrepart........ Wall max =    9.3e-05, CPU max =          0
-Timings>                      Wall avg =    9.3e-05, CPU avg =          0
-Timings>                      Wall min =    9.3e-05, CPU min =          0
+Timings> Binaryrepart........ Wall max =    7.4e-05, CPU max =          0
+Timings>                      Wall avg =    7.4e-05, CPU avg =          0
+Timings>                      Wall min =    7.4e-05, CPU min =          0
 Timings> 
-Timings> Boundingbox......... Wall max =    4.1e-05, CPU max =          0
-Timings>                      Wall avg =    4.1e-05, CPU avg =          0
-Timings>                      Wall min =    4.1e-05, CPU min =          0
+Timings> Boundingbox......... Wall max =    4.5e-05, CPU max =          0
+Timings>                      Wall avg =    4.5e-05, CPU avg =          0
+Timings>                      Wall min =    4.5e-05, CPU min =          0
 Timings> 
 Timings> Create Distr........ Wall max =          0, CPU max =          0
 Timings>                      Wall avg =          0, CPU avg =          0
 Timings>                      Wall min =          0, CPU min =          0
 Timings> 
-Timings> Dump................ Wall max =    7.60039, CPU max =       7.59
-Timings>                      Wall avg =    7.60039, CPU avg =       7.59
-Timings>                      Wall min =    7.60039, CPU min =       7.59
+Timings> Dump................ Wall max =    7.52689, CPU max =       7.64
+Timings>                      Wall avg =    7.52689, CPU avg =       7.64
+Timings>                      Wall min =    7.52689, CPU min =       7.64
 Timings> 
 Timings> Fast inside test.... Wall max =          0, CPU max =          0
 Timings>                      Wall avg =          0, CPU avg =          0
@@ -456,9 +560,9 @@ Timings> Frametransform...... Wall max =          0, CPU max =          0
 Timings>                      Wall avg =          0, CPU avg =          0
 Timings>                      Wall min =          0, CPU min =          0
 Timings> 
-Timings> H5PartTimer......... Wall max =   0.011249, CPU max =       0.01
-Timings>                      Wall avg =   0.011249, CPU avg =       0.01
-Timings>                      Wall min =   0.011249, CPU min =       0.01
+Timings> H5PartTimer......... Wall max =   0.010079, CPU max =       0.02
+Timings>                      Wall avg =   0.010079, CPU avg =       0.02
+Timings>                      Wall min =   0.010079, CPU min =       0.02
 Timings> 
 Timings> Histogram........... Wall max =          0, CPU max =          0
 Timings>                      Wall avg =          0, CPU avg =          0
@@ -472,9 +576,9 @@ Timings> Inside test......... Wall max =          0, CPU max =          0
 Timings>                      Wall avg =          0, CPU avg =          0
 Timings>                      Wall min =          0, CPU min =          0
 Timings> 
-Timings> Integration......... Wall max =    60.5966, CPU max =      60.35
-Timings>                      Wall avg =    60.5966, CPU avg =      60.35
-Timings>                      Wall min =    60.5966, CPU min =      60.35
+Timings> Integration......... Wall max =    61.0892, CPU max =      60.51
+Timings>                      Wall avg =    61.0892, CPU avg =      60.51
+Timings>                      Wall min =    61.0892, CPU min =      60.51
 Timings> 
 Timings> Load Distr.......... Wall max =          0, CPU max =          0
 Timings>                      Wall avg =          0, CPU avg =          0
@@ -500,12 +604,12 @@ Timings> SF: Potential....... Wall max =          0, CPU max =          0
 Timings>                      Wall avg =          0, CPU avg =          0
 Timings>                      Wall min =          0, CPU min =          0
 Timings> 
-Timings> Statistics.......... Wall max =    3.7e-05, CPU max =          0
-Timings>                      Wall avg =    3.7e-05, CPU avg =          0
-Timings>                      Wall min =    3.7e-05, CPU min =          0
+Timings> Statistics.......... Wall max =    4.5e-05, CPU max =          0
+Timings>                      Wall avg =    4.5e-05, CPU avg =          0
+Timings>                      Wall min =    4.5e-05, CPU min =          0
 Timings> 
-Timings> StatMarkerTimer..... Wall max =    4.17202, CPU max =       4.35
-Timings>                      Wall avg =    4.17202, CPU avg =       4.35
-Timings>                      Wall min =    4.17202, CPU min =       4.35
+Timings> StatMarkerTimer..... Wall max =     4.1611, CPU max =       4.16
+Timings>                      Wall avg =     4.1611, CPU avg =       4.16
+Timings>                      Wall min =     4.1611, CPU min =       4.16
 Timings> 
 Timings> -----------------------------------------------------------------
