@@ -1,0 +1,79 @@
+Option, ECHO=FALSE;
+Option, PSDUMPFREQ=100000;
+Option, SPTDUMPFREQ = 10;
+Option, PSDUMPEACHTURN=false;
+Option, PSDUMPLOCALFRAME=FALSE;
+Option, REPARTFREQ=20;
+Option, ECHO=FALSE;
+Option, STATDUMPFREQ=1;
+Option, CZERO=FALSE;
+Option, TELL=TRUE;
+Option, VERSION=10900;
+
+Title,string="OPAL-cycl: the first 10 turns acceleration in PSI 590MeV Ring using 1 particle";
+
+REAL Edes=.072;
+REAL gamma=(Edes+PMASS)/PMASS;
+REAL beta=sqrt(1-(1/gamma^2));
+REAL gambet=gamma*beta;
+REAL P0 = gamma*beta*PMASS;
+REAL brho = (PMASS*1.0e9*gambet) / CLIGHT;
+
+//value,{gamma,brho,Edes,beta,gambet};
+
+REAL phi01=139.4281;
+REAL phi02=phi01+180.0;
+REAL phi04=phi01;
+REAL phi05=phi01+180.0;
+REAL phi03=phi01+10.0;
+
+REAL volt1st=0.9;
+REAL volt3rd=0.9*4.0*0.112;
+
+REAL turns = 10;
+REAL nstep=250;
+
+REAL frequency=50.650;
+REAL frequency3=3.0*frequency;
+
+ring: Cyclotron, TYPE="RING", CYHARMON=6, PHIINIT=0.0,
+	PRINIT=-0.000174, RINIT=2130.0, SYMMETRY=8.0, RFFREQ=frequency,
+	FMAPFN="s03av.nar";
+
+rf0: RFCavity, VOLT=volt1st, FMAPFN="Cav1.dat", TYPE="SINGLEGAP",
+	FREQ=frequency, RMIN = 1900.0, RMAX = 4500.0, ANGLE=35.0,  PDIS = 416.0,
+	GAPWIDTH = 220.0, PHI0=phi01;
+
+rf1: RFCavity, VOLT=volt1st, FMAPFN="Cav1.dat", TYPE="SINGLEGAP",
+	FREQ=frequency, RMIN = 1900.0, RMAX = 4500.0, ANGLE=125.0, PDIS = 416.0,
+	GAPWIDTH = 220.0, PHI0=phi02;
+
+rf2: RFCavity, VOLT=volt3rd, FMAPFN="Cav3.dat", TYPE="SINGLEGAP",
+	FREQ=frequency3,RMIN = 1900.0, RMAX = 4500.0, ANGLE=170.0, PDIS = 452.0,
+	GAPWIDTH = 250.0, PHI0=phi03;
+
+rf3: RFCavity, VOLT=volt1st, FMAPFN="Cav1.dat", TYPE="SINGLEGAP",
+	FREQ=frequency, RMIN = 1900.0, RMAX = 4500.0, ANGLE=215.0, PDIS = 416.0,
+	GAPWIDTH = 220.0, PHI0=phi04;
+
+rf4: RFCavity, VOLT=volt1st, FMAPFN="Cav1.dat", TYPE="SINGLEGAP",
+	FREQ=frequency, RMIN = 1900.0, RMAX = 4500.0, ANGLE=305.0, PDIS = 416.0,
+	GAPWIDTH = 220.0, PHI0=phi05;
+
+l1:   Line = (ring,rf0,rf1,rf2,rf3,rf4);
+
+Dist1:DISTRIBUTION, TYPE=FROMFILE, FNAME = "single-particle.dat";
+
+Fs1:FIELDSOLVER, FSTYPE=NONE, MX=32, MY=32, MT=16,
+	PARFFTX=true, PARFFTY=true, PARFFTT=true,
+	BCFFTX=open, BCFFTY=open, BCFFTT=open, BBOXINCR=2;
+
+beam1: BEAM, PARTICLE=PROTON, pc=P0, SPACECHARGE=false, NPART=1, BCURRENT=1.0E-3, CHARGE=1.0, BFREQ= frequency;
+
+Select, Line=l1;
+
+TRACK,LINE=l1, BEAM=beam1, MAXSTEPS=nstep*turns, STEPSPERTURN=nstep,TIMEINTEGRATOR="RK-4";
+ run, method = "CYCLOTRON-T", beam=beam1, fieldsolver=Fs1, distribution=Dist1;
+endtrack;
+
+Stop;
