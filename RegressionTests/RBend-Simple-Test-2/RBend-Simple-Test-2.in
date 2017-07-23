@@ -43,7 +43,7 @@ value, {RF_FREQUENCY,
 REAL TIME_STEP_1 = 2.0 * 1.0e-12;   // Time step (s). We only need one for this simulation.
 
 value, {TIME_STEP_1};
-	
+
 //******************************************************************************************************************
 //******************************************************************************************************************
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -85,7 +85,6 @@ value, {FS_SC1_X_BINS,
 //===============================================================
 REAL global_shift = 1.0;
 
-
 // Bend.
 //
 // We have one bend in the system.
@@ -115,12 +114,10 @@ REAL bend_length = 0.5;
 // Bend gap (m).
 REAL bend_gap = 0.02;
 
-
 value, {drift_before_bend,
         bend_angle,
 	bend_rotation,
 	bend_e1,
-	bend_e2,
 	bend_energy,
 	bend_length,
 	bend_gap};
@@ -248,9 +245,9 @@ Option, STATDUMPFREQ = STAT_DUMP_FREQUENCY;
 //\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 // Here we define beam that will be transported.
 //\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-beam_1: BEAM, PARTICLE = ELECTRON, 
-	      pc = P0, 
-	      NPART = NUMBER_OF_PARTICLES, 
+beam_1: BEAM, PARTICLE = ELECTRON,
+	      pc = P0,
+	      NPART = NUMBER_OF_PARTICLES,
 	      BFREQ = RF_FREQUENCY,
       	      BCURRENT = BEAM_BUNCH_CHARGE * RF_FREQUENCY,
 	      CHARGE = -1;
@@ -260,15 +257,15 @@ beam_1: BEAM, PARTICLE = ELECTRON,
 // Run simulation.
 //\\\\\\\\\\\\\\\\
 
-TRACK, LINE = Beamline, 
-       BEAM = beam_1, 
-       MAXSTEPS = 1000000, 
+TRACK, LINE = Beamline,
+       BEAM = beam_1,
+       MAXSTEPS = 1000000,
        DT = TIME_STEP_1,
        ZSTOP = bend_end;
 
-RUN, METHOD = "PARALLEL-T", 
-     BEAM = beam_1, 
-     FIELDSOLVER = FS_SC1, 
+RUN, METHOD = "PARALLEL-T",
+     BEAM = beam_1,
+     FIELDSOLVER = FS_SC1,
      DISTRIBUTION = Initial_Distribution;
 
 ENDTRACK;
