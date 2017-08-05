@@ -11,7 +11,7 @@ REAL gambet = gamma*beta;
 REAL P0 = gamma*beta*PMASS;
 REAL brho = (PMASS*1.0e9*gambet) / CLIGHT;
 REAL NStep = 16.144190/(beta*CLIGHT*DT);
-REAL rf = 50.6328e6;  //need to be confirmed
+REAL f = 50.6328e6;  //need to be confirmed
 REAL Qtot = 3562*1.6e-19;
 
 VALUE,{gamma,brho,Edes,beta,gambet};
@@ -25,7 +25,7 @@ CALL, "InDistr_LG2_100.opal";
 FS1:FIELDSOLVER, FSTYPE=NONE, MX=64, MY=64, MT=64, PARFFTX=true, PARFFTY=true, PARFFTT=true, BCFFTX=open, BCFFTY=open, BCFFTT=open, BBOXINCR=1, GREENSF=STANDARD;
 
 
-BEAM_4: BEAM, PARTICLE=PROTON, PC=P0, NPART=3520, BCURRENT=Qtot*f, BFREQ = rf,  CHARGE=1;
+BEAM_4: BEAM, PARTICLE=PROTON, PC=P0, NPART=3520, BCURRENT=Qtot*f, BFREQ = f,  CHARGE=1;
 
 
 SELECT, LINE=BEAMLINE_4;
