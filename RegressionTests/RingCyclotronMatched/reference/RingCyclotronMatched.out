@@ -1,9 +1,9 @@
 Ippl> CommMPI: Parent process waiting for children ...
+Ippl> CommMPI: Started job 1 on host `fast-dude.local'.
+Ippl> CommMPI: Started job 2 on host `fast-dude.local'.
+Ippl> CommMPI: Started job 3 on host `fast-dude.local'.
 Ippl> CommMPI: Child 2 ready.
 Ippl> CommMPI: Child 1 ready.
-Ippl> CommMPI: Started job 1 on host `wifibridge-1.home'.
-Ippl> CommMPI: Started job 2 on host `wifibridge-1.home'.
-Ippl> CommMPI: Started job 3 on host `wifibridge-1.home'.
 Ippl> CommMPI: Child 3 ready.
 Ippl> CommMPI: Initialization complete.
 {0}>                ____  _____       ___ 
@@ -13,14 +13,14 @@ Ippl> CommMPI: Initialization complete.
 {0}>              | |__| | |  / ____ \| |____
 {0}>               \____/|_| /_/    \_\______|
 OPAL{0}> 
-OPAL{0}> This is OPAL (Object Oriented Parallel Accelerator Library) Version 1.5.1
+OPAL{0}> This is OPAL (Object Oriented Parallel Accelerator Library) Version 1.6.0
 OPAL{0}> 
 OPAL{0}>                 (c) PSI, http://amas.web.psi.ch
 OPAL{0}> 
 OPAL{0}> Please send cookies, goodies or other motivations (wine and beer ... ) 
 OPAL{0}> to the OPAL developers opal@lists.psi.ch
 OPAL{0}> 
-OPAL{0}> Time: 09:16:49 date: 21/03/2017
+OPAL{0}> Time: 15:24:24 date: 21/07/2017
 OPAL{0}> 
 OPAL{0}> Couldn't find startup file "/Users/adelmann/init.opal".
 OPAL{0}> Note: this is not mandatory for an OPAL simulation!
@@ -28,15 +28,15 @@ OPAL{0}>
 OPAL{0}> * Reading input stream "RingCyclotronMatched.in".
 OPAL{0}> 
 OPAL{0}> Current settings of options:
-OPAL{0}> OPTION,ECHO=FALSE,INFO=TRUE,TRACE=FALSE,VERIFY=FALSE,WARN=TRUE,
-OPAL{0}>   SEED=1.23457e+08,TELL=TRUE,PSDUMPFREQ=1,STATDUMPFREQ=10,
-OPAL{0}>   PSDUMPEACHTURN=FALSE,PSDUMPLOCALFRAME=FALSE,SPTDUMPFREQ=1,
+OPAL{0}> OPTION,ECHO=FALSE,INFO=TRUE,TRACE=FALSE,WARN=TRUE,SEED=1.23457e+08,
+OPAL{0}>   TELL=TRUE,PSDUMPFREQ=1,STATDUMPFREQ=10,PSDUMPEACHTURN=FALSE,
+OPAL{0}>   PSDUMPLOCALFRAME=FALSE,PSDUMPFRAME="GLOBAL",SPTDUMPFREQ=1,
 OPAL{0}>   REPARTFREQ=20,REBINFREQ=100,SCSOLVEFREQ=1,MTSSUBSTEPS=1,
 OPAL{0}>   REMOTEPARTDEL=0,SCAN=FALSE,RHODUMP=FALSE,EBDUMP=FALSE,
 OPAL{0}>   CSRDUMP=FALSE,AUTOPHASE=0,PPDEBUG=FALSE,SURFDUMPFREQ=-1,
 OPAL{0}>   NUMBLOCKS=0,RECYCLEBLOCKS=0,NLHS=1,CZERO=FALSE,RNGTYPE="RANDOM",
-OPAL{0}>   SCHOTTKYCORR=FALSE,SCHOTTKYRENO=-1,ENABLEHDF5=TRUE,ASCIIDUMP=FALSE,
-OPAL{0}>   BOUNDPDESTROYFQ=10,BEAMHALOBOUNDARY=0,CLOTUNEONLY=FALSE;
+OPAL{0}>   ENABLEHDF5=TRUE,ASCIIDUMP=FALSE,BOUNDPDESTROYFQ=10,
+OPAL{0}>   BEAMHALOBOUNDARY=0,CLOTUNEONLY=FALSE,VERSION=10000;
 OPAL{0}> 
 OPAL{0}[3]> 
 OPAL{0}[3]> 8 elements selected.
@@ -107,6 +107,8 @@ OPAL{0}> * Phase space dump frequency = 1
 OPAL{0}> * Statistics dump frequency  = 10 w.r.t. the time step.
 OPAL{0}> * ********************************************************************************** 
 OPAL{0}> * ************* D I S T R I B U T I O N ********************************************
+OPAL{0}> * 
+OPAL{0}> * Number of particles: 25000
 OPAL{0}> * 
 OPAL{0}> * Distribution type: MATCHEDGAUSS
 OPAL{0}> * SIGMAX   = 0.001969 [m]
@@ -308,15 +310,15 @@ OPAL{0}> * *********************** Bunch information in local frame: ***********
 OPAL{0}> * ************** B U N C H ********************************************************* 
 OPAL{0}> * NP              =   100000
 OPAL{0}> * Qtot            =    4.34353e-02 [nC]       Qi    =  4.34353e-07 [nC]
-OPAL{0}> * Ekin            =    5.80000e+02 [MeV]      dEkin =  3.22516e-02 [MeV]
+OPAL{0}> * Ekin            =    5.80000e+02 [MeV]      dEkin =  3.22518e-02 [MeV]
 OPAL{0}> * rmax            = (  6.11085e-03 ,  7.83589e-03 ,  4.78022e-03 ) [m]
 OPAL{0}> * rmin            = ( -6.12332e-03 , -7.82025e-03 , -4.79330e-03 ) [m]
-OPAL{0}> * rms beam size   = (  1.90468e-03 ,  2.43167e-03 ,  1.50120e-03 ) [m]
-OPAL{0}> * rms momenta     = (  4.00327e-05 ,  4.02311e-03 ,  4.37216e-05 ) [beta gamma]
-OPAL{0}> * mean position   = ( -5.96221e-11 , -2.63922e-11 ,  6.64253e-13 ) [m]
-OPAL{0}> * mean momenta    = ( -1.88025e-13 ,  1.27216e+00 , -6.36552e-10 ) [beta gamma]
-OPAL{0}> * rms emittance   = (  5.54104e-08 ,  7.68972e-06 ,  5.11391e-08 ) (not normalized)
-OPAL{0}> * rms correlation = ( -3.81211e-01 ,  6.58568e-03 ,  1.32314e-01 )
+OPAL{0}> * rms beam size   = (  1.90469e-03 ,  2.43169e-03 ,  1.50121e-03 ) [m]
+OPAL{0}> * rms momenta     = (  4.00329e-05 ,  3.49349e-05 ,  4.37219e-05 ) [beta gamma]
+OPAL{0}> * mean position   = ( -5.96227e-11 , -2.63925e-11 ,  6.64260e-13 ) [m]
+OPAL{0}> * mean momenta    = ( -1.88027e-13 ,  1.27218e+00 , -6.36558e-10 ) [beta gamma]
+OPAL{0}> * rms emittance   = (  5.54101e-08 ,  4.35220e-08 ,  5.11388e-08 ) (not normalized)
+OPAL{0}> * rms correlation = ( -3.81211e-01 ,  7.58413e-01 ,  1.32314e-01 )
 OPAL{0}> * hr              = (  3.94651e-04 ,  5.05037e-04 ,  6.38235e-04 ) [m]
 OPAL{0}> * dh              =    2.00000e+00 [%]
 OPAL{0}> * t               =    0.00000e+00 [s]        dT    =          inf [s]
@@ -326,23 +328,23 @@ OPAL{0}>
 OPAL{0}> 
 OPAL{0}> * Phase space dump 0 (global frame) at integration step 0
 OPAL{0}> * T = 0 ns, Live Particles: 100000
-OPAL{0}> * E = 580 MeV, beta * gamma = 1.2722
-OPAL{0}> * Bunch position: R =  2130 mm, Theta = -7.1016e-05 Deg, Z = 6.6557e-05 mm
-OPAL{0}> * Local Azimuth = 0.0078374 Deg, Local Elevation = -0.0028669 Deg
+OPAL{0}> * E = 580 MeV, beta * gamma = 1.2721
+OPAL{0}> * Bunch position: R =  2129 mm, Theta = -0.053795 Deg, Z = 0.93974 mm
+OPAL{0}> * Local Azimuth = 0.007213 Deg, Local Elevation = -0.0017847 Deg
 OPAL{0}> 
 OPAL{0}> * *********************** Bunch information in global frame: ***********************
 OPAL{0}> * ************** B U N C H ********************************************************* 
 OPAL{0}> * NP              =   100000
 OPAL{0}> * Qtot            =    4.34353e-02 [nC]       Qi    =  4.34353e-07 [nC]
-OPAL{0}> * Ekin            =    5.80000e+02 [MeV]      dEkin =  3.22520e-02 [MeV]
+OPAL{0}> * Ekin            =    5.80000e+02 [MeV]      dEkin =  3.22518e-02 [MeV]
 OPAL{0}> * rmax            = (  6.11085e-03 ,  7.83589e-03 ,  4.78022e-03 ) [m]
 OPAL{0}> * rmin            = ( -6.12332e-03 , -7.82025e-03 , -4.79330e-03 ) [m]
-OPAL{0}> * rms beam size   = (  6.99972e-03 ,  2.43167e-03 ,  1.50120e-03 ) [m]
-OPAL{0}> * rms momenta     = (  4.00365e-05 ,  4.02311e-03 ,  4.37221e-05 ) [beta gamma]
-OPAL{0}> * mean position   = (  2.12997e+00 , -2.64003e-06 ,  6.65574e-08 ) [m]
-OPAL{0}> * mean momenta    = ( -1.74017e-04 ,  1.27216e+00 , -6.36552e-05 ) [beta gamma]
-OPAL{0}> * rms emittance   = (  2.18776e-07 ,  7.68971e-06 ,  5.11396e-08 ) (not normalized)
-OPAL{0}> * rms correlation = ( -1.16947e-01 ,  6.58225e-03 ,  1.32313e-01 )
+OPAL{0}> * rms beam size   = (  1.90469e-03 ,  2.43169e-03 ,  1.50121e-03 ) [m]
+OPAL{0}> * rms momenta     = (  4.00329e-05 ,  3.49349e-05 ,  4.37219e-05 ) [beta gamma]
+OPAL{0}> * mean position   = (  2.12999e+00 , -2.64006e-06 ,  6.65580e-08 ) [m]
+OPAL{0}> * mean momenta    = ( -1.74019e-04 ,  1.27218e+00 , -6.36558e-05 ) [beta gamma]
+OPAL{0}> * rms emittance   = (  5.54101e-08 ,  4.35221e-08 ,  5.11388e-08 ) (not normalized)
+OPAL{0}> * rms correlation = ( -3.81210e-01 ,  7.58412e-01 ,  1.32314e-01 )
 OPAL{0}> * hr              = (  3.94651e-04 ,  5.05037e-04 ,  6.38235e-04 ) [m]
 OPAL{0}> * dh              =    2.00000e+00 [%]
 OPAL{0}> * t               =    0.00000e+00 [s]        dT    =          inf [s]
@@ -366,15 +368,15 @@ OPAL{0}> * *********************** Bunch information in global frame: **********
 OPAL{0}> * ************** B U N C H ********************************************************* 
 OPAL{0}> * NP              =   100000
 OPAL{0}> * Qtot            =    4.34353e-02 [nC]       Qi    =  4.34353e-07 [nC]
-OPAL{0}> * Ekin            =    5.80000e+02 [MeV]      dEkin =  3.22520e-02 [MeV]
+OPAL{0}> * Ekin            =    5.80000e+02 [MeV]      dEkin =  3.22518e-02 [MeV]
 OPAL{0}> * rmax            = (  6.11085e-03 ,  7.83589e-03 ,  4.78022e-03 ) [m]
 OPAL{0}> * rmin            = ( -6.12332e-03 , -7.82025e-03 , -4.79330e-03 ) [m]
-OPAL{0}> * rms beam size   = (  6.99972e-03 ,  2.43167e-03 ,  1.50120e-03 ) [m]
-OPAL{0}> * rms momenta     = (  4.00365e-05 ,  4.02311e-03 ,  4.37221e-05 ) [beta gamma]
-OPAL{0}> * mean position   = (  2.12997e+00 , -2.64003e-06 ,  6.65574e-08 ) [m]
-OPAL{0}> * mean momenta    = ( -1.74017e-04 ,  1.27216e+00 , -6.36552e-05 ) [beta gamma]
-OPAL{0}> * rms emittance   = (  2.18776e-07 ,  7.68971e-06 ,  5.11396e-08 ) (not normalized)
-OPAL{0}> * rms correlation = ( -1.16947e-01 ,  6.58225e-03 ,  1.32313e-01 )
+OPAL{0}> * rms beam size   = (  1.90469e-03 ,  2.43169e-03 ,  1.50121e-03 ) [m]
+OPAL{0}> * rms momenta     = (  4.00329e-05 ,  3.49349e-05 ,  4.37219e-05 ) [beta gamma]
+OPAL{0}> * mean position   = (  2.12999e+00 , -2.64006e-06 ,  6.65580e-08 ) [m]
+OPAL{0}> * mean momenta    = ( -1.74019e-04 ,  1.27218e+00 , -6.36558e-05 ) [beta gamma]
+OPAL{0}> * rms emittance   = (  5.54101e-08 ,  4.35221e-08 ,  5.11388e-08 ) (not normalized)
+OPAL{0}> * rms correlation = ( -3.81210e-01 ,  7.58412e-01 ,  1.32314e-01 )
 OPAL{0}> * hr              = (  3.94651e-04 ,  5.05037e-04 ,  6.38235e-04 ) [m]
 OPAL{0}> * dh              =    2.00000e+00 [%]
 OPAL{0}> * t               =    0.00000e+00 [s]        dT    =          inf [s]
@@ -389,15 +391,19 @@ OPAL{0}> * End of input stream "RingCyclotronMatched.in".
 Timings{0}> -----------------------------------------------------------------
 Timings{0}>      Timing results for 4 nodes:
 Timings{0}> -----------------------------------------------------------------
-Timings{0}> mainTimer........... Wall tot =    9.62921, CPU tot =       9.55
+Timings{0}> mainTimer........... Wall tot =    9.55436, CPU tot =        9.5
 Timings{0}> 
-Timings{0}> Binaryrepart........ Wall max =   0.002925, CPU max =       0.01
-Timings{0}>                      Wall avg = 0.00291975, CPU avg =     0.0025
-Timings{0}>                      Wall min =   0.002909, CPU min =          0
+Timings{0}> Binaryrepart........ Wall max =   0.002526, CPU max =       0.01
+Timings{0}>                      Wall avg =   0.002523, CPU avg =     0.0075
+Timings{0}>                      Wall min =   0.002515, CPU min =          0
 Timings{0}> 
-Timings{0}> Boundingbox......... Wall max =   0.079726, CPU max =       0.09
-Timings{0}>                      Wall avg =  0.0795782, CPU avg =      0.085
-Timings{0}>                      Wall min =   0.079406, CPU min =       0.08
+Timings{0}> Boundingbox......... Wall max =    0.07374, CPU max =       0.07
+Timings{0}>                      Wall avg =  0.0729842, CPU avg =       0.07
+Timings{0}>                      Wall min =   0.072216, CPU min =       0.07
+Timings{0}> 
+Timings{0}> Cleanup emission.... Wall max =          0, CPU max =          0
+Timings{0}>                      Wall avg =          0, CPU avg =          0
+Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
 Timings{0}> ComputePotential.... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
@@ -407,9 +413,13 @@ Timings{0}> Create Distr........ Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
 Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
-Timings{0}> Dump................ Wall max =   0.017544, CPU max =       0.01
-Timings{0}>                      Wall avg =  0.0172577, CPU avg =      0.005
-Timings{0}>                      Wall min =   0.017146, CPU min =          0
+Timings{0}> Dump................ Wall max =   0.016686, CPU max =       0.01
+Timings{0}>                      Wall avg =  0.0164467, CPU avg =     0.0025
+Timings{0}>                      Wall min =   0.016308, CPU min =          0
+Timings{0}> 
+Timings{0}> Emit Distr.......... Wall max =          0, CPU max =          0
+Timings{0}>                      Wall avg =          0, CPU avg =          0
+Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
 Timings{0}> Fast inside test.... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
@@ -419,9 +429,9 @@ Timings{0}> Frametransform...... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
 Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
-Timings{0}> H5PartTimer......... Wall max =   0.016332, CPU max =       0.01
-Timings{0}>                      Wall avg =  0.0163177, CPU avg =      0.005
-Timings{0}>                      Wall min =     0.0163, CPU min =          0
+Timings{0}> H5PartTimer......... Wall max =   0.016029, CPU max =          0
+Timings{0}>                      Wall avg =   0.015999, CPU avg =          0
+Timings{0}>                      Wall min =    0.01593, CPU min =          0
 Timings{0}> 
 Timings{0}> Histogram........... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
@@ -503,12 +513,12 @@ Timings{0}> SF: ShIntGreenF4.... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
 Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
-Timings{0}> Statistics.......... Wall max =   0.004869, CPU max =          0
-Timings{0}>                      Wall avg = 0.00467075, CPU avg =          0
-Timings{0}>                      Wall min =    0.00426, CPU min =          0
+Timings{0}> Statistics.......... Wall max =   0.004228, CPU max =       0.01
+Timings{0}>                      Wall avg =  0.0040675, CPU avg =     0.0025
+Timings{0}>                      Wall min =   0.003759, CPU min =          0
 Timings{0}> 
-Timings{0}> StatMarkerTimer..... Wall max =   0.000526, CPU max =          0
-Timings{0}>                      Wall avg =  0.0001805, CPU avg =          0
-Timings{0}>                      Wall min =    5.3e-05, CPU min =          0
+Timings{0}> StatMarkerTimer..... Wall max =    0.00038, CPU max =          0
+Timings{0}>                      Wall avg =   0.000188, CPU avg =          0
+Timings{0}>                      Wall min =   0.000109, CPU min =          0
 Timings{0}> 
 Timings{0}> -----------------------------------------------------------------
