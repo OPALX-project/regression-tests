@@ -1,10 +1,8 @@
+Ippl> CommMPI: Started job 3 on host `merlinl01'.
 Ippl> CommMPI: Parent process waiting for children ...
 Ippl> CommMPI: Child 2 ready.
-Ippl> CommMPI: Started job 1 on host `wifibridge-1.home'.
-Ippl> CommMPI: Started job 2 on host `wifibridge-1.home'.
-Ippl> CommMPI: Started job 3 on host `wifibridge-1.home'.
-Ippl> CommMPI: Child 1 ready.
 Ippl> CommMPI: Child 3 ready.
+Ippl> CommMPI: Child 1 ready.
 Ippl> CommMPI: Initialization complete.
 {0}>                ____  _____       ___ 
 {0}>               / __ \|  __ \ /\   | | 
@@ -13,16 +11,18 @@ Ippl> CommMPI: Initialization complete.
 {0}>              | |__| | |  / ____ \| |____
 {0}>               \____/|_| /_/    \_\______|
 OPAL{0}> 
-OPAL{0}> This is OPAL (Object Oriented Parallel Accelerator Library) Version 1.5.1
+OPAL{0}> This is OPAL (Object Oriented Parallel Accelerator Library) Version 1.6.0
 OPAL{0}> 
 OPAL{0}>                 (c) PSI, http://amas.web.psi.ch
 OPAL{0}> 
 OPAL{0}> Please send cookies, goodies or other motivations (wine and beer ... ) 
 OPAL{0}> to the OPAL developers opal@lists.psi.ch
 OPAL{0}> 
-OPAL{0}> Time: 07:18:02 date: 22/03/2017
+OPAL{0}> Time: 15:17:42 date: 29/08/2017
 OPAL{0}> 
-OPAL{0}> Couldn't find startup file "/Users/adelmann/init.opal".
+Ippl> CommMPI: Started job 1 on host `merlinl01'.
+Ippl> CommMPI: Started job 2 on host `merlinl01'.
+OPAL{0}> Couldn't find startup file "/gpfs/home/adelmann/init.opal".
 OPAL{0}> Note: this is not mandatory for an OPAL simulation!
 OPAL{0}> 
 OPAL{0}> * Reading input stream "AWAGun-1.in".
@@ -43,7 +43,7 @@ Warning{0}> reduce: there was nothing to reduce, since the masks were all false.
 Warning{0}> Could not set total charge in PartBunch::setCharge based on getTotalNum
 OPAL{0}> * ************* D I S T R I B U T I O N ********************************************
 OPAL{0}> * 
-OPAL{0}> * Number of particles: 10000
+OPAL{0}> * Number of particles: 2500
 OPAL{0}> * 
 OPAL{0}> * Distribution type: FLATTOP
 OPAL{0}> * 
@@ -99,15 +99,7 @@ OPAL{0}>
 OPAL{0}> 
 OPAL{0}> 
 OPAL{0}> 
-OPAL{0}> start autophasing at 07:18:02
-OPAL{0}> 
-OPAL{0}> 
-OPAL{0}> --- BEGIN FIELD LIST ---------------------------------------------------------------
-OPAL{0}> 
-OPAL{0}> --- 0 m -- 0.292707 m -- -----------------------------------------------------------
-OPAL{0}> GUN
-OPAL{0}> 
-OPAL{0}> --- END FIELD LIST -----------------------------------------------------------------
+OPAL{0}> start autophasing at 15:17:42
 OPAL{0}> 
 OPAL{0}> 
 OPAL{0}> -------------------------------------------------------------------------------------
@@ -116,11 +108,12 @@ OPAL{0}> -----------------------------------------------------------------------
 OPAL{0}> 
 OPAL{0}> 
 OPAL{0}> 
-OPAL{0}> finished autophasing 07:18:02
+OPAL{0}> finished autophasing 15:17:42
 OPAL{0}> 
 OPAL{0}> 
+Warning{0}> reduce: there was nothing to reduce, since the masks were all false.
 Ippl{0}> Saved phases in the h5 file: Cav-1-name -> GUN --- Cav-1-value -> 2.4522
-OPAL{0}> Track start at: 07:18:02, t= 0; zstop at: 0.4 [m]
+OPAL{0}> Track start at: 15:17:42, t= 0; zstop at: 0.4 [m]
 ParallelTTracker {0}> Change dT from 1e-13 [s] to 4.04835e-13 [s] during emission 
 OPAL{0}> Executing ParallelTTracker, initial DT 1e-13 [s];
 OPAL{0}> max integration steps 1900000, next step= 0
@@ -144,127 +137,126 @@ Warning{0}> reduce: there was nothing to reduce, since the masks were all false.
 Warning{0}> reduce: there was nothing to reduce, since the masks were all false.
 Warning{0}> reduce: there was nothing to reduce, since the masks were all false.
 Warning{0}> reduce: there was nothing to reduce, since the masks were all false.
-Warning{0}> reduce: there was nothing to reduce, since the masks were all false.
-ParallelTTracker {0}> 07:18:12 Step    999 at   23.546 [mm] t=  1.283e-10 [s] E=    1.335 [MeV] 
+ParallelTTracker {0}> 15:17:59 Step    999 at   24.104 [mm] t=  1.283e-10 [s] E=    1.365 [MeV] 
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition because of repartFreq_m
 Ippl{0}> *****************************************************************
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition done
 Ippl{0}> *****************************************************************
-ParallelTTracker {0}> 07:18:16 Step   1999 at   52.850 [mm] t=  2.283e-10 [s] E=    2.467 [MeV] 
+ParallelTTracker {0}> 15:18:05 Step   1999 at   53.430 [mm] t=  2.283e-10 [s] E=    2.486 [MeV] 
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition because of repartFreq_m
 Ippl{0}> *****************************************************************
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition done
 Ippl{0}> *****************************************************************
-ParallelTTracker {0}> 07:18:21 Step   2999 at   82.397 [mm] t=  3.283e-10 [s] E=    2.581 [MeV] 
+ParallelTTracker {0}> 15:18:12 Step   2999 at   82.988 [mm] t=  3.283e-10 [s] E=    2.592 [MeV] 
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition because of repartFreq_m
 Ippl{0}> *****************************************************************
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition done
 Ippl{0}> *****************************************************************
-ParallelTTracker {0}> 07:18:25 Step   3999 at  112.037 [mm] t=  4.283e-10 [s] E=    3.537 [MeV] 
+ParallelTTracker {0}> 15:18:18 Step   3999 at  112.635 [mm] t=  4.283e-10 [s] E=    3.555 [MeV] 
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition because of repartFreq_m
 Ippl{0}> *****************************************************************
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition done
 Ippl{0}> *****************************************************************
-ParallelTTracker {0}> 07:18:31 Step   4999 at  141.846 [mm] t=  5.283e-10 [s] E=    5.242 [MeV] 
+ParallelTTracker {0}> 15:18:24 Step   4999 at  142.446 [mm] t=  5.283e-10 [s] E=    5.261 [MeV] 
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition because of repartFreq_m
 Ippl{0}> *****************************************************************
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition done
 Ippl{0}> *****************************************************************
-ParallelTTracker {0}> 07:18:36 Step   5999 at  171.728 [mm] t=  6.283e-10 [s] E=    6.235 [MeV] 
+ParallelTTracker {0}> 15:18:30 Step   5999 at  172.328 [mm] t=  6.283e-10 [s] E=    6.240 [MeV] 
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition because of repartFreq_m
 Ippl{0}> *****************************************************************
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition done
 Ippl{0}> *****************************************************************
-ParallelTTracker {0}> 07:18:40 Step   6999 at  201.620 [mm] t=  7.283e-10 [s] E=    6.286 [MeV] 
+ParallelTTracker {0}> 15:18:36 Step   6999 at  202.223 [mm] t=  7.283e-10 [s] E=    6.290 [MeV] 
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition because of repartFreq_m
 Ippl{0}> *****************************************************************
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition done
 Ippl{0}> *****************************************************************
-ParallelTTracker {0}> 07:18:45 Step   7999 at  231.490 [mm] t=  8.283e-10 [s] E=    6.273 [MeV] 
+ParallelTTracker {0}> 15:18:42 Step   7999 at  232.116 [mm] t=  8.283e-10 [s] E=    6.277 [MeV] 
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition because of repartFreq_m
 Ippl{0}> *****************************************************************
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition done
 Ippl{0}> *****************************************************************
-ParallelTTracker {0}> 07:18:49 Step   8999 at  261.329 [mm] t=  9.283e-10 [s] E=    6.271 [MeV] 
+ParallelTTracker {0}> 15:18:48 Step   8999 at  262.008 [mm] t=  9.283e-10 [s] E=    6.276 [MeV] 
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition because of repartFreq_m
 Ippl{0}> *****************************************************************
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition done
 Ippl{0}> *****************************************************************
-ParallelTTracker {0}> 07:18:54 Step   9999 at  291.176 [mm] t=  1.028e-09 [s] E=    6.270 [MeV] 
+ParallelTTracker {0}> 15:18:54 Step   9999 at  291.900 [mm] t=  1.028e-09 [s] E=    6.276 [MeV] 
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition because of repartFreq_m
 Ippl{0}> *****************************************************************
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition done
 Ippl{0}> *****************************************************************
-ParallelTTracker {0}> 07:18:59 Step  10999 at  321.024 [mm] t=  1.128e-09 [s] E=    6.271 [MeV] 
+ParallelTTracker {0}> 15:19:00 Step  10999 at  321.793 [mm] t=  1.128e-09 [s] E=    6.276 [MeV] 
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition because of repartFreq_m
 Ippl{0}> *****************************************************************
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition done
 Ippl{0}> *****************************************************************
-ParallelTTracker {0}> 07:19:03 Step  11999 at  350.873 [mm] t=  1.228e-09 [s] E=    6.272 [MeV] 
+ParallelTTracker {0}> 15:19:06 Step  11999 at  351.685 [mm] t=  1.228e-09 [s] E=    6.276 [MeV] 
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition because of repartFreq_m
 Ippl{0}> *****************************************************************
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition done
 Ippl{0}> *****************************************************************
-ParallelTTracker {0}> 07:19:08 Step  12999 at  380.721 [mm] t=  1.328e-09 [s] E=    6.272 [MeV] 
+ParallelTTracker {0}> 15:19:12 Step  12999 at  381.578 [mm] t=  1.328e-09 [s] E=    6.276 [MeV] 
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition because of repartFreq_m
 Ippl{0}> *****************************************************************
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition done
 Ippl{0}> *****************************************************************
-ParallelTTracker {0}> 07:19:12 Step  13999 at  716.994 [mm] t=  2.455e-09 [s] E=    6.274 [MeV] 
+ParallelTTracker {0}> 15:19:17 Step  13999 at  743.485 [mm] t=  2.539e-09 [s] E=    6.276 [MeV] 
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition because of repartFreq_m
 Ippl{0}> *****************************************************************
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition done
 Ippl{0}> *****************************************************************
-ParallelTTracker {0}> 07:19:17 Step  14999 at    1.612 [m] t=  5.455e-09 [s] E=    6.275 [MeV] 
+ParallelTTracker {0}> 15:19:23 Step  14999 at    1.640 [m] t=  5.539e-09 [s] E=    6.276 [MeV] 
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition because of repartFreq_m
 Ippl{0}> *****************************************************************
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition done
 Ippl{0}> *****************************************************************
-ParallelTTracker {0}> 07:19:21 Step  15999 at    2.508 [m] t=  8.455e-09 [s] E=    6.275 [MeV] 
+ParallelTTracker {0}> 15:19:28 Step  15999 at    2.537 [m] t=  8.539e-09 [s] E=    6.276 [MeV] 
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition because of repartFreq_m
 Ippl{0}> *****************************************************************
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition done
 Ippl{0}> *****************************************************************
-ParallelTTracker {0}> 07:19:25 Step  16999 at    3.403 [m] t=  1.145e-08 [s] E=    6.275 [MeV] 
+ParallelTTracker {0}> 15:19:33 Step  16999 at    3.434 [m] t=  1.154e-08 [s] E=    6.276 [MeV] 
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition because of repartFreq_m
 Ippl{0}> *****************************************************************
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition done
 Ippl{0}> *****************************************************************
-ParallelTTracker {0}> 07:19:30 Step  17999 at    4.299 [m] t=  1.445e-08 [s] E=    6.275 [MeV] 
+ParallelTTracker {0}> 15:19:39 Step  17999 at    4.331 [m] t=  1.454e-08 [s] E=    6.276 [MeV] 
 Ippl{0}> *****************************************************************
 Ippl{0}> do repartition because of repartFreq_m
 Ippl{0}> *****************************************************************
@@ -274,64 +266,72 @@ Ippl{0}> *****************************************************************
 OPAL {0}> 
 OPAL {0}> * ************** B U N C H ********************************************************* 
 OPAL {0}> * NP              =   10000
-OPAL {0}> * Qtot            =    1.00000e+00 [nC]       Qi    =  1.00000e-04 [nC]
-OPAL {0}> * Ekin            =    6.27497e+00 [MeV]      dEkin =  2.46854e-02 [MeV]
-OPAL {0}> * rmax            = (  3.86585e-01 ,  3.89977e-01 ,  5.01352e+00 ) [m]
-OPAL {0}> * rmin            = ( -3.95217e-01 , -3.85339e-01 ,  4.99141e+00 ) [m]
-OPAL {0}> * rms beam size   = (  1.84588e-01 ,  1.84641e-01 ,  5.15108e-03 ) [m]
-OPAL {0}> * rms momenta     = (  5.17547e-01 ,  5.17697e-01 ,  4.84456e-02 ) [beta gamma]
-OPAL {0}> * mean position   = ( -4.38307e-05 ,  2.00798e-04 ,  5.00084e+00 ) [m]
-OPAL {0}> * mean momenta    = ( -1.27350e-04 ,  5.62467e-04 ,  1.32219e+01 ) [beta gamma]
-OPAL {0}> * rms emittance   = (  2.04212e-05 ,  2.03810e-05 ,  1.75514e-05 ) (not normalized)
-OPAL {0}> * rms correlation = (  9.99996e-01 ,  9.99996e-01 ,  3.64107e-01 )
-OPAL {0}> * hr              = (  5.21201e-02 ,  5.16877e-02 ,  1.47410e-03 ) [m]
+OPAL {0}> * Qtot            =    1.00000e-06 [nC]       Qi    =  1.00000e-10 [nC]
+OPAL {0}> * Ekin            =    6.27586e+00 [MeV]      dEkin =  7.50560e-03 [MeV]
+OPAL {0}> * rmax            = (  8.06338e-02 ,  8.16309e-02 ,  5.00541e+00 ) [m]
+OPAL {0}> * rmin            = ( -7.85551e-02 , -8.11634e-02 ,  4.99506e+00 ) [m]
+OPAL {0}> * rms beam size   = (  3.59411e-02 ,  3.57293e-02 ,  1.73689e-03 ) [m]
+OPAL {0}> * rms momenta     = (  1.00784e-01 ,  1.00190e-01 ,  1.47299e-02 ) [beta gamma]
+OPAL {0}> * mean position   = ( -5.21920e-06 ,  1.79600e-04 ,  5.00047e+00 ) [m]
+OPAL {0}> * mean momenta    = ( -1.56010e-05 ,  5.04230e-04 ,  1.32431e+01 ) [beta gamma]
+OPAL {0}> * rms emittance   = (  3.19056e-07 ,  3.16433e-07 ,  1.93114e-06 ) (not normalized)
+OPAL {0}> * rms correlation = (  9.99999e-01 ,  9.99999e-01 ,  2.55610e-02 )
+OPAL {0}> * hr              = (  1.06126e-02 ,  1.08530e-02 ,  6.90249e-04 ) [m]
 OPAL {0}> * dh              =    1.00000e+00 [%]
-OPAL {0}> * t               =    1.68069e-08 [s]        dT    =  3.00000e-12 [s]
-OPAL {0}> * spos            =    5.00084e+00 [m]
+OPAL {0}> * t               =    1.67800e-08 [s]        dT    =  3.00000e-12 [s]
+OPAL {0}> * spos            =    5.00047e+00 [m]
 OPAL {0}> * ********************************************************************************** 
 OPAL {0}> 
-OPAL{0}> done executing ParallelTTracker at 07:19:34
+OPAL{0}> done executing ParallelTTracker at 15:19:43
 OPAL{0}> * End of input stream "AWAGun-1.in".
 Timings{0}> -----------------------------------------------------------------
 Timings{0}>      Timing results for 4 nodes:
 Timings{0}> -----------------------------------------------------------------
-Timings{0}> mainTimer........... Wall tot =    92.1385, CPU tot =      91.84
+Timings{0}> mainTimer........... Wall tot =    121.451, CPU tot =     121.05
 Timings{0}> 
-Timings{0}> AP: field evaluatio. Wall max =   0.012916, CPU max =          0
-Timings{0}>                      Wall avg =   0.003229, CPU avg =          0
+Timings{0}> AP: field evaluatio. Wall max =   0.005472, CPU max =          0
+Timings{0}>                      Wall avg =   0.001368, CPU avg =          0
 Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
-Timings{0}> AP: time integratio. Wall max =   0.023793, CPU max =       0.03
-Timings{0}>                      Wall avg = 0.00594825, CPU avg =     0.0075
+Timings{0}> AP: time integratio. Wall max =   0.008238, CPU max =       0.01
+Timings{0}>                      Wall avg =  0.0020595, CPU avg =     0.0025
 Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
-Timings{0}> Binaryrepart........ Wall max =   0.048471, CPU max =       0.06
-Timings{0}>                      Wall avg =  0.0484022, CPU avg =     0.0425
-Timings{0}>                      Wall min =   0.048207, CPU min =       0.02
+Timings{0}> Binaryrepart........ Wall max =   0.016615, CPU max =       0.03
+Timings{0}>                      Wall avg =  0.0165565, CPU avg =       0.02
+Timings{0}>                      Wall min =    0.01642, CPU min =       0.01
 Timings{0}> 
-Timings{0}> Boundingbox......... Wall max =    1.99515, CPU max =       2.11
-Timings{0}>                      Wall avg =    1.98637, CPU avg =     2.0025
-Timings{0}>                      Wall min =    1.97123, CPU min =       1.92
+Timings{0}> Boundingbox......... Wall max =    1.97086, CPU max =       2.32
+Timings{0}>                      Wall avg =    1.94761, CPU avg =       2.09
+Timings{0}>                      Wall min =    1.93517, CPU min =       1.86
 Timings{0}> 
-Timings{0}> ComputePotential.... Wall max =    33.8142, CPU max =      33.92
-Timings{0}>                      Wall avg =    33.8001, CPU avg =     33.665
-Timings{0}>                      Wall min =    33.7862, CPU min =      33.29
+Timings{0}> Cleanup emission.... Wall max =          0, CPU max =          0
+Timings{0}>                      Wall avg =          0, CPU avg =          0
+Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
-Timings{0}> Create Distr........ Wall max =   0.059685, CPU max =       0.05
-Timings{0}>                      Wall avg =  0.0594052, CPU avg =       0.05
-Timings{0}>                      Wall min =   0.059284, CPU min =       0.05
+Timings{0}> ComputePotential.... Wall max =    43.8489, CPU max =      44.06
+Timings{0}>                      Wall avg =    43.8194, CPU avg =      43.71
+Timings{0}>                      Wall min =     43.796, CPU min =      43.55
+Timings{0}> 
+Timings{0}> Create Distr........ Wall max =   0.058151, CPU max =       0.06
+Timings{0}>                      Wall avg =  0.0565038, CPU avg =     0.0525
+Timings{0}>                      Wall min =   0.055951, CPU min =       0.05
+Timings{0}> 
+Timings{0}> Emit Distr.......... Wall max =          0, CPU max =          0
+Timings{0}>                      Wall avg =          0, CPU avg =          0
+Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
 Timings{0}> Fast inside test.... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
 Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
-Timings{0}> Fieldeval........... Wall max =    7.80516, CPU max =       8.04
-Timings{0}>                      Wall avg =    7.13127, CPU avg =      7.195
-Timings{0}>                      Wall min =    6.84943, CPU min =       6.73
+Timings{0}> Fieldeval........... Wall max =    10.4583, CPU max =      10.94
+Timings{0}>                      Wall avg =    10.1249, CPU avg =     10.295
+Timings{0}>                      Wall min =    9.15911, CPU min =        9.2
 Timings{0}> 
-Timings{0}> H5PartTimer......... Wall max =   0.006424, CPU max =          0
-Timings{0}>                      Wall avg =    0.00642, CPU avg =          0
-Timings{0}>                      Wall min =   0.006415, CPU min =          0
+Timings{0}> H5PartTimer......... Wall max =   0.310664, CPU max =       0.01
+Timings{0}>                      Wall avg =   0.310635, CPU avg =     0.0025
+Timings{0}>                      Wall min =   0.310609, CPU min =          0
 Timings{0}> 
 Timings{0}> Histogram........... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
@@ -357,101 +357,101 @@ Timings{0}> Ray tracing......... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
 Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
-Timings{0}> RC-CC1Dfft.......... Wall max =    4.92187, CPU max =       4.82
-Timings{0}>                      Wall avg =     4.7264, CPU avg =     4.6925
-Timings{0}>                      Wall min =    4.55552, CPU min =       4.62
+Timings{0}> RC-CC1Dfft.......... Wall max =    5.72656, CPU max =       5.72
+Timings{0}>                      Wall avg =    5.46793, CPU avg =      5.485
+Timings{0}>                      Wall min =    5.22582, CPU min =       5.06
 Timings{0}> 
-Timings{0}> RC-CCtranspose...... Wall max =    8.20896, CPU max =       8.09
-Timings{0}>                      Wall avg =    7.94808, CPU avg =     7.8375
-Timings{0}>                      Wall min =    7.56966, CPU min =       7.63
+Timings{0}> RC-CCtranspose...... Wall max =    11.2193, CPU max =      11.54
+Timings{0}>                      Wall avg =     10.883, CPU avg =    11.2725
+Timings{0}>                      Wall min =    10.5361, CPU min =      10.82
 Timings{0}> 
-Timings{0}> RC-RC1Dfft.......... Wall max =    3.42117, CPU max =       3.55
-Timings{0}>                      Wall avg =    3.40031, CPU avg =       3.32
-Timings{0}>                      Wall min =    3.35427, CPU min =       3.22
+Timings{0}> RC-RC1Dfft.......... Wall max =    4.06407, CPU max =       3.94
+Timings{0}>                      Wall avg =    4.04455, CPU avg =      3.835
+Timings{0}>                      Wall min =    4.00584, CPU min =       3.75
 Timings{0}> 
-Timings{0}> RC-RRtranspose...... Wall max =     4.0986, CPU max =       4.29
-Timings{0}>                      Wall avg =    3.83642, CPU avg =     3.9025
-Timings{0}>                      Wall min =     3.3696, CPU min =       3.41
+Timings{0}> RC-RRtranspose...... Wall max =     5.0226, CPU max =       5.24
+Timings{0}>                      Wall avg =    4.56605, CPU avg =      4.765
+Timings{0}>                      Wall min =    4.10559, CPU min =       4.45
 Timings{0}> 
-Timings{0}> RC-total............ Wall max =    20.7939, CPU max =      20.54
-Timings{0}>                      Wall avg =    20.5214, CPU avg =    20.3775
-Timings{0}>                      Wall min =    20.2419, CPU min =      20.28
+Timings{0}> RC-total............ Wall max =    25.6917, CPU max =      25.84
+Timings{0}>                      Wall avg =    25.3388, CPU avg =      25.68
+Timings{0}>                      Wall min =    24.9355, CPU min =      25.52
 Timings{0}> 
 Timings{0}> Secondary emission.. Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
 Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
-Timings{0}> SelfField total..... Wall max =    57.1462, CPU max =      56.83
-Timings{0}>                      Wall avg =    56.3752, CPU avg =      55.97
-Timings{0}>                      Wall min =    55.9676, CPU min =      55.53
+Timings{0}> SelfField total..... Wall max =    71.2601, CPU max =      71.08
+Timings{0}>                      Wall avg =    71.1141, CPU avg =     70.845
+Timings{0}>                      Wall min =    70.7646, CPU min =      70.66
 Timings{0}> 
-Timings{0}> SF: GreensFTotal.... Wall max =    21.3685, CPU max =      21.34
-Timings{0}>                      Wall avg =    21.0816, CPU avg =     20.975
-Timings{0}>                      Wall min =    20.8773, CPU min =      20.76
+Timings{0}> SF: GreensFTotal.... Wall max =    29.6131, CPU max =      29.62
+Timings{0}>                      Wall avg =    29.4507, CPU avg =    29.0725
+Timings{0}>                      Wall min =    29.2969, CPU min =      28.68
 Timings{0}> 
-Timings{0}> SF: IntGreenF1...... Wall max =    8.70686, CPU max =       8.33
-Timings{0}>                      Wall avg =    7.73714, CPU avg =      7.735
-Timings{0}>                      Wall min =    7.28718, CPU min =       7.48
+Timings{0}> SF: IntGreenF1...... Wall max =    13.9538, CPU max =       13.8
+Timings{0}>                      Wall avg =    12.3291, CPU avg =      12.12
+Timings{0}>                      Wall min =    11.6581, CPU min =      11.43
 Timings{0}> 
-Timings{0}> SF: IntGreenF2...... Wall max =    4.26472, CPU max =       4.44
-Timings{0}>                      Wall avg =    3.65051, CPU avg =     3.6675
-Timings{0}>                      Wall min =    2.58887, CPU min =        2.6
+Timings{0}> SF: IntGreenF2...... Wall max =    5.46258, CPU max =       5.07
+Timings{0}>                      Wall avg =    4.53481, CPU avg =     4.3425
+Timings{0}>                      Wall min =    2.83102, CPU min =       2.79
 Timings{0}> 
-Timings{0}> SF: IntGreenF3...... Wall max =    7.09997, CPU max =        6.8
-Timings{0}>                      Wall avg =    6.87089, CPU avg =     6.6475
-Timings{0}>                      Wall min =    6.73392, CPU min =       6.48
+Timings{0}> SF: IntGreenF3...... Wall max =    8.81952, CPU max =       8.99
+Timings{0}>                      Wall avg =    8.74386, CPU avg =     8.8275
+Timings{0}>                      Wall min =    8.66207, CPU min =       8.58
 Timings{0}> 
-Timings{0}> SF: MirrorRho1...... Wall max =    1.40207, CPU max =       1.65
-Timings{0}>                      Wall avg =     1.1877, CPU avg =      1.265
-Timings{0}>                      Wall min =   0.988824, CPU min =       1.05
+Timings{0}> SF: MirrorRho1...... Wall max =    1.42142, CPU max =       1.52
+Timings{0}>                      Wall avg =    1.25867, CPU avg =     1.2925
+Timings{0}>                      Wall min =    1.11988, CPU min =       0.93
 Timings{0}> 
-Timings{0}> SF: MirrorRho2...... Wall max =   0.046798, CPU max =       0.06
-Timings{0}>                      Wall avg =   0.034829, CPU avg =     0.0325
-Timings{0}>                      Wall min =   0.026954, CPU min =       0.01
+Timings{0}> SF: MirrorRho2...... Wall max =   0.055779, CPU max =       0.07
+Timings{0}>                      Wall avg =  0.0412628, CPU avg =     0.0325
+Timings{0}>                      Wall min =   0.031412, CPU min =          0
 Timings{0}> 
-Timings{0}> SF: Potential....... Wall max =    36.2455, CPU max =      36.45
-Timings{0}>                      Wall avg =    36.2295, CPU avg =    36.1375
-Timings{0}>                      Wall min =     36.216, CPU min =       35.6
+Timings{0}> SF: Potential....... Wall max =    47.6394, CPU max =      47.76
+Timings{0}>                      Wall avg =     47.614, CPU avg =    47.4725
+Timings{0}>                      Wall min =    47.5917, CPU min =      47.25
 Timings{0}> 
-Timings{0}> SF: ShIntGreenF1.... Wall max =   0.436455, CPU max =        0.4
-Timings{0}>                      Wall avg =   0.373571, CPU avg =     0.3625
-Timings{0}>                      Wall min =   0.347545, CPU min =       0.28
+Timings{0}> SF: ShIntGreenF1.... Wall max =    0.81662, CPU max =       0.76
+Timings{0}>                      Wall avg =   0.684362, CPU avg =      0.675
+Timings{0}>                      Wall min =   0.633204, CPU min =       0.58
 Timings{0}> 
-Timings{0}> SF: ShIntGreenF2.... Wall max =   0.407887, CPU max =       0.44
-Timings{0}>                      Wall avg =   0.345348, CPU avg =     0.3825
-Timings{0}>                      Wall min =   0.323989, CPU min =       0.33
+Timings{0}> SF: ShIntGreenF2.... Wall max =   0.784644, CPU max =       0.83
+Timings{0}>                      Wall avg =   0.665176, CPU avg =     0.6575
+Timings{0}>                      Wall min =   0.623943, CPU min =       0.51
 Timings{0}> 
-Timings{0}> SF: ShIntGreenF3.... Wall max =   0.393629, CPU max =       0.47
-Timings{0}>                      Wall avg =   0.336093, CPU avg =     0.3375
-Timings{0}>                      Wall min =   0.195307, CPU min =       0.17
+Timings{0}> SF: ShIntGreenF3.... Wall max =   0.618395, CPU max =       0.67
+Timings{0}>                      Wall avg =   0.520945, CPU avg =        0.5
+Timings{0}>                      Wall min =   0.250166, CPU min =       0.29
 Timings{0}> 
-Timings{0}> SF: ShIntGreenF4.... Wall max =   0.425796, CPU max =       0.52
-Timings{0}>                      Wall avg =   0.421926, CPU avg =     0.4325
-Timings{0}>                      Wall min =   0.412682, CPU min =       0.34
+Timings{0}> SF: ShIntGreenF4.... Wall max =   0.632512, CPU max =       0.65
+Timings{0}>                      Wall avg =    0.62311, CPU avg =     0.5825
+Timings{0}>                      Wall min =   0.612914, CPU min =       0.47
 Timings{0}> 
-Timings{0}> Statistics.......... Wall max =    4.62741, CPU max =       4.84
-Timings{0}>                      Wall avg =    4.50185, CPU avg =     4.4075
-Timings{0}>                      Wall min =    4.27499, CPU min =       4.04
+Timings{0}> Statistics.......... Wall max =    7.77387, CPU max =       7.88
+Timings{0}>                      Wall avg =    7.64334, CPU avg =     7.6025
+Timings{0}>                      Wall min =    7.58005, CPU min =       7.36
 Timings{0}> 
-Timings{0}> StatMarkerTimer..... Wall max =   0.482463, CPU max =       0.46
-Timings{0}>                      Wall avg =   0.147968, CPU avg =      0.135
-Timings{0}>                      Wall min =   0.036307, CPU min =       0.01
+Timings{0}> StatMarkerTimer..... Wall max =   0.474152, CPU max =       0.37
+Timings{0}>                      Wall avg =   0.145645, CPU avg =     0.1225
+Timings{0}>                      Wall min =    0.03572, CPU min =       0.03
 Timings{0}> 
-Timings{0}> TIntegration1....... Wall max =    7.74184, CPU max =        8.1
-Timings{0}>                      Wall avg =    7.74006, CPU avg =      7.815
-Timings{0}>                      Wall min =    7.73729, CPU min =       7.52
+Timings{0}> TIntegration1....... Wall max =    11.7437, CPU max =       11.9
+Timings{0}>                      Wall avg =    11.7406, CPU avg =       11.8
+Timings{0}>                      Wall min =    11.7376, CPU min =      11.68
 Timings{0}> 
-Timings{0}> TIntegration1Push... Wall max =    5.73127, CPU max =       6.09
-Timings{0}>                      Wall avg =    5.71383, CPU avg =      5.775
-Timings{0}>                      Wall min =    5.70559, CPU min =       5.51
+Timings{0}> TIntegration1Push... Wall max =     9.8036, CPU max =       9.81
+Timings{0}>                      Wall avg =    9.79223, CPU avg =     9.7075
+Timings{0}>                      Wall min =    9.77025, CPU min =       9.51
 Timings{0}> 
-Timings{0}> TIntegration2....... Wall max =     10.559, CPU max =      10.85
-Timings{0}>                      Wall avg =    10.5401, CPU avg =      10.64
-Timings{0}>                      Wall min =    10.5266, CPU min =      10.34
+Timings{0}> TIntegration2....... Wall max =    15.6922, CPU max =      15.82
+Timings{0}>                      Wall avg =    15.6807, CPU avg =    15.3075
+Timings{0}>                      Wall min =     15.661, CPU min =      14.69
 Timings{0}> 
-Timings{0}> TIntegration2Push... Wall max =    5.73131, CPU max =       5.99
-Timings{0}>                      Wall avg =    5.71726, CPU avg =       5.84
-Timings{0}>                      Wall min =    5.71022, CPU min =       5.62
+Timings{0}> TIntegration2Push... Wall max =    9.81986, CPU max =      10.21
+Timings{0}>                      Wall avg =    9.80847, CPU avg =     9.7225
+Timings{0}>                      Wall min =    9.78989, CPU min =        9.3
 Timings{0}> 
 Timings{0}> WakeField........... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
