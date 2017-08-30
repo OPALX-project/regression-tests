@@ -15,12 +15,12 @@ REAL beta = sqrt(1-(1/gamma^2)); // Dimless
 REAL gambet = gamma*beta;        // Dimless
 REAL P0 = gambet*H2mass;         // GeV/c
 REAL brho = (H2mass*1.0e9*gambet)/CLIGHT;
-REAL RF_FREQ = 8.2 * 1e6; // Hz (6th harmonic = 49.2 MHz)
+REAL RF_FREQ = 8.2; // MHz (6th harmonic = 49.2 MHz)
 REAL harmonic = 6;
 value,{Ekin, beta, gamma, brho, P0};
 
 // Input variables from data file
-REAL CURRENT = 30e-1;     // Beam current in A (0.01 - 0.05)
+REAL CURRENT = 1e-1;             // Beam current in 10 mA 
 
 // Available Geometry Files
 // Geometry File 1:  "Pipe_1m_10cm.h5"
