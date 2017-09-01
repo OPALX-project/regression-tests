@@ -1,6 +1,15 @@
 #!/bin/bash
-rm -f RestartTest-4.h5
-for X in lbal stat;do cp RestartTest-4.$X.bak RestartTest-4.$X;done
 
-mpirun -np 4 "$OPAL_EXE_PATH/opal" "$@" RestartTest-4.in -restart 20 -restartfn RestartTest-4.h5.bak --commlib mpi --info 3 --warn 0 2>&1
+regtest='RestartTest-4'
+
+rm -f "$regtest."{stat,lbal,h5}
+for X in lbal stat; do
+	if [[ ! -e "$regtest.$X.bak" ]]; then
+		echo "$regtest.$X.bak does not exist!" 1>&2
+		exit
+	fi
+	cp "$regtest.$X.bak" "$regtest.$X"
+done
+
+mpirun -np 4 "$OPAL_EXE_PATH/opal" "$@" "$regtest.in" -restart -20 -restartfn "$regtest.h5.bak" --commlib mpi --info 3 --warn 0 2>&1
 
