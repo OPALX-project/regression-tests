@@ -174,10 +174,8 @@ FS_SC1: Fieldsolver, FSTYPE = NONE, MX = FS_SC1_X_BINS, MY = FS_SC1_Y_BINS, MT =
 // WAKEF:		wake function attached to dipole
 //
 
-Bend: RBend,
-             //ANGLE = bend_angle * Pi / 180.0,
-             K0 = -0.0249959,
-   	     PSI = bend_rotation * Pi / 180.0,
+Bend: RBend, ANGLE = bend_angle * Pi / 180.0,
+             PSI = bend_rotation * Pi / 180.0,
 	     E1 = bend_e1 * Pi / 180.0,
 	     FMAPFN = "1DPROFILE1-DEFAULT",
 	     ELEMEDGE = global_shift + drift_before_bend,
