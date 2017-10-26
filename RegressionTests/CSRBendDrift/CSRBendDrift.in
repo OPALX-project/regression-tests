@@ -48,8 +48,8 @@ value, {TIME_STEP_1};
 // First define the space charge (SC) mesh.
 
 // Space charge mesh.
-REAL FS_SC1_X_BINS = 16; // Number of mesh bins in x direction for space charge field solver.
-REAL FS_SC1_Y_BINS = 16; // Number of mesh bins in y direction for space charge field solver.
+REAL FS_SC1_X_BINS = 8; // Number of mesh bins in x direction for space charge field solver.
+REAL FS_SC1_Y_BINS = 8; // Number of mesh bins in y direction for space charge field solver.
 REAL FS_SC1_Z_BINS = 64; // Number of mesh bins in z direction for space charge field solver.
 
 value, {FS_SC1_X_BINS,
@@ -227,7 +227,7 @@ Option, STATDUMPFREQ = STAT_DUMP_FREQUENCY;
 //\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 // Here we define beam that will be transported.
 //\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-beam1: BEAM, PARTICLE = ELECTRON, pc = P0, NPART = NUMBER_OF_PARTICLES, BFREQ = RF_FREQUENCY,
+beam1: BEAM, PARTICLE = ELECTRON, pc = P0, NPART = NUMBER_OF_PARTICLES, BFREQ = RF_FREQUENCY * 1e-6,
       	BCURRENT = BEAM_BUNCH_CHARGE * RF_FREQUENCY,
         CHARGE = -1;
 
@@ -236,7 +236,7 @@ beam1: BEAM, PARTICLE = ELECTRON, pc = P0, NPART = NUMBER_OF_PARTICLES, BFREQ = 
 // Run simulation.
 //\\\\\\\\\\\\\\\\
 
-TRACK, LINE = inputBeamline, BEAM = beam1, MAXSTEPS = 2000, DT = TIME_STEP_1;
+TRACK, LINE = inputBeamline, BEAM = beam1, MAXSTEPS = 2000, DT = TIME_STEP_1, ZSTOP=0.63160;
   RUN, METHOD = "PARALLEL-T", BEAM = beam1, FIELDSOLVER = FS_SC1,
        DISTRIBUTION = dist1;
 ENDTRACK;
