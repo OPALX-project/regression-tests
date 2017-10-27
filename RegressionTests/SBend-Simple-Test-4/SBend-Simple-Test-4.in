@@ -13,11 +13,11 @@ Title, string="SBend Test";
 //
 // Here we define some global simulation parameters.
 
-REAL RF_FREQUENCY = 700.0e6;			     // Reference frequency of problem (Hz).
-REAL RF_WAVELENGTH = CLIGHT / RF_FREQUENCY; 	     // Reference wavelength (m).
+REAL RF_FREQUENCY = 700.0e6;                 // Reference frequency of problem (Hz).
+REAL RF_WAVELENGTH = CLIGHT / RF_FREQUENCY;          // Reference wavelength (m).
 
-REAL Q_E = 1.60217653e-19;  	 		     // Elementary charge (C).
-REAL E_MASS = 9.10938188e-31;		     // Mass of electron (kg).
+REAL Q_E = 1.60217653e-19;                    // Elementary charge (C).
+REAL E_MASS = 9.10938188e-31;             // Mass of electron (kg).
 
 
 REAL BEAM_BUNCH_CHARGE = 0.0e-15;     // Beam bunch charge (C).
@@ -29,9 +29,9 @@ REAL STAT_DUMP_FREQUENCY = 10; // How often (time steps) beam statistical proper
 value, {RF_FREQUENCY,
         RF_WAVELENGTH,
         BEAM_BUNCH_CHARGE,
-	NUMBER_OF_PARTICLES,
-	PS_DUMP_FREQUENCY,
-	STAT_DUMP_FREQUENCY};
+    NUMBER_OF_PARTICLES,
+    PS_DUMP_FREQUENCY,
+    STAT_DUMP_FREQUENCY};
 
 //============================================
 // Timestep information.
@@ -43,7 +43,7 @@ value, {RF_FREQUENCY,
 REAL TIME_STEP_1 = 2.0 * 1.0e-12;   // Time step (s). We only need one for this simulation.
 
 value, {TIME_STEP_1};
-	
+
 //******************************************************************************************************************
 //******************************************************************************************************************
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -65,7 +65,7 @@ REAL FS_SC1_Z_BINS = 8; // Number of mesh bins in z direction for space charge f
 
 value, {FS_SC1_X_BINS,
         FS_SC1_Y_BINS,
-	FS_SC1_Z_BINS};
+    FS_SC1_Z_BINS};
 
 
 //******************************************************************************************************************
@@ -125,12 +125,12 @@ REAL bend_gap = 0.02;
 
 value, {drift_before_bend,
         bend_angle,
-	bend_rotation,
-	bend_e1,
-	bend_e2,
-	bend_energy,
-	bend_chord_length,
-	bend_gap};
+    bend_rotation,
+    bend_e1,
+    bend_e2,
+    bend_energy,
+    bend_chord_length,
+    bend_gap};
 
 //******************************************************************************************************************
 //******************************************************************************************************************
@@ -147,9 +147,9 @@ value, {drift_before_bend,
 // First space charge field solver.
 
 FS_SC1: Fieldsolver, FSTYPE = NONE, MX = FS_SC1_X_BINS, MY = FS_SC1_Y_BINS, MT = FS_SC1_Z_BINS,
-		     PARFFTX = false, PARFFTY = false, PARFFTT = true,
-		     BCFFTX = open, BCFFTY = open, BCFFTT = open,
-		     BBOXINCR = 2, GREENSF = INTEGRATED;
+             PARFFTX = false, PARFFTY = false, PARFFTT = true,
+             BCFFTX = open, BCFFTY = open, BCFFTT = open,
+             BBOXINCR = 2, GREENSF = INTEGRATED;
 
 
 //******************************************************************************************************************
@@ -173,25 +173,25 @@ FS_SC1: Fieldsolver, FSTYPE = NONE, MX = FS_SC1_X_BINS, MY = FS_SC1_Y_BINS, MT =
 
 // Dipole
 //
-// L:			physical element length (real in m)
-// K0: 		     	y magnetic field (real)
-// FMAPFN:	     	field file name (string)
-// ELEMEDGE:	     	physical start of the element on the floor (real in m)
-// ALPHA:            	entrance angle (degrees). Exit angle is calculated automatically (bend is rectangular).
-// DESIGNENERGY:     	energy of design beam
-// WAKEF:		wake function attached to dipole
+// L:            physical element length (real in m)
+// K0:                  y magnetic field (real)
+// FMAPFN:             field file name (string)
+// ELEMEDGE:             physical start of the element on the floor (real in m)
+// ALPHA:                entrance angle (degrees). Exit angle is calculated automatically (bend is rectangular).
+// DESIGNENERGY:         energy of design beam
+// WAKEF:        wake function attached to dipole
 //
 
 Bend: SBend, ANGLE = bend_angle * Pi / 180.0,
-   	     ROTATION = bend_rotation * Pi / 180.0,
-	     E1 = bend_e1 * Pi / 180.0,
-	     E2 = bend_e2 * Pi / 180.0,
-	     K1 = bend_gradient,
-	     FMAPFN = "1DPROFILE1-DEFAULT",
-	     ELEMEDGE = global_shift + drift_before_bend,
-	     DESIGNENERGY = bend_energy,
-	     L = bend_chord_length,
-	     GAP = bend_gap;
+            ROTATION = bend_rotation * Pi / 180.0,
+         E1 = bend_e1 * Pi / 180.0,
+         E2 = bend_e2 * Pi / 180.0,
+         K1 = bend_gradient,
+         FMAPFN = "1DPROFILE1-DEFAULT",
+         ELEMEDGE = global_shift + drift_before_bend,
+         DESIGNENERGY = bend_energy,
+         L = bend_chord_length,
+         GAP = bend_gap;
 
 
 // Calculate position of end of Bend.
@@ -236,7 +236,7 @@ if (NUMBER_OF_PARTICLES == 10000) {
 
    // Distribution at start.
    Initial_Distribution: DISTRIBUTION, DISTRIBUTION = FROMFILE,
-			 	       FNAME = "SBend-Simple-Test-4.dat";
+                        FNAME = "SBend-Simple-Test-4.dat";
 }
 
 
@@ -263,27 +263,27 @@ Option, STATDUMPFREQ = STAT_DUMP_FREQUENCY;
 //\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 // Here we define beam that will be transported.
 //\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-beam_1: BEAM, PARTICLE = ELECTRON, 
-	      pc = P0, 
-	      NPART = NUMBER_OF_PARTICLES, 
-	      BFREQ = RF_FREQUENCY,
-      	      BCURRENT = BEAM_BUNCH_CHARGE * RF_FREQUENCY,
-	      CHARGE = -1;
+beam_1: BEAM, PARTICLE = ELECTRON,
+          pc = P0,
+          NPART = NUMBER_OF_PARTICLES,
+          BFREQ = RF_FREQUENCY * 1e-6,
+          BCURRENT = BEAM_BUNCH_CHARGE * RF_FREQUENCY,
+          CHARGE = -1;
 
 
 //\\\\\\\\\\\\\\\\
 // Run simulation.
 //\\\\\\\\\\\\\\\\
 
-TRACK, LINE = Beamline, 
-       BEAM = beam_1, 
-       MAXSTEPS = 1000000, 
+TRACK, LINE = Beamline,
+       BEAM = beam_1,
+       MAXSTEPS = 1000000,
        DT = TIME_STEP_1,
        ZSTOP = bend_end;
 
-RUN, METHOD = "PARALLEL-T", 
-     BEAM = beam_1, 
-     FIELDSOLVER = FS_SC1, 
+RUN, METHOD = "PARALLEL-T",
+     BEAM = beam_1,
+     FIELDSOLVER = FS_SC1,
      DISTRIBUTION = Initial_Distribution;
 
 ENDTRACK;

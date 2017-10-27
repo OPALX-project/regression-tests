@@ -43,10 +43,10 @@ Fs1:FIELDSOLVER, FSTYPE = NONE, MX = 32, MY = 32, MT = 128,
 		 BBOXINCR = 1, GREENSF = INTEGRATED;
 
 REAL qb=0.2e-9;
-REAL bfreq=300;
+REAL bfreq=300e6;
 REAL bcurrent=qb*bfreq;
 
-beam1: BEAM, PARTICLE = ELECTRON, pc = P0, NPART = 3000, BFREQ = bfreq , BCURRENT = bcurrent, CHARGE = -1;
+beam1: BEAM, PARTICLE = ELECTRON, pc = P0, NPART = 3000, BFREQ = bfreq * 1e-6, BCURRENT = bcurrent, CHARGE = -1;
 
 Select, Line=Benchmark;
 
