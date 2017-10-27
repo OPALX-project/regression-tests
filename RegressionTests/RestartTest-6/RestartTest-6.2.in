@@ -13,7 +13,7 @@ REAL REPARTFREQ       = 100;
 REAL MINSTEPFORREBIN  = 600;
 
 REAL QB               = 0.2e-9;
-REAL BF               = 2998.0;
+REAL BF               = 2998.0e6;
 REAL BC               = QB*BF;
 
 
@@ -109,7 +109,7 @@ Dist1:DISTRIBUTION, TYPE = "GUNGAUSSFLATTOPTH",
 		    NBIN = 5,
 		    DEBIN = 30;
 
-beam1: BEAM, PARTICLE = ELECTRON, pc = P0, NPART = 20000, BFREQ = BF , BCURRENT = BC, CHARGE = -1;
+beam1: BEAM, PARTICLE = ELECTRON, pc = P0, NPART = 20000, BFREQ = BF * 1e-6, BCURRENT = BC, CHARGE = -1;
 
 SELECT, LINE=Injector;
 

@@ -13,7 +13,7 @@ REAL REPARTFREQ       = 100;
 REAL MINSTEPFORREBIN  = 600;
 
 REAL QB               = 0.2e-9;
-REAL BF               = 2997.922938148;
+REAL BF               = 2997.922938148e6;
 REAL BC               = QB*BF;
 
 // Begin: PSIGUN-1 /////////////////////////////////////////////////////////////////////////////////////////////////
@@ -99,7 +99,7 @@ Dist1:DISTRIBUTION, TYPE = "GUNGAUSSFLATTOPTH",
 
 Dist2:DISTRIBUTION, TYPE=fromfile, FNAME="ReferenceParticles.dat";
 
-beam1: BEAM, PARTICLE = ELECTRON, pc = P0, NPART = 20000, BFREQ = BF , BCURRENT = BC, CHARGE = -1;
+beam1: BEAM, PARTICLE = ELECTRON, pc = P0, NPART = 20000, BFREQ = BF * 1e-6, BCURRENT = BC, CHARGE = -1;
 
 SELECT, LINE=Injector;
 

@@ -7,7 +7,7 @@ TITLE, STRING="Gauss Distribution Electrons";
 
 REAL Edes   = 0.500;    // 0.5 GeV
 REAL QB     = 0.77e-12;   // charge in Cb
-REAL BF     = 1300.0;   // frequency in Mhz
+REAL BF     = 1300.0e6;   // frequency in Hz
 REAL BC     = QB*BF;    // bunch current
 
 REAL gamma=(Edes+EMASS)/EMASS;
@@ -47,7 +47,7 @@ Dist2:DISTRIBUTION, TYPE = GAUSS,
 value,{sigpx,sigpy,pzave};
 
 // pc:   momentum per particle in GeV/c
-beam1: BEAM, PARTICLE = ELECTRON, PC = P0, NPART = 1000000, BFREQ = BF, BCURRENT = BC;
+beam1: BEAM, PARTICLE = ELECTRON, PC = P0, NPART = 1000000, BFREQ = BF * 1e-6, BCURRENT = BC;
 
 SELECT, LINE=lattice;
 
