@@ -80,7 +80,7 @@ beam1: BEAM, PARTICLE=PROTON, pc=P0, SPACECHARGE=true, NPART=1e3, BCURRENT=1.0E-
 
 Select, Line=l1;
 
-TRACK,LINE=l1, BEAM=beam1, MAXSTEPS=nstep*turns, STEPSPERTURN=nstep, TIMEINTEGRATOR="LF-2"; // "RK-4";
+TRACK,LINE=l1, BEAM=beam1, MAXSTEPS=960, STEPSPERTURN=nstep, TIMEINTEGRATOR="LF-2"; // "RK-4";
  run, method = "CYCLOTRON-T", beam=beam1, fieldsolver=Fs1, distribution=Dist1;
 endtrack;
 
