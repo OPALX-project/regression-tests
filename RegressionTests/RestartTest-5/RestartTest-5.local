@@ -2,7 +2,7 @@
 regtest='RestartTest-5'
 
 rm -f "$regtest."{stat,lbal,h5}
-for X in lbal stat; do
+for X in lbal stat h5; do
 	if [[ ! -e "$regtest.$X.bak" ]]; then
 		echo "$regtest.$X.bak does not exist!" 1>&2
 		exit
@@ -10,5 +10,4 @@ for X in lbal stat; do
 	cp "$regtest.$X.bak" "$regtest.$X"
 done
 
-mpirun -np 4 "$OPAL_EXE_PATH/opal" "$@" "$regtest.in" -restart 10 --commlib mpi --info 3 --warn 0 2>&1
-
+mpirun -np 4 "$OPAL_EXE_PATH/opal" "$@" "$regtest.in" -restart 2 --commlib mpi --info 3 --warn 0 2>&1
