@@ -22,7 +22,7 @@ L1: LINE = (D1);
 Fs1: FIELDSOLVER, FSTYPE = FFT, MX = 16, MY = 16, MT = 16, BBOXINCR=0.1;
 
 Dist1: DISTRIBUTION, TYPE = GAUSS,
-       OFFSETX = 0.0, OFFSETY = 0.0, OFFSETZ = 15.0e-3,   // Centroid of bunch (m)
+       OFFSETX = 0.0, OFFSETY = 0.0, OFFSETZ = 0.0,   // Centroid of bunch (m)
        SIGMAX = 5.0e-3, SIGMAY = 5.0e-3, SIGMAZ = 5.0e-3,   // Sigmas of the Gaussian bunch (m)
        OFFSETPX = 0.0, OFFSETPY = 0.0, OFFSETPZ = 0.0,    // Mean momenta (eV)
        SIGMAPX = 0.0 , SIGMAPY = 0.0 , SIGMAPZ = 0.0 ,    // Sigmas of the momenta (eV)
@@ -33,7 +33,7 @@ Beam1: BEAM, PARTICLE = PROTON, CHARGE = 1.0, BFREQ = 1.0, PC = P0, NPART = 1E5,
 
 SELECT, LINE = L1;
 
-TRACK, LINE = L1, BEAM = Beam1, MAXSTEPS = 1000, ZSTOP = 1.0, DT = 1.0e-10;
+TRACK, LINE = L1, BEAM = Beam1, MAXSTEPS = 1000, ZSTOP = 1.0, DT = 1.0e-10, ZSTART = 15.0e-3;
  RUN, METHOD = "PARALLEL-T", BEAM = Beam1, FIELDSOLVER = Fs1, DISTRIBUTION = Dist1;
 ENDTRACK;
 

@@ -37,7 +37,7 @@ Fs1: FIELDSOLVER, FSTYPE = SAAMG, MX = 16, MY = 16, MT = 16,
      MAXITERS = 1000, PRECMODE = STD;
 
 Dist1: DISTRIBUTION, TYPE = GAUSS,
-       OFFSETX = 0.0, OFFSETY = 0.0, OFFSETZ = 15.0e-3,    // Centroid of bunch (m)
+       OFFSETX = 0.0, OFFSETY = 0.0, OFFSETZ = 0.0,    // Centroid of bunch (m)
        SIGMAX = 1.5e-3, SIGMAY = 1.5e-3, SIGMAZ = 5.0e-3,  // Sigmas of the Gaussian bunch (m)
        OFFSETPX = 0.0, OFFSETPY = 0.0, OFFSETPZ = 0.0,     // Mean momenta (eV)
        SIGMAPX = 0.0 , SIGMAPY = 0.0 , SIGMAPZ = 0.0 ,     // Sigmas of the momenta (eV)
@@ -52,7 +52,7 @@ Beam1: BEAM, PARTICLE = H2, MASS = H2mass, CHARGE = 1.0, BFREQ = RF_FREQ*harmoni
 
 Select, LINE = L1;
 
-track, LINE = L1, BEAM = Beam1, MAXSTEPS = 1000, ZSTOP = 0.1, DT = 1.0e-10;
+track, LINE = L1, BEAM = Beam1, MAXSTEPS = 1000, ZSTOP = 0.1, DT = 1.0e-10, ZSTART=15.0e-3;
 
 run, METHOD = "PARALLEL-T", BEAM = Beam1, FIELDSOLVER = Fs1,
      DISTRIBUTION = Dist1, BOUNDARYGEOMETRY = INF_GEOM;

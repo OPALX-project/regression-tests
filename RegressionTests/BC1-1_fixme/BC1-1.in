@@ -74,7 +74,7 @@ Dist1:DISTRIBUTION, TYPE = gauss,
                     sigmay = 0.00018,
 		    sigmapy = 0.0028,
 		    corry = 0.0,
-                    OFFSETZ = 29.90000,
+                    OFFSETZ = 0.0,
 		    sigmapt = 0.00040,
 		    INPUTMOUNITS = EV;
 
@@ -95,7 +95,7 @@ REAL N1 = 402*dt1/cdt;
 REAL N2 = N1 + (400*dt1/cdt);
 
 //TRACK,LINE=l1, BEAM=beam1, MAXSTEPS=N1+N1, DT=cdt;
-TRACK,LINE=l1, BEAM=beam1, MAXSTEPS=N1+N2, DT=cdt;
+TRACK,LINE=l1, BEAM=beam1, MAXSTEPS=N1+N2, DT=cdt, ZSTART=29.90000;
  RUN, METHOD = "PARALLEL-T", BEAM=beam1, FIELDSOLVER=Fs1, DISTRIBUTION=Dist1;
 ENDTRACK;
 
