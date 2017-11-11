@@ -15,7 +15,7 @@ Option, VERSION=10900;
 REAL QB               = 100e-12;
 REAL BFREQ            = 1.3e9;
 REAL BCURRENT         = QB*BFREQ;
-
+REAL P0               = 1.95695E+00 * EMASS;
 call, file = "lat.opal";
 
 file_distribution:DISTRIBUTION, TYPE=fromfile, FNAME="lat.opal_particles";
