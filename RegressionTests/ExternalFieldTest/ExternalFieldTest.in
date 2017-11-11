@@ -13,8 +13,8 @@ REAL REPARTFREQ       = 100;
 REAL MINSTEPFORREBIN  = 600;
 
 REAL QB               = 0.2e-9;
-REAL BF               = 2998.0e6;
-REAL BC               = QB*BF;
+REAL BF               = 2998.0;
+REAL BC               = QB*BF*1e6;
 
 call, "ExternalFieldTest.phases";
 
