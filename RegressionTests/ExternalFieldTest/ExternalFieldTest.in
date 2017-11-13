@@ -1,5 +1,6 @@
 Option, ECHO=FALSE;
 Option, PSDUMPFREQ=2000;
+//Option, STATDUMPFREQ=1;
 //Option, AUTOPHASE=10;
 Option, VERSION=10900;
 
@@ -18,9 +19,10 @@ REAL BC               = QB*BF*1e6;
 
 call, "ExternalFieldTest.phases";
 
+CATHODE: SOURCE, ELEMEDGE = 0.0;
 FINSS_RGUN: RFCavity, L = 0.34986, VOLT = 100.0, FMAPFN = "CTF3_Ez_ASTRA.opal",
 		ELEMEDGE =0.0, TYPE = "STANDING", FREQ = BF,
-		LAG = FINSS_RGUN_phi; // -(14.0/180.0*PI);
+		LAG = FINSS_RGUN_phi, APVETO=TRUE; // -(14.0/180.0*PI);
 
 FIND1_MSOL10: Solenoid, L = 0.6, KS = 0.206, FMAPFN = "NEW_SINGLE_SOL_NOFRINGE_ASTRA.opal", ELEMEDGE = 0.3;
 
@@ -28,7 +30,7 @@ FIND1_MQ10: Quadrupole, L=0.1, K1= 0.0, ELEMEDGE=1.38;
 FIND1_MQ20: Quadrupole, L=0.1, K1= 0.0, ELEMEDGE=1.56;
 FIND1_MQ30: Quadrupole, L=0.1, K1= 0.0, ELEMEDGE=1.74;
 
-Injector: Line = (FINSS_RGUN, FIND1_MSOL10, FIND1_MQ10, FIND1_MQ20, FIND1_MQ30);
+Injector: Line = (CATHODE, FINSS_RGUN, FIND1_MSOL10, FIND1_MQ10, FIND1_MQ20, FIND1_MQ30);
 
 // L-Band Structure starts here
 // 40 cells in 2\pi/3 mode at 1.5 GHz (rfdata[1-4]); with 4 solenoids on top (1T6.T7)
@@ -37,7 +39,7 @@ Injector: Line = (FINSS_RGUN, FIND1_MSOL10, FIND1_MQ10, FIND1_MQ20, FIND1_MQ30);
   FAST=TRUE -> enables fast calculation of electric fields (one FFT + interpolation)
 */
 
-FINLB02_RAC: TravelingWave, L=2.80, VOLT=14.750*30/31, FMAPFN="FINLB02-RAC.T7", ELEMEDGE=2.67066, NUMCELLS=40, MODE=1/3, FREQ=1498.953425154, LAG=FINLB02_RAC_lag;
+FINLB02_RAC: TravelingWave, L=2.80, VOLT=14.750*30/31, FMAPFN="FINLB02-RAC.T7", ELEMEDGE=2.67066, NUMCELLS=40, MODE=1/3, FREQ=1498.953425154, LAG=FINLB02_RAC_phi, APVETO=TRUE;
 
 FINLB02_MSLAC10: Solenoid, L=0.5, KS=0.04999947, FMAPFN="FINLB02-MSLAC.T7", ELEMEDGE=2.454;
 
