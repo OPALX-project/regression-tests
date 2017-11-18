@@ -9,13 +9,13 @@ Title, string="AWA Photoinjector";
 //----------------------------------------------------------------------------
 //Global Parameters
 
-REAL rf_freq             = 1.3e9;     //RF frequency. (Hz)
+REAL rf_freq             = 1.3e3;     //RF frequency. (Hz)
 REAL n_particles         = 1E4;      //Number of particles in simulation.
 REAL beam_bunch_charge   = 1e-9;      //Charge of bunch. (C)
 
 //Initial Momentum Calculation
 REAL Edes    = 1.4e-9; //initial energy in GeV
-REAL gamma   = (Edes+EMASS)/EMASS; 
+REAL gamma   = (Edes+EMASS)/EMASS;
 REAL beta    = sqrt(1-(1/gamma^2));
 REAL P0      = gamma*beta*EMASS;    //inital z momentum
 
@@ -36,12 +36,12 @@ value , {Edes, P0};
 // LAG:      cavity phase (radians)
 //
 
-REAL gun_inj_phase = 0.0;  // Rf injection phase (in degrees) with restpect 
-                      // to max phase. i.e. 0.0 inj phase corresponds 
+REAL gun_inj_phase = 0.0;  // Rf injection phase (in degrees) with restpect
+                      // to max phase. i.e. 0.0 inj phase corresponds
                       // to running on crest (max energy).
 
 GUN:    RFCavity, L = 0.2927, VOLT = 60.0, ELEMEDGE = 0.0, TYPE = "STANDING",
-        FMAPFN = "DriveGun.T7", FREQ = 1300.0, LAG = (gun_inj_phase*Pi)/180.0; 
+        FMAPFN = "DriveGun.T7", FREQ = 1300.0, LAG = (gun_inj_phase*Pi)/180.0;
         //LAG (phase) is converted to radians
 
 //----------------------------------------------------------------------------
@@ -52,21 +52,21 @@ GUN:    RFCavity, L = 0.2927, VOLT = 60.0, ELEMEDGE = 0.0, TYPE = "STANDING",
 // KS:          Solenoid strength (Rad/m)
 // FMAPFM:      Field file (string)
 
-// Note: OPAL scales the field file based on the max magnetic 
-// field value in the file, not Bz on axis. The max field 
-// value is normalized to 1 [T], and scaled with KS. 
-// i.e. The max value in the BF_559 file = 0.162544398 [T]. 
+// Note: OPAL scales the field file based on the max magnetic
+// field value in the file, not Bz on axis. The max field
+// value is normalized to 1 [T], and scaled with KS.
+// i.e. The max value in the BF_559 file = 0.162544398 [T].
 // Therefore, setting KS = 0.162544398 runs the magnet at max current.
 
 REAL KSBF = 0.162544398;
-if (OPALVERSION>15000)
- KSBF = KSBF/1.3528; 
+if (OPALVERSION>10500)
+ KSBF = KSBF/1.3528;
 
 // Buck and Focusing Solenoid
 BF: Solenoid, L = 0.5, ELEMEDGE=0.0, KS = KSBF,
     FMAPFN = "BF_550.T7";
 
-// Matching Solenoid 
+// Matching Solenoid
 // Max value in the M_440 file = 1.973966
 // Conversion from Current (I) to Scaling factor:
 // Scaling Factor (KS) = (I / Imax) * 1.973966
@@ -74,7 +74,7 @@ BF: Solenoid, L = 0.5, ELEMEDGE=0.0, KS = KSBF,
 
 REAL I  = 273; //[A]
 REAL SF = (I/440)*1.973966;
-if (OPALVERSION>15000)
+if (OPALVERSION>10500)
  SF = SF/3.2306;
 
 M:  Solenoid, L = 0.5, ELEMEDGE=0.0, KS = SF,
@@ -98,20 +98,20 @@ DRIVE: Line = (GS, DR1);
 //----------------------------------------------------------------------------
 // INITIAL DISTRIBUTION
 //
-// Flattop distribution. 
-// SIGMAX/Y:      RMS radius of transverse beam size (Laser radius in m). 
+// Flattop distribution.
+// SIGMAX/Y:      RMS radius of transverse beam size (Laser radius in m).
 // TRISE/FALL:    Rise time/fall time in longitudinal direction (s).
 // TPULSEFWHM:    FWHM in longitudinal direction (s).
 // CUTOFFLONG:    Longitudinal cuttoff in units of sigma.
 // NBIN:          Number of energy bins to use during emission.
-// DEBIN:         Defines when to combine bins (Min energy difference in KeV). 
-// EMISSIONSTEPS: Number of steps during emssion. 
+// DEBIN:         Defines when to combine bins (Min energy difference in KeV).
+// EMISSIONSTEPS: Number of steps during emssion.
 //                Emission time step is adjusted to fit this number.
-// EKIN:          Kinetic energy of electrons at emission (eV). 
-// ELASER:        Energy of laser (eV). 
-// W:             Photocathode work functioin (eV). 
-// FE:            Fermi energy of photocathode (eV). 
-// CATHTEMP:      Operating temperature of photocathode (K). 
+// EKIN:          Kinetic energy of electrons at emission (eV).
+// ELASER:        Energy of laser (eV).
+// W:             Photocathode work functioin (eV).
+// FE:            Fermi energy of photocathode (eV).
+// CATHTEMP:      Operating temperature of photocathode (K).
 
 // Note, ELASER, W, FE, and CATHTEMP are used for the NONEQUIL emission model.
 // These values are not necessary when using other models.
@@ -123,55 +123,55 @@ DRIVE: Line = (GS, DR1);
 Dist: DISTRIBUTION, DISTRIBUTION = FLATTOP,
         SIGMAX = 0.00075,
         SIGMAY = 0.00075,
-        TRISE = 6.0e-12,       
-        TFALL = 6.0e-12,       
-        TPULSEFWHM = 20.0e-12, 
+        TRISE = 6.0e-12,
+        TFALL = 6.0e-12,
+        TPULSEFWHM = 20.0e-12,
         CUTOFFLONG = 4.0,
         NBIN = 9,
-        DEBIN = 1, 
+        DEBIN = 1,
         EMISSIONSTEPS = 100,
         EMISSIONMODEL = ASTRA,
-        EKIN = 0.55,           
-        EMITTED = True,        
+        EKIN = 0.55,
+        EMITTED = True,
         WRITETOFILE = True;    //Saves the distribution to a text file
 
-// Note on emission time step: FWHM pulse width divided by emission 
-// steps gives the time step for the emissions process. 
-// i.e 20.0e-12 / 100 gives a time step of 2e-13 (s) during emission. 
-// This is the not the same as the time step used in rest of the file. 
+// Note on emission time step: FWHM pulse width divided by emission
+// steps gives the time step for the emissions process.
+// i.e 20.0e-12 / 100 gives a time step of 2e-13 (s) during emission.
+// This is the not the same as the time step used in rest of the file.
 
 //----------------------------------------------------------------------------
 // Define Field solvers
-// The mesh sizes should be a factor of 2 
+// The mesh sizes should be a factor of 2
 // for most efficient space charge calculation.
 
-FS_SC: Fieldsolver, FSTYPE = FFT, 
+FS_SC: Fieldsolver, FSTYPE = FFT,
             MX = 16, MY = 16, MT = 16, // SC grid size is 32^3
-            PARFFTX = false, 
-            PARFFTY = false, 
+            PARFFTX = false,
+            PARFFTY = false,
             PARFFTT = true,  // parallel in the z direction only
-            BCFFTX = open, 
-            BCFFTY = open, 
+            BCFFTX = open,
+            BCFFTY = open,
             BCFFTT = open,
-            BBOXINCR = 1, 
+            BBOXINCR = 1,
             GREENSF = INTEGRATED;
 
 //----------------------------------------------------------------------------
 // Electron Beam Definition
 
 BEAM1:  BEAM, PARTICLE = ELECTRON, pc = P0, NPART = n_particles,
-        BFREQ = rf_freq,BCURRENT = beam_bunch_charge * rf_freq, CHARGE = -1;
+        BFREQ = rf_freq, BCURRENT = beam_bunch_charge * rf_freq * 1e6, CHARGE = -1;
 
 //----------------------------------------------------------------------------
 // Simulate the beamline using TRACK and RUN.
 // Note, different time steps are set based on the z location in the beam line.
-// In the case below, 1.0e-13 is used for 0.0 to 0.4 m, 
-// and 3.0e-12 is used from 0.4 to 5 m. 
+// In the case below, 1.0e-13 is used for 0.0 to 0.4 m,
+// and 3.0e-12 is used from 0.4 to 5 m.
 
-TRACK, LINE = DRIVE, BEAM = BEAM1, MAXSTEPS = 1900000, 
+TRACK, LINE = DRIVE, BEAM = BEAM1, MAXSTEPS = 1900000,
     DT = {1.0e-13, 3.0e-12}, ZSTOP={0.4, 5.0};
 
-RUN, METHOD = "PARALLEL-T", BEAM = BEAM1, 
+RUN, METHOD = "PARALLEL-T", BEAM = BEAM1,
     FIELDSOLVER = FS_SC, DISTRIBUTION = Dist;
 ENDTRACK;
 
