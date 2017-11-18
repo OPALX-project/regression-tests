@@ -7,15 +7,15 @@ OPTION, VERSION=10600;
 
 Title, string="Phase 1 of PSI FEL 250 Injector with CTF3 RF Photoinjector";
 
-REAL FINSB01_RACC_phi = 0; 
-REAL FINSB02_RACC_phi = 0;    
+REAL FINSB01_RACC_phi = 0;
+REAL FINSB02_RACC_phi = 0;
 
 REAL REPARTFREQ       = 100;
 REAL MINSTEPFORREBIN  = 600;
 
 REAL QB               = 0.2e-9;
 REAL BF               = 2998.0;
-REAL BC               = QB*BF;
+REAL BC               = QB*BF*1e6;
 
 
 // Begin: CTF3 /////////////////////////////////////////////////////////////////////////////////////////////////
@@ -76,7 +76,7 @@ SCREEN6: Monitor, L = 0.01, ELEMEDGE = 3.0, OUTFN = "Screen6.h5";
 SCREEN7: Monitor, L = 0.01, ELEMEDGE = 3.126, OUTFN = "Screen7.h5";
 SCREEN8: Monitor, L = 0.01, ELEMEDGE = 3.252, OUTFN = "Screen8.h5";
 SCREEN9: Monitor, L = 0.01, ELEMEDGE = 4.126, OUTFN = "Screen9.h5";
-SCREEN10: Monitor, L = 0.01, ELEMEDGE = 5.126, OUTFN = "Screen10.h5"; 
+SCREEN10: Monitor, L = 0.01, ELEMEDGE = 5.126, OUTFN = "Screen10.h5";
 
 SCREENS: Line = (SCREEN1,SCREEN2,SCREEN3,SCREEN4,SCREEN5,SCREEN6,SCREEN7,SCREEN8,SCREEN9,SCREEN10);
 // End: Screen monitors //////////////////////////////////////////////////////////////////////////////////////
@@ -116,12 +116,12 @@ beam1: BEAM, PARTICLE = ELECTRON, pc = P0, NPART = 20000, BFREQ = BF , BCURRENT 
 
 Select, Line=Injector;
 
-// Simulation of the gun with step size DTGUN 
-track, line= Injector, beam=beam1, MAXSTEPS=100, DT=1.0e-12, ZSTOP=0.14;  
+// Simulation of the gun with step size DTGUN
+track, line= Injector, beam=beam1, MAXSTEPS=100, DT=1.0e-12, ZSTOP=0.14;
  run, method = "PARALLEL-T", beam = beam1, fieldsolver = Fs1, distribution = Dist1;
 endtrack;
 
-// Simulation of the beam with step size DT 
+// Simulation of the beam with step size DT
 track,line= Injector, beam=beam1, MAXSTEPS=50, DT=1.0e-11, ZSTOP=0.20;
  run, method = "PARALLEL-T", beam=beam1, fieldsolver=Fs1;
 endtrack;

@@ -5,9 +5,9 @@ OPTION, VERSION=10600;
 
 TITLE, STRING="Gauss Distribution Protons";
 
-REAL Edes   = 0.500;    // 0.5 GeV             
+REAL Edes   = 0.500;    // 0.5 GeV
 REAL QB     = 0.77e-12;   // charge in Cb
-REAL BF     = 1300.0;   // frequency in Mhz
+REAL BF     = 1300.0e6;   // frequency in Mhz
 REAL BC     = QB*BF;    // bunch current
 
 REAL gamma=(Edes+PMASS)/PMASS;
@@ -27,8 +27,8 @@ BBOXINCR = 1, GREENSF = INTEGRATED;
 
 
 //Dist2:DISTRIBUTION, DISTRIBUTION = GAUSS,
-//SIGMAX = 0.00001, SIGMAPX=0.00001, 
-//SIGMAY = 0.00001, SIGMAPY=0.00001, 
+//SIGMAX = 0.00001, SIGMAPX=0.00001,
+//SIGMAY = 0.00001, SIGMAPY=0.00001,
 //SIGMAT = 1e-8 , PT=Edes*1e9;
 
 REAL sigpx = sqrt((0.00001*1.0e-9/PMASS + 1.0)^2 - 1.0);
@@ -37,9 +37,9 @@ REAL pzave = sqrt((Edes/PMASS + 1.0)^2 - 1.0);
 
 Dist2:DISTRIBUTION, DISTRIBUTION = GAUSS,
 		    SIGMAX = 0.00001,
-		    SIGMAPX = 0.00001, 
+		    SIGMAPX = 0.00001,
 		    SIGMAY = 0.00001,
-		    SIGMAPY = 0.00001, 
+		    SIGMAPY = 0.00001,
 		    SIGMAT = 1e-8 ,
 		    CORRX = -0.0,
 		    CORRY = 0.5,
@@ -47,11 +47,11 @@ Dist2:DISTRIBUTION, DISTRIBUTION = GAUSS,
 
 
 // pc:   momentum per particle in GeV/c
-beam1: BEAM, PARTICLE = PROTON, PC = P0, NPART = 1000000, BFREQ = BF, BCURRENT = BC;
+beam1: BEAM, PARTICLE = PROTON, PC = P0, NPART = 1000000, BFREQ = BF * 1e-6, BCURRENT = BC;
 
 SELECT, LINE=lattice;
 
-TRACK, LINE=lattice, BEAM=beam1, MAXSTEPS=1, DT=1e-11, ZSTOP=0.25;  
+TRACK, LINE=lattice, BEAM=beam1, MAXSTEPS=1, DT=1e-11, ZSTOP=0.25;
  RUN, METHOD = "PARALLEL-T", BEAM = beam1, FIELDSOLVER = Fs1, DISTRIBUTION = Dist2;
 ENDTRACK;
 QUIT;

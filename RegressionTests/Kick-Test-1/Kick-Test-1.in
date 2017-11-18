@@ -13,11 +13,11 @@ Title, string="General kick Test";
 //
 // Here we define some global simulation parameters.
 
-REAL RF_FREQUENCY = 700.0e6;			     // Reference frequency of problem (Hz).
-REAL RF_WAVELENGTH = CLIGHT / RF_FREQUENCY; 	     // Reference wavelength (m).
+REAL RF_FREQUENCY = 700.0e6;                 // Reference frequency of problem (Hz).
+REAL RF_WAVELENGTH = CLIGHT / RF_FREQUENCY;          // Reference wavelength (m).
 
-REAL Q_E = 1.60217653e-19;  	 		     // Elementary charge (C).
-REAL E_MASS = 9.10938188e-31;		     // Mass of electron (kg).
+REAL Q_E = 1.60217653e-19;                    // Elementary charge (C).
+REAL E_MASS = 9.10938188e-31;             // Mass of electron (kg).
 
 
 REAL BEAM_BUNCH_CHARGE = 0.0e-15;     // Beam bunch charge (C).
@@ -29,9 +29,9 @@ REAL STAT_DUMP_FREQUENCY = 10; // How often (time steps) beam statistical proper
 value, {RF_FREQUENCY,
         RF_WAVELENGTH,
         BEAM_BUNCH_CHARGE,
-	NUMBER_OF_PARTICLES,
-	PS_DUMP_FREQUENCY,
-	STAT_DUMP_FREQUENCY};
+    NUMBER_OF_PARTICLES,
+    PS_DUMP_FREQUENCY,
+    STAT_DUMP_FREQUENCY};
 
 //============================================
 // Timestep information.
@@ -65,7 +65,7 @@ REAL FS_SC1_Z_BINS = 8; // Number of mesh bins in z direction for space charge f
 
 value, {FS_SC1_X_BINS,
         FS_SC1_Y_BINS,
-	FS_SC1_Z_BINS};
+    FS_SC1_Z_BINS};
 
 
 //******************************************************************************************************************
@@ -109,8 +109,8 @@ REAL kick_length = 0.1;
 value, {drift_before_kick,
         drift_after_kick,
         hkick_angle,
-	vkick_angle,
-	kick_length};
+    vkick_angle,
+    kick_length};
 
 //******************************************************************************************************************
 //******************************************************************************************************************
@@ -127,9 +127,9 @@ value, {drift_before_kick,
 // First space charge field solver.
 
 FS_SC1: Fieldsolver, FSTYPE = NONE, MX = FS_SC1_X_BINS, MY = FS_SC1_Y_BINS, MT = FS_SC1_Z_BINS,
-		     PARFFTX = false, PARFFTY = false, PARFFTT = true,
-		     BCFFTX = open, BCFFTY = open, BCFFTT = open,
-		     BBOXINCR = 2, GREENSF = INTEGRATED;
+             PARFFTX = false, PARFFTY = false, PARFFTT = true,
+             BCFFTX = open, BCFFTY = open, BCFFTT = open,
+             BBOXINCR = 2, GREENSF = INTEGRATED;
 
 
 //******************************************************************************************************************
@@ -152,16 +152,16 @@ FS_SC1: Fieldsolver, FSTYPE = NONE, MX = FS_SC1_X_BINS, MY = FS_SC1_Y_BINS, MT =
 //
 
 //
-// L:			physical element length (real in m)
+// L:            physical element length (real in m)
 // HKICK:               horizontal kick angle (rad)
 // VKICK:               vertical kick angle (rad)
-// ELEMEDGE:	     	physical start of the element on the floor (real in m)
+// ELEMEDGE:             physical start of the element on the floor (real in m)
 //
 
 kick1: KICKER, HKICK = hkick_angle * Pi / 180.0,
                VKICK = vkick_angle * Pi / 180.0,
-	       ELEMEDGE = global_shift + drift_before_kick,
-	       L = kick_length;
+           ELEMEDGE = global_shift + drift_before_kick,
+           L = kick_length;
 
 
 // Calculate position of end of Kick.
@@ -201,7 +201,7 @@ Beamline: Line = (kick1);
 //
 
 Initial_Distribution: DISTRIBUTION, DISTRIBUTION = FROMFILE,
-			 	    FNAME = "Kick-Test-1.dat";
+                     FNAME = "Kick-Test-1.dat";
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -228,11 +228,11 @@ Option, STATDUMPFREQ = STAT_DUMP_FREQUENCY;
 // Here we define beam that will be transported.
 //\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 beam_1: BEAM, PARTICLE = ELECTRON,
-	      pc = P0,
-	      NPART = NUMBER_OF_PARTICLES,
-	      BFREQ = RF_FREQUENCY,
-      	      BCURRENT = BEAM_BUNCH_CHARGE * RF_FREQUENCY,
-	      CHARGE = -1;
+          pc = P0,
+          NPART = NUMBER_OF_PARTICLES,
+          BFREQ = RF_FREQUENCY * 1e-6,
+          BCURRENT = BEAM_BUNCH_CHARGE * RF_FREQUENCY,
+          CHARGE = -1;
 
 
 //\\\\\\\\\\\\\\\\
@@ -253,4 +253,3 @@ RUN, METHOD = "PARALLEL-T",
 ENDTRACK;
 
 Stop;
-
