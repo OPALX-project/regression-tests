@@ -10,7 +10,7 @@ Title, string="AWA Photoinjector";
 //----------------------------------------------------------------------------
 //Global Parameters
 
-REAL rf_freq             = 1.3e9;     //RF frequency. (Hz)
+REAL rf_freq             = 1.3e3;     //RF frequency. (Hz)
 REAL n_particles         = 1E4;      //Number of particles in simulation.
 REAL beam_bunch_charge   = 1e-9;      //Charge of bunch. (C)
 
@@ -21,7 +21,7 @@ REAL beta    = sqrt(1-(1/gamma^2));
 REAL P0      = gamma*beta*EMASS;    //inital z momentum
 
 //Printing initial energy and momentum to terminal output.
-value , {Edes, P0};
+value , {Edes, P0, OPALVERSION};
 
 //----------------------------------------------------------------------------
 // RF photoinjector (Gun)
@@ -43,7 +43,7 @@ REAL gun_inj_phase = 0.0;  // Rf injection phase (in degrees) with restpect
 GUNSOURCE: SOURCE, ELEMEDGE = 0.0;
 
 GUN:    RFCavity, L = 0.2927, VOLT = 60.0, ELEMEDGE = 0.0, TYPE = "STANDING",
-        FMAPFN = "DriveGun.T7", FREQ = 1300.0, LAG = (gun_inj_phase*Pi)/180.0;
+        FMAPFN = "DriveGun.T7", FREQ = rf_freq, LAG = (gun_inj_phase*Pi)/180.0;
         //LAG (phase) is converted to radians
 
 //----------------------------------------------------------------------------
@@ -61,7 +61,7 @@ GUN:    RFCavity, L = 0.2927, VOLT = 60.0, ELEMEDGE = 0.0, TYPE = "STANDING",
 // Therefore, setting KS = 0.162544398 runs the magnet at max current.
 
 REAL KSBF = 0.162544398;
-if (OPALVERSION>15000)
+if (OPALVERSION>10500)
  KSBF = KSBF/1.3528;
 
 // Buck and Focusing Solenoid
@@ -76,7 +76,7 @@ BF: Solenoid, L = 0.5, ELEMEDGE=0.0, KS = KSBF,
 
 REAL I  = 273; //[A]
 REAL SF = (I/440)*1.973966;
-if (OPALVERSION>15000)
+if (OPALVERSION>10500)
  SF = SF/3.2306;
 
 M:  Solenoid, L = 0.5, ELEMEDGE=0.0, KS = SF,
@@ -162,7 +162,7 @@ FS_SC: Fieldsolver, FSTYPE = FFT,
 // Electron Beam Definition
 
 BEAM1:  BEAM, PARTICLE = ELECTRON, pc = P0, NPART = n_particles,
-        BFREQ = rf_freq * 1e-6,BCURRENT = beam_bunch_charge * rf_freq, CHARGE = -1;
+        BFREQ = rf_freq, BCURRENT = beam_bunch_charge * rf_freq * 1e6, CHARGE = -1;
 
 //----------------------------------------------------------------------------
 // Simulate the beamline using TRACK and RUN.
