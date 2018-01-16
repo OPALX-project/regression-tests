@@ -25,6 +25,9 @@ REAL NUMBER_OF_PARTICLES = 10000; // Number of particles in simulation
 
 REAL PS_DUMP_FREQUENCY = 100000;     // How often (time steps) that the phase space of the beam is output.
 REAL STAT_DUMP_FREQUENCY = 10; // How often (time steps) beam statistical properties are output.
+REAL ekin = 7e-3;
+REAL gamma = ekin / EMASS + 1;
+REAL bega = sqrt(gamma*gamma - 1);
 
 value, {RF_FREQUENCY,
         RF_WAVELENGTH,
@@ -222,7 +225,7 @@ Option, STATDUMPFREQ = STAT_DUMP_FREQUENCY;
 // Here we define beam that will be transported.
 //\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 beam_1: BEAM, PARTICLE = ELECTRON,
-	      pc = P0,
+              PC = bega * EMASS,
 	      NPART = NUMBER_OF_PARTICLES,
 	      BFREQ = RF_FREQUENCY * 1e-6,
       	      BCURRENT = BEAM_BUNCH_CHARGE * RF_FREQUENCY,
@@ -235,7 +238,7 @@ beam_1: BEAM, PARTICLE = ELECTRON,
 
 TRACK, LINE = Beamline,
        BEAM = beam_1,
-       MAXSTEPS = 1000000,
+       MAXSTEPS = 590,//1000000,
        DT = TIME_STEP_1,
        ZSTART = 1.0,
        ZSTOP = kick_end;
