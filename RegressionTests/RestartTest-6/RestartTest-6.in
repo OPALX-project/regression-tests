@@ -21,7 +21,7 @@ REAL BC               = QB*BF*1e6;
 //
 // Definition of CTF3 RF photoinjector.
 //
-GUN: SOURCE, ELEMEDGE=0.0;
+
 //
 // L:		physical element length (real in m)
 // VOLT:	field scaling factor (real)
@@ -53,7 +53,7 @@ FIND1_MQ30: Quadrupole, L=0.1, K1= 0.0, ELEMEDGE=1.74;
 //elemento fittizio utilizzato per prolungare la linea del fascio
 END: Solenoid, L=0.01, KS = 0.01, ELEMEDGE=100., FMAPFN="NEW_SINGLE_SOL_NOFRINGE_ASTRA.opal";
 
-Injector: Line = (GUN, FINSS_RGUN, FIND1_MSOL10, FIND1_MQ10, FIND1_MQ20, FIND1_MQ30, END);
+Injector: Line = (FINSS_RGUN, FIND1_MSOL10, FIND1_MQ10, FIND1_MQ20, FIND1_MQ30, END);
 // End: CTF3 //////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -113,7 +113,7 @@ beam1: BEAM, PARTICLE = ELECTRON, pc = P0, NPART = 20000, BFREQ = BF, BCURRENT =
 SELECT, LINE=Injector;
 
 // Simulation of the gun with step size DTGUN
-TRACK, LINE= Injector, BEAM=beam1, MAXSTEPS=100, DT=5.0e-12, ZSTOP=0.03;
+TRACK, LINE= Injector, BEAM=beam1, MAXSTEPS=250, DT=5.0e-12, ZSTOP=0.25;
  RUN, METHOD = "PARALLEL-T", BEAM = beam1, FIELDSOLVER = Fs1, DISTRIBUTION = Dist1;
 ENDTRACK;
 
