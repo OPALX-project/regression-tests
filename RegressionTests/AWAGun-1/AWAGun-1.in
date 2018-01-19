@@ -168,8 +168,8 @@ BEAM1:  BEAM, PARTICLE = ELECTRON, pc = P0, NPART = n_particles,
 // In the case below, 1.0e-13 is used for 0.0 to 0.4 m,
 // and 3.0e-12 is used from 0.4 to 5 m.
 
-TRACK, LINE = DRIVE, BEAM = BEAM1, MAXSTEPS = 1900000,
-    DT = {1.0e-13, 3.0e-12}, ZSTOP={0.4, 5.0};
+TRACK, LINE = DRIVE, BEAM = BEAM1, MAXSTEPS = 19000,
+    DT = {1.0e-13, 3.0e-12}, ZSTOP={0.4, 2.0};
 
 RUN, METHOD = "PARALLEL-T", BEAM = BEAM1,
     FIELDSOLVER = FS_SC, DISTRIBUTION = Dist;
