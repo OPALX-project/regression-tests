@@ -108,8 +108,9 @@ REAL kick_length = 0.1;
 
 value, {drift_before_kick,
         drift_after_kick,
-        kick_angle,
-	kick_length};
+        hkick_angle,
+        vkick_angle,
+	    kick_length};
 
 //******************************************************************************************************************
 //******************************************************************************************************************
@@ -159,8 +160,8 @@ FS_SC1: Fieldsolver, FSTYPE = NONE, MX = FS_SC1_X_BINS, MY = FS_SC1_Y_BINS, MT =
 
 kick1: KICKER, HKICK = hkick_angle * Pi / 180.0,
                VKICK = vkick_angle * Pi / 180.0,
-	       ELEMEDGE = global_shift + drift_before_kick,
-	       L = kick_length;
+               ELEMEDGE = global_shift + drift_before_kick,
+               L = kick_length;
 
 
 // Calculate position of end of Kick.
