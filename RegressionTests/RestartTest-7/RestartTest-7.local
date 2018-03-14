@@ -1,6 +1,0 @@
-#!/bin/bash
-
-cp RestartTest-7.h5.bak RestartTest-7.h5
-cp RestartTest-7.stat.bak RestartTest-7.stat
-cp RestartTest-7.lbal.bak RestartTest-7.lbal
-timeout 300s mpirun -np 4 $OPAL_EXE_PATH/opal RestartTest-7.in -restart -1 --commlib mpi --info 3 --warn 0
