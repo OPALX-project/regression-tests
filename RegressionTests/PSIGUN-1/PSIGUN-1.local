@@ -1,2 +1,2 @@
 #!/bin/bash 
-mpirun -np 4 "$OPAL_EXE_PATH/opal" "$@" PSIGUN-1.in --commlib mpi --info 3 --warn 0 2>&1
+timeout 300 mpirun -np 4 "$OPAL_EXE_PATH/opal" "$@" PSIGUN-1.in --commlib mpi --info 3 --warn 0 2>&1
