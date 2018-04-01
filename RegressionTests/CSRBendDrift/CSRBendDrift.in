@@ -91,13 +91,18 @@ REAL global_shift = 1.0;
 //================================================
 
 // drift before bend (m).
-REAL drift_before_bend = 0.1;
+REAL drift_before_bend = 0.2;
 
 // Bend angle (radians).
 REAL bend_angle = 0.5235987755982988;
 
 // Bend design energy (MeV).
-REAL bend_energy = 7.0;
+REAL bend_energy = 6.50762633;
+
+REAL gamma = (bend_energy * 1e-3 + EMASS)/EMASS;
+REAL beta = sqrt(1-(1/gamma^2));
+REAL gambet = gamma*beta;
+REAL P0 = gamma*beta*EMASS;
 
 // Bend length (m).
 REAL bend_length = 0.129409522551;
@@ -186,7 +191,7 @@ if (CSR_ON > 0) {
 		L = bend_length,
                 GAP = 0.02,
 	       	WAKEF = FS_CSR_WAKE;
-   drift2:DRIFT, L=0.4, ELEMEDGE=bend_length + drift_before_bend, WAKEF = FS_CSR_WAKE;
+   drift2:DRIFT, L=0.4, ELEMEDGE=0.4 + bend_length + drift_before_bend, WAKEF = FS_CSR_WAKE;
 } else {
    bend1: SBend, ANGLE = bend_angle,
                 E1 = 0.08726646259971647,
@@ -196,7 +201,7 @@ if (CSR_ON > 0) {
 	       	DESIGNENERGY = bend_energy,
 		L = bend_length,
                 GAP = 0.02;
-   drift2:DRIFT, L=0.4, ELEMEDGE=bend_length + drift_before_bend;
+   drift2:DRIFT, L=0.4, ELEMEDGE=0.4 + bend_length + drift_before_bend;
 }
 
 //******************************************************************************************************************
