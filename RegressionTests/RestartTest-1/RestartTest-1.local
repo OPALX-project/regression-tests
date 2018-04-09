@@ -10,5 +10,5 @@ for X in h5 lbal stat; do
 	cp "$regtest.$X.bak" "$regtest.$X"
 done
 
-mpirun -np 4 "$OPAL_EXE_PATH/opal" "$@" "$regtest.in" -restart -1 --commlib mpi --info 3 --warn 0 2>&1
+timeout 300 mpirun -np 1 "$OPAL_EXE_PATH/opal" "$@" "$regtest.in" -restart -1 --commlib mpi --info 3 --warn 0 2>&1
 
