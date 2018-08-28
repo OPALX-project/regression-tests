@@ -1,2 +1,58 @@
-# 4
-24996         	24997         	25429         	24578         	
+SDDS1
+&description
+        text="Processor statistics 'RingCyclotronMatched.in' 28/08/201815:24:02",
+        contents="stat parameters"
+&end
+&parameter
+        name=processors,
+        type=long,
+        description="Number of Cores used"
+&end
+&parameter
+        name=revision,
+        type=string,
+        description="git revision of opal"
+&end
+&parameter
+        name=flavor,
+        type=string,
+        description="OPAL flavor that wrote file"
+&end
+&column
+        name=t,
+        type=double,
+        units=ns,
+        description="1 Time"
+&end
+&column
+        name=processor-0,
+        type=long,
+        units=1,
+        description="2 Number of particles of processor 0"
+&end
+&column
+        name=processor-1,
+        type=long,
+        units=1,
+        description="3 Number of particles of processor 1"
+&end
+&column
+        name=processor-2,
+        type=long,
+        units=1,
+        description="4 Number of particles of processor 2"
+&end
+&column
+        name=processor-3,
+        type=long,
+        units=1,
+        description="5 Number of particles of processor 3"
+&end
+&data
+        mode=ascii,
+        no_row_counts=1
+&end
+4
+OPAL 2.0.0 git rev. #598d1782c7d3290d015bca8754e2b76c4a48bf1d
+opal-cycl
+0.000000000000000e+00         	26366         	23216         	23310         	27108
