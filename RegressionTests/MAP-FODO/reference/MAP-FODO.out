@@ -1,0 +1,2097 @@
+Ippl> CommMPI: Parent process waiting for children ...
+Ippl> CommMPI: Initialization complete.
+>                ____  _____       ___ 
+>               / __ \|  __ \ /\   | | 
+>              | |  | | |__) /  \  | |
+>              | |  | |  ___/ /\ \ | |
+>              | |__| | |  / ____ \| |____
+>               \____/|_| /_/    \_\______|
+OPAL> 
+OPAL> This is OPAL (Object Oriented Parallel Accelerator Library) Version 2.0.0
+OPAL> 
+OPAL>                 (c) PSI, http://amas.web.psi.ch
+OPAL> The optimiser (former opt-Pilot) is integrated 
+OPAL> 
+OPAL> Please send cookies, goodies or other motivations (wine and beer ... ) 
+OPAL> to the OPAL developers opal@lists.psi.ch
+OPAL> 
+OPAL> Time: 14:08:22 date: 19/09/2018
+OPAL> 
+OPAL> Couldn't find startup file "/afs/psi.ch/user/s/snuverink_j/init.opal".
+OPAL> Note: this is not mandatory for an OPAL simulation!
+OPAL> 
+OPAL> * Reading input stream "MAP-FODO.in".
+OPAL> 
+OPAL> value: {GAMMA,BRHO,EDES,BETA,GAMBET}={1.10658,1.48297,0.1,0.428195,0.473832}
+OPAL> 
+OPAL> * ********************************************************************************** 
+OPAL> * Selected Tracking Method == THICK, NEW TRACK
+OPAL> * ********************************************************************************** 
+Ippl> no solver attached
+OPAL> 
+OPAL> * ************* D I S T R I B U T I O N ********************************************
+OPAL> * 
+OPAL> * Number of particles: 200
+OPAL> * 
+OPAL> * Distribution type: FROMFILE
+OPAL> * 
+OPAL> * Input file:        data/FODO_DIST.dat
+OPAL> * 
+OPAL> * Distribution is injected.
+OPAL> * 
+OPAL> * **********************************************************************************
+OPAL> 
+OPAL> * ************* B E A M ************************************************************ 
+OPAL> * BEAM        BEAM1
+OPAL> * PARTICLE    PROTON
+OPAL> * CURRENT     0.002 A
+OPAL> * FREQUENCY   5.06328e+07 MHz
+OPAL> * CHARGE      +e * 1 
+OPAL> * REST MASS   0.938272 GeV
+OPAL> * MOMENTUM    0.444583
+OPAL> * NPART       200
+OPAL> * ********************************************************************************** 
+OPAL> 
+OPAL> * ************* F I E L D S O L V E R ********************************************** 
+OPAL> * FIELDSOLVER  FS1
+OPAL> * TYPE         NONE
+OPAL> * N-PROCESSORS 1
+OPAL> * MX           64
+OPAL> * MY           64
+OPAL> * MT           64
+OPAL> * BBOXINCR     1
+OPAL> * XDIM         parallel  
+OPAL> * YDIM         parallel  
+OPAL> * Z(T)DIM      parallel  
+OPAL> * ********************************************************************************** 
+OPAL> 
+ThickTracker> Truncation order: 2
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =        0.000 [eV]
+ThickTracker> * rmax            = (      0.00000 ,      0.00000 ,      1.31585 ) [mm]
+ThickTracker> * rmin            = (      0.00000 ,      0.00000 ,     -1.28554 ) [mm]
+ThickTracker> * rms beam size   = (      0.00000 ,      0.00000 ,    482.79890 ) [um]
+ThickTracker> * rms momenta     = (  4.37301e-02 ,  4.09785e-02 ,  0.00000e+00 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00000 ,      0.00000 ,      0.00000 ) [um]
+ThickTracker> * mean momenta    = ( -3.21349e-13 , -2.05024e-14 ,  4.70041e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  0.00000e+00 ,  0.00000e+00 ,  0.00000e+00 ) (not normalized)
+ThickTracker> * rms correlation = (  0.00000e+00 ,  0.00000e+00 , -0.00000e+00 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =        0.000 [fs]         dT    =      100.000 [ps]
+ThickTracker> * spos            =        0.000 [um]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =        0.000 [eV]
+ThickTracker> * rmax            = (     26.03238 ,     26.05042 ,     -0.54116 ) [mm]
+ThickTracker> * rmin            = (    -26.52831 ,    -22.72584 ,     -4.13561 ) [mm]
+ThickTracker> * rms beam size   = (      9.15932 ,      8.59222 ,      0.59672 ) [mm]
+ThickTracker> * rms momenta     = (  4.37301e-02 ,  4.09785e-02 ,  0.00000e+00 ) [beta gamma]
+ThickTracker> * mean position   = (     -0.00019 ,     -0.00477 ,     -1.87928 ) [mm]
+ThickTracker> * mean momenta    = ( -3.21349e-13 , -2.05024e-14 ,  4.70041e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  8.42462e-06 ,  6.63120e-06 ,  0.00000e+00 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99950e-01 ,  9.99960e-01 ,  0.00000e+00 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =      778.983 [ps]         dT    =      778.983 [ps]
+ThickTracker> * spos            =      100.000 [mm]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =        0.000 [eV]
+ThickTracker> * rmax            = (     52.06476 ,     52.10083 ,     -2.20578 ) [mm]
+ThickTracker> * rmin            = (    -53.05662 ,    -45.45168 ,     -7.27781 ) [mm]
+ThickTracker> * rms beam size   = (     18.31864 ,     17.18444 ,      0.85089 ) [mm]
+ThickTracker> * rms momenta     = (  4.37301e-02 ,  4.09785e-02 ,  0.00000e+00 ) [beta gamma]
+ThickTracker> * mean position   = (     -0.00038 ,     -0.00954 ,     -3.75857 ) [mm]
+ThickTracker> * mean momenta    = ( -3.21349e-13 , -2.05024e-14 ,  4.70041e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.68492e-05 ,  1.32624e-05 ,  0.00000e+00 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99950e-01 ,  9.99960e-01 ,  0.00000e+00 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =        1.558 [ns]         dT    =      778.983 [ps]
+ThickTracker> * spos            =      200.000 [mm]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =        0.000 [eV]
+ThickTracker> * rmax            = (     78.09714 ,     78.15125 ,     -3.87039 ) [mm]
+ThickTracker> * rmin            = (    -79.58493 ,    -68.17752 ,    -10.57222 ) [mm]
+ThickTracker> * rms beam size   = (     27.47796 ,     25.77665 ,      1.15625 ) [mm]
+ThickTracker> * rms momenta     = (  4.37301e-02 ,  4.09785e-02 ,  0.00000e+00 ) [beta gamma]
+ThickTracker> * mean position   = (     -0.00057 ,     -0.01432 ,     -5.63785 ) [mm]
+ThickTracker> * mean momenta    = ( -3.21349e-13 , -2.05024e-14 ,  4.70041e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  2.52739e-05 ,  1.98936e-05 ,  0.00000e+00 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99950e-01 ,  9.99960e-01 ,  0.00000e+00 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =        2.337 [ns]         dT    =      778.983 [ps]
+ThickTracker> * spos            =      300.000 [mm]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =        0.000 [eV]
+ThickTracker> * rmax            = (    104.12951 ,    104.20166 ,     -5.53500 ) [mm]
+ThickTracker> * rmin            = (   -106.11325 ,    -90.90336 ,    -13.86664 ) [mm]
+ThickTracker> * rms beam size   = (     36.63728 ,     34.36887 ,      1.48148 ) [mm]
+ThickTracker> * rms momenta     = (  4.37301e-02 ,  4.09785e-02 ,  0.00000e+00 ) [beta gamma]
+ThickTracker> * mean position   = (     -0.00076 ,     -0.01909 ,     -7.51713 ) [mm]
+ThickTracker> * mean momenta    = ( -3.21349e-13 , -2.05024e-14 ,  4.70041e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  3.36985e-05 ,  2.65248e-05 ,  0.00000e+00 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99950e-01 ,  9.99960e-01 ,  0.00000e+00 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =        3.116 [ns]         dT    =      778.983 [ps]
+ThickTracker> * spos            =      400.000 [mm]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =        0.000 [eV]
+ThickTracker> * rmax            = (    130.16189 ,    130.25208 ,     -7.16253 ) [mm]
+ThickTracker> * rmin            = (   -132.64156 ,   -113.62920 ,    -17.16106 ) [mm]
+ThickTracker> * rms beam size   = (     45.79659 ,     42.96109 ,      1.81593 ) [mm]
+ThickTracker> * rms momenta     = (  4.37301e-02 ,  4.09785e-02 ,  0.00000e+00 ) [beta gamma]
+ThickTracker> * mean position   = (     -0.00095 ,     -0.02386 ,     -9.39641 ) [mm]
+ThickTracker> * mean momenta    = ( -3.21349e-13 , -2.05024e-14 ,  4.70041e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  4.21231e-05 ,  3.31560e-05 ,  0.00000e+00 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99950e-01 ,  9.99960e-01 ,  0.00000e+00 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =        3.895 [ns]         dT    =      778.983 [ps]
+ThickTracker> * spos            =      500.000 [mm]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =        0.000 [eV]
+ThickTracker> * rmax            = (    156.19427 ,    156.30249 ,     -8.70153 ) [mm]
+ThickTracker> * rmin            = (   -159.16987 ,   -136.35504 ,    -20.45547 ) [mm]
+ThickTracker> * rms beam size   = (     54.95591 ,     51.55331 ,      2.15532 ) [mm]
+ThickTracker> * rms momenta     = (  4.37301e-02 ,  4.09785e-02 ,  0.00000e+00 ) [beta gamma]
+ThickTracker> * mean position   = (     -0.00114 ,     -0.02863 ,    -11.27570 ) [mm]
+ThickTracker> * mean momenta    = ( -3.21349e-13 , -2.05024e-14 ,  4.70041e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  5.05477e-05 ,  3.97872e-05 ,  0.00000e+00 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99950e-01 ,  9.99960e-01 ,  0.00000e+00 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =        4.674 [ns]         dT    =      778.983 [ps]
+ThickTracker> * spos            =      600.000 [mm]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =        0.000 [eV]
+ThickTracker> * rmax            = (    182.22665 ,    182.35291 ,    -10.24053 ) [mm]
+ThickTracker> * rmin            = (   -185.69818 ,   -159.08088 ,    -23.74989 ) [mm]
+ThickTracker> * rms beam size   = (     64.11523 ,     60.14552 ,      2.49763 ) [mm]
+ThickTracker> * rms momenta     = (  4.37301e-02 ,  4.09785e-02 ,  0.00000e+00 ) [beta gamma]
+ThickTracker> * mean position   = (     -0.00133 ,     -0.03340 ,    -13.15498 ) [mm]
+ThickTracker> * mean momenta    = ( -3.21349e-13 , -2.05024e-14 ,  4.70041e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  5.89723e-05 ,  4.64184e-05 ,  0.00000e+00 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99950e-01 ,  9.99960e-01 ,  0.00000e+00 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =        5.453 [ns]         dT    =      778.983 [ps]
+ThickTracker> * spos            =      700.000 [mm]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =        0.000 [eV]
+ThickTracker> * rmax            = (    208.25903 ,    208.40332 ,    -11.77953 ) [mm]
+ThickTracker> * rmin            = (   -212.22649 ,   -181.80672 ,    -27.04430 ) [mm]
+ThickTracker> * rms beam size   = (     73.27455 ,     68.73774 ,      2.84180 ) [mm]
+ThickTracker> * rms momenta     = (  4.37301e-02 ,  4.09785e-02 ,  0.00000e+00 ) [beta gamma]
+ThickTracker> * mean position   = (     -0.00153 ,     -0.03818 ,    -15.03426 ) [mm]
+ThickTracker> * mean momenta    = ( -3.21349e-13 , -2.05024e-14 ,  4.70041e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  6.73969e-05 ,  5.30496e-05 ,  0.00000e+00 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99950e-01 ,  9.99960e-01 ,  0.00000e+00 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =        6.232 [ns]         dT    =      778.983 [ps]
+ThickTracker> * spos            =      800.000 [mm]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =        0.000 [eV]
+ThickTracker> * rmax            = (    234.29141 ,    234.45374 ,    -13.31853 ) [mm]
+ThickTracker> * rmin            = (   -238.75480 ,   -204.53256 ,    -30.33872 ) [mm]
+ThickTracker> * rms beam size   = (     82.43387 ,     77.32996 ,      3.18724 ) [mm]
+ThickTracker> * rms momenta     = (  4.37301e-02 ,  4.09785e-02 ,  0.00000e+00 ) [beta gamma]
+ThickTracker> * mean position   = (     -0.00172 ,     -0.04295 ,    -16.91355 ) [mm]
+ThickTracker> * mean momenta    = ( -3.21349e-13 , -2.05024e-14 ,  4.70041e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  7.58216e-05 ,  5.96808e-05 ,  0.00000e+00 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99950e-01 ,  9.99960e-01 ,  0.00000e+00 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =        7.011 [ns]         dT    =      778.983 [ps]
+ThickTracker> * spos            =      900.000 [mm]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =        0.000 [eV]
+ThickTracker> * rmax            = (    260.32378 ,    260.50415 ,    -14.85753 ) [mm]
+ThickTracker> * rmin            = (   -265.28312 ,   -227.25840 ,    -33.63313 ) [mm]
+ThickTracker> * rms beam size   = (     91.59319 ,     85.92218 ,      3.53357 ) [mm]
+ThickTracker> * rms momenta     = (  4.37301e-02 ,  4.09785e-02 ,  0.00000e+00 ) [beta gamma]
+ThickTracker> * mean position   = (     -0.00191 ,     -0.04772 ,    -18.79283 ) [mm]
+ThickTracker> * mean momenta    = ( -3.21349e-13 , -2.05024e-14 ,  4.70041e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  8.42462e-05 ,  6.63120e-05 ,  0.00000e+00 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99950e-01 ,  9.99960e-01 ,  0.00000e+00 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =        7.790 [ns]         dT    =      778.983 [ps]
+ThickTracker> * spos            =     1000.000 [mm]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =     378.371 [keV]
+ThickTracker> * rmax            = (    265.23353 ,    266.01141 ,    -15.16533 ) [mm]
+ThickTracker> * rmin            = (   -270.28672 ,   -232.06483 ,    -34.49053 ) [mm]
+ThickTracker> * rms beam size   = (     93.31841 ,     87.74081 ,      3.59922 ) [mm]
+ThickTracker> * rms momenta     = (  3.86235e-02 ,  4.57727e-02 ,  9.41756e-04 ) [beta gamma]
+ThickTracker> * mean position   = (     -0.00194 ,     -0.04879 ,    -19.16759 ) [mm]
+ThickTracker> * mean momenta    = (  1.06236e-07 , -2.66378e-06 ,  4.70045e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  8.57433e-05 ,  6.77984e-05 ,  7.14239e-06 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99936e-01 ,  9.99968e-01 , -5.54056e-02 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =        7.946 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         1.020 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =     763.274 [keV]
+ThickTracker> * rmax            = (    269.54262 ,    272.12154 ,    -15.47313 ) [mm]
+ThickTracker> * rmin            = (   -274.67890 ,   -237.40129 ,    -35.78049 ) [mm]
+ThickTracker> * rms beam size   = (     94.82775 ,     89.76270 ,      3.66717 ) [mm]
+ThickTracker> * rms momenta     = (  3.34278e-02 ,  5.06729e-02 ,  1.89977e-03 ) [beta gamma]
+ThickTracker> * mean position   = (     -0.00196 ,     -0.05008 ,    -19.54714 ) [mm]
+ThickTracker> * mean momenta    = (  2.14040e-07 , -5.39254e-06 ,  4.69938e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  8.68910e-05 ,  6.96343e-05 ,  1.46932e-05 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99916e-01 ,  9.99974e-01 ,  3.59889e-02 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =        8.101 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         1.040 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       1.160 [MeV]
+ThickTracker> * rmax            = (    273.24131 ,    278.84842 ,    -15.78093 ) [mm]
+ThickTracker> * rmin            = (   -278.44971 ,   -243.27998 ,    -37.55948 ) [mm]
+ThickTracker> * rms beam size   = (     96.11774 ,     91.99253 ,      3.75756 ) [mm]
+ThickTracker> * rms momenta     = (  2.81548e-02 ,  5.56905e-02 ,  2.88642e-03 ) [beta gamma]
+ThickTracker> * mean position   = (     -0.00198 ,     -0.05159 ,    -19.94261 ) [mm]
+ThickTracker> * mean momenta    = (  3.22862e-07 , -8.19879e-06 ,  4.69711e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  8.77313e-05 ,  7.18660e-05 ,  2.26233e-05 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99882e-01 ,  9.99978e-01 ,  1.51977e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =        8.257 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         1.060 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       1.574 [MeV]
+ThickTracker> * rmax            = (    276.32120 ,    286.20727 ,    -16.08873 ) [mm]
+ThickTracker> * rmin            = (   -281.59063 ,   -249.71431 ,    -39.88838 ) [mm]
+ThickTracker> * rms beam size   = (     97.18538 ,     94.43547 ,      3.89720 ) [mm]
+ThickTracker> * rms momenta     = (  2.28170e-02 ,  6.08371e-02 ,  3.91690e-03 ) [beta gamma]
+ThickTracker> * mean position   = (     -0.00198 ,     -0.05335 ,    -20.36592 ) [mm]
+ThickTracker> * mean momenta    = (  4.32150e-07 , -1.10954e-05 ,  4.69354e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  8.83090e-05 ,  7.45432e-05 ,  3.08622e-05 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99822e-01 ,  9.99981e-01 ,  2.86759e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =        8.413 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         1.080 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       2.013 [MeV]
+ThickTracker> * rmax            = (    278.77534 ,    294.21478 ,    -16.39654 ) [mm]
+ThickTracker> * rmin            = (   -284.09454 ,   -256.71900 ,    -42.83309 ) [mm]
+ThickTracker> * rms beam size   = (     98.02820 ,     97.09718 ,      4.11739 ) [mm]
+ThickTracker> * rms momenta     = (  1.74269e-02 ,  6.61247e-02 ,  5.00920e-03 ) [beta gamma]
+ThickTracker> * mean position   = (     -0.00197 ,     -0.05535 ,    -20.82983 ) [mm]
+ThickTracker> * mean momenta    = (  5.41346e-07 , -1.40956e-05 ,  4.68860e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  8.86710e-05 ,  7.77201e-05 ,  3.92920e-05 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99697e-01 ,  9.99984e-01 ,  4.30245e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =        8.569 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         1.100 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       2.485 [MeV]
+ThickTracker> * rmax            = (    280.59815 ,    302.88910 ,    -16.70436 ) [mm]
+ThickTracker> * rmin            = (   -285.95579 ,   -264.31003 ,    -46.46506 ) [mm]
+ThickTracker> * rms beam size   = (     98.64426 ,     99.98382 ,      4.44989 ) [mm]
+ThickTracker> * rms momenta     = (  1.19976e-02 ,  7.15654e-02 ,  6.18408e-03 ) [beta gamma]
+ThickTracker> * mean position   = (     -0.00196 ,     -0.05759 ,    -21.34795 ) [mm]
+ThickTracker> * mean momenta    = (  6.49889e-07 , -1.72129e-05 ,  4.68217e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  8.88666e-05 ,  8.14553e-05 ,  4.77422e-05 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99367e-01 ,  9.99985e-01 ,  5.69374e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =        8.725 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         1.120 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       2.999 [MeV]
+ThickTracker> * rmax            = (    281.78552 ,    312.24988 ,    -17.01219 ) [mm]
+ThickTracker> * rmin            = (   -287.17017 ,   -272.50474 ,    -50.86202 ) [mm]
+ThickTracker> * rms beam size   = (     99.03213 ,    103.10209 ,      4.92254 ) [mm]
+ThickTracker> * rms momenta     = (  6.54459e-03 ,  7.71719e-02 ,  7.46500e-03 ) [beta gamma]
+ThickTracker> * mean position   = (     -0.00193 ,     -0.06010 ,    -21.93477 ) [mm]
+ThickTracker> * mean momenta    = (  7.57218e-07 , -2.04616e-05 ,  4.67415e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  8.89464e-05 ,  8.58125e-05 ,  5.59854e-05 ) (not normalized)
+ThickTracker> * rms correlation = (  9.97883e-01 ,  9.99987e-01 ,  6.91972e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =        8.880 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         1.140 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       3.567 [MeV]
+ThickTracker> * rmax            = (    282.33475 ,    322.31834 ,    -17.32004 ) [mm]
+ThickTracker> * rmin            = (   -287.73492 ,   -281.32186 ,    -56.10860 ) [mm]
+ThickTracker> * rms beam size   = (     99.19092 ,    106.45921 ,      5.55645 ) [mm]
+ThickTracker> * rms momenta     = (  1.13862e-03 ,  8.29572e-02 ,  8.87819e-03 ) [beta gamma]
+ThickTracker> * mean position   = (     -0.00189 ,     -0.06288 ,    -22.60564 ) [mm]
+ThickTracker> * mean momenta    = (  8.62775e-07 , -2.38563e-05 ,  4.66442e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  8.89622e-05 ,  9.08613e-05 ,  6.37351e-05 ) (not normalized)
+ThickTracker> * rms correlation = (  9.27735e-01 ,  9.99988e-01 ,  7.90704e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =        9.036 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         1.160 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       4.200 [MeV]
+ThickTracker> * rmax            = (    282.24460 ,    333.11730 ,    -17.62790 ) [mm]
+ThickTracker> * rmin            = (   -287.64877 ,   -290.78151 ,    -62.29717 ) [mm]
+ThickTracker> * rms beam size   = (     99.12026 ,    110.06296 ,      6.36638 ) [mm]
+ThickTracker> * rms momenta     = (  4.44089e-03 ,  8.89347e-02 ,  1.04529e-02 ) [beta gamma]
+ThickTracker> * mean position   = (     -0.00184 ,     -0.06594 ,    -23.37685 ) [mm]
+ThickTracker> * mean momenta    = (  9.66005e-07 , -2.74120e-05 ,  4.65287e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  8.89662e-05 ,  9.66776e-05 ,  7.06470e-05 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.95404e-01 ,  9.99989e-01 ,  8.64264e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =        9.192 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         1.180 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       4.910 [MeV]
+ThickTracker> * rmax            = (    281.51528 ,    344.67124 ,    -17.93579 ) [mm]
+ThickTracker> * rmin            = (   -286.91191 ,   -300.90531 ,    -69.52863 ) [mm]
+ThickTracker> * rms beam size   = (     98.82031 ,    113.92167 ,      7.36315 ) [mm]
+ThickTracker> * rms momenta     = (  9.89626e-03 ,  9.51182e-02 ,  1.22216e-02 ) [beta gamma]
+ThickTracker> * mean position   = (     -0.00179 ,     -0.06929 ,    -24.26564 ) [mm]
+ThickTracker> * mean momenta    = (  1.06636e-06 , -3.11447e-05 ,  4.63935e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  8.90109e-05 ,  1.03344e-04 ,  7.63283e-05 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.99070e-01 ,  9.99990e-01 ,  9.15680e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =        9.348 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         1.200 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       5.714 [MeV]
+ThickTracker> * rmax            = (    280.14843 ,    357.00634 ,    -18.24371 ) [mm]
+ThickTracker> * rmin            = (   -285.52602 ,   -311.71637 ,    -77.91334 ) [mm]
+ThickTracker> * rms beam size   = (     98.29178 ,    118.04431 ,      8.55664 ) [mm]
+ThickTracker> * rms momenta     = (  1.53368e-02 ,  1.01522e-01 ,  1.42215e-02 ) [beta gamma]
+ThickTracker> * mean position   = (     -0.00172 ,     -0.07295 ,    -25.29022 ) [mm]
+ThickTracker> * mean momenta    = (  1.16330e-06 , -3.50708e-05 ,  4.62370e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  8.91482e-05 ,  1.10953e-04 ,  8.03668e-05 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.99607e-01 ,  9.99990e-01 ,  9.49772e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =        9.504 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         1.220 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       6.627 [MeV]
+ThickTracker> * rmax            = (    278.14715 ,    370.15055 ,    -18.55166 ) [mm]
+ThickTracker> * rmin            = (   -283.49422 ,   -323.23940 ,    -87.57211 ) [mm]
+ThickTracker> * rms beam size   = (     97.53588 ,    122.44041 ,      9.95797 ) [mm]
+ThickTracker> * rms momenta     = (  2.07435e-02 ,  1.08161e-01 ,  1.64954e-02 ) [beta gamma]
+ThickTracker> * mean position   = (     -0.00164 ,     -0.07692 ,    -26.46990 ) [mm]
+ThickTracker> * mean momenta    = (  1.25629e-06 , -3.92074e-05 ,  4.60575e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  8.94295e-05 ,  1.19602e-04 ,  8.24149e-05 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.99781e-01 ,  9.99991e-01 ,  9.71328e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =        9.659 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         1.240 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       7.672 [MeV]
+ThickTracker> * rmax            = (    275.51598 ,    384.13367 ,    -18.85964 ) [mm]
+ThickTracker> * rmin            = (   -280.82111 ,   -335.50070 ,    -98.63733 ) [mm]
+ThickTracker> * rms beam size   = (     96.55437 ,    127.12017 ,     11.58086 ) [mm]
+ThickTracker> * rms momenta     = (  2.61029e-02 ,  1.15051e-01 ,  1.90949e-02 ) [beta gamma]
+ThickTracker> * mean position   = (     -0.00156 ,     -0.08123 ,    -27.82506 ) [mm]
+ThickTracker> * mean momenta    = (  1.34481e-06 , -4.35726e-05 ,  4.58528e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  8.99046e-05 ,  1.29402e-04 ,  8.24355e-05 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.99857e-01 ,  9.99991e-01 ,  9.84275e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =        9.815 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         1.260 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       8.873 [MeV]
+ThickTracker> * rmax            = (    272.26087 ,    398.98739 ,    -19.16766 ) [mm]
+ThickTracker> * rmin            = (   -277.51275 ,   -348.52828 ,   -111.25412 ) [mm]
+ThickTracker> * rms beam size   = (     95.34952 ,    132.09442 ,     13.44226 ) [mm]
+ThickTracker> * rms momenta     = (  3.14022e-02 ,  1.22207e-01 ,  2.20847e-02 ) [beta gamma]
+ThickTracker> * mean position   = (     -0.00147 ,     -0.08588 ,    -29.37731 ) [mm]
+ThickTracker> * mean momenta    = (  1.42837e-06 , -4.81851e-05 ,  4.56204e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  9.06216e-05 ,  1.40471e-04 ,  8.14565e-05 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.99897e-01 ,  9.99991e-01 ,  9.91512e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =        9.971 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         1.280 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =      10.266 [MeV]
+ThickTracker> * rmax            = (    268.38919 ,    414.74537 ,    -19.47573 ) [mm]
+ThickTracker> * rmin            = (   -273.57661 ,   -362.35191 ,   -125.58169 ) [mm]
+ThickTracker> * rms beam size   = (     93.92412 ,    137.37469 ,     15.56259 ) [mm]
+ThickTracker> * rms momenta     = (  3.66290e-02 ,  1.29646e-01 ,  2.55517e-02 ) [beta gamma]
+ThickTracker> * mean position   = (     -0.00136 ,     -0.09090 ,    -31.14952 ) [mm]
+ThickTracker> * mean momenta    = (  1.50647e-06 , -5.30647e-05 ,  4.53572e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  9.16262e-05 ,  1.52943e-04 ,  8.37441e-05 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.99920e-01 ,  9.99992e-01 ,  9.95009e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       10.127 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         1.300 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =      10.266 [MeV]
+ThickTracker> * rmax            = (    262.12346 ,    439.07814 ,    -19.93786 ) [mm]
+ThickTracker> * rmin            = (   -267.20584 ,   -383.69993 ,   -148.44090 ) [mm]
+ThickTracker> * rms beam size   = (     91.62221 ,    145.53065 ,     18.95026 ) [mm]
+ThickTracker> * rms momenta     = (  3.66290e-02 ,  1.29646e-01 ,  2.55517e-02 ) [beta gamma]
+ThickTracker> * mean position   = (     -0.00120 ,     -0.09871 ,    -33.98478 ) [mm]
+ThickTracker> * mean momenta    = (  1.50647e-06 , -5.30647e-05 ,  4.53572e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  9.33710e-05 ,  1.72772e-04 ,  9.33216e-05 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.99913e-01 ,  9.99991e-01 ,  9.95821e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       10.360 [ns]         dT    =      233.695 [ps]
+ThickTracker> * spos            =         1.330 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =      10.266 [MeV]
+ThickTracker> * rmax            = (    255.85773 ,    463.41091 ,    -20.39999 ) [mm]
+ThickTracker> * rmin            = (   -260.83507 ,   -405.04795 ,   -171.30011 ) [mm]
+ThickTracker> * rms beam size   = (     89.32033 ,    153.68662 ,     22.34003 ) [mm]
+ThickTracker> * rms momenta     = (  3.66290e-02 ,  1.29646e-01 ,  2.55517e-02 ) [beta gamma]
+ThickTracker> * mean position   = (     -0.00104 ,     -0.10653 ,    -36.82003 ) [mm]
+ThickTracker> * mean momenta    = (  1.50647e-06 , -5.30647e-05 ,  4.53572e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  9.51158e-05 ,  1.92600e-04 ,  1.03618e-04 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.99905e-01 ,  9.99990e-01 ,  9.96294e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       10.594 [ns]         dT    =      233.695 [ps]
+ThickTracker> * spos            =         1.360 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =      10.266 [MeV]
+ThickTracker> * rmax            = (    249.59200 ,    487.74368 ,    -20.86213 ) [mm]
+ThickTracker> * rmin            = (   -254.46430 ,   -426.39597 ,   -194.15932 ) [mm]
+ThickTracker> * rms beam size   = (     87.01848 ,    161.84259 ,     25.73108 ) [mm]
+ThickTracker> * rms momenta     = (  3.66290e-02 ,  1.29646e-01 ,  2.55517e-02 ) [beta gamma]
+ThickTracker> * mean position   = (     -0.00088 ,     -0.11434 ,    -39.65529 ) [mm]
+ThickTracker> * mean momenta    = (  1.50647e-06 , -5.30647e-05 ,  4.53572e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  9.68606e-05 ,  2.12429e-04 ,  1.14441e-04 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.99896e-01 ,  9.99988e-01 ,  9.96593e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       10.828 [ns]         dT    =      233.695 [ps]
+ThickTracker> * spos            =         1.390 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =      10.266 [MeV]
+ThickTracker> * rmax            = (    243.32627 ,    512.07645 ,    -21.32426 ) [mm]
+ThickTracker> * rmin            = (   -248.09353 ,   -447.74399 ,   -217.01853 ) [mm]
+ThickTracker> * rms beam size   = (     84.71667 ,    169.99857 ,     29.12295 ) [mm]
+ThickTracker> * rms momenta     = (  3.66290e-02 ,  1.29646e-01 ,  2.55517e-02 ) [beta gamma]
+ThickTracker> * mean position   = (     -0.00072 ,     -0.12216 ,    -42.49054 ) [mm]
+ThickTracker> * mean momenta    = (  1.50647e-06 , -5.30647e-05 ,  4.53572e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  9.86054e-05 ,  2.32258e-04 ,  1.25653e-04 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.99887e-01 ,  9.99988e-01 ,  9.96794e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       11.062 [ns]         dT    =      233.695 [ps]
+ThickTracker> * spos            =         1.420 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =      10.266 [MeV]
+ThickTracker> * rmax            = (    237.06054 ,    536.40922 ,    -21.78639 ) [mm]
+ThickTracker> * rmin            = (   -241.72277 ,   -469.09201 ,   -239.87774 ) [mm]
+ThickTracker> * rms beam size   = (     82.41489 ,    178.15456 ,     32.51538 ) [mm]
+ThickTracker> * rms momenta     = (  3.66290e-02 ,  1.29646e-01 ,  2.55517e-02 ) [beta gamma]
+ThickTracker> * mean position   = (     -0.00056 ,     -0.12997 ,    -45.32580 ) [mm]
+ThickTracker> * mean momenta    = (  1.50647e-06 , -5.30647e-05 ,  4.53572e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.00350e-04 ,  2.52087e-04 ,  1.37159e-04 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.99876e-01 ,  9.99987e-01 ,  9.96936e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       11.295 [ns]         dT    =      233.695 [ps]
+ThickTracker> * spos            =         1.450 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =      10.266 [MeV]
+ThickTracker> * rmax            = (    230.79481 ,    560.74199 ,    -22.24853 ) [mm]
+ThickTracker> * rmin            = (   -235.35200 ,   -490.44003 ,   -262.73695 ) [mm]
+ThickTracker> * rms beam size   = (     80.11316 ,    186.31055 ,     35.90823 ) [mm]
+ThickTracker> * rms momenta     = (  3.66290e-02 ,  1.29646e-01 ,  2.55517e-02 ) [beta gamma]
+ThickTracker> * mean position   = (     -0.00040 ,     -0.13778 ,    -48.16105 ) [mm]
+ThickTracker> * mean momenta    = (  1.50647e-06 , -5.30647e-05 ,  4.53572e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.02095e-04 ,  2.71916e-04 ,  1.48891e-04 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.99864e-01 ,  9.99986e-01 ,  9.97039e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       11.529 [ns]         dT    =      233.695 [ps]
+ThickTracker> * spos            =         1.480 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =      10.266 [MeV]
+ThickTracker> * rmax            = (    224.52908 ,    585.07476 ,    -22.71066 ) [mm]
+ThickTracker> * rmin            = (   -228.98123 ,   -511.78805 ,   -285.59616 ) [mm]
+ThickTracker> * rms beam size   = (     77.81148 ,    194.46655 ,     39.30137 ) [mm]
+ThickTracker> * rms momenta     = (  3.66290e-02 ,  1.29646e-01 ,  2.55517e-02 ) [beta gamma]
+ThickTracker> * mean position   = (     -0.00024 ,     -0.14560 ,    -50.99631 ) [mm]
+ThickTracker> * mean momenta    = (  1.50647e-06 , -5.30647e-05 ,  4.53572e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.03840e-04 ,  2.91745e-04 ,  1.60800e-04 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.99851e-01 ,  9.99985e-01 ,  9.97117e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       11.763 [ns]         dT    =      233.695 [ps]
+ThickTracker> * spos            =         1.510 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =      10.266 [MeV]
+ThickTracker> * rmax            = (    218.26335 ,    609.40753 ,    -23.14706 ) [mm]
+ThickTracker> * rmin            = (   -222.61046 ,   -533.13607 ,   -308.45537 ) [mm]
+ThickTracker> * rms beam size   = (     75.50984 ,    202.62255 ,     42.69475 ) [mm]
+ThickTracker> * rms momenta     = (  3.66290e-02 ,  1.29646e-01 ,  2.55517e-02 ) [beta gamma]
+ThickTracker> * mean position   = (     -0.00007 ,     -0.15341 ,    -53.83156 ) [mm]
+ThickTracker> * mean momenta    = (  1.50647e-06 , -5.30647e-05 ,  4.53572e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.05585e-04 ,  3.11574e-04 ,  1.72848e-04 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.99836e-01 ,  9.99984e-01 ,  9.97178e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       11.996 [ns]         dT    =      233.695 [ps]
+ThickTracker> * spos            =         1.540 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =      10.266 [MeV]
+ThickTracker> * rmax            = (    211.99762 ,    633.74030 ,    -23.48170 ) [mm]
+ThickTracker> * rmin            = (   -216.23969 ,   -554.48410 ,   -331.31458 ) [mm]
+ThickTracker> * rms beam size   = (     73.20826 ,    210.77855 ,     46.08830 ) [mm]
+ThickTracker> * rms momenta     = (  3.66290e-02 ,  1.29646e-01 ,  2.55517e-02 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00009 ,     -0.16123 ,    -56.66682 ) [mm]
+ThickTracker> * mean momenta    = (  1.50647e-06 , -5.30647e-05 ,  4.53572e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.07330e-04 ,  3.31403e-04 ,  1.85010e-04 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.99820e-01 ,  9.99983e-01 ,  9.97225e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       12.230 [ns]         dT    =      233.695 [ps]
+ThickTracker> * spos            =         1.570 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =      10.266 [MeV]
+ThickTracker> * rmax            = (    205.73189 ,    658.07307 ,    -23.81634 ) [mm]
+ThickTracker> * rmin            = (   -209.86893 ,   -575.83212 ,   -354.17379 ) [mm]
+ThickTracker> * rms beam size   = (     70.90674 ,    218.93456 ,     49.48199 ) [mm]
+ThickTracker> * rms momenta     = (  3.66290e-02 ,  1.29646e-01 ,  2.55517e-02 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00025 ,     -0.16904 ,    -59.50208 ) [mm]
+ThickTracker> * mean momenta    = (  1.50647e-06 , -5.30647e-05 ,  4.53572e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.09074e-04 ,  3.51232e-04 ,  1.97263e-04 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.99802e-01 ,  9.99983e-01 ,  9.97264e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       12.464 [ns]         dT    =      233.695 [ps]
+ThickTracker> * spos            =         1.600 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       7.350 [MeV]
+ThickTracker> * rmax            = (    201.86477 ,    673.28838 ,    -23.96584 ) [mm]
+ThickTracker> * rmin            = (   -205.93767 ,   -589.17652 ,   -367.47876 ) [mm]
+ThickTracker> * rms beam size   = (     69.48151 ,    224.02957 ,     51.45301 ) [mm]
+ThickTracker> * rms momenta     = (  3.14397e-02 ,  1.13260e-01 ,  1.82932e-02 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00035 ,     -0.17380 ,    -61.16247 ) [mm]
+ThickTracker> * mean momenta    = (  1.52870e-06 , -4.03801e-05 ,  4.58672e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.10079e-04 ,  3.62859e-04 ,  1.76865e-04 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.99715e-01 ,  9.99977e-01 ,  9.96028e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       12.620 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         1.620 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       4.991 [MeV]
+ThickTracker> * rmax            = (    198.61019 ,    686.46083 ,    -23.98431 ) [mm]
+ThickTracker> * rmin            = (   -202.63065 ,   -600.71939 ,   -377.20162 ) [mm]
+ThickTracker> * rms beam size   = (     68.27163 ,    228.42976 ,     52.88454 ) [mm]
+ThickTracker> * rms momenta     = (  2.63483e-02 ,  9.65231e-02 ,  1.24212e-02 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00046 ,     -0.17764 ,    -62.39920 ) [mm]
+ThickTracker> * mean momenta    = (  1.55860e-06 , -2.73772e-05 ,  4.62996e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.10801e-04 ,  3.71543e-04 ,  2.09138e-04 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.99574e-01 ,  9.99968e-01 ,  9.88555e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       12.775 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         1.640 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       3.126 [MeV]
+ThickTracker> * rmax            = (    195.95829 ,    697.55045 ,    -23.89490 ) [mm]
+ThickTracker> * rmin            = (   -199.93783 ,   -610.42545 ,   -383.80308 ) [mm]
+ThickTracker> * rms beam size   = (     67.27335 ,    232.12147 ,     53.84670 ) [mm]
+ThickTracker> * rms momenta     = (  2.13395e-02 ,  7.94870e-02 ,  7.78038e-03 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00055 ,     -0.18055 ,    -63.26933 ) [mm]
+ThickTracker> * mean momenta    = (  1.59594e-06 , -1.41246e-05 ,  4.66580e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.11291e-04 ,  3.77667e-04 ,  2.47155e-04 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.99325e-01 ,  9.99953e-01 ,  9.60134e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       12.931 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         1.660 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       1.777 [MeV]
+ThickTracker> * rmax            = (    193.90101 ,    706.52361 ,    -23.71940 ) [mm]
+ThickTracker> * rmin            = (   -197.85104 ,   -618.26500 ,   -387.78171 ) [mm]
+ThickTracker> * rms beam size   = (     66.48358 ,    235.09326 ,     54.41554 ) [mm]
+ThickTracker> * rms momenta     = (  1.63985e-02 ,  6.22048e-02 ,  4.42322e-03 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00065 ,     -0.18251 ,    -63.83376 ) [mm]
+ThickTracker> * mean momenta    = (  1.64053e-06 , -6.92080e-07 ,  4.69439e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.11595e-04 ,  3.81648e-04 ,  2.79555e-04 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.98823e-01 ,  9.99924e-01 ,  8.34932e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       13.087 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         1.680 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       1.118 [MeV]
+ThickTracker> * rmax            = (    192.43211 ,    713.35308 ,    -23.06358 ) [mm]
+ThickTracker> * rmin            = (   -196.36397 ,   -624.21408 ,   -389.66787 ) [mm]
+ThickTracker> * rms beam size   = (     65.89985 ,    237.33590 ,     54.67199 ) [mm]
+ThickTracker> * rms momenta     = (  1.15122e-02 ,  4.47305e-02 ,  2.78285e-03 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00075 ,     -0.18350 ,    -64.15665 ) [mm]
+ThickTracker> * mean momenta    = (  1.69219e-06 ,  1.28497e-05 ,  4.71582e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.11761e-04 ,  3.83930e-04 ,  3.04305e-04 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.97561e-01 ,  9.99853e-01 ,  3.19041e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       13.243 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         1.700 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       1.185 [MeV]
+ThickTracker> * rmax            = (    191.54714 ,    718.01812 ,    -22.04634 ) [mm]
+ThickTracker> * rmin            = (   -195.47211 ,   -628.25450 ,   -390.01731 ) [mm]
+ThickTracker> * rms beam size   = (     65.52037 ,    238.84244 ,     54.70088 ) [mm]
+ThickTracker> * rms momenta     = (  6.67386e-03 ,  2.71199e-02 ,  2.94832e-03 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00084 ,     -0.18353 ,    -64.30472 ) [mm]
+ThickTracker> * mean momenta    = (  1.75080e-06 ,  2.64293e-05 ,  4.73014e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.11829e-04 ,  3.84975e-04 ,  3.20911e-04 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.92630e-01 ,  9.99603e-01 , -3.33164e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       13.399 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         1.720 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       1.387 [MeV]
+ThickTracker> * rmax            = (    191.24340 ,    720.50460 ,    -20.98414 ) [mm]
+ThickTracker> * rmin            = (   -195.17275 ,   -630.37391 ,   -389.40440 ) [mm]
+ThickTracker> * rms beam size   = (     65.34394 ,    239.60822 ,     54.58982 ) [mm]
+ThickTracker> * rms momenta     = (  1.96134e-03 ,  9.44114e-03 ,  3.45173e-03 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00093 ,     -0.18258 ,    -64.34657 ) [mm]
+ThickTracker> * mean momenta    = (  1.81622e-06 ,  3.99749e-05 ,  4.73736e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.11844e-04 ,  3.85264e-04 ,  3.28969e-04 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.10498e-01 ,  9.96739e-01 , -5.61818e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       13.554 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         1.740 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       1.399 [MeV]
+ThickTracker> * rmax            = (    191.51998 ,    720.80496 ,    -19.92120 ) [mm]
+ThickTracker> * rmin            = (   -195.46499 ,   -630.56582 ,   -388.41520 ) [mm]
+ThickTracker> * rms beam size   = (     65.37001 ,    239.63086 ,     54.42808 ) [mm]
+ThickTracker> * rms momenta     = (  3.15350e-03 ,  8.35242e-03 ,  3.48283e-03 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00102 ,     -0.18067 ,    -64.35197 ) [mm]
+ThickTracker> * mean momenta    = (  1.88838e-06 ,  5.34148e-05 ,  4.73750e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.11846e-04 ,  3.85284e-04 ,  3.27974e-04 ) (not normalized)
+ThickTracker> * rms correlation = (  9.66388e-01 , -9.95831e-01 , -5.72619e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       13.710 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         1.760 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       1.205 [MeV]
+ThickTracker> * rmax            = (    192.37772 ,    718.91829 ,    -18.90174 ) [mm]
+ThickTracker> * rmin            = (   -196.34971 ,   -628.82964 ,   -387.64031 ) [mm]
+ThickTracker> * rms beam size   = (     65.59867 ,    238.91029 ,     54.30544 ) [mm]
+ThickTracker> * rms momenta     = (  7.93147e-03 ,  2.60309e-02 ,  2.99797e-03 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00111 ,     -0.17779 ,    -64.39107 ) [mm]
+ThickTracker> * mean momenta    = (  1.96722e-06 ,  6.66773e-05 ,  4.73055e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.11876e-04 ,  3.85528e-04 ,  3.17308e-04 ) (not normalized)
+ThickTracker> * rms correlation = (  9.94796e-01 , -9.99568e-01 , -3.83557e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       13.866 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         1.780 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       1.066 [MeV]
+ThickTracker> * rmax            = (    193.81921 ,    714.85032 ,    -17.97052 ) [mm]
+ThickTracker> * rmin            = (   -197.82959 ,   -625.17069 ,   -387.66774 ) [mm]
+ThickTracker> * rms beam size   = (     66.03062 ,    237.44876 ,     54.31107 ) [mm]
+ThickTracker> * rms momenta     = (  1.27826e-02 ,  4.36479e-02 ,  2.65300e-03 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00120 ,     -0.17396 ,    -64.53370 ) [mm]
+ThickTracker> * mean momenta    = (  2.05269e-06 ,  7.96916e-05 ,  4.71651e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.11977e-04 ,  3.86486e-04 ,  2.96186e-04 ) (not normalized)
+ThickTracker> * rms correlation = (  9.98022e-01 , -9.99844e-01 ,  2.26400e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       14.022 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         1.800 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       1.605 [MeV]
+ThickTracker> * rmax            = (    195.84884 ,    708.61340 ,    -17.17333 ) [mm]
+ThickTracker> * rmin            = (   -199.90912 ,   -619.60015 ,   -389.07578 ) [mm]
+ThickTracker> * rms beam size   = (     66.66719 ,    235.25079 ,     54.53236 ) [mm]
+ThickTracker> * rms momenta     = (  1.76818e-02 ,  6.11321e-02 ,  3.99538e-03 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00129 ,     -0.16919 ,    -64.84860 ) [mm]
+ThickTracker> * mean momenta    = (  2.14478e-06 ,  9.23877e-05 ,  4.69537e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.12191e-04 ,  3.88636e-04 ,  2.63502e-04 ) (not normalized)
+ThickTracker> * rms correlation = (  9.98983e-01 , -9.99918e-01 ,  8.19507e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       14.177 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         1.820 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       2.873 [MeV]
+ThickTracker> * rmax            = (    198.47276 ,    700.22643 ,    -16.55754 ) [mm]
+ThickTracker> * rmin            = (   -202.59460 ,   -612.13507 ,   -392.42597 ) [mm]
+ThickTracker> * rms beam size   = (     67.51035 ,    232.32322 ,     55.05391 ) [mm]
+ThickTracker> * rms momenta     = (  2.26389e-02 ,  7.84275e-02 ,  7.15148e-03 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00138 ,     -0.16349 ,    -65.40267 ) [mm]
+ThickTracker> * mean momenta    = (  2.24348e-06 ,  1.04697e-04 ,  4.66708e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.12561e-04 ,  3.92445e-04 ,  2.17536e-04 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99391e-01 , -9.99948e-01 ,  9.65120e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       14.333 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         1.840 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       4.665 [MeV]
+ThickTracker> * rmax            = (    201.69894 ,    689.71488 ,    -16.17267 ) [mm]
+ThickTracker> * rmin            = (   -205.89418 ,   -602.79825 ,   -398.25631 ) [mm]
+ThickTracker> * rms beam size   = (     68.56271 ,    228.67513 ,     55.95647 ) [mm]
+ThickTracker> * rms momenta     = (  2.76674e-02 ,  9.54800e-02 ,  1.16117e-02 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00147 ,     -0.15690 ,    -66.26034 ) [mm]
+ThickTracker> * mean momenta    = (  2.34884e-06 ,  1.16551e-04 ,  4.63156e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.13134e-04 ,  3.98358e-04 ,  1.55726e-04 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99601e-01 , -9.99963e-01 ,  9.93530e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       14.489 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         1.860 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       6.942 [MeV]
+ThickTracker> * rmax            = (    205.53716 ,    677.11063 ,    -16.07097 ) [mm]
+ThickTracker> * rmin            = (   -209.81785 ,   -591.61825 ,   -407.07471 ) [mm]
+ThickTracker> * rms beam size   = (     69.82753 ,    224.31784 ,     57.31600 ) [mm]
+ThickTracker> * rms momenta     = (  3.27824e-02 ,  1.12237e-01 ,  1.72794e-02 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00156 ,     -0.14944 ,    -67.48281 ) [mm]
+ThickTracker> * mean momenta    = (  2.46088e-06 ,  1.27885e-04 ,  4.58868e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.13958e-04 ,  4.06794e-04 ,  8.05474e-05 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99722e-01 , -9.99971e-01 ,  9.99257e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       14.645 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         1.880 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       9.750 [MeV]
+ThickTracker> * rmax            = (    209.99907 ,    662.45193 ,    -16.30802 ) [mm]
+ThickTracker> * rmin            = (   -214.37751 ,   -578.62927 ,   -419.35286 ) [mm]
+ThickTracker> * rms beam size   = (     71.30873 ,    219.26488 ,     59.20285 ) [mm]
+ThickTracker> * rms momenta     = (  3.79994e-02 ,  1.28645e-01 ,  2.42679e-02 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00165 ,     -0.14113 ,    -69.12753 ) [mm]
+ThickTracker> * mean momenta    = (  2.57966e-06 ,  1.38636e-04 ,  4.53815e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.15085e-04 ,  4.18141e-04 ,  1.11227e-04 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99797e-01 , -9.99975e-01 ,  9.99327e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       14.801 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         1.900 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       9.750 [MeV]
+ThickTracker> * rmax            = (    217.16623 ,    638.94452 ,    -16.94686 ) [mm]
+ThickTracker> * rmin            = (   -221.70066 ,   -557.80822 ,   -440.58608 ) [mm]
+ThickTracker> * rms beam size   = (     73.69501 ,    211.17129 ,     62.46163 ) [mm]
+ThickTracker> * rms momenta     = (  3.79994e-02 ,  1.28645e-01 ,  2.42679e-02 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00179 ,     -0.12805 ,    -71.93842 ) [mm]
+ThickTracker> * mean momenta    = (  2.57966e-06 ,  1.38636e-04 ,  4.53815e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.17030e-04 ,  4.37525e-04 ,  1.18786e-04 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99804e-01 , -9.99971e-01 ,  9.99310e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       15.034 [ns]         dT    =      233.695 [ps]
+ThickTracker> * spos            =         1.930 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       9.750 [MeV]
+ThickTracker> * rmax            = (    224.33340 ,    615.43711 ,    -17.58569 ) [mm]
+ThickTracker> * rmin            = (   -229.02380 ,   -536.98717 ,   -461.81929 ) [mm]
+ThickTracker> * rms beam size   = (     76.08130 ,    203.07779 ,     65.72070 ) [mm]
+ThickTracker> * rms momenta     = (  3.79994e-02 ,  1.28645e-01 ,  2.42679e-02 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00193 ,     -0.11498 ,    -74.74931 ) [mm]
+ThickTracker> * mean momenta    = (  2.57966e-06 ,  1.38636e-04 ,  4.53815e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.18974e-04 ,  4.56910e-04 ,  1.26732e-04 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99810e-01 , -9.99966e-01 ,  9.99291e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       15.268 [ns]         dT    =      233.695 [ps]
+ThickTracker> * spos            =         1.960 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       9.750 [MeV]
+ThickTracker> * rmax            = (    231.50056 ,    591.92970 ,    -18.22453 ) [mm]
+ThickTracker> * rmin            = (   -236.34695 ,   -516.16612 ,   -483.05251 ) [mm]
+ThickTracker> * rms beam size   = (     78.46760 ,    194.98439 ,     68.98003 ) [mm]
+ThickTracker> * rms momenta     = (  3.79994e-02 ,  1.28645e-01 ,  2.42679e-02 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00207 ,     -0.10190 ,    -77.56019 ) [mm]
+ThickTracker> * mean momenta    = (  2.57966e-06 ,  1.38636e-04 ,  4.53815e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.20918e-04 ,  4.76294e-04 ,  1.34996e-04 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99815e-01 , -9.99960e-01 ,  9.99270e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       15.502 [ns]         dT    =      233.695 [ps]
+ThickTracker> * spos            =         1.990 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       9.750 [MeV]
+ThickTracker> * rmax            = (    238.66773 ,    568.42228 ,    -18.86337 ) [mm]
+ThickTracker> * rmin            = (   -243.67010 ,   -495.34508 ,   -504.28572 ) [mm]
+ThickTracker> * rms beam size   = (     80.85391 ,    186.89109 ,     72.23958 ) [mm]
+ThickTracker> * rms momenta     = (  3.79994e-02 ,  1.28645e-01 ,  2.42679e-02 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00221 ,     -0.08883 ,    -80.37108 ) [mm]
+ThickTracker> * mean momenta    = (  2.57966e-06 ,  1.38636e-04 ,  4.53815e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.22863e-04 ,  4.95679e-04 ,  1.43523e-04 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99820e-01 , -9.99952e-01 ,  9.99247e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       15.735 [ns]         dT    =      233.695 [ps]
+ThickTracker> * spos            =         2.020 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       9.750 [MeV]
+ThickTracker> * rmax            = (    245.83490 ,    544.91487 ,    -19.50220 ) [mm]
+ThickTracker> * rmin            = (   -250.99325 ,   -474.52403 ,   -525.51894 ) [mm]
+ThickTracker> * rms beam size   = (     83.24022 ,    178.79791 ,     75.49931 ) [mm]
+ThickTracker> * rms momenta     = (  3.79994e-02 ,  1.28645e-01 ,  2.42679e-02 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00234 ,     -0.07575 ,    -83.18197 ) [mm]
+ThickTracker> * mean momenta    = (  2.57966e-06 ,  1.38636e-04 ,  4.53815e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.24807e-04 ,  5.15063e-04 ,  1.52270e-04 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99825e-01 , -9.99944e-01 ,  9.99224e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       15.969 [ns]         dT    =      233.695 [ps]
+ThickTracker> * spos            =         2.050 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       9.750 [MeV]
+ThickTracker> * rmax            = (    253.00206 ,    521.40746 ,    -20.14104 ) [mm]
+ThickTracker> * rmin            = (   -258.31639 ,   -453.70298 ,   -546.75215 ) [mm]
+ThickTracker> * rms beam size   = (     85.62653 ,    170.70487 ,     78.75922 ) [mm]
+ThickTracker> * rms momenta     = (  3.79994e-02 ,  1.28645e-01 ,  2.42679e-02 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00248 ,     -0.06268 ,    -85.99286 ) [mm]
+ThickTracker> * mean momenta    = (  2.57966e-06 ,  1.38636e-04 ,  4.53815e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.26752e-04 ,  5.34448e-04 ,  1.61199e-04 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99830e-01 , -9.99934e-01 ,  9.99201e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       16.203 [ns]         dT    =      233.695 [ps]
+ThickTracker> * spos            =         2.080 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       9.750 [MeV]
+ThickTracker> * rmax            = (    260.16923 ,    497.90005 ,    -20.77987 ) [mm]
+ThickTracker> * rmin            = (   -265.63954 ,   -432.88193 ,   -567.98537 ) [mm]
+ThickTracker> * rms beam size   = (     88.01285 ,    162.61199 ,     82.01927 ) [mm]
+ThickTracker> * rms momenta     = (  3.79994e-02 ,  1.28645e-01 ,  2.42679e-02 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00262 ,     -0.04960 ,    -88.80375 ) [mm]
+ThickTracker> * mean momenta    = (  2.57966e-06 ,  1.38636e-04 ,  4.53815e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.28696e-04 ,  5.53833e-04 ,  1.70283e-04 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99834e-01 , -9.99921e-01 ,  9.99178e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       16.437 [ns]         dT    =      233.695 [ps]
+ThickTracker> * spos            =         2.110 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       9.750 [MeV]
+ThickTracker> * rmax            = (    267.33639 ,    474.39264 ,    -21.41871 ) [mm]
+ThickTracker> * rmin            = (   -272.96269 ,   -412.06089 ,   -589.21858 ) [mm]
+ThickTracker> * rms beam size   = (     90.39917 ,    154.51930 ,     85.27945 ) [mm]
+ThickTracker> * rms momenta     = (  3.79994e-02 ,  1.28645e-01 ,  2.42679e-02 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00276 ,     -0.03653 ,    -91.61463 ) [mm]
+ThickTracker> * mean momenta    = (  2.57966e-06 ,  1.38636e-04 ,  4.53815e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.30641e-04 ,  5.73218e-04 ,  1.79498e-04 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99838e-01 , -9.99907e-01 ,  9.99155e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       16.670 [ns]         dT    =      233.695 [ps]
+ThickTracker> * spos            =         2.140 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       9.750 [MeV]
+ThickTracker> * rmax            = (    274.50356 ,    450.88523 ,    -22.05754 ) [mm]
+ThickTracker> * rmin            = (   -280.28584 ,   -391.23984 ,   -610.45180 ) [mm]
+ThickTracker> * rms beam size   = (     92.78550 ,    146.42682 ,     88.53975 ) [mm]
+ThickTracker> * rms momenta     = (  3.79994e-02 ,  1.28645e-01 ,  2.42679e-02 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00290 ,     -0.02345 ,    -94.42552 ) [mm]
+ThickTracker> * mean momenta    = (  2.57966e-06 ,  1.38636e-04 ,  4.53815e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.32585e-04 ,  5.92603e-04 ,  1.88826e-04 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99841e-01 , -9.99889e-01 ,  9.99133e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       16.904 [ns]         dT    =      233.695 [ps]
+ThickTracker> * spos            =         2.170 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       9.750 [MeV]
+ThickTracker> * rmax            = (    281.67072 ,    427.37782 ,    -22.69638 ) [mm]
+ThickTracker> * rmin            = (   -287.60898 ,   -370.41879 ,   -631.68501 ) [mm]
+ThickTracker> * rms beam size   = (     95.17183 ,    138.33459 ,     91.80015 ) [mm]
+ThickTracker> * rms momenta     = (  3.79994e-02 ,  1.28645e-01 ,  2.42679e-02 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00304 ,     -0.01038 ,    -97.23641 ) [mm]
+ThickTracker> * mean momenta    = (  2.57966e-06 ,  1.38636e-04 ,  4.53815e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.34530e-04 ,  6.11988e-04 ,  1.98249e-04 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99845e-01 , -9.99867e-01 ,  9.99111e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       17.138 [ns]         dT    =      233.695 [ps]
+ThickTracker> * spos            =         2.200 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       8.394 [MeV]
+ThickTracker> * rmax            = (    286.12809 ,    412.18460 ,    -22.93201 ) [mm]
+ThickTracker> * rmin            = (   -292.16393 ,   -356.95583 ,   -644.93308 ) [mm]
+ThickTracker> * rms beam size   = (     96.65207 ,    133.09806 ,     93.83977 ) [mm]
+ThickTracker> * rms momenta     = (  3.27026e-02 ,  1.21153e-01 ,  2.08921e-02 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00313 ,     -0.00176 ,    -98.99149 ) [mm]
+ThickTracker> * mean momenta    = (  2.40954e-06 ,  1.38302e-04 ,  4.56450e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.35655e-04 ,  6.24165e-04 ,  1.86428e-04 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99793e-01 , -9.99832e-01 ,  9.98984e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       17.293 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         2.220 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       7.223 [MeV]
+ThickTracker> * rmax            = (    289.93749 ,    397.92555 ,    -22.81954 ) [mm]
+ThickTracker> * rmin            = (   -296.05797 ,   -344.30816 ,   -656.48069 ) [mm]
+ThickTracker> * rms beam size   = (     97.90882 ,    128.16996 ,     95.62803 ) [mm]
+ThickTracker> * rms momenta     = (  2.73306e-02 ,  1.13941e-01 ,  1.79777e-02 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00321 ,      0.00669 ,   -100.52492 ) [mm]
+ThickTracker> * mean momenta    = (  2.23451e-06 ,  1.38439e-04 ,  4.58779e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.36469e-04 ,  6.34942e-04 ,  2.70736e-04 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99708e-01 , -9.99788e-01 ,  9.97212e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       17.449 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         2.240 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       6.206 [MeV]
+ThickTracker> * rmax            = (    293.09030 ,    384.56836 ,    -22.40979 ) [mm]
+ThickTracker> * rmin            = (   -299.28227 ,   -332.44688 ,   -666.48900 ) [mm]
+ThickTracker> * rms beam size   = (     98.93917 ,    123.53887 ,     97.18830 ) [mm]
+ThickTracker> * rms momenta     = (  2.18961e-02 ,  1.06994e-01 ,  1.54466e-02 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00330 ,      0.01498 ,   -101.85977 ) [mm]
+ThickTracker> * mean momenta    = (  2.05477e-06 ,  1.39038e-04 ,  4.60830e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.37018e-04 ,  6.44452e-04 ,  3.66011e-04 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99551e-01 , -9.99733e-01 ,  9.93304e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       17.605 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         2.260 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       5.319 [MeV]
+ThickTracker> * rmax            = (    295.57936 ,    372.08275 ,    -21.75621 ) [mm]
+ThickTracker> * rmin            = (   -301.82955 ,   -321.34491 ,   -675.10524 ) [mm]
+ThickTracker> * rms beam size   = (     99.74074 ,    119.19409 ,     98.54174 ) [mm]
+ThickTracker> * rms momenta     = (  1.64123e-02 ,  1.00295e-01 ,  1.32389e-02 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00338 ,      0.02315 ,   -103.01782 ) [mm]
+ThickTracker> * mean momenta    = (  1.87052e-06 ,  1.40092e-04 ,  4.62630e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.37354e-04 ,  6.52815e-04 ,  4.48745e-04 ) (not normalized)
+ThickTracker> * rms correlation = (  9.99209e-01 , -9.99665e-01 ,  9.86628e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       17.761 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         2.280 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       4.542 [MeV]
+ThickTracker> * rmax            = (    297.39905 ,    360.44043 ,    -20.91442 ) [mm]
+ThickTracker> * rmin            = (   -303.69405 ,   -310.97690 ,   -682.46400 ) [mm]
+ThickTracker> * rms beam size   = (    100.31168 ,    115.12554 ,     99.70753 ) [mm]
+ThickTracker> * rms momenta     = (  1.08938e-02 ,  9.38286e-02 ,  1.13059e-02 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00345 ,      0.03122 ,   -104.01970 ) [mm]
+ThickTracker> * mean momenta    = (  1.68198e-06 ,  1.41594e-04 ,  4.64198e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.37526e-04 ,  6.60142e-04 ,  5.13517e-04 ) (not normalized)
+ThickTracker> * rms correlation = (  9.98220e-01 , -9.99581e-01 ,  9.76426e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       17.917 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         2.300 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       3.860 [MeV]
+ThickTracker> * rmax            = (    298.54525 ,    349.61501 ,    -19.94173 ) [mm]
+ThickTracker> * rmin            = (   -304.87154 ,   -301.31915 ,   -688.68848 ) [mm]
+ThickTracker> * rms beam size   = (    100.65067 ,    111.32382 ,    100.70304 ) [mm]
+ThickTracker> * rms momenta     = (  5.36372e-03 ,  8.75799e-02 ,  9.60633e-03 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00352 ,      0.03922 ,   -104.88490 ) [mm]
+ThickTracker> * mean momenta    = (  1.48937e-06 ,  1.43539e-04 ,  4.65553e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.37590e-04 ,  6.66531e-04 ,  5.58586e-04 ) (not normalized)
+ThickTracker> * rms correlation = (  9.92681e-01 , -9.99475e-01 ,  9.61842e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       18.072 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         2.320 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       3.256 [MeV]
+ThickTracker> * rmax            = (    299.01536 ,    339.58195 ,    -18.89661 ) [mm]
+ThickTracker> * rmin            = (   -305.35937 ,   -292.34962 ,   -693.89157 ) [mm]
+ThickTracker> * rms beam size   = (    100.75693 ,    107.78013 ,    101.54392 ) [mm]
+ThickTracker> * rms momenta     = (  6.89408e-04 ,  8.15346e-02 ,  8.10400e-03 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00359 ,      0.04716 ,   -105.63191 ) [mm]
+ThickTracker> * mean momenta    = (  1.29292e-06 ,  1.45924e-04 ,  4.66708e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.37598e-04 ,  6.72074e-04 ,  5.83215e-04 ) (not normalized)
+ThickTracker> * rms correlation = ( -3.44907e-01 , -9.99343e-01 ,  9.41925e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       18.228 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         2.340 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       2.719 [MeV]
+ThickTracker> * rmax            = (    298.80831 ,    330.31852 ,    -17.83815 ) [mm]
+ThickTracker> * rmin            = (   -305.15642 ,   -284.04781 ,   -698.17691 ) [mm]
+ThickTracker> * rms beam size   = (    100.63022 ,    104.48627 ,    102.24434 ) [mm]
+ThickTracker> * rms momenta     = (  5.83553e-03 ,  7.56789e-02 ,  6.76630e-03 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00365 ,      0.05507 ,   -106.27822 ) [mm]
+ThickTracker> * mean momenta    = (  1.09288e-06 ,  1.48747e-04 ,  4.67679e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.37607e-04 ,  6.76856e-04 ,  5.87071e-04 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.93816e-01 , -9.99177e-01 ,  9.15595e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       18.384 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         2.360 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       2.235 [MeV]
+ThickTracker> * rmax            = (    297.92457 ,    321.80372 ,    -16.82554 ) [mm]
+ThickTracker> * rmin            = (   -304.26317 ,   -276.39477 ,   -701.63981 ) [mm]
+ThickTracker> * rms beam size   = (    100.27083 ,    101.43462 ,    102.81710 ) [mm]
+ThickTracker> * rms momenta     = (  1.13663e-02 ,  6.99993e-02 ,  5.56364e-03 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00371 ,      0.06296 ,   -106.84039 ) [mm]
+ThickTracker> * mean momenta    = (  8.89485e-07 ,  1.52006e-04 ,  4.68477e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.37671e-04 ,  6.80953e-04 ,  5.70065e-04 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.98361e-01 , -9.98967e-01 ,  8.81486e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       18.540 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         2.380 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       1.796 [MeV]
+ThickTracker> * rmax            = (    296.36615 ,    314.01825 ,    -15.91754 ) [mm]
+ThickTracker> * rmin            = (   -302.68163 ,   -269.37301 ,   -704.36814 ) [mm]
+ThickTracker> * rms beam size   = (     99.67959 ,     98.61811 ,    103.27374 ) [mm]
+ThickTracker> * rms momenta     = (  1.68823e-02 ,  6.44828e-02 ,  4.46926e-03 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00377 ,      0.07088 ,   -107.33407 ) [mm]
+ThickTracker> * mean momenta    = (  6.83010e-07 ,  1.55701e-04 ,  4.69114e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.37844e-04 ,  6.84434e-04 ,  5.32322e-04 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.99246e-01 , -9.98699e-01 ,  8.37464e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       18.696 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         2.400 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       1.390 [MeV]
+ThickTracker> * rmax            = (    294.13658 ,    306.94447 ,    -15.17196 ) [mm]
+ThickTracker> * rmin            = (   -300.41537 ,   -262.96650 ,   -706.44308 ) [mm]
+ThickTracker> * rms beam size   = (     98.85789 ,     96.03025 ,    103.62478 ) [mm]
+ThickTracker> * rms momenta     = (  2.23623e-02 ,  5.91170e-02 ,  3.45978e-03 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00381 ,      0.07882 ,   -107.77404 ) [mm]
+ThickTracker> * mean momenta    = (  4.73724e-07 ,  1.59835e-04 ,  4.69599e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.38179e-04 ,  6.87366e-04 ,  4.74196e-04 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.99561e-01 , -9.98353e-01 ,  7.79235e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       18.851 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         2.420 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =       1.011 [MeV]
+ThickTracker> * rmax            = (    291.24089 ,    300.56635 ,    -14.64510 ) [mm]
+ThickTracker> * rmin            = (   -297.46953 ,   -257.16061 ,   -707.93989 ) [mm]
+ThickTracker> * rms beam size   = (     97.80761 ,     93.66504 ,    103.87976 ) [mm]
+ThickTracker> * rms momenta     = (  2.77919e-02 ,  5.38899e-02 ,  2.51702e-03 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00386 ,      0.08683 ,   -108.17420 ) [mm]
+ThickTracker> * mean momenta    = (  2.61907e-07 ,  1.64408e-04 ,  4.69944e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.38730e-04 ,  6.89807e-04 ,  3.96353e-04 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.99708e-01 , -9.97901e-01 ,  6.95744e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       19.007 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         2.440 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =     657.030 [keV]
+ThickTracker> * rmax            = (    287.68566 ,    294.86943 ,    -14.39129 ) [mm]
+ThickTracker> * rmin            = (   -293.85077 ,   -251.94207 ,   -708.92858 ) [mm]
+ThickTracker> * rms beam size   = (     96.53119 ,     91.51700 ,    104.04747 ) [mm]
+ThickTracker> * rms momenta     = (  3.31577e-02 ,  4.87897e-02 ,  1.63533e-03 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00389 ,      0.09491 ,   -108.54765 ) [mm]
+ThickTracker> * mean momenta    = (  4.78502e-08 ,  1.69426e-04 ,  4.70157e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.39544e-04 ,  6.91812e-04 ,  3.00068e-04 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.99787e-01 , -9.97301e-01 ,  5.49280e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       19.163 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         2.460 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =     349.014 [keV]
+ThickTracker> * rmax            = (    283.47893 ,    289.84080 ,    -14.46237 ) [mm]
+ThickTracker> * rmin            = (   -289.56727 ,   -247.29896 ,   -709.47455 ) [mm]
+ThickTracker> * rms beam size   = (     95.03159 ,     89.58119 ,    104.13602 ) [mm]
+ThickTracker> * rms momenta     = (  3.84472e-02 ,  4.38056e-02 ,  8.68687e-04 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00393 ,      0.10308 ,   -108.90664 ) [mm]
+ThickTracker> * mean momenta    = ( -1.68147e-07 ,  1.74893e-04 ,  4.70247e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.40670e-04 ,  6.93432e-04 ,  1.88797e-04 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.99834e-01 , -9.96488e-01 ,  1.48372e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       19.319 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         2.480 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =     275.458 [keV]
+ThickTracker> * rmax            = (    278.63023 ,    285.46906 ,    -14.90724 ) [mm]
+ThickTracker> * rmin            = (   -284.62872 ,   -243.22069 ,   -709.63919 ) [mm]
+ThickTracker> * rms beam size   = (     93.31228 ,     87.85311 ,    104.15301 ) [mm]
+ThickTracker> * rms momenta     = (  4.36481e-02 ,  3.89269e-02 ,  6.85608e-04 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00395 ,      0.11138 ,   -109.26260 ) [mm]
+ThickTracker> * mean momenta    = ( -3.85775e-07 ,  1.80814e-04 ,  4.70223e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.42153e-04 ,  6.94715e-04 ,  8.59174e-05 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.99863e-01 , -9.95356e-01 , -8.21559e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       19.475 [ns]         dT    =      155.797 [ps]
+ThickTracker> * spos            =         2.500 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =     275.458 [keV]
+ThickTracker> * rmax            = (    232.13494 ,    249.04860 ,    -20.73270 ) [mm]
+ThickTracker> * rmin            = (   -237.26655 ,   -209.02904 ,   -709.58087 ) [mm]
+ThickTracker> * rms beam size   = (     76.86261 ,     73.23909 ,    104.00701 ) [mm]
+ThickTracker> * rms momenta     = (  4.36481e-02 ,  3.89269e-02 ,  6.85608e-04 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00417 ,      0.18667 ,   -112.48516 ) [mm]
+ThickTracker> * mean momenta    = ( -3.85775e-07 ,  1.80814e-04 ,  4.70223e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.57225e-04 ,  7.04877e-04 ,  8.59278e-05 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.99753e-01 , -9.93114e-01 , -8.20955e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       20.877 [ns]         dT    =        1.402 [ns]
+ThickTracker> * spos            =         2.680 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =     275.458 [keV]
+ThickTracker> * rmax            = (    185.63965 ,    212.62813 ,    -26.55816 ) [mm]
+ThickTracker> * rmin            = (   -189.90438 ,   -174.83740 ,   -709.52255 ) [mm]
+ThickTracker> * rms beam size   = (     60.41676 ,     58.67352 ,    103.86322 ) [mm]
+ThickTracker> * rms momenta     = (  4.36481e-02 ,  3.89269e-02 ,  6.85608e-04 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00438 ,      0.26196 ,   -115.70772 ) [mm]
+ThickTracker> * mean momenta    = ( -3.85775e-07 ,  1.80814e-04 ,  4.70223e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.72298e-04 ,  7.15040e-04 ,  8.59434e-05 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.99521e-01 , -9.88936e-01 , -8.20332e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       22.279 [ns]         dT    =        1.402 [ns]
+ThickTracker> * spos            =         2.860 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =     275.458 [keV]
+ThickTracker> * rmax            = (    139.14436 ,    176.20767 ,    -32.38362 ) [mm]
+ThickTracker> * rmin            = (   -142.54220 ,   -140.64576 ,   -709.46423 ) [mm]
+ThickTracker> * rms beam size   = (     43.97900 ,     44.20434 ,    103.72166 ) [mm]
+ThickTracker> * rms momenta     = (  4.36481e-02 ,  3.89269e-02 ,  6.85608e-04 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00460 ,      0.33725 ,   -118.93028 ) [mm]
+ThickTracker> * mean momenta    = ( -3.85775e-07 ,  1.80814e-04 ,  4.70223e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  1.87371e-04 ,  7.25204e-04 ,  8.59644e-05 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.98930e-01 , -9.79857e-01 , -8.19690e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       23.681 [ns]         dT    =        1.402 [ns]
+ThickTracker> * spos            =         3.040 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =     275.458 [keV]
+ThickTracker> * rmax            = (     92.64906 ,    139.78721 ,    -38.20908 ) [mm]
+ThickTracker> * rmin            = (    -95.18003 ,   -106.45411 ,   -709.40592 ) [mm]
+ThickTracker> * rms beam size   = (     27.56383 ,     29.97146 ,    103.58233 ) [mm]
+ThickTracker> * rms momenta     = (  4.36481e-02 ,  3.89269e-02 ,  6.85608e-04 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00481 ,      0.41253 ,   -122.15284 ) [mm]
+ThickTracker> * mean momenta    = ( -3.85775e-07 ,  1.80814e-04 ,  4.70223e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  2.02444e-04 ,  7.35369e-04 ,  8.59907e-05 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.96816e-01 , -9.54358e-01 , -8.19028e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       25.083 [ns]         dT    =        1.402 [ns]
+ThickTracker> * spos            =         3.220 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =     275.458 [keV]
+ThickTracker> * rmax            = (     46.15377 ,    103.36675 ,    -43.81496 ) [mm]
+ThickTracker> * rmin            = (    -47.81786 ,    -72.26247 ,   -709.34760 ) [mm]
+ThickTracker> * rms beam size   = (     11.27037 ,     16.59447 ,    103.44524 ) [mm]
+ThickTracker> * rms momenta     = (  4.36481e-02 ,  3.89269e-02 ,  6.85608e-04 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00502 ,      0.48782 ,   -125.37541 ) [mm]
+ThickTracker> * mean momenta    = ( -3.85775e-07 ,  1.80814e-04 ,  4.70223e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  2.17517e-04 ,  7.45534e-04 ,  8.60223e-05 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.77804e-01 , -8.37213e-01 , -8.18347e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       26.485 [ns]         dT    =        1.402 [ns]
+ThickTracker> * spos            =         3.400 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =     275.458 [keV]
+ThickTracker> * rmax            = (     42.27916 ,    100.33171 ,    -44.23441 ) [mm]
+ThickTracker> * rmin            = (    -43.87101 ,    -69.41317 ,   -709.34274 ) [mm]
+ThickTracker> * rms beam size   = (      9.93689 ,     15.58859 ,    103.43392 ) [mm]
+ThickTracker> * rms momenta     = (  4.36481e-02 ,  3.89269e-02 ,  6.85608e-04 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00504 ,      0.49409 ,   -125.64395 ) [mm]
+ThickTracker> * mean momenta    = ( -3.85775e-07 ,  1.80814e-04 ,  4.70223e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  2.18773e-04 ,  7.46382e-04 ,  8.60252e-05 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.71017e-01 , -8.12596e-01 , -8.18289e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       26.602 [ns]         dT    =      116.848 [ps]
+ThickTracker> * spos            =         3.415 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =     275.458 [keV]
+ThickTracker> * rmax            = (     38.40455 ,     97.29667 ,    -44.65387 ) [mm]
+ThickTracker> * rmin            = (    -39.92416 ,    -66.56386 ,   -709.33788 ) [mm]
+ThickTracker> * rms beam size   = (      8.61532 ,     14.61635 ,    103.42262 ) [mm]
+ThickTracker> * rms momenta     = (  4.36481e-02 ,  3.89269e-02 ,  6.85608e-04 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00506 ,      0.50037 ,   -125.91250 ) [mm]
+ThickTracker> * mean momenta    = ( -3.85775e-07 ,  1.80814e-04 ,  4.70223e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  2.20029e-04 ,  7.47229e-04 ,  8.60281e-05 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.60796e-01 , -7.82779e-01 , -8.18231e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       26.719 [ns]         dT    =      116.848 [ps]
+ThickTracker> * spos            =         3.430 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =     275.458 [keV]
+ThickTracker> * rmax            = (     34.52995 ,     94.26163 ,    -45.07332 ) [mm]
+ThickTracker> * rmin            = (    -35.97731 ,    -63.71456 ,   -709.33302 ) [mm]
+ThickTracker> * rms beam size   = (      7.31213 ,     13.68492 ,    103.41133 ) [mm]
+ThickTracker> * rms momenta     = (  4.36481e-02 ,  3.89269e-02 ,  6.85608e-04 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00508 ,      0.50664 ,   -126.18105 ) [mm]
+ThickTracker> * mean momenta    = ( -3.85775e-07 ,  1.80814e-04 ,  4.70223e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  2.21285e-04 ,  7.48076e-04 ,  8.60311e-05 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.44492e-01 , -7.46479e-01 , -8.18173e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       26.836 [ns]         dT    =      116.848 [ps]
+ThickTracker> * spos            =         3.445 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =     275.458 [keV]
+ThickTracker> * rmax            = (     30.65534 ,     91.22659 ,    -45.49277 ) [mm]
+ThickTracker> * rmin            = (    -32.03046 ,    -60.86526 ,   -709.32816 ) [mm]
+ThickTracker> * rms beam size   = (      6.03921 ,     12.80320 ,    103.40005 ) [mm]
+ThickTracker> * rms momenta     = (  4.36481e-02 ,  3.89269e-02 ,  6.85608e-04 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00509 ,      0.51292 ,   -126.44959 ) [mm]
+ThickTracker> * mean momenta    = ( -3.85775e-07 ,  1.80814e-04 ,  4.70223e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  2.22541e-04 ,  7.48923e-04 ,  8.60340e-05 ) (not normalized)
+ThickTracker> * rms correlation = ( -9.16499e-01 , -7.02139e-01 , -8.18115e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       26.953 [ns]         dT    =      116.848 [ps]
+ThickTracker> * spos            =         3.460 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =     275.458 [keV]
+ThickTracker> * rmax            = (     26.78073 ,     88.19155 ,    -45.91222 ) [mm]
+ThickTracker> * rmin            = (    -28.08362 ,    -58.01595 ,   -709.32330 ) [mm]
+ThickTracker> * rms beam size   = (      4.82062 ,     11.98218 ,    103.38879 ) [mm]
+ThickTracker> * rms momenta     = (  4.36481e-02 ,  3.89269e-02 ,  6.85608e-04 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00511 ,      0.51919 ,   -126.71814 ) [mm]
+ThickTracker> * mean momenta    = ( -3.85775e-07 ,  1.80814e-04 ,  4.70223e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  2.23797e-04 ,  7.49770e-04 ,  8.60371e-05 ) (not normalized)
+ThickTracker> * rms correlation = ( -8.63709e-01 , -6.47943e-01 , -8.18057e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       27.070 [ns]         dT    =      116.848 [ps]
+ThickTracker> * spos            =         3.475 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =     275.458 [keV]
+ThickTracker> * rmax            = (     22.90612 ,     85.15652 ,    -46.32200 ) [mm]
+ThickTracker> * rmin            = (    -24.13677 ,    -55.16665 ,   -709.31844 ) [mm]
+ThickTracker> * rms beam size   = (      3.71026 ,     11.23517 ,    103.37755 ) [mm]
+ThickTracker> * rms momenta     = (  4.36481e-02 ,  3.89269e-02 ,  6.85608e-04 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00513 ,      0.52546 ,   -126.98669 ) [mm]
+ThickTracker> * mean momenta    = ( -3.85775e-07 ,  1.80814e-04 ,  4.70223e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  2.25054e-04 ,  7.50618e-04 ,  8.60401e-05 ) (not normalized)
+ThickTracker> * rms correlation = ( -7.52585e-01 , -5.81913e-01 , -8.17998e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       27.187 [ns]         dT    =      116.848 [ps]
+ThickTracker> * spos            =         3.490 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =     275.458 [keV]
+ThickTracker> * rmax            = (     19.03151 ,     82.12148 ,    -46.71576 ) [mm]
+ThickTracker> * rmin            = (    -20.18992 ,    -52.31734 ,   -709.31358 ) [mm]
+ThickTracker> * rms beam size   = (      2.83815 ,     10.57786 ,    103.36632 ) [mm]
+ThickTracker> * rms momenta     = (  4.36481e-02 ,  3.89269e-02 ,  6.85608e-04 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00515 ,      0.53174 ,   -127.25523 ) [mm]
+ThickTracker> * mean momenta    = ( -3.85775e-07 ,  1.80814e-04 ,  4.70223e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  2.26310e-04 ,  7.51465e-04 ,  8.60432e-05 ) (not normalized)
+ThickTracker> * rms correlation = ( -5.00665e-01 , -5.02184e-01 , -8.17940e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       27.303 [ns]         dT    =      116.848 [ps]
+ThickTracker> * spos            =         3.505 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =     275.458 [keV]
+ThickTracker> * rmax            = (     15.15691 ,     79.08644 ,    -47.10952 ) [mm]
+ThickTracker> * rmin            = (    -16.24307 ,    -49.46804 ,   -709.30872 ) [mm]
+ThickTracker> * rms beam size   = (      2.47096 ,     10.02791 ,    103.35511 ) [mm]
+ThickTracker> * rms momenta     = (  4.36481e-02 ,  3.89269e-02 ,  6.85608e-04 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00517 ,      0.53801 ,   -127.52378 ) [mm]
+ThickTracker> * mean momenta    = ( -3.85775e-07 ,  1.80814e-04 ,  4.70223e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  2.27566e-04 ,  7.52312e-04 ,  8.60463e-05 ) (not normalized)
+ThickTracker> * rms correlation = ( -2.00904e-02 , -4.07479e-01 , -8.17881e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       27.420 [ns]         dT    =      116.848 [ps]
+ThickTracker> * spos            =         3.520 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =     275.458 [keV]
+ThickTracker> * rmax            = (     11.28230 ,     76.05140 ,    -47.50328 ) [mm]
+ThickTracker> * rmin            = (    -12.29623 ,    -46.61874 ,   -709.30386 ) [mm]
+ThickTracker> * rms beam size   = (      2.81381 ,      9.60378 ,    103.34391 ) [mm]
+ThickTracker> * rms momenta     = (  4.36481e-02 ,  3.89269e-02 ,  6.85608e-04 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00518 ,      0.54429 ,   -127.79233 ) [mm]
+ThickTracker> * mean momenta    = ( -3.85775e-07 ,  1.80814e-04 ,  4.70223e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  2.28822e-04 ,  7.53159e-04 ,  8.60495e-05 ) (not normalized)
+ThickTracker> * rms correlation = (  4.69711e-01 , -2.97830e-01 , -8.17823e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       27.537 [ns]         dT    =      116.848 [ps]
+ThickTracker> * spos            =         3.535 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =     275.458 [keV]
+ThickTracker> * rmax            = (      7.40769 ,     73.01636 ,    -47.89704 ) [mm]
+ThickTracker> * rmin            = (     -8.34938 ,    -43.76943 ,   -709.29900 ) [mm]
+ThickTracker> * rms beam size   = (      3.67300 ,      9.32265 ,    103.33273 ) [mm]
+ThickTracker> * rms momenta     = (  4.36481e-02 ,  3.89269e-02 ,  6.85608e-04 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00520 ,      0.55056 ,   -128.06087 ) [mm]
+ThickTracker> * mean momenta    = ( -3.85775e-07 ,  1.80814e-04 ,  4.70223e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  2.30078e-04 ,  7.54006e-04 ,  8.60527e-05 ) (not normalized)
+ThickTracker> * rms correlation = (  7.33189e-01 , -1.75318e-01 , -8.17764e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       27.654 [ns]         dT    =      116.848 [ps]
+ThickTracker> * spos            =         3.550 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =     275.458 [keV]
+ThickTracker> * rmax            = (      8.36912 ,     69.98132 ,    -48.29080 ) [mm]
+ThickTracker> * rmin            = (     -8.28328 ,    -40.92013 ,   -709.29414 ) [mm]
+ThickTracker> * rms beam size   = (      4.77762 ,      9.19765 ,    103.32156 ) [mm]
+ThickTracker> * rms momenta     = (  4.36481e-02 ,  3.89269e-02 ,  6.85608e-04 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00522 ,      0.55683 ,   -128.32942 ) [mm]
+ThickTracker> * mean momenta    = ( -3.85775e-07 ,  1.80814e-04 ,  4.70223e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  2.31334e-04 ,  7.54854e-04 ,  8.60560e-05 ) (not normalized)
+ThickTracker> * rms correlation = (  8.50700e-01 , -4.44197e-02 , -8.17705e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       27.771 [ns]         dT    =      116.848 [ps]
+ThickTracker> * spos            =         3.565 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =     275.458 [keV]
+ThickTracker> * rmax            = (     10.42685 ,     66.94629 ,    -48.64326 ) [mm]
+ThickTracker> * rmin            = (    -10.60207 ,    -38.07083 ,   -709.28928 ) [mm]
+ThickTracker> * rms beam size   = (      5.99348 ,      9.23512 ,    103.31041 ) [mm]
+ThickTracker> * rms momenta     = (  4.36481e-02 ,  3.89269e-02 ,  6.85608e-04 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00524 ,      0.56311 ,   -128.59797 ) [mm]
+ThickTracker> * mean momenta    = ( -3.85775e-07 ,  1.80814e-04 ,  4.70223e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  2.32590e-04 ,  7.55701e-04 ,  8.60592e-05 ) (not normalized)
+ThickTracker> * rms correlation = (  9.06926e-01 ,  8.85003e-02 , -8.17646e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       27.888 [ns]         dT    =      116.848 [ps]
+ThickTracker> * spos            =         3.580 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =     275.458 [keV]
+ThickTracker> * rmax            = (     12.80091 ,     63.91125 ,    -48.97819 ) [mm]
+ThickTracker> * rmin            = (    -13.05526 ,    -35.22152 ,   -709.28442 ) [mm]
+ThickTracker> * rms beam size   = (      7.26495 ,      9.43313 ,    103.29928 ) [mm]
+ThickTracker> * rms momenta     = (  4.36481e-02 ,  3.89269e-02 ,  6.85608e-04 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00525 ,      0.56938 ,   -128.86651 ) [mm]
+ThickTracker> * mean momenta    = ( -3.85775e-07 ,  1.80814e-04 ,  4.70223e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  2.33846e-04 ,  7.56548e-04 ,  8.60625e-05 ) (not normalized)
+ThickTracker> * rms correlation = (  9.36960e-01 ,  2.16596e-01 , -8.17586e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       28.004 [ns]         dT    =      116.848 [ps]
+ThickTracker> * spos            =         3.595 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =     275.458 [keV]
+ThickTracker> * rmax            = (     15.30139 ,     60.87621 ,    -49.31312 ) [mm]
+ThickTracker> * rmin            = (    -15.61269 ,    -32.37222 ,   -709.27956 ) [mm]
+ThickTracker> * rms beam size   = (      8.56729 ,      9.78192 ,    103.28816 ) [mm]
+ThickTracker> * rms momenta     = (  4.36481e-02 ,  3.89269e-02 ,  6.85608e-04 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00527 ,      0.57566 ,   -129.13506 ) [mm]
+ThickTracker> * mean momenta    = ( -3.85775e-07 ,  1.80814e-04 ,  4.70223e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  2.35102e-04 ,  7.57395e-04 ,  8.60659e-05 ) (not normalized)
+ThickTracker> * rms correlation = (  9.54594e-01 ,  3.34193e-01 , -8.17527e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       28.121 [ns]         dT    =      116.848 [ps]
+ThickTracker> * spos            =         3.610 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =     275.458 [keV]
+ThickTracker> * rmax            = (     17.80186 ,     57.84117 ,    -49.64805 ) [mm]
+ThickTracker> * rmin            = (    -18.30603 ,    -29.52292 ,   -709.27470 ) [mm]
+ThickTracker> * rms beam size   = (      9.88832 ,     10.26615 ,    103.27706 ) [mm]
+ThickTracker> * rms momenta     = (  4.36481e-02 ,  3.89269e-02 ,  6.85608e-04 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00529 ,      0.58193 ,   -129.40361 ) [mm]
+ThickTracker> * mean momenta    = ( -3.85775e-07 ,  1.80814e-04 ,  4.70223e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  2.36358e-04 ,  7.58242e-04 ,  8.60693e-05 ) (not normalized)
+ThickTracker> * rms correlation = (  9.65746e-01 ,  4.37838e-01 , -8.17467e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       28.238 [ns]         dT    =      116.848 [ps]
+ThickTracker> * spos            =         3.625 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =     275.458 [keV]
+ThickTracker> * rmax            = (     20.52072 ,     54.80613 ,    -49.98298 ) [mm]
+ThickTracker> * rmin            = (    -20.99936 ,    -26.67361 ,   -709.26984 ) [mm]
+ThickTracker> * rms beam size   = (     11.22144 ,     10.86773 ,    103.26597 ) [mm]
+ThickTracker> * rms momenta     = (  4.36481e-02 ,  3.89269e-02 ,  6.85608e-04 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00531 ,      0.58820 ,   -129.67215 ) [mm]
+ThickTracker> * mean momenta    = ( -3.85775e-07 ,  1.80814e-04 ,  4.70223e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  2.37614e-04 ,  7.59090e-04 ,  8.60727e-05 ) (not normalized)
+ThickTracker> * rms correlation = (  9.73220e-01 ,  5.26401e-01 , -8.17407e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       28.355 [ns]         dT    =      116.848 [ps]
+ThickTracker> * spos            =         3.640 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =     275.458 [keV]
+ThickTracker> * rmax            = (     23.73306 ,     51.77109 ,    -50.31790 ) [mm]
+ThickTracker> * rmin            = (    -23.69269 ,    -23.82431 ,   -709.26498 ) [mm]
+ThickTracker> * rms beam size   = (     12.56280 ,     11.56835 ,    103.25490 ) [mm]
+ThickTracker> * rms momenta     = (  4.36481e-02 ,  3.89269e-02 ,  6.85608e-04 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00533 ,      0.59448 ,   -129.94070 ) [mm]
+ThickTracker> * mean momenta    = ( -3.85775e-07 ,  1.80814e-04 ,  4.70223e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  2.38870e-04 ,  7.59937e-04 ,  8.60762e-05 ) (not normalized)
+ThickTracker> * rms correlation = (  9.78464e-01 ,  6.00487e-01 , -8.17348e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       28.472 [ns]         dT    =      116.848 [ps]
+ThickTracker> * spos            =         3.655 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =     275.458 [keV]
+ThickTracker> * rmax            = (     27.00911 ,     48.73605 ,    -50.65283 ) [mm]
+ThickTracker> * rmin            = (    -26.82144 ,    -21.47891 ,   -709.26012 ) [mm]
+ThickTracker> * rms beam size   = (     13.91002 ,     12.35118 ,    103.24385 ) [mm]
+ThickTracker> * rms momenta     = (  4.36481e-02 ,  3.89269e-02 ,  6.85608e-04 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00534 ,      0.60075 ,   -130.20925 ) [mm]
+ThickTracker> * mean momenta    = ( -3.85775e-07 ,  1.80814e-04 ,  4.70223e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  2.40126e-04 ,  7.60784e-04 ,  8.60797e-05 ) (not normalized)
+ThickTracker> * rms correlation = (  9.82283e-01 ,  6.61679e-01 , -8.17288e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       28.589 [ns]         dT    =      116.848 [ps]
+ThickTracker> * spos            =         3.670 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =     275.458 [keV]
+ThickTracker> * rmax            = (     30.28516 ,     45.70102 ,    -50.98776 ) [mm]
+ThickTracker> * rmin            = (    -29.98876 ,    -23.33150 ,   -709.25526 ) [mm]
+ThickTracker> * rms beam size   = (     15.26155 ,     13.20161 ,    103.23281 ) [mm]
+ThickTracker> * rms momenta     = (  4.36481e-02 ,  3.89269e-02 ,  6.85608e-04 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00536 ,      0.60703 ,   -130.47779 ) [mm]
+ThickTracker> * mean momenta    = ( -3.85775e-07 ,  1.80814e-04 ,  4.70223e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  2.41383e-04 ,  7.61631e-04 ,  8.60832e-05 ) (not normalized)
+ThickTracker> * rms correlation = (  9.85149e-01 ,  7.11912e-01 , -8.17227e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       28.706 [ns]         dT    =      116.848 [ps]
+ThickTracker> * spos            =         3.685 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =     275.458 [keV]
+ThickTracker> * rmax            = (     33.56121 ,     42.66598 ,    -51.32269 ) [mm]
+ThickTracker> * rmin            = (    -33.41318 ,    -25.18409 ,   -709.25040 ) [mm]
+ThickTracker> * rms beam size   = (     16.61633 ,     14.10741 ,    103.22178 ) [mm]
+ThickTracker> * rms momenta     = (  4.36481e-02 ,  3.89269e-02 ,  6.85608e-04 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00538 ,      0.61330 ,   -130.74634 ) [mm]
+ThickTracker> * mean momenta    = ( -3.85775e-07 ,  1.80814e-04 ,  4.70223e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  2.42639e-04 ,  7.62479e-04 ,  8.60868e-05 ) (not normalized)
+ThickTracker> * rms correlation = (  9.87355e-01 ,  7.53097e-01 , -8.17167e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       28.822 [ns]         dT    =      116.848 [ps]
+ThickTracker> * spos            =         3.700 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+ThickTracker> 
+ThickTracker> * ************** B U N C H ********************************************************* 
+ThickTracker> * NP              = 200
+ThickTracker> * Qtot            =        0.040 [fC]         Qi    =        0.000 [fC]
+ThickTracker> * Ekin            =     100.005 [MeV]         dEkin =     275.458 [keV]
+ThickTracker> * rmax            = (    110.05606 ,     67.12205 ,    -58.02125 ) [mm]
+ThickTracker> * rmin            = (   -108.83054 ,    -66.94879 ,   -709.15320 ) [mm]
+ThickTracker> * rms beam size   = (     43.92893 ,     36.39984 ,    103.00462 ) [mm]
+ThickTracker> * rms momenta     = (  4.36481e-02 ,  3.89269e-02 ,  6.85608e-04 ) [beta gamma]
+ThickTracker> * mean position   = (      0.00574 ,      0.73878 ,   -136.11728 ) [mm]
+ThickTracker> * mean momenta    = ( -3.85775e-07 ,  1.80814e-04 ,  4.70223e-01 ) [beta gamma]
+ThickTracker> * rms emittance   = (  2.67760e-04 ,  7.79425e-04 ,  8.61659e-05 ) (not normalized)
+ThickTracker> * rms correlation = (  9.97808e-01 ,  9.65433e-01 , -8.15933e-01 )
+ThickTracker> * hr              = (      0.00000 ,      0.00000 ,     41.29179 ) [um]
+ThickTracker> * dh              =   1.00000e-10 [%]
+ThickTracker> * t               =       31.159 [ns]         dT    =        2.337 [ns]
+ThickTracker> * spos            =         4.000 [m]
+ThickTracker> * ********************************************************************************** 
+ThickTracker> 
+OPAL> * End of input stream "MAP-FODO.in".
+Timings> -----------------------------------------------------------------
+Timings>      Timing results for 1 nodes:
+Timings> -----------------------------------------------------------------
+Timings> mainTimer........... Wall tot =    3.28121, CPU tot =       0.34
+Timings> 
+Timings> Boundingbox......... Wall max =    2.9e-05, CPU max =          0
+Timings>                      Wall avg =    2.9e-05, CPU avg =          0
+Timings>                      Wall min =    2.9e-05, CPU min =          0
+Timings> 
+Timings> Boundingbox-bounds.. Wall max =      6e-06, CPU max =          0
+Timings>                      Wall avg =      6e-06, CPU avg =          0
+Timings>                      Wall min =      6e-06, CPU min =          0
+Timings> 
+Timings> Boundingbox-update.. Wall max =      5e-06, CPU max =          0
+Timings>                      Wall avg =      5e-06, CPU avg =          0
+Timings>                      Wall min =      5e-06, CPU min =          0
+Timings> 
+Timings> bunchAnalysis....... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Compute Statistics.. Wall max =   0.004612, CPU max =       0.02
+Timings>                      Wall avg =   0.004612, CPU avg =       0.02
+Timings>                      Wall min =   0.004612, CPU min =       0.02
+Timings> 
+Timings> Create Distr........ Wall max =   0.001107, CPU max =          0
+Timings>                      Wall avg =   0.001107, CPU avg =          0
+Timings>                      Wall min =   0.001107, CPU min =          0
+Timings> 
+Timings> Fast inside test.... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Histogram........... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Initialize geometry. Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Inside test......... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Load Distr.......... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> mapAnalysis......... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> mapCombination...... Wall max =   0.002836, CPU max =          0
+Timings>                      Wall avg =   0.002836, CPU avg =          0
+Timings>                      Wall min =   0.002836, CPU min =          0
+Timings> 
+Timings> mapCreation......... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> mapTracking......... Wall max =    3.25967, CPU max =       0.33
+Timings>                      Wall avg =    3.25967, CPU avg =       0.33
+Timings>                      Wall min =    3.25967, CPU min =       0.33
+Timings> 
+Timings> Particle Inside..... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Ray tracing......... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Secondary emission.. Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> SelfField total..... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Write H5-File....... Wall max =    3.22036, CPU max =        0.3
+Timings>                      Wall avg =    3.22036, CPU avg =        0.3
+Timings>                      Wall min =    3.22036, CPU min =        0.3
+Timings> 
+Timings> Write Stat.......... Wall max =   0.012558, CPU max =       0.02
+Timings>                      Wall avg =   0.012558, CPU avg =       0.02
+Timings>                      Wall min =   0.012558, CPU min =       0.02
+Timings> 
+Timings> -----------------------------------------------------------------
