@@ -5,13 +5,6 @@ Option, VERSION=10900;
 
 TITLE,string="OBLA 4 MeV Gun and Beam";
 
-// Edes=1.0E-9;
-// gamma=Edes / EMASS + 1;
-// gambet=sqrt(gamma^2 - 1);
-// P0 = gambet*EMASS;
-
-VALUE,{gamma,Edes,gambet};
-
 REAL QB = 2e-9;
 REAL BF = 1498.956e6;
 REAL BC = QB*BF;
@@ -21,6 +14,7 @@ REAL BC = QB*BF;
 // FMAPFN:   field file name (string)
 // ELEMEDGE: physical start of the element on the floor (real)
 
+cathode: SOURCE, ELEMEDGE=0.0;
 gun: RFCAVITY, L=0.008, VOLT=-98.954, FMAPFN="1T1.T7", ELEMEDGE=0.00, TYPE="STANDING", FREQ=1.0e-6;
 psl: SOLENOID, L=0.12, ELEMEDGE=0.0, FMAPFN="1T2.T7", KS=0.1672;
 rac: RFCAVITY, L=0.54, VOLT=35.5, FMAPFN="1T3.T7", ELEMEDGE=0.103, TYPE="STANDING", FREQ=1498.956, LAG=76.*RADDEG;
@@ -30,7 +24,7 @@ sl20: SOLENOID, L=1.00, ELEMEDGE=0.834, FMAPFN="1T5.T7", KS=0.07899;
 sl21: SOLENOID, L=1.00, ELEMEDGE=0.934, FMAPFN="1T5.T7", KS=-0.07899;
 end: SOLENOID, L=0.01, ELEMEDGE=100., FMAPFN="1T5.T7", KS=0.009874;
 
-l1:   LINE = (gun,psl,rac,sl10,sl11,sl20,sl21,end);
+l1:   LINE = (cathode,gun,psl,rac,sl10,sl11,sl20,sl21,end);
 l2:   LINE = (gun,psl,rac,sl10);
 
 REAL TRise    = 10.0e-12;
@@ -43,7 +37,9 @@ Dist1:DISTRIBUTION, TYPE = "FLATTOP",
 	SIGMAT = 0.0, PT = 0.0, SIGMAPT = 0.0, CORRT = 0.0, EKIN = 0.23,
 	TRISE = TRise, TFALL = TFall, TPULSEFWHM = TPulseFWHM,
 	EMISSIONMODEL = ASTRA, EMISSIONSTEPS=300, NBIN = 10, EMITTED = TRUE, WRITETOFILE = TRUE,
-	LASERPROFFN = "QuickSave.h5", IMAGENAME = "/entry1/OBLA/Laser/FINLS_TR_SCACAT", INTENSITYCUT = 0.45;
+        LASERPROFFN = "LaserProfile.pgm",
+        // LASERPROFFN = "QuickSave.h5", IMAGENAME = "/entry1/OBLA/Laser/FINLS_TR_SCACAT",
+        INTENSITYCUT = 0.45;
 
 REAL MINSTEPFORREBIN=600;
 
@@ -56,7 +52,7 @@ beam1: BEAM, PARTICLE=ELECTRON, pc=P0, NPART=100000, BCURRENT=BC, BFREQ=BF * 1e-
 
 SELECT, LINE=l1;
 
-TRACK,LINE=l1, BEAM=beam1, MAXSTEPS=1000, DT=1.0e-13;
+TRACK,LINE=l1, BEAM=beam1, MAXSTEPS=10000, DT=1.0e-13;
 	RUN, METHOD = "PARALLEL-T", BEAM=beam1, FIELDSOLVER=Fs1, DISTRIBUTION=Dist1;
 ENDTRACK;
 
