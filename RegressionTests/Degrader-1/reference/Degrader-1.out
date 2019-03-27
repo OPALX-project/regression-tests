@@ -1,9 +1,37 @@
-Ippl> CommMPI: Started job 3 on host `merlin-l-01.psi.ch'.
+libibverbs: Warning: couldn't load driver 'mlx5': /lib64/libmlx5-rdmav2.so: symbol ibv_exp_cmd_destroy_flow, version IBVERBS_1.1 not defined in file libibverbs.so.1 with link time reference
+libibverbs: Warning: couldn't load driver 'mlx4': /lib64/libmlx4-rdmav2.so: symbol ibv_exp_cmd_destroy_flow, version IBVERBS_1.1 not defined in file libibverbs.so.1 with link time reference
+libibverbs: Warning: no userspace device-specific driver found for /sys/class/infiniband_verbs/uverbs0
+libibverbs: Warning: couldn't load driver 'mlx5': /lib64/libmlx5-rdmav2.so: symbol ibv_exp_cmd_destroy_flow, version IBVERBS_1.1 not defined in file libibverbs.so.1 with link time reference
+libibverbs: Warning: couldn't load driver 'mlx5': /lib64/libmlx5-rdmav2.so: symbol ibv_exp_cmd_destroy_flow, version IBVERBS_1.1 not defined in file libibverbs.so.1 with link time reference
+libibverbs: Warning: couldn't load driver 'mlx5': /lib64/libmlx5-rdmav2.so: symbol ibv_exp_cmd_destroy_flow, version IBVERBS_1.1 not defined in file libibverbs.so.1 with link time reference
+libibverbs: Warning: couldn't load driver 'mlx5': /lib64/libmlx5-rdmav2.so: symbol ibv_exp_cmd_destroy_flow, version IBVERBS_1.1 not defined in file libibverbs.so.1 with link time reference
+libibverbs: Warning: couldn't load driver 'mlx4': /lib64/libmlx4-rdmav2.so: symbol ibv_exp_cmd_destroy_flow, version IBVERBS_1.1 not defined in file libibverbs.so.1 with link time reference
+libibverbs: Warning: no userspace device-specific driver found for /sys/class/infiniband_verbs/uverbs0
+libibverbs: Warning: couldn't load driver 'mlx4': /lib64/libmlx4-rdmav2.so: symbol ibv_exp_cmd_destroy_flow, version IBVERBS_1.1 not defined in file libibverbs.so.1 with link time reference
+libibverbs: Warning: no userspace device-specific driver found for /sys/class/infiniband_verbs/uverbs0
+libibverbs: Warning: couldn't load driver 'mlx4': /lib64/libmlx4-rdmav2.so: symbol ibv_exp_cmd_destroy_flow, version IBVERBS_1.1 not defined in file libibverbs.so.1 with link time reference
+libibverbs: Warning: no userspace device-specific driver found for /sys/class/infiniband_verbs/uverbs0
+libibverbs: Warning: couldn't load driver 'mlx4': /lib64/libmlx4-rdmav2.so: symbol ibv_exp_cmd_destroy_flow, version IBVERBS_1.1 not defined in file libibverbs.so.1 with link time reference
+libibverbs: Warning: no userspace device-specific driver found for /sys/class/infiniband_verbs/uverbs0
+--------------------------------------------------------------------------
+[[41433,1],1]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: merlin-l-02
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+Ippl> CommMPI: Started job 1 on host `merlin-l-02.psi.ch'.
+Ippl> CommMPI: Started job 2 on host `merlin-l-02.psi.ch'.
+Ippl> CommMPI: Started job 3 on host `merlin-l-02.psi.ch'.
 Ippl> CommMPI: Parent process waiting for children ...
 Ippl> CommMPI: Child 2 ready.
 Ippl> CommMPI: Child 1 ready.
-Ippl> CommMPI: Started job 1 on host `merlin-l-01.psi.ch'.
-Ippl> CommMPI: Started job 2 on host `merlin-l-01.psi.ch'.
 Ippl> CommMPI: Child 3 ready.
 Ippl> CommMPI: Initialization complete.
 {0}>                ____  _____       ___ 
@@ -13,7 +41,7 @@ Ippl> CommMPI: Initialization complete.
 {0}>              | |__| | |  / ____ \| |____
 {0}>               \____/|_| /_/    \_\______|
 OPAL{0}> 
-OPAL{0}> This is OPAL (Object Oriented Parallel Accelerator Library) Version 1.9.0
+OPAL{0}> This is OPAL (Object Oriented Parallel Accelerator Library) Version 2.1.0
 OPAL{0}> 
 OPAL{0}>                 (c) PSI, http://amas.web.psi.ch
 OPAL{0}> The optimiser (former opt-Pilot) is integrated 
@@ -21,9 +49,9 @@ OPAL{0}>
 OPAL{0}> Please send cookies, goodies or other motivations (wine and beer ... ) 
 OPAL{0}> to the OPAL developers opal@lists.psi.ch
 OPAL{0}> 
-OPAL{0}> Time: 07:23:05 date: 19/03/2018
+OPAL{0}> Time: 22:05:30 date: 27/03/2019
 OPAL{0}> 
-OPAL{0}> Couldn't find startup file "/gpfs/home/adelmann/init.opal".
+OPAL{0}> Couldn't find startup file "/gpfs/home/kraus/init.opal".
 OPAL{0}> Note: this is not mandatory for an OPAL simulation!
 OPAL{0}> 
 OPAL{0}> * Reading input stream "Degrader-1.in".
@@ -62,6 +90,7 @@ OPAL{0}> * r(2, : ) =          0 &          0 &          1 &          0 &       
 OPAL{0}> * r(3, : ) =          0 &          0 &          0 &          1 &          0 &          0 \\
 OPAL{0}> * r(4, : ) =          0 &          0 &          0 &          0 &          1 &          0 \\
 OPAL{0}> * r(5, : ) =          0 &          0 &          0 &          0 &          0 &          1 \\
+OPAL{0}> 
 OPAL{0}> * ************* D I S T R I B U T I O N ********************************************
 OPAL{0}> * 
 OPAL{0}> * Number of particles: 1000000
@@ -161,14 +190,14 @@ Ippl{0}[3]> DEG1 gone live
 Ippl{0}[3]> M1 gone live
 OPAL{0}> 
 OPAL{0}> Size of map 5 sections 
-OPAL{0}> Key: (     -0.106260-      0.005000) number of overlapping elements 0
-OPAL{0}> Key: (      0.005000-      0.015003) number of overlapping elements 1
-OPAL{0}>                                      M0
-OPAL{0}> Key: (      0.015003-      0.020005) number of overlapping elements 0
-OPAL{0}> Key: (      0.020005-      0.030008) number of overlapping elements 1
-OPAL{0}>                                      DEG1
-OPAL{0}> Key: (      0.030008-      0.030675) number of overlapping elements 1
-OPAL{0}>                                      M1
+OPAL{0}> Key: (-0.106260 - 0.005000) number of overlapping elements 0
+OPAL{0}> Key: (0.005000 - 0.015003) number of overlapping elements 1
+OPAL{0}>                            M0
+OPAL{0}> Key: (0.015003 - 0.020005) number of overlapping elements 0
+OPAL{0}> Key: (0.020005 - 0.030008) number of overlapping elements 1
+OPAL{0}>                            DEG1
+OPAL{0}> Key: (0.030008 - 0.030675) number of overlapping elements 1
+OPAL{0}>                            M1
 OPAL{0}> 
 OPAL{0}> 
 OPAL{0}> * ************** B U N C H ********************************************************* 
@@ -189,22 +218,22 @@ OPAL{0}> * t               =       45.015 [ps]         dT    =        1.000 [ps]
 OPAL{0}> * spos            =        5.000 [mm]
 OPAL{0}> * ********************************************************************************** 
 OPAL{0}> 
-OPAL{0}> Track start at: 07:23:06, t= 45.015 [ps]; zstart at: 5.000 [mm]
+OPAL{0}> Track start at: 22:05:32, t= 45.015 [ps]; zstart at: 5.000 [mm]
 OPAL{0}> Executing ParallelTTracker, initial dt= 1.000 [ps];
 OPAL{0}> max integration steps 230, next step= 0
 ParallelTTracker {0}[2]> MINBINEMITTED 1
 ParallelTTracker {0}[2]> MINSTEPFORREBIN 200
 ParallelTTracker {0}[2]> REPARTFREQ 1000
-ParallelTTracker {0}[3]> 07:23:06 Step      0 at 5.111 [mm], t= 46.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:06 Step      1 at 5.222 [mm], t= 47.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:06 Step      2 at 5.333 [mm], t= 48.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:06 Step      3 at 5.445 [mm], t= 49.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:06 Step      4 at 5.556 [mm], t= 50.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:06 Step      5 at 5.667 [mm], t= 51.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:06 Step      6 at 5.778 [mm], t= 52.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:06 Step      7 at 5.889 [mm], t= 53.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:06 Step      8 at 6.000 [mm], t= 54.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:06 Step      9 at 6.111 [mm], t= 55.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:32 Step      0 at 5.111 [mm], t= 46.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:32 Step      1 at 5.222 [mm], t= 47.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:32 Step      2 at 5.333 [mm], t= 48.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:32 Step      3 at 5.445 [mm], t= 49.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:32 Step      4 at 5.556 [mm], t= 50.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:32 Step      5 at 5.667 [mm], t= 51.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:32 Step      6 at 5.778 [mm], t= 52.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:32 Step      7 at 5.889 [mm], t= 53.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:32 Step      8 at 6.000 [mm], t= 54.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:32 Step      9 at 6.111 [mm], t= 55.015 [ps], E=72.000 [MeV]
 OPAL {0}[3]> * Wrote beam statistics.
 OPAL {0}> 
 OPAL {0}> * ************** B U N C H ********************************************************* 
@@ -226,16 +255,16 @@ OPAL {0}> * spos            =        6.111 [mm]
 OPAL {0}> * ********************************************************************************** 
 OPAL {0}> 
 OPAL {0}[2]> * Wrote beam phase space.
-ParallelTTracker {0}[3]> 07:23:06 Step     10 at 6.223 [mm], t= 56.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:06 Step     11 at 6.334 [mm], t= 57.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:06 Step     12 at 6.445 [mm], t= 58.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:06 Step     13 at 6.556 [mm], t= 59.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:06 Step     14 at 6.667 [mm], t= 60.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:06 Step     15 at 6.778 [mm], t= 61.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:06 Step     16 at 6.890 [mm], t= 62.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:06 Step     17 at 7.001 [mm], t= 63.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:06 Step     18 at 7.112 [mm], t= 64.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:06 Step     19 at 7.223 [mm], t= 65.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:32 Step     10 at 6.223 [mm], t= 56.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:32 Step     11 at 6.334 [mm], t= 57.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:32 Step     12 at 6.445 [mm], t= 58.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:33 Step     13 at 6.556 [mm], t= 59.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:33 Step     14 at 6.667 [mm], t= 60.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:33 Step     15 at 6.778 [mm], t= 61.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:33 Step     16 at 6.890 [mm], t= 62.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:33 Step     17 at 7.001 [mm], t= 63.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:33 Step     18 at 7.112 [mm], t= 64.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:33 Step     19 at 7.223 [mm], t= 65.015 [ps], E=72.000 [MeV]
 OPAL {0}[3]> * Wrote beam statistics.
 OPAL {0}> 
 OPAL {0}> * ************** B U N C H ********************************************************* 
@@ -257,16 +286,16 @@ OPAL {0}> * spos            =        7.223 [mm]
 OPAL {0}> * ********************************************************************************** 
 OPAL {0}> 
 OPAL {0}[2]> * Wrote beam phase space.
-ParallelTTracker {0}[3]> 07:23:07 Step     20 at 7.334 [mm], t= 66.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:07 Step     21 at 7.445 [mm], t= 67.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:07 Step     22 at 7.556 [mm], t= 68.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:07 Step     23 at 7.668 [mm], t= 69.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:07 Step     24 at 7.779 [mm], t= 70.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:07 Step     25 at 7.890 [mm], t= 71.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:07 Step     26 at 8.001 [mm], t= 72.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:07 Step     27 at 8.112 [mm], t= 73.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:07 Step     28 at 8.223 [mm], t= 74.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:07 Step     29 at 8.334 [mm], t= 75.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:33 Step     20 at 7.334 [mm], t= 66.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:33 Step     21 at 7.445 [mm], t= 67.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:33 Step     22 at 7.556 [mm], t= 68.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:33 Step     23 at 7.668 [mm], t= 69.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:33 Step     24 at 7.779 [mm], t= 70.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:33 Step     25 at 7.890 [mm], t= 71.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:33 Step     26 at 8.001 [mm], t= 72.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:33 Step     27 at 8.112 [mm], t= 73.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:33 Step     28 at 8.223 [mm], t= 74.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:33 Step     29 at 8.334 [mm], t= 75.015 [ps], E=72.000 [MeV]
 OPAL {0}[3]> * Wrote beam statistics.
 OPAL {0}> 
 OPAL {0}> * ************** B U N C H ********************************************************* 
@@ -288,16 +317,16 @@ OPAL {0}> * spos            =        8.334 [mm]
 OPAL {0}> * ********************************************************************************** 
 OPAL {0}> 
 OPAL {0}[2]> * Wrote beam phase space.
-ParallelTTracker {0}[3]> 07:23:07 Step     30 at 8.446 [mm], t= 76.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:07 Step     31 at 8.557 [mm], t= 77.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:07 Step     32 at 8.668 [mm], t= 78.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:07 Step     33 at 8.779 [mm], t= 79.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:07 Step     34 at 8.890 [mm], t= 80.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:07 Step     35 at 9.001 [mm], t= 81.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:07 Step     36 at 9.112 [mm], t= 82.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:07 Step     37 at 9.224 [mm], t= 83.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:07 Step     38 at 9.335 [mm], t= 84.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:07 Step     39 at 9.446 [mm], t= 85.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:34 Step     30 at 8.446 [mm], t= 76.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:34 Step     31 at 8.557 [mm], t= 77.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:34 Step     32 at 8.668 [mm], t= 78.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:34 Step     33 at 8.779 [mm], t= 79.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:34 Step     34 at 8.890 [mm], t= 80.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:34 Step     35 at 9.001 [mm], t= 81.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:34 Step     36 at 9.112 [mm], t= 82.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:34 Step     37 at 9.224 [mm], t= 83.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:34 Step     38 at 9.335 [mm], t= 84.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:34 Step     39 at 9.446 [mm], t= 85.015 [ps], E=72.000 [MeV]
 OPAL {0}[3]> * Wrote beam statistics.
 OPAL {0}> 
 OPAL {0}> * ************** B U N C H ********************************************************* 
@@ -319,16 +348,16 @@ OPAL {0}> * spos            =        9.446 [mm]
 OPAL {0}> * ********************************************************************************** 
 OPAL {0}> 
 OPAL {0}[2]> * Wrote beam phase space.
-ParallelTTracker {0}[3]> 07:23:08 Step     40 at 9.557 [mm], t= 86.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:08 Step     41 at 9.668 [mm], t= 87.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:08 Step     42 at 9.779 [mm], t= 88.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:08 Step     43 at 9.891 [mm], t= 89.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:08 Step     44 at 10.002 [mm], t= 90.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:08 Step     45 at 10.113 [mm], t= 91.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:08 Step     46 at 10.224 [mm], t= 92.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:08 Step     47 at 10.335 [mm], t= 93.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:08 Step     48 at 10.446 [mm], t= 94.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:08 Step     49 at 10.557 [mm], t= 95.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:34 Step     40 at 9.557 [mm], t= 86.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:34 Step     41 at 9.668 [mm], t= 87.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:34 Step     42 at 9.779 [mm], t= 88.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:34 Step     43 at 9.891 [mm], t= 89.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:34 Step     44 at 10.002 [mm], t= 90.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:34 Step     45 at 10.113 [mm], t= 91.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:34 Step     46 at 10.224 [mm], t= 92.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:35 Step     47 at 10.335 [mm], t= 93.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:35 Step     48 at 10.446 [mm], t= 94.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:35 Step     49 at 10.557 [mm], t= 95.015 [ps], E=72.000 [MeV]
 OPAL {0}[3]> * Wrote beam statistics.
 OPAL {0}> 
 OPAL {0}> * ************** B U N C H ********************************************************* 
@@ -350,16 +379,18 @@ OPAL {0}> * spos            =       10.557 [mm]
 OPAL {0}> * ********************************************************************************** 
 OPAL {0}> 
 OPAL {0}[2]> * Wrote beam phase space.
-ParallelTTracker {0}[3]> 07:23:08 Step     50 at 10.669 [mm], t= 96.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:08 Step     51 at 10.780 [mm], t= 97.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:08 Step     52 at 10.891 [mm], t= 98.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:08 Step     53 at 11.002 [mm], t= 99.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:08 Step     54 at 11.113 [mm], t= 100.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:08 Step     55 at 11.224 [mm], t= 101.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:08 Step     56 at 11.335 [mm], t= 102.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:08 Step     57 at 11.447 [mm], t= 103.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:08 Step     58 at 11.558 [mm], t= 104.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:08 Step     59 at 11.669 [mm], t= 105.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:35 Step     50 at 10.669 [mm], t= 96.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:35 Step     51 at 10.780 [mm], t= 97.015 [ps], E=72.000 [MeV]
+[merlin-l-02.psi.ch:21837] 3 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[merlin-l-02.psi.ch:21837] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+ParallelTTracker {0}[3]> 22:05:35 Step     52 at 10.891 [mm], t= 98.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:35 Step     53 at 11.002 [mm], t= 99.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:35 Step     54 at 11.113 [mm], t= 100.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:35 Step     55 at 11.224 [mm], t= 101.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:35 Step     56 at 11.335 [mm], t= 102.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:35 Step     57 at 11.447 [mm], t= 103.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:35 Step     58 at 11.558 [mm], t= 104.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:35 Step     59 at 11.669 [mm], t= 105.015 [ps], E=72.000 [MeV]
 OPAL {0}[3]> * Wrote beam statistics.
 OPAL {0}> 
 OPAL {0}> * ************** B U N C H ********************************************************* 
@@ -381,16 +412,16 @@ OPAL {0}> * spos            =       11.669 [mm]
 OPAL {0}> * ********************************************************************************** 
 OPAL {0}> 
 OPAL {0}[2]> * Wrote beam phase space.
-ParallelTTracker {0}[3]> 07:23:09 Step     60 at 11.780 [mm], t= 106.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:09 Step     61 at 11.891 [mm], t= 107.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:09 Step     62 at 12.002 [mm], t= 108.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:09 Step     63 at 12.114 [mm], t= 109.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:09 Step     64 at 12.225 [mm], t= 110.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:09 Step     65 at 12.336 [mm], t= 111.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:09 Step     66 at 12.447 [mm], t= 112.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:09 Step     67 at 12.558 [mm], t= 113.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:09 Step     68 at 12.669 [mm], t= 114.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:09 Step     69 at 12.780 [mm], t= 115.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:35 Step     60 at 11.780 [mm], t= 106.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:35 Step     61 at 11.891 [mm], t= 107.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:36 Step     62 at 12.002 [mm], t= 108.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:36 Step     63 at 12.114 [mm], t= 109.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:36 Step     64 at 12.225 [mm], t= 110.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:36 Step     65 at 12.336 [mm], t= 111.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:36 Step     66 at 12.447 [mm], t= 112.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:36 Step     67 at 12.558 [mm], t= 113.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:36 Step     68 at 12.669 [mm], t= 114.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:36 Step     69 at 12.780 [mm], t= 115.015 [ps], E=72.000 [MeV]
 OPAL {0}[3]> * Wrote beam statistics.
 OPAL {0}> 
 OPAL {0}> * ************** B U N C H ********************************************************* 
@@ -412,16 +443,16 @@ OPAL {0}> * spos            =       12.780 [mm]
 OPAL {0}> * ********************************************************************************** 
 OPAL {0}> 
 OPAL {0}[2]> * Wrote beam phase space.
-ParallelTTracker {0}[3]> 07:23:09 Step     70 at 12.892 [mm], t= 116.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:09 Step     71 at 13.003 [mm], t= 117.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:09 Step     72 at 13.114 [mm], t= 118.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:09 Step     73 at 13.225 [mm], t= 119.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:09 Step     74 at 13.336 [mm], t= 120.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:09 Step     75 at 13.447 [mm], t= 121.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:09 Step     76 at 13.558 [mm], t= 122.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:09 Step     77 at 13.670 [mm], t= 123.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:09 Step     78 at 13.781 [mm], t= 124.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:09 Step     79 at 13.892 [mm], t= 125.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:36 Step     70 at 12.892 [mm], t= 116.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:36 Step     71 at 13.003 [mm], t= 117.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:36 Step     72 at 13.114 [mm], t= 118.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:36 Step     73 at 13.225 [mm], t= 119.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:36 Step     74 at 13.336 [mm], t= 120.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:36 Step     75 at 13.447 [mm], t= 121.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:36 Step     76 at 13.558 [mm], t= 122.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:36 Step     77 at 13.670 [mm], t= 123.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:36 Step     78 at 13.781 [mm], t= 124.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:36 Step     79 at 13.892 [mm], t= 125.015 [ps], E=72.000 [MeV]
 OPAL {0}[3]> * Wrote beam statistics.
 OPAL {0}> 
 OPAL {0}> * ************** B U N C H ********************************************************* 
@@ -443,16 +474,16 @@ OPAL {0}> * spos            =       13.892 [mm]
 OPAL {0}> * ********************************************************************************** 
 OPAL {0}> 
 OPAL {0}[2]> * Wrote beam phase space.
-ParallelTTracker {0}[3]> 07:23:10 Step     80 at 14.003 [mm], t= 126.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:10 Step     81 at 14.114 [mm], t= 127.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:10 Step     82 at 14.225 [mm], t= 128.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:10 Step     83 at 14.336 [mm], t= 129.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:10 Step     84 at 14.448 [mm], t= 130.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:10 Step     85 at 14.559 [mm], t= 131.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:10 Step     86 at 14.670 [mm], t= 132.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:10 Step     87 at 14.781 [mm], t= 133.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:10 Step     88 at 14.892 [mm], t= 134.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:10 Step     89 at 15.003 [mm], t= 135.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:37 Step     80 at 14.003 [mm], t= 126.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:37 Step     81 at 14.114 [mm], t= 127.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:37 Step     82 at 14.225 [mm], t= 128.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:37 Step     83 at 14.336 [mm], t= 129.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:37 Step     84 at 14.448 [mm], t= 130.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:37 Step     85 at 14.559 [mm], t= 131.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:37 Step     86 at 14.670 [mm], t= 132.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:37 Step     87 at 14.781 [mm], t= 133.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:37 Step     88 at 14.892 [mm], t= 134.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:37 Step     89 at 15.003 [mm], t= 135.015 [ps], E=72.000 [MeV]
 OPAL {0}[3]> * Wrote beam statistics.
 OPAL {0}> 
 OPAL {0}> * ************** B U N C H ********************************************************* 
@@ -474,16 +505,16 @@ OPAL {0}> * spos            =       15.003 [mm]
 OPAL {0}> * ********************************************************************************** 
 OPAL {0}> 
 OPAL {0}[2]> * Wrote beam phase space.
-ParallelTTracker {0}[3]> 07:23:10 Step     90 at 15.115 [mm], t= 136.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:10 Step     91 at 15.226 [mm], t= 137.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:10 Step     92 at 15.337 [mm], t= 138.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:10 Step     93 at 15.448 [mm], t= 139.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:10 Step     94 at 15.559 [mm], t= 140.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:10 Step     95 at 15.670 [mm], t= 141.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:10 Step     96 at 15.781 [mm], t= 142.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:10 Step     97 at 15.893 [mm], t= 143.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:10 Step     98 at 16.004 [mm], t= 144.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[2]> 07:23:10 Step     99 at 16.115 [mm], t= 145.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:37 Step     90 at 15.115 [mm], t= 136.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:37 Step     91 at 15.226 [mm], t= 137.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:37 Step     92 at 15.337 [mm], t= 138.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:37 Step     93 at 15.448 [mm], t= 139.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:37 Step     94 at 15.559 [mm], t= 140.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:37 Step     95 at 15.670 [mm], t= 141.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:37 Step     96 at 15.781 [mm], t= 142.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:37 Step     97 at 15.893 [mm], t= 143.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:37 Step     98 at 16.004 [mm], t= 144.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[2]> 22:05:37 Step     99 at 16.115 [mm], t= 145.015 [ps], E=72.000 [MeV]
 OPAL {0}[3]> * Wrote beam statistics.
 OPAL {0}> 
 OPAL {0}> * ************** B U N C H ********************************************************* 
@@ -505,17 +536,17 @@ OPAL {0}> * spos            =       16.115 [mm]
 OPAL {0}> * ********************************************************************************** 
 OPAL {0}> 
 OPAL {0}[2]> * Wrote beam phase space.
-ParallelTTracker {0}[3]> 07:23:10 Step    100 at 16.226 [mm], t= 146.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:10 Step    101 at 16.337 [mm], t= 147.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:11 Step    102 at 16.448 [mm], t= 148.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:11 Step    103 at 16.559 [mm], t= 149.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:11 Step    104 at 16.671 [mm], t= 150.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:11 Step    105 at 16.782 [mm], t= 151.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:11 Step    106 at 16.893 [mm], t= 152.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:11 Step    107 at 17.004 [mm], t= 153.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:38 Step    100 at 16.226 [mm], t= 146.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:38 Step    101 at 16.337 [mm], t= 147.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:38 Step    102 at 16.448 [mm], t= 148.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:38 Step    103 at 16.559 [mm], t= 149.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:38 Step    104 at 16.671 [mm], t= 150.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:38 Step    105 at 16.782 [mm], t= 151.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:38 Step    106 at 16.893 [mm], t= 152.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:38 Step    107 at 17.004 [mm], t= 153.015 [ps], E=72.000 [MeV]
 ParallelTTracker {0}[2]> ============== START PARTICLE MATER INTERACTION CALCULATION =============
-ParallelTTracker {0}[3]> 07:23:11 Step    108 at 17.115 [mm], t= 154.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:11 Step    109 at 17.226 [mm], t= 155.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:38 Step    108 at 17.115 [mm], t= 154.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:38 Step    109 at 17.226 [mm], t= 155.015 [ps], E=72.000 [MeV]
 OPAL {0}[3]> * Wrote beam statistics.
 OPAL {0}> 
 OPAL {0}> * ************** B U N C H ********************************************************* 
@@ -537,16 +568,16 @@ OPAL {0}> * spos            =       17.226 [mm]
 OPAL {0}> * ********************************************************************************** 
 OPAL {0}> 
 OPAL {0}[2]> * Wrote beam phase space.
-ParallelTTracker {0}[3]> 07:23:11 Step    110 at 17.337 [mm], t= 156.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:11 Step    111 at 17.449 [mm], t= 157.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:11 Step    112 at 17.560 [mm], t= 158.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:11 Step    113 at 17.671 [mm], t= 159.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:11 Step    114 at 17.782 [mm], t= 160.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:11 Step    115 at 17.893 [mm], t= 161.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:11 Step    116 at 18.004 [mm], t= 162.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:11 Step    117 at 18.116 [mm], t= 163.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:11 Step    118 at 18.227 [mm], t= 164.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[3]> 07:23:11 Step    119 at 18.338 [mm], t= 165.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:38 Step    110 at 17.337 [mm], t= 156.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:38 Step    111 at 17.449 [mm], t= 157.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:38 Step    112 at 17.560 [mm], t= 158.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:38 Step    113 at 17.671 [mm], t= 159.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:39 Step    114 at 17.782 [mm], t= 160.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:39 Step    115 at 17.893 [mm], t= 161.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:39 Step    116 at 18.004 [mm], t= 162.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:39 Step    117 at 18.116 [mm], t= 163.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:39 Step    118 at 18.227 [mm], t= 164.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:39 Step    119 at 18.338 [mm], t= 165.015 [ps], E=72.000 [MeV]
 OPAL {0}[3]> * Wrote beam statistics.
 OPAL {0}> 
 OPAL {0}> * ************** B U N C H ********************************************************* 
@@ -568,70 +599,70 @@ OPAL {0}> * spos            =       18.338 [mm]
 OPAL {0}> * ********************************************************************************** 
 OPAL {0}> 
 OPAL {0}[2]> * Wrote beam phase space.
-ParallelTTracker {0}[3]> 07:23:12 Step    120 at 18.449 [mm], t= 166.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:12
+ParallelTTracker {0}[3]> 22:05:39 Step    120 at 18.449 [mm], t= 166.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:05:39
 ParallelTTracker {0}[2]>             entered: 59
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
 ParallelTTracker {0}[2]>   total in material: 59
-ParallelTTracker {0}[3]> 07:23:12 Step    121 at 18.560 [mm], t= 167.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:12
+ParallelTTracker {0}[3]> 22:05:39 Step    121 at 18.560 [mm], t= 167.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:05:39
 ParallelTTracker {0}[2]>             entered: 1'427
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
 ParallelTTracker {0}[2]>   total in material: 1'486
-ParallelTTracker {0}[3]> 07:23:12 Step    122 at 18.671 [mm], t= 168.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:12
+ParallelTTracker {0}[3]> 22:05:39 Step    122 at 18.671 [mm], t= 168.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:05:39
 ParallelTTracker {0}[2]>             entered: 2'640
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
 ParallelTTracker {0}[2]>   total in material: 4'126
-ParallelTTracker {0}[3]> 07:23:12 Step    123 at 18.782 [mm], t= 169.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:12
+ParallelTTracker {0}[3]> 22:05:39 Step    123 at 18.782 [mm], t= 169.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:05:39
 ParallelTTracker {0}[2]>             entered: 4'686
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
 ParallelTTracker {0}[2]>   total in material: 8'812
-ParallelTTracker {0}[3]> 07:23:12 Step    124 at 18.894 [mm], t= 170.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:12
+ParallelTTracker {0}[3]> 22:05:39 Step    124 at 18.894 [mm], t= 170.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:05:39
 ParallelTTracker {0}[2]>             entered: 7'814
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
 ParallelTTracker {0}[2]>   total in material: 16'626
-ParallelTTracker {0}[3]> 07:23:12 Step    125 at 19.005 [mm], t= 171.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:12
+ParallelTTracker {0}[3]> 22:05:39 Step    125 at 19.005 [mm], t= 171.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:05:39
 ParallelTTracker {0}[2]>             entered: 12'584
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
 ParallelTTracker {0}[2]>   total in material: 29'210
-ParallelTTracker {0}[3]> 07:23:12 Step    126 at 19.116 [mm], t= 172.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:12
+ParallelTTracker {0}[3]> 22:05:39 Step    126 at 19.116 [mm], t= 172.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:05:39
 ParallelTTracker {0}[2]>             entered: 18'997
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
 ParallelTTracker {0}[2]>   total in material: 48'207
-ParallelTTracker {0}[3]> 07:23:12 Step    127 at 19.227 [mm], t= 173.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:12
+ParallelTTracker {0}[3]> 22:05:39 Step    127 at 19.227 [mm], t= 173.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:05:39
 ParallelTTracker {0}[2]>             entered: 27'233
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
 ParallelTTracker {0}[2]>   total in material: 75'440
-ParallelTTracker {0}[3]> 07:23:12 Step    128 at 19.338 [mm], t= 174.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:12
+ParallelTTracker {0}[3]> 22:05:39 Step    128 at 19.338 [mm], t= 174.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:05:39
 ParallelTTracker {0}[2]>             entered: 37'693
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
 ParallelTTracker {0}[2]>   total in material: 113'133
-ParallelTTracker {0}[3]> 07:23:12 Step    129 at 19.449 [mm], t= 175.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:39 Step    129 at 19.449 [mm], t= 175.015 [ps], E=72.000 [MeV]
 OPAL {0}[3]> * Wrote beam statistics.
 OPAL {0}> 
 OPAL {0}> * ************** B U N C H ********************************************************* 
@@ -653,76 +684,76 @@ OPAL {0}> * spos            =       19.449 [mm]
 OPAL {0}> * ********************************************************************************** 
 OPAL {0}> 
 OPAL {0}[2]> * Wrote beam phase space.
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:12
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:05:40
 ParallelTTracker {0}[2]>             entered: 48'780
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
 ParallelTTracker {0}[2]>   total in material: 161'913
-ParallelTTracker {0}[3]> 07:23:12 Step    130 at 19.560 [mm], t= 176.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:12
+ParallelTTracker {0}[3]> 22:05:40 Step    130 at 19.560 [mm], t= 176.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:05:40
 ParallelTTracker {0}[2]>             entered: 60'402
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
 ParallelTTracker {0}[2]>   total in material: 222'315
-ParallelTTracker {0}[3]> 07:23:12 Step    131 at 19.672 [mm], t= 177.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:12
+ParallelTTracker {0}[3]> 22:05:40 Step    131 at 19.672 [mm], t= 177.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:05:40
 ParallelTTracker {0}[2]>             entered: 71'684
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
 ParallelTTracker {0}[2]>   total in material: 293'999
-ParallelTTracker {0}[3]> 07:23:12 Step    132 at 19.783 [mm], t= 178.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:12
+ParallelTTracker {0}[3]> 22:05:40 Step    132 at 19.783 [mm], t= 178.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:05:40
 ParallelTTracker {0}[2]>             entered: 80'697
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
 ParallelTTracker {0}[2]>   total in material: 374'696
-ParallelTTracker {0}[3]> 07:23:12 Step    133 at 19.894 [mm], t= 179.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:13
+ParallelTTracker {0}[3]> 22:05:40 Step    133 at 19.894 [mm], t= 179.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:05:40
 ParallelTTracker {0}[2]>             entered: 86'570
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
 ParallelTTracker {0}[2]>   total in material: 461'266
-ParallelTTracker {0}[3]> 07:23:13 Step    134 at 20.005 [mm], t= 180.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:13
+ParallelTTracker {0}[3]> 22:05:40 Step    134 at 20.005 [mm], t= 180.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:05:40
 ParallelTTracker {0}[2]>             entered: 88'374
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
 ParallelTTracker {0}[2]>   total in material: 549'640
-ParallelTTracker {0}[3]> 07:23:13 Step    135 at 20.116 [mm], t= 181.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:13
+ParallelTTracker {0}[3]> 22:05:40 Step    135 at 20.116 [mm], t= 181.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:05:41
 ParallelTTracker {0}[2]>             entered: 86'528
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
 ParallelTTracker {0}[2]>   total in material: 636'168
-ParallelTTracker {0}[3]> 07:23:13 Step    136 at 20.227 [mm], t= 182.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:13
+ParallelTTracker {0}[3]> 22:05:41 Step    136 at 20.227 [mm], t= 182.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:05:41
 ParallelTTracker {0}[2]>             entered: 79'996
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
 ParallelTTracker {0}[2]>   total in material: 716'164
-ParallelTTracker {0}[3]> 07:23:13 Step    137 at 20.338 [mm], t= 183.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:13
+ParallelTTracker {0}[3]> 22:05:41 Step    137 at 20.338 [mm], t= 183.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:05:41
 ParallelTTracker {0}[2]>             entered: 70'543
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
 ParallelTTracker {0}[2]>   total in material: 786'707
-ParallelTTracker {0}[3]> 07:23:13 Step    138 at 20.450 [mm], t= 184.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:13
+ParallelTTracker {0}[3]> 22:05:41 Step    138 at 20.450 [mm], t= 184.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:05:42
 ParallelTTracker {0}[2]>             entered: 59'318
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
 ParallelTTracker {0}[2]>   total in material: 846'025
-ParallelTTracker {0}[3]> 07:23:13 Step    139 at 20.561 [mm], t= 185.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[3]> 22:05:42 Step    139 at 20.561 [mm], t= 185.015 [ps], E=72.000 [MeV]
 OPAL {0}[3]> * Wrote beam statistics.
 OPAL {0}> 
 OPAL {0}> * ************** B U N C H ********************************************************* 
@@ -736,7 +767,7 @@ OPAL {0}> * rms momenta     = (  0.00000e+00 ,  0.00000e+00 ,  5.17917e-07 ) [be
 OPAL {0}> * mean position   = (      5.35720 ,     13.04968 ,   -760.83726 ) [um]
 OPAL {0}> * mean momenta    = (  0.00000e+00 ,  0.00000e+00 ,  3.99202e-01 ) [beta gamma]
 OPAL {0}> * rms emittance   = (  0.00000e+00 ,  0.00000e+00 ,  2.68805e-10 ) (not normalized)
-OPAL {0}> * rms correlation = (  0.00000e+00 ,  0.00000e+00 , -1.81908e-06 )
+OPAL {0}> * rms correlation = (  0.00000e+00 ,  0.00000e+00 , -1.82080e-06 )
 OPAL {0}> * hr              = (    475.92994 ,    475.92799 ,     47.61305 ) [um]
 OPAL {0}> * dh              =   1.00000e-10 [%]
 OPAL {0}> * t               =      185.015 [ps]         dT    =        1.000 [ps]
@@ -744,829 +775,829 @@ OPAL {0}> * spos            =       20.561 [mm]
 OPAL {0}> * ********************************************************************************** 
 OPAL {0}> 
 OPAL {0}[2]> * Wrote beam phase space.
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:14
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:05:42
 ParallelTTracker {0}[2]>             entered: 47'373
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
 ParallelTTracker {0}[2]>   total in material: 893'398
-ParallelTTracker {0}[3]> 07:23:14 Step    140 at 20.672 [mm], t= 186.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:14
+ParallelTTracker {0}[3]> 22:05:42 Step    140 at 20.672 [mm], t= 186.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:05:42
 ParallelTTracker {0}[2]>             entered: 35'740
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
 ParallelTTracker {0}[2]>   total in material: 929'138
-ParallelTTracker {0}[3]> 07:23:14 Step    141 at 20.783 [mm], t= 187.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:14
+ParallelTTracker {0}[3]> 22:05:42 Step    141 at 20.783 [mm], t= 187.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:05:43
 ParallelTTracker {0}[2]>             entered: 25'882
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
 ParallelTTracker {0}[2]>   total in material: 955'020
-ParallelTTracker {0}[3]> 07:23:14 Step    142 at 20.894 [mm], t= 188.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:14
+ParallelTTracker {0}[3]> 22:05:43 Step    142 at 20.894 [mm], t= 188.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:05:43
 ParallelTTracker {0}[2]>             entered: 17'956
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
 ParallelTTracker {0}[2]>   total in material: 972'976
-ParallelTTracker {0}[3]> 07:23:14 Step    143 at 21.005 [mm], t= 189.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:15
+ParallelTTracker {0}[3]> 22:05:43 Step    143 at 21.005 [mm], t= 189.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:05:43
 ParallelTTracker {0}[2]>             entered: 11'570
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
 ParallelTTracker {0}[2]>   total in material: 984'546
-ParallelTTracker {0}[3]> 07:23:15 Step    144 at 21.117 [mm], t= 190.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:15
+ParallelTTracker {0}[3]> 22:05:43 Step    144 at 21.117 [mm], t= 190.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:05:44
 ParallelTTracker {0}[2]>             entered: 7'354
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
 ParallelTTracker {0}[2]>   total in material: 991'900
-ParallelTTracker {0}[3]> 07:23:15 Step    145 at 21.228 [mm], t= 191.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:15
+ParallelTTracker {0}[3]> 22:05:44 Step    145 at 21.228 [mm], t= 191.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:05:44
 ParallelTTracker {0}[2]>             entered: 4'343
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
 ParallelTTracker {0}[2]>   total in material: 996'243
-ParallelTTracker {0}[3]> 07:23:15 Step    146 at 21.339 [mm], t= 192.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:15
+ParallelTTracker {0}[3]> 22:05:44 Step    146 at 21.339 [mm], t= 192.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:05:44
 ParallelTTracker {0}[2]>             entered: 2'480
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
 ParallelTTracker {0}[2]>   total in material: 998'723
-ParallelTTracker {0}[3]> 07:23:15 Step    147 at 21.450 [mm], t= 193.015 [ps], E=72.000 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:16
+ParallelTTracker {0}[3]> 22:05:44 Step    147 at 21.450 [mm], t= 193.015 [ps], E=72.000 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:05:45
 ParallelTTracker {0}[2]>             entered: 1'277
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
 ParallelTTracker {0}[2]>   total in material: 1000'000
 ParallelTTracker {0}> All particles in degrader
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:34
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:11
 ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 553
+ParallelTTracker {0}[2]>          rediffused: 1
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 999'447
-ParallelTTracker {0}[3]> 07:23:34 Step    148 at 29.342 [mm], t= 194.015 [ps], E=51.348 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:34
+ParallelTTracker {0}[2]>   total in material: 999'999
+ParallelTTracker {0}[3]> 22:06:11 Step    148; only    1 particles emitted; t= 194.015 [ps], E=52.448 [MeV], 
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:12
 ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 1'933
+ParallelTTracker {0}[2]>          rediffused: 586
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 997'514
-ParallelTTracker {0}[3]> 07:23:34 Step    149 at 29.453 [mm], t= 195.015 [ps], E=51.214 [MeV]
+ParallelTTracker {0}[2]>   total in material: 999'413
+ParallelTTracker {0}[3]> 22:06:12 Step    149 at 29.342 [mm], t= 195.015 [ps], E=51.370 [MeV]
 OPAL {0}[3]> * Wrote beam statistics.
 OPAL {0}> 
 OPAL {0}> * ************** B U N C H ********************************************************* 
-OPAL {0}> * NP              = 2486
-OPAL {0}> * Qtot            =       98.197 [fC]         Qi    =        0.040 [fC]
-OPAL {0}> * Ekin            =      51.214 [MeV]         dEkin =     492.582 [keV]
-OPAL {0}> * rmax            = (     14.88627 ,     15.05212 ,      0.88058 ) [mm]
-OPAL {0}> * rmin            = (    -14.69335 ,    -14.62274 ,      0.68653 ) [mm]
-OPAL {0}> * rms beam size   = (      4.81325 ,      4.79989 ,      0.04202 ) [mm]
-OPAL {0}> * rms momenta     = (  6.94423e-03 ,  7.19560e-03 ,  1.65325e-03 ) [beta gamma]
-OPAL {0}> * mean position   = (    -28.77032 ,    -90.37694 ,    747.55294 ) [um]
-OPAL {0}> * mean momenta    = ( -6.18099e-05 , -9.31174e-05 ,  3.34729e-01 ) [beta gamma]
-OPAL {0}> * rms emittance   = (  9.98080e-05 ,  1.03129e-04 ,  2.05066e-07 ) (not normalized)
-OPAL {0}> * rms correlation = (  4.94043e-03 , -1.13823e-02 ,  1.51713e-01 )
+OPAL {0}> * NP              = 587
+OPAL {0}> * Qtot            =       23.187 [fC]         Qi    =        0.040 [fC]
+OPAL {0}> * Ekin            =      51.370 [MeV]         dEkin =     439.892 [keV]
+OPAL {0}> * rmax            = (     13.16544 ,     12.25891 ,      0.90566 ) [mm]
+OPAL {0}> * rmin            = (    -12.77419 ,    -12.13700 ,      0.79768 ) [mm]
+OPAL {0}> * rms beam size   = (      4.81580 ,      4.73455 ,      0.01907 ) [mm]
+OPAL {0}> * rms momenta     = (  7.14342e-03 ,  6.63714e-03 ,  1.47433e-03 ) [beta gamma]
+OPAL {0}> * mean position   = (    -74.96201 ,   -193.55919 ,    826.02636 ) [um]
+OPAL {0}> * mean momenta    = (  7.62346e-05 ,  2.13694e-04 ,  3.35261e-01 ) [beta gamma]
+OPAL {0}> * rms emittance   = (  1.02463e-04 ,  9.36367e-05 ,  7.95442e-08 ) (not normalized)
+OPAL {0}> * rms correlation = (  4.47526e-02 ,  3.34436e-02 ,  3.15399e-01 )
 OPAL {0}> * hr              = (    475.92994 ,    475.92799 ,     47.61305 ) [um]
 OPAL {0}> * dh              =   1.00000e-10 [%]
 OPAL {0}> * t               =      195.015 [ps]         dT    =        1.000 [ps]
-OPAL {0}> * spos            =       29.453 [mm]
+OPAL {0}> * spos            =       29.342 [mm]
 OPAL {0}> * ********************************************************************************** 
 OPAL {0}> 
 OPAL {0}[2]> * Wrote beam phase space.
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:34
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:12
 ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 3'399
+ParallelTTracker {0}[2]>          rediffused: 1'903
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 994'115
-ParallelTTracker {0}[3]> 07:23:34 Step    150 at 29.564 [mm], t= 196.015 [ps], E=51.192 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:35
+ParallelTTracker {0}[2]>   total in material: 997'510
+ParallelTTracker {0}[3]> 22:06:12 Step    150 at 29.453 [mm], t= 196.015 [ps], E=51.235 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:12
 ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 5'877
+ParallelTTracker {0}[2]>          rediffused: 3'389
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 988'238
-ParallelTTracker {0}[3]> 07:23:35 Step    151 at 29.675 [mm], t= 197.015 [ps], E=51.181 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:35
+ParallelTTracker {0}[2]>   total in material: 994'121
+ParallelTTracker {0}[3]> 22:06:12 Step    151 at 29.564 [mm], t= 197.015 [ps], E=51.194 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:13
 ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 9'668
+ParallelTTracker {0}[2]>          rediffused: 5'870
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 978'570
-ParallelTTracker {0}[3]> 07:23:35 Step    152 at 29.786 [mm], t= 198.015 [ps], E=51.171 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:35
+ParallelTTracker {0}[2]>   total in material: 988'251
+ParallelTTracker {0}[3]> 22:06:13 Step    152 at 29.675 [mm], t= 198.015 [ps], E=51.182 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:13
 ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 15'183
+ParallelTTracker {0}[2]>          rediffused: 9'652
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 963'387
-ParallelTTracker {0}[3]> 07:23:35 Step    153 at 29.897 [mm], t= 199.015 [ps], E=51.165 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:35
+ParallelTTracker {0}[2]>   total in material: 978'599
+ParallelTTracker {0}[3]> 22:06:13 Step    153 at 29.786 [mm], t= 199.015 [ps], E=51.173 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:14
 ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 22'393
+ParallelTTracker {0}[2]>          rediffused: 15'180
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 940'994
-ParallelTTracker {0}[3]> 07:23:35 Step    154 at 30.008 [mm], t= 200.015 [ps], E=51.156 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:36
+ParallelTTracker {0}[2]>   total in material: 963'419
+ParallelTTracker {0}[3]> 22:06:14 Step    154 at 29.897 [mm], t= 200.015 [ps], E=51.164 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:14
 ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 31'477
+ParallelTTracker {0}[2]>          rediffused: 22'229
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 909'517
-ParallelTTracker {0}[3]> 07:23:36 Step    155 at 30.120 [mm], t= 201.015 [ps], E=51.153 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:36
+ParallelTTracker {0}[2]>   total in material: 941'190
+ParallelTTracker {0}[3]> 22:06:14 Step    155 at 30.008 [mm], t= 201.015 [ps], E=51.156 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:14
 ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 42'538
+ParallelTTracker {0}[2]>          rediffused: 31'674
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 866'979
-ParallelTTracker {0}[3]> 07:23:36 Step    156 at 30.231 [mm], t= 202.015 [ps], E=51.148 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:36
+ParallelTTracker {0}[2]>   total in material: 909'516
+ParallelTTracker {0}[3]> 22:06:14 Step    156 at 30.120 [mm], t= 202.015 [ps], E=51.151 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:15
 ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 53'699
+ParallelTTracker {0}[2]>          rediffused: 42'674
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 813'280
-ParallelTTracker {0}[3]> 07:23:36 Step    157 at 30.342 [mm], t= 203.015 [ps], E=51.143 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:36
+ParallelTTracker {0}[2]>   total in material: 866'842
+ParallelTTracker {0}[3]> 22:06:15 Step    157 at 30.231 [mm], t= 203.015 [ps], E=51.146 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:15
 ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 65'296
+ParallelTTracker {0}[2]>          rediffused: 53'626
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 747'984
-ParallelTTracker {0}[3]> 07:23:36 Step    158 at 30.453 [mm], t= 204.015 [ps], E=51.139 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:36
+ParallelTTracker {0}[2]>   total in material: 813'216
+ParallelTTracker {0}[3]> 22:06:15 Step    158 at 30.342 [mm], t= 204.015 [ps], E=51.143 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:15
 ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 75'919
+ParallelTTracker {0}[2]>          rediffused: 65'384
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 672'065
-ParallelTTracker {0}[3]> 07:23:36 Step    159 at 30.564 [mm], t= 205.015 [ps], E=51.134 [MeV]
+ParallelTTracker {0}[2]>   total in material: 747'832
+ParallelTTracker {0}[3]> 22:06:15 Step    159 at 30.453 [mm], t= 205.015 [ps], E=51.139 [MeV]
 OPAL {0}[3]> * Wrote beam statistics.
 OPAL {0}> 
 OPAL {0}> * ************** B U N C H ********************************************************* 
-OPAL {0}> * NP              = 327935
-OPAL {0}> * Qtot            =       12.953 [pC]         Qi    =        0.040 [fC]
-OPAL {0}> * Ekin            =      51.134 [MeV]         dEkin =     524.698 [keV]
-OPAL {0}> * rmax            = (     15.17127 ,     15.24793 ,      0.73120 ) [mm]
-OPAL {0}> * rmin            = (    -15.10936 ,    -15.06899 ,     -0.46162 ) [mm]
-OPAL {0}> * rms beam size   = (      4.87652 ,      4.87489 ,      0.21770 ) [mm]
-OPAL {0}> * rms momenta     = (  7.41354e-03 ,  7.51834e-03 ,  1.76231e-03 ) [beta gamma]
-OPAL {0}> * mean position   = (     11.17076 ,     -1.07942 ,   -147.15524 ) [um]
-OPAL {0}> * mean momenta    = (  7.02163e-06 , -4.53369e-06 ,  3.34444e-01 ) [beta gamma]
-OPAL {0}> * rms emittance   = (  1.08012e-04 ,  1.09510e-04 ,  1.14609e-06 ) (not normalized)
-OPAL {0}> * rms correlation = (  2.32123e-02 ,  2.04017e-02 ,  2.85288e-02 )
+OPAL {0}> * NP              = 252168
+OPAL {0}> * Qtot            =        9.961 [pC]         Qi    =        0.040 [fC]
+OPAL {0}> * Ekin            =      51.139 [MeV]         dEkin =     523.240 [keV]
+OPAL {0}> * rmax            = (     15.06592 ,     15.06661 ,      0.75640 ) [mm]
+OPAL {0}> * rmin            = (    -15.17513 ,    -15.29581 ,     -0.34110 ) [mm]
+OPAL {0}> * rms beam size   = (      4.87215 ,      4.87495 ,      0.20122 ) [mm]
+OPAL {0}> * rms momenta     = (  7.38897e-03 ,  7.39465e-03 ,  1.75734e-03 ) [beta gamma]
+OPAL {0}> * mean position   = (     20.69219 ,      5.80837 ,    -61.56837 ) [um]
+OPAL {0}> * mean momenta    = (  1.59115e-05 , -6.56303e-06 ,  3.34462e-01 ) [beta gamma]
+OPAL {0}> * rms emittance   = (  1.07558e-04 ,  1.07698e-04 ,  1.05642e-06 ) (not normalized)
+OPAL {0}> * rms correlation = (  2.12653e-02 ,  2.32169e-02 ,  2.46857e-02 )
 OPAL {0}> * hr              = (    475.92994 ,    475.92799 ,     47.61305 ) [um]
 OPAL {0}> * dh              =   1.00000e-10 [%]
 OPAL {0}> * t               =      205.015 [ps]         dT    =        1.000 [ps]
-OPAL {0}> * spos            =       30.564 [mm]
+OPAL {0}> * spos            =       30.453 [mm]
 OPAL {0}> * ********************************************************************************** 
 OPAL {0}> 
 OPAL {0}[2]> * Wrote beam phase space.
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:37
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:16
 ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 83'335
+ParallelTTracker {0}[2]>          rediffused: 75'892
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 588'730
-ParallelTTracker {0}[3]> 07:23:37 Step    160 at 30.675 [mm], t= 206.015 [ps], E=51.131 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:37
+ParallelTTracker {0}[2]>   total in material: 671'940
+ParallelTTracker {0}[3]> 22:06:16 Step    160 at 30.564 [mm], t= 206.015 [ps], E=51.135 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:16
 ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 88'101
+ParallelTTracker {0}[2]>          rediffused: 83'443
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 500'629
-ParallelTTracker {0}[3]> 07:23:37 Step    161 at 30.786 [mm], t= 207.015 [ps], E=51.128 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:37
+ParallelTTracker {0}[2]>   total in material: 588'497
+ParallelTTracker {0}[3]> 22:06:16 Step    161 at 30.675 [mm], t= 207.015 [ps], E=51.132 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:16
 ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 87'954
+ParallelTTracker {0}[2]>          rediffused: 88'096
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 412'675
-ParallelTTracker {0}[3]> 07:23:37 Step    162 at 30.898 [mm], t= 208.015 [ps], E=51.125 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:37
+ParallelTTracker {0}[2]>   total in material: 500'401
+ParallelTTracker {0}[3]> 22:06:16 Step    162 at 30.786 [mm], t= 208.015 [ps], E=51.128 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:16
 ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 84'094
+ParallelTTracker {0}[2]>          rediffused: 87'853
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 328'581
-ParallelTTracker {0}[3]> 07:23:37 Step    163 at 31.009 [mm], t= 209.015 [ps], E=51.121 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:37
+ParallelTTracker {0}[2]>   total in material: 412'548
+ParallelTTracker {0}[3]> 22:06:16 Step    163 at 30.898 [mm], t= 209.015 [ps], E=51.125 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:17
 ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 76'104
+ParallelTTracker {0}[2]>          rediffused: 84'004
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 252'477
-ParallelTTracker {0}[3]> 07:23:37 Step    164 at 31.120 [mm], t= 210.015 [ps], E=51.119 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:37
+ParallelTTracker {0}[2]>   total in material: 328'544
+ParallelTTracker {0}[3]> 22:06:17 Step    164 at 31.009 [mm], t= 210.015 [ps], E=51.122 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:17
 ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 65'794
+ParallelTTracker {0}[2]>          rediffused: 76'211
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 186'683
-ParallelTTracker {0}[3]> 07:23:37 Step    165 at 31.231 [mm], t= 211.015 [ps], E=51.116 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:37
+ParallelTTracker {0}[2]>   total in material: 252'333
+ParallelTTracker {0}[3]> 22:06:17 Step    165 at 31.120 [mm], t= 211.015 [ps], E=51.119 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:17
 ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 53'992
+ParallelTTracker {0}[2]>          rediffused: 65'939
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 132'691
-ParallelTTracker {0}[3]> 07:23:37 Step    166 at 31.342 [mm], t= 212.015 [ps], E=51.114 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:38
+ParallelTTracker {0}[2]>   total in material: 186'394
+ParallelTTracker {0}[3]> 22:06:17 Step    166 at 31.231 [mm], t= 212.015 [ps], E=51.117 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:17
 ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 42'466
+ParallelTTracker {0}[2]>          rediffused: 53'931
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 90'225
-ParallelTTracker {0}[3]> 07:23:38 Step    167 at 31.453 [mm], t= 213.015 [ps], E=51.113 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:38
+ParallelTTracker {0}[2]>   total in material: 132'463
+ParallelTTracker {0}[3]> 22:06:17 Step    167 at 31.342 [mm], t= 213.015 [ps], E=51.115 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:17
 ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 31'289
+ParallelTTracker {0}[2]>          rediffused: 42'476
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 58'936
-ParallelTTracker {0}[3]> 07:23:38 Step    168 at 31.564 [mm], t= 214.015 [ps], E=51.111 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:38
+ParallelTTracker {0}[2]>   total in material: 89'987
+ParallelTTracker {0}[3]> 22:06:17 Step    168 at 31.453 [mm], t= 214.015 [ps], E=51.114 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:17
 ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 22'363
+ParallelTTracker {0}[2]>          rediffused: 31'162
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 36'573
-ParallelTTracker {0}[3]> 07:23:38 Step    169 at 31.676 [mm], t= 215.015 [ps], E=51.111 [MeV]
+ParallelTTracker {0}[2]>   total in material: 58'825
+ParallelTTracker {0}[3]> 22:06:17 Step    169 at 31.564 [mm], t= 215.015 [ps], E=51.113 [MeV]
 OPAL {0}[3]> * Wrote beam statistics.
 OPAL {0}> 
 OPAL {0}> * ************** B U N C H ********************************************************* 
-OPAL {0}> * NP              = 963427
-OPAL {0}> * Qtot            =       38.055 [pC]         Qi    =        0.040 [fC]
-OPAL {0}> * Ekin            =      51.111 [MeV]         dEkin =     549.677 [keV]
-OPAL {0}> * rmax            = (     15.33466 ,     15.38570 ,      0.58182 ) [mm]
-OPAL {0}> * rmin            = (    -15.17196 ,    -15.32557 ,     -1.56933 ) [mm]
-OPAL {0}> * rms beam size   = (      4.87278 ,      4.87906 ,      0.38992 ) [mm]
-OPAL {0}> * rms momenta     = (  7.66831e-03 ,  7.69309e-03 ,  1.84660e-03 ) [beta gamma]
-OPAL {0}> * mean position   = (      1.20997 ,     -0.22280 ,   -741.37183 ) [um]
-OPAL {0}> * mean momenta    = ( -7.18215e-06 , -8.73024e-06 ,  3.34353e-01 ) [beta gamma]
-OPAL {0}> * rms emittance   = (  1.11662e-04 ,  1.12165e-04 ,  2.14940e-06 ) (not normalized)
-OPAL {0}> * rms correlation = (  2.45777e-02 ,  2.53761e-02 ,  5.22117e-02 )
+OPAL {0}> * NP              = 941175
+OPAL {0}> * Qtot            =       37.176 [pC]         Qi    =        0.040 [fC]
+OPAL {0}> * Ekin            =      51.113 [MeV]         dEkin =     548.448 [keV]
+OPAL {0}> * rmax            = (     15.17328 ,     15.26332 ,      0.60715 ) [mm]
+OPAL {0}> * rmin            = (    -15.20217 ,    -15.36023 ,     -1.44297 ) [mm]
+OPAL {0}> * rms beam size   = (      4.87265 ,      4.87965 ,      0.37695 ) [mm]
+OPAL {0}> * rms momenta     = (  7.58373e-03 ,  7.55588e-03 ,  1.84244e-03 ) [beta gamma]
+OPAL {0}> * mean position   = (      0.53783 ,     -1.62678 ,   -707.50770 ) [um]
+OPAL {0}> * mean momenta    = (  7.62688e-06 , -2.20924e-05 ,  3.34366e-01 ) [beta gamma]
+OPAL {0}> * rms emittance   = (  1.10425e-04 ,  1.10178e-04 ,  2.07370e-06 ) (not normalized)
+OPAL {0}> * rms correlation = (  2.46368e-02 ,  2.44035e-02 ,  4.71324e-02 )
 OPAL {0}> * hr              = (    475.92994 ,    475.92799 ,     47.61305 ) [um]
 OPAL {0}> * dh              =   1.00000e-10 [%]
 OPAL {0}> * t               =      215.015 [ps]         dT    =        1.000 [ps]
-OPAL {0}> * spos            =       31.676 [mm]
+OPAL {0}> * spos            =       31.564 [mm]
 OPAL {0}> * ********************************************************************************** 
 OPAL {0}> 
 OPAL {0}[2]> * Wrote beam phase space.
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:38
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:17
 ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 14'892
+ParallelTTracker {0}[2]>          rediffused: 22'268
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 21'681
-ParallelTTracker {0}[3]> 07:23:38 Step    170 at 31.787 [mm], t= 216.015 [ps], E=51.110 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:38
+ParallelTTracker {0}[2]>   total in material: 36'557
+ParallelTTracker {0}[3]> 22:06:17 Step    170 at 31.676 [mm], t= 216.015 [ps], E=51.112 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:17
 ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 9'676
+ParallelTTracker {0}[2]>          rediffused: 14'960
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 12'005
-ParallelTTracker {0}[3]> 07:23:38 Step    171 at 31.898 [mm], t= 217.015 [ps], E=51.109 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:38
+ParallelTTracker {0}[2]>   total in material: 21'597
+ParallelTTracker {0}[3]> 22:06:17 Step    171 at 31.787 [mm], t= 217.015 [ps], E=51.111 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:17
 ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 5'894
+ParallelTTracker {0}[2]>          rediffused: 9'630
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 6'111
-ParallelTTracker {0}[3]> 07:23:38 Step    172 at 32.009 [mm], t= 218.015 [ps], E=51.109 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:38
+ParallelTTracker {0}[2]>   total in material: 11'967
+ParallelTTracker {0}[3]> 22:06:17 Step    172 at 31.898 [mm], t= 218.015 [ps], E=51.110 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:18
 ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 3'469
+ParallelTTracker {0}[2]>          rediffused: 5'868
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 2'642
-ParallelTTracker {0}[3]> 07:23:38 Step    173 at 32.120 [mm], t= 219.015 [ps], E=51.109 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:38
+ParallelTTracker {0}[2]>   total in material: 6'099
+ParallelTTracker {0}[3]> 22:06:18 Step    173 at 32.009 [mm], t= 219.015 [ps], E=51.110 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:18
 ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 1'943
+ParallelTTracker {0}[2]>          rediffused: 3'479
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 699
-ParallelTTracker {0}[3]> 07:23:38 Step    174 at 32.231 [mm], t= 220.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:38
+ParallelTTracker {0}[2]>   total in material: 2'620
+ParallelTTracker {0}[3]> 22:06:18 Step    174 at 32.120 [mm], t= 220.015 [ps], E=51.110 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:18
 ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 600
+ParallelTTracker {0}[2]>          rediffused: 1'969
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 99
-ParallelTTracker {0}[3]> 07:23:38 Step    175 at 32.343 [mm], t= 221.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:38
+ParallelTTracker {0}[2]>   total in material: 651
+ParallelTTracker {0}[3]> 22:06:18 Step    175 at 32.231 [mm], t= 221.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:18
 ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 6
+ParallelTTracker {0}[2]>          rediffused: 587
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 93
-ParallelTTracker {0}[3]> 07:23:38 Step    176 at 32.454 [mm], t= 222.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:38
-ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 4
-ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 89
-ParallelTTracker {0}[3]> 07:23:38 Step    177 at 32.565 [mm], t= 223.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:38
-ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 6
-ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 83
-ParallelTTracker {0}[3]> 07:23:38 Step    178 at 32.676 [mm], t= 224.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:38
+ParallelTTracker {0}[2]>   total in material: 64
+ParallelTTracker {0}[3]> 22:06:18 Step    176 at 32.343 [mm], t= 222.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:18
 ParallelTTracker {0}[2]>             entered: 0
 ParallelTTracker {0}[2]>          rediffused: 5
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 78
-ParallelTTracker {0}[3]> 07:23:38 Step    179 at 32.787 [mm], t= 225.015 [ps], E=51.108 [MeV]
+ParallelTTracker {0}[2]>   total in material: 59
+ParallelTTracker {0}[3]> 22:06:18 Step    177 at 32.454 [mm], t= 223.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:18
+ParallelTTracker {0}[2]>             entered: 0
+ParallelTTracker {0}[2]>          rediffused: 6
+ParallelTTracker {0}[2]>             stopped: 0
+ParallelTTracker {0}[2]>   total in material: 53
+ParallelTTracker {0}[3]> 22:06:18 Step    178 at 32.565 [mm], t= 224.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:18
+ParallelTTracker {0}[2]>             entered: 0
+ParallelTTracker {0}[2]>          rediffused: 7
+ParallelTTracker {0}[2]>             stopped: 0
+ParallelTTracker {0}[2]>   total in material: 46
+ParallelTTracker {0}[3]> 22:06:18 Step    179 at 32.676 [mm], t= 225.015 [ps], E=51.109 [MeV]
 OPAL {0}[3]> * Wrote beam statistics.
 OPAL {0}> 
 OPAL {0}> * ************** B U N C H ********************************************************* 
-OPAL {0}> * NP              = 999922
-OPAL {0}> * Qtot            =       39.497 [pC]         Qi    =        0.040 [fC]
-OPAL {0}> * Ekin            =      51.108 [MeV]         dEkin =     580.073 [keV]
-OPAL {0}> * rmax            = (     15.38459 ,     15.52346 ,      0.43243 ) [mm]
-OPAL {0}> * rmin            = (    -15.27330 ,    -16.08854 ,     -2.70721 ) [mm]
-OPAL {0}> * rms beam size   = (      4.87506 ,      4.87960 ,      0.42320 ) [mm]
-OPAL {0}> * rms momenta     = (  7.77662e-03 ,  7.75980e-03 ,  1.94876e-03 ) [beta gamma]
-OPAL {0}> * mean position   = (      0.20321 ,     -0.01635 ,   -936.99473 ) [um]
-OPAL {0}> * mean momenta    = ( -1.25364e-05 , -4.65701e-06 ,  3.34341e-01 ) [beta gamma]
-OPAL {0}> * rms emittance   = (  1.13280e-04 ,  1.13139e-04 ,  2.45912e-06 ) (not normalized)
-OPAL {0}> * rms correlation = (  2.92133e-02 ,  2.96734e-02 ,  7.09760e-02 )
+OPAL {0}> * NP              = 999954
+OPAL {0}> * Qtot            =       39.498 [pC]         Qi    =        0.040 [fC]
+OPAL {0}> * Ekin            =      51.109 [MeV]         dEkin =     577.653 [keV]
+OPAL {0}> * rmax            = (     15.21874 ,     16.86470 ,      0.45789 ) [mm]
+OPAL {0}> * rmin            = (    -15.23668 ,    -15.42464 ,     -2.64409 ) [mm]
+OPAL {0}> * rms beam size   = (      4.87507 ,      4.87939 ,      0.42310 ) [mm]
+OPAL {0}> * rms momenta     = (  7.68929e-03 ,  7.65365e-03 ,  1.94061e-03 ) [beta gamma]
+OPAL {0}> * mean position   = (     -0.07929 ,     -0.24313 ,   -920.74750 ) [um]
+OPAL {0}> * mean momenta    = (  6.73834e-06 , -1.69953e-05 ,  3.34349e-01 ) [beta gamma]
+OPAL {0}> * rms emittance   = (  1.12006e-04 ,  1.11588e-04 ,  2.44876e-06 ) (not normalized)
+OPAL {0}> * rms correlation = (  2.94692e-02 ,  2.89139e-02 ,  6.76232e-02 )
 OPAL {0}> * hr              = (    475.92994 ,    475.92799 ,     47.61305 ) [um]
 OPAL {0}> * dh              =   1.00000e-10 [%]
 OPAL {0}> * t               =      225.015 [ps]         dT    =        1.000 [ps]
-OPAL {0}> * spos            =       32.787 [mm]
+OPAL {0}> * spos            =       32.676 [mm]
 OPAL {0}> * ********************************************************************************** 
 OPAL {0}> 
 OPAL {0}[2]> * Wrote beam phase space.
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:38
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:18
+ParallelTTracker {0}[2]>             entered: 0
+ParallelTTracker {0}[2]>          rediffused: 6
+ParallelTTracker {0}[2]>             stopped: 0
+ParallelTTracker {0}[2]>   total in material: 40
+ParallelTTracker {0}[3]> 22:06:18 Step    180 at 32.787 [mm], t= 226.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:18
 ParallelTTracker {0}[2]>             entered: 0
 ParallelTTracker {0}[2]>          rediffused: 5
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 73
-ParallelTTracker {0}[3]> 07:23:39 Step    180 at 32.898 [mm], t= 226.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:39
-ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 5
-ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 68
-ParallelTTracker {0}[3]> 07:23:39 Step    181 at 33.009 [mm], t= 227.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:39
+ParallelTTracker {0}[2]>   total in material: 35
+ParallelTTracker {0}[3]> 22:06:18 Step    181 at 32.898 [mm], t= 227.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:18
 ParallelTTracker {0}[2]>             entered: 0
 ParallelTTracker {0}[2]>          rediffused: 3
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 65
-ParallelTTracker {0}[3]> 07:23:39 Step    182 at 33.121 [mm], t= 228.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:39
-ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 3
-ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 62
-ParallelTTracker {0}[3]> 07:23:39 Step    183 at 33.232 [mm], t= 229.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:39
-ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 5
-ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 57
-ParallelTTracker {0}[3]> 07:23:39 Step    184 at 33.343 [mm], t= 230.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:39
-ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 3
-ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 54
-ParallelTTracker {0}[3]> 07:23:39 Step    185 at 33.454 [mm], t= 231.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:39
-ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 1
-ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 53
-ParallelTTracker {0}[3]> 07:23:39 Step    186 at 33.565 [mm], t= 232.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:39
-ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 1
-ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 52
-ParallelTTracker {0}[3]> 07:23:39 Step    187 at 33.676 [mm], t= 233.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:39
+ParallelTTracker {0}[2]>   total in material: 32
+ParallelTTracker {0}[3]> 22:06:18 Step    182 at 33.009 [mm], t= 228.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:18
 ParallelTTracker {0}[2]>             entered: 0
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 52
-ParallelTTracker {0}[3]> 07:23:39 Step    188 at 33.787 [mm], t= 234.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:39
+ParallelTTracker {0}[2]>   total in material: 32
+ParallelTTracker {0}[3]> 22:06:18 Step    183 at 33.121 [mm], t= 229.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:18
+ParallelTTracker {0}[2]>             entered: 0
+ParallelTTracker {0}[2]>          rediffused: 1
+ParallelTTracker {0}[2]>             stopped: 0
+ParallelTTracker {0}[2]>   total in material: 31
+ParallelTTracker {0}[3]> 22:06:18 Step    184 at 33.232 [mm], t= 230.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:18
+ParallelTTracker {0}[2]>             entered: 0
+ParallelTTracker {0}[2]>          rediffused: 1
+ParallelTTracker {0}[2]>             stopped: 0
+ParallelTTracker {0}[2]>   total in material: 30
+ParallelTTracker {0}[3]> 22:06:18 Step    185 at 33.343 [mm], t= 231.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:19
+ParallelTTracker {0}[2]>             entered: 0
+ParallelTTracker {0}[2]>          rediffused: 1
+ParallelTTracker {0}[2]>             stopped: 0
+ParallelTTracker {0}[2]>   total in material: 29
+ParallelTTracker {0}[3]> 22:06:19 Step    186 at 33.454 [mm], t= 232.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:19
+ParallelTTracker {0}[2]>             entered: 0
+ParallelTTracker {0}[2]>          rediffused: 1
+ParallelTTracker {0}[2]>             stopped: 0
+ParallelTTracker {0}[2]>   total in material: 28
+ParallelTTracker {0}[3]> 22:06:19 Step    187 at 33.565 [mm], t= 233.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:19
 ParallelTTracker {0}[2]>             entered: 0
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 52
-ParallelTTracker {0}[3]> 07:23:39 Step    189 at 33.899 [mm], t= 235.015 [ps], E=51.108 [MeV]
+ParallelTTracker {0}[2]>   total in material: 28
+ParallelTTracker {0}[3]> 22:06:19 Step    188 at 33.676 [mm], t= 234.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:19
+ParallelTTracker {0}[2]>             entered: 0
+ParallelTTracker {0}[2]>          rediffused: 0
+ParallelTTracker {0}[2]>             stopped: 0
+ParallelTTracker {0}[2]>   total in material: 28
+ParallelTTracker {0}[3]> 22:06:19 Step    189 at 33.787 [mm], t= 235.015 [ps], E=51.109 [MeV]
 OPAL {0}[3]> * Wrote beam statistics.
 OPAL {0}> 
 OPAL {0}> * ************** B U N C H ********************************************************* 
-OPAL {0}> * NP              = 999948
-OPAL {0}> * Qtot            =       39.498 [pC]         Qi    =        0.040 [fC]
-OPAL {0}> * Ekin            =      51.108 [MeV]         dEkin =     612.780 [keV]
-OPAL {0}> * rmax            = (     15.43451 ,     15.66123 ,      0.28305 ) [mm]
-OPAL {0}> * rmin            = (    -15.37464 ,    -16.55596 ,    -14.03944 ) [mm]
-OPAL {0}> * rms beam size   = (      4.87582 ,      4.88030 ,      0.42394 ) [mm]
-OPAL {0}> * rms momenta     = (  7.82921e-03 ,  7.78343e-03 ,  2.05864e-03 ) [beta gamma]
-OPAL {0}> * mean position   = (      0.00016 ,     -0.00002 ,     -1.09800 ) [mm]
-OPAL {0}> * mean momenta    = ( -1.31227e-05 , -3.45659e-06 ,  3.34338e-01 ) [beta gamma]
-OPAL {0}> * rms emittance   = (  1.14046e-04 ,  1.13483e-04 ,  2.59806e-06 ) (not normalized)
-OPAL {0}> * rms correlation = (  3.42087e-02 ,  3.42617e-02 ,  9.08971e-02 )
+OPAL {0}> * NP              = 999972
+OPAL {0}> * Qtot            =       39.499 [pC]         Qi    =        0.040 [fC]
+OPAL {0}> * Ekin            =      51.109 [MeV]         dEkin =     587.670 [keV]
+OPAL {0}> * rmax            = (     15.30888 ,     17.30086 ,      0.30863 ) [mm]
+OPAL {0}> * rmin            = (    -15.28169 ,    -15.48906 ,     -3.71276 ) [mm]
+OPAL {0}> * rms beam size   = (      4.87578 ,      4.88012 ,      0.42355 ) [mm]
+OPAL {0}> * rms momenta     = (  7.71104e-03 ,  7.67310e-03 ,  1.97426e-03 ) [beta gamma]
+OPAL {0}> * mean position   = (     -0.00006 ,     -0.00033 ,     -1.08170 ) [mm]
+OPAL {0}> * mean momenta    = (  7.12957e-06 , -1.79344e-05 ,  3.34348e-01 ) [beta gamma]
+OPAL {0}> * rms emittance   = (  1.12323e-04 ,  1.11872e-04 ,  2.49130e-06 ) (not normalized)
+OPAL {0}> * rms correlation = (  3.40608e-02 ,  3.36246e-02 ,  8.16665e-02 )
 OPAL {0}> * hr              = (    475.92994 ,    475.92799 ,     47.61305 ) [um]
 OPAL {0}> * dh              =   1.00000e-10 [%]
 OPAL {0}> * t               =      235.015 [ps]         dT    =        1.000 [ps]
-OPAL {0}> * spos            =       33.899 [mm]
+OPAL {0}> * spos            =       33.787 [mm]
 OPAL {0}> * ********************************************************************************** 
 OPAL {0}> 
 OPAL {0}[2]> * Wrote beam phase space.
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:39
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:19
 ParallelTTracker {0}[2]>             entered: 0
 ParallelTTracker {0}[2]>          rediffused: 1
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 51
-ParallelTTracker {0}[3]> 07:23:39 Step    190 at 34.010 [mm], t= 236.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:39
-ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 0
-ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 51
-ParallelTTracker {0}[3]> 07:23:39 Step    191 at 34.121 [mm], t= 237.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:39
-ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 0
-ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 51
-ParallelTTracker {0}[3]> 07:23:39 Step    192 at 34.232 [mm], t= 238.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:39
-ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 2
-ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 49
-ParallelTTracker {0}[3]> 07:23:39 Step    193 at 34.343 [mm], t= 239.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:39
-ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 2
-ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 47
-ParallelTTracker {0}[3]> 07:23:39 Step    194 at 34.454 [mm], t= 240.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:39
-ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 0
-ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 47
-ParallelTTracker {0}[3]> 07:23:39 Step    195 at 34.566 [mm], t= 241.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:39
-ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 0
-ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 47
-ParallelTTracker {0}[3]> 07:23:39 Step    196 at 34.677 [mm], t= 242.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:40
-ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 2
-ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 45
-ParallelTTracker {0}[3]> 07:23:40 Step    197 at 34.788 [mm], t= 243.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:40
-ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 0
-ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 45
-ParallelTTracker {0}[3]> 07:23:40 Step    198 at 34.899 [mm], t= 244.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:40
+ParallelTTracker {0}[2]>   total in material: 27
+ParallelTTracker {0}[3]> 22:06:19 Step    190 at 33.899 [mm], t= 236.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:19
 ParallelTTracker {0}[2]>             entered: 0
 ParallelTTracker {0}[2]>          rediffused: 1
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 44
-ParallelTTracker {0}[2]> 07:23:40 Step    199 at 35.010 [mm], t= 245.015 [ps], E=51.108 [MeV]
+ParallelTTracker {0}[2]>   total in material: 26
+ParallelTTracker {0}[3]> 22:06:19 Step    191 at 34.010 [mm], t= 237.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:19
+ParallelTTracker {0}[2]>             entered: 0
+ParallelTTracker {0}[2]>          rediffused: 1
+ParallelTTracker {0}[2]>             stopped: 0
+ParallelTTracker {0}[2]>   total in material: 25
+ParallelTTracker {0}[3]> 22:06:19 Step    192 at 34.121 [mm], t= 238.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:19
+ParallelTTracker {0}[2]>             entered: 0
+ParallelTTracker {0}[2]>          rediffused: 0
+ParallelTTracker {0}[2]>             stopped: 0
+ParallelTTracker {0}[2]>   total in material: 25
+ParallelTTracker {0}[3]> 22:06:19 Step    193 at 34.232 [mm], t= 239.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:19
+ParallelTTracker {0}[2]>             entered: 0
+ParallelTTracker {0}[2]>          rediffused: 0
+ParallelTTracker {0}[2]>             stopped: 0
+ParallelTTracker {0}[2]>   total in material: 25
+ParallelTTracker {0}[3]> 22:06:19 Step    194 at 34.343 [mm], t= 240.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:19
+ParallelTTracker {0}[2]>             entered: 0
+ParallelTTracker {0}[2]>          rediffused: 0
+ParallelTTracker {0}[2]>             stopped: 0
+ParallelTTracker {0}[2]>   total in material: 25
+ParallelTTracker {0}[3]> 22:06:19 Step    195 at 34.454 [mm], t= 241.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:19
+ParallelTTracker {0}[2]>             entered: 0
+ParallelTTracker {0}[2]>          rediffused: 1
+ParallelTTracker {0}[2]>             stopped: 0
+ParallelTTracker {0}[2]>   total in material: 24
+ParallelTTracker {0}[3]> 22:06:19 Step    196 at 34.566 [mm], t= 242.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:19
+ParallelTTracker {0}[2]>             entered: 0
+ParallelTTracker {0}[2]>          rediffused: 0
+ParallelTTracker {0}[2]>             stopped: 0
+ParallelTTracker {0}[2]>   total in material: 24
+ParallelTTracker {0}[3]> 22:06:19 Step    197 at 34.677 [mm], t= 243.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:19
+ParallelTTracker {0}[2]>             entered: 0
+ParallelTTracker {0}[2]>          rediffused: 1
+ParallelTTracker {0}[2]>             stopped: 0
+ParallelTTracker {0}[2]>   total in material: 23
+ParallelTTracker {0}[3]> 22:06:19 Step    198 at 34.788 [mm], t= 244.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:19
+ParallelTTracker {0}[2]>             entered: 0
+ParallelTTracker {0}[2]>          rediffused: 0
+ParallelTTracker {0}[2]>             stopped: 0
+ParallelTTracker {0}[2]>   total in material: 23
+ParallelTTracker {0}[2]> 22:06:19 Step    199 at 34.899 [mm], t= 245.015 [ps], E=51.109 [MeV]
 OPAL {0}[3]> * Wrote beam statistics.
 OPAL {0}> 
 OPAL {0}> * ************** B U N C H ********************************************************* 
-OPAL {0}> * NP              = 999956
-OPAL {0}> * Qtot            =       39.498 [pC]         Qi    =        0.040 [fC]
-OPAL {0}> * Ekin            =      51.108 [MeV]         dEkin =     637.370 [keV]
-OPAL {0}> * rmax            = (     15.48444 ,     15.79900 ,      0.13367 ) [mm]
-OPAL {0}> * rmin            = (    -15.88327 ,    -17.02339 ,    -15.38194 ) [mm]
-OPAL {0}> * rms beam size   = (      4.87665 ,      4.88110 ,      0.42479 ) [mm]
-OPAL {0}> * rms momenta     = (  7.86136e-03 ,  7.78342e-03 ,  2.14125e-03 ) [beta gamma]
-OPAL {0}> * mean position   = (      0.00015 ,     -0.00004 ,     -1.25898 ) [mm]
-OPAL {0}> * mean momenta    = ( -1.23913e-05 , -3.41811e-06 ,  3.34337e-01 ) [beta gamma]
-OPAL {0}> * rms emittance   = (  1.14515e-04 ,  1.13483e-04 ,  2.70252e-06 ) (not normalized)
-OPAL {0}> * rms correlation = (  3.89025e-02 ,  3.87881e-02 ,  1.10027e-01 )
+OPAL {0}> * NP              = 999977
+OPAL {0}> * Qtot            =       39.499 [pC]         Qi    =        0.040 [fC]
+OPAL {0}> * Ekin            =      51.109 [MeV]         dEkin =     595.166 [keV]
+OPAL {0}> * rmax            = (     15.39901 ,     17.73703 ,      0.15937 ) [mm]
+OPAL {0}> * rmin            = (    -15.33140 ,    -15.55348 ,     -4.78142 ) [mm]
+OPAL {0}> * rms beam size   = (      4.87659 ,      4.88090 ,      0.42407 ) [mm]
+OPAL {0}> * rms momenta     = (  7.72591e-03 ,  7.67660e-03 ,  1.99944e-03 ) [beta gamma]
+OPAL {0}> * mean position   = (     -0.00001 ,     -0.00039 ,     -1.24263 ) [mm]
+OPAL {0}> * mean momenta    = (  8.17636e-06 , -1.83583e-05 ,  3.34347e-01 ) [beta gamma]
+OPAL {0}> * rms emittance   = (  1.12540e-04 ,  1.11923e-04 ,  2.52308e-06 ) (not normalized)
+OPAL {0}> * rms correlation = (  3.86862e-02 ,  3.80944e-02 ,  9.53192e-02 )
 OPAL {0}> * hr              = (    475.92994 ,    475.92799 ,     47.61305 ) [um]
 OPAL {0}> * dh              =   1.00000e-10 [%]
 OPAL {0}> * t               =      245.015 [ps]         dT    =        1.000 [ps]
-OPAL {0}> * spos            =       35.010 [mm]
+OPAL {0}> * spos            =       34.899 [mm]
 OPAL {0}> * ********************************************************************************** 
 OPAL {0}> 
 OPAL {0}[2]> * Wrote beam phase space.
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:40
-ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 1
-ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 43
-ParallelTTracker {0}[3]> 07:23:40 Step    200 at 35.121 [mm], t= 246.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:40
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:20
 ParallelTTracker {0}[2]>             entered: 0
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 43
-ParallelTTracker {0}[3]> 07:23:40 Step    201 at 35.232 [mm], t= 247.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:40
+ParallelTTracker {0}[2]>   total in material: 23
+ParallelTTracker {0}[3]> 22:06:20 Step    200 at 35.010 [mm], t= 246.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:20
+ParallelTTracker {0}[2]>             entered: 0
+ParallelTTracker {0}[2]>          rediffused: 0
+ParallelTTracker {0}[2]>             stopped: 0
+ParallelTTracker {0}[2]>   total in material: 23
+ParallelTTracker {0}[3]> 22:06:20 Step    201 at 35.121 [mm], t= 247.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:20
+ParallelTTracker {0}[2]>             entered: 0
+ParallelTTracker {0}[2]>          rediffused: 0
+ParallelTTracker {0}[2]>             stopped: 0
+ParallelTTracker {0}[2]>   total in material: 23
+ParallelTTracker {0}[3]> 22:06:20 Step    202 at 35.232 [mm], t= 248.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:20
+ParallelTTracker {0}[2]>             entered: 0
+ParallelTTracker {0}[2]>          rediffused: 0
+ParallelTTracker {0}[2]>             stopped: 0
+ParallelTTracker {0}[2]>   total in material: 23
+ParallelTTracker {0}[3]> 22:06:20 Step    203 at 35.344 [mm], t= 249.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:20
+ParallelTTracker {0}[2]>             entered: 0
+ParallelTTracker {0}[2]>          rediffused: 0
+ParallelTTracker {0}[2]>             stopped: 0
+ParallelTTracker {0}[2]>   total in material: 23
+ParallelTTracker {0}[3]> 22:06:20 Step    204 at 35.455 [mm], t= 250.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:20
 ParallelTTracker {0}[2]>             entered: 0
 ParallelTTracker {0}[2]>          rediffused: 1
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 42
-ParallelTTracker {0}[3]> 07:23:40 Step    202 at 35.344 [mm], t= 248.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:40
+ParallelTTracker {0}[2]>   total in material: 22
+ParallelTTracker {0}[3]> 22:06:20 Step    205 at 35.566 [mm], t= 251.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:20
+ParallelTTracker {0}[2]>             entered: 0
+ParallelTTracker {0}[2]>          rediffused: 0
+ParallelTTracker {0}[2]>             stopped: 0
+ParallelTTracker {0}[2]>   total in material: 22
+ParallelTTracker {0}[3]> 22:06:20 Step    206 at 35.677 [mm], t= 252.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:20
+ParallelTTracker {0}[2]>             entered: 0
+ParallelTTracker {0}[2]>          rediffused: 1
+ParallelTTracker {0}[2]>             stopped: 0
+ParallelTTracker {0}[2]>   total in material: 21
+ParallelTTracker {0}[3]> 22:06:20 Step    207 at 35.788 [mm], t= 253.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:20
 ParallelTTracker {0}[2]>             entered: 0
 ParallelTTracker {0}[2]>          rediffused: 2
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 40
-ParallelTTracker {0}[3]> 07:23:40 Step    203 at 35.455 [mm], t= 249.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:40
+ParallelTTracker {0}[2]>   total in material: 19
+ParallelTTracker {0}[3]> 22:06:20 Step    208 at 35.899 [mm], t= 254.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:20
 ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 0
+ParallelTTracker {0}[2]>          rediffused: 1
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 40
-ParallelTTracker {0}[3]> 07:23:40 Step    204 at 35.566 [mm], t= 250.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:40
-ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 0
-ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 40
-ParallelTTracker {0}[3]> 07:23:40 Step    205 at 35.677 [mm], t= 251.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:40
-ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 0
-ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 40
-ParallelTTracker {0}[3]> 07:23:40 Step    206 at 35.788 [mm], t= 252.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:40
-ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 0
-ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 40
-ParallelTTracker {0}[3]> 07:23:40 Step    207 at 35.899 [mm], t= 253.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:40
-ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 0
-ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 40
-ParallelTTracker {0}[3]> 07:23:40 Step    208 at 36.010 [mm], t= 254.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:40
-ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 0
-ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 40
-ParallelTTracker {0}[3]> 07:23:40 Step    209 at 36.122 [mm], t= 255.015 [ps], E=51.108 [MeV]
+ParallelTTracker {0}[2]>   total in material: 18
+ParallelTTracker {0}[3]> 22:06:20 Step    209 at 36.010 [mm], t= 255.015 [ps], E=51.109 [MeV]
 OPAL {0}[3]> * Wrote beam statistics.
 OPAL {0}> 
 OPAL {0}> * ************** B U N C H ********************************************************* 
-OPAL {0}> * NP              = 999960
+OPAL {0}> * NP              = 999982
 OPAL {0}> * Qtot            =       39.499 [pC]         Qi    =        0.040 [fC]
-OPAL {0}> * Ekin            =      51.108 [MeV]         dEkin =     662.546 [keV]
-OPAL {0}> * rmax            = (     21.84159 ,     15.93676 ,     -0.01571 ) [mm]
-OPAL {0}> * rmin            = (    -16.43678 ,    -17.49082 ,    -16.72445 ) [mm]
-OPAL {0}> * rms beam size   = (      4.87764 ,      4.88201 ,      0.42602 ) [mm]
-OPAL {0}> * rms momenta     = (  7.87666e-03 ,  7.78340e-03 ,  2.22583e-03 ) [beta gamma]
-OPAL {0}> * mean position   = (      0.00012 ,     -0.00004 ,     -1.41997 ) [mm]
-OPAL {0}> * mean momenta    = ( -1.22050e-05 , -3.40791e-06 ,  3.34336e-01 ) [beta gamma]
-OPAL {0}> * rms emittance   = (  1.14738e-04 ,  1.13483e-04 ,  2.80964e-06 ) (not normalized)
-OPAL {0}> * rms correlation = (  4.36783e-02 ,  4.33137e-02 ,  1.32473e-01 )
+OPAL {0}> * Ekin            =      51.109 [MeV]         dEkin =     605.083 [keV]
+OPAL {0}> * rmax            = (     15.48914 ,     18.17320 ,      0.01011 ) [mm]
+OPAL {0}> * rmin            = (    -15.45063 ,    -15.61790 ,     -5.88873 ) [mm]
+OPAL {0}> * rms beam size   = (      4.87752 ,      4.88179 ,      0.42472 ) [mm]
+OPAL {0}> * rms momenta     = (  7.74327e-03 ,  7.67774e-03 ,  2.03276e-03 ) [beta gamma]
+OPAL {0}> * mean position   = (     -0.00001 ,     -0.00045 ,     -1.40357 ) [mm]
+OPAL {0}> * mean momenta    = (  7.36925e-06 , -1.83761e-05 ,  3.34346e-01 ) [beta gamma]
+OPAL {0}> * rms emittance   = (  1.12792e-04 ,  1.11939e-04 ,  2.56514e-06 ) (not normalized)
+OPAL {0}> * rms correlation = (  4.33370e-02 ,  4.25981e-02 ,  1.10014e-01 )
 OPAL {0}> * hr              = (    475.92994 ,    475.92799 ,     47.61305 ) [um]
 OPAL {0}> * dh              =   1.00000e-10 [%]
 OPAL {0}> * t               =      255.015 [ps]         dT    =        1.000 [ps]
-OPAL {0}> * spos            =       36.122 [mm]
+OPAL {0}> * spos            =       36.010 [mm]
 OPAL {0}> * ********************************************************************************** 
 OPAL {0}> 
 OPAL {0}[2]> * Wrote beam phase space.
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:41
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:20
 ParallelTTracker {0}[2]>             entered: 0
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 40
-ParallelTTracker {0}[3]> 07:23:41 Step    210 at 36.233 [mm], t= 256.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:41
+ParallelTTracker {0}[2]>   total in material: 18
+ParallelTTracker {0}[3]> 22:06:20 Step    210 at 36.122 [mm], t= 256.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:21
 ParallelTTracker {0}[2]>             entered: 0
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 40
-ParallelTTracker {0}[3]> 07:23:41 Step    211 at 36.344 [mm], t= 257.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:41
+ParallelTTracker {0}[2]>   total in material: 18
+ParallelTTracker {0}[3]> 22:06:21 Step    211 at 36.233 [mm], t= 257.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:21
 ParallelTTracker {0}[2]>             entered: 0
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 40
-ParallelTTracker {0}[3]> 07:23:41 Step    212 at 36.455 [mm], t= 258.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:41
+ParallelTTracker {0}[2]>   total in material: 18
+ParallelTTracker {0}[3]> 22:06:21 Step    212 at 36.344 [mm], t= 258.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:21
 ParallelTTracker {0}[2]>             entered: 0
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 40
-ParallelTTracker {0}[3]> 07:23:41 Step    213 at 36.566 [mm], t= 259.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:41
+ParallelTTracker {0}[2]>   total in material: 18
+ParallelTTracker {0}[3]> 22:06:21 Step    213 at 36.455 [mm], t= 259.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:21
 ParallelTTracker {0}[2]>             entered: 0
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 40
-ParallelTTracker {0}[3]> 07:23:41 Step    214 at 36.677 [mm], t= 260.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:41
+ParallelTTracker {0}[2]>   total in material: 18
+ParallelTTracker {0}[3]> 22:06:21 Step    214 at 36.566 [mm], t= 260.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:21
 ParallelTTracker {0}[2]>             entered: 0
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 40
-ParallelTTracker {0}[3]> 07:23:41 Step    215 at 36.788 [mm], t= 261.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:41
+ParallelTTracker {0}[2]>   total in material: 18
+ParallelTTracker {0}[3]> 22:06:21 Step    215 at 36.677 [mm], t= 261.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:21
 ParallelTTracker {0}[2]>             entered: 0
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 40
-ParallelTTracker {0}[3]> 07:23:41 Step    216 at 36.900 [mm], t= 262.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:41
-ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 1
-ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 39
-ParallelTTracker {0}[3]> 07:23:41 Step    217 at 37.011 [mm], t= 263.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:41
+ParallelTTracker {0}[2]>   total in material: 18
+ParallelTTracker {0}[3]> 22:06:21 Step    216 at 36.788 [mm], t= 262.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:21
 ParallelTTracker {0}[2]>             entered: 0
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 39
-ParallelTTracker {0}[3]> 07:23:41 Step    218 at 37.122 [mm], t= 264.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:41
+ParallelTTracker {0}[2]>   total in material: 18
+ParallelTTracker {0}[3]> 22:06:21 Step    217 at 36.900 [mm], t= 263.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:21
 ParallelTTracker {0}[2]>             entered: 0
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 39
-ParallelTTracker {0}[3]> 07:23:41 Step    219 at 37.233 [mm], t= 265.015 [ps], E=51.108 [MeV]
+ParallelTTracker {0}[2]>   total in material: 18
+ParallelTTracker {0}[3]> 22:06:21 Step    218 at 37.011 [mm], t= 264.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:21
+ParallelTTracker {0}[2]>             entered: 0
+ParallelTTracker {0}[2]>          rediffused: 0
+ParallelTTracker {0}[2]>             stopped: 0
+ParallelTTracker {0}[2]>   total in material: 18
+ParallelTTracker {0}[3]> 22:06:21 Step    219 at 37.122 [mm], t= 265.015 [ps], E=51.109 [MeV]
 OPAL {0}[3]> * Wrote beam statistics.
 OPAL {0}> 
 OPAL {0}> * ************** B U N C H ********************************************************* 
-OPAL {0}> * NP              = 999961
+OPAL {0}> * NP              = 999982
 OPAL {0}> * Qtot            =       39.499 [pC]         Qi    =        0.040 [fC]
-OPAL {0}> * Ekin            =      51.108 [MeV]         dEkin =     667.976 [keV]
-OPAL {0}> * rmax            = (     22.67655 ,     16.07453 ,     -0.16509 ) [mm]
-OPAL {0}> * rmin            = (    -16.99028 ,    -17.95824 ,    -18.06696 ) [mm]
-OPAL {0}> * rms beam size   = (      4.87866 ,      4.88303 ,      0.42689 ) [mm]
-OPAL {0}> * rms momenta     = (  7.87666e-03 ,  7.78829e-03 ,  2.24407e-03 ) [beta gamma]
-OPAL {0}> * mean position   = (      0.00008 ,     -0.00006 ,     -1.58092 ) [mm]
-OPAL {0}> * mean momenta    = ( -1.22105e-05 , -3.68389e-06 ,  3.34335e-01 ) [beta gamma]
-OPAL {0}> * rms emittance   = (  1.14738e-04 ,  1.13554e-04 ,  2.83274e-06 ) (not normalized)
-OPAL {0}> * rms correlation = (  4.82604e-02 ,  4.79002e-02 ,  1.46650e-01 )
+OPAL {0}> * Ekin            =      51.109 [MeV]         dEkin =     605.083 [keV]
+OPAL {0}> * rmax            = (     15.57927 ,     18.60937 ,     -0.13915 ) [mm]
+OPAL {0}> * rmin            = (    -15.56987 ,    -15.68232 ,     -6.91875 ) [mm]
+OPAL {0}> * rms beam size   = (      4.87852 ,      4.88277 ,      0.42535 ) [mm]
+OPAL {0}> * rms momenta     = (  7.74327e-03 ,  7.67774e-03 ,  2.03276e-03 ) [beta gamma]
+OPAL {0}> * mean position   = (      0.00002 ,     -0.00050 ,     -1.56449 ) [mm]
+OPAL {0}> * mean momenta    = (  7.36925e-06 , -1.83761e-05 ,  3.34346e-01 ) [beta gamma]
+OPAL {0}> * rms emittance   = (  1.12792e-04 ,  1.11939e-04 ,  2.56514e-06 ) (not normalized)
+OPAL {0}> * rms correlation = (  4.78417e-02 ,  4.70606e-02 ,  1.22497e-01 )
 OPAL {0}> * hr              = (    475.92994 ,    475.92799 ,     47.61305 ) [um]
 OPAL {0}> * dh              =   1.00000e-10 [%]
 OPAL {0}> * t               =      265.015 [ps]         dT    =        1.000 [ps]
-OPAL {0}> * spos            =       37.233 [mm]
+OPAL {0}> * spos            =       37.122 [mm]
 OPAL {0}> * ********************************************************************************** 
 OPAL {0}> 
 OPAL {0}[2]> * Wrote beam phase space.
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:41
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:21
 ParallelTTracker {0}[2]>             entered: 0
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 39
-ParallelTTracker {0}[3]> 07:23:41 Step    220 at 37.344 [mm], t= 266.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:41
+ParallelTTracker {0}[2]>   total in material: 18
+ParallelTTracker {0}[3]> 22:06:21 Step    220 at 37.233 [mm], t= 266.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:21
 ParallelTTracker {0}[2]>             entered: 0
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 39
-ParallelTTracker {0}[3]> 07:23:41 Step    221 at 37.455 [mm], t= 267.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:41
-ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 0
-ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 39
-ParallelTTracker {0}[3]> 07:23:41 Step    222 at 37.567 [mm], t= 268.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:42
-ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 0
-ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 39
-ParallelTTracker {0}[3]> 07:23:42 Step    223 at 37.678 [mm], t= 269.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:42
-ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 0
-ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 39
-ParallelTTracker {0}[3]> 07:23:42 Step    224 at 37.789 [mm], t= 270.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:42
-ParallelTTracker {0}[2]>             entered: 0
-ParallelTTracker {0}[2]>          rediffused: 0
-ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 39
-ParallelTTracker {0}[3]> 07:23:42 Step    225 at 37.900 [mm], t= 271.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:42
+ParallelTTracker {0}[2]>   total in material: 18
+ParallelTTracker {0}[3]> 22:06:21 Step    221 at 37.344 [mm], t= 267.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:21
 ParallelTTracker {0}[2]>             entered: 0
 ParallelTTracker {0}[2]>          rediffused: 1
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 38
-ParallelTTracker {0}[3]> 07:23:42 Step    226 at 38.011 [mm], t= 272.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:42
+ParallelTTracker {0}[2]>   total in material: 17
+ParallelTTracker {0}[3]> 22:06:21 Step    222 at 37.455 [mm], t= 268.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:21
 ParallelTTracker {0}[2]>             entered: 0
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 38
-ParallelTTracker {0}[3]> 07:23:42 Step    227 at 38.122 [mm], t= 273.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:42
+ParallelTTracker {0}[2]>   total in material: 17
+ParallelTTracker {0}[3]> 22:06:21 Step    223 at 37.567 [mm], t= 269.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:22
 ParallelTTracker {0}[2]>             entered: 0
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 38
-ParallelTTracker {0}[3]> 07:23:42 Step    228 at 38.233 [mm], t= 274.015 [ps], E=51.108 [MeV]
-ParallelTTracker {0}[2]> --- CollimatorPhysics - Type is DEGRADER Name DEG1 Material GRAPHITE
-ParallelTTracker {0}[2]> Particle Statistics @ 07:23:42
+ParallelTTracker {0}[2]>   total in material: 17
+ParallelTTracker {0}[3]> 22:06:22 Step    224 at 37.678 [mm], t= 270.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:22
 ParallelTTracker {0}[2]>             entered: 0
 ParallelTTracker {0}[2]>          rediffused: 0
 ParallelTTracker {0}[2]>             stopped: 0
-ParallelTTracker {0}[2]>   total in material: 38
-ParallelTTracker {0}[3]> 07:23:42 Step    229 at 38.345 [mm], t= 275.015 [ps], E=51.108 [MeV]
+ParallelTTracker {0}[2]>   total in material: 17
+ParallelTTracker {0}[3]> 22:06:22 Step    225 at 37.789 [mm], t= 271.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:22
+ParallelTTracker {0}[2]>             entered: 0
+ParallelTTracker {0}[2]>          rediffused: 0
+ParallelTTracker {0}[2]>             stopped: 0
+ParallelTTracker {0}[2]>   total in material: 17
+ParallelTTracker {0}[3]> 22:06:22 Step    226 at 37.900 [mm], t= 272.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:22
+ParallelTTracker {0}[2]>             entered: 0
+ParallelTTracker {0}[2]>          rediffused: 0
+ParallelTTracker {0}[2]>             stopped: 0
+ParallelTTracker {0}[2]>   total in material: 17
+ParallelTTracker {0}[3]> 22:06:22 Step    227 at 38.011 [mm], t= 273.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:22
+ParallelTTracker {0}[2]>             entered: 0
+ParallelTTracker {0}[2]>          rediffused: 0
+ParallelTTracker {0}[2]>             stopped: 0
+ParallelTTracker {0}[2]>   total in material: 17
+ParallelTTracker {0}[3]> 22:06:22 Step    228 at 38.122 [mm], t= 274.015 [ps], E=51.109 [MeV]
+ParallelTTracker {0}[2]> --- CollimatorPhysics - Name DEG1 Material GRAPHITE
+ParallelTTracker {0}[2]> Particle Statistics @ 22:06:22
+ParallelTTracker {0}[2]>             entered: 0
+ParallelTTracker {0}[2]>          rediffused: 0
+ParallelTTracker {0}[2]>             stopped: 0
+ParallelTTracker {0}[2]>   total in material: 17
+ParallelTTracker {0}[3]> 22:06:22 Step    229 at 38.233 [mm], t= 275.015 [ps], E=51.109 [MeV]
 OPAL {0}[3]> * Wrote beam statistics.
 OPAL {0}> 
 OPAL {0}> * ************** B U N C H ********************************************************* 
-OPAL {0}> * NP              = 999962
+OPAL {0}> * NP              = 999983
 OPAL {0}> * Qtot            =       39.499 [pC]         Qi    =        0.040 [fC]
-OPAL {0}> * Ekin            =      51.108 [MeV]         dEkin =     690.802 [keV]
-OPAL {0}> * rmax            = (     23.51151 ,     16.26099 ,     -0.31448 ) [mm]
-OPAL {0}> * rmin            = (    -17.54379 ,    -18.42567 ,    -19.40946 ) [mm]
-OPAL {0}> * rms beam size   = (      4.87980 ,      4.88415 ,      0.42816 ) [mm]
-OPAL {0}> * rms momenta     = (  7.87754e-03 ,  7.78829e-03 ,  2.32076e-03 ) [beta gamma]
-OPAL {0}> * mean position   = (      0.00005 ,     -0.00008 ,     -1.74189 ) [mm]
-OPAL {0}> * mean momenta    = ( -1.23283e-05 , -3.67628e-06 ,  3.34335e-01 ) [beta gamma]
-OPAL {0}> * rms emittance   = (  1.14751e-04 ,  1.13554e-04 ,  2.92957e-06 ) (not normalized)
-OPAL {0}> * rms correlation = (  5.28222e-02 ,  5.24222e-02 ,  1.65096e-01 )
+OPAL {0}> * Ekin            =      51.109 [MeV]         dEkin =     630.521 [keV]
+OPAL {0}> * rmax            = (     15.66941 ,     19.04553 ,     -0.28840 ) [mm]
+OPAL {0}> * rmin            = (    -15.68910 ,    -15.74674 ,    -18.94639 ) [mm]
+OPAL {0}> * rms beam size   = (      4.87964 ,      4.88385 ,      0.42639 ) [mm]
+OPAL {0}> * rms momenta     = (  7.74416e-03 ,  7.67778e-03 ,  2.11822e-03 ) [beta gamma]
+OPAL {0}> * mean position   = (      0.00005 ,     -0.00056 ,     -1.72543 ) [mm]
+OPAL {0}> * mean momenta    = (  7.48732e-06 , -1.83495e-05 ,  3.34346e-01 ) [beta gamma]
+OPAL {0}> * rms emittance   = (  1.12806e-04 ,  1.11940e-04 ,  2.67298e-06 ) (not normalized)
+OPAL {0}> * rms correlation = (  5.23742e-02 ,  5.15146e-02 ,  1.40730e-01 )
 OPAL {0}> * hr              = (    475.92994 ,    475.92799 ,     47.61305 ) [um]
 OPAL {0}> * dh              =   1.00000e-10 [%]
 OPAL {0}> * t               =      275.015 [ps]         dT    =        1.000 [ps]
-OPAL {0}> * spos            =       38.345 [mm]
+OPAL {0}> * spos            =       38.233 [mm]
 OPAL {0}> * ********************************************************************************** 
 OPAL {0}> 
 OPAL {0}[2]> * Wrote beam phase space.
@@ -1577,52 +1608,52 @@ Degrader::goOffline {0}>  done...
 Ippl{0}[3]> DEG1 gone off
 Ippl{0}[2]> Save M1.h5
 Ippl{0}[3]> M1 gone off
-OPAL{0}> done executing ParallelTTracker at 07:23:42
+OPAL{0}> done executing ParallelTTracker at 22:06:22
 OPAL{0}> * End of input stream "Degrader-1.in".
 Timings{0}> -----------------------------------------------------------------
 Timings{0}>      Timing results for 4 nodes:
 Timings{0}> -----------------------------------------------------------------
-Timings{0}> mainTimer........... Wall tot =    37.7674, CPU tot =      34.77
+Timings{0}> mainTimer........... Wall tot =    52.4598, CPU tot =      51.89
 Timings{0}> 
 Timings{0}> Binaryrepart........ Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
 Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
-Timings{0}> Boundingbox......... Wall max =   0.475594, CPU max =       0.48
-Timings{0}>                      Wall avg =   0.473652, CPU avg =     0.4725
-Timings{0}>                      Wall min =    0.47203, CPU min =       0.47
+Timings{0}> Boundingbox......... Wall max =   0.741374, CPU max =       0.74
+Timings{0}>                      Wall avg =    0.74012, CPU avg =     0.7375
+Timings{0}>                      Wall min =   0.739286, CPU min =       0.73
 Timings{0}> 
-Timings{0}> Boundingbox-bounds.. Wall max =   0.000688, CPU max =          0
-Timings{0}>                      Wall avg = 0.00068625, CPU avg =          0
-Timings{0}>                      Wall min =   0.000685, CPU min =          0
+Timings{0}> Boundingbox-bounds.. Wall max =   0.000893, CPU max =          0
+Timings{0}>                      Wall avg =   0.000883, CPU avg =          0
+Timings{0}>                      Wall min =   0.000874, CPU min =          0
 Timings{0}> 
-Timings{0}> Boundingbox-update.. Wall max =   0.472822, CPU max =       0.48
-Timings{0}>                      Wall avg =   0.471786, CPU avg =     0.4725
-Timings{0}>                      Wall min =   0.470802, CPU min =       0.47
+Timings{0}> Boundingbox-update.. Wall max =   0.740195, CPU max =       0.74
+Timings{0}>                      Wall avg =   0.738374, CPU avg =     0.7375
+Timings{0}>                      Wall min =   0.737757, CPU min =       0.73
 Timings{0}> 
-Timings{0}> Compute Statistics.. Wall max =   0.254283, CPU max =       0.28
-Timings{0}>                      Wall avg =   0.254229, CPU avg =     0.2325
-Timings{0}>                      Wall min =   0.254186, CPU min =       0.18
+Timings{0}> Compute Statistics.. Wall max =   0.579205, CPU max =       0.55
+Timings{0}>                      Wall avg =    0.57917, CPU avg =     0.5425
+Timings{0}>                      Wall min =   0.579148, CPU min =       0.53
 Timings{0}> 
-Timings{0}> Create Distr........ Wall max =   0.959459, CPU max =       0.96
-Timings{0}>                      Wall avg =    0.95945, CPU avg =      0.955
-Timings{0}>                      Wall min =   0.959441, CPU min =       0.95
+Timings{0}> Create Distr........ Wall max =    1.48291, CPU max =       1.48
+Timings{0}>                      Wall avg =    1.48285, CPU avg =     1.4775
+Timings{0}>                      Wall min =    1.48279, CPU min =       1.47
 Timings{0}> 
-Timings{0}> DegraderApply....... Wall max =    25.0111, CPU max =      25.03
-Timings{0}>                      Wall avg =    25.0089, CPU avg =     24.995
-Timings{0}>                      Wall min =    25.0064, CPU min =      24.95
+Timings{0}> DegraderApply....... Wall max =     36.928, CPU max =      36.92
+Timings{0}>                      Wall avg =    36.9242, CPU avg =    36.8675
+Timings{0}>                      Wall min =    36.9197, CPU min =      36.81
 Timings{0}> 
-Timings{0}> DegraderDestroy..... Wall max =   0.292149, CPU max =       0.31
-Timings{0}>                      Wall avg =   0.286416, CPU avg =     0.2775
-Timings{0}>                      Wall min =   0.280388, CPU min =        0.2
+Timings{0}> DegraderDestroy..... Wall max =    0.33778, CPU max =       0.39
+Timings{0}>                      Wall avg =   0.336154, CPU avg =      0.335
+Timings{0}>                      Wall min =   0.333144, CPU min =        0.3
 Timings{0}> 
-Timings{0}> DegraderLoop........ Wall max =    24.6183, CPU max =      24.65
-Timings{0}>                      Wall avg =    24.2803, CPU avg =     24.295
-Timings{0}>                      Wall min =    23.9255, CPU min =      23.89
+Timings{0}> DegraderLoop........ Wall max =    36.2771, CPU max =      36.22
+Timings{0}>                      Wall avg =    36.1962, CPU avg =    36.1225
+Timings{0}>                      Wall min =    36.1125, CPU min =      36.03
 Timings{0}> 
-Timings{0}> External field eval. Wall max =    3.09035, CPU max =       3.04
-Timings{0}>                      Wall avg =    3.05429, CPU avg =       3.02
-Timings{0}>                      Wall min =    3.03248, CPU min =          3
+Timings{0}> External field eval. Wall max =    3.67435, CPU max =       3.68
+Timings{0}>                      Wall avg =     3.6558, CPU avg =       3.64
+Timings{0}>                      Wall min =     3.6271, CPU min =       3.59
 Timings{0}> 
 Timings{0}> Fast inside test.... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
@@ -1660,24 +1691,24 @@ Timings{0}> SelfField total..... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
 Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
-Timings{0}> TIntegration1....... Wall max =   0.764217, CPU max =       0.83
-Timings{0}>                      Wall avg =   0.758119, CPU avg =     0.7675
-Timings{0}>                      Wall min =   0.754599, CPU min =       0.71
+Timings{0}> TIntegration1....... Wall max =    1.05874, CPU max =       1.11
+Timings{0}>                      Wall avg =    1.05522, CPU avg =     1.0625
+Timings{0}>                      Wall min =    1.04934, CPU min =       1.02
 Timings{0}> 
-Timings{0}> TIntegration2....... Wall max =    2.29923, CPU max =       2.34
-Timings{0}>                      Wall avg =    2.29279, CPU avg =     2.3025
-Timings{0}>                      Wall min =     2.2897, CPU min =       2.28
+Timings{0}> TIntegration2....... Wall max =    3.08648, CPU max =       3.19
+Timings{0}>                      Wall avg =    3.08524, CPU avg =       3.11
+Timings{0}>                      Wall min =    3.08302, CPU min =       3.08
 Timings{0}> 
 Timings{0}> WakeField........... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
 Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
-Timings{0}> Write H5-File....... Wall max =     3.3461, CPU max =       0.65
-Timings{0}>                      Wall avg =    3.34371, CPU avg =     0.6025
-Timings{0}>                      Wall min =    3.33714, CPU min =       0.56
+Timings{0}> Write H5-File....... Wall max =     2.5977, CPU max =       2.35
+Timings{0}>                      Wall avg =    2.59562, CPU avg =     2.2125
+Timings{0}>                      Wall min =    2.59413, CPU min =       1.98
 Timings{0}> 
-Timings{0}> Write Stat.......... Wall max =    0.13634, CPU max =       0.16
-Timings{0}>                      Wall avg =    0.13099, CPU avg =       0.13
-Timings{0}>                      Wall min =   0.129176, CPU min =       0.12
+Timings{0}> Write Stat.......... Wall max =   0.315865, CPU max =       0.28
+Timings{0}>                      Wall avg =   0.289907, CPU avg =      0.265
+Timings{0}>                      Wall min =   0.281241, CPU min =       0.26
 Timings{0}> 
 Timings{0}> -----------------------------------------------------------------
