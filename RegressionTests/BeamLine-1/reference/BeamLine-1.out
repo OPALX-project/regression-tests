@@ -1,3 +1,22 @@
+libibverbs: Warning: couldn't load driver 'mlx5': /lib64/libmlx5-rdmav2.so: symbol ibv_exp_cmd_destroy_flow, version IBVERBS_1.1 not defined in file libibverbs.so.1 with link time reference
+libibverbs: Warning: couldn't load driver 'mlx4': /lib64/libmlx4-rdmav2.so: symbol ibv_exp_cmd_destroy_flow, version IBVERBS_1.1 not defined in file libibverbs.so.1 with link time reference
+libibverbs: Warning: no userspace device-specific driver found for /sys/class/infiniband_verbs/uverbs0
+libibverbs: Warning: couldn't load driver 'mlx5': /lib64/libmlx5-rdmav2.so: symbol ibv_exp_cmd_destroy_flow, version IBVERBS_1.1 not defined in file libibverbs.so.1 with link time reference
+libibverbs: Warning: couldn't load driver 'mlx4': /lib64/libmlx4-rdmav2.so: symbol ibv_exp_cmd_destroy_flow, version IBVERBS_1.1 not defined in file libibverbs.so.1 with link time reference
+libibverbs: Warning: no userspace device-specific driver found for /sys/class/infiniband_verbs/uverbs0
+--------------------------------------------------------------------------
+[[11689,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: merlin-l-01
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
 Ippl> CommMPI: Parent process waiting for children ...
 Ippl> CommMPI: Initialization complete.
 >                ____  _____       ___ 
@@ -7,17 +26,21 @@ Ippl> CommMPI: Initialization complete.
 >              | |__| | |  / ____ \| |____
 >               \____/|_| /_/    \_\______|
 OPAL> 
-OPAL> This is OPAL (Object Oriented Parallel Accelerator Library) Version 1.9.0
+OPAL> This is OPAL (Object Oriented Parallel Accelerator Library) Version 2.1.0
+OPAL>             git rev. e1d32631ec9adfa980fcbe181f893e552dc4bd9d
 OPAL> 
-OPAL>                 (c) PSI, http://amas.web.psi.ch
+OPAL> 
+OPAL>                      (c) PSI, http://amas.web.psi.ch
+OPAL> 
+OPAL> 
 OPAL> The optimiser (former opt-Pilot) is integrated 
 OPAL> 
 OPAL> Please send cookies, goodies or other motivations (wine and beer ... ) 
 OPAL> to the OPAL developers opal@lists.psi.ch
 OPAL> 
-OPAL> Time: 07:01:11 date: 12/04/2018
+OPAL> Time: 22:59:38 date: 01/09/2019
 OPAL> 
-OPAL> Couldn't find startup file "/gpfs/home/adelmann/init.opal".
+OPAL> Couldn't find startup file "/psi/home/kraus/init.opal".
 OPAL> Note: this is not mandatory for an OPAL simulation!
 OPAL> 
 OPAL> * Reading input stream "BeamLine-1.in".
@@ -27,11 +50,12 @@ OPAL> OPTION,ECHO=FALSE,INFO=TRUE,TRACE=FALSE,WARN=TRUE,SEED=1.23457e+08,
 OPAL>   TELL=TRUE,PSDUMPFREQ=1e+06,STATDUMPFREQ=10,PSDUMPEACHTURN=FALSE,
 OPAL>   PSDUMPFRAME="GLOBAL",SPTDUMPFREQ=1,REPARTFREQ=10,REBINFREQ=100,
 OPAL>   SCSOLVEFREQ=1,MTSSUBSTEPS=1,REMOTEPARTDEL=0,RHODUMP=FALSE,
-OPAL>   EBDUMP=FALSE,CSRDUMP=FALSE,AUTOPHASE=0,PPDEBUG=FALSE,
+OPAL>   EBDUMP=FALSE,CSRDUMP=FALSE,AUTOPHASE=6,PPDEBUG=FALSE,
 OPAL>   SURFDUMPFREQ=-1,NUMBLOCKS=0,RECYCLEBLOCKS=0,NLHS=1,CZERO=FALSE,
 OPAL>   RNGTYPE="RANDOM",ENABLEHDF5=TRUE,ASCIIDUMP=FALSE,BOUNDPDESTROYFQ=10,
 OPAL>   BEAMHALOBOUNDARY=0,CLOTUNEONLY=FALSE,IDEALIZED=FALSE,
-OPAL>   LOGBENDTRAJECTORY=FALSE,VERSION=10000,MEMORYDUMP=FALSE;
+OPAL>   LOGBENDTRAJECTORY=FALSE,VERSION=10000,MEMORYDUMP=FALSE,HALOSHIFT=0,
+OPAL>   MINBINEMITTED=10,MINSTEPFORREBIN=200;
 OPAL> 
 OPAL> 
 OPAL> value: {GAMMA,BRHO,EDES,BETA,GAMBET}={1.10947,1.504,0.102715,0.433135,0.480551}
@@ -46,6 +70,9 @@ OPAL> * ************************************************************************
 Ippl> no solver attached
 OPAL[2]> * Generation of distribution with seed = 123456789
 OPAL[2]> * isn't scalable with number of particles and cores.
+Ippl> Creating new file for data: BeamLine-1.stat
+Ippl> Creating new file for data: BeamLine-1.lbal
+OPAL> 
 OPAL> * ************* D I S T R I B U T I O N ********************************************
 OPAL> * 
 OPAL> * Number of particles: 3520
@@ -244,325 +271,325 @@ SBend [2]> =====================================================================
 SBend [2]> 
 OPAL> 
 OPAL> Size of map 114 sections 
-OPAL> Key: (     23.441900-     36.426950) number of overlapping elements 0
-OPAL> Key: (     36.426950-     36.465905) number of overlapping elements 1
-OPAL>                                      UPG2B
-OPAL> Key: (     36.465905-     36.478890) number of overlapping elements 1
-OPAL>                                      D76
-OPAL> Key: (     36.478890-     36.543815) number of overlapping elements 1
-OPAL>                                      D77
-OPAL> Key: (     36.543815-     36.647696) number of overlapping elements 1
-OPAL>                                      D78
-OPAL> Key: (     36.647696-     37.037247) number of overlapping elements 1
-OPAL>                                      DEG
-OPAL> Key: (     37.037247-     37.193068) number of overlapping elements 1
-OPAL>                                      D79
-OPAL> Key: (     37.193068-     37.504709) number of overlapping elements 1
-OPAL>                                      D80
-OPAL> Key: (     37.504709-     37.517694) number of overlapping elements 3
-OPAL>                                      D80
-OPAL>                                      MMFP1X
-OPAL>                                      MMFP2Y
-OPAL> Key: (     37.517694-     37.790380) number of overlapping elements 1
-OPAL>                                      D81
-OPAL> Key: (     37.790380-     37.868291) number of overlapping elements 2
-OPAL>                                      QMF1
-OPAL>                                      QMF1_R0
-OPAL> Key: (     37.868291-     37.946201) number of overlapping elements 2
-OPAL>                                      QMF1
-OPAL>                                      QMF1_R1
-OPAL> Key: (     37.946201-     38.024111) number of overlapping elements 2
-OPAL>                                      QMF1
-OPAL>                                      QMF1_R2
-OPAL> Key: (     38.024111-     38.115007) number of overlapping elements 2
-OPAL>                                      QMF1
-OPAL>                                      QMF1_R3
-OPAL> Key: (     38.115007-     38.270827) number of overlapping elements 1
-OPAL>                                      QMFC
-OPAL> Key: (     38.270827-     38.426648) number of overlapping elements 1
-OPAL>                                      D82
-OPAL> Key: (     38.426648-     38.504558) number of overlapping elements 2
-OPAL>                                      QMF2
-OPAL>                                      QMF2_R0
-OPAL> Key: (     38.504558-     38.582468) number of overlapping elements 2
-OPAL>                                      QMF2
-OPAL>                                      QMF2_R1
-OPAL> Key: (     38.582468-     38.660379) number of overlapping elements 2
-OPAL>                                      QMF2
-OPAL>                                      QMF2_R2
-OPAL> Key: (     38.660379-     38.738289) number of overlapping elements 2
-OPAL>                                      QMF2
-OPAL>                                      QMF2_R3
-OPAL> Key: (     38.738289-     38.868139) number of overlapping elements 1
-OPAL>                                      D83
-OPAL> Key: (     38.868139-     39.179781) number of overlapping elements 2
-OPAL>                                      D83
-OPAL>                                      AMF1
-OPAL> Key: (     39.179781-     39.231721) number of overlapping elements 2
-OPAL>                                      AMF1
-OPAL>                                      AMF1_R0
-OPAL> Key: (     39.231721-     39.283660) number of overlapping elements 2
-OPAL>                                      AMF1
-OPAL>                                      AMF1_R1
-OPAL> Key: (     39.283660-     39.335600) number of overlapping elements 2
-OPAL>                                      AMF1_R2
-OPAL>                                      AMF1
-OPAL> Key: (     39.335600-     39.387540) number of overlapping elements 2
-OPAL>                                      AMF1
-OPAL>                                      AMF1_R3
-OPAL> Key: (     39.387540-     39.439480) number of overlapping elements 2
-OPAL>                                      AMF1
-OPAL>                                      AMF1_R4
-OPAL> Key: (     39.439480-     39.491419) number of overlapping elements 2
-OPAL>                                      AMF1
-OPAL>                                      AMF1_R5
-OPAL> Key: (     39.491419-     39.504404) number of overlapping elements 1
-OPAL>                                      AMF1
-OPAL> Key: (     39.504404-     39.556344) number of overlapping elements 2
-OPAL>                                      AMF1
-OPAL>                                      AMF1_R6
-OPAL> Key: (     39.556344-     39.608284) number of overlapping elements 2
-OPAL>                                      AMF1
-OPAL>                                      AMF1_R7
-OPAL> Key: (     39.608284-     39.660224) number of overlapping elements 2
-OPAL>                                      AMF1
-OPAL>                                      AMF1_R8
-OPAL> Key: (     39.660224-     39.712163) number of overlapping elements 2
-OPAL>                                      AMF1
-OPAL>                                      AMF1_R9
-OPAL> Key: (     39.712163-     39.764103) number of overlapping elements 2
-OPAL>                                      AMF1
-OPAL>                                      AMF1_R10
-OPAL> Key: (     39.764103-     39.816043) number of overlapping elements 2
-OPAL>                                      AMF1
-OPAL>                                      AMF1_R11
-OPAL> Key: (     39.816043-     39.867983) number of overlapping elements 2
-OPAL>                                      AMF1
-OPAL>                                      AMF1_R12
-OPAL> Key: (     39.867983-     39.880967) number of overlapping elements 1
-OPAL>                                      AMF1
-OPAL> Key: (     39.880967-     39.932907) number of overlapping elements 2
-OPAL>                                      AMF1
-OPAL>                                      AMF1_R13
-OPAL> Key: (     39.932907-     39.984847) number of overlapping elements 2
-OPAL>                                      AMF1
-OPAL>                                      AMF1_R14
-OPAL> Key: (     39.984847-     40.036787) number of overlapping elements 2
-OPAL>                                      AMF1
-OPAL>                                      AMF1_R15
-OPAL> Key: (     40.036787-     40.088726) number of overlapping elements 2
-OPAL>                                      AMF1
-OPAL>                                      AMF1_R16
-OPAL> Key: (     40.088726-     40.140666) number of overlapping elements 2
-OPAL>                                      AMF1
-OPAL>                                      AMF1_R17
-OPAL> Key: (     40.140666-     40.192606) number of overlapping elements 2
-OPAL>                                      AMF1
-OPAL>                                      AMF1_R18
-OPAL> Key: (     40.192606-     40.244546) number of overlapping elements 2
-OPAL>                                      AMF1
-OPAL>                                      AMF1_R19
-OPAL> Key: (     40.244546-     40.296485) number of overlapping elements 2
-OPAL>                                      AMF1
-OPAL>                                      AMF1_R20
-OPAL> Key: (     40.296485-     40.309470) number of overlapping elements 1
-OPAL>                                      AMF1
-OPAL> Key: (     40.309470-     40.361410) number of overlapping elements 2
-OPAL>                                      AMF1
-OPAL>                                      AMF1_R21
-OPAL> Key: (     40.361410-     40.413350) number of overlapping elements 2
-OPAL>                                      AMF1
-OPAL>                                      AMF1_R22
-OPAL> Key: (     40.413350-     40.465290) number of overlapping elements 2
-OPAL>                                      AMF1
-OPAL>                                      AMF1_R23
-OPAL> Key: (     40.465290-     40.517229) number of overlapping elements 2
-OPAL>                                      AMF1
-OPAL>                                      AMF1_R24
-OPAL> Key: (     40.517229-     40.569169) number of overlapping elements 2
-OPAL>                                      AMF1
-OPAL>                                      AMF1_R25
-OPAL> Key: (     40.569169-     40.621109) number of overlapping elements 2
-OPAL>                                      AMF1
-OPAL>                                      AMF1_R26
-OPAL> Key: (     40.621109-     40.673049) number of overlapping elements 2
-OPAL>                                      AMF1
-OPAL>                                      AMF1_R27
-OPAL> Key: (     40.673049-     40.686034) number of overlapping elements 1
-OPAL>                                      AMF1
-OPAL> Key: (     40.686034-     40.737974) number of overlapping elements 2
-OPAL>                                      AMF1
-OPAL>                                      AMF1_R28
-OPAL> Key: (     40.737974-     40.789914) number of overlapping elements 3
-OPAL>                                      AMF1
-OPAL>                                      AMF1_R29
-OPAL>                                      D84
-OPAL> Key: (     40.789914-     41.036630) number of overlapping elements 2
-OPAL>                                      AMF1
-OPAL>                                      D84
-OPAL> Key: (     41.036630-     41.127525) number of overlapping elements 1
-OPAL>                                      D84
-OPAL> Key: (     41.127525-     41.140510) number of overlapping elements 3
-OPAL>                                      MMFP3X
-OPAL>                                      MMFP4Y
-OPAL>                                      D86
-OPAL> Key: (     41.140510-     41.400211) number of overlapping elements 1
-OPAL>                                      D86
-OPAL> Key: (     41.400211-     41.478121) number of overlapping elements 2
-OPAL>                                      QMF3
-OPAL>                                      QMF3_R0
-OPAL> Key: (     41.478121-     41.556032) number of overlapping elements 2
-OPAL>                                      QMF3
-OPAL>                                      QMF3_R1
-OPAL> Key: (     41.556032-     41.633942) number of overlapping elements 2
-OPAL>                                      QMF3
-OPAL>                                      QMF3_R2
-OPAL> Key: (     41.633942-     41.711852) number of overlapping elements 2
-OPAL>                                      QMF3
-OPAL>                                      QMF3_R3
-OPAL> Key: (     41.711852-     41.893643) number of overlapping elements 1
-OPAL>                                      SMF2
-OPAL> Key: (     41.893643-     42.062449) number of overlapping elements 1
-OPAL>                                      D87
-OPAL> Key: (     42.062449-     42.140359) number of overlapping elements 2
-OPAL>                                      QMF4
-OPAL>                                      QMF4_R0
-OPAL> Key: (     42.140359-     42.218269) number of overlapping elements 2
-OPAL>                                      QMF4
-OPAL>                                      QMF4_R1
-OPAL> Key: (     42.218269-     42.296180) number of overlapping elements 2
-OPAL>                                      QMF4
-OPAL>                                      QMF4_R2
-OPAL> Key: (     42.296180-     42.374090) number of overlapping elements 2
-OPAL>                                      QMF4
-OPAL>                                      QMF4_R3
-OPAL> Key: (     42.374090-     42.490955) number of overlapping elements 1
-OPAL>                                      D88
-OPAL> Key: (     42.490955-     42.802597) number of overlapping elements 2
-OPAL>                                      D88
-OPAL>                                      AMF2
-OPAL> Key: (     42.802597-     42.854536) number of overlapping elements 2
-OPAL>                                      AMF2
-OPAL>                                      AMF2_R0
-OPAL> Key: (     42.854536-     42.906476) number of overlapping elements 2
-OPAL>                                      AMF2
-OPAL>                                      AMF2_R1
-OPAL> Key: (     42.906476-     42.958416) number of overlapping elements 2
-OPAL>                                      AMF2
-OPAL>                                      AMF2_R2
-OPAL> Key: (     42.958416-     43.010356) number of overlapping elements 2
-OPAL>                                      AMF2
-OPAL>                                      AMF2_R3
-OPAL> Key: (     43.010356-     43.062295) number of overlapping elements 2
-OPAL>                                      AMF2
-OPAL>                                      AMF2_R4
-OPAL> Key: (     43.062295-     43.075280) number of overlapping elements 1
-OPAL>                                      AMF2
-OPAL> Key: (     43.075280-     43.127220) number of overlapping elements 2
-OPAL>                                      AMF2
-OPAL>                                      AMF2_R5
-OPAL> Key: (     43.127220-     43.179160) number of overlapping elements 2
-OPAL>                                      AMF2
-OPAL>                                      AMF2_R6
-OPAL> Key: (     43.179160-     43.231100) number of overlapping elements 2
-OPAL>                                      AMF2
-OPAL>                                      AMF2_R7
-OPAL> Key: (     43.231100-     43.283039) number of overlapping elements 2
-OPAL>                                      AMF2
-OPAL>                                      AMF2_R8
-OPAL> Key: (     43.283039-     43.334979) number of overlapping elements 2
-OPAL>                                      AMF2
-OPAL>                                      AMF2_R9
-OPAL> Key: (     43.334979-     43.386919) number of overlapping elements 2
-OPAL>                                      AMF2
-OPAL>                                      AMF2_R10
-OPAL> Key: (     43.386919-     43.438859) number of overlapping elements 2
-OPAL>                                      AMF2
-OPAL>                                      AMF2_R11
-OPAL> Key: (     43.438859-     43.490798) number of overlapping elements 2
-OPAL>                                      AMF2
-OPAL>                                      AMF2_R12
-OPAL> Key: (     43.490798-     43.542738) number of overlapping elements 2
-OPAL>                                      AMF2
-OPAL>                                      AMF2_R13
-OPAL> Key: (     43.542738-     43.555723) number of overlapping elements 1
-OPAL>                                      AMF2
-OPAL> Key: (     43.555723-     43.607663) number of overlapping elements 2
-OPAL>                                      AMF2
-OPAL>                                      AMF2_R14
-OPAL> Key: (     43.607663-     43.659603) number of overlapping elements 2
-OPAL>                                      AMF2
-OPAL>                                      AMF2_R15
-OPAL> Key: (     43.659603-     43.711542) number of overlapping elements 2
-OPAL>                                      AMF2
-OPAL>                                      AMF2_R16
-OPAL> Key: (     43.711542-     43.763482) number of overlapping elements 2
-OPAL>                                      AMF2
-OPAL>                                      AMF2_R17
-OPAL> Key: (     43.763482-     43.815422) number of overlapping elements 2
-OPAL>                                      AMF2
-OPAL>                                      AMF2_R18
-OPAL> Key: (     43.815422-     43.867362) number of overlapping elements 2
-OPAL>                                      AMF2
-OPAL>                                      AMF2_R19
-OPAL> Key: (     43.867362-     43.919301) number of overlapping elements 2
-OPAL>                                      AMF2
-OPAL>                                      AMF2_R20
-OPAL> Key: (     43.919301-     43.932286) number of overlapping elements 1
-OPAL>                                      AMF2
-OPAL> Key: (     43.932286-     43.984226) number of overlapping elements 2
-OPAL>                                      AMF2
-OPAL>                                      AMF2_R21
-OPAL> Key: (     43.984226-     44.036166) number of overlapping elements 2
-OPAL>                                      AMF2
-OPAL>                                      AMF2_R22
-OPAL> Key: (     44.036166-     44.088106) number of overlapping elements 2
-OPAL>                                      AMF2
-OPAL>                                      AMF2_R23
-OPAL> Key: (     44.088106-     44.140045) number of overlapping elements 2
-OPAL>                                      AMF2
-OPAL>                                      AMF2_R24
-OPAL> Key: (     44.140045-     44.191985) number of overlapping elements 2
-OPAL>                                      AMF2
-OPAL>                                      AMF2_R25
-OPAL> Key: (     44.191985-     44.243925) number of overlapping elements 2
-OPAL>                                      AMF2
-OPAL>                                      AMF2_R26
-OPAL> Key: (     44.243925-     44.295865) number of overlapping elements 2
-OPAL>                                      AMF2
-OPAL>                                      AMF2_R27
-OPAL> Key: (     44.295865-     44.347805) number of overlapping elements 2
-OPAL>                                      AMF2
-OPAL>                                      AMF2_R28
-OPAL> Key: (     44.347805-     44.360790) number of overlapping elements 1
-OPAL>                                      AMF2
-OPAL> Key: (     44.360790-     44.412730) number of overlapping elements 3
-OPAL>                                      AMF2
-OPAL>                                      AMF2_R29
-OPAL>                                      D89
-OPAL> Key: (     44.412730-     44.659446) number of overlapping elements 2
-OPAL>                                      AMF2
-OPAL>                                      D89
-OPAL> Key: (     44.659446-     44.750341) number of overlapping elements 1
-OPAL>                                      D89
-OPAL> Key: (     44.750341-     44.763326) number of overlapping elements 3
-OPAL>                                      D89
-OPAL>                                      MMFP5X
-OPAL>                                      MMFP6Y
-OPAL> Key: (     44.763326-     45.100937) number of overlapping elements 1
-OPAL>                                      SMF3
-OPAL> Key: (     45.100937-     45.230788) number of overlapping elements 1
-OPAL>                                      D92
-OPAL> Key: (     45.230788-     45.308698) number of overlapping elements 2
-OPAL>                                      QMF5
-OPAL>                                      QMF5_R0
-OPAL> Key: (     45.308698-     45.386609) number of overlapping elements 2
-OPAL>                                      QMF5
-OPAL>                                      QMF5_R1
-OPAL> Key: (     45.386609-     45.438549) number of overlapping elements 2
-OPAL>                                      QMF5
-OPAL>                                      QMF5_R2
+OPAL> Key: (36.193219 - 36.426950) number of overlapping elements 0
+OPAL> Key: (36.426950 - 36.465905) number of overlapping elements 1
+OPAL>                              UPG2B
+OPAL> Key: (36.465905 - 36.478890) number of overlapping elements 1
+OPAL>                              D76
+OPAL> Key: (36.478890 - 36.543815) number of overlapping elements 1
+OPAL>                              D77
+OPAL> Key: (36.543815 - 36.634711) number of overlapping elements 1
+OPAL>                              D78
+OPAL> Key: (36.634711 - 37.037247) number of overlapping elements 1
+OPAL>                              DEG
+OPAL> Key: (37.037247 - 37.180083) number of overlapping elements 1
+OPAL>                              D79
+OPAL> Key: (37.180083 - 37.504709) number of overlapping elements 1
+OPAL>                              D80
+OPAL> Key: (37.504709 - 37.790380) number of overlapping elements 1
+OPAL>                              D81
+OPAL> Key: (37.790380 - 37.868291) number of overlapping elements 2
+OPAL>                              QMF1
+OPAL>                              QMF1_R0
+OPAL> Key: (37.868291 - 37.946201) number of overlapping elements 2
+OPAL>                              QMF1
+OPAL>                              QMF1_R1
+OPAL> Key: (37.946201 - 38.024111) number of overlapping elements 2
+OPAL>                              QMF1
+OPAL>                              QMF1_R2
+OPAL> Key: (38.024111 - 38.102021) number of overlapping elements 2
+OPAL>                              QMF1
+OPAL>                              QMF1_R3
+OPAL> Key: (38.102021 - 38.257842) number of overlapping elements 1
+OPAL>                              QMFC
+OPAL> Key: (38.257842 - 38.413663) number of overlapping elements 1
+OPAL>                              D82
+OPAL> Key: (38.413663 - 38.491573) number of overlapping elements 2
+OPAL>                              QMF2
+OPAL>                              QMF2_R0
+OPAL> Key: (38.491573 - 38.569483) number of overlapping elements 2
+OPAL>                              QMF2
+OPAL>                              QMF2_R1
+OPAL> Key: (38.569483 - 38.660379) number of overlapping elements 2
+OPAL>                              QMF2
+OPAL>                              QMF2_R2
+OPAL> Key: (38.660379 - 38.738289) number of overlapping elements 2
+OPAL>                              QMF2
+OPAL>                              QMF2_R3
+OPAL> Key: (38.738289 - 38.868139) number of overlapping elements 1
+OPAL>                              D83
+OPAL> Key: (38.868139 - 39.166796) number of overlapping elements 2
+OPAL>                              D83
+OPAL>                              AMF1
+OPAL> Key: (39.166796 - 39.218736) number of overlapping elements 2
+OPAL>                              AMF1
+OPAL>                              AMF1_R0
+OPAL> Key: (39.218736 - 39.270675) number of overlapping elements 2
+OPAL>                              AMF1_R1
+OPAL>                              AMF1
+OPAL> Key: (39.270675 - 39.283660) number of overlapping elements 1
+OPAL>                              AMF1
+OPAL> Key: (39.283660 - 39.335600) number of overlapping elements 2
+OPAL>                              AMF1_R2
+OPAL>                              AMF1
+OPAL> Key: (39.335600 - 39.387540) number of overlapping elements 2
+OPAL>                              AMF1_R3
+OPAL>                              AMF1
+OPAL> Key: (39.387540 - 39.439480) number of overlapping elements 2
+OPAL>                              AMF1
+OPAL>                              AMF1_R4
+OPAL> Key: (39.439480 - 39.491419) number of overlapping elements 2
+OPAL>                              AMF1
+OPAL>                              AMF1_R5
+OPAL> Key: (39.491419 - 39.543359) number of overlapping elements 2
+OPAL>                              AMF1
+OPAL>                              AMF1_R6
+OPAL> Key: (39.543359 - 39.595299) number of overlapping elements 2
+OPAL>                              AMF1
+OPAL>                              AMF1_R7
+OPAL> Key: (39.595299 - 39.647239) number of overlapping elements 2
+OPAL>                              AMF1
+OPAL>                              AMF1_R8
+OPAL> Key: (39.647239 - 39.660223) number of overlapping elements 1
+OPAL>                              AMF1
+OPAL> Key: (39.660223 - 39.712163) number of overlapping elements 2
+OPAL>                              AMF1
+OPAL>                              AMF1_R9
+OPAL> Key: (39.712163 - 39.764103) number of overlapping elements 2
+OPAL>                              AMF1
+OPAL>                              AMF1_R10
+OPAL> Key: (39.764103 - 39.816043) number of overlapping elements 2
+OPAL>                              AMF1
+OPAL>                              AMF1_R11
+OPAL> Key: (39.816043 - 39.867982) number of overlapping elements 2
+OPAL>                              AMF1
+OPAL>                              AMF1_R12
+OPAL> Key: (39.867982 - 39.919922) number of overlapping elements 2
+OPAL>                              AMF1
+OPAL>                              AMF1_R13
+OPAL> Key: (39.919922 - 39.971862) number of overlapping elements 2
+OPAL>                              AMF1
+OPAL>                              AMF1_R14
+OPAL> Key: (39.971862 - 40.023802) number of overlapping elements 2
+OPAL>                              AMF1
+OPAL>                              AMF1_R15
+OPAL> Key: (40.023802 - 40.075741) number of overlapping elements 2
+OPAL>                              AMF1
+OPAL>                              AMF1_R16
+OPAL> Key: (40.075741 - 40.088726) number of overlapping elements 1
+OPAL>                              AMF1
+OPAL> Key: (40.088726 - 40.140666) number of overlapping elements 2
+OPAL>                              AMF1
+OPAL>                              AMF1_R17
+OPAL> Key: (40.140666 - 40.192606) number of overlapping elements 2
+OPAL>                              AMF1
+OPAL>                              AMF1_R18
+OPAL> Key: (40.192606 - 40.244546) number of overlapping elements 2
+OPAL>                              AMF1
+OPAL>                              AMF1_R19
+OPAL> Key: (40.244546 - 40.296485) number of overlapping elements 2
+OPAL>                              AMF1
+OPAL>                              AMF1_R20
+OPAL> Key: (40.296485 - 40.348425) number of overlapping elements 2
+OPAL>                              AMF1
+OPAL>                              AMF1_R21
+OPAL> Key: (40.348425 - 40.400365) number of overlapping elements 2
+OPAL>                              AMF1
+OPAL>                              AMF1_R22
+OPAL> Key: (40.400365 - 40.452305) number of overlapping elements 2
+OPAL>                              AMF1
+OPAL>                              AMF1_R23
+OPAL> Key: (40.452305 - 40.465290) number of overlapping elements 1
+OPAL>                              AMF1
+OPAL> Key: (40.465290 - 40.517229) number of overlapping elements 2
+OPAL>                              AMF1
+OPAL>                              AMF1_R24
+OPAL> Key: (40.517229 - 40.569169) number of overlapping elements 2
+OPAL>                              AMF1
+OPAL>                              AMF1_R25
+OPAL> Key: (40.569169 - 40.621109) number of overlapping elements 2
+OPAL>                              AMF1
+OPAL>                              AMF1_R26
+OPAL> Key: (40.621109 - 40.673049) number of overlapping elements 2
+OPAL>                              AMF1
+OPAL>                              AMF1_R27
+OPAL> Key: (40.673049 - 40.724989) number of overlapping elements 2
+OPAL>                              AMF1
+OPAL>                              AMF1_R28
+OPAL> Key: (40.724989 - 40.776929) number of overlapping elements 3
+OPAL>                              AMF1
+OPAL>                              AMF1_R29
+OPAL>                              D84
+OPAL> Key: (40.776929 - 41.036630) number of overlapping elements 2
+OPAL>                              AMF1
+OPAL>                              D84
+OPAL> Key: (41.036630 - 41.114540) number of overlapping elements 1
+OPAL>                              D84
+OPAL> Key: (41.114540 - 41.127525) number of overlapping elements 3
+OPAL>                              D84
+OPAL>                              MMFP3X
+OPAL>                              MMFP4Y
+OPAL> Key: (41.127525 - 41.387226) number of overlapping elements 1
+OPAL>                              D86
+OPAL> Key: (41.387226 - 41.465136) number of overlapping elements 2
+OPAL>                              QMF3
+OPAL>                              QMF3_R0
+OPAL> Key: (41.465136 - 41.556032) number of overlapping elements 2
+OPAL>                              QMF3
+OPAL>                              QMF3_R1
+OPAL> Key: (41.556032 - 41.633942) number of overlapping elements 2
+OPAL>                              QMF3
+OPAL>                              QMF3_R2
+OPAL> Key: (41.633942 - 41.711852) number of overlapping elements 2
+OPAL>                              QMF3
+OPAL>                              QMF3_R3
+OPAL> Key: (41.711852 - 41.880658) number of overlapping elements 1
+OPAL>                              SMF2
+OPAL> Key: (41.880658 - 42.049464) number of overlapping elements 1
+OPAL>                              D87
+OPAL> Key: (42.049464 - 42.127374) number of overlapping elements 2
+OPAL>                              QMF4
+OPAL>                              QMF4_R0
+OPAL> Key: (42.127374 - 42.205284) number of overlapping elements 2
+OPAL>                              QMF4
+OPAL>                              QMF4_R1
+OPAL> Key: (42.205284 - 42.296180) number of overlapping elements 2
+OPAL>                              QMF4
+OPAL>                              QMF4_R2
+OPAL> Key: (42.296180 - 42.374090) number of overlapping elements 2
+OPAL>                              QMF4
+OPAL>                              QMF4_R3
+OPAL> Key: (42.374090 - 42.490955) number of overlapping elements 1
+OPAL>                              D88
+OPAL> Key: (42.490955 - 42.789611) number of overlapping elements 2
+OPAL>                              D88
+OPAL>                              AMF2
+OPAL> Key: (42.789611 - 42.802597) number of overlapping elements 3
+OPAL>                              D88
+OPAL>                              AMF2
+OPAL>                              AMF2_R0
+OPAL> Key: (42.802597 - 42.841551) number of overlapping elements 2
+OPAL>                              AMF2
+OPAL>                              AMF2_R0
+OPAL> Key: (42.841551 - 42.854536) number of overlapping elements 1
+OPAL>                              AMF2
+OPAL> Key: (42.854536 - 42.906476) number of overlapping elements 2
+OPAL>                              AMF2
+OPAL>                              AMF2_R1
+OPAL> Key: (42.906476 - 42.958416) number of overlapping elements 2
+OPAL>                              AMF2
+OPAL>                              AMF2_R2
+OPAL> Key: (42.958416 - 43.010356) number of overlapping elements 2
+OPAL>                              AMF2
+OPAL>                              AMF2_R3
+OPAL> Key: (43.010356 - 43.062295) number of overlapping elements 2
+OPAL>                              AMF2
+OPAL>                              AMF2_R4
+OPAL> Key: (43.062295 - 43.114235) number of overlapping elements 2
+OPAL>                              AMF2
+OPAL>                              AMF2_R5
+OPAL> Key: (43.114235 - 43.166175) number of overlapping elements 2
+OPAL>                              AMF2
+OPAL>                              AMF2_R6
+OPAL> Key: (43.166175 - 43.218115) number of overlapping elements 2
+OPAL>                              AMF2
+OPAL>                              AMF2_R7
+OPAL> Key: (43.218115 - 43.270054) number of overlapping elements 2
+OPAL>                              AMF2
+OPAL>                              AMF2_R8
+OPAL> Key: (43.270054 - 43.283039) number of overlapping elements 1
+OPAL>                              AMF2
+OPAL> Key: (43.283039 - 43.334979) number of overlapping elements 2
+OPAL>                              AMF2
+OPAL>                              AMF2_R9
+OPAL> Key: (43.334979 - 43.386919) number of overlapping elements 2
+OPAL>                              AMF2
+OPAL>                              AMF2_R10
+OPAL> Key: (43.386919 - 43.438859) number of overlapping elements 2
+OPAL>                              AMF2
+OPAL>                              AMF2_R11
+OPAL> Key: (43.438859 - 43.490798) number of overlapping elements 2
+OPAL>                              AMF2
+OPAL>                              AMF2_R12
+OPAL> Key: (43.490798 - 43.542738) number of overlapping elements 2
+OPAL>                              AMF2
+OPAL>                              AMF2_R13
+OPAL> Key: (43.542738 - 43.594678) number of overlapping elements 2
+OPAL>                              AMF2
+OPAL>                              AMF2_R14
+OPAL> Key: (43.594678 - 43.646618) number of overlapping elements 2
+OPAL>                              AMF2
+OPAL>                              AMF2_R15
+OPAL> Key: (43.646618 - 43.698557) number of overlapping elements 2
+OPAL>                              AMF2
+OPAL>                              AMF2_R16
+OPAL> Key: (43.698557 - 43.711542) number of overlapping elements 1
+OPAL>                              AMF2
+OPAL> Key: (43.711542 - 43.763482) number of overlapping elements 2
+OPAL>                              AMF2
+OPAL>                              AMF2_R17
+OPAL> Key: (43.763482 - 43.815422) number of overlapping elements 2
+OPAL>                              AMF2
+OPAL>                              AMF2_R18
+OPAL> Key: (43.815422 - 43.867362) number of overlapping elements 2
+OPAL>                              AMF2
+OPAL>                              AMF2_R19
+OPAL> Key: (43.867362 - 43.919301) number of overlapping elements 2
+OPAL>                              AMF2
+OPAL>                              AMF2_R20
+OPAL> Key: (43.919301 - 43.971241) number of overlapping elements 2
+OPAL>                              AMF2
+OPAL>                              AMF2_R21
+OPAL> Key: (43.971241 - 44.023181) number of overlapping elements 2
+OPAL>                              AMF2
+OPAL>                              AMF2_R22
+OPAL> Key: (44.023181 - 44.075121) number of overlapping elements 2
+OPAL>                              AMF2
+OPAL>                              AMF2_R23
+OPAL> Key: (44.075121 - 44.127060) number of overlapping elements 2
+OPAL>                              AMF2
+OPAL>                              AMF2_R24
+OPAL> Key: (44.127060 - 44.140045) number of overlapping elements 1
+OPAL>                              AMF2
+OPAL> Key: (44.140045 - 44.191985) number of overlapping elements 2
+OPAL>                              AMF2
+OPAL>                              AMF2_R25
+OPAL> Key: (44.191985 - 44.243925) number of overlapping elements 2
+OPAL>                              AMF2
+OPAL>                              AMF2_R26
+OPAL> Key: (44.243925 - 44.295865) number of overlapping elements 2
+OPAL>                              AMF2
+OPAL>                              AMF2_R27
+OPAL> Key: (44.295865 - 44.347805) number of overlapping elements 2
+OPAL>                              AMF2
+OPAL>                              AMF2_R28
+OPAL> Key: (44.347805 - 44.360790) number of overlapping elements 2
+OPAL>                              AMF2
+OPAL>                              AMF2_R29
+OPAL> Key: (44.360790 - 44.399745) number of overlapping elements 3
+OPAL>                              AMF2
+OPAL>                              AMF2_R29
+OPAL>                              D89
+OPAL> Key: (44.399745 - 44.659446) number of overlapping elements 2
+OPAL>                              AMF2
+OPAL>                              D89
+OPAL> Key: (44.659446 - 44.750341) number of overlapping elements 1
+OPAL>                              D89
+OPAL> Key: (44.750341 - 45.100937) number of overlapping elements 1
+OPAL>                              SMF3
+OPAL> Key: (45.100937 - 45.217803) number of overlapping elements 1
+OPAL>                              D92
+OPAL> Key: (45.217803 - 45.308698) number of overlapping elements 2
+OPAL>                              QMF5
+OPAL>                              QMF5_R0
+OPAL> Key: (45.308698 - 45.386609) number of overlapping elements 2
+OPAL>                              QMF5
+OPAL>                              QMF5_R1
+OPAL> Key: (45.386609 - 45.438549) number of overlapping elements 2
+OPAL>                              QMF5
+OPAL>                              QMF5_R2
 OPAL> 
+Ippl> Creating new file for data: data/BeamLine-1_ElementPositions.sdds
 OPAL> 
 OPAL> * ************** B U N C H ********************************************************* 
 OPAL> * NP              = 3520
@@ -578,141 +605,144 @@ OPAL> * rms emittance   = (  5.63944e-06 ,  7.79270e-06 ,  2.46971e-06 ) (not no
 OPAL> * rms correlation = ( -7.71906e-01 , -1.85437e-01 ,  9.99984e-01 )
 OPAL> * hr              = (      0.11946 ,      0.10054 ,      6.99752 ) [mm]
 OPAL> * dh              =   1.00000e-10 [%]
-OPAL> * t               =      280.470 [ns]         dT    =      100.000 [ps]
+OPAL> * t               =      280.530 [ns]         dT    =      100.000 [ps]
 OPAL> * spos            =        36.427 [m]
 OPAL> * ********************************************************************************** 
 OPAL> 
-OPAL> Track start at: 07:01:12, t= 280.470 [ns]; zstart at: 36.427 [m]
+OPAL> Track start at: 22:59:38, t= 280.530 [ns]; zstart at: 36.427 [m]
 OPAL> Executing ParallelTTracker, initial dt= 100.000 [ps];
 OPAL> max integration steps 1243, next step= 0
 ParallelTTracker [2]> MINBINEMITTED 10
 ParallelTTracker [2]> MINSTEPFORREBIN 200
-ParallelTTracker [2]> 07:01:12 Step     99 at 37.725 [m], t= 290.470 [ns], E=102.716 [MeV]
-ParallelTTracker [2]> 07:01:12 Step    199 at 39.024 [m], t= 300.470 [ns], E=102.716 [MeV]
+ParallelTTracker [2]> 22:59:38 Step     99 at 37.725 [m], t= 290.530 [ns], E=102.716 [MeV]
+ParallelTTracker [2]> 22:59:38 Step    199 at 39.024 [m], t= 300.530 [ns], E=102.716 [MeV]
 ParallelTTracker > * Deleted 1 particles, remaining 3519 particles
 ParallelTTracker > * Deleted 1 particles, remaining 3518 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3517 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3516 particles
-ParallelTTracker > * Deleted 3 particles, remaining 3513 particles
-ParallelTTracker > * Deleted 2 particles, remaining 3511 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3510 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3506 particles
-ParallelTTracker > * Deleted 3 particles, remaining 3503 particles
+ParallelTTracker > * Deleted 2 particles, remaining 3516 particles
+ParallelTTracker > * Deleted 2 particles, remaining 3514 particles
+ParallelTTracker > * Deleted 1 particles, remaining 3513 particles
+ParallelTTracker > * Deleted 1 particles, remaining 3512 particles
+ParallelTTracker > * Deleted 2 particles, remaining 3510 particles
+ParallelTTracker > * Deleted 1 particles, remaining 3509 particles
+ParallelTTracker > * Deleted 3 particles, remaining 3506 particles
+ParallelTTracker > * Deleted 1 particles, remaining 3505 particles
+ParallelTTracker > * Deleted 1 particles, remaining 3504 particles
+ParallelTTracker > * Deleted 1 particles, remaining 3503 particles
 ParallelTTracker > * Deleted 2 particles, remaining 3501 particles
-ParallelTTracker > * Deleted 2 particles, remaining 3499 particles
-ParallelTTracker > * Deleted 2 particles, remaining 3497 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3496 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3495 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3491 particles
+ParallelTTracker > * Deleted 1 particles, remaining 3500 particles
+ParallelTTracker > * Deleted 7 particles, remaining 3493 particles
+ParallelTTracker > * Deleted 2 particles, remaining 3491 particles
 ParallelTTracker > * Deleted 3 particles, remaining 3488 particles
-ParallelTTracker > * Deleted 5 particles, remaining 3483 particles
-ParallelTTracker > * Deleted 2 particles, remaining 3481 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3477 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3473 particles
-ParallelTTracker > * Deleted 2 particles, remaining 3471 particles
-ParallelTTracker > * Deleted 2 particles, remaining 3469 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3468 particles
-ParallelTTracker > * Deleted 3 particles, remaining 3465 particles
-ParallelTTracker > * Deleted 3 particles, remaining 3462 particles
-ParallelTTracker > * Deleted 3 particles, remaining 3459 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3458 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3454 particles
-ParallelTTracker > * Deleted 2 particles, remaining 3452 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3448 particles
-ParallelTTracker > * Deleted 5 particles, remaining 3443 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3442 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3438 particles
-ParallelTTracker > * Deleted 6 particles, remaining 3432 particles
-ParallelTTracker > * Deleted 9 particles, remaining 3423 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3419 particles
-ParallelTTracker > * Deleted 5 particles, remaining 3414 particles
-ParallelTTracker > * Deleted 7 particles, remaining 3407 particles
-ParallelTTracker > * Deleted 3 particles, remaining 3404 particles
-ParallelTTracker > * Deleted 7 particles, remaining 3397 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3396 particles
-ParallelTTracker > * Deleted 5 particles, remaining 3391 particles
-ParallelTTracker > * Deleted 3 particles, remaining 3388 particles
-ParallelTTracker > * Deleted 3 particles, remaining 3385 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3381 particles
-ParallelTTracker [2]> 07:01:12 Step    299 at 40.322 [m], t= 310.470 [ns], E=102.694 [MeV]
-ParallelTTracker > * Deleted 4 particles, remaining 3377 particles
-ParallelTTracker > * Deleted 6 particles, remaining 3371 particles
-ParallelTTracker > * Deleted 6 particles, remaining 3365 particles
-ParallelTTracker > * Deleted 6 particles, remaining 3359 particles
-ParallelTTracker > * Deleted 8 particles, remaining 3351 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3347 particles
-ParallelTTracker > * Deleted 2 particles, remaining 3345 particles
-ParallelTTracker > * Deleted 7 particles, remaining 3338 particles
-ParallelTTracker > * Deleted 6 particles, remaining 3332 particles
-ParallelTTracker > * Deleted 6 particles, remaining 3326 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3322 particles
-ParallelTTracker > * Deleted 3 particles, remaining 3319 particles
-ParallelTTracker > * Deleted 6 particles, remaining 3313 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3312 particles
-ParallelTTracker > * Deleted 5 particles, remaining 3307 particles
-ParallelTTracker > * Deleted 5 particles, remaining 3302 particles
-ParallelTTracker > * Deleted 5 particles, remaining 3297 particles
-ParallelTTracker > * Deleted 5 particles, remaining 3292 particles
-ParallelTTracker > * Deleted 3 particles, remaining 3289 particles
-ParallelTTracker > * Deleted 5 particles, remaining 3284 particles
-ParallelTTracker > * Deleted 6 particles, remaining 3278 particles
-ParallelTTracker > * Deleted 5 particles, remaining 3273 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3269 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3265 particles
+ParallelTTracker > * Deleted 3 particles, remaining 3485 particles
+ParallelTTracker > * Deleted 4 particles, remaining 3481 particles
+ParallelTTracker > * Deleted 2 particles, remaining 3479 particles
+ParallelTTracker > * Deleted 1 particles, remaining 3478 particles
+ParallelTTracker > * Deleted 2 particles, remaining 3476 particles
+ParallelTTracker > * Deleted 3 particles, remaining 3473 particles
+ParallelTTracker > * Deleted 6 particles, remaining 3467 particles
+ParallelTTracker > * Deleted 2 particles, remaining 3465 particles
+ParallelTTracker > * Deleted 4 particles, remaining 3461 particles
+ParallelTTracker > * Deleted 3 particles, remaining 3458 particles
+ParallelTTracker > * Deleted 5 particles, remaining 3453 particles
+ParallelTTracker > * Deleted 8 particles, remaining 3445 particles
+ParallelTTracker > * Deleted 5 particles, remaining 3440 particles
+ParallelTTracker > * Deleted 1 particles, remaining 3439 particles
+ParallelTTracker > * Deleted 7 particles, remaining 3432 particles
+ParallelTTracker > * Deleted 1 particles, remaining 3431 particles
+ParallelTTracker > * Deleted 5 particles, remaining 3426 particles
+ParallelTTracker > * Deleted 6 particles, remaining 3420 particles
+ParallelTTracker > * Deleted 5 particles, remaining 3415 particles
+ParallelTTracker > * Deleted 3 particles, remaining 3412 particles
+ParallelTTracker > * Deleted 6 particles, remaining 3406 particles
+ParallelTTracker > * Deleted 4 particles, remaining 3402 particles
+ParallelTTracker > * Deleted 2 particles, remaining 3400 particles
+ParallelTTracker > * Deleted 2 particles, remaining 3398 particles
+ParallelTTracker > * Deleted 3 particles, remaining 3395 particles
+ParallelTTracker > * Deleted 5 particles, remaining 3390 particles
+ParallelTTracker > * Deleted 6 particles, remaining 3384 particles
+ParallelTTracker > * Deleted 5 particles, remaining 3379 particles
+ParallelTTracker > * Deleted 4 particles, remaining 3375 particles
+ParallelTTracker > * Deleted 4 particles, remaining 3371 particles
+ParallelTTracker [2]> 22:59:39 Step    299 at 40.322 [m], t= 310.530 [ns], E=102.691 [MeV]
+ParallelTTracker > * Deleted 9 particles, remaining 3362 particles
+ParallelTTracker > * Deleted 8 particles, remaining 3354 particles
+ParallelTTracker > * Deleted 4 particles, remaining 3350 particles
+ParallelTTracker > * Deleted 6 particles, remaining 3344 particles
+ParallelTTracker > * Deleted 8 particles, remaining 3336 particles
+ParallelTTracker > * Deleted 4 particles, remaining 3332 particles
+ParallelTTracker > * Deleted 5 particles, remaining 3327 particles
+ParallelTTracker > * Deleted 3 particles, remaining 3324 particles
+ParallelTTracker > * Deleted 2 particles, remaining 3322 particles
+ParallelTTracker > * Deleted 4 particles, remaining 3318 particles
+ParallelTTracker > * Deleted 4 particles, remaining 3314 particles
+ParallelTTracker > * Deleted 4 particles, remaining 3310 particles
+ParallelTTracker > * Deleted 2 particles, remaining 3308 particles
+ParallelTTracker > * Deleted 9 particles, remaining 3299 particles
+ParallelTTracker > * Deleted 5 particles, remaining 3294 particles
+ParallelTTracker > * Deleted 3 particles, remaining 3291 particles
+ParallelTTracker > * Deleted 4 particles, remaining 3287 particles
+ParallelTTracker > * Deleted 5 particles, remaining 3282 particles
+ParallelTTracker > * Deleted 7 particles, remaining 3275 particles
+ParallelTTracker > * Deleted 10 particles, remaining 3265 particles
 ParallelTTracker > * Deleted 6 particles, remaining 3259 particles
-ParallelTTracker > * Deleted 2 particles, remaining 3257 particles
-ParallelTTracker > * Deleted 5 particles, remaining 3252 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3248 particles
-ParallelTTracker > * Deleted 2 particles, remaining 3246 particles
-ParallelTTracker > * Deleted 2 particles, remaining 3244 particles
-ParallelTTracker > * Deleted 2 particles, remaining 3242 particles
-ParallelTTracker > * Deleted 3 particles, remaining 3239 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3235 particles
-ParallelTTracker > * Deleted 5 particles, remaining 3230 particles
-ParallelTTracker > * Deleted 2 particles, remaining 3228 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3224 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3220 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3219 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3218 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3214 particles
-ParallelTTracker > * Deleted 2 particles, remaining 3212 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3211 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3210 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3209 particles
-ParallelTTracker [2]> 07:01:13 Step    399 at 41.621 [m], t= 320.470 [ns], E=102.691 [MeV]
-ParallelTTracker > * Deleted 2 particles, remaining 3207 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3203 particles
-ParallelTTracker > * Deleted 3 particles, remaining 3200 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3196 particles
-ParallelTTracker > * Deleted 3 particles, remaining 3193 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3189 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3188 particles
+ParallelTTracker > * Deleted 9 particles, remaining 3250 particles
+ParallelTTracker > * Deleted 7 particles, remaining 3243 particles
+ParallelTTracker > * Deleted 6 particles, remaining 3237 particles
+ParallelTTracker > * Deleted 6 particles, remaining 3231 particles
+ParallelTTracker > * Deleted 4 particles, remaining 3227 particles
+ParallelTTracker > * Deleted 7 particles, remaining 3220 particles
+ParallelTTracker > * Deleted 4 particles, remaining 3216 particles
+ParallelTTracker > * Deleted 4 particles, remaining 3212 particles
+ParallelTTracker > * Deleted 5 particles, remaining 3207 particles
+ParallelTTracker > * Deleted 1 particles, remaining 3206 particles
+ParallelTTracker > * Deleted 5 particles, remaining 3201 particles
+ParallelTTracker > * Deleted 1 particles, remaining 3200 particles
+ParallelTTracker > * Deleted 6 particles, remaining 3194 particles
+ParallelTTracker > * Deleted 1 particles, remaining 3193 particles
+ParallelTTracker > * Deleted 2 particles, remaining 3191 particles
+ParallelTTracker > * Deleted 3 particles, remaining 3188 particles
 ParallelTTracker > * Deleted 1 particles, remaining 3187 particles
 ParallelTTracker > * Deleted 1 particles, remaining 3186 particles
 ParallelTTracker > * Deleted 1 particles, remaining 3185 particles
-ParallelTTracker [2]> 07:01:13 Step    499 at 42.919 [m], t= 330.470 [ns], E=102.701 [MeV]
-ParallelTTracker [2]> 07:01:13 Step    599 at 44.218 [m], t= 340.470 [ns], E=102.701 [MeV]
+ParallelTTracker > * Deleted 3 particles, remaining 3182 particles
+ParallelTTracker > * Deleted 3 particles, remaining 3179 particles
+ParallelTTracker > * Deleted 1 particles, remaining 3178 particles
+ParallelTTracker [2]> 22:59:39 Step    399 at 41.621 [m], t= 320.530 [ns], E=102.686 [MeV]
+ParallelTTracker > * Deleted 1 particles, remaining 3177 particles
+ParallelTTracker > * Deleted 1 particles, remaining 3176 particles
+ParallelTTracker > * Deleted 3 particles, remaining 3173 particles
+ParallelTTracker > * Deleted 3 particles, remaining 3170 particles
+ParallelTTracker > * Deleted 3 particles, remaining 3167 particles
+ParallelTTracker > * Deleted 2 particles, remaining 3165 particles
+ParallelTTracker > * Deleted 4 particles, remaining 3161 particles
+ParallelTTracker > * Deleted 1 particles, remaining 3160 particles
+ParallelTTracker > * Deleted 1 particles, remaining 3159 particles
+ParallelTTracker > * Deleted 1 particles, remaining 3158 particles
+ParallelTTracker [2]> 22:59:39 Step    499 at 42.919 [m], t= 330.530 [ns], E=102.694 [MeV]
+ParallelTTracker [2]> 22:59:39 Step    599 at 44.218 [m], t= 340.530 [ns], E=102.694 [MeV]
 OPAL > 
 OPAL > * ************** B U N C H ********************************************************* 
-OPAL > * NP              = 3185
-OPAL > * Qtot            =        0.516 [fC]         Qi    =        0.000 [fC]
-OPAL > * Ekin            =     102.701 [MeV]         dEkin =     804.171 [keV]
-OPAL > * rmax            = (     22.09376 ,     15.37073 ,    288.67648 ) [mm]
-OPAL > * rmin            = (    -32.74590 ,    -15.09747 ,   -302.82765 ) [mm]
-OPAL > * rms beam size   = (     13.90864 ,      5.52053 ,    135.81135 ) [mm]
-OPAL > * rms momenta     = (  6.21808e-03 ,  1.99380e-03 ,  1.97889e-03 ) [beta gamma]
-OPAL > * mean position   = (     -0.94831 ,     -0.07969 ,     -2.91041 ) [mm]
-OPAL > * mean momenta    = (  2.19562e-04 , -1.78455e-05 ,  4.80468e-01 ) [beta gamma]
-OPAL > * rms emittance   = (  6.37642e-05 ,  9.61020e-06 ,  5.89109e-05 ) (not normalized)
-OPAL > * rms correlation = (  9.35140e-01 ,  9.07735e-01 ,  9.94437e-01 )
+OPAL > * NP              = 3158
+OPAL > * Qtot            =        0.511 [fC]         Qi    =        0.000 [fC]
+OPAL > * Ekin            =     102.694 [MeV]         dEkin =     807.449 [keV]
+OPAL > * rmax            = (     22.94218 ,     15.88626 ,    287.00769 ) [mm]
+OPAL > * rmin            = (    -32.96141 ,    -15.57630 ,   -301.22508 ) [mm]
+OPAL > * rms beam size   = (     14.02187 ,      5.38759 ,    136.46298 ) [mm]
+OPAL > * rms momenta     = (  6.26765e-03 ,  1.96961e-03 ,  1.98701e-03 ) [beta gamma]
+OPAL > * mean position   = (     -0.83079 ,     -0.00191 ,     -4.06390 ) [mm]
+OPAL > * mean momenta    = (  2.82849e-04 , -2.23274e-06 ,  4.80452e-01 ) [beta gamma]
+OPAL > * rms emittance   = (  6.46488e-05 ,  9.16981e-06 ,  5.91605e-05 ) (not normalized)
+OPAL > * rms correlation = (  9.35449e-01 ,  9.09721e-01 ,  9.94490e-01 )
 OPAL > * hr              = (      0.11946 ,      0.10054 ,      6.99752 ) [mm]
 OPAL > * dh              =   1.00000e-10 [%]
-OPAL > * t               =      346.470 [ns]         dT    =      100.000 [ps]
+OPAL > * t               =      346.530 [ns]         dT    =      100.000 [ps]
 OPAL > * spos            =        45.000 [m]
 OPAL > * ********************************************************************************** 
 OPAL > 
 OPAL [2]> * Wrote beam phase space.
 ParallelTTracker [2]> Dump phase space of last step
+Ippl[2]> Save AMF1_R9.h5
+Ippl[2]> Save AMF1_R10.h5
 Ippl[2]> Save AMF1_R11.h5
 Ippl[2]> Save AMF1_R12.h5
 Ippl[2]> Save AMF1_R13.h5
@@ -732,49 +762,45 @@ Ippl[2]> Save AMF1_R26.h5
 Ippl[2]> Save AMF1_R27.h5
 Ippl[2]> Save AMF1_R28.h5
 Ippl[2]> Save AMF1_R29.h5
-Ippl[2]> Save MMFP1X.h5
-Ippl[2]> Save MMFP2Y.h5
 Ippl[2]> Save MMFP3X.h5
 Ippl[2]> Save MMFP4Y.h5
 Ippl[2]> Save QMF4_R0.h5
 Ippl[2]> Save QMF4_R1.h5
-Ippl[2]> Save QMF4_R2.h5
-Ippl[2]> Save MMFP5X.h5
-Ippl[2]> Save MMFP6Y.h5
-OPAL> done executing ParallelTTracker at 07:01:14
+OPAL> done executing ParallelTTracker at 22:59:40
+Ippl> Creating new file for data: BeamLine-1_Monitors.stat
 OPAL> * End of input stream "BeamLine-1.in".
 Timings> -----------------------------------------------------------------
 Timings>      Timing results for 1 nodes:
 Timings> -----------------------------------------------------------------
-Timings> mainTimer........... Wall tot =    2.76846, CPU tot =       2.03
+Timings> mainTimer........... Wall tot =     1.8845, CPU tot =       1.67
 Timings> 
 Timings> Binaryrepart........ Wall max =          0, CPU max =          0
 Timings>                      Wall avg =          0, CPU avg =          0
 Timings>                      Wall min =          0, CPU min =          0
 Timings> 
-Timings> Boundingbox......... Wall max =   0.000232, CPU max =          0
-Timings>                      Wall avg =   0.000232, CPU avg =          0
-Timings>                      Wall min =   0.000232, CPU min =          0
+Timings> Boundingbox......... Wall max =  5.818e-05, CPU max =          0
+Timings>                      Wall avg =  5.818e-05, CPU avg =          0
+Timings>                      Wall min =  5.818e-05, CPU min =          0
 Timings> 
-Timings> Boundingbox-bounds.. Wall max =    4.7e-05, CPU max =          0
-Timings>                      Wall avg =    4.7e-05, CPU avg =          0
-Timings>                      Wall min =    4.7e-05, CPU min =          0
+Timings> Boundingbox-bounds.. Wall max = 1.5976e-05, CPU max =          0
+Timings>                      Wall avg = 1.5976e-05, CPU avg =          0
+Timings>                      Wall min = 1.5976e-05, CPU min =          0
 Timings> 
-Timings> Boundingbox-update.. Wall max =      5e-05, CPU max =          0
-Timings>                      Wall avg =      5e-05, CPU avg =          0
-Timings>                      Wall min =      5e-05, CPU min =          0
+Timings> Boundingbox-update.. Wall max = 1.9523e-05, CPU max =          0
+Timings>                      Wall avg = 1.9523e-05, CPU avg =          0
+Timings>                      Wall min = 1.9523e-05, CPU min =          0
 Timings> 
-Timings> Compute Statistics.. Wall max =   0.017678, CPU max =       0.06
-Timings>                      Wall avg =   0.017678, CPU avg =       0.06
-Timings>                      Wall min =   0.017678, CPU min =       0.06
+Timings> Compute Statistics.. Wall max =   0.023694, CPU max =          0
+Timings>                      Wall avg =   0.023694, CPU avg =          0
+Timings>                      Wall min =   0.023694, CPU min =          0
 Timings> 
-Timings> Create Distr........ Wall max =   0.050447, CPU max =       0.01
-Timings>                      Wall avg =   0.050447, CPU avg =       0.01
-Timings>                      Wall min =   0.050447, CPU min =       0.01
+Timings> Create Distr........ Wall max =  0.0155872, CPU max =       0.01
+Timings>                      Wall avg =  0.0155872, CPU avg =       0.01
+Timings>                      Wall min =  0.0155872, CPU min =       0.01
 Timings> 
-Timings> External field eval. Wall max =    1.29192, CPU max =       1.31
-Timings>                      Wall avg =    1.29192, CPU avg =       1.31
-Timings>                      Wall min =    1.29192, CPU min =       1.31
+Timings> External field eval. Wall max =    1.23021, CPU max =       1.25
+Timings>                      Wall avg =    1.23021, CPU avg =       1.25
+Timings>                      Wall min =    1.23021, CPU min =       1.25
 Timings> 
 Timings> Fast inside test.... Wall max =          0, CPU max =          0
 Timings>                      Wall avg =          0, CPU avg =          0
@@ -812,24 +838,24 @@ Timings> SelfField total..... Wall max =          0, CPU max =          0
 Timings>                      Wall avg =          0, CPU avg =          0
 Timings>                      Wall min =          0, CPU min =          0
 Timings> 
-Timings> TIntegration1....... Wall max =   0.034642, CPU max =       0.01
-Timings>                      Wall avg =   0.034642, CPU avg =       0.01
-Timings>                      Wall min =   0.034642, CPU min =       0.01
+Timings> TIntegration1....... Wall max =  0.0328018, CPU max =       0.04
+Timings>                      Wall avg =  0.0328018, CPU avg =       0.04
+Timings>                      Wall min =  0.0328018, CPU min =       0.04
 Timings> 
-Timings> TIntegration2....... Wall max =   0.102763, CPU max =       0.08
-Timings>                      Wall avg =   0.102763, CPU avg =       0.08
-Timings>                      Wall min =   0.102763, CPU min =       0.08
+Timings> TIntegration2....... Wall max =  0.0984161, CPU max =       0.09
+Timings>                      Wall avg =  0.0984161, CPU avg =       0.09
+Timings>                      Wall min =  0.0984161, CPU min =       0.09
 Timings> 
 Timings> WakeField........... Wall max =          0, CPU max =          0
 Timings>                      Wall avg =          0, CPU avg =          0
 Timings>                      Wall min =          0, CPU min =          0
 Timings> 
-Timings> Write H5-File....... Wall max =   0.036528, CPU max =          0
-Timings>                      Wall avg =   0.036528, CPU avg =          0
-Timings>                      Wall min =   0.036528, CPU min =          0
+Timings> Write H5-File....... Wall max =  0.0107509, CPU max =          0
+Timings>                      Wall avg =  0.0107509, CPU avg =          0
+Timings>                      Wall min =  0.0107509, CPU min =          0
 Timings> 
-Timings> Write Stat.......... Wall max =   0.037018, CPU max =       0.02
-Timings>                      Wall avg =   0.037018, CPU avg =       0.02
-Timings>                      Wall min =   0.037018, CPU min =       0.02
+Timings> Write Stat.......... Wall max =   0.023343, CPU max =       0.01
+Timings>                      Wall avg =   0.023343, CPU avg =       0.01
+Timings>                      Wall min =   0.023343, CPU min =       0.01
 Timings> 
 Timings> -----------------------------------------------------------------
