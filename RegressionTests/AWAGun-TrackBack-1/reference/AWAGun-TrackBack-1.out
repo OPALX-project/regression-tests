@@ -1,0 +1,417 @@
+Ippl> CommMPI: Parent process waiting for children ...
+Ippl> CommMPI: Initialization complete.
+>                ____  _____       ___ 
+>               / __ \|  __ \ /\   | | 
+>              | |  | | |__) /  \  | |
+>              | |  | |  ___/ /\ \ | |
+>              | |__| | |  / ____ \| |____
+>               \____/|_| /_/    \_\______|
+OPAL> 
+OPAL> This is OPAL (Object Oriented Parallel Accelerator Library) Version 2.1.0
+OPAL>             git rev. 91903a73ad3a458391b74acefa72cc80e51ee82f
+OPAL> 
+OPAL> 
+OPAL>                      (c) PSI, http://amas.web.psi.ch
+OPAL> 
+OPAL> 
+OPAL> The optimiser (former opt-Pilot) is integrated 
+OPAL> 
+OPAL> Please send cookies, goodies or other motivations (wine and beer ... ) 
+OPAL> to the OPAL developers opal@lists.psi.ch
+OPAL> 
+OPAL> Time: 15:09:41 date: 06/09/2019
+OPAL> 
+OPAL> Couldn't find startup file "/home/baboch/init.opal".
+OPAL> Note: this is not mandatory for an OPAL simulation!
+OPAL> 
+OPAL> * Reading input stream "AWAGun-TrackBack-1.in".
+OPAL> 
+OPAL> value: {EDES,P0,OPALVERSION}={1.4e-09,1.19616e-06,20100}
+OPAL> 
+OPAL> 
+OPAL> value: {KSBF,SF}={0.120154,0.379111}
+OPAL> 
+OPAL> * ********************************************************************************** 
+OPAL> * Selected Tracking Method == PARALLEL-T, NEW TRACK
+OPAL> * ********************************************************************************** 
+OPAL[2]> * Generation of distribution with seed = 123456789
+OPAL[2]> * isn't scalable with number of particles and cores.
+Ippl> Creating new file for data: AWAGun-TrackBack-1.stat
+Ippl> Creating new file for data: AWAGun-TrackBack-1.lbal
+OPAL> 
+OPAL> * ************* D I S T R I B U T I O N ********************************************
+OPAL> * 
+OPAL> * Number of particles: 10000
+OPAL> * 
+OPAL> * Distribution type: FROMFILE
+OPAL> * 
+OPAL> * Input file:        AWAGun-TrackBack-1_DIST.dat
+OPAL> * 
+OPAL> * Distribution is injected.
+OPAL> * 
+OPAL> * **********************************************************************************
+OPAL> 
+OPAL> * ************* B E A M ************************************************************ 
+OPAL> * BEAM        BEAM1
+OPAL> * PARTICLE    ELECTRON
+OPAL> * CURRENT     1.300000e+00 A
+OPAL> * FREQUENCY   1.300000e+03 MHz
+OPAL> * CHARGE      -e * 1.000000e+00 
+OPAL> * REST MASS   5.109989e-04 GeV
+OPAL> * MOMENTUM    1.196160e-06
+OPAL> * NPART       1.000000e+04
+OPAL> * ********************************************************************************** 
+OPAL> 
+OPAL> * ************* F I E L D S O L V E R ********************************************** 
+OPAL> * FIELDSOLVER  FS_SC
+OPAL> * TYPE         FFT
+OPAL> * N-PROCESSORS 1
+OPAL> * MX           1.600000e+01
+OPAL> * MY           1.600000e+01
+OPAL> * MT           1.600000e+01
+OPAL> * BBOXINCR     1.000000e+00
+OPAL> * GRRENSF      INTEGRATED
+OPAL> * XDIM         serial  
+OPAL> * YDIM         serial  
+OPAL> * Z(T)DIM      parallel  
+OPAL> 
+OPAL> * ********************************************************************************** 
+OPAL> 
+OPAL[2]> Phase space dump frequency 300000 and statistics dump frequency 10 w.r.t. the time step.
+RFCavity [2]> GUN using file DriveGun.T7 (2D dynamic); zini= 0 m; zfinal= 0.292707 m;
+Solenoid [2]> BF using file BF_550.T7 (2D magnetostatic); zini= 0 m; zfinal= 0.5 m;
+Solenoid [2]> M using file M_440.T7 (2D magnetostatic); zini= 0 m; zfinal= 0.5 m;
+Ippl> 
+Ippl> * ************* G U N **************************************************************
+Ippl[2]> estimated phase= 2.4642024 rad = 141.1884 deg 
+Ippl[2]> Ekin= 6.2824667 MeV
+Ippl[2]> 
+Ippl> GUN_phi = 140.4696 [deg], corresp. in Astra = 230.4696 [deg],
+Ippl> E = 6.2831 [MeV], phi_nom = 0.0000 [deg]
+Ippl> Ez_0 = 60.0000 [MV/m]
+Ippl> time = 0.0000 [ns], dt = 0.1000 [ps]
+Ippl> * **********************************************************************************
+Ippl> 
+Ippl> 
+Ippl> * ************* G U N **************************************************************
+Ippl> >>>>>> APVETO >>>>>> 
+Ippl> GUN_phi = 140.4696 [deg], corresp. in Astra = 90.0000 [deg],
+Ippl> E = 6.2831 [MeV], phi_nom = 140.4696 [deg]
+Ippl> Ez_0 = 60.0000 [MV/m]
+Ippl> time = 0.0321 [ns], dt = -0.1000 [ps]
+Ippl>  <<<<<< APVETO <<<<<< 
+Ippl> * **********************************************************************************
+Ippl> 
+OPAL> 
+OPAL> Size of map 3 sections 
+OPAL> Key: (0.008897 - 0.292705) number of overlapping elements 3
+OPAL>                            M
+OPAL>                            GUN
+OPAL>                            BF
+OPAL> Key: (0.292705 - 0.499992) number of overlapping elements 2
+OPAL>                            M
+OPAL>                            BF
+OPAL> Key: (0.499992 - 2.005381) number of overlapping elements 1
+OPAL>                            DR1
+OPAL> 
+Ippl> Creating new file for data: data/AWAGun-TrackBack-1_ElementPositions.sdds
+Ippl> Saved phases in the h5 file: Cav-1-name -> GUN --- Cav-1-value -> 2.4517
+OPAL> 
+OPAL> * ************** B U N C H ********************************************************* 
+OPAL> * NP              = 10000
+OPAL> * Qtot            =        1.000 [nC]         Qi    =      100.000 [fC]
+OPAL> * Ekin            =       6.271 [MeV]         dEkin =      36.699 [keV]
+OPAL> * rmax            = (      1.69435 ,      1.80568 ,      4.46025 ) [mm]
+OPAL> * rmin            = (     -1.90011 ,     -1.61421 ,     -5.36934 ) [mm]
+OPAL> * rms beam size   = (      0.48583 ,      0.47131 ,      2.03534 ) [mm]
+OPAL> * rms momenta     = (  7.29238e-03 ,  7.27407e-03 ,  7.20229e-02 ) [beta gamma]
+OPAL> * mean position   = (      1.29462 ,     -4.98384 ,   -479.73938 ) [um]
+OPAL> * mean momenta    = (  1.66316e-05 , -4.51727e-05 ,  1.32337e+01 ) [beta gamma]
+OPAL> * rms emittance   = (  2.20722e-07 ,  2.07173e-07 ,  3.87465e-06 ) (not normalized)
+OPAL> * rms correlation = ( -5.65914e-01 , -6.00383e-01 ,  9.36829e-01 )
+OPAL> * hr              = (    244.42316 ,    232.55257 ,    668.41212 ) [um]
+OPAL> * dh              =   1.00000e+00 [%]
+OPAL> * t               =        6.722 [ns]         dT    =       -3.000 [ps]
+OPAL> * spos            =         2.000 [m]
+OPAL> * ********************************************************************************** 
+OPAL> 
+OPAL> Track start at: 15:09:41, t= 6.722 [ns]; zstart at: 2.000 [m]
+OPAL> Executing ParallelTTracker, initial dt= -3.000 [ps];
+OPAL> max integration steps 19000, next step= 0
+ParallelTTracker [2]> MINBINEMITTED 10
+ParallelTTracker [2]> MINSTEPFORREBIN 200
+ParallelTTracker [2]> 15:09:42 Step     99 at 1.910 [m], t= 6.422 [ns], E=6.271 [MeV]
+ParallelTTracker [2]> 15:09:43 Step    199 at 1.821 [m], t= 6.122 [ns], E=6.271 [MeV]
+ParallelTTracker [2]> 15:09:43 Step    299 at 1.731 [m], t= 5.822 [ns], E=6.271 [MeV]
+ParallelTTracker [2]> 15:09:44 Step    399 at 1.641 [m], t= 5.522 [ns], E=6.271 [MeV]
+ParallelTTracker [2]> 15:09:45 Step    499 at 1.552 [m], t= 5.222 [ns], E=6.271 [MeV]
+ParallelTTracker [2]> 15:09:46 Step    599 at 1.462 [m], t= 4.922 [ns], E=6.271 [MeV]
+ParallelTTracker [2]> 15:09:47 Step    699 at 1.372 [m], t= 4.622 [ns], E=6.271 [MeV]
+ParallelTTracker [2]> 15:09:48 Step    799 at 1.283 [m], t= 4.322 [ns], E=6.271 [MeV]
+ParallelTTracker [2]> 15:09:48 Step    899 at 1.193 [m], t= 4.022 [ns], E=6.272 [MeV]
+ParallelTTracker > 15:09:49 Step    999 at 1.103 [m], t= 3.722 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:09:50 Step   1099 at 1.013 [m], t= 3.422 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:09:51 Step   1199 at 923.804 [mm], t= 3.122 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:09:52 Step   1299 at 834.121 [mm], t= 2.822 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:09:53 Step   1399 at 744.438 [mm], t= 2.522 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:09:53 Step   1499 at 654.755 [mm], t= 2.222 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:09:54 Step   1599 at 565.072 [mm], t= 1.922 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:09:55 Step   1699 at 475.389 [mm], t= 1.622 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:09:56 Step   1799 at 399.577 [mm], t= 1.369 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:09:57 Step   1899 at 396.588 [mm], t= 1.359 [ns], E=6.272 [MeV]
+ParallelTTracker > 15:09:58 Step   1999 at 393.598 [mm], t= 1.349 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:09:59 Step   2099 at 390.609 [mm], t= 1.339 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:00 Step   2199 at 387.619 [mm], t= 1.329 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:01 Step   2299 at 384.630 [mm], t= 1.319 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:02 Step   2399 at 381.641 [mm], t= 1.309 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:03 Step   2499 at 378.651 [mm], t= 1.299 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:04 Step   2599 at 375.662 [mm], t= 1.289 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:05 Step   2699 at 372.672 [mm], t= 1.279 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:06 Step   2799 at 369.683 [mm], t= 1.269 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:07 Step   2899 at 366.693 [mm], t= 1.259 [ns], E=6.272 [MeV]
+ParallelTTracker > 15:10:08 Step   2999 at 363.704 [mm], t= 1.249 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:09 Step   3099 at 360.715 [mm], t= 1.239 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:10 Step   3199 at 357.725 [mm], t= 1.229 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:10 Step   3299 at 354.736 [mm], t= 1.219 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:11 Step   3399 at 351.746 [mm], t= 1.209 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:12 Step   3499 at 348.757 [mm], t= 1.199 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:13 Step   3599 at 345.767 [mm], t= 1.189 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:14 Step   3699 at 342.778 [mm], t= 1.179 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:15 Step   3799 at 339.788 [mm], t= 1.169 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:16 Step   3899 at 336.799 [mm], t= 1.159 [ns], E=6.272 [MeV]
+ParallelTTracker > 15:10:17 Step   3999 at 333.810 [mm], t= 1.149 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:18 Step   4099 at 330.820 [mm], t= 1.139 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:19 Step   4199 at 327.831 [mm], t= 1.129 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:20 Step   4299 at 324.841 [mm], t= 1.119 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:21 Step   4399 at 321.852 [mm], t= 1.109 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:22 Step   4499 at 318.862 [mm], t= 1.099 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:23 Step   4599 at 315.873 [mm], t= 1.089 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:24 Step   4699 at 312.884 [mm], t= 1.079 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:25 Step   4799 at 309.894 [mm], t= 1.069 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:26 Step   4899 at 306.905 [mm], t= 1.059 [ns], E=6.272 [MeV]
+ParallelTTracker > 15:10:27 Step   4999 at 303.915 [mm], t= 1.049 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:28 Step   5099 at 300.926 [mm], t= 1.039 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:29 Step   5199 at 297.936 [mm], t= 1.029 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:30 Step   5299 at 294.947 [mm], t= 1.019 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:31 Step   5399 at 291.958 [mm], t= 1.009 [ns], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:32 Step   5499 at 288.968 [mm], t= 998.704 [ps], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:33 Step   5599 at 285.979 [mm], t= 988.704 [ps], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:35 Step   5699 at 282.989 [mm], t= 978.704 [ps], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:36 Step   5799 at 280.000 [mm], t= 968.704 [ps], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:37 Step   5899 at 277.010 [mm], t= 958.704 [ps], E=6.272 [MeV]
+ParallelTTracker > 15:10:38 Step   5999 at 274.021 [mm], t= 948.704 [ps], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:39 Step   6099 at 271.032 [mm], t= 938.704 [ps], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:40 Step   6199 at 268.042 [mm], t= 928.704 [ps], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:42 Step   6299 at 265.053 [mm], t= 918.704 [ps], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:43 Step   6399 at 262.063 [mm], t= 908.704 [ps], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:44 Step   6499 at 259.074 [mm], t= 898.704 [ps], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:45 Step   6599 at 256.084 [mm], t= 888.704 [ps], E=6.272 [MeV]
+ParallelTTracker [2]> 15:10:46 Step   6699 at 253.095 [mm], t= 878.704 [ps], E=6.273 [MeV]
+ParallelTTracker [2]> 15:10:47 Step   6799 at 250.105 [mm], t= 868.704 [ps], E=6.273 [MeV]
+ParallelTTracker [2]> 15:10:48 Step   6899 at 247.116 [mm], t= 858.704 [ps], E=6.273 [MeV]
+ParallelTTracker > 15:10:50 Step   6999 at 244.127 [mm], t= 848.704 [ps], E=6.273 [MeV]
+ParallelTTracker [2]> 15:10:51 Step   7099 at 241.137 [mm], t= 838.704 [ps], E=6.273 [MeV]
+ParallelTTracker [2]> 15:10:52 Step   7199 at 238.148 [mm], t= 828.704 [ps], E=6.273 [MeV]
+ParallelTTracker [2]> 15:10:53 Step   7299 at 235.158 [mm], t= 818.704 [ps], E=6.273 [MeV]
+ParallelTTracker [2]> 15:10:54 Step   7399 at 232.169 [mm], t= 808.704 [ps], E=6.274 [MeV]
+ParallelTTracker [2]> 15:10:55 Step   7499 at 229.179 [mm], t= 798.704 [ps], E=6.274 [MeV]
+ParallelTTracker [2]> 15:10:56 Step   7599 at 226.190 [mm], t= 788.704 [ps], E=6.275 [MeV]
+ParallelTTracker [2]> 15:10:57 Step   7699 at 223.201 [mm], t= 778.704 [ps], E=6.275 [MeV]
+ParallelTTracker [2]> 15:10:59 Step   7799 at 220.211 [mm], t= 768.704 [ps], E=6.276 [MeV]
+ParallelTTracker [2]> 15:11:00 Step   7899 at 217.222 [mm], t= 758.704 [ps], E=6.277 [MeV]
+ParallelTTracker > 15:11:01 Step   7999 at 214.232 [mm], t= 748.704 [ps], E=6.278 [MeV]
+ParallelTTracker [2]> 15:11:02 Step   8099 at 211.243 [mm], t= 738.704 [ps], E=6.280 [MeV]
+ParallelTTracker [2]> 15:11:03 Step   8199 at 208.253 [mm], t= 728.704 [ps], E=6.282 [MeV]
+ParallelTTracker [2]> 15:11:04 Step   8299 at 205.264 [mm], t= 718.704 [ps], E=6.284 [MeV]
+ParallelTTracker [2]> 15:11:05 Step   8399 at 202.274 [mm], t= 708.704 [ps], E=6.286 [MeV]
+ParallelTTracker [2]> 15:11:06 Step   8499 at 199.285 [mm], t= 698.704 [ps], E=6.289 [MeV]
+ParallelTTracker [2]> 15:11:08 Step   8599 at 196.295 [mm], t= 688.704 [ps], E=6.291 [MeV]
+ParallelTTracker [2]> 15:11:09 Step   8699 at 193.306 [mm], t= 678.704 [ps], E=6.293 [MeV]
+ParallelTTracker [2]> 15:11:10 Step   8799 at 190.317 [mm], t= 668.704 [ps], E=6.295 [MeV]
+ParallelTTracker [2]> 15:11:11 Step   8899 at 187.327 [mm], t= 658.704 [ps], E=6.295 [MeV]
+ParallelTTracker > 15:11:12 Step   8999 at 184.338 [mm], t= 648.704 [ps], E=6.294 [MeV]
+ParallelTTracker [2]> 15:11:13 Step   9099 at 181.348 [mm], t= 638.704 [ps], E=6.288 [MeV]
+ParallelTTracker [2]> 15:11:14 Step   9199 at 178.359 [mm], t= 628.704 [ps], E=6.279 [MeV]
+ParallelTTracker [2]> 15:11:16 Step   9299 at 175.369 [mm], t= 618.704 [ps], E=6.262 [MeV]
+ParallelTTracker [2]> 15:11:17 Step   9399 at 172.380 [mm], t= 608.704 [ps], E=6.237 [MeV]
+ParallelTTracker [2]> 15:11:18 Step   9499 at 169.390 [mm], t= 598.704 [ps], E=6.200 [MeV]
+ParallelTTracker [2]> 15:11:19 Step   9599 at 166.401 [mm], t= 588.704 [ps], E=6.151 [MeV]
+ParallelTTracker [2]> 15:11:20 Step   9699 at 163.412 [mm], t= 578.704 [ps], E=6.088 [MeV]
+ParallelTTracker [2]> 15:11:21 Step   9799 at 160.423 [mm], t= 568.704 [ps], E=6.010 [MeV]
+ParallelTTracker [2]> 15:11:22 Step   9899 at 157.435 [mm], t= 558.704 [ps], E=5.917 [MeV]
+ParallelTTracker > 15:11:24 Step   9999 at 154.446 [mm], t= 548.704 [ps], E=5.809 [MeV]
+ParallelTTracker [2]> 15:11:25 Step  10099 at 151.458 [mm], t= 538.704 [ps], E=5.687 [MeV]
+ParallelTTracker [2]> 15:11:26 Step  10199 at 148.471 [mm], t= 528.704 [ps], E=5.552 [MeV]
+ParallelTTracker [2]> 15:11:27 Step  10299 at 145.484 [mm], t= 518.704 [ps], E=5.406 [MeV]
+ParallelTTracker [2]> 15:11:28 Step  10399 at 142.497 [mm], t= 508.704 [ps], E=5.251 [MeV]
+ParallelTTracker [2]> 15:11:29 Step  10499 at 139.511 [mm], t= 498.704 [ps], E=5.087 [MeV]
+ParallelTTracker [2]> 15:11:30 Step  10599 at 136.526 [mm], t= 488.704 [ps], E=4.918 [MeV]
+ParallelTTracker [2]> 15:11:32 Step  10699 at 133.542 [mm], t= 478.704 [ps], E=4.744 [MeV]
+ParallelTTracker [2]> 15:11:33 Step  10799 at 130.559 [mm], t= 468.704 [ps], E=4.568 [MeV]
+ParallelTTracker [2]> 15:11:34 Step  10899 at 127.576 [mm], t= 458.704 [ps], E=4.390 [MeV]
+ParallelTTracker > 15:11:35 Step  10999 at 124.595 [mm], t= 448.704 [ps], E=4.214 [MeV]
+ParallelTTracker [2]> 15:11:36 Step  11099 at 121.616 [mm], t= 438.704 [ps], E=4.039 [MeV]
+ParallelTTracker [2]> 15:11:37 Step  11199 at 118.637 [mm], t= 428.704 [ps], E=3.869 [MeV]
+ParallelTTracker [2]> 15:11:38 Step  11299 at 115.660 [mm], t= 418.704 [ps], E=3.704 [MeV]
+ParallelTTracker [2]> 15:11:40 Step  11399 at 112.685 [mm], t= 408.704 [ps], E=3.546 [MeV]
+ParallelTTracker [2]> 15:11:41 Step  11499 at 109.712 [mm], t= 398.704 [ps], E=3.396 [MeV]
+ParallelTTracker [2]> 15:11:42 Step  11599 at 106.740 [mm], t= 388.704 [ps], E=3.256 [MeV]
+ParallelTTracker [2]> 15:11:43 Step  11699 at 103.771 [mm], t= 378.704 [ps], E=3.126 [MeV]
+ParallelTTracker [2]> 15:11:44 Step  11799 at 100.803 [mm], t= 368.704 [ps], E=3.008 [MeV]
+ParallelTTracker [2]> 15:11:45 Step  11899 at 97.838 [mm], t= 358.704 [ps], E=2.903 [MeV]
+ParallelTTracker > 15:11:46 Step  11999 at 94.875 [mm], t= 348.704 [ps], E=2.811 [MeV]
+ParallelTTracker [2]> 15:11:48 Step  12099 at 91.913 [mm], t= 338.704 [ps], E=2.733 [MeV]
+ParallelTTracker [2]> 15:11:49 Step  12199 at 88.953 [mm], t= 328.704 [ps], E=2.670 [MeV]
+ParallelTTracker [2]> 15:11:50 Step  12299 at 85.994 [mm], t= 318.704 [ps], E=2.620 [MeV]
+ParallelTTracker [2]> 15:11:51 Step  12399 at 83.037 [mm], t= 308.704 [ps], E=2.584 [MeV]
+ParallelTTracker [2]> 15:11:52 Step  12499 at 80.080 [mm], t= 298.704 [ps], E=2.560 [MeV]
+ParallelTTracker [2]> 15:11:53 Step  12599 at 77.124 [mm], t= 288.704 [ps], E=2.548 [MeV]
+ParallelTTracker [2]> 15:11:54 Step  12699 at 74.168 [mm], t= 278.704 [ps], E=2.543 [MeV]
+ParallelTTracker [2]> 15:11:56 Step  12799 at 71.212 [mm], t= 268.704 [ps], E=2.544 [MeV]
+ParallelTTracker [2]> 15:11:57 Step  12899 at 68.256 [mm], t= 258.704 [ps], E=2.548 [MeV]
+ParallelTTracker > 15:11:58 Step  12999 at 65.299 [mm], t= 248.704 [ps], E=2.549 [MeV]
+ParallelTTracker [2]> 15:11:59 Step  13099 at 62.343 [mm], t= 238.704 [ps], E=2.546 [MeV]
+ParallelTTracker [2]> 15:12:00 Step  13199 at 59.387 [mm], t= 228.704 [ps], E=2.533 [MeV]
+ParallelTTracker [2]> 15:12:01 Step  13299 at 56.432 [mm], t= 218.704 [ps], E=2.510 [MeV]
+ParallelTTracker [2]> 15:12:02 Step  13399 at 53.477 [mm], t= 208.704 [ps], E=2.472 [MeV]
+ParallelTTracker [2]> 15:12:03 Step  13499 at 50.524 [mm], t= 198.704 [ps], E=2.420 [MeV]
+ParallelTTracker [2]> 15:12:05 Step  13599 at 47.572 [mm], t= 188.704 [ps], E=2.352 [MeV]
+ParallelTTracker [2]> 15:12:06 Step  13699 at 44.623 [mm], t= 178.704 [ps], E=2.269 [MeV]
+ParallelTTracker [2]> 15:12:07 Step  13799 at 41.677 [mm], t= 168.704 [ps], E=2.171 [MeV]
+ParallelTTracker [2]> 15:12:08 Step  13899 at 38.736 [mm], t= 158.704 [ps], E=2.060 [MeV]
+ParallelTTracker > 15:12:09 Step  13999 at 35.799 [mm], t= 148.704 [ps], E=1.936 [MeV]
+ParallelTTracker [2]> 15:12:10 Step  14099 at 32.870 [mm], t= 138.704 [ps], E=1.800 [MeV]
+ParallelTTracker [2]> 15:12:12 Step  14199 at 29.950 [mm], t= 128.704 [ps], E=1.656 [MeV]
+ParallelTTracker [2]> 15:12:13 Step  14299 at 27.041 [mm], t= 118.704 [ps], E=1.504 [MeV]
+ParallelTTracker [2]> 15:12:14 Step  14399 at 24.147 [mm], t= 108.704 [ps], E=1.345 [MeV]
+ParallelTTracker [2]> 15:12:15 Step  14499 at 21.272 [mm], t= 98.704 [ps], E=1.183 [MeV]
+ParallelTTracker [2]> 15:12:16 Step  14599 at 18.425 [mm], t= 88.704 [ps], E=1.019 [MeV]
+ParallelTTracker [2]> 15:12:17 Step  14699 at 15.614 [mm], t= 78.704 [ps], E=855.104 [keV]
+ParallelTTracker [2]> 15:12:18 Step  14799 at 12.856 [mm], t= 68.704 [ps], E=693.827 [keV]
+ParallelTTracker [2]> 15:12:19 Step  14899 at 10.173 [mm], t= 58.704 [ps], E=538.172 [keV]
+ParallelTTracker > 15:12:21 Step  14999 at 7.604 [mm], t= 48.704 [ps], E=391.828 [keV]
+ParallelTTracker [2]> 15:12:22 Step  15099 at 5.209 [mm], t= 38.704 [ps], E=259.668 [keV]
+ParallelTTracker [2]> 15:12:23 Step  15199 at 3.088 [mm], t= 28.704 [ps], E=148.180 [keV]
+ParallelTTracker [2]> 15:12:24 Step  15299 at 1.391 [mm], t= 18.704 [ps], E=129.412 [keV]
+ParallelTTracker [2]> 15:12:25 Step  15399 at 311.356 [um], t= 8.704 [ps], E=128.705 [keV]
+OPAL > 
+OPAL > * ************** B U N C H ********************************************************* 
+OPAL > * NP              = 10000
+OPAL > * Qtot            =        1.000 [nC]         Qi    =      100.000 [fC]
+OPAL > * Ekin            =     128.373 [keV]         dEkin =      52.972 [keV]
+OPAL > * rmax            = (    902.76927 ,    948.85406 ,   -243.43429 ) [um]
+OPAL > * rmin            = (     -0.92734 ,     -0.90448 ,     -2.45690 ) [mm]
+OPAL > * rms beam size   = (    409.36142 ,    405.79439 ,    409.28662 ) [um]
+OPAL > * rms momenta     = (  2.18771e-02 ,  2.19368e-02 ,  1.72473e-01 ) [beta gamma]
+OPAL > * mean position   = (     -0.00181 ,     -0.00013 ,     -2.08134 ) [mm]
+OPAL > * mean momenta    = (  9.09850e-06 ,  1.17298e-06 ,  7.38641e-01 ) [beta gamma]
+OPAL > * rms emittance   = (  8.00340e-06 ,  7.97427e-06 ,  3.69559e-05 ) (not normalized)
+OPAL > * rms correlation = ( -7.40491e-01 , -7.39033e-01 ,  9.19237e-01 )
+OPAL > * hr              = (    124.18808 ,    125.75167 ,    151.02030 ) [um]
+OPAL > * dh              =   1.00000e+00 [%]
+OPAL > * t               =      -95.546 [fs]         dT    =     -100.000 [fs]
+OPAL > * spos            =        0.000 [um]
+OPAL > * ********************************************************************************** 
+OPAL > 
+OPAL [2]> * Wrote beam phase space.
+ParallelTTracker [2]> Dump phase space of last step
+OPAL> done executing ParallelTTracker at 15:12:25
+OPAL> * End of input stream "AWAGun-TrackBack-1.in".
+Timings> -----------------------------------------------------------------
+Timings>      Timing results for 1 nodes:
+Timings> -----------------------------------------------------------------
+Timings> mainTimer........... Wall tot =    164.758, CPU tot =      164.7
+Timings> 
+Timings> Binaryrepart........ Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Boundingbox......... Wall max =    1.47927, CPU max =        1.5
+Timings>                      Wall avg =    1.47927, CPU avg =        1.5
+Timings>                      Wall min =    1.47927, CPU min =        1.5
+Timings> 
+Timings> Boundingbox-bounds.. Wall max =   0.504255, CPU max =       0.49
+Timings>                      Wall avg =   0.504255, CPU avg =       0.49
+Timings>                      Wall min =   0.504255, CPU min =       0.49
+Timings> 
+Timings> Boundingbox-update.. Wall max =   0.897185, CPU max =       0.96
+Timings>                      Wall avg =   0.897185, CPU avg =       0.96
+Timings>                      Wall min =   0.897185, CPU min =       0.96
+Timings> 
+Timings> Compute Statistics.. Wall max =    8.06061, CPU max =       8.53
+Timings>                      Wall avg =    8.06061, CPU avg =       8.53
+Timings>                      Wall min =    8.06061, CPU min =       8.53
+Timings> 
+Timings> ComputePotential.... Wall max =    52.2346, CPU max =      52.18
+Timings>                      Wall avg =    52.2346, CPU avg =      52.18
+Timings>                      Wall min =    52.2346, CPU min =      52.18
+Timings> 
+Timings> Create Distr........ Wall max =  0.0304782, CPU max =       0.03
+Timings>                      Wall avg =  0.0304782, CPU avg =       0.03
+Timings>                      Wall min =  0.0304782, CPU min =       0.03
+Timings> 
+Timings> External field eval. Wall max =     43.545, CPU max =      43.45
+Timings>                      Wall avg =     43.545, CPU avg =      43.45
+Timings>                      Wall min =     43.545, CPU min =      43.45
+Timings> 
+Timings> Fast inside test.... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Histogram........... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Initialize geometry. Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Inside test......... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Load Distr.......... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Particle Inside..... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Ray tracing......... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Secondary emission.. Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> SelfField total..... Wall max =    81.2678, CPU max =      81.44
+Timings>                      Wall avg =    81.2678, CPU avg =      81.44
+Timings>                      Wall min =    81.2678, CPU min =      81.44
+Timings> 
+Timings> SF: GreensFTotal.... Wall max =    35.6517, CPU max =      35.67
+Timings>                      Wall avg =    35.6517, CPU avg =      35.67
+Timings>                      Wall min =    35.6517, CPU min =      35.67
+Timings> 
+Timings> TIntegration1....... Wall max =    4.88847, CPU max =       4.96
+Timings>                      Wall avg =    4.88847, CPU avg =       4.96
+Timings>                      Wall min =    4.88847, CPU min =       4.96
+Timings> 
+Timings> TIntegration2....... Wall max =    12.3439, CPU max =      12.32
+Timings>                      Wall avg =    12.3439, CPU avg =      12.32
+Timings>                      Wall min =    12.3439, CPU min =      12.32
+Timings> 
+Timings> WakeField........... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Write H5-File....... Wall max =  0.0961449, CPU max =       0.01
+Timings>                      Wall avg =  0.0961449, CPU avg =       0.01
+Timings>                      Wall min =  0.0961449, CPU min =       0.01
+Timings> 
+Timings> Write Stat.......... Wall max =   0.996136, CPU max =       1.05
+Timings>                      Wall avg =   0.996136, CPU avg =       1.05
+Timings>                      Wall min =   0.996136, CPU min =       1.05
+Timings> 
+Timings> -----------------------------------------------------------------
