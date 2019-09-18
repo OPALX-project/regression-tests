@@ -1,3 +1,22 @@
+libibverbs: Warning: couldn't load driver 'mlx5': /lib64/libmlx5-rdmav2.so: symbol ibv_exp_cmd_destroy_flow, version IBVERBS_1.1 not defined in file libibverbs.so.1 with link time reference
+libibverbs: Warning: couldn't load driver 'mlx4': /lib64/libmlx4-rdmav2.so: symbol ibv_exp_cmd_destroy_flow, version IBVERBS_1.1 not defined in file libibverbs.so.1 with link time reference
+libibverbs: Warning: no userspace device-specific driver found for /sys/class/infiniband_verbs/uverbs0
+libibverbs: Warning: couldn't load driver 'mlx5': /lib64/libmlx5-rdmav2.so: symbol ibv_exp_cmd_destroy_flow, version IBVERBS_1.1 not defined in file libibverbs.so.1 with link time reference
+libibverbs: Warning: couldn't load driver 'mlx4': /lib64/libmlx4-rdmav2.so: symbol ibv_exp_cmd_destroy_flow, version IBVERBS_1.1 not defined in file libibverbs.so.1 with link time reference
+libibverbs: Warning: no userspace device-specific driver found for /sys/class/infiniband_verbs/uverbs0
+--------------------------------------------------------------------------
+[[5583,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: merlin-l-01
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
 Ippl> CommMPI: Parent process waiting for children ...
 Ippl> CommMPI: Initialization complete.
 >                ____  _____       ___ 
@@ -7,7 +26,7 @@ Ippl> CommMPI: Initialization complete.
 >              | |__| | |  / ____ \| |____
 >               \____/|_| /_/    \_\______|
 OPAL> 
-OPAL> This is OPAL (Object Oriented Parallel Accelerator Library) Version 1.9.0
+OPAL> This is OPAL (Object Oriented Parallel Accelerator Library) Version 2.0.2
 OPAL> 
 OPAL>                 (c) PSI, http://amas.web.psi.ch
 OPAL> The optimiser (former opt-Pilot) is integrated 
@@ -15,9 +34,9 @@ OPAL>
 OPAL> Please send cookies, goodies or other motivations (wine and beer ... ) 
 OPAL> to the OPAL developers opal@lists.psi.ch
 OPAL> 
-OPAL> Time: 07:05:29 date: 12/04/2018
+OPAL> Time: 21:48:55 date: 18/09/2019
 OPAL> 
-OPAL> Couldn't find startup file "/gpfs/home/adelmann/init.opal".
+OPAL> Couldn't find startup file "/psi/home/kraus/init.opal".
 OPAL> Note: this is not mandatory for an OPAL simulation!
 OPAL> 
 OPAL> * Reading input stream "PROSCAN-1.in".
@@ -27,7 +46,7 @@ OPAL> OPTION,ECHO=FALSE,INFO=TRUE,TRACE=FALSE,WARN=TRUE,SEED=1.23457e+08,
 OPAL>   TELL=TRUE,PSDUMPFREQ=50000,STATDUMPFREQ=10,PSDUMPEACHTURN=FALSE,
 OPAL>   PSDUMPFRAME="GLOBAL",SPTDUMPFREQ=1,REPARTFREQ=10,REBINFREQ=100,
 OPAL>   SCSOLVEFREQ=1,MTSSUBSTEPS=1,REMOTEPARTDEL=0,RHODUMP=FALSE,
-OPAL>   EBDUMP=FALSE,CSRDUMP=FALSE,AUTOPHASE=0,PPDEBUG=FALSE,
+OPAL>   EBDUMP=FALSE,CSRDUMP=FALSE,AUTOPHASE=6,PPDEBUG=FALSE,
 OPAL>   SURFDUMPFREQ=-1,NUMBLOCKS=0,RECYCLEBLOCKS=0,NLHS=1,CZERO=FALSE,
 OPAL>   RNGTYPE="RANDOM",ENABLEHDF5=TRUE,ASCIIDUMP=FALSE,BOUNDPDESTROYFQ=10,
 OPAL>   BEAMHALOBOUNDARY=0,CLOTUNEONLY=FALSE,IDEALIZED=FALSE,
@@ -54,6 +73,7 @@ OPAL> * r(2, : ) =          0 &          0 &          1 &          0 &          
 OPAL> * r(3, : ) =          0 &          0 &     0.7322 &     0.6811 &          0 &          0 \\
 OPAL> * r(4, : ) =          0 &          0 &          0 &          0 &          1 &          0 \\
 OPAL> * r(5, : ) =          0 &          0 &          0 &          0 &    0.08893 &      0.996 \\
+OPAL> 
 OPAL> * ************* D I S T R I B U T I O N ********************************************
 OPAL> * 
 OPAL> * Number of particles: 300000
@@ -111,51 +131,51 @@ OPAL> * ************************************************************************
 OPAL> 
 OPAL> 
 OPAL> Size of map 21 sections 
-OPAL> Key: (      3.641745-      4.205850) number of overlapping elements 0
-OPAL> Key: (      4.205850-      4.210922) number of overlapping elements 1
-OPAL>                                      D16
-OPAL> Key: (      4.210922-      4.212613) number of overlapping elements 1
-OPAL>                                      KMA3I
-OPAL> Key: (      4.212613-      4.283619) number of overlapping elements 1
-OPAL>                                      D17
-OPAL> Key: (      4.283619-      4.285873) number of overlapping elements 1
-OPAL>                                      KMA3O
-OPAL> Key: (      4.285873-      4.290381) number of overlapping elements 1
-OPAL>                                      D18
-OPAL> Key: (      4.290381-      4.292072) number of overlapping elements 1
-OPAL>                                      KMA4I
-OPAL> Key: (      4.292072-      4.538340) number of overlapping elements 1
-OPAL>                                      D19
-OPAL> Key: (      4.538340-      4.540030) number of overlapping elements 1
-OPAL>                                      KMA4O
-OPAL> Key: (      4.540030-      4.661192) number of overlapping elements 1
-OPAL>                                      D20
-OPAL> Key: (      4.661192-      5.048909) number of overlapping elements 1
-OPAL>                                      SMA2
-OPAL> Key: (      5.048909-      5.212899) number of overlapping elements 1
-OPAL>                                      D21
-OPAL> Key: (      5.212899-      5.217971) number of overlapping elements 3
-OPAL>                                      D21
-OPAL>                                      MMAP9X
-OPAL>                                      MMAP10Y
-OPAL> Key: (      5.217971-      5.222479) number of overlapping elements 3
-OPAL>                                      MMAP9X
-OPAL>                                      MMAP10Y
-OPAL>                                      D22
-OPAL> Key: (      5.222479-      5.372382) number of overlapping elements 1
-OPAL>                                      D22
-OPAL> Key: (      5.372382-      5.450714) number of overlapping elements 1
-OPAL>                                      KMAV5
-OPAL> Key: (      5.450714-      5.456349) number of overlapping elements 1
-OPAL>                                      D23
-OPAL> Key: (      5.456349-      5.458040) number of overlapping elements 1
-OPAL>                                      KMA5I
-OPAL> Key: (      5.458040-      5.529046) number of overlapping elements 1
-OPAL>                                      D24
-OPAL> Key: (      5.529046-      5.531300) number of overlapping elements 1
-OPAL>                                      KMA5O
-OPAL> Key: (      5.531300-      5.632738) number of overlapping elements 1
-OPAL>                                      D25
+OPAL> Key: (3.641745 - 4.205850) number of overlapping elements 0
+OPAL> Key: (4.205850 - 4.210358) number of overlapping elements 1
+OPAL>                            D16
+OPAL> Key: (4.210358 - 4.212613) number of overlapping elements 1
+OPAL>                            KMA3I
+OPAL> Key: (4.212613 - 4.283619) number of overlapping elements 1
+OPAL>                            D17
+OPAL> Key: (4.283619 - 4.285309) number of overlapping elements 1
+OPAL>                            KMA3O
+OPAL> Key: (4.285309 - 4.289818) number of overlapping elements 1
+OPAL>                            D18
+OPAL> Key: (4.289818 - 4.292072) number of overlapping elements 1
+OPAL>                            KMA4I
+OPAL> Key: (4.292072 - 4.537776) number of overlapping elements 1
+OPAL>                            D19
+OPAL> Key: (4.537776 - 4.540030) number of overlapping elements 1
+OPAL>                            KMA4O
+OPAL> Key: (4.540030 - 4.661192) number of overlapping elements 1
+OPAL>                            D20
+OPAL> Key: (4.661192 - 5.048909) number of overlapping elements 1
+OPAL>                            SMA2
+OPAL> Key: (5.048909 - 5.212336) number of overlapping elements 1
+OPAL>                            D21
+OPAL> Key: (5.212336 - 5.217408) number of overlapping elements 3
+OPAL>                            D21
+OPAL>                            MMAP9X
+OPAL>                            MMAP10Y
+OPAL> Key: (5.217408 - 5.222479) number of overlapping elements 3
+OPAL>                            MMAP9X
+OPAL>                            MMAP10Y
+OPAL>                            D22
+OPAL> Key: (5.222479 - 5.372382) number of overlapping elements 1
+OPAL>                            D22
+OPAL> Key: (5.372382 - 5.450714) number of overlapping elements 1
+OPAL>                            KMAV5
+OPAL> Key: (5.450714 - 5.455786) number of overlapping elements 1
+OPAL>                            D23
+OPAL> Key: (5.455786 - 5.458040) number of overlapping elements 1
+OPAL>                            KMA5I
+OPAL> Key: (5.458040 - 5.529046) number of overlapping elements 1
+OPAL>                            D24
+OPAL> Key: (5.529046 - 5.530737) number of overlapping elements 1
+OPAL>                            KMA5O
+OPAL> Key: (5.530737 - 5.632738) number of overlapping elements 1
+OPAL>                            D25
 OPAL> 
 OPAL> 
 OPAL> * ************** B U N C H ********************************************************* 
@@ -167,561 +187,561 @@ OPAL> * rmin            = (    -21.01986 ,    -21.52642 ,     -0.87159 ) [mm]
 OPAL> * rms beam size   = (      4.64905 ,      4.40564 ,      0.18099 ) [mm]
 OPAL> * rms momenta     = (  1.93566e-02 ,  1.94556e-02 ,  9.86837e-03 ) [beta gamma]
 OPAL> * mean position   = (      0.00000 ,     -0.00000 ,     -0.00000 ) [um]
-OPAL> * mean momenta    = (  3.52355e-19 , -1.56969e-19 ,  4.04790e-01 ) [beta gamma]
+OPAL> * mean momenta    = (  3.52355e-19 , -1.68072e-19 ,  4.04790e-01 ) [beta gamma]
 OPAL> * rms emittance   = (  1.58632e-04 ,  1.43784e-04 ,  4.38365e-06 ) (not normalized)
 OPAL> * rms correlation = (  6.98742e-01 ,  7.32507e-01 ,  8.87733e-02 )
 OPAL> * hr              = (    677.37534 ,    677.11936 ,     26.85147 ) [um]
 OPAL> * dh              =   1.00000e-10 [%]
-OPAL> * t               =       37.314 [ns]         dT    =        5.000 [ps]
+OPAL> * t               =       37.316 [ns]         dT    =        5.000 [ps]
 OPAL> * spos            =         4.206 [m]
 OPAL> * ********************************************************************************** 
 OPAL> 
-OPAL> Track start at: 07:05:29, t= 37.314 [ns]; zstart at: 4.206 [m]
+OPAL> Track start at: 21:48:56, t= 37.316 [ns]; zstart at: 4.206 [m]
 OPAL> Executing ParallelTTracker, initial dt= 5.000 [ps];
 OPAL> max integration steps 2531, next step= 0
-ParallelTTracker > * Deleted 239 particles, remaining 299761 particles
-ParallelTTracker > * Deleted 81234 particles, remaining 218527 particles
-ParallelTTracker > * Deleted 142925 particles, remaining 75602 particles
-ParallelTTracker > * Deleted 3863 particles, remaining 71739 particles
-ParallelTTracker > * Deleted 589 particles, remaining 71150 particles
-ParallelTTracker > * Deleted 144 particles, remaining 71006 particles
-ParallelTTracker > * Deleted 3 particles, remaining 71003 particles
-ParallelTTracker > * Deleted 6 particles, remaining 70997 particles
-ParallelTTracker > * Deleted 34 particles, remaining 70963 particles
-ParallelTTracker > * Deleted 76 particles, remaining 70887 particles
-ParallelTTracker > * Deleted 247 particles, remaining 70640 particles
-ParallelTTracker > * Deleted 557 particles, remaining 70083 particles
-ParallelTTracker > * Deleted 1049 particles, remaining 69034 particles
-ParallelTTracker > * Deleted 1713 particles, remaining 67321 particles
-ParallelTTracker > * Deleted 2432 particles, remaining 64889 particles
-ParallelTTracker > * Deleted 3123 particles, remaining 61766 particles
-ParallelTTracker > * Deleted 3539 particles, remaining 58227 particles
-ParallelTTracker > * Deleted 3456 particles, remaining 54771 particles
-ParallelTTracker > * Deleted 3045 particles, remaining 51726 particles
-ParallelTTracker > * Deleted 2442 particles, remaining 49284 particles
-ParallelTTracker > * Deleted 1762 particles, remaining 47522 particles
-ParallelTTracker > * Deleted 1144 particles, remaining 46378 particles
-ParallelTTracker > * Deleted 721 particles, remaining 45657 particles
-ParallelTTracker > * Deleted 391 particles, remaining 45266 particles
-ParallelTTracker > * Deleted 226 particles, remaining 45040 particles
-ParallelTTracker > * Deleted 107 particles, remaining 44933 particles
-ParallelTTracker > * Deleted 36 particles, remaining 44897 particles
-ParallelTTracker > * Deleted 23 particles, remaining 44874 particles
-ParallelTTracker > * Deleted 2 particles, remaining 44872 particles
-ParallelTTracker > * Deleted 4 particles, remaining 44868 particles
-ParallelTTracker > * Deleted 1 particles, remaining 44867 particles
-ParallelTTracker > * Deleted 3 particles, remaining 44864 particles
-ParallelTTracker > * Deleted 2 particles, remaining 44862 particles
-ParallelTTracker > * Deleted 4 particles, remaining 44858 particles
-ParallelTTracker > * Deleted 5 particles, remaining 44853 particles
-ParallelTTracker > * Deleted 8 particles, remaining 44845 particles
-ParallelTTracker > * Deleted 10 particles, remaining 44835 particles
-ParallelTTracker > * Deleted 9 particles, remaining 44826 particles
-ParallelTTracker > * Deleted 12 particles, remaining 44814 particles
-ParallelTTracker > * Deleted 17 particles, remaining 44797 particles
-ParallelTTracker > * Deleted 19 particles, remaining 44778 particles
-ParallelTTracker > * Deleted 28 particles, remaining 44750 particles
-ParallelTTracker > * Deleted 45 particles, remaining 44705 particles
-ParallelTTracker > * Deleted 46 particles, remaining 44659 particles
-ParallelTTracker > * Deleted 51 particles, remaining 44608 particles
-ParallelTTracker > * Deleted 48 particles, remaining 44560 particles
-ParallelTTracker > * Deleted 76 particles, remaining 44484 particles
-ParallelTTracker > * Deleted 97 particles, remaining 44387 particles
-ParallelTTracker > * Deleted 98 particles, remaining 44289 particles
-ParallelTTracker > * Deleted 124 particles, remaining 44165 particles
-ParallelTTracker > * Deleted 118 particles, remaining 44047 particles
-ParallelTTracker > * Deleted 136 particles, remaining 43911 particles
-ParallelTTracker > * Deleted 188 particles, remaining 43723 particles
-ParallelTTracker > * Deleted 197 particles, remaining 43526 particles
-ParallelTTracker > * Deleted 229 particles, remaining 43297 particles
-ParallelTTracker > * Deleted 241 particles, remaining 43056 particles
-ParallelTTracker > * Deleted 261 particles, remaining 42795 particles
-ParallelTTracker > * Deleted 292 particles, remaining 42503 particles
-ParallelTTracker > * Deleted 313 particles, remaining 42190 particles
-ParallelTTracker > * Deleted 333 particles, remaining 41857 particles
-ParallelTTracker > * Deleted 381 particles, remaining 41476 particles
-ParallelTTracker > * Deleted 381 particles, remaining 41095 particles
-ParallelTTracker > * Deleted 438 particles, remaining 40657 particles
-ParallelTTracker > * Deleted 430 particles, remaining 40227 particles
-ParallelTTracker > * Deleted 462 particles, remaining 39765 particles
-ParallelTTracker > * Deleted 440 particles, remaining 39325 particles
-ParallelTTracker > * Deleted 487 particles, remaining 38838 particles
-ParallelTTracker > * Deleted 503 particles, remaining 38335 particles
-ParallelTTracker > * Deleted 503 particles, remaining 37832 particles
-ParallelTTracker > * Deleted 539 particles, remaining 37293 particles
-ParallelTTracker > * Deleted 587 particles, remaining 36706 particles
-ParallelTTracker > * Deleted 511 particles, remaining 36195 particles
-ParallelTTracker > * Deleted 477 particles, remaining 35718 particles
-ParallelTTracker > * Deleted 507 particles, remaining 35211 particles
-ParallelTTracker > * Deleted 483 particles, remaining 34728 particles
-ParallelTTracker > * Deleted 494 particles, remaining 34234 particles
-ParallelTTracker > * Deleted 490 particles, remaining 33744 particles
-ParallelTTracker > * Deleted 429 particles, remaining 33315 particles
-ParallelTTracker > * Deleted 407 particles, remaining 32908 particles
-ParallelTTracker > * Deleted 378 particles, remaining 32530 particles
-ParallelTTracker > * Deleted 348 particles, remaining 32182 particles
-ParallelTTracker > * Deleted 299 particles, remaining 31883 particles
-ParallelTTracker > * Deleted 299 particles, remaining 31584 particles
-ParallelTTracker > * Deleted 262 particles, remaining 31322 particles
-ParallelTTracker > * Deleted 273 particles, remaining 31049 particles
-ParallelTTracker > * Deleted 263 particles, remaining 30786 particles
-ParallelTTracker > * Deleted 216 particles, remaining 30570 particles
-ParallelTTracker > * Deleted 205 particles, remaining 30365 particles
-ParallelTTracker > * Deleted 210 particles, remaining 30155 particles
-ParallelTTracker > * Deleted 173 particles, remaining 29982 particles
-ParallelTTracker > * Deleted 135 particles, remaining 29847 particles
-ParallelTTracker > * Deleted 122 particles, remaining 29725 particles
-ParallelTTracker > * Deleted 104 particles, remaining 29621 particles
-ParallelTTracker > * Deleted 115 particles, remaining 29506 particles
-ParallelTTracker > * Deleted 86 particles, remaining 29420 particles
-ParallelTTracker > * Deleted 76 particles, remaining 29344 particles
-ParallelTTracker > * Deleted 81 particles, remaining 29263 particles
-ParallelTTracker > * Deleted 47 particles, remaining 29216 particles
-ParallelTTracker > * Deleted 50 particles, remaining 29166 particles
-ParallelTTracker > * Deleted 51 particles, remaining 29115 particles
-ParallelTTracker > * Deleted 32 particles, remaining 29083 particles
-ParallelTTracker > * Deleted 23 particles, remaining 29060 particles
-ParallelTTracker > * Deleted 30 particles, remaining 29030 particles
-ParallelTTracker > * Deleted 24 particles, remaining 29006 particles
-ParallelTTracker > * Deleted 12 particles, remaining 28994 particles
-ParallelTTracker > * Deleted 17 particles, remaining 28977 particles
+ParallelTTracker > * Deleted 1 particles, remaining 299999 particles
+ParallelTTracker > * Deleted 4174 particles, remaining 295825 particles
+ParallelTTracker > * Deleted 160594 particles, remaining 135231 particles
+ParallelTTracker > * Deleted 62703 particles, remaining 72528 particles
+ParallelTTracker > * Deleted 821 particles, remaining 71707 particles
+ParallelTTracker > * Deleted 473 particles, remaining 71234 particles
+ParallelTTracker > * Deleted 29 particles, remaining 71205 particles
+ParallelTTracker > * Deleted 4 particles, remaining 71201 particles
+ParallelTTracker > * Deleted 15 particles, remaining 71186 particles
+ParallelTTracker > * Deleted 42 particles, remaining 71144 particles
+ParallelTTracker > * Deleted 118 particles, remaining 71026 particles
+ParallelTTracker > * Deleted 329 particles, remaining 70697 particles
+ParallelTTracker > * Deleted 686 particles, remaining 70011 particles
+ParallelTTracker > * Deleted 1324 particles, remaining 68687 particles
+ParallelTTracker > * Deleted 1969 particles, remaining 66718 particles
+ParallelTTracker > * Deleted 2741 particles, remaining 63977 particles
+ParallelTTracker > * Deleted 3309 particles, remaining 60668 particles
+ParallelTTracker > * Deleted 3649 particles, remaining 57019 particles
+ParallelTTracker > * Deleted 3305 particles, remaining 53714 particles
+ParallelTTracker > * Deleted 2831 particles, remaining 50883 particles
+ParallelTTracker > * Deleted 2239 particles, remaining 48644 particles
+ParallelTTracker > * Deleted 1523 particles, remaining 47121 particles
+ParallelTTracker > * Deleted 982 particles, remaining 46139 particles
+ParallelTTracker > * Deleted 595 particles, remaining 45544 particles
+ParallelTTracker > * Deleted 320 particles, remaining 45224 particles
+ParallelTTracker > * Deleted 157 particles, remaining 45067 particles
+ParallelTTracker > * Deleted 73 particles, remaining 44994 particles
+ParallelTTracker > * Deleted 31 particles, remaining 44963 particles
+ParallelTTracker > * Deleted 15 particles, remaining 44948 particles
+ParallelTTracker > * Deleted 3 particles, remaining 44945 particles
+ParallelTTracker > * Deleted 3 particles, remaining 44942 particles
+ParallelTTracker > * Deleted 1 particles, remaining 44941 particles
+ParallelTTracker > * Deleted 1 particles, remaining 44940 particles
+ParallelTTracker > * Deleted 2 particles, remaining 44938 particles
+ParallelTTracker > * Deleted 3 particles, remaining 44935 particles
+ParallelTTracker > * Deleted 4 particles, remaining 44931 particles
+ParallelTTracker > * Deleted 7 particles, remaining 44924 particles
+ParallelTTracker > * Deleted 8 particles, remaining 44916 particles
+ParallelTTracker > * Deleted 10 particles, remaining 44906 particles
+ParallelTTracker > * Deleted 9 particles, remaining 44897 particles
+ParallelTTracker > * Deleted 11 particles, remaining 44886 particles
+ParallelTTracker > * Deleted 21 particles, remaining 44865 particles
+ParallelTTracker > * Deleted 23 particles, remaining 44842 particles
+ParallelTTracker > * Deleted 26 particles, remaining 44816 particles
+ParallelTTracker > * Deleted 53 particles, remaining 44763 particles
+ParallelTTracker > * Deleted 45 particles, remaining 44718 particles
+ParallelTTracker > * Deleted 48 particles, remaining 44670 particles
+ParallelTTracker > * Deleted 61 particles, remaining 44609 particles
+ParallelTTracker > * Deleted 81 particles, remaining 44528 particles
+ParallelTTracker > * Deleted 115 particles, remaining 44413 particles
+ParallelTTracker > * Deleted 85 particles, remaining 44328 particles
+ParallelTTracker > * Deleted 131 particles, remaining 44197 particles
+ParallelTTracker > * Deleted 120 particles, remaining 44077 particles
+ParallelTTracker > * Deleted 168 particles, remaining 43909 particles
+ParallelTTracker > * Deleted 189 particles, remaining 43720 particles
+ParallelTTracker > * Deleted 214 particles, remaining 43506 particles
+ParallelTTracker > * Deleted 226 particles, remaining 43280 particles
+ParallelTTracker > * Deleted 252 particles, remaining 43028 particles
+ParallelTTracker > * Deleted 277 particles, remaining 42751 particles
+ParallelTTracker > * Deleted 290 particles, remaining 42461 particles
+ParallelTTracker > * Deleted 344 particles, remaining 42117 particles
+ParallelTTracker > * Deleted 331 particles, remaining 41786 particles
+ParallelTTracker > * Deleted 392 particles, remaining 41394 particles
+ParallelTTracker > * Deleted 408 particles, remaining 40986 particles
+ParallelTTracker > * Deleted 423 particles, remaining 40563 particles
+ParallelTTracker > * Deleted 447 particles, remaining 40116 particles
+ParallelTTracker > * Deleted 462 particles, remaining 39654 particles
+ParallelTTracker > * Deleted 465 particles, remaining 39189 particles
+ParallelTTracker > * Deleted 489 particles, remaining 38700 particles
+ParallelTTracker > * Deleted 505 particles, remaining 38195 particles
+ParallelTTracker > * Deleted 493 particles, remaining 37702 particles
+ParallelTTracker > * Deleted 624 particles, remaining 37078 particles
+ParallelTTracker > * Deleted 544 particles, remaining 36534 particles
+ParallelTTracker > * Deleted 488 particles, remaining 36046 particles
+ParallelTTracker > * Deleted 476 particles, remaining 35570 particles
+ParallelTTracker > * Deleted 510 particles, remaining 35060 particles
+ParallelTTracker > * Deleted 469 particles, remaining 34591 particles
+ParallelTTracker > * Deleted 529 particles, remaining 34062 particles
+ParallelTTracker > * Deleted 465 particles, remaining 33597 particles
+ParallelTTracker > * Deleted 394 particles, remaining 33203 particles
+ParallelTTracker > * Deleted 425 particles, remaining 32778 particles
+ParallelTTracker > * Deleted 346 particles, remaining 32432 particles
+ParallelTTracker > * Deleted 337 particles, remaining 32095 particles
+ParallelTTracker > * Deleted 303 particles, remaining 31792 particles
+ParallelTTracker > * Deleted 287 particles, remaining 31505 particles
+ParallelTTracker > * Deleted 270 particles, remaining 31235 particles
+ParallelTTracker > * Deleted 279 particles, remaining 30956 particles
+ParallelTTracker > * Deleted 232 particles, remaining 30724 particles
+ParallelTTracker > * Deleted 219 particles, remaining 30505 particles
+ParallelTTracker > * Deleted 218 particles, remaining 30287 particles
+ParallelTTracker > * Deleted 189 particles, remaining 30098 particles
+ParallelTTracker > * Deleted 154 particles, remaining 29944 particles
+ParallelTTracker > * Deleted 135 particles, remaining 29809 particles
+ParallelTTracker > * Deleted 112 particles, remaining 29697 particles
+ParallelTTracker > * Deleted 108 particles, remaining 29589 particles
+ParallelTTracker > * Deleted 102 particles, remaining 29487 particles
+ParallelTTracker > * Deleted 89 particles, remaining 29398 particles
+ParallelTTracker > * Deleted 80 particles, remaining 29318 particles
+ParallelTTracker > * Deleted 70 particles, remaining 29248 particles
+ParallelTTracker > * Deleted 43 particles, remaining 29205 particles
+ParallelTTracker > * Deleted 49 particles, remaining 29156 particles
+ParallelTTracker > * Deleted 45 particles, remaining 29111 particles
+ParallelTTracker > * Deleted 28 particles, remaining 29083 particles
+ParallelTTracker > * Deleted 24 particles, remaining 29059 particles
+ParallelTTracker > * Deleted 31 particles, remaining 29028 particles
+ParallelTTracker > * Deleted 16 particles, remaining 29012 particles
+ParallelTTracker > * Deleted 14 particles, remaining 28998 particles
+ParallelTTracker > * Deleted 13 particles, remaining 28985 particles
+ParallelTTracker > * Deleted 8 particles, remaining 28977 particles
 ParallelTTracker > * Deleted 7 particles, remaining 28970 particles
-ParallelTTracker > * Deleted 10 particles, remaining 28960 particles
-ParallelTTracker > * Deleted 7 particles, remaining 28953 particles
-ParallelTTracker > * Deleted 3 particles, remaining 28950 particles
-ParallelTTracker > * Deleted 7 particles, remaining 28943 particles
-ParallelTTracker > * Deleted 5 particles, remaining 28938 particles
-ParallelTTracker > * Deleted 6 particles, remaining 28932 particles
-ParallelTTracker > * Deleted 3 particles, remaining 28929 particles
-ParallelTTracker > * Deleted 2 particles, remaining 28927 particles
+ParallelTTracker > * Deleted 9 particles, remaining 28961 particles
+ParallelTTracker > * Deleted 5 particles, remaining 28956 particles
+ParallelTTracker > * Deleted 4 particles, remaining 28952 particles
+ParallelTTracker > * Deleted 7 particles, remaining 28945 particles
+ParallelTTracker > * Deleted 5 particles, remaining 28940 particles
+ParallelTTracker > * Deleted 3 particles, remaining 28937 particles
+ParallelTTracker > * Deleted 2 particles, remaining 28935 particles
+ParallelTTracker > * Deleted 1 particles, remaining 28934 particles
+ParallelTTracker > * Deleted 2 particles, remaining 28932 particles
+ParallelTTracker > * Deleted 2 particles, remaining 28930 particles
+ParallelTTracker > 21:49:04 Step    999 at 4.769 [m], t= 42.316 [ns], E=74.156 [MeV]
+ParallelTTracker > * Deleted 2 particles, remaining 28928 particles
+ParallelTTracker > * Deleted 1 particles, remaining 28927 particles
 ParallelTTracker > * Deleted 1 particles, remaining 28926 particles
 ParallelTTracker > * Deleted 2 particles, remaining 28924 particles
 ParallelTTracker > * Deleted 2 particles, remaining 28922 particles
-ParallelTTracker > * Deleted 2 particles, remaining 28920 particles
-ParallelTTracker > 07:05:36 Step    999 at 4.769 [m], t= 42.314 [ns], E=74.156 [MeV]
-ParallelTTracker > * Deleted 2 particles, remaining 28918 particles
-ParallelTTracker > * Deleted 1 particles, remaining 28917 particles
-ParallelTTracker > * Deleted 1 particles, remaining 28916 particles
-ParallelTTracker > * Deleted 2 particles, remaining 28914 particles
-ParallelTTracker > * Deleted 2 particles, remaining 28912 particles
+ParallelTTracker > * Deleted 1 particles, remaining 28921 particles
+ParallelTTracker > * Deleted 3 particles, remaining 28918 particles
+ParallelTTracker > * Deleted 2 particles, remaining 28916 particles
+ParallelTTracker > * Deleted 3 particles, remaining 28913 particles
+ParallelTTracker > * Deleted 1 particles, remaining 28912 particles
 ParallelTTracker > * Deleted 1 particles, remaining 28911 particles
-ParallelTTracker > * Deleted 2 particles, remaining 28909 particles
-ParallelTTracker > * Deleted 1 particles, remaining 28908 particles
-ParallelTTracker > * Deleted 2 particles, remaining 28906 particles
-ParallelTTracker > * Deleted 2 particles, remaining 28904 particles
-ParallelTTracker > * Deleted 1 particles, remaining 28903 particles
-ParallelTTracker > * Deleted 1 particles, remaining 28902 particles
-ParallelTTracker > * Deleted 1 particles, remaining 28901 particles
-ParallelTTracker > * Deleted 3 particles, remaining 28898 particles
+ParallelTTracker > * Deleted 1 particles, remaining 28910 particles
+ParallelTTracker > * Deleted 3 particles, remaining 28907 particles
+ParallelTTracker > * Deleted 3 particles, remaining 28904 particles
+ParallelTTracker > * Deleted 6 particles, remaining 28898 particles
 ParallelTTracker > * Deleted 3 particles, remaining 28895 particles
-ParallelTTracker > * Deleted 5 particles, remaining 28890 particles
-ParallelTTracker > * Deleted 2 particles, remaining 28888 particles
-ParallelTTracker > * Deleted 5 particles, remaining 28883 particles
-ParallelTTracker > * Deleted 4 particles, remaining 28879 particles
-ParallelTTracker > * Deleted 2 particles, remaining 28877 particles
-ParallelTTracker > * Deleted 7 particles, remaining 28870 particles
-ParallelTTracker > * Deleted 2 particles, remaining 28868 particles
-ParallelTTracker > * Deleted 2 particles, remaining 28866 particles
-ParallelTTracker > * Deleted 1 particles, remaining 28865 particles
-ParallelTTracker > * Deleted 7 particles, remaining 28858 particles
-ParallelTTracker > * Deleted 6 particles, remaining 28852 particles
-ParallelTTracker > * Deleted 5 particles, remaining 28847 particles
-ParallelTTracker > * Deleted 9 particles, remaining 28838 particles
-ParallelTTracker > * Deleted 7 particles, remaining 28831 particles
-ParallelTTracker > * Deleted 7 particles, remaining 28824 particles
-ParallelTTracker > * Deleted 9 particles, remaining 28815 particles
-ParallelTTracker > * Deleted 9 particles, remaining 28806 particles
-ParallelTTracker > * Deleted 15 particles, remaining 28791 particles
-ParallelTTracker > * Deleted 10 particles, remaining 28781 particles
-ParallelTTracker > * Deleted 11 particles, remaining 28770 particles
-ParallelTTracker > * Deleted 3 particles, remaining 28767 particles
-ParallelTTracker > * Deleted 17 particles, remaining 28750 particles
-ParallelTTracker > * Deleted 9 particles, remaining 28741 particles
-ParallelTTracker > * Deleted 11 particles, remaining 28730 particles
-ParallelTTracker > * Deleted 9 particles, remaining 28721 particles
-ParallelTTracker > * Deleted 13 particles, remaining 28708 particles
-ParallelTTracker > * Deleted 17 particles, remaining 28691 particles
-ParallelTTracker > * Deleted 8 particles, remaining 28683 particles
-ParallelTTracker > * Deleted 9 particles, remaining 28674 particles
-ParallelTTracker > * Deleted 15 particles, remaining 28659 particles
-ParallelTTracker > * Deleted 10 particles, remaining 28649 particles
-ParallelTTracker > * Deleted 18 particles, remaining 28631 particles
-ParallelTTracker > * Deleted 10 particles, remaining 28621 particles
-ParallelTTracker > * Deleted 11 particles, remaining 28610 particles
-ParallelTTracker > * Deleted 11 particles, remaining 28599 particles
-ParallelTTracker > * Deleted 14 particles, remaining 28585 particles
-ParallelTTracker > * Deleted 14 particles, remaining 28571 particles
-ParallelTTracker > * Deleted 14 particles, remaining 28557 particles
-ParallelTTracker > * Deleted 26 particles, remaining 28531 particles
-ParallelTTracker > * Deleted 25 particles, remaining 28506 particles
-ParallelTTracker > * Deleted 14 particles, remaining 28492 particles
-ParallelTTracker > * Deleted 26 particles, remaining 28466 particles
-ParallelTTracker > * Deleted 28 particles, remaining 28438 particles
-ParallelTTracker > * Deleted 28 particles, remaining 28410 particles
-ParallelTTracker > 07:05:41 Step   1999 at 5.333 [m], t= 47.314 [ns], E=74.014 [MeV]
-ParallelTTracker > * Deleted 30 particles, remaining 28380 particles
-ParallelTTracker > * Deleted 30 particles, remaining 28350 particles
-ParallelTTracker > * Deleted 26 particles, remaining 28324 particles
-ParallelTTracker > * Deleted 26 particles, remaining 28298 particles
-ParallelTTracker > * Deleted 38 particles, remaining 28260 particles
-ParallelTTracker > * Deleted 34 particles, remaining 28226 particles
-ParallelTTracker > * Deleted 42 particles, remaining 28184 particles
-ParallelTTracker > * Deleted 35 particles, remaining 28149 particles
-ParallelTTracker > * Deleted 42 particles, remaining 28107 particles
-ParallelTTracker > * Deleted 48 particles, remaining 28059 particles
-ParallelTTracker > * Deleted 32 particles, remaining 28027 particles
-ParallelTTracker > * Deleted 39 particles, remaining 27988 particles
-ParallelTTracker > * Deleted 31 particles, remaining 27957 particles
-ParallelTTracker > * Deleted 43 particles, remaining 27914 particles
-ParallelTTracker > * Deleted 61 particles, remaining 27853 particles
-ParallelTTracker > * Deleted 49 particles, remaining 27804 particles
-ParallelTTracker > * Deleted 55 particles, remaining 27749 particles
-ParallelTTracker > * Deleted 54 particles, remaining 27695 particles
-ParallelTTracker > * Deleted 58 particles, remaining 27637 particles
-ParallelTTracker > * Deleted 54 particles, remaining 27583 particles
-ParallelTTracker > * Deleted 64 particles, remaining 27519 particles
-ParallelTTracker > * Deleted 66 particles, remaining 27453 particles
-ParallelTTracker > * Deleted 68 particles, remaining 27385 particles
-ParallelTTracker > * Deleted 66 particles, remaining 27319 particles
-ParallelTTracker > * Deleted 70 particles, remaining 27249 particles
-ParallelTTracker > * Deleted 70 particles, remaining 27179 particles
-ParallelTTracker > * Deleted 67 particles, remaining 27112 particles
-ParallelTTracker > * Deleted 81 particles, remaining 27031 particles
-ParallelTTracker > * Deleted 77 particles, remaining 26954 particles
-ParallelTTracker > * Deleted 73 particles, remaining 26881 particles
-ParallelTTracker > * Deleted 77 particles, remaining 26804 particles
-ParallelTTracker > * Deleted 75 particles, remaining 26729 particles
-ParallelTTracker > * Deleted 87 particles, remaining 26642 particles
-ParallelTTracker > * Deleted 80 particles, remaining 26562 particles
-ParallelTTracker > * Deleted 90 particles, remaining 26472 particles
-ParallelTTracker > * Deleted 82 particles, remaining 26390 particles
-ParallelTTracker > * Deleted 95 particles, remaining 26295 particles
-ParallelTTracker > * Deleted 85 particles, remaining 26210 particles
-ParallelTTracker > * Deleted 82 particles, remaining 26128 particles
-ParallelTTracker > * Deleted 89 particles, remaining 26039 particles
-ParallelTTracker > * Deleted 91 particles, remaining 25948 particles
-ParallelTTracker > * Deleted 91 particles, remaining 25857 particles
-ParallelTTracker > * Deleted 103 particles, remaining 25754 particles
-ParallelTTracker > * Deleted 100 particles, remaining 25654 particles
-ParallelTTracker > * Deleted 99 particles, remaining 25555 particles
-ParallelTTracker > * Deleted 107 particles, remaining 25448 particles
-ParallelTTracker > * Deleted 108 particles, remaining 25340 particles
-ParallelTTracker > * Deleted 122 particles, remaining 25218 particles
-ParallelTTracker > * Deleted 102 particles, remaining 25116 particles
-ParallelTTracker > * Deleted 91 particles, remaining 25025 particles
-ParallelTTracker > * Deleted 117 particles, remaining 24908 particles
-ParallelTTracker > * Deleted 117 particles, remaining 24791 particles
-ParallelTTracker > * Deleted 102 particles, remaining 24689 particles
-ParallelTTracker > * Deleted 124 particles, remaining 24565 particles
-ParallelTTracker > * Deleted 127 particles, remaining 24438 particles
-ParallelTTracker > * Deleted 110 particles, remaining 24328 particles
-ParallelTTracker > * Deleted 103 particles, remaining 24225 particles
-ParallelTTracker > * Deleted 114 particles, remaining 24111 particles
-ParallelTTracker > * Deleted 122 particles, remaining 23989 particles
-ParallelTTracker > * Deleted 132 particles, remaining 23857 particles
-ParallelTTracker > * Deleted 122 particles, remaining 23735 particles
-ParallelTTracker > * Deleted 125 particles, remaining 23610 particles
-ParallelTTracker > * Deleted 119 particles, remaining 23491 particles
-ParallelTTracker > * Deleted 111 particles, remaining 23380 particles
-ParallelTTracker > * Deleted 120 particles, remaining 23260 particles
-ParallelTTracker > * Deleted 145 particles, remaining 23115 particles
-ParallelTTracker > * Deleted 127 particles, remaining 22988 particles
-ParallelTTracker > * Deleted 131 particles, remaining 22857 particles
-ParallelTTracker > * Deleted 112 particles, remaining 22745 particles
-ParallelTTracker > * Deleted 120 particles, remaining 22625 particles
-ParallelTTracker > * Deleted 110 particles, remaining 22515 particles
-ParallelTTracker > * Deleted 135 particles, remaining 22380 particles
-ParallelTTracker > * Deleted 130 particles, remaining 22250 particles
-ParallelTTracker > * Deleted 130 particles, remaining 22120 particles
-ParallelTTracker > * Deleted 125 particles, remaining 21995 particles
-ParallelTTracker > * Deleted 128 particles, remaining 21867 particles
-ParallelTTracker > * Deleted 117 particles, remaining 21750 particles
-ParallelTTracker > * Deleted 113 particles, remaining 21637 particles
-ParallelTTracker > * Deleted 133 particles, remaining 21504 particles
-ParallelTTracker > * Deleted 139 particles, remaining 21365 particles
-ParallelTTracker > * Deleted 133 particles, remaining 21232 particles
-ParallelTTracker > * Deleted 135 particles, remaining 21097 particles
-ParallelTTracker > * Deleted 126 particles, remaining 20971 particles
-ParallelTTracker > * Deleted 123 particles, remaining 20848 particles
-ParallelTTracker > * Deleted 121 particles, remaining 20727 particles
-ParallelTTracker > * Deleted 107 particles, remaining 20620 particles
-ParallelTTracker > * Deleted 121 particles, remaining 20499 particles
-ParallelTTracker > * Deleted 118 particles, remaining 20381 particles
-ParallelTTracker > * Deleted 119 particles, remaining 20262 particles
-ParallelTTracker > * Deleted 128 particles, remaining 20134 particles
-ParallelTTracker > * Deleted 111 particles, remaining 20023 particles
-ParallelTTracker > * Deleted 137 particles, remaining 19886 particles
-ParallelTTracker > * Deleted 126 particles, remaining 19760 particles
-ParallelTTracker > * Deleted 119 particles, remaining 19641 particles
-ParallelTTracker > * Deleted 122 particles, remaining 19519 particles
-ParallelTTracker > * Deleted 114 particles, remaining 19405 particles
-ParallelTTracker > * Deleted 106 particles, remaining 19299 particles
-ParallelTTracker > * Deleted 105 particles, remaining 19194 particles
-ParallelTTracker > * Deleted 99 particles, remaining 19095 particles
-ParallelTTracker > * Deleted 106 particles, remaining 18989 particles
-ParallelTTracker > * Deleted 113 particles, remaining 18876 particles
-ParallelTTracker > * Deleted 107 particles, remaining 18769 particles
-ParallelTTracker > * Deleted 115 particles, remaining 18654 particles
-ParallelTTracker > * Deleted 112 particles, remaining 18542 particles
-ParallelTTracker > * Deleted 114 particles, remaining 18428 particles
-ParallelTTracker > * Deleted 87 particles, remaining 18341 particles
-ParallelTTracker > * Deleted 94 particles, remaining 18247 particles
-ParallelTTracker > * Deleted 88 particles, remaining 18159 particles
-ParallelTTracker > * Deleted 96 particles, remaining 18063 particles
-ParallelTTracker > * Deleted 99 particles, remaining 17964 particles
-ParallelTTracker > * Deleted 105 particles, remaining 17859 particles
-ParallelTTracker > * Deleted 92 particles, remaining 17767 particles
-ParallelTTracker > * Deleted 87 particles, remaining 17680 particles
-ParallelTTracker > * Deleted 101 particles, remaining 17579 particles
-ParallelTTracker > * Deleted 99 particles, remaining 17480 particles
-ParallelTTracker > * Deleted 85 particles, remaining 17395 particles
-ParallelTTracker > * Deleted 75 particles, remaining 17320 particles
-ParallelTTracker > * Deleted 84 particles, remaining 17236 particles
-ParallelTTracker > * Deleted 87 particles, remaining 17149 particles
-ParallelTTracker > * Deleted 83 particles, remaining 17066 particles
-ParallelTTracker > * Deleted 100 particles, remaining 16966 particles
-ParallelTTracker > * Deleted 69 particles, remaining 16897 particles
-ParallelTTracker > * Deleted 79 particles, remaining 16818 particles
-ParallelTTracker > * Deleted 72 particles, remaining 16746 particles
-ParallelTTracker > * Deleted 79 particles, remaining 16667 particles
-ParallelTTracker > * Deleted 79 particles, remaining 16588 particles
-ParallelTTracker > * Deleted 76 particles, remaining 16512 particles
-ParallelTTracker > * Deleted 63 particles, remaining 16449 particles
-ParallelTTracker > * Deleted 74 particles, remaining 16375 particles
-ParallelTTracker > * Deleted 78 particles, remaining 16297 particles
-ParallelTTracker > * Deleted 67 particles, remaining 16230 particles
-ParallelTTracker > * Deleted 72 particles, remaining 16158 particles
-ParallelTTracker > * Deleted 65 particles, remaining 16093 particles
-ParallelTTracker > * Deleted 66 particles, remaining 16027 particles
-ParallelTTracker > * Deleted 69 particles, remaining 15958 particles
-ParallelTTracker > * Deleted 83 particles, remaining 15875 particles
-ParallelTTracker > * Deleted 56 particles, remaining 15819 particles
-ParallelTTracker > * Deleted 67 particles, remaining 15752 particles
-ParallelTTracker > * Deleted 69 particles, remaining 15683 particles
-ParallelTTracker > * Deleted 58 particles, remaining 15625 particles
-ParallelTTracker > * Deleted 66 particles, remaining 15559 particles
-ParallelTTracker > * Deleted 61 particles, remaining 15498 particles
-ParallelTTracker > * Deleted 51 particles, remaining 15447 particles
-ParallelTTracker > * Deleted 61 particles, remaining 15386 particles
-ParallelTTracker > * Deleted 46 particles, remaining 15340 particles
-ParallelTTracker > * Deleted 64 particles, remaining 15276 particles
-ParallelTTracker > * Deleted 60 particles, remaining 15216 particles
-ParallelTTracker > * Deleted 56 particles, remaining 15160 particles
-ParallelTTracker > * Deleted 50 particles, remaining 15110 particles
-ParallelTTracker > * Deleted 65 particles, remaining 15045 particles
-ParallelTTracker > * Deleted 71 particles, remaining 14974 particles
-ParallelTTracker > * Deleted 51 particles, remaining 14923 particles
-ParallelTTracker > * Deleted 60 particles, remaining 14863 particles
-ParallelTTracker > * Deleted 62 particles, remaining 14801 particles
-ParallelTTracker > * Deleted 61 particles, remaining 14740 particles
-ParallelTTracker > * Deleted 55 particles, remaining 14685 particles
-ParallelTTracker > * Deleted 67 particles, remaining 14618 particles
-ParallelTTracker > * Deleted 71 particles, remaining 14547 particles
-ParallelTTracker > * Deleted 59 particles, remaining 14488 particles
-ParallelTTracker > * Deleted 55 particles, remaining 14433 particles
-ParallelTTracker > * Deleted 43 particles, remaining 14390 particles
-ParallelTTracker > * Deleted 65 particles, remaining 14325 particles
-ParallelTTracker > * Deleted 64 particles, remaining 14261 particles
-ParallelTTracker > * Deleted 65 particles, remaining 14196 particles
-ParallelTTracker > * Deleted 56 particles, remaining 14140 particles
-ParallelTTracker > * Deleted 68 particles, remaining 14072 particles
-ParallelTTracker > * Deleted 69 particles, remaining 14003 particles
-ParallelTTracker > * Deleted 68 particles, remaining 13935 particles
-ParallelTTracker > * Deleted 70 particles, remaining 13865 particles
-ParallelTTracker > * Deleted 64 particles, remaining 13801 particles
-ParallelTTracker > * Deleted 60 particles, remaining 13741 particles
-ParallelTTracker > * Deleted 92 particles, remaining 13649 particles
-ParallelTTracker > * Deleted 72 particles, remaining 13577 particles
-ParallelTTracker > * Deleted 89 particles, remaining 13488 particles
-ParallelTTracker > * Deleted 90 particles, remaining 13398 particles
-ParallelTTracker > * Deleted 67 particles, remaining 13331 particles
-ParallelTTracker > * Deleted 74 particles, remaining 13257 particles
-ParallelTTracker > * Deleted 76 particles, remaining 13181 particles
-ParallelTTracker > * Deleted 86 particles, remaining 13095 particles
-ParallelTTracker > * Deleted 76 particles, remaining 13019 particles
-ParallelTTracker > * Deleted 51 particles, remaining 12968 particles
-ParallelTTracker > * Deleted 74 particles, remaining 12894 particles
-ParallelTTracker > * Deleted 69 particles, remaining 12825 particles
-ParallelTTracker > * Deleted 70 particles, remaining 12755 particles
-ParallelTTracker > * Deleted 72 particles, remaining 12683 particles
-ParallelTTracker > * Deleted 79 particles, remaining 12604 particles
-ParallelTTracker > * Deleted 64 particles, remaining 12540 particles
-ParallelTTracker > * Deleted 84 particles, remaining 12456 particles
-ParallelTTracker > * Deleted 89 particles, remaining 12367 particles
-ParallelTTracker > * Deleted 92 particles, remaining 12275 particles
-ParallelTTracker > * Deleted 81 particles, remaining 12194 particles
-ParallelTTracker > * Deleted 78 particles, remaining 12116 particles
-ParallelTTracker > * Deleted 94 particles, remaining 12022 particles
-ParallelTTracker > * Deleted 71 particles, remaining 11951 particles
-ParallelTTracker > * Deleted 93 particles, remaining 11858 particles
-ParallelTTracker > * Deleted 88 particles, remaining 11770 particles
-ParallelTTracker > * Deleted 98 particles, remaining 11672 particles
-ParallelTTracker > * Deleted 88 particles, remaining 11584 particles
-ParallelTTracker > * Deleted 90 particles, remaining 11494 particles
-ParallelTTracker > * Deleted 77 particles, remaining 11417 particles
-ParallelTTracker > * Deleted 87 particles, remaining 11330 particles
-ParallelTTracker > * Deleted 83 particles, remaining 11247 particles
-ParallelTTracker > * Deleted 93 particles, remaining 11154 particles
-ParallelTTracker > * Deleted 82 particles, remaining 11072 particles
-ParallelTTracker > * Deleted 93 particles, remaining 10979 particles
-ParallelTTracker > * Deleted 94 particles, remaining 10885 particles
-ParallelTTracker > * Deleted 96 particles, remaining 10789 particles
-ParallelTTracker > * Deleted 83 particles, remaining 10706 particles
-ParallelTTracker > * Deleted 79 particles, remaining 10627 particles
-ParallelTTracker > * Deleted 76 particles, remaining 10551 particles
-ParallelTTracker > * Deleted 87 particles, remaining 10464 particles
-ParallelTTracker > * Deleted 97 particles, remaining 10367 particles
-ParallelTTracker > * Deleted 110 particles, remaining 10257 particles
-ParallelTTracker > * Deleted 91 particles, remaining 10166 particles
-ParallelTTracker > * Deleted 77 particles, remaining 10089 particles
-ParallelTTracker > * Deleted 90 particles, remaining 9999 particles
-ParallelTTracker > * Deleted 78 particles, remaining 9921 particles
-ParallelTTracker > * Deleted 83 particles, remaining 9838 particles
-ParallelTTracker > * Deleted 102 particles, remaining 9736 particles
-ParallelTTracker > * Deleted 107 particles, remaining 9629 particles
-ParallelTTracker > * Deleted 80 particles, remaining 9549 particles
-ParallelTTracker > * Deleted 89 particles, remaining 9460 particles
-ParallelTTracker > * Deleted 101 particles, remaining 9359 particles
-ParallelTTracker > * Deleted 86 particles, remaining 9273 particles
-ParallelTTracker > * Deleted 97 particles, remaining 9176 particles
-ParallelTTracker > * Deleted 98 particles, remaining 9078 particles
-ParallelTTracker > * Deleted 94 particles, remaining 8984 particles
-ParallelTTracker > * Deleted 95 particles, remaining 8889 particles
-ParallelTTracker > * Deleted 92 particles, remaining 8797 particles
-ParallelTTracker > * Deleted 93 particles, remaining 8704 particles
-ParallelTTracker > * Deleted 100 particles, remaining 8604 particles
-ParallelTTracker > * Deleted 94 particles, remaining 8510 particles
-ParallelTTracker > * Deleted 98 particles, remaining 8412 particles
-ParallelTTracker > * Deleted 75 particles, remaining 8337 particles
-ParallelTTracker > * Deleted 81 particles, remaining 8256 particles
-ParallelTTracker > * Deleted 91 particles, remaining 8165 particles
-ParallelTTracker > * Deleted 94 particles, remaining 8071 particles
-ParallelTTracker > * Deleted 83 particles, remaining 7988 particles
-ParallelTTracker > * Deleted 82 particles, remaining 7906 particles
-ParallelTTracker > * Deleted 84 particles, remaining 7822 particles
-ParallelTTracker > * Deleted 91 particles, remaining 7731 particles
-ParallelTTracker > * Deleted 87 particles, remaining 7644 particles
-ParallelTTracker > * Deleted 87 particles, remaining 7557 particles
-ParallelTTracker > * Deleted 85 particles, remaining 7472 particles
-ParallelTTracker > * Deleted 73 particles, remaining 7399 particles
-ParallelTTracker > * Deleted 70 particles, remaining 7329 particles
-ParallelTTracker > * Deleted 91 particles, remaining 7238 particles
-ParallelTTracker > * Deleted 82 particles, remaining 7156 particles
-ParallelTTracker > * Deleted 80 particles, remaining 7076 particles
-ParallelTTracker > * Deleted 70 particles, remaining 7006 particles
-ParallelTTracker > * Deleted 76 particles, remaining 6930 particles
-ParallelTTracker > * Deleted 71 particles, remaining 6859 particles
-ParallelTTracker > * Deleted 94 particles, remaining 6765 particles
-ParallelTTracker > * Deleted 77 particles, remaining 6688 particles
-ParallelTTracker > * Deleted 68 particles, remaining 6620 particles
-ParallelTTracker > * Deleted 70 particles, remaining 6550 particles
-ParallelTTracker > * Deleted 67 particles, remaining 6483 particles
-ParallelTTracker > * Deleted 62 particles, remaining 6421 particles
-ParallelTTracker > * Deleted 66 particles, remaining 6355 particles
-ParallelTTracker > * Deleted 78 particles, remaining 6277 particles
-ParallelTTracker > * Deleted 61 particles, remaining 6216 particles
-ParallelTTracker > * Deleted 73 particles, remaining 6143 particles
-ParallelTTracker > * Deleted 65 particles, remaining 6078 particles
-ParallelTTracker > * Deleted 60 particles, remaining 6018 particles
-ParallelTTracker > * Deleted 61 particles, remaining 5957 particles
-ParallelTTracker > * Deleted 68 particles, remaining 5889 particles
-ParallelTTracker > * Deleted 42 particles, remaining 5847 particles
-ParallelTTracker > * Deleted 62 particles, remaining 5785 particles
-ParallelTTracker > * Deleted 73 particles, remaining 5712 particles
-ParallelTTracker > * Deleted 51 particles, remaining 5661 particles
-ParallelTTracker > * Deleted 51 particles, remaining 5610 particles
-ParallelTTracker > * Deleted 48 particles, remaining 5562 particles
-ParallelTTracker > * Deleted 57 particles, remaining 5505 particles
-ParallelTTracker > * Deleted 34 particles, remaining 5471 particles
-ParallelTTracker > * Deleted 47 particles, remaining 5424 particles
-ParallelTTracker > * Deleted 50 particles, remaining 5374 particles
-ParallelTTracker > * Deleted 52 particles, remaining 5322 particles
-ParallelTTracker > * Deleted 43 particles, remaining 5279 particles
-ParallelTTracker > * Deleted 42 particles, remaining 5237 particles
-ParallelTTracker > * Deleted 48 particles, remaining 5189 particles
-ParallelTTracker > * Deleted 37 particles, remaining 5152 particles
-ParallelTTracker > * Deleted 40 particles, remaining 5112 particles
-ParallelTTracker > * Deleted 56 particles, remaining 5056 particles
-ParallelTTracker > * Deleted 42 particles, remaining 5014 particles
-ParallelTTracker > * Deleted 38 particles, remaining 4976 particles
-ParallelTTracker > * Deleted 33 particles, remaining 4943 particles
-ParallelTTracker > * Deleted 31 particles, remaining 4912 particles
-ParallelTTracker > * Deleted 33 particles, remaining 4879 particles
-ParallelTTracker > * Deleted 30 particles, remaining 4849 particles
-ParallelTTracker > * Deleted 24 particles, remaining 4825 particles
-ParallelTTracker > * Deleted 28 particles, remaining 4797 particles
-ParallelTTracker > * Deleted 21 particles, remaining 4776 particles
-ParallelTTracker > * Deleted 34 particles, remaining 4742 particles
-ParallelTTracker > * Deleted 21 particles, remaining 4721 particles
-ParallelTTracker > * Deleted 24 particles, remaining 4697 particles
-ParallelTTracker > * Deleted 37 particles, remaining 4660 particles
-ParallelTTracker > * Deleted 15 particles, remaining 4645 particles
-ParallelTTracker > * Deleted 30 particles, remaining 4615 particles
-ParallelTTracker > * Deleted 27 particles, remaining 4588 particles
-ParallelTTracker > * Deleted 29 particles, remaining 4559 particles
-ParallelTTracker > * Deleted 24 particles, remaining 4535 particles
-ParallelTTracker > * Deleted 27 particles, remaining 4508 particles
-ParallelTTracker > * Deleted 21 particles, remaining 4487 particles
-ParallelTTracker > * Deleted 16 particles, remaining 4471 particles
-ParallelTTracker > * Deleted 22 particles, remaining 4449 particles
-ParallelTTracker > * Deleted 23 particles, remaining 4426 particles
-ParallelTTracker > * Deleted 18 particles, remaining 4408 particles
-ParallelTTracker > * Deleted 16 particles, remaining 4392 particles
-ParallelTTracker > * Deleted 14 particles, remaining 4378 particles
-ParallelTTracker > * Deleted 9 particles, remaining 4369 particles
-ParallelTTracker > * Deleted 13 particles, remaining 4356 particles
-ParallelTTracker > * Deleted 13 particles, remaining 4343 particles
-ParallelTTracker > * Deleted 19 particles, remaining 4324 particles
-ParallelTTracker > * Deleted 12 particles, remaining 4312 particles
-ParallelTTracker > * Deleted 15 particles, remaining 4297 particles
-ParallelTTracker > * Deleted 17 particles, remaining 4280 particles
-ParallelTTracker > * Deleted 8 particles, remaining 4272 particles
-ParallelTTracker > * Deleted 6 particles, remaining 4266 particles
-ParallelTTracker > * Deleted 14 particles, remaining 4252 particles
-ParallelTTracker > * Deleted 14 particles, remaining 4238 particles
-ParallelTTracker > * Deleted 10 particles, remaining 4228 particles
-ParallelTTracker > * Deleted 8 particles, remaining 4220 particles
-ParallelTTracker > * Deleted 13 particles, remaining 4207 particles
-ParallelTTracker > * Deleted 7 particles, remaining 4200 particles
-ParallelTTracker > * Deleted 14 particles, remaining 4186 particles
-ParallelTTracker > * Deleted 14 particles, remaining 4172 particles
-ParallelTTracker > * Deleted 9 particles, remaining 4163 particles
-ParallelTTracker > * Deleted 10 particles, remaining 4153 particles
-ParallelTTracker > * Deleted 8 particles, remaining 4145 particles
-ParallelTTracker > * Deleted 8 particles, remaining 4137 particles
-ParallelTTracker > * Deleted 9 particles, remaining 4128 particles
-ParallelTTracker > * Deleted 9 particles, remaining 4119 particles
-ParallelTTracker > * Deleted 5 particles, remaining 4114 particles
-ParallelTTracker > * Deleted 4 particles, remaining 4110 particles
-ParallelTTracker > * Deleted 7 particles, remaining 4103 particles
-ParallelTTracker > * Deleted 8 particles, remaining 4095 particles
-ParallelTTracker > * Deleted 5 particles, remaining 4090 particles
-ParallelTTracker > * Deleted 10 particles, remaining 4080 particles
-ParallelTTracker > * Deleted 7 particles, remaining 4073 particles
-ParallelTTracker > * Deleted 3 particles, remaining 4070 particles
-ParallelTTracker > * Deleted 2 particles, remaining 4068 particles
-ParallelTTracker > * Deleted 4 particles, remaining 4064 particles
-ParallelTTracker > * Deleted 9 particles, remaining 4055 particles
-ParallelTTracker > * Deleted 4 particles, remaining 4051 particles
-ParallelTTracker > * Deleted 3 particles, remaining 4048 particles
-ParallelTTracker > * Deleted 4 particles, remaining 4044 particles
-ParallelTTracker > * Deleted 7 particles, remaining 4037 particles
-ParallelTTracker > * Deleted 2 particles, remaining 4035 particles
+ParallelTTracker > * Deleted 3 particles, remaining 28892 particles
+ParallelTTracker > * Deleted 1 particles, remaining 28891 particles
+ParallelTTracker > * Deleted 4 particles, remaining 28887 particles
+ParallelTTracker > * Deleted 5 particles, remaining 28882 particles
+ParallelTTracker > * Deleted 4 particles, remaining 28878 particles
+ParallelTTracker > * Deleted 1 particles, remaining 28877 particles
+ParallelTTracker > * Deleted 2 particles, remaining 28875 particles
+ParallelTTracker > * Deleted 3 particles, remaining 28872 particles
+ParallelTTracker > * Deleted 7 particles, remaining 28865 particles
+ParallelTTracker > * Deleted 6 particles, remaining 28859 particles
+ParallelTTracker > * Deleted 5 particles, remaining 28854 particles
+ParallelTTracker > * Deleted 9 particles, remaining 28845 particles
+ParallelTTracker > * Deleted 9 particles, remaining 28836 particles
+ParallelTTracker > * Deleted 4 particles, remaining 28832 particles
+ParallelTTracker > * Deleted 11 particles, remaining 28821 particles
+ParallelTTracker > * Deleted 9 particles, remaining 28812 particles
+ParallelTTracker > * Deleted 14 particles, remaining 28798 particles
+ParallelTTracker > * Deleted 10 particles, remaining 28788 particles
+ParallelTTracker > * Deleted 11 particles, remaining 28777 particles
+ParallelTTracker > * Deleted 7 particles, remaining 28770 particles
+ParallelTTracker > * Deleted 11 particles, remaining 28759 particles
+ParallelTTracker > * Deleted 11 particles, remaining 28748 particles
+ParallelTTracker > * Deleted 15 particles, remaining 28733 particles
+ParallelTTracker > * Deleted 6 particles, remaining 28727 particles
+ParallelTTracker > * Deleted 15 particles, remaining 28712 particles
+ParallelTTracker > * Deleted 13 particles, remaining 28699 particles
+ParallelTTracker > * Deleted 9 particles, remaining 28690 particles
+ParallelTTracker > * Deleted 12 particles, remaining 28678 particles
+ParallelTTracker > * Deleted 16 particles, remaining 28662 particles
+ParallelTTracker > * Deleted 9 particles, remaining 28653 particles
+ParallelTTracker > * Deleted 15 particles, remaining 28638 particles
+ParallelTTracker > * Deleted 12 particles, remaining 28626 particles
+ParallelTTracker > * Deleted 11 particles, remaining 28615 particles
+ParallelTTracker > * Deleted 13 particles, remaining 28602 particles
+ParallelTTracker > * Deleted 14 particles, remaining 28588 particles
+ParallelTTracker > * Deleted 14 particles, remaining 28574 particles
+ParallelTTracker > * Deleted 17 particles, remaining 28557 particles
+ParallelTTracker > * Deleted 24 particles, remaining 28533 particles
+ParallelTTracker > * Deleted 24 particles, remaining 28509 particles
+ParallelTTracker > * Deleted 14 particles, remaining 28495 particles
+ParallelTTracker > * Deleted 27 particles, remaining 28468 particles
+ParallelTTracker > * Deleted 31 particles, remaining 28437 particles
+ParallelTTracker > * Deleted 28 particles, remaining 28409 particles
+ParallelTTracker > 21:49:11 Step   1999 at 5.333 [m], t= 47.316 [ns], E=74.011 [MeV]
+ParallelTTracker > * Deleted 31 particles, remaining 28378 particles
+ParallelTTracker > * Deleted 29 particles, remaining 28349 particles
+ParallelTTracker > * Deleted 26 particles, remaining 28323 particles
+ParallelTTracker > * Deleted 31 particles, remaining 28292 particles
+ParallelTTracker > * Deleted 38 particles, remaining 28254 particles
+ParallelTTracker > * Deleted 30 particles, remaining 28224 particles
+ParallelTTracker > * Deleted 46 particles, remaining 28178 particles
+ParallelTTracker > * Deleted 33 particles, remaining 28145 particles
+ParallelTTracker > * Deleted 47 particles, remaining 28098 particles
+ParallelTTracker > * Deleted 49 particles, remaining 28049 particles
+ParallelTTracker > * Deleted 27 particles, remaining 28022 particles
+ParallelTTracker > * Deleted 34 particles, remaining 27988 particles
+ParallelTTracker > * Deleted 34 particles, remaining 27954 particles
+ParallelTTracker > * Deleted 53 particles, remaining 27901 particles
+ParallelTTracker > * Deleted 59 particles, remaining 27842 particles
+ParallelTTracker > * Deleted 47 particles, remaining 27795 particles
+ParallelTTracker > * Deleted 59 particles, remaining 27736 particles
+ParallelTTracker > * Deleted 57 particles, remaining 27679 particles
+ParallelTTracker > * Deleted 55 particles, remaining 27624 particles
+ParallelTTracker > * Deleted 54 particles, remaining 27570 particles
+ParallelTTracker > * Deleted 66 particles, remaining 27504 particles
+ParallelTTracker > * Deleted 69 particles, remaining 27435 particles
+ParallelTTracker > * Deleted 65 particles, remaining 27370 particles
+ParallelTTracker > * Deleted 73 particles, remaining 27297 particles
+ParallelTTracker > * Deleted 67 particles, remaining 27230 particles
+ParallelTTracker > * Deleted 67 particles, remaining 27163 particles
+ParallelTTracker > * Deleted 74 particles, remaining 27089 particles
+ParallelTTracker > * Deleted 76 particles, remaining 27013 particles
+ParallelTTracker > * Deleted 84 particles, remaining 26929 particles
+ParallelTTracker > * Deleted 69 particles, remaining 26860 particles
+ParallelTTracker > * Deleted 76 particles, remaining 26784 particles
+ParallelTTracker > * Deleted 81 particles, remaining 26703 particles
+ParallelTTracker > * Deleted 77 particles, remaining 26626 particles
+ParallelTTracker > * Deleted 97 particles, remaining 26529 particles
+ParallelTTracker > * Deleted 75 particles, remaining 26454 particles
+ParallelTTracker > * Deleted 84 particles, remaining 26370 particles
+ParallelTTracker > * Deleted 99 particles, remaining 26271 particles
+ParallelTTracker > * Deleted 80 particles, remaining 26191 particles
+ParallelTTracker > * Deleted 88 particles, remaining 26103 particles
+ParallelTTracker > * Deleted 93 particles, remaining 26010 particles
+ParallelTTracker > * Deleted 82 particles, remaining 25928 particles
+ParallelTTracker > * Deleted 95 particles, remaining 25833 particles
+ParallelTTracker > * Deleted 102 particles, remaining 25731 particles
+ParallelTTracker > * Deleted 100 particles, remaining 25631 particles
+ParallelTTracker > * Deleted 111 particles, remaining 25520 particles
+ParallelTTracker > * Deleted 103 particles, remaining 25417 particles
+ParallelTTracker > * Deleted 112 particles, remaining 25305 particles
+ParallelTTracker > * Deleted 120 particles, remaining 25185 particles
+ParallelTTracker > * Deleted 97 particles, remaining 25088 particles
+ParallelTTracker > * Deleted 106 particles, remaining 24982 particles
+ParallelTTracker > * Deleted 112 particles, remaining 24870 particles
+ParallelTTracker > * Deleted 102 particles, remaining 24768 particles
+ParallelTTracker > * Deleted 118 particles, remaining 24650 particles
+ParallelTTracker > * Deleted 120 particles, remaining 24530 particles
+ParallelTTracker > * Deleted 118 particles, remaining 24412 particles
+ParallelTTracker > * Deleted 113 particles, remaining 24299 particles
+ParallelTTracker > * Deleted 104 particles, remaining 24195 particles
+ParallelTTracker > * Deleted 119 particles, remaining 24076 particles
+ParallelTTracker > * Deleted 130 particles, remaining 23946 particles
+ParallelTTracker > * Deleted 116 particles, remaining 23830 particles
+ParallelTTracker > * Deleted 127 particles, remaining 23703 particles
+ParallelTTracker > * Deleted 126 particles, remaining 23577 particles
+ParallelTTracker > * Deleted 118 particles, remaining 23459 particles
+ParallelTTracker > * Deleted 108 particles, remaining 23351 particles
+ParallelTTracker > * Deleted 146 particles, remaining 23205 particles
+ParallelTTracker > * Deleted 114 particles, remaining 23091 particles
+ParallelTTracker > * Deleted 156 particles, remaining 22935 particles
+ParallelTTracker > * Deleted 113 particles, remaining 22822 particles
+ParallelTTracker > * Deleted 117 particles, remaining 22705 particles
+ParallelTTracker > * Deleted 101 particles, remaining 22604 particles
+ParallelTTracker > * Deleted 127 particles, remaining 22477 particles
+ParallelTTracker > * Deleted 143 particles, remaining 22334 particles
+ParallelTTracker > * Deleted 111 particles, remaining 22223 particles
+ParallelTTracker > * Deleted 140 particles, remaining 22083 particles
+ParallelTTracker > * Deleted 124 particles, remaining 21959 particles
+ParallelTTracker > * Deleted 127 particles, remaining 21832 particles
+ParallelTTracker > * Deleted 117 particles, remaining 21715 particles
+ParallelTTracker > * Deleted 111 particles, remaining 21604 particles
+ParallelTTracker > * Deleted 138 particles, remaining 21466 particles
+ParallelTTracker > * Deleted 136 particles, remaining 21330 particles
+ParallelTTracker > * Deleted 130 particles, remaining 21200 particles
+ParallelTTracker > * Deleted 140 particles, remaining 21060 particles
+ParallelTTracker > * Deleted 120 particles, remaining 20940 particles
+ParallelTTracker > * Deleted 128 particles, remaining 20812 particles
+ParallelTTracker > * Deleted 113 particles, remaining 20699 particles
+ParallelTTracker > * Deleted 114 particles, remaining 20585 particles
+ParallelTTracker > * Deleted 118 particles, remaining 20467 particles
+ParallelTTracker > * Deleted 131 particles, remaining 20336 particles
+ParallelTTracker > * Deleted 114 particles, remaining 20222 particles
+ParallelTTracker > * Deleted 124 particles, remaining 20098 particles
+ParallelTTracker > * Deleted 118 particles, remaining 19980 particles
+ParallelTTracker > * Deleted 137 particles, remaining 19843 particles
+ParallelTTracker > * Deleted 119 particles, remaining 19724 particles
+ParallelTTracker > * Deleted 113 particles, remaining 19611 particles
+ParallelTTracker > * Deleted 122 particles, remaining 19489 particles
+ParallelTTracker > * Deleted 122 particles, remaining 19367 particles
+ParallelTTracker > * Deleted 97 particles, remaining 19270 particles
+ParallelTTracker > * Deleted 106 particles, remaining 19164 particles
+ParallelTTracker > * Deleted 103 particles, remaining 19061 particles
+ParallelTTracker > * Deleted 105 particles, remaining 18956 particles
+ParallelTTracker > * Deleted 101 particles, remaining 18855 particles
+ParallelTTracker > * Deleted 112 particles, remaining 18743 particles
+ParallelTTracker > * Deleted 128 particles, remaining 18615 particles
+ParallelTTracker > * Deleted 102 particles, remaining 18513 particles
+ParallelTTracker > * Deleted 106 particles, remaining 18407 particles
+ParallelTTracker > * Deleted 92 particles, remaining 18315 particles
+ParallelTTracker > * Deleted 101 particles, remaining 18214 particles
+ParallelTTracker > * Deleted 75 particles, remaining 18139 particles
+ParallelTTracker > * Deleted 98 particles, remaining 18041 particles
+ParallelTTracker > * Deleted 107 particles, remaining 17934 particles
+ParallelTTracker > * Deleted 94 particles, remaining 17840 particles
+ParallelTTracker > * Deleted 95 particles, remaining 17745 particles
+ParallelTTracker > * Deleted 97 particles, remaining 17648 particles
+ParallelTTracker > * Deleted 101 particles, remaining 17547 particles
+ParallelTTracker > * Deleted 95 particles, remaining 17452 particles
+ParallelTTracker > * Deleted 77 particles, remaining 17375 particles
+ParallelTTracker > * Deleted 64 particles, remaining 17311 particles
+ParallelTTracker > * Deleted 106 particles, remaining 17205 particles
+ParallelTTracker > * Deleted 90 particles, remaining 17115 particles
+ParallelTTracker > * Deleted 79 particles, remaining 17036 particles
+ParallelTTracker > * Deleted 86 particles, remaining 16950 particles
+ParallelTTracker > * Deleted 78 particles, remaining 16872 particles
+ParallelTTracker > * Deleted 70 particles, remaining 16802 particles
+ParallelTTracker > * Deleted 77 particles, remaining 16725 particles
+ParallelTTracker > * Deleted 80 particles, remaining 16645 particles
+ParallelTTracker > * Deleted 77 particles, remaining 16568 particles
+ParallelTTracker > * Deleted 71 particles, remaining 16497 particles
+ParallelTTracker > * Deleted 71 particles, remaining 16426 particles
+ParallelTTracker > * Deleted 73 particles, remaining 16353 particles
+ParallelTTracker > * Deleted 71 particles, remaining 16282 particles
+ParallelTTracker > * Deleted 70 particles, remaining 16212 particles
+ParallelTTracker > * Deleted 69 particles, remaining 16143 particles
+ParallelTTracker > * Deleted 63 particles, remaining 16080 particles
+ParallelTTracker > * Deleted 67 particles, remaining 16013 particles
+ParallelTTracker > * Deleted 70 particles, remaining 15943 particles
+ParallelTTracker > * Deleted 80 particles, remaining 15863 particles
+ParallelTTracker > * Deleted 57 particles, remaining 15806 particles
+ParallelTTracker > * Deleted 69 particles, remaining 15737 particles
+ParallelTTracker > * Deleted 60 particles, remaining 15677 particles
+ParallelTTracker > * Deleted 67 particles, remaining 15610 particles
+ParallelTTracker > * Deleted 65 particles, remaining 15545 particles
+ParallelTTracker > * Deleted 57 particles, remaining 15488 particles
+ParallelTTracker > * Deleted 50 particles, remaining 15438 particles
+ParallelTTracker > * Deleted 64 particles, remaining 15374 particles
+ParallelTTracker > * Deleted 53 particles, remaining 15321 particles
+ParallelTTracker > * Deleted 56 particles, remaining 15265 particles
+ParallelTTracker > * Deleted 62 particles, remaining 15203 particles
+ParallelTTracker > * Deleted 58 particles, remaining 15145 particles
+ParallelTTracker > * Deleted 55 particles, remaining 15090 particles
+ParallelTTracker > * Deleted 60 particles, remaining 15030 particles
+ParallelTTracker > * Deleted 65 particles, remaining 14965 particles
+ParallelTTracker > * Deleted 51 particles, remaining 14914 particles
+ParallelTTracker > * Deleted 72 particles, remaining 14842 particles
+ParallelTTracker > * Deleted 61 particles, remaining 14781 particles
+ParallelTTracker > * Deleted 56 particles, remaining 14725 particles
+ParallelTTracker > * Deleted 57 particles, remaining 14668 particles
+ParallelTTracker > * Deleted 73 particles, remaining 14595 particles
+ParallelTTracker > * Deleted 62 particles, remaining 14533 particles
+ParallelTTracker > * Deleted 60 particles, remaining 14473 particles
+ParallelTTracker > * Deleted 46 particles, remaining 14427 particles
+ParallelTTracker > * Deleted 61 particles, remaining 14366 particles
+ParallelTTracker > * Deleted 52 particles, remaining 14314 particles
+ParallelTTracker > * Deleted 74 particles, remaining 14240 particles
+ParallelTTracker > * Deleted 55 particles, remaining 14185 particles
+ParallelTTracker > * Deleted 61 particles, remaining 14124 particles
+ParallelTTracker > * Deleted 75 particles, remaining 14049 particles
+ParallelTTracker > * Deleted 69 particles, remaining 13980 particles
+ParallelTTracker > * Deleted 63 particles, remaining 13917 particles
+ParallelTTracker > * Deleted 72 particles, remaining 13845 particles
+ParallelTTracker > * Deleted 56 particles, remaining 13789 particles
+ParallelTTracker > * Deleted 76 particles, remaining 13713 particles
+ParallelTTracker > * Deleted 84 particles, remaining 13629 particles
+ParallelTTracker > * Deleted 72 particles, remaining 13557 particles
+ParallelTTracker > * Deleted 90 particles, remaining 13467 particles
+ParallelTTracker > * Deleted 85 particles, remaining 13382 particles
+ParallelTTracker > * Deleted 63 particles, remaining 13319 particles
+ParallelTTracker > * Deleted 84 particles, remaining 13235 particles
+ParallelTTracker > * Deleted 75 particles, remaining 13160 particles
+ParallelTTracker > * Deleted 85 particles, remaining 13075 particles
+ParallelTTracker > * Deleted 71 particles, remaining 13004 particles
+ParallelTTracker > * Deleted 54 particles, remaining 12950 particles
+ParallelTTracker > * Deleted 79 particles, remaining 12871 particles
+ParallelTTracker > * Deleted 72 particles, remaining 12799 particles
+ParallelTTracker > * Deleted 63 particles, remaining 12736 particles
+ParallelTTracker > * Deleted 74 particles, remaining 12662 particles
+ParallelTTracker > * Deleted 70 particles, remaining 12592 particles
+ParallelTTracker > * Deleted 77 particles, remaining 12515 particles
+ParallelTTracker > * Deleted 86 particles, remaining 12429 particles
+ParallelTTracker > * Deleted 91 particles, remaining 12338 particles
+ParallelTTracker > * Deleted 91 particles, remaining 12247 particles
+ParallelTTracker > * Deleted 76 particles, remaining 12171 particles
+ParallelTTracker > * Deleted 81 particles, remaining 12090 particles
+ParallelTTracker > * Deleted 89 particles, remaining 12001 particles
+ParallelTTracker > * Deleted 86 particles, remaining 11915 particles
+ParallelTTracker > * Deleted 82 particles, remaining 11833 particles
+ParallelTTracker > * Deleted 101 particles, remaining 11732 particles
+ParallelTTracker > * Deleted 91 particles, remaining 11641 particles
+ParallelTTracker > * Deleted 88 particles, remaining 11553 particles
+ParallelTTracker > * Deleted 81 particles, remaining 11472 particles
+ParallelTTracker > * Deleted 82 particles, remaining 11390 particles
+ParallelTTracker > * Deleted 90 particles, remaining 11300 particles
+ParallelTTracker > * Deleted 82 particles, remaining 11218 particles
+ParallelTTracker > * Deleted 80 particles, remaining 11138 particles
+ParallelTTracker > * Deleted 93 particles, remaining 11045 particles
+ParallelTTracker > * Deleted 98 particles, remaining 10947 particles
+ParallelTTracker > * Deleted 91 particles, remaining 10856 particles
+ParallelTTracker > * Deleted 90 particles, remaining 10766 particles
+ParallelTTracker > * Deleted 81 particles, remaining 10685 particles
+ParallelTTracker > * Deleted 81 particles, remaining 10604 particles
+ParallelTTracker > * Deleted 88 particles, remaining 10516 particles
+ParallelTTracker > * Deleted 87 particles, remaining 10429 particles
+ParallelTTracker > * Deleted 90 particles, remaining 10339 particles
+ParallelTTracker > * Deleted 105 particles, remaining 10234 particles
+ParallelTTracker > * Deleted 95 particles, remaining 10139 particles
+ParallelTTracker > * Deleted 77 particles, remaining 10062 particles
+ParallelTTracker > * Deleted 90 particles, remaining 9972 particles
+ParallelTTracker > * Deleted 79 particles, remaining 9893 particles
+ParallelTTracker > * Deleted 94 particles, remaining 9799 particles
+ParallelTTracker > * Deleted 97 particles, remaining 9702 particles
+ParallelTTracker > * Deleted 97 particles, remaining 9605 particles
+ParallelTTracker > * Deleted 93 particles, remaining 9512 particles
+ParallelTTracker > * Deleted 85 particles, remaining 9427 particles
+ParallelTTracker > * Deleted 94 particles, remaining 9333 particles
+ParallelTTracker > * Deleted 92 particles, remaining 9241 particles
+ParallelTTracker > * Deleted 96 particles, remaining 9145 particles
+ParallelTTracker > * Deleted 90 particles, remaining 9055 particles
+ParallelTTracker > * Deleted 104 particles, remaining 8951 particles
+ParallelTTracker > * Deleted 92 particles, remaining 8859 particles
+ParallelTTracker > * Deleted 94 particles, remaining 8765 particles
+ParallelTTracker > * Deleted 87 particles, remaining 8678 particles
+ParallelTTracker > * Deleted 102 particles, remaining 8576 particles
+ParallelTTracker > * Deleted 93 particles, remaining 8483 particles
+ParallelTTracker > * Deleted 90 particles, remaining 8393 particles
+ParallelTTracker > * Deleted 71 particles, remaining 8322 particles
+ParallelTTracker > * Deleted 93 particles, remaining 8229 particles
+ParallelTTracker > * Deleted 82 particles, remaining 8147 particles
+ParallelTTracker > * Deleted 93 particles, remaining 8054 particles
+ParallelTTracker > * Deleted 84 particles, remaining 7970 particles
+ParallelTTracker > * Deleted 92 particles, remaining 7878 particles
+ParallelTTracker > * Deleted 85 particles, remaining 7793 particles
+ParallelTTracker > * Deleted 89 particles, remaining 7704 particles
+ParallelTTracker > * Deleted 89 particles, remaining 7615 particles
+ParallelTTracker > * Deleted 90 particles, remaining 7525 particles
+ParallelTTracker > * Deleted 76 particles, remaining 7449 particles
+ParallelTTracker > * Deleted 77 particles, remaining 7372 particles
+ParallelTTracker > * Deleted 73 particles, remaining 7299 particles
+ParallelTTracker > * Deleted 95 particles, remaining 7204 particles
+ParallelTTracker > * Deleted 66 particles, remaining 7138 particles
+ParallelTTracker > * Deleted 78 particles, remaining 7060 particles
+ParallelTTracker > * Deleted 85 particles, remaining 6975 particles
+ParallelTTracker > * Deleted 69 particles, remaining 6906 particles
+ParallelTTracker > * Deleted 83 particles, remaining 6823 particles
+ParallelTTracker > * Deleted 80 particles, remaining 6743 particles
+ParallelTTracker > * Deleted 77 particles, remaining 6666 particles
+ParallelTTracker > * Deleted 73 particles, remaining 6593 particles
+ParallelTTracker > * Deleted 65 particles, remaining 6528 particles
+ParallelTTracker > * Deleted 72 particles, remaining 6456 particles
+ParallelTTracker > * Deleted 62 particles, remaining 6394 particles
+ParallelTTracker > * Deleted 73 particles, remaining 6321 particles
+ParallelTTracker > * Deleted 65 particles, remaining 6256 particles
+ParallelTTracker > * Deleted 71 particles, remaining 6185 particles
+ParallelTTracker > * Deleted 71 particles, remaining 6114 particles
+ParallelTTracker > * Deleted 57 particles, remaining 6057 particles
+ParallelTTracker > * Deleted 67 particles, remaining 5990 particles
+ParallelTTracker > * Deleted 63 particles, remaining 5927 particles
+ParallelTTracker > * Deleted 52 particles, remaining 5875 particles
+ParallelTTracker > * Deleted 55 particles, remaining 5820 particles
+ParallelTTracker > * Deleted 67 particles, remaining 5753 particles
+ParallelTTracker > * Deleted 56 particles, remaining 5697 particles
+ParallelTTracker > * Deleted 54 particles, remaining 5643 particles
+ParallelTTracker > * Deleted 52 particles, remaining 5591 particles
+ParallelTTracker > * Deleted 55 particles, remaining 5536 particles
+ParallelTTracker > * Deleted 46 particles, remaining 5490 particles
+ParallelTTracker > * Deleted 43 particles, remaining 5447 particles
+ParallelTTracker > * Deleted 42 particles, remaining 5405 particles
+ParallelTTracker > * Deleted 49 particles, remaining 5356 particles
+ParallelTTracker > * Deleted 54 particles, remaining 5302 particles
+ParallelTTracker > * Deleted 42 particles, remaining 5260 particles
+ParallelTTracker > * Deleted 39 particles, remaining 5221 particles
+ParallelTTracker > * Deleted 50 particles, remaining 5171 particles
+ParallelTTracker > * Deleted 36 particles, remaining 5135 particles
+ParallelTTracker > * Deleted 43 particles, remaining 5092 particles
+ParallelTTracker > * Deleted 55 particles, remaining 5037 particles
+ParallelTTracker > * Deleted 35 particles, remaining 5002 particles
+ParallelTTracker > * Deleted 35 particles, remaining 4967 particles
+ParallelTTracker > * Deleted 34 particles, remaining 4933 particles
+ParallelTTracker > * Deleted 29 particles, remaining 4904 particles
+ParallelTTracker > * Deleted 36 particles, remaining 4868 particles
+ParallelTTracker > * Deleted 29 particles, remaining 4839 particles
+ParallelTTracker > * Deleted 24 particles, remaining 4815 particles
+ParallelTTracker > * Deleted 26 particles, remaining 4789 particles
+ParallelTTracker > * Deleted 25 particles, remaining 4764 particles
+ParallelTTracker > * Deleted 26 particles, remaining 4738 particles
+ParallelTTracker > * Deleted 21 particles, remaining 4717 particles
+ParallelTTracker > * Deleted 32 particles, remaining 4685 particles
+ParallelTTracker > * Deleted 32 particles, remaining 4653 particles
+ParallelTTracker > * Deleted 20 particles, remaining 4633 particles
+ParallelTTracker > * Deleted 25 particles, remaining 4608 particles
+ParallelTTracker > * Deleted 29 particles, remaining 4579 particles
+ParallelTTracker > * Deleted 27 particles, remaining 4552 particles
+ParallelTTracker > * Deleted 35 particles, remaining 4517 particles
+ParallelTTracker > * Deleted 15 particles, remaining 4502 particles
+ParallelTTracker > * Deleted 23 particles, remaining 4479 particles
+ParallelTTracker > * Deleted 16 particles, remaining 4463 particles
+ParallelTTracker > * Deleted 29 particles, remaining 4434 particles
+ParallelTTracker > * Deleted 18 particles, remaining 4416 particles
+ParallelTTracker > * Deleted 15 particles, remaining 4401 particles
+ParallelTTracker > * Deleted 16 particles, remaining 4385 particles
+ParallelTTracker > * Deleted 9 particles, remaining 4376 particles
+ParallelTTracker > * Deleted 13 particles, remaining 4363 particles
+ParallelTTracker > * Deleted 12 particles, remaining 4351 particles
+ParallelTTracker > * Deleted 15 particles, remaining 4336 particles
+ParallelTTracker > * Deleted 18 particles, remaining 4318 particles
+ParallelTTracker > * Deleted 15 particles, remaining 4303 particles
+ParallelTTracker > * Deleted 14 particles, remaining 4289 particles
+ParallelTTracker > * Deleted 11 particles, remaining 4278 particles
+ParallelTTracker > * Deleted 7 particles, remaining 4271 particles
+ParallelTTracker > * Deleted 15 particles, remaining 4256 particles
+ParallelTTracker > * Deleted 8 particles, remaining 4248 particles
+ParallelTTracker > * Deleted 17 particles, remaining 4231 particles
+ParallelTTracker > * Deleted 7 particles, remaining 4224 particles
+ParallelTTracker > * Deleted 11 particles, remaining 4213 particles
+ParallelTTracker > * Deleted 11 particles, remaining 4202 particles
+ParallelTTracker > * Deleted 11 particles, remaining 4191 particles
+ParallelTTracker > * Deleted 12 particles, remaining 4179 particles
+ParallelTTracker > * Deleted 13 particles, remaining 4166 particles
+ParallelTTracker > * Deleted 9 particles, remaining 4157 particles
+ParallelTTracker > * Deleted 7 particles, remaining 4150 particles
+ParallelTTracker > * Deleted 9 particles, remaining 4141 particles
+ParallelTTracker > * Deleted 9 particles, remaining 4132 particles
+ParallelTTracker > * Deleted 9 particles, remaining 4123 particles
+ParallelTTracker > * Deleted 5 particles, remaining 4118 particles
+ParallelTTracker > * Deleted 6 particles, remaining 4112 particles
+ParallelTTracker > * Deleted 5 particles, remaining 4107 particles
+ParallelTTracker > * Deleted 8 particles, remaining 4099 particles
+ParallelTTracker > * Deleted 7 particles, remaining 4092 particles
+ParallelTTracker > * Deleted 8 particles, remaining 4084 particles
+ParallelTTracker > * Deleted 7 particles, remaining 4077 particles
+ParallelTTracker > * Deleted 5 particles, remaining 4072 particles
+ParallelTTracker > * Deleted 5 particles, remaining 4067 particles
+ParallelTTracker > * Deleted 2 particles, remaining 4065 particles
+ParallelTTracker > * Deleted 4 particles, remaining 4061 particles
+ParallelTTracker > * Deleted 7 particles, remaining 4054 particles
+ParallelTTracker > * Deleted 1 particles, remaining 4053 particles
+ParallelTTracker > * Deleted 5 particles, remaining 4048 particles
+ParallelTTracker > * Deleted 1 particles, remaining 4047 particles
+ParallelTTracker > * Deleted 7 particles, remaining 4040 particles
+ParallelTTracker > * Deleted 5 particles, remaining 4035 particles
 ParallelTTracker > * Deleted 3 particles, remaining 4032 particles
-ParallelTTracker > * Deleted 2 particles, remaining 4030 particles
-ParallelTTracker > * Deleted 3 particles, remaining 4027 particles
-ParallelTTracker > * Deleted 1 particles, remaining 4026 particles
-ParallelTTracker > * Deleted 2 particles, remaining 4024 particles
-ParallelTTracker > * Deleted 3 particles, remaining 4021 particles
-ParallelTTracker > * Deleted 6 particles, remaining 4015 particles
-ParallelTTracker > * Deleted 2 particles, remaining 4013 particles
-ParallelTTracker > * Deleted 2 particles, remaining 4011 particles
-ParallelTTracker > * Deleted 6 particles, remaining 4005 particles
-ParallelTTracker > * Deleted 1 particles, remaining 4004 particles
-ParallelTTracker > * Deleted 1 particles, remaining 4003 particles
-ParallelTTracker > * Deleted 2 particles, remaining 4001 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3997 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3996 particles
+ParallelTTracker > * Deleted 1 particles, remaining 4031 particles
+ParallelTTracker > * Deleted 4 particles, remaining 4027 particles
+ParallelTTracker > * Deleted 2 particles, remaining 4025 particles
+ParallelTTracker > * Deleted 2 particles, remaining 4023 particles
+ParallelTTracker > * Deleted 2 particles, remaining 4021 particles
+ParallelTTracker > * Deleted 5 particles, remaining 4016 particles
+ParallelTTracker > * Deleted 2 particles, remaining 4014 particles
+ParallelTTracker > * Deleted 3 particles, remaining 4011 particles
+ParallelTTracker > * Deleted 2 particles, remaining 4009 particles
+ParallelTTracker > * Deleted 6 particles, remaining 4003 particles
+ParallelTTracker > * Deleted 1 particles, remaining 4002 particles
+ParallelTTracker > * Deleted 3 particles, remaining 3999 particles
+ParallelTTracker > * Deleted 3 particles, remaining 3996 particles
 ParallelTTracker > * Deleted 2 particles, remaining 3994 particles
 ParallelTTracker > * Deleted 1 particles, remaining 3993 particles
 ParallelTTracker > * Deleted 2 particles, remaining 3991 particles
@@ -742,22 +762,22 @@ OPAL >
 OPAL > * ************** B U N C H ********************************************************* 
 OPAL > * NP              = 3977
 OPAL > * Qtot            =        0.636 [fC]         Qi    =        0.000 [fC]
-OPAL > * Ekin            =      74.096 [MeV]         dEkin =       3.466 [MeV]
+OPAL > * Ekin            =      74.096 [MeV]         dEkin =       3.467 [MeV]
 OPAL > * rmax            = (     18.24771 ,     17.29627 ,     93.99937 ) [mm]
 OPAL > * rmin            = (    -17.06384 ,    -17.44233 ,   -103.35080 ) [mm]
-OPAL > * rms beam size   = (      8.54409 ,      8.49329 ,     29.73972 ) [mm]
-OPAL > * rms momenta     = (  2.45394e-03 ,  2.44182e-03 ,  9.83777e-03 ) [beta gamma]
-OPAL > * mean position   = (      0.09343 ,     -0.19980 ,     -2.11161 ) [mm]
-OPAL > * mean momenta    = (  2.44797e-05 , -5.80549e-05 ,  4.05071e-01 ) [beta gamma]
-OPAL > * rms emittance   = (  9.97491e-06 ,  9.74390e-06 ,  6.80732e-06 ) (not normalized)
-OPAL > * rms correlation = (  9.81244e-01 ,  9.81712e-01 ,  9.99956e-01 )
+OPAL > * rms beam size   = (      8.54504 ,      8.49447 ,     29.74128 ) [mm]
+OPAL > * rms momenta     = (  2.45439e-03 ,  2.44162e-03 ,  9.83827e-03 ) [beta gamma]
+OPAL > * mean position   = (      0.09448 ,     -0.20376 ,     -2.11174 ) [mm]
+OPAL > * mean momenta    = (  2.49481e-05 , -5.94111e-05 ,  4.05071e-01 ) [beta gamma]
+OPAL > * rms emittance   = (  9.97655e-06 ,  9.73739e-06 ,  6.80748e-06 ) (not normalized)
+OPAL > * rms correlation = (  9.81249e-01 ,  9.81739e-01 ,  9.99956e-01 )
 OPAL > * hr              = (    677.37534 ,    677.11936 ,     26.85147 ) [um]
 OPAL > * dh              =   1.00000e-10 [%]
-OPAL > * t               =       49.969 [ns]         dT    =        5.000 [ps]
+OPAL > * t               =       49.971 [ns]         dT    =        5.000 [ps]
 OPAL > * spos            =         5.632 [m]
 OPAL > * ********************************************************************************** 
 OPAL > 
-OPAL> done executing ParallelTTracker at 07:05:44
+OPAL> done executing ParallelTTracker at 21:49:14
 OPAL> * ********************************************************************************** 
 OPAL> * Selected Tracking Method == PARALLEL-T, FOLLOWUP TRACK
 OPAL> * ********************************************************************************** 
@@ -788,52 +808,51 @@ OPAL> * ************************************************************************
 OPAL> 
 OPAL> 
 OPAL> Size of map 7 sections 
-OPAL> Key: (      5.458040-      5.529046) number of overlapping elements 1
-OPAL>                                      D24
-OPAL> Key: (      5.529046-      5.531300) number of overlapping elements 1
-OPAL>                                      KMA5O
-OPAL> Key: (      5.531300-      5.817016) number of overlapping elements 1
-OPAL>                                      D25
-OPAL> Key: (      5.817016-      6.185009) number of overlapping elements 2
-OPAL>                                      QMA4
-OPAL>                                      QMA4_R0
-OPAL> Key: (      6.185009-      6.387320) number of overlapping elements 1
-OPAL>                                      D26
-OPAL> Key: (      6.387320-      6.755313) number of overlapping elements 2
-OPAL>                                      QMA5
-OPAL>                                      QMA5_R0
-OPAL> Key: (      6.755313-      6.846607) number of overlapping elements 1
-OPAL>                                      D27
+OPAL> Key: (5.458040 - 5.529046) number of overlapping elements 1
+OPAL>                            D24
+OPAL> Key: (5.529046 - 5.530737) number of overlapping elements 1
+OPAL>                            KMA5O
+OPAL> Key: (5.530737 - 5.817016) number of overlapping elements 1
+OPAL>                            D25
+OPAL> Key: (5.817016 - 6.185009) number of overlapping elements 2
+OPAL>                            QMA4
+OPAL>                            QMA4_R0
+OPAL> Key: (6.185009 - 6.386757) number of overlapping elements 1
+OPAL>                            D26
+OPAL> Key: (6.386757 - 6.754750) number of overlapping elements 2
+OPAL>                            QMA5
+OPAL>                            QMA5_R0
+OPAL> Key: (6.754750 - 6.846607) number of overlapping elements 1
+OPAL>                            D27
 OPAL> 
 OPAL> 
 OPAL> * ************** B U N C H ********************************************************* 
 OPAL> * NP              = 3977
 OPAL> * Qtot            =        0.636 [fC]         Qi    =        0.000 [fC]
-OPAL> * Ekin            =      74.096 [MeV]         dEkin =       3.466 [MeV]
+OPAL> * Ekin            =      74.096 [MeV]         dEkin =       3.467 [MeV]
 OPAL> * rmax            = (     18.24771 ,     17.29627 ,     93.99937 ) [mm]
 OPAL> * rmin            = (    -17.06384 ,    -17.44233 ,   -103.35080 ) [mm]
-OPAL> * rms beam size   = (      8.54409 ,      8.49329 ,     29.73972 ) [mm]
-OPAL> * rms momenta     = (  2.45394e-03 ,  2.44182e-03 ,  9.83777e-03 ) [beta gamma]
-OPAL> * mean position   = (      0.09343 ,     -0.19980 ,     -2.11161 ) [mm]
-OPAL> * mean momenta    = (  2.44797e-05 , -5.80549e-05 ,  4.05071e-01 ) [beta gamma]
-OPAL> * rms emittance   = (  9.97491e-06 ,  9.74390e-06 ,  6.80732e-06 ) (not normalized)
-OPAL> * rms correlation = (  9.81244e-01 ,  9.81712e-01 ,  9.99956e-01 )
+OPAL> * rms beam size   = (      8.54504 ,      8.49447 ,     29.74128 ) [mm]
+OPAL> * rms momenta     = (  2.45439e-03 ,  2.44162e-03 ,  9.83827e-03 ) [beta gamma]
+OPAL> * mean position   = (      0.09448 ,     -0.20376 ,     -2.11174 ) [mm]
+OPAL> * mean momenta    = (  2.49481e-05 , -5.94111e-05 ,  4.05071e-01 ) [beta gamma]
+OPAL> * rms emittance   = (  9.97655e-06 ,  9.73739e-06 ,  6.80748e-06 ) (not normalized)
+OPAL> * rms correlation = (  9.81249e-01 ,  9.81739e-01 ,  9.99956e-01 )
 OPAL> * hr              = (    677.37534 ,    677.11936 ,     26.85147 ) [um]
 OPAL> * dh              =   1.00000e-10 [%]
-OPAL> * t               =       49.969 [ns]         dT    =        5.000 [ps]
+OPAL> * t               =       49.971 [ns]         dT    =        5.000 [ps]
 OPAL> * spos            =         5.632 [m]
 OPAL> * ********************************************************************************** 
 OPAL> 
-OPAL> Track start at: 07:05:44, t= 49.969 [ns]; zstart at: 5.632 [m]
+OPAL> Track start at: 21:49:14, t= 49.971 [ns]; zstart at: 5.632 [m]
 OPAL> Executing ParallelTTracker, initial dt= 5.000 [ps];
 OPAL> max integration steps 2154, next step= 2531
-ParallelTTracker > 07:05:45 Step   2999 at 5.896 [m], t= 52.314 [ns], E=74.096 [MeV]
+ParallelTTracker > 21:49:14 Step   2999 at 5.896 [m], t= 52.316 [ns], E=74.096 [MeV]
 ParallelTTracker > * Deleted 1 particles, remaining 3976 particles
-ParallelTTracker > 07:05:46 Step   3999 at 6.460 [m], t= 57.314 [ns], E=74.093 [MeV]
+ParallelTTracker > 21:49:16 Step   3999 at 6.460 [m], t= 57.316 [ns], E=74.093 [MeV]
 ParallelTTracker > * Deleted 1 particles, remaining 3975 particles
 ParallelTTracker > * Deleted 1 particles, remaining 3974 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3973 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3972 particles
+ParallelTTracker > * Deleted 2 particles, remaining 3972 particles
 ParallelTTracker > * Deleted 1 particles, remaining 3971 particles
 ParallelTTracker > * Deleted 1 particles, remaining 3970 particles
 ParallelTTracker > * Deleted 1 particles, remaining 3969 particles
@@ -843,10 +862,8 @@ ParallelTTracker > * Deleted 1 particles, remaining 3966 particles
 ParallelTTracker > * Deleted 1 particles, remaining 3965 particles
 ParallelTTracker > * Deleted 1 particles, remaining 3964 particles
 ParallelTTracker > * Deleted 1 particles, remaining 3963 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3962 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3961 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3960 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3959 particles
+ParallelTTracker > * Deleted 2 particles, remaining 3961 particles
+ParallelTTracker > * Deleted 2 particles, remaining 3959 particles
 ParallelTTracker > * Deleted 1 particles, remaining 3958 particles
 ParallelTTracker > * Deleted 1 particles, remaining 3957 particles
 ParallelTTracker > * Deleted 1 particles, remaining 3956 particles
@@ -857,63 +874,63 @@ ParallelTTracker > * Deleted 1 particles, remaining 3952 particles
 ParallelTTracker > * Deleted 1 particles, remaining 3951 particles
 ParallelTTracker > * Deleted 1 particles, remaining 3950 particles
 ParallelTTracker > * Deleted 1 particles, remaining 3949 particles
-ParallelTTracker > * Deleted 2 particles, remaining 3947 particles
+ParallelTTracker > * Deleted 1 particles, remaining 3948 particles
+ParallelTTracker > * Deleted 1 particles, remaining 3947 particles
 ParallelTTracker > * Deleted 1 particles, remaining 3946 particles
 ParallelTTracker > * Deleted 1 particles, remaining 3945 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3944 particles
 OPAL > 
 OPAL > * ************** B U N C H ********************************************************* 
-OPAL > * NP              = 3944
+OPAL > * NP              = 3945
 OPAL > * Qtot            =        0.631 [fC]         Qi    =        0.000 [fC]
 OPAL > * Ekin            =      74.100 [MeV]         dEkin =       3.467 [MeV]
-OPAL > * rmax            = (     45.22183 ,     12.43430 ,    173.89421 ) [mm]
-OPAL > * rmin            = (    -45.50806 ,    -11.85647 ,   -191.31191 ) [mm]
-OPAL > * rms beam size   = (     22.90562 ,      4.96995 ,     55.04982 ) [mm]
-OPAL > * rms momenta     = (  2.26829e-03 ,  1.01841e-03 ,  9.84056e-03 ) [beta gamma]
-OPAL > * mean position   = (      0.13948 ,     -0.11337 ,     -3.96666 ) [mm]
-OPAL > * mean momenta    = ( -8.06529e-06 ,  1.63149e-05 ,  4.05090e-01 ) [beta gamma]
-OPAL > * rms emittance   = (  1.64333e-05 ,  1.01610e-05 ,  1.10590e-05 ) (not normalized)
-OPAL > * rms correlation = ( -9.91753e-01 , -5.81636e-01 ,  9.99966e-01 )
+OPAL > * rmax            = (     45.20537 ,     12.43567 ,    173.89377 ) [mm]
+OPAL > * rmin            = (    -45.50932 ,    -11.85760 ,   -191.31193 ) [mm]
+OPAL > * rms beam size   = (     22.91389 ,      4.96881 ,     55.04705 ) [mm]
+OPAL > * rms momenta     = (  2.26969e-03 ,  1.01826e-03 ,  9.84004e-03 ) [beta gamma]
+OPAL > * mean position   = (      0.15401 ,     -0.11627 ,     -3.96097 ) [mm]
+OPAL > * mean momenta    = ( -9.35258e-06 ,  1.66679e-05 ,  4.05091e-01 ) [beta gamma]
+OPAL > * rms emittance   = (  1.64220e-05 ,  1.01575e-05 ,  1.10568e-05 ) (not normalized)
+OPAL > * rms correlation = ( -9.91781e-01 , -5.81599e-01 ,  9.99966e-01 )
 OPAL > * hr              = (    677.37534 ,    677.11936 ,     26.85147 ) [um]
 OPAL > * dh              =   1.00000e-10 [%]
-OPAL > * t               =       60.739 [ns]         dT    =        5.000 [ps]
+OPAL > * t               =       60.741 [ns]         dT    =        5.000 [ps]
 OPAL > * spos            =         6.846 [m]
 OPAL > * ********************************************************************************** 
 OPAL > 
-OPAL> done executing ParallelTTracker at 07:05:47
+OPAL> done executing ParallelTTracker at 21:49:18
 OPAL> * End of input stream "PROSCAN-1.in".
 Timings> -----------------------------------------------------------------
 Timings>      Timing results for 1 nodes:
 Timings> -----------------------------------------------------------------
-Timings> mainTimer........... Wall tot =     18.516, CPU tot =      17.96
+Timings> mainTimer........... Wall tot =    22.0856, CPU tot =      21.78
 Timings> 
 Timings> Binaryrepart........ Wall max =          0, CPU max =          0
 Timings>                      Wall avg =          0, CPU avg =          0
 Timings>                      Wall min =          0, CPU min =          0
 Timings> 
-Timings> Boundingbox......... Wall max =   0.002467, CPU max =          0
-Timings>                      Wall avg =   0.002467, CPU avg =          0
-Timings>                      Wall min =   0.002467, CPU min =          0
+Timings> Boundingbox......... Wall max =   0.002682, CPU max =          0
+Timings>                      Wall avg =   0.002682, CPU avg =          0
+Timings>                      Wall min =   0.002682, CPU min =          0
 Timings> 
-Timings> Boundingbox-bounds.. Wall max =   0.001047, CPU max =          0
-Timings>                      Wall avg =   0.001047, CPU avg =          0
-Timings>                      Wall min =   0.001047, CPU min =          0
+Timings> Boundingbox-bounds.. Wall max =   0.000922, CPU max =          0
+Timings>                      Wall avg =   0.000922, CPU avg =          0
+Timings>                      Wall min =   0.000922, CPU min =          0
 Timings> 
-Timings> Boundingbox-update.. Wall max =   0.001366, CPU max =          0
-Timings>                      Wall avg =   0.001366, CPU avg =          0
-Timings>                      Wall min =   0.001366, CPU min =          0
+Timings> Boundingbox-update.. Wall max =   0.001721, CPU max =          0
+Timings>                      Wall avg =   0.001721, CPU avg =          0
+Timings>                      Wall min =   0.001721, CPU min =          0
 Timings> 
-Timings> Compute Statistics.. Wall max =    0.59822, CPU max =       0.69
-Timings>                      Wall avg =    0.59822, CPU avg =       0.69
-Timings>                      Wall min =    0.59822, CPU min =       0.69
+Timings> Compute Statistics.. Wall max =   0.729851, CPU max =       0.76
+Timings>                      Wall avg =   0.729851, CPU avg =       0.76
+Timings>                      Wall min =   0.729851, CPU min =       0.76
 Timings> 
-Timings> Create Distr........ Wall max =   0.205892, CPU max =        0.2
-Timings>                      Wall avg =   0.205892, CPU avg =        0.2
-Timings>                      Wall min =   0.205892, CPU min =        0.2
+Timings> Create Distr........ Wall max =   0.248591, CPU max =       0.25
+Timings>                      Wall avg =   0.248591, CPU avg =       0.25
+Timings>                      Wall min =   0.248591, CPU min =       0.25
 Timings> 
-Timings> External field eval. Wall max =      9.349, CPU max =       9.17
-Timings>                      Wall avg =      9.349, CPU avg =       9.17
-Timings>                      Wall min =      9.349, CPU min =       9.17
+Timings> External field eval. Wall max =    11.4368, CPU max =      10.99
+Timings>                      Wall avg =    11.4368, CPU avg =      10.99
+Timings>                      Wall min =    11.4368, CPU min =      10.99
 Timings> 
 Timings> Fast inside test.... Wall max =          0, CPU max =          0
 Timings>                      Wall avg =          0, CPU avg =          0
@@ -951,24 +968,24 @@ Timings> SelfField total..... Wall max =          0, CPU max =          0
 Timings>                      Wall avg =          0, CPU avg =          0
 Timings>                      Wall min =          0, CPU min =          0
 Timings> 
-Timings> TIntegration1....... Wall max =    1.23609, CPU max =        1.2
-Timings>                      Wall avg =    1.23609, CPU avg =        1.2
-Timings>                      Wall min =    1.23609, CPU min =        1.2
+Timings> TIntegration1....... Wall max =    1.52094, CPU max =       1.52
+Timings>                      Wall avg =    1.52094, CPU avg =       1.52
+Timings>                      Wall min =    1.52094, CPU min =       1.52
 Timings> 
-Timings> TIntegration2....... Wall max =    3.71977, CPU max =       3.76
-Timings>                      Wall avg =    3.71977, CPU avg =       3.76
-Timings>                      Wall min =    3.71977, CPU min =       3.76
+Timings> TIntegration2....... Wall max =    4.48058, CPU max =       4.81
+Timings>                      Wall avg =    4.48058, CPU avg =       4.81
+Timings>                      Wall min =    4.48058, CPU min =       4.81
 Timings> 
 Timings> WakeField........... Wall max =          0, CPU max =          0
 Timings>                      Wall avg =          0, CPU avg =          0
 Timings>                      Wall min =          0, CPU min =          0
 Timings> 
-Timings> Write H5-File....... Wall max =   0.072536, CPU max =          0
-Timings>                      Wall avg =   0.072536, CPU avg =          0
-Timings>                      Wall min =   0.072536, CPU min =          0
+Timings> Write H5-File....... Wall max =   0.024643, CPU max =          0
+Timings>                      Wall avg =   0.024643, CPU avg =          0
+Timings>                      Wall min =   0.024643, CPU min =          0
 Timings> 
-Timings> Write Stat.......... Wall max =   0.329725, CPU max =       0.28
-Timings>                      Wall avg =   0.329725, CPU avg =       0.28
-Timings>                      Wall min =   0.329725, CPU min =       0.28
+Timings> Write Stat.......... Wall max =   0.408594, CPU max =       0.39
+Timings>                      Wall avg =   0.408594, CPU avg =       0.39
+Timings>                      Wall min =   0.408594, CPU min =       0.39
 Timings> 
 Timings> -----------------------------------------------------------------
