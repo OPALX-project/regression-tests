@@ -1,7 +1,7 @@
 Ippl> CommMPI: Parent process waiting for children ...
+Ippl> CommMPI: Child 2 ready.
 Ippl> CommMPI: Child 1 ready.
 Ippl> CommMPI: Child 3 ready.
-Ippl> CommMPI: Child 2 ready.
 Ippl> CommMPI: Initialization complete.
 Ippl> CommMPI: Started job 1 on host `CMT2653'.
 Ippl> CommMPI: Started job 2 on host `CMT2653'.
@@ -13,33 +13,30 @@ Ippl> CommMPI: Started job 3 on host `CMT2653'.
 {0}>              | |__| | |  / ____ \| |____
 {0}>               \____/|_| /_/    \_\______|
 OPAL{0}> 
-OPAL{0}> This is OPAL (Object Oriented Parallel Accelerator Library) Version 2.0.2
+OPAL{0}> This is OPAL (Object Oriented Parallel Accelerator Library) Version 2.1.0
+OPAL{0}>             git rev. dc9bf8dd9f66d6b6bf6f79366207244381d688ca
 OPAL{0}> 
-OPAL{0}>                 (c) PSI, http://amas.web.psi.ch
+OPAL{0}> 
+OPAL{0}>                      (c) PSI, http://amas.web.psi.ch
+OPAL{0}> 
+OPAL{0}> 
 OPAL{0}> The optimiser (former opt-Pilot) is integrated 
 OPAL{0}> 
 OPAL{0}> Please send cookies, goodies or other motivations (wine and beer ... ) 
 OPAL{0}> to the OPAL developers opal@lists.psi.ch
 OPAL{0}> 
-OPAL{0}> Time: 11:06:02 date: 10/04/2019
+OPAL{0}> Time: 15:37:27 date: 11/10/2019
 OPAL{0}> 
 OPAL{0}> Couldn't find startup file "/home/pedrocp/init.opal".
 OPAL{0}> Note: this is not mandatory for an OPAL simulation!
 OPAL{0}> 
 OPAL{0}> * Reading input stream "GasStripping.in".
-OPAL{0}> * ************* P A R T I C L E  M A T E R  I N T E R A C T I O N ****************** 
-OPAL{0}> * ParticleMatterInteraction::initParticleMatterInteractionHandler 
-OPAL{0}> * ********************************************************************************** 
+OPAL{0}> * ************* P A R T I C L E  M A T T E R  I N T E R A C T I O N ****************** 
 OPAL{0}> * PARTICLEMATTERINTERACTION BSTP_parmatint
-OPAL{0}> * TYPE       BEAMSTRIPPING
-OPAL{0}> * MATERIAL   VACUUM
+OPAL{0}> * TYPE           BEAMSTRIPPING
 OPAL{0}> * ********************************************************************************** 
 OPAL{0}> 
-OPAL{0}[3]> 
-OPAL{0}[3]> 4 elements selected.
-OPAL{0}[3]> 
 Ippl{0}> no solver attached
-Ippl{0}[3]> BC set for normal Beam
 OPAL{0}[2]> * Generation of distribution with seed = 123456789
 OPAL{0}[2]> * isn't scalable with number of particles and cores.
 OPAL{0}> * m before gsl_linalg_cholesky_decomp
@@ -58,6 +55,8 @@ OPAL{0}> * r(4, : ) =          0 &          0 &          0 &          0 &       
 OPAL{0}> * r(5, : ) =          0 &          0 &          0 &          0 &          0 &          1 \\
 OPAL{0}> * Mass of simulation particle= 0.9393 GeV/c^2
 OPAL{0}> * Charge of simulation particle= -1.602e-19 [C]
+Ippl{0}> Creating new file for data: GasStripping.stat
+Ippl{0}> Creating new file for data: GasStripping.lbal
 OPAL{0}> * ********************************************************************************** 
 OPAL{0}> * Selected Tracking Method == CYCLOTRON-T, NEW TRACK
 OPAL{0}> * ********************************************************************************** 
@@ -121,44 +120,6 @@ OPAL{0}> * BBOXINCR     1
 OPAL{0}> * XDIM         parallel  
 OPAL{0}> * YDIM         parallel  
 OPAL{0}> * Z(T)DIM      parallel  
-Ippl{0}[3]> ======UniformCartesian<3,MFLOAT>==begin======
-Ippl{0}[3]> gridSizes[0] = 9
-Ippl{0}[3]> gridSizes[1] = 9
-Ippl{0}[3]> gridSizes[2] = 9
-Ippl{0}[3]> origin = ( 0 , 0 , 0 )
-Ippl{0}[3]> meshSpacing[0] = 1
-Ippl{0}[3]> meshSpacing[1] = 1
-Ippl{0}[3]> meshSpacing[2] = 1
-Ippl{0}[3]> Dvc[0] = ( -0.25 , -0.25 , -0.25 )
-Ippl{0}[3]> Dvc[1] = ( 0.25 , -0.25 , -0.25 )
-Ippl{0}[3]> Dvc[2] = ( -0.25 , 0.25 , -0.25 )
-Ippl{0}[3]> Dvc[3] = ( 0.25 , 0.25 , -0.25 )
-Ippl{0}[3]> Dvc[4] = ( -0.25 , -0.25 , 0.25 )
-Ippl{0}[3]> Dvc[5] = ( 0.25 , -0.25 , 0.25 )
-Ippl{0}[3]> Dvc[6] = ( -0.25 , 0.25 , 0.25 )
-Ippl{0}[3]> Dvc[7] = ( 0.25 , 0.25 , 0.25 )
-Ippl{0}[3]> cell volume = 1
-Ippl{0}[3]> ======UniformCartesian<3,MFLOAT>==end========
-Ippl{0}[3]> 
-Ippl{0}[3]> ParticleSpatialLayout, with particle distribution:
-Ippl{0}[3]>     Number of particles 0  Number of particles 0  Number of particles 0  Number of particles 0  
-Ippl{0}[3]> SpatialLayout decomposition = Total Domain = {[0,8),[0,8),[0,8)}
-Ippl{0}[3]> Local Rnodes = 1
-Ippl{0}[3]>  rnode 0 : {[0,4),[0,4),[0,8)}
-Ippl{0}[3]> Remote Rnodes = 3
-Ippl{0}[3]>  rnode 0 : {[0,4),[4,8),[0,8)}
-Ippl{0}[3]>  rnode 1 : {[4,8),[0,4),[0,8)}
-Ippl{0}[3]>  rnode 2 : {[4,8),[4,8),[0,8)}
-Ippl{0}[3]> Internal FieldLayout = Domain = {[0:7:1],[0:7:1],[0:7:1]}
-Ippl{0}[3]> FieldLayoutUsers = 4
-Ippl{0}[3]> Total number of vnodes = 4
-Ippl{0}[3]> Local Vnodes = 1
-Ippl{0}[3]>  vnode 0: Node = 0 ; vnode_m = 0 ; Domain = {[0:3:1],[0:3:1],[0:7:1]}
-Ippl{0}[3]> Remote Vnodes = 3
-Ippl{0}[3]>  vnode 0 : Node = 1 ; vnode_m = 1 ; Domain = {[0:3:1],[4:7:1],[0:7:1]}
-Ippl{0}[3]>  vnode 1 : Node = 2 ; vnode_m = 2 ; Domain = {[4:7:1],[0:3:1],[0:7:1]}
-Ippl{0}[3]>  vnode 2 : Node = 3 ; vnode_m = 3 ; Domain = {[4:7:1],[4:7:1],[0:7:1]}
-Ippl{0}[3]> 
 OPAL{0}> * ********************************************************************************** 
 OPAL{0}> 
 OPAL{0}> * -------------------------- Adding Cyclotron ---------------------------- *
@@ -198,11 +159,11 @@ OPAL{0}> * Total stored grid point number ((ntet+1) * nrad) : 397100
 OPAL{0}> * rescaling of the fields with factor: 1
 OPAL{0}> * Field Maps read successfully!
 OPAL{0}> 
-OPAL{0}> * --------- Beam Stripping --------------------------
-OPAL{0}> * Pressure    = 1e-06 [mbar]
-OPAL{0}> * Temperature = 300 [K]
+OPAL{0}> * ------------------------------ Beam Stripping ------------------------------
+OPAL{0}> * Pressure     = 1e-06 [mbar]
+OPAL{0}> * Temperature  = 300 [K]
+OPAL{0}> * Residual gas = AIR
 OPAL{0}> * Particles stripped will be deleted after interaction -> true
-OPAL{0}> * Mass and charge have been reseted for beam stripping 
 OPAL{0}> * ---------------------------------------------------
 OPAL{0}> * The selected Beam line elements are :
 OPAL{0}> * -> Cyclotron
@@ -217,8 +178,8 @@ OPAL{0}> * ************** B U N C H ********************************************
 OPAL{0}> * NP              = 100000
 OPAL{0}> * Qtot            =       16.022 [fC]         Qi    =        0.000 [fC]
 OPAL{0}> * Ekin            =      10.000 [keV]         dEkin =        0.000 [eV]
-OPAL{0}> * rmax            = (      2.99464 ,      2.99890 ,      3.00230 ) [um]
-OPAL{0}> * rmin            = (     -2.98524 ,     -2.99761 ,     -2.99400 ) [um]
+OPAL{0}> * rmax            = (      2.99464 ,      2.99890 ,      3.00230 ) [mm]
+OPAL{0}> * rmin            = (     -2.98524 ,     -2.99761 ,     -2.99400 ) [mm]
 OPAL{0}> * rms beam size   = (    969.81071 ,    976.81442 ,    988.02870 ) [um]
 OPAL{0}> * rms momenta     = (  0.00000e+00 ,  0.00000e+00 ,  0.00000e+00 ) [beta gamma]
 OPAL{0}> * mean position   = (      0.00003 ,     -0.00001 ,     -0.00003 ) [um]
@@ -234,7 +195,7 @@ OPAL{0}>
 OPAL{0}> 
 OPAL{0}> * Integration step 0 (no phase space dump for <= 2 particles)
 OPAL{0}> * T = 0 ns, Live Particles: 100000
-OPAL{0}> * E = 10.000 [keV], beta * gamma = 0.0046144
+OPAL{0}> * E = 0.01 MeV, beta * gamma = 0.0046144
 OPAL{0}> * Bunch position: R =  1.3595 mm, Theta = -135.36 Deg, Z = -2.0348 mm
 OPAL{0}> * Local Azimuth = 0 Deg, Local Elevation = 0 Deg
 OPAL{0}> 
@@ -243,8 +204,8 @@ OPAL{0}> * ************** B U N C H ********************************************
 OPAL{0}> * NP              = 100000
 OPAL{0}> * Qtot            =       16.022 [fC]         Qi    =        0.000 [fC]
 OPAL{0}> * Ekin            =      10.000 [keV]         dEkin =        0.000 [eV]
-OPAL{0}> * rmax            = (      2.99809 ,      2.99761 ,      2.99950 ) [um]
-OPAL{0}> * rmin            = (     -2.98179 ,     -2.99890 ,     -2.99680 ) [um]
+OPAL{0}> * rmax            = (      2.99809 ,      2.99761 ,      2.99950 ) [mm]
+OPAL{0}> * rmin            = (     -2.98179 ,     -2.99890 ,     -2.99680 ) [mm]
 OPAL{0}> * rms beam size   = (    969.81071 ,    976.81442 ,    988.02870 ) [um]
 OPAL{0}> * rms momenta     = (  0.00000e+00 ,  0.00000e+00 ,  0.00000e+00 ) [beta gamma]
 OPAL{0}> * mean position   = (      3.45637 ,     -1.28784 ,     -2.79760 ) [um]
@@ -264,404 +225,308 @@ OPAL{0}> * The frequency to solve space charge fields is set to 1
 OPAL{0}> * The repartition frequency is set to 1
 OPAL{0}> 
 OPAL{0}> * --------------------------------- Start tracking ------------------------------------ *
-OPAL {1}> CYCLDRIFT: particle 25095 out of the field map boundary!
-OPAL {1}> CYCLDRIFT: Coords: ( 0 , 0 , 0 )
-Ippl{0}> Step 0, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 2, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 3, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 76193 is deleted by beam stripping
-Ippl{0}> Step 4, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 6, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 8, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 11, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 12, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 46556 is deleted by beam stripping
-Ippl{0}> Step 15, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 17, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 21, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 6475 is deleted by beam stripping
-Ippl{0}> Step 25, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 7167 is deleted by beam stripping
-Ippl{0}> Step 26, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 31, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 35, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 6732 is deleted by beam stripping
-Ippl{0}[2]> * Particle 25011 is deleted by beam stripping
-Ippl{0}> Step 37, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 38, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 4426 is deleted by beam stripping
-Ippl{0}> Step 46, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 48, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 51, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 14543 is deleted by beam stripping
-Ippl{0}> Step 53, 3 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 5790 is deleted by beam stripping
-Ippl{0}> Step 55, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 56, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 58054 is deleted by beam stripping
-Ippl{0}> Step 61, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 63, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 64, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 65, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 56100 is deleted by beam stripping
-Ippl{0}> Step 68, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 69, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 75, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 91244 is deleted by beam stripping
-Ippl{0}> Step 77, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 78, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 80, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 13240 is deleted by beam stripping
-Ippl{0}> Step 81, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 84, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 85, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 88, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 92, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 90145 is deleted by beam stripping
-Ippl{0}> Step 98, 3 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 106, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 83440 is deleted by beam stripping
-Ippl{0}> Step 108, 4 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 109, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 111, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 113, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 115, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 116, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 117, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 118, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 119, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 13758 is deleted by beam stripping
-Ippl{0}> Step 121, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 123, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 125, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 126, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 127, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 89614 is deleted by beam stripping
-Ippl{0}> Step 128, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 130, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 16662 is deleted by beam stripping
-Ippl{0}> Step 132, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 137, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 142, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 146, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 27415 is deleted by beam stripping
-Ippl{0}> Step 148, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 6448 is deleted by beam stripping
-Ippl{0}> Step 151, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 90371 is deleted by beam stripping
-Ippl{0}> Step 153, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 156, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 157, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 158, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 33912 is deleted by beam stripping
-Ippl{0}[2]> * Particle 92164 is deleted by beam stripping
-Ippl{0}> Step 167, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 168, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 170, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 181, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 186, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 188, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 49611 is deleted by beam stripping
-Ippl{0}> Step 194, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 2184 is deleted by beam stripping
-Ippl{0}> Step 195, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 197, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 199, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 21720 is deleted by beam stripping
-Ippl{0}> Step 200, 5 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 201, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 202, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 24143 is deleted by beam stripping
-Ippl{0}> Step 205, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 207, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 209, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 214, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 218, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 219, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 223, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 225, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 78903 is deleted by beam stripping
-Ippl{0}> Step 226, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 227, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 229, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 75550 is deleted by beam stripping
-Ippl{0}> Step 230, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 30980 is deleted by beam stripping
-Ippl{0}> Step 237, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 238, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 240, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 242, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 245, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 246, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 247, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 50871 is deleted by beam stripping
-Ippl{0}> Step 248, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 250, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 251, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 256, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 257, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 259, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 260, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 263, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 267, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 271, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 56342 is deleted by beam stripping
-Ippl{0}> Step 273, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 274, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 275, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 43401 is deleted by beam stripping
-Ippl{0}> Step 279, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 289, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 291, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 292, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 293, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 294, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 12476 is deleted by beam stripping
-Ippl{0}> Step 298, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 303, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 36851 is deleted by beam stripping
-Ippl{0}> Step 307, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 309, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 81631 is deleted by beam stripping
-Ippl{0}> Step 311, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 87481 is deleted by beam stripping
-Ippl{0}[2]> * Particle 35686 is deleted by beam stripping
-Ippl{0}> Step 312, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 315, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 317, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 318, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 22435 is deleted by beam stripping
-Ippl{0}> Step 319, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 320, 3 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 323, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 324, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 42509 is deleted by beam stripping
-Ippl{0}> Step 326, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 327, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 330, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 333, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 337, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 32248 is deleted by beam stripping
-Ippl{0}> Step 338, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 339, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 72648 is deleted by beam stripping
-Ippl{0}> Step 342, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 343, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 345, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 346, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 348, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 352, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 353, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 355, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 358, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 57440 is deleted by beam stripping
-Ippl{0}> Step 359, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 360, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 364, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 365, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 368, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 369, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 28977 is deleted by beam stripping
-Ippl{0}> Step 371, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 372, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 377, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 380, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 11657 is deleted by beam stripping
-Ippl{0}> Step 381, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 49407 is deleted by beam stripping
-Ippl{0}> Step 382, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 386, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 35790 is deleted by beam stripping
-Ippl{0}> Step 389, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 390, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 391, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 393, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 43801 is deleted by beam stripping
-Ippl{0}> Step 394, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 396, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 397, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 400, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 401, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 402, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 403, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 20091 is deleted by beam stripping
-Ippl{0}> Step 405, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 25314 is deleted by beam stripping
-Ippl{0}> Step 406, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 407, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 410, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 414, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 64413 is deleted by beam stripping
-Ippl{0}> Step 417, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 424, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 75845 is deleted by beam stripping
-Ippl{0}> Step 425, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 426, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 428, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 429, 3 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 432, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 71085 is deleted by beam stripping
-Ippl{0}> Step 433, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 80410 is deleted by beam stripping
-Ippl{0}> Step 435, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 91842 is deleted by beam stripping
-Ippl{0}> Step 438, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 439, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 444, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 445, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 446, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 452, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 15110 is deleted by beam stripping
-Ippl{0}> Step 455, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 31621 is deleted by beam stripping
-Ippl{0}> Step 457, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 458, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 459, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 462, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 466, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 44306 is deleted by beam stripping
-Ippl{0}> Step 472, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 477, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 480, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 40227 is deleted by beam stripping
-Ippl{0}> Step 490, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 491, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 494, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 497, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 50987 is deleted by beam stripping
-Ippl{0}> Step 498, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 499, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 27758 is deleted by beam stripping
-Ippl{0}> Step 503, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 19162 is deleted by beam stripping
-Ippl{0}> Step 505, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 53440 is deleted by beam stripping
-Ippl{0}[2]> * Particle 32515 is deleted by beam stripping
-Ippl{0}> Step 507, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 509, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 513, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 517, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 83130 is deleted by beam stripping
-Ippl{0}> Step 518, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 519, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 12298 is deleted by beam stripping
-Ippl{0}> Step 520, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 526, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 88177 is deleted by beam stripping
-Ippl{0}> Step 528, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 529, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 530, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 35951 is deleted by beam stripping
-Ippl{0}> Step 536, 4 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 36459 is deleted by beam stripping
-Ippl{0}> Step 538, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 67611 is deleted by beam stripping
-Ippl{0}> Step 541, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 24024 is deleted by beam stripping
-Ippl{0}> Step 542, 3 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 545, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 546, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 547, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 549, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 550, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 551, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 7591 is deleted by beam stripping
-Ippl{0}> Step 553, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 555, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 560, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 562, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 21071 is deleted by beam stripping
-Ippl{0}> Step 568, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 571, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 63414 is deleted by beam stripping
-Ippl{0}> Step 573, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 579, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 69167 is deleted by beam stripping
-Ippl{0}> Step 584, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 99408 is deleted by beam stripping
-Ippl{0}> Step 585, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 587, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 590, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 591, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 592, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 78133 is deleted by beam stripping
-Ippl{0}> Step 595, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 600, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 602, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 603, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 604, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 74932 is deleted by beam stripping
-Ippl{0}> Step 606, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 27892 is deleted by beam stripping
-Ippl{0}> Step 610, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 611, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 616, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 76656 is deleted by beam stripping
-Ippl{0}> Step 617, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 619, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 62316 is deleted by beam stripping
-Ippl{0}> Step 622, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 32231 is deleted by beam stripping
-Ippl{0}> Step 624, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 626, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 627, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 84703 is deleted by beam stripping
-Ippl{0}> Step 628, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 56233 is deleted by beam stripping
-Ippl{0}[2]> * Particle 16407 is deleted by beam stripping
-Ippl{0}> Step 629, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 15398 is deleted by beam stripping
-Ippl{0}[2]> * Particle 29706 is deleted by beam stripping
-Ippl{0}> Step 630, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 631, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 632, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 633, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 635, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 638, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 641, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 643, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 644, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 69629 is deleted by beam stripping
-Ippl{0}> Step 646, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 7952 is deleted by beam stripping
-Ippl{0}[2]> * Particle 11509 is deleted by beam stripping
-Ippl{0}> Step 650, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 651, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 652, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 653, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 36396 is deleted by beam stripping
-Ippl{0}> Step 657, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 86498 is deleted by beam stripping
-Ippl{0}> Step 663, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 71283 is deleted by beam stripping
-Ippl{0}> Step 664, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 670, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 672, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 674, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 677, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 679, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 682, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 6316 is deleted by beam stripping
-Ippl{0}> Step 683, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 684, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 90134 is deleted by beam stripping
-Ippl{0}> Step 685, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 687, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 689, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 691, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 692, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 695, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 697, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 700, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 701, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 88564 is deleted by beam stripping
-Ippl{0}> Step 704, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 707, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 711, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}[2]> * Particle 98197 is deleted by beam stripping
-Ippl{0}> Step 714, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 717, 2 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
-Ippl{0}> Step 722, 1 particles lost on stripper, collimator, septum, out of cyclotron aperture, geometry, or by the beam stripping
+OPAL{0}> At step 0, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 1, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 3, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 9, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 10, lost 3 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 12, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 14, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 18, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 24, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 25, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 28, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 29, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 31, lost 3 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 32, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 33, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 34, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 35, lost 4 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 38, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 42, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 44, lost 3 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 46, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 48, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 49, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 50, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 55, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 56, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 59, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 64, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 67, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 68, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 69, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 78, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 81, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 82, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 84, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 85, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 87, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 91, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 96, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 97, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 100, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 101, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 106, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 114, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 117, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 121, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 123, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 125, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 126, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 127, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 131, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 133, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 141, lost 3 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 143, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 146, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 150, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 151, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 154, lost 3 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 162, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 164, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 168, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 169, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 170, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 171, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 172, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 173, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 174, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 177, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 178, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 179, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 180, lost 3 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 183, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 184, lost 3 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 187, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 188, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 195, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 196, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 202, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 204, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 205, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 208, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 211, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 220, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 221, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 222, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 223, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 228, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 233, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 234, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 235, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 239, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 240, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 244, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 246, lost 4 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 247, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 248, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 249, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 253, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 254, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 255, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 256, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 263, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 278, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 284, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 285, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 286, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 287, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 289, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 290, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 294, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 296, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 298, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 299, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 301, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 305, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 309, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 313, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 315, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 318, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 320, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 323, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 326, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 328, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 329, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 330, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 331, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 337, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 341, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 344, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 345, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 347, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 350, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 351, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 353, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 355, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 357, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 360, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 361, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 363, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 364, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 365, lost 3 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 366, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 367, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 368, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 371, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 373, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 375, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 380, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 383, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 388, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 390, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 392, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 394, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 395, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 396, lost 3 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 397, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 398, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 403, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 414, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 417, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 420, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 421, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 422, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 424, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 426, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 428, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 430, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 431, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 432, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 433, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 436, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 438, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 439, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 440, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 441, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 443, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 445, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 447, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 448, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 449, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 453, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 458, lost 3 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 460, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 461, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 462, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 463, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 466, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 467, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 468, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 469, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 471, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 472, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 474, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 476, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 479, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 480, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 481, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 483, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 486, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 487, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 489, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 497, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 498, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 501, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 502, lost 3 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 504, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 505, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 508, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 509, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 510, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 511, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 512, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 514, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 515, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 516, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 518, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 519, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 520, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 521, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 524, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 525, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 528, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 531, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 532, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 533, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 534, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 535, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 536, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 537, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 538, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 539, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 542, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 545, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 546, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 549, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 551, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 552, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 554, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 556, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 557, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 560, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 562, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 564, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 567, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 569, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 570, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 571, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 572, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 574, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 576, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 577, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 578, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 580, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 581, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 584, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 591, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 592, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 594, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 595, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 596, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 602, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 608, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 617, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 618, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 622, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 624, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 625, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 627, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 629, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 630, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 641, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 643, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 644, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 646, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 648, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 649, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 653, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 657, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 659, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 661, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 662, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 668, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 670, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 672, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 675, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 678, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 679, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 682, lost 3 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 685, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 688, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 689, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 691, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 698, lost 2 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 702, lost 4 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 704, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 705, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 706, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 709, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 710, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 714, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 715, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
+OPAL{0}> At step 719, lost 1 particles on stripper, collimator, septum, geometry, out of cyclotron aperture or beam stripping
 OPAL{0}> 
 OPAL{0}> * ---------------------------- DONE TRACKING PARTICLES -------------------------------- * 
 OPAL{0}> *
@@ -670,12 +535,12 @@ OPAL{0}> * Cave: Turn number is not correct for restart mode
 OPAL{0}> 
 OPAL{0}> * *********************** Bunch information in global frame: ***********************
 OPAL{0}> * ************** B U N C H ********************************************************* 
-OPAL{0}> * NP              = 99623
-OPAL{0}> * Qtot            =       15.961 [fC]         Qi    =        0.000 [fC]
+OPAL{0}> * NP              = 99595
+OPAL{0}> * Qtot            =       15.957 [fC]         Qi    =        0.000 [fC]
 OPAL{0}> * Ekin            =      10.000 [keV]         dEkin =        0.000 [eV]
-OPAL{0}> * rmax            = (      0.00300 ,      1.00317 ,      0.00300 ) [mm]
-OPAL{0}> * rmin            = (     -2.98179 ,    997.17078 ,     -2.99680 ) [um]
-OPAL{0}> * rms beam size   = (    969.60363 ,    976.84147 ,    987.97471 ) [um]
+OPAL{0}> * rmax            = (      0.00300 ,      1.00317 ,      0.00300 ) [m]
+OPAL{0}> * rmin            = (     -2.98179 ,    997.17078 ,     -2.99680 ) [mm]
+OPAL{0}> * rms beam size   = (    969.84015 ,    976.51656 ,    988.25057 ) [um]
 OPAL{0}> * rms momenta     = (  0.00000e+00 ,  0.00000e+00 ,  0.00000e+00 ) [beta gamma]
 OPAL{0}> * mean position   = (      0.00000 ,      1.00017 ,     -0.00000 ) [m]
 OPAL{0}> * mean momenta    = (  0.00000e+00 ,  4.61444e-03 ,  0.00000e+00 ) [beta gamma]
@@ -691,47 +556,52 @@ OPAL{0}> * ----------------------------------------------- *
 OPAL{0}> * Finalizing i.e. write data and close files :
 OPAL{0}> * Finalize cyclotron
 OPAL{0}> * Finalize Beam Stripping
+OPAL{0}> * ----------------------------------------------- *
 OPAL{0}> * End of input stream "GasStripping.in".
 Timings{0}> -----------------------------------------------------------------
 Timings{0}>      Timing results for 4 nodes:
 Timings{0}> -----------------------------------------------------------------
-Timings{0}> mainTimer........... Wall tot =    57.9676, CPU tot =      57.92
+Timings{0}> mainTimer........... Wall tot =    115.649, CPU tot =     115.57
 Timings{0}> 
-Timings{0}> Binaryrepart........ Wall max =   0.003952, CPU max =       0.01
-Timings{0}>                      Wall avg =  0.0039485, CPU avg =     0.0025
-Timings{0}>                      Wall min =   0.003939, CPU min =          0
+Timings{0}> Binaryrepart........ Wall max = 0.00397741, CPU max =       0.01
+Timings{0}>                      Wall avg = 0.00397398, CPU avg =      0.005
+Timings{0}>                      Wall min = 0.00396417, CPU min =          0
 Timings{0}> 
-Timings{0}> Boundingbox......... Wall max =   0.286093, CPU max =       0.32
-Timings{0}>                      Wall avg =   0.284715, CPU avg =      0.275
-Timings{0}>                      Wall min =   0.282891, CPU min =       0.23
+Timings{0}> Boundingbox......... Wall max =   0.346772, CPU max =       0.38
+Timings{0}>                      Wall avg =   0.341414, CPU avg =     0.3275
+Timings{0}>                      Wall min =   0.337335, CPU min =        0.3
 Timings{0}> 
-Timings{0}> Boundingbox-bounds.. Wall max =   0.039791, CPU max =       0.05
-Timings{0}>                      Wall avg =  0.0396108, CPU avg =       0.03
-Timings{0}>                      Wall min =   0.039398, CPU min =       0.02
+Timings{0}> Boundingbox-bounds.. Wall max =  0.0462616, CPU max =       0.06
+Timings{0}>                      Wall avg =  0.0459666, CPU avg =     0.0375
+Timings{0}>                      Wall min =  0.0457213, CPU min =       0.02
 Timings{0}> 
-Timings{0}> Boundingbox-update.. Wall max =   0.227194, CPU max =       0.25
-Timings{0}>                      Wall avg =   0.227084, CPU avg =      0.225
-Timings{0}>                      Wall min =   0.226869, CPU min =       0.19
+Timings{0}> Boundingbox-update.. Wall max =   0.255505, CPU max =       0.29
+Timings{0}>                      Wall avg =   0.255376, CPU avg =      0.235
+Timings{0}>                      Wall min =   0.255136, CPU min =        0.2
 Timings{0}> 
-Timings{0}> Compute Statistics.. Wall max =    2.26509, CPU max =       2.36
-Timings{0}>                      Wall avg =    2.26477, CPU avg =      2.125
-Timings{0}>                      Wall min =    2.26455, CPU min =       1.84
+Timings{0}> Compute Statistics.. Wall max =    2.95114, CPU max =       3.11
+Timings{0}>                      Wall avg =    2.95019, CPU avg =     3.0275
+Timings{0}>                      Wall min =    2.94918, CPU min =       2.95
 Timings{0}> 
 Timings{0}> Create Distr........ Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
 Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
-Timings{0}> Dump................ Wall max =      2.135, CPU max =       2.04
-Timings{0}>                      Wall avg =    2.06298, CPU avg =     1.9425
-Timings{0}>                      Wall min =    2.03891, CPU min =       1.71
+Timings{0}> DeleteParticles..... Wall max =    10.3452, CPU max =      10.31
+Timings{0}>                      Wall avg =    8.50466, CPU avg =      8.505
+Timings{0}>                      Wall min =    6.98917, CPU min =       7.04
+Timings{0}> 
+Timings{0}> Dump................ Wall max =    2.77525, CPU max =       2.83
+Timings{0}>                      Wall avg =    2.67397, CPU avg =     2.7175
+Timings{0}>                      Wall min =    2.64006, CPU min =       2.63
 Timings{0}> 
 Timings{0}> Fast inside test.... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
 Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
-Timings{0}> Frametransform...... Wall max =          0, CPU max =          0
-Timings{0}>                      Wall avg =          0, CPU avg =          0
-Timings{0}>                      Wall min =          0, CPU min =          0
+Timings{0}> Frametransform...... Wall max =   0.527682, CPU max =       0.56
+Timings{0}>                      Wall avg =   0.518667, CPU avg =     0.5075
+Timings{0}>                      Wall min =   0.506841, CPU min =       0.45
 Timings{0}> 
 Timings{0}> Histogram........... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
@@ -745,9 +615,9 @@ Timings{0}> Inside test......... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
 Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
-Timings{0}> Integration......... Wall max =    20.2917, CPU max =      20.23
-Timings{0}>                      Wall avg =    20.0799, CPU avg =      20.01
-Timings{0}>                      Wall min =    19.9236, CPU min =      19.84
+Timings{0}> Integration......... Wall max =    67.9856, CPU max =      67.88
+Timings{0}>                      Wall avg =    66.9398, CPU avg =    66.8725
+Timings{0}>                      Wall min =    65.6853, CPU min =      65.48
 Timings{0}> 
 Timings{0}> Load Distr.......... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
@@ -756,6 +626,10 @@ Timings{0}>
 Timings{0}> Particle Inside..... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
 Timings{0}>                      Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> PluginElements...... Wall max =    37.3803, CPU max =      37.39
+Timings{0}>                      Wall avg =    36.8718, CPU avg =      36.81
+Timings{0}>                      Wall min =    36.1782, CPU min =      36.15
 Timings{0}> 
 Timings{0}> Ray tracing......... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
@@ -769,12 +643,8 @@ Timings{0}> SelfField total..... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
 Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
-Timings{0}> Write H5-File....... Wall max =          0, CPU max =          0
-Timings{0}>                      Wall avg =          0, CPU avg =          0
-Timings{0}>                      Wall min =          0, CPU min =          0
-Timings{0}> 
-Timings{0}> Write Stat.......... Wall max =    1.07949, CPU max =       1.07
-Timings{0}>                      Wall avg =    1.00754, CPU avg =       0.92
-Timings{0}>                      Wall min =   0.983198, CPU min =       0.74
+Timings{0}> Write Stat.......... Wall max =    1.39218, CPU max =       1.42
+Timings{0}>                      Wall avg =    1.28975, CPU avg =     1.3075
+Timings{0}>                      Wall min =    1.25502, CPU min =        1.2
 Timings{0}> 
 Timings{0}> -----------------------------------------------------------------
