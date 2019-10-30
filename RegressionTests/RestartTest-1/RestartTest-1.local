@@ -1,5 +1,5 @@
 #!/bin/bash 
 for X in h5 lbal stat;do cp RestartTest-1.$X.bak RestartTest-1.$X;done
 
-mpirun -np 4 $OPAL_EXE_PATH/opal RestartTest-1.in -restart -1 --commlib mpi --info 3 --warn 0 2>&1
+mpirun -np 4 $OPAL_EXE_PATH/opal RestartTest-1.in -restart -1 --commlib mpi --info 3 --warn 0 "$@" 2>&1
 
