@@ -3,5 +3,5 @@
 cp RestartTest-2.h5.bak RestartTest-2.h5
 cp RestartTest-2.stat.bak RestartTest-2.stat
 cp RestartTest-2.lbal.bak RestartTest-2.lbal
-timeout 300s mpirun -np 4 $OPAL_EXE_PATH/opal RestartTest-2.in -restart -1 --commlib mpi --info 3 --warn 0 2>&1
+timeout 300s mpirun -np 4 $OPAL_EXE_PATH/opal RestartTest-2.in -restart -1 --commlib mpi --info 3 --warn 0 "$@" 2>&1
 

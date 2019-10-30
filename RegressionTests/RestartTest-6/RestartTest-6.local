@@ -3,7 +3,7 @@
 rm -f RestartTest-6.stat
 rm -f RestartTest-6.lbal
 
-timeout 600 mpirun -np 4 $OPAL_EXE_PATH/opal RestartTest-6.in --commlib mpi --info 3 --warn 0 2>&1
+timeout 600 mpirun -np 4 $OPAL_EXE_PATH/opal RestartTest-6.in --commlib mpi --info 3 --warn 0 "$@" 2>&1
 
 md5sum RestartTest-6.stat > RestartTest-6.stat.md5
 
@@ -11,5 +11,5 @@ for X in h5 stat lbal; do
 	cp RestartTest-6.$X RestartTest-6.$X.ref
 done
 
-timeout 600 mpirun -np 4 $OPAL_EXE_PATH/opal RestartTest-6.in -restart 1 --commlib mpi --info 3 --warn 0 2>&1
+timeout 600 mpirun -np 4 $OPAL_EXE_PATH/opal RestartTest-6.in -restart 1 --commlib mpi --info 3 --warn 0 "$@" 2>&1
 
