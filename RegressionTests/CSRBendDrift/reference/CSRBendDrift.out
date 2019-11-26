@@ -1,3 +1,22 @@
+libibverbs: Warning: couldn't load driver 'mlx5': /lib64/libmlx5-rdmav2.so: symbol ibv_exp_cmd_destroy_flow, version IBVERBS_1.1 not defined in file libibverbs.so.1 with link time reference
+libibverbs: Warning: couldn't load driver 'mlx4': /lib64/libmlx4-rdmav2.so: symbol ibv_exp_cmd_destroy_flow, version IBVERBS_1.1 not defined in file libibverbs.so.1 with link time reference
+libibverbs: Warning: no userspace device-specific driver found for /sys/class/infiniband_verbs/uverbs0
+libibverbs: Warning: couldn't load driver 'mlx5': /lib64/libmlx5-rdmav2.so: symbol ibv_exp_cmd_destroy_flow, version IBVERBS_1.1 not defined in file libibverbs.so.1 with link time reference
+libibverbs: Warning: couldn't load driver 'mlx4': /lib64/libmlx4-rdmav2.so: symbol ibv_exp_cmd_destroy_flow, version IBVERBS_1.1 not defined in file libibverbs.so.1 with link time reference
+libibverbs: Warning: no userspace device-specific driver found for /sys/class/infiniband_verbs/uverbs0
+--------------------------------------------------------------------------
+[[12662,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: merlin-l-01
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
 Ippl> CommMPI: Parent process waiting for children ...
 Ippl> CommMPI: Initialization complete.
 >                ____  _____       ___ 
@@ -7,17 +26,21 @@ Ippl> CommMPI: Initialization complete.
 >              | |__| | |  / ____ \| |____
 >               \____/|_| /_/    \_\______|
 OPAL> 
-OPAL> This is OPAL (Object Oriented Parallel Accelerator Library) Version 1.9.0
+OPAL> This is OPAL (Object Oriented Parallel Accelerator Library) Version 2.1.0
+OPAL>             git rev. 1c35e1a4d7bfca97e8eecfe4b4904caac394952d
 OPAL> 
-OPAL>                 (c) PSI, http://amas.web.psi.ch
+OPAL> 
+OPAL>                      (c) PSI, http://amas.web.psi.ch
+OPAL> 
+OPAL> 
 OPAL> The optimiser (former opt-Pilot) is integrated 
 OPAL> 
 OPAL> Please send cookies, goodies or other motivations (wine and beer ... ) 
 OPAL> to the OPAL developers opal@lists.psi.ch
 OPAL> 
-OPAL> Time: 13:51:12 date: 03/04/2018
+OPAL> Time: 12:56:06 date: 26/11/2019
 OPAL> 
-OPAL> Couldn't find startup file "/gpfs/home/adelmann/init.opal".
+OPAL> Couldn't find startup file "/psi/home/kraus/init.opal".
 OPAL> Note: this is not mandatory for an OPAL simulation!
 OPAL> 
 OPAL> * Reading input stream "CSRBendDrift.in".
@@ -55,6 +78,7 @@ OPAL[3]> -----------------------------------------------------------------------
 OPAL[3]> READ INITIAL DISTRIBUTION FROM FILE "input_beam.dat"
 OPAL[3]> ------------------------------------------------------------------------------------
 OPAL[3]> 
+OPAL> 
 OPAL> * ************* D I S T R I B U T I O N ********************************************
 OPAL> * 
 OPAL> * Number of particles: 5000
@@ -73,7 +97,7 @@ OPAL> * PARTICLE    ELECTRON
 OPAL> * CURRENT     1.000000e-01 A
 OPAL> * FREQUENCY   1.000000e+02 MHz
 OPAL> * CHARGE      -e * 1.000000e+00 
-OPAL> * REST MASS   5.109989e-04 GeV
+OPAL> * REST MASS   5.109990e-04 GeV
 OPAL> * MOMENTUM    6.999999e-03
 OPAL> * NPART       5.000000e+03
 OPAL> * ********************************************************************************** 
@@ -127,8 +151,8 @@ SBend [2]> Effective Field Map
 SBend [2]> ======================================================================
 SBend [2]> 
 SBend [2]> 1DProfile1 5 5 2
-SBend [2]> -10.0067 -0.00668335 6.46379 0
-SBend [2]> -6.46379 0.00668335 10.0067 0
+SBend [2]> -10.0067 -0.00668335 9.99332 0
+SBend [2]> -9.99332 0.00668335 10.0067 0
 SBend [2]> 0.478959
 SBend [2]> 1.91129
 SBend [2]> -1.18595
@@ -147,14 +171,14 @@ SBend [2]> =====================================================================
 SBend [2]> 
 OPAL> 
 OPAL> Size of map 4 sections 
-OPAL> Key: (      0.000000-      0.230146) number of overlapping elements 1
-OPAL>                                      BEND1
-OPAL> Key: (      0.230146-      0.330835) number of overlapping elements 2
-OPAL>                                      DRIFT2
-OPAL>                                      BEND1
-OPAL> Key: (      0.330835-      0.630287) number of overlapping elements 1
-OPAL>                                      DRIFT2
-OPAL> Key: (      0.630287-      0.632902) number of overlapping elements 0
+OPAL> Key: (0.000000 - 0.230146) number of overlapping elements 1
+OPAL>                            BEND1
+OPAL> Key: (0.230146 - 0.330835) number of overlapping elements 2
+OPAL>                            BEND1
+OPAL>                            DRIFT2
+OPAL> Key: (0.330835 - 0.630287) number of overlapping elements 1
+OPAL>                            DRIFT2
+OPAL> Key: (0.630287 - 0.631827) number of overlapping elements 0
 OPAL> 
 OPAL> 
 OPAL> * ************** B U N C H ********************************************************* 
@@ -168,69 +192,69 @@ OPAL> * rms momenta     = (  3.70124e-03 ,  3.70126e-03 ,  1.36987e-02 ) [beta g
 OPAL> * mean position   = (     -0.00000 ,     -0.00000 ,      0.00000 ) [um]
 OPAL> * mean momenta    = (  4.96317e-17 , -2.58575e-17 ,  1.36987e+01 ) [beta gamma]
 OPAL> * rms emittance   = (  7.30014e-08 ,  7.30015e-08 ,  5.00000e-08 ) (not normalized)
-OPAL> * rms correlation = (  1.72986e-06 ,  9.39602e-06 ,  5.55329e-11 )
+OPAL> * rms correlation = (  1.72986e-06 ,  9.39602e-06 ,  5.55217e-11 )
 OPAL> * hr              = (    176.71164 ,    173.59283 ,      3.60963 ) [um]
 OPAL> * dh              =   1.00000e-10 [%]
 OPAL> * t               =        0.000 [fs]         dT    =        4.373 [ps]
 OPAL> * spos            =        0.000 [um]
 OPAL> * ********************************************************************************** 
 OPAL> 
-OPAL> Track start at: 13:51:12, t= 0.000 [fs]; zstart at: 0.000 [um]
+OPAL> Track start at: 12:56:06, t= 0.000 [fs]; zstart at: 0.000 [um]
 OPAL> Executing ParallelTTracker, initial dt= 4.373 [ps];
 OPAL> max integration steps 2000, next step= 0
 ParallelTTracker [2]> MINBINEMITTED 10
 ParallelTTracker [2]> MINSTEPFORREBIN 200
 ParallelTTracker [2]> ============== START WAKE CALCULATION =============
-ParallelTTracker [3]> 13:51:12 Step      0 at 1.308 [mm], t= 4.373 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step      0 at 1.308 [mm], t= 4.373 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step      1 at 2.615 [mm], t= 8.747 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step      1 at 2.615 [mm], t= 8.747 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step      2 at 3.923 [mm], t= 13.120 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step      2 at 3.923 [mm], t= 13.120 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step      3 at 5.231 [mm], t= 17.494 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step      3 at 5.231 [mm], t= 17.494 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step      4 at 6.538 [mm], t= 21.867 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step      4 at 6.538 [mm], t= 21.867 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step      5 at 7.846 [mm], t= 26.241 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step      5 at 7.846 [mm], t= 26.241 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step      6 at 9.154 [mm], t= 30.614 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step      6 at 9.154 [mm], t= 30.614 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step      7 at 10.461 [mm], t= 34.988 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step      7 at 10.461 [mm], t= 34.988 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step      8 at 11.769 [mm], t= 39.361 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step      8 at 11.769 [mm], t= 39.361 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step      9 at 13.076 [mm], t= 43.735 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step      9 at 13.076 [mm], t= 43.735 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     10 at 14.384 [mm], t= 48.108 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     10 at 14.384 [mm], t= 48.108 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     11 at 15.692 [mm], t= 52.481 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     11 at 15.692 [mm], t= 52.481 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     12 at 16.999 [mm], t= 56.855 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     12 at 16.999 [mm], t= 56.855 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     13 at 18.307 [mm], t= 61.228 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     13 at 18.307 [mm], t= 61.228 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     14 at 19.615 [mm], t= 65.602 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     14 at 19.615 [mm], t= 65.602 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     15 at 20.922 [mm], t= 69.975 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     15 at 20.922 [mm], t= 69.975 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     16 at 22.230 [mm], t= 74.349 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     16 at 22.230 [mm], t= 74.349 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     17 at 23.538 [mm], t= 78.722 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     17 at 23.538 [mm], t= 78.722 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     18 at 24.845 [mm], t= 83.096 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     18 at 24.845 [mm], t= 83.096 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     19 at 26.153 [mm], t= 87.469 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     19 at 26.153 [mm], t= 87.469 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
 OPAL > 
 OPAL > * ************** B U N C H ********************************************************* 
 OPAL > * NP              = 5000
 OPAL > * Qtot            =     1000.000 [pC]         Qi    =      200.000 [fC]
 OPAL > * Ekin            =       6.508 [MeV]         dEkin =       6.981 [keV]
-OPAL > * rmax            = (    623.05735 ,    611.03884 ,    113.80218 ) [um]
-OPAL > * rmin            = (   -628.11888 ,   -609.86159 ,   -113.77440 ) [um]
+OPAL > * rmax            = (    623.05735 ,    611.03884 ,    113.80219 ) [um]
+OPAL > * rmin            = (   -628.11888 ,   -609.86159 ,   -113.77439 ) [um]
 OPAL > * rms beam size   = (    270.27729 ,    270.27656 ,     50.00017 ) [um]
 OPAL > * rms momenta     = (  3.70124e-03 ,  3.70126e-03 ,  1.36987e-02 ) [beta gamma]
-OPAL > * mean position   = (      0.00000 ,     -0.00000 ,     -0.00212 ) [um]
+OPAL > * mean position   = (      0.00000 ,     -0.00000 ,     -0.00211 ) [um]
 OPAL > * mean momenta    = (  4.01013e-17 , -2.58575e-17 ,  1.36987e+01 ) [beta gamma]
 OPAL > * rms emittance   = (  7.30014e-08 ,  7.30015e-08 ,  5.00000e-08 ) (not normalized)
 OPAL > * rms correlation = (  2.61457e-02 ,  2.61535e-02 ,  2.77177e-03 )
@@ -241,57 +265,57 @@ OPAL > * spos            =       26.153 [mm]
 OPAL > * ********************************************************************************** 
 OPAL > 
 OPAL [2]> * Wrote beam phase space.
-ParallelTTracker [3]> 13:51:12 Step     20 at 27.461 [mm], t= 91.843 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     20 at 27.461 [mm], t= 91.843 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     21 at 28.768 [mm], t= 96.216 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     21 at 28.768 [mm], t= 96.216 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     22 at 30.076 [mm], t= 100.589 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     22 at 30.076 [mm], t= 100.589 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     23 at 31.384 [mm], t= 104.963 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     23 at 31.384 [mm], t= 104.963 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     24 at 32.691 [mm], t= 109.336 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     24 at 32.691 [mm], t= 109.336 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     25 at 33.999 [mm], t= 113.710 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     25 at 33.999 [mm], t= 113.710 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     26 at 35.307 [mm], t= 118.083 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     26 at 35.307 [mm], t= 118.083 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     27 at 36.614 [mm], t= 122.457 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     27 at 36.614 [mm], t= 122.457 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     28 at 37.922 [mm], t= 126.830 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     28 at 37.922 [mm], t= 126.830 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     29 at 39.229 [mm], t= 131.204 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     29 at 39.229 [mm], t= 131.204 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     30 at 40.537 [mm], t= 135.577 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     30 at 40.537 [mm], t= 135.577 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     31 at 41.845 [mm], t= 139.951 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     31 at 41.845 [mm], t= 139.951 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     32 at 43.152 [mm], t= 144.324 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     32 at 43.152 [mm], t= 144.324 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     33 at 44.460 [mm], t= 148.698 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     33 at 44.460 [mm], t= 148.698 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     34 at 45.768 [mm], t= 153.071 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     34 at 45.768 [mm], t= 153.071 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     35 at 47.075 [mm], t= 157.444 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     35 at 47.075 [mm], t= 157.444 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     36 at 48.383 [mm], t= 161.818 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     36 at 48.383 [mm], t= 161.818 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     37 at 49.691 [mm], t= 166.191 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     37 at 49.691 [mm], t= 166.191 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     38 at 50.998 [mm], t= 170.565 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     38 at 50.998 [mm], t= 170.565 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     39 at 52.306 [mm], t= 174.938 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     39 at 52.306 [mm], t= 174.938 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
 OPAL > 
 OPAL > * ************** B U N C H ********************************************************* 
 OPAL > * NP              = 5000
 OPAL > * Qtot            =     1000.000 [pC]         Qi    =      200.000 [fC]
 OPAL > * Ekin            =       6.508 [MeV]         dEkin =       6.981 [keV]
-OPAL > * rmax            = (    634.68435 ,    618.29374 ,    113.90687 ) [um]
-OPAL > * rmin            = (   -635.99851 ,   -617.64723 ,   -113.87690 ) [um]
+OPAL > * rmax            = (    634.68435 ,    618.29374 ,    113.90689 ) [um]
+OPAL > * rmin            = (   -635.99851 ,   -617.64723 ,   -113.87688 ) [um]
 OPAL > * rms beam size   = (    270.55427 ,    270.55348 ,     50.00072 ) [um]
 OPAL > * rms momenta     = (  3.70125e-03 ,  3.70126e-03 ,  1.36987e-02 ) [beta gamma]
-OPAL > * mean position   = (      0.00001 ,     -0.00000 ,     -0.00423 ) [um]
-OPAL > * mean momenta    = (  8.74768e-08 ,  5.01873e-11 ,  1.36987e+01 ) [beta gamma]
+OPAL > * mean position   = (      0.00001 ,     -0.00000 ,     -0.00422 ) [um]
+OPAL > * mean momenta    = (  8.74770e-08 ,  5.01873e-11 ,  1.36987e+01 ) [beta gamma]
 OPAL > * rms emittance   = (  7.30014e-08 ,  7.30015e-08 ,  4.99999e-08 ) (not normalized)
 OPAL > * rms correlation = (  5.22562e-02 ,  5.22240e-02 ,  5.54348e-03 )
 OPAL > * hr              = (    176.71164 ,    173.59283 ,      3.60963 ) [um]
@@ -301,57 +325,57 @@ OPAL > * spos            =       52.306 [mm]
 OPAL > * ********************************************************************************** 
 OPAL > 
 OPAL [2]> * Wrote beam phase space.
-ParallelTTracker [3]> 13:51:12 Step     40 at 53.614 [mm], t= 179.312 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     40 at 53.614 [mm], t= 179.312 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     41 at 54.921 [mm], t= 183.685 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     41 at 54.921 [mm], t= 183.685 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     42 at 56.229 [mm], t= 188.059 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     42 at 56.229 [mm], t= 188.059 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     43 at 57.537 [mm], t= 192.432 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     43 at 57.537 [mm], t= 192.432 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     44 at 58.844 [mm], t= 196.806 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     44 at 58.844 [mm], t= 196.806 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     45 at 60.152 [mm], t= 201.179 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     45 at 60.152 [mm], t= 201.179 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     46 at 61.460 [mm], t= 205.552 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     46 at 61.460 [mm], t= 205.552 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     47 at 62.767 [mm], t= 209.926 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     47 at 62.767 [mm], t= 209.926 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     48 at 64.075 [mm], t= 214.299 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     48 at 64.075 [mm], t= 214.299 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     49 at 65.382 [mm], t= 218.673 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     49 at 65.382 [mm], t= 218.673 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     50 at 66.690 [mm], t= 223.046 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     50 at 66.690 [mm], t= 223.046 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     51 at 67.998 [mm], t= 227.420 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     51 at 67.998 [mm], t= 227.420 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     52 at 69.305 [mm], t= 231.793 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     52 at 69.305 [mm], t= 231.793 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     53 at 70.613 [mm], t= 236.167 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     53 at 70.613 [mm], t= 236.167 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     54 at 71.921 [mm], t= 240.540 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     54 at 71.921 [mm], t= 240.540 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     55 at 73.228 [mm], t= 244.914 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     55 at 73.228 [mm], t= 244.914 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     56 at 74.536 [mm], t= 249.287 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     56 at 74.536 [mm], t= 249.287 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     57 at 75.844 [mm], t= 253.660 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     57 at 75.844 [mm], t= 253.660 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     58 at 77.151 [mm], t= 258.034 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     58 at 77.151 [mm], t= 258.034 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     59 at 78.459 [mm], t= 262.407 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     59 at 78.459 [mm], t= 262.407 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
 OPAL > 
 OPAL > * ************** B U N C H ********************************************************* 
 OPAL > * NP              = 5000
 OPAL > * Qtot            =     1000.000 [pC]         Qi    =      200.000 [fC]
 OPAL > * Ekin            =       6.508 [MeV]         dEkin =       6.981 [keV]
-OPAL > * rmax            = (    647.49632 ,    625.37493 ,    114.72830 ) [um]
-OPAL > * rmin            = (   -645.90554 ,   -625.25787 ,   -114.36160 ) [um]
+OPAL > * rmax            = (    647.49633 ,    625.37493 ,    114.72832 ) [um]
+OPAL > * rmin            = (   -645.90554 ,   -625.25787 ,   -114.36158 ) [um]
 OPAL > * rms beam size   = (    271.09101 ,    270.93791 ,     50.01223 ) [um]
 OPAL > * rms momenta     = (  3.72719e-03 ,  3.69446e-03 ,  1.36987e-02 ) [beta gamma]
-OPAL > * mean position   = (      0.01424 ,      0.00000 ,     -0.00638 ) [um]
-OPAL > * mean momenta    = (  1.53850e-05 ,  1.22436e-09 ,  1.36987e+01 ) [beta gamma]
+OPAL > * mean position   = (      0.01425 ,      0.00000 ,     -0.00636 ) [um]
+OPAL > * mean momenta    = (  1.53873e-05 ,  1.22436e-09 ,  1.36987e+01 ) [beta gamma]
 OPAL > * rms emittance   = (  7.32871e-08 ,  7.30013e-08 ,  5.00105e-08 ) (not normalized)
 OPAL > * rms correlation = (  1.13006e-01 ,  4.35280e-02 ,  8.31288e-03 )
 OPAL > * hr              = (    176.71164 ,    173.59283 ,      3.60963 ) [um]
@@ -361,61 +385,61 @@ OPAL > * spos            =       78.459 [mm]
 OPAL > * ********************************************************************************** 
 OPAL > 
 OPAL [2]> * Wrote beam phase space.
-ParallelTTracker [3]> 13:51:12 Step     60 at 79.767 [mm], t= 266.781 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     60 at 79.767 [mm], t= 266.781 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:12 Step     61 at 81.074 [mm], t= 271.154 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     61 at 81.074 [mm], t= 271.154 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:13 Step     62 at 82.382 [mm], t= 275.528 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     62 at 82.382 [mm], t= 275.528 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:13 Step     63 at 83.690 [mm], t= 279.901 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     63 at 83.690 [mm], t= 279.901 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:13 Step     64 at 84.997 [mm], t= 284.275 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     64 at 84.997 [mm], t= 284.275 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:13 Step     65 at 86.305 [mm], t= 288.648 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     65 at 86.305 [mm], t= 288.648 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:13 Step     66 at 87.613 [mm], t= 293.022 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     66 at 87.613 [mm], t= 293.022 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:13 Step     67 at 88.920 [mm], t= 297.395 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     67 at 88.920 [mm], t= 297.395 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:13 Step     68 at 90.228 [mm], t= 301.768 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     68 at 90.228 [mm], t= 301.768 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:13 Step     69 at 91.535 [mm], t= 306.142 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     69 at 91.535 [mm], t= 306.142 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:13 Step     70 at 92.843 [mm], t= 310.515 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     70 at 92.843 [mm], t= 310.515 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:13 Step     71 at 94.151 [mm], t= 314.889 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     71 at 94.151 [mm], t= 314.889 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:13 Step     72 at 95.458 [mm], t= 319.262 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     72 at 95.458 [mm], t= 319.262 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:13 Step     73 at 96.766 [mm], t= 323.636 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     73 at 96.766 [mm], t= 323.636 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:13 Step     74 at 98.074 [mm], t= 328.009 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     74 at 98.074 [mm], t= 328.009 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
-ParallelTTracker [3]> 13:51:13 Step     75 at 99.381 [mm], t= 332.383 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     75 at 99.381 [mm], t= 332.383 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00000.txt
-ParallelTTracker [3]> 13:51:13 Step     76 at 100.689 [mm], t= 336.756 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     76 at 100.689 [mm], t= 336.756 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00001.txt
-ParallelTTracker [3]> 13:51:13 Step     77 at 101.997 [mm], t= 341.130 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     77 at 101.997 [mm], t= 341.130 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00002.txt
-ParallelTTracker [3]> 13:51:13 Step     78 at 103.304 [mm], t= 345.503 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     78 at 103.304 [mm], t= 345.503 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00003.txt
-ParallelTTracker [3]> 13:51:13 Step     79 at 104.612 [mm], t= 349.877 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     79 at 104.612 [mm], t= 349.877 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
 OPAL > 
 OPAL > * ************** B U N C H ********************************************************* 
 OPAL > * NP              = 5000
 OPAL > * Qtot            =     1000.000 [pC]         Qi    =      200.000 [fC]
 OPAL > * Ekin            =       6.508 [MeV]         dEkin =       6.995 [keV]
-OPAL > * rmax            = (    661.28886 ,    631.27574 ,    130.68419 ) [um]
-OPAL > * rmin            = (   -659.27331 ,   -631.68467 ,   -122.88799 ) [um]
+OPAL > * rmax            = (    661.28888 ,    631.27574 ,    130.68422 ) [um]
+OPAL > * rmin            = (   -659.27329 ,   -631.68467 ,   -122.88796 ) [um]
 OPAL > * rms beam size   = (    272.25476 ,    270.99244 ,     50.70599 ) [um]
 OPAL > * rms momenta     = (  4.10948e-03 ,  3.69448e-03 ,  1.37262e-02 ) [beta gamma]
-OPAL > * mean position   = (      0.07260 ,     -0.00000 ,     -0.00974 ) [um]
-OPAL > * mean momenta    = (  6.78133e-05 , -1.20585e-08 ,  1.36987e+01 ) [beta gamma]
+OPAL > * mean position   = (      0.07262 ,     -0.00000 ,     -0.00971 ) [um]
+OPAL > * mean momenta    = (  6.78352e-05 , -1.20585e-08 ,  1.36987e+01 ) [beta gamma]
 OPAL > * rms emittance   = (  7.89113e-08 ,  7.30011e-08 ,  5.07734e-08 ) (not normalized)
 OPAL > * rms correlation = (  2.57893e-01 , -4.81182e-02 ,  3.68880e-02 )
 OPAL > * hr              = (    176.71164 ,    173.59283 ,      3.60963 ) [um]
@@ -426,76 +450,76 @@ OPAL > * ***********************************************************************
 OPAL > 
 OPAL [2]> * Wrote beam phase space.
 CSRWake > ** wrote data/BEND1-CSRWake00004.txt
-ParallelTTracker [3]> 13:51:13 Step     80 at 105.920 [mm], t= 354.250 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     80 at 105.920 [mm], t= 354.250 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00005.txt
-ParallelTTracker [3]> 13:51:13 Step     81 at 107.227 [mm], t= 358.623 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     81 at 107.227 [mm], t= 358.623 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00006.txt
-ParallelTTracker [3]> 13:51:13 Step     82 at 108.535 [mm], t= 362.997 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     82 at 108.535 [mm], t= 362.997 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00007.txt
-ParallelTTracker [3]> 13:51:13 Step     83 at 109.843 [mm], t= 367.370 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     83 at 109.843 [mm], t= 367.370 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00008.txt
-ParallelTTracker [3]> 13:51:13 Step     84 at 111.150 [mm], t= 371.744 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     84 at 111.150 [mm], t= 371.744 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00009.txt
-ParallelTTracker [3]> 13:51:13 Step     85 at 112.458 [mm], t= 376.117 [ps], E=6.508 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     85 at 112.458 [mm], t= 376.117 [ps], E=6.508 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00010.txt
-ParallelTTracker [3]> 13:51:13 Step     86 at 113.765 [mm], t= 380.491 [ps], E=6.507 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     86 at 113.765 [mm], t= 380.491 [ps], E=6.507 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00011.txt
-ParallelTTracker [3]> 13:51:13 Step     87 at 115.073 [mm], t= 384.864 [ps], E=6.507 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     87 at 115.073 [mm], t= 384.864 [ps], E=6.507 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00012.txt
-ParallelTTracker [3]> 13:51:13 Step     88 at 116.381 [mm], t= 389.238 [ps], E=6.507 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     88 at 116.381 [mm], t= 389.238 [ps], E=6.507 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00013.txt
-ParallelTTracker [3]> 13:51:13 Step     89 at 117.688 [mm], t= 393.611 [ps], E=6.507 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     89 at 117.688 [mm], t= 393.611 [ps], E=6.507 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00014.txt
-ParallelTTracker [3]> 13:51:13 Step     90 at 118.996 [mm], t= 397.985 [ps], E=6.507 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     90 at 118.996 [mm], t= 397.985 [ps], E=6.507 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00015.txt
-ParallelTTracker [3]> 13:51:13 Step     91 at 120.304 [mm], t= 402.358 [ps], E=6.506 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     91 at 120.304 [mm], t= 402.358 [ps], E=6.506 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00016.txt
-ParallelTTracker [3]> 13:51:13 Step     92 at 121.611 [mm], t= 406.731 [ps], E=6.506 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     92 at 121.611 [mm], t= 406.731 [ps], E=6.506 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00017.txt
-ParallelTTracker [3]> 13:51:13 Step     93 at 122.919 [mm], t= 411.105 [ps], E=6.505 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     93 at 122.919 [mm], t= 411.105 [ps], E=6.505 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00018.txt
-ParallelTTracker [3]> 13:51:13 Step     94 at 124.227 [mm], t= 415.478 [ps], E=6.504 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     94 at 124.227 [mm], t= 415.478 [ps], E=6.504 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00019.txt
-ParallelTTracker [3]> 13:51:13 Step     95 at 125.534 [mm], t= 419.852 [ps], E=6.504 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     95 at 125.534 [mm], t= 419.852 [ps], E=6.504 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00020.txt
-ParallelTTracker [3]> 13:51:13 Step     96 at 126.842 [mm], t= 424.225 [ps], E=6.502 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     96 at 126.842 [mm], t= 424.225 [ps], E=6.502 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00021.txt
-ParallelTTracker [3]> 13:51:13 Step     97 at 128.150 [mm], t= 428.599 [ps], E=6.501 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     97 at 128.150 [mm], t= 428.599 [ps], E=6.501 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00022.txt
-ParallelTTracker [3]> 13:51:13 Step     98 at 129.457 [mm], t= 432.972 [ps], E=6.499 [MeV]
+ParallelTTracker [3]> 12:56:06 Step     98 at 129.457 [mm], t= 432.972 [ps], E=6.499 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00023.txt
-ParallelTTracker [2]> 13:51:13 Step     99 at 130.765 [mm], t= 437.346 [ps], E=6.497 [MeV]
+ParallelTTracker [2]> 12:56:06 Step     99 at 130.765 [mm], t= 437.346 [ps], E=6.497 [MeV]
 OPAL [3]> * Wrote beam statistics.
 OPAL > 
 OPAL > * ************** B U N C H ********************************************************* 
 OPAL > * NP              = 5000
 OPAL > * Qtot            =     1000.000 [pC]         Qi    =      200.000 [fC]
 OPAL > * Ekin            =       6.497 [MeV]         dEkin =      47.463 [keV]
-OPAL > * rmax            = (    672.88485 ,    634.99542 ,    189.77139 ) [um]
-OPAL > * rmin            = (   -668.30111 ,   -635.92848 ,   -181.37771 ) [um]
+OPAL > * rmax            = (    672.88497 ,    634.99542 ,    189.77142 ) [um]
+OPAL > * rmin            = (   -668.30098 ,   -635.92848 ,   -181.37768 ) [um]
 OPAL > * rms beam size   = (    272.94103 ,    270.28911 ,     60.61512 ) [um]
 OPAL > * rms momenta     = (  4.43468e-03 ,  3.71880e-03 ,  9.31309e-02 ) [beta gamma]
-OPAL > * mean position   = (     -0.00916 ,     -0.00013 ,     -0.06495 ) [um]
-OPAL > * mean momenta    = ( -4.70480e-04 , -7.36119e-08 ,  1.36780e+01 ) [beta gamma]
+OPAL > * mean position   = (     -0.00904 ,     -0.00013 ,     -0.06491 ) [um]
+OPAL > * mean momenta    = ( -4.70389e-04 , -7.36119e-08 ,  1.36780e+01 ) [beta gamma]
 OPAL > * rms emittance   = (  8.69685e-08 ,  7.31120e-08 ,  2.21035e-07 ) (not normalized)
 OPAL > * rms correlation = (  1.84820e-01 , -1.00872e-01 ,  8.44497e-01 )
 OPAL > * hr              = (    176.71164 ,    173.59283 ,      3.60963 ) [um]
@@ -506,76 +530,76 @@ OPAL > * ***********************************************************************
 OPAL > 
 OPAL [2]> * Wrote beam phase space.
 CSRWake > ** wrote data/BEND1-CSRWake00024.txt
-ParallelTTracker [3]> 13:51:13 Step    100 at 132.073 [mm], t= 441.719 [ps], E=6.495 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    100 at 132.073 [mm], t= 441.719 [ps], E=6.495 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00025.txt
-ParallelTTracker [3]> 13:51:13 Step    101 at 133.380 [mm], t= 446.093 [ps], E=6.492 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    101 at 133.380 [mm], t= 446.093 [ps], E=6.492 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00026.txt
-ParallelTTracker [3]> 13:51:13 Step    102 at 134.688 [mm], t= 450.466 [ps], E=6.489 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    102 at 134.688 [mm], t= 450.466 [ps], E=6.489 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00027.txt
-ParallelTTracker [3]> 13:51:13 Step    103 at 135.995 [mm], t= 454.839 [ps], E=6.486 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    103 at 135.995 [mm], t= 454.839 [ps], E=6.486 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00028.txt
-ParallelTTracker [3]> 13:51:13 Step    104 at 137.303 [mm], t= 459.213 [ps], E=6.483 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    104 at 137.303 [mm], t= 459.213 [ps], E=6.483 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00029.txt
-ParallelTTracker [3]> 13:51:13 Step    105 at 138.611 [mm], t= 463.586 [ps], E=6.479 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    105 at 138.611 [mm], t= 463.586 [ps], E=6.479 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00030.txt
-ParallelTTracker [3]> 13:51:13 Step    106 at 139.918 [mm], t= 467.960 [ps], E=6.475 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    106 at 139.918 [mm], t= 467.960 [ps], E=6.475 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00031.txt
-ParallelTTracker [3]> 13:51:13 Step    107 at 141.226 [mm], t= 472.333 [ps], E=6.471 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    107 at 141.226 [mm], t= 472.333 [ps], E=6.471 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00032.txt
-ParallelTTracker [3]> 13:51:13 Step    108 at 142.534 [mm], t= 476.707 [ps], E=6.467 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    108 at 142.534 [mm], t= 476.707 [ps], E=6.467 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00033.txt
-ParallelTTracker [3]> 13:51:13 Step    109 at 143.841 [mm], t= 481.080 [ps], E=6.463 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    109 at 143.841 [mm], t= 481.080 [ps], E=6.463 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00034.txt
-ParallelTTracker [3]> 13:51:13 Step    110 at 145.149 [mm], t= 485.454 [ps], E=6.459 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    110 at 145.149 [mm], t= 485.454 [ps], E=6.459 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00035.txt
-ParallelTTracker [3]> 13:51:13 Step    111 at 146.457 [mm], t= 489.827 [ps], E=6.455 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    111 at 146.457 [mm], t= 489.827 [ps], E=6.455 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00036.txt
-ParallelTTracker [3]> 13:51:13 Step    112 at 147.764 [mm], t= 494.201 [ps], E=6.452 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    112 at 147.764 [mm], t= 494.201 [ps], E=6.452 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00037.txt
-ParallelTTracker [3]> 13:51:13 Step    113 at 149.072 [mm], t= 498.574 [ps], E=6.448 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    113 at 149.072 [mm], t= 498.574 [ps], E=6.448 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00038.txt
-ParallelTTracker [3]> 13:51:13 Step    114 at 150.380 [mm], t= 502.947 [ps], E=6.444 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    114 at 150.380 [mm], t= 502.947 [ps], E=6.444 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00039.txt
-ParallelTTracker [3]> 13:51:13 Step    115 at 151.687 [mm], t= 507.321 [ps], E=6.441 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    115 at 151.687 [mm], t= 507.321 [ps], E=6.441 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00040.txt
-ParallelTTracker [3]> 13:51:13 Step    116 at 152.995 [mm], t= 511.694 [ps], E=6.437 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    116 at 152.995 [mm], t= 511.694 [ps], E=6.437 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00041.txt
-ParallelTTracker [3]> 13:51:13 Step    117 at 154.302 [mm], t= 516.068 [ps], E=6.434 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    117 at 154.302 [mm], t= 516.068 [ps], E=6.434 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00042.txt
-ParallelTTracker [3]> 13:51:13 Step    118 at 155.610 [mm], t= 520.441 [ps], E=6.431 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    118 at 155.610 [mm], t= 520.441 [ps], E=6.431 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00043.txt
-ParallelTTracker [3]> 13:51:13 Step    119 at 156.918 [mm], t= 524.815 [ps], E=6.428 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    119 at 156.918 [mm], t= 524.815 [ps], E=6.428 [MeV]
 OPAL [3]> * Wrote beam statistics.
 OPAL > 
 OPAL > * ************** B U N C H ********************************************************* 
 OPAL > * NP              = 5000
 OPAL > * Qtot            =     1000.000 [pC]         Qi    =      200.000 [fC]
 OPAL > * Ekin            =       6.428 [MeV]         dEkin =      99.043 [keV]
-OPAL > * rmax            = (    679.45320 ,    638.50210 ,    257.22837 ) [um]
-OPAL > * rmin            = (   -681.74738 ,   -641.59085 ,   -247.29696 ) [um]
+OPAL > * rmax            = (    679.45358 ,    638.50210 ,    257.22838 ) [um]
+OPAL > * rmin            = (   -681.74701 ,   -641.59085 ,   -247.29694 ) [um]
 OPAL > * rms beam size   = (    264.95836 ,    269.65973 ,     80.61859 ) [um]
 OPAL > * rms momenta     = (  1.73703e-02 ,  3.71880e-03 ,  1.94349e-01 ) [beta gamma]
-OPAL > * mean position   = (     -7.78205 ,     -0.00049 ,     -0.74916 ) [um]
-OPAL > * mean momenta    = ( -9.84097e-03 , -7.28807e-08 ,  1.35421e+01 ) [beta gamma]
+OPAL > * mean position   = (     -7.78168 ,     -0.00049 ,     -0.74914 ) [um]
+OPAL > * mean momenta    = ( -9.84081e-03 , -7.28807e-08 ,  1.35421e+01 ) [beta gamma]
 OPAL > * rms emittance   = (  3.29568e-07 ,  7.38448e-08 ,  7.70955e-07 ) (not normalized)
 OPAL > * rms correlation = ( -2.44204e-01 , -7.46090e-02 ,  7.45646e-01 )
 OPAL > * hr              = (    176.71164 ,    173.59283 ,      3.60963 ) [um]
@@ -586,76 +610,76 @@ OPAL > * ***********************************************************************
 OPAL > 
 OPAL [2]> * Wrote beam phase space.
 CSRWake > ** wrote data/BEND1-CSRWake00044.txt
-ParallelTTracker [3]> 13:51:13 Step    120 at 158.225 [mm], t= 529.188 [ps], E=6.425 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    120 at 158.225 [mm], t= 529.188 [ps], E=6.425 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00045.txt
-ParallelTTracker [3]> 13:51:13 Step    121 at 159.533 [mm], t= 533.562 [ps], E=6.422 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    121 at 159.533 [mm], t= 533.562 [ps], E=6.422 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00046.txt
-ParallelTTracker [3]> 13:51:13 Step    122 at 160.841 [mm], t= 537.935 [ps], E=6.419 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    122 at 160.841 [mm], t= 537.935 [ps], E=6.419 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00047.txt
-ParallelTTracker [3]> 13:51:13 Step    123 at 162.148 [mm], t= 542.309 [ps], E=6.416 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    123 at 162.148 [mm], t= 542.309 [ps], E=6.416 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00048.txt
-ParallelTTracker [3]> 13:51:13 Step    124 at 163.456 [mm], t= 546.682 [ps], E=6.413 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    124 at 163.456 [mm], t= 546.682 [ps], E=6.413 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00049.txt
-ParallelTTracker [3]> 13:51:13 Step    125 at 164.764 [mm], t= 551.055 [ps], E=6.411 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    125 at 164.764 [mm], t= 551.055 [ps], E=6.411 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00050.txt
-ParallelTTracker [3]> 13:51:13 Step    126 at 166.071 [mm], t= 555.429 [ps], E=6.408 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    126 at 166.071 [mm], t= 555.429 [ps], E=6.408 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00051.txt
-ParallelTTracker [3]> 13:51:13 Step    127 at 167.379 [mm], t= 559.802 [ps], E=6.405 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    127 at 167.379 [mm], t= 559.802 [ps], E=6.405 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00052.txt
-ParallelTTracker [3]> 13:51:13 Step    128 at 168.687 [mm], t= 564.176 [ps], E=6.403 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    128 at 168.687 [mm], t= 564.176 [ps], E=6.403 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00053.txt
-ParallelTTracker [3]> 13:51:13 Step    129 at 169.994 [mm], t= 568.549 [ps], E=6.400 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    129 at 169.994 [mm], t= 568.549 [ps], E=6.400 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00054.txt
-ParallelTTracker [3]> 13:51:13 Step    130 at 171.302 [mm], t= 572.923 [ps], E=6.398 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    130 at 171.302 [mm], t= 572.923 [ps], E=6.398 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00055.txt
-ParallelTTracker [3]> 13:51:13 Step    131 at 172.610 [mm], t= 577.296 [ps], E=6.395 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    131 at 172.610 [mm], t= 577.296 [ps], E=6.395 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00056.txt
-ParallelTTracker [3]> 13:51:13 Step    132 at 173.917 [mm], t= 581.670 [ps], E=6.393 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    132 at 173.917 [mm], t= 581.670 [ps], E=6.393 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00057.txt
-ParallelTTracker [3]> 13:51:13 Step    133 at 175.225 [mm], t= 586.043 [ps], E=6.391 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    133 at 175.225 [mm], t= 586.043 [ps], E=6.391 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00058.txt
-ParallelTTracker [3]> 13:51:13 Step    134 at 176.532 [mm], t= 590.417 [ps], E=6.388 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    134 at 176.532 [mm], t= 590.417 [ps], E=6.388 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00059.txt
-ParallelTTracker [3]> 13:51:13 Step    135 at 177.840 [mm], t= 594.790 [ps], E=6.386 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    135 at 177.840 [mm], t= 594.790 [ps], E=6.386 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00060.txt
-ParallelTTracker [3]> 13:51:13 Step    136 at 179.148 [mm], t= 599.164 [ps], E=6.384 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    136 at 179.148 [mm], t= 599.164 [ps], E=6.384 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00061.txt
-ParallelTTracker [3]> 13:51:13 Step    137 at 180.455 [mm], t= 603.537 [ps], E=6.382 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    137 at 180.455 [mm], t= 603.537 [ps], E=6.382 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00062.txt
-ParallelTTracker [3]> 13:51:13 Step    138 at 181.763 [mm], t= 607.910 [ps], E=6.379 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    138 at 181.763 [mm], t= 607.910 [ps], E=6.379 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00063.txt
-ParallelTTracker [3]> 13:51:13 Step    139 at 183.071 [mm], t= 612.284 [ps], E=6.377 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    139 at 183.071 [mm], t= 612.284 [ps], E=6.377 [MeV]
 OPAL [3]> * Wrote beam statistics.
 OPAL > 
 OPAL > * ************** B U N C H ********************************************************* 
 OPAL > * NP              = 5000
 OPAL > * Qtot            =     1000.000 [pC]         Qi    =      200.000 [fC]
 OPAL > * Ekin            =       6.377 [MeV]         dEkin =     126.382 [keV]
-OPAL > * rmax            = (    652.49225 ,    643.63016 ,    322.96745 ) [um]
-OPAL > * rmin            = (   -746.18873 ,   -651.38468 ,   -312.84324 ) [um]
+OPAL > * rmax            = (    652.49302 ,    643.63016 ,    322.96742 ) [um]
+OPAL > * rmin            = (   -746.18795 ,   -651.38468 ,   -312.84328 ) [um]
 OPAL > * rms beam size   = (    248.03514 ,    269.21419 ,    102.29992 ) [um]
 OPAL > * rms momenta     = (  4.00908e-02 ,  3.71880e-03 ,  2.48008e-01 ) [beta gamma]
-OPAL > * mean position   = (    -47.45991 ,     -0.00090 ,     -0.56240 ) [um]
-OPAL > * mean momenta    = ( -3.17242e-02 , -7.23455e-08 ,  1.34426e+01 ) [beta gamma]
+OPAL > * mean position   = (    -47.45913 ,     -0.00090 ,     -0.56244 ) [um]
+OPAL > * mean momenta    = ( -3.17240e-02 , -7.23455e-08 ,  1.34426e+01 ) [beta gamma]
 OPAL > * rms emittance   = (  7.36432e-07 ,  7.43900e-08 ,  1.38094e-06 ) (not normalized)
 OPAL > * rms correlation = ( -9.42957e-02 , -4.79490e-02 ,  6.81652e-01 )
 OPAL > * hr              = (    176.71164 ,    173.59283 ,      3.60963 ) [um]
@@ -666,76 +690,76 @@ OPAL > * ***********************************************************************
 OPAL > 
 OPAL [2]> * Wrote beam phase space.
 CSRWake > ** wrote data/BEND1-CSRWake00064.txt
-ParallelTTracker [3]> 13:51:13 Step    140 at 184.378 [mm], t= 616.657 [ps], E=6.375 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    140 at 184.378 [mm], t= 616.657 [ps], E=6.375 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00065.txt
-ParallelTTracker [3]> 13:51:13 Step    141 at 185.686 [mm], t= 621.031 [ps], E=6.373 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    141 at 185.686 [mm], t= 621.031 [ps], E=6.373 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00066.txt
-ParallelTTracker [3]> 13:51:13 Step    142 at 186.994 [mm], t= 625.404 [ps], E=6.371 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    142 at 186.994 [mm], t= 625.404 [ps], E=6.371 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00067.txt
-ParallelTTracker [3]> 13:51:13 Step    143 at 188.301 [mm], t= 629.778 [ps], E=6.369 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    143 at 188.301 [mm], t= 629.778 [ps], E=6.369 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00068.txt
-ParallelTTracker [3]> 13:51:13 Step    144 at 189.609 [mm], t= 634.151 [ps], E=6.367 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    144 at 189.609 [mm], t= 634.151 [ps], E=6.367 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00069.txt
-ParallelTTracker [3]> 13:51:13 Step    145 at 190.917 [mm], t= 638.525 [ps], E=6.365 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    145 at 190.917 [mm], t= 638.525 [ps], E=6.365 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00070.txt
-ParallelTTracker [3]> 13:51:13 Step    146 at 192.224 [mm], t= 642.898 [ps], E=6.363 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    146 at 192.224 [mm], t= 642.898 [ps], E=6.363 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00071.txt
-ParallelTTracker [3]> 13:51:13 Step    147 at 193.532 [mm], t= 647.272 [ps], E=6.361 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    147 at 193.532 [mm], t= 647.272 [ps], E=6.361 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00072.txt
-ParallelTTracker [3]> 13:51:13 Step    148 at 194.839 [mm], t= 651.645 [ps], E=6.359 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    148 at 194.839 [mm], t= 651.645 [ps], E=6.359 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00073.txt
-ParallelTTracker [3]> 13:51:13 Step    149 at 196.147 [mm], t= 656.018 [ps], E=6.358 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    149 at 196.147 [mm], t= 656.018 [ps], E=6.358 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00074.txt
-ParallelTTracker [3]> 13:51:13 Step    150 at 197.455 [mm], t= 660.392 [ps], E=6.356 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    150 at 197.455 [mm], t= 660.392 [ps], E=6.356 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00075.txt
-ParallelTTracker [3]> 13:51:13 Step    151 at 198.762 [mm], t= 664.765 [ps], E=6.354 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    151 at 198.762 [mm], t= 664.765 [ps], E=6.354 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00076.txt
-ParallelTTracker [3]> 13:51:13 Step    152 at 200.070 [mm], t= 669.139 [ps], E=6.352 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    152 at 200.070 [mm], t= 669.139 [ps], E=6.352 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00077.txt
-ParallelTTracker [3]> 13:51:13 Step    153 at 201.378 [mm], t= 673.512 [ps], E=6.350 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    153 at 201.378 [mm], t= 673.512 [ps], E=6.350 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00078.txt
-ParallelTTracker [3]> 13:51:13 Step    154 at 202.685 [mm], t= 677.886 [ps], E=6.349 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    154 at 202.685 [mm], t= 677.886 [ps], E=6.349 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00079.txt
-ParallelTTracker [3]> 13:51:13 Step    155 at 203.993 [mm], t= 682.259 [ps], E=6.347 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    155 at 203.993 [mm], t= 682.259 [ps], E=6.347 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00080.txt
-ParallelTTracker [3]> 13:51:13 Step    156 at 205.301 [mm], t= 686.633 [ps], E=6.345 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    156 at 205.301 [mm], t= 686.633 [ps], E=6.345 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00081.txt
-ParallelTTracker [3]> 13:51:13 Step    157 at 206.608 [mm], t= 691.006 [ps], E=6.344 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    157 at 206.608 [mm], t= 691.006 [ps], E=6.344 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00082.txt
-ParallelTTracker [3]> 13:51:13 Step    158 at 207.916 [mm], t= 695.380 [ps], E=6.342 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    158 at 207.916 [mm], t= 695.380 [ps], E=6.342 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00083.txt
-ParallelTTracker [3]> 13:51:13 Step    159 at 209.224 [mm], t= 699.753 [ps], E=6.340 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    159 at 209.224 [mm], t= 699.753 [ps], E=6.340 [MeV]
 OPAL [3]> * Wrote beam statistics.
 OPAL > 
 OPAL > * ************** B U N C H ********************************************************* 
 OPAL > * NP              = 5000
 OPAL > * Qtot            =     1000.000 [pC]         Qi    =      200.000 [fC]
 OPAL > * Ekin            =       6.340 [MeV]         dEkin =     145.755 [keV]
-OPAL > * rmax            = (    645.20224 ,    652.03117 ,    382.82295 ) [um]
-OPAL > * rmin            = (   -930.35592 ,   -661.25854 ,   -380.77774 ) [um]
+OPAL > * rmax            = (    645.20355 ,    652.03117 ,    382.82281 ) [um]
+OPAL > * rmin            = (   -930.35459 ,   -661.25854 ,   -380.77788 ) [um]
 OPAL > * rms beam size   = (    252.18131 ,    268.95941 ,    120.87483 ) [um]
 OPAL > * rms momenta     = (  6.75073e-02 ,  3.71880e-03 ,  2.86032e-01 ) [beta gamma]
-OPAL > * mean position   = (   -139.81578 ,     -0.00135 ,      5.16049 ) [um]
-OPAL > * mean momenta    = ( -6.22231e-02 , -7.32402e-08 ,  1.33698e+01 ) [beta gamma]
+OPAL > * mean position   = (   -139.81446 ,     -0.00135 ,      5.16035 ) [um]
+OPAL > * mean momenta    = ( -6.22228e-02 , -7.32402e-08 ,  1.33698e+01 ) [beta gamma]
 OPAL > * rms emittance   = (  1.21104e-06 ,  7.47926e-08 ,  2.04662e-06 ) (not normalized)
 OPAL > * rms correlation = (  3.08869e-01 , -2.10187e-02 ,  6.11236e-01 )
 OPAL > * hr              = (    176.71164 ,    173.59283 ,      3.60963 ) [um]
@@ -746,81 +770,76 @@ OPAL > * ***********************************************************************
 OPAL > 
 OPAL [2]> * Wrote beam phase space.
 CSRWake > ** wrote data/BEND1-CSRWake00084.txt
-ParallelTTracker [3]> 13:51:13 Step    160 at 210.531 [mm], t= 704.126 [ps], E=6.339 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    160 at 210.531 [mm], t= 704.126 [ps], E=6.339 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00085.txt
-ParallelTTracker [3]> 13:51:13 Step    161 at 211.839 [mm], t= 708.500 [ps], E=6.337 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    161 at 211.839 [mm], t= 708.500 [ps], E=6.337 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00086.txt
-ParallelTTracker [3]> 13:51:13 Step    162 at 213.147 [mm], t= 712.873 [ps], E=6.335 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    162 at 213.147 [mm], t= 712.873 [ps], E=6.335 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00087.txt
-ParallelTTracker [3]> 13:51:13 Step    163 at 214.454 [mm], t= 717.247 [ps], E=6.334 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    163 at 214.454 [mm], t= 717.247 [ps], E=6.334 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00088.txt
-ParallelTTracker [3]> 13:51:13 Step    164 at 215.762 [mm], t= 721.620 [ps], E=6.332 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    164 at 215.762 [mm], t= 721.620 [ps], E=6.332 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00089.txt
-ParallelTTracker [3]> 13:51:13 Step    165 at 217.069 [mm], t= 725.994 [ps], E=6.330 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    165 at 217.069 [mm], t= 725.994 [ps], E=6.330 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00090.txt
-ParallelTTracker [3]> 13:51:13 Step    166 at 218.377 [mm], t= 730.367 [ps], E=6.329 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    166 at 218.377 [mm], t= 730.367 [ps], E=6.329 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00091.txt
-ParallelTTracker [3]> 13:51:13 Step    167 at 219.685 [mm], t= 734.741 [ps], E=6.327 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    167 at 219.685 [mm], t= 734.741 [ps], E=6.327 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00092.txt
-ParallelTTracker [3]> 13:51:13 Step    168 at 220.992 [mm], t= 739.114 [ps], E=6.326 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    168 at 220.992 [mm], t= 739.114 [ps], E=6.326 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00093.txt
-ParallelTTracker [3]> 13:51:13 Step    169 at 222.300 [mm], t= 743.488 [ps], E=6.324 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    169 at 222.300 [mm], t= 743.488 [ps], E=6.324 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00094.txt
-ParallelTTracker [3]> 13:51:13 Step    170 at 223.608 [mm], t= 747.861 [ps], E=6.323 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    170 at 223.608 [mm], t= 747.861 [ps], E=6.323 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00095.txt
-ParallelTTracker [3]> 13:51:13 Step    171 at 224.915 [mm], t= 752.234 [ps], E=6.321 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    171 at 224.915 [mm], t= 752.234 [ps], E=6.321 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00096.txt
-ParallelTTracker [3]> 13:51:13 Step    172 at 226.223 [mm], t= 756.608 [ps], E=6.320 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    172 at 226.223 [mm], t= 756.608 [ps], E=6.320 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00097.txt
-ParallelTTracker [3]> 13:51:13 Step    173 at 227.531 [mm], t= 760.981 [ps], E=6.318 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    173 at 227.531 [mm], t= 760.981 [ps], E=6.318 [MeV]
 OPAL [3]> * Wrote beam statistics.
 CSRWake > ** wrote data/BEND1-CSRWake00098.txt
-ParallelTTracker [3]> 13:51:13 Step    174 at 228.838 [mm], t= 765.355 [ps], E=6.317 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    174 at 228.838 [mm], t= 765.355 [ps], E=6.317 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00099.txt
-ParallelTTracker [3]> 13:51:13 Step    175 at 230.146 [mm], t= 769.728 [ps], E=6.315 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    175 at 230.146 [mm], t= 769.728 [ps], E=6.315 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00100.txt
-ParallelTTracker [3]> 13:51:13 Step    176 at 231.454 [mm], t= 774.102 [ps], E=6.313 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    176 at 231.454 [mm], t= 774.102 [ps], E=6.313 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00101.txt
-ParallelTTracker [3]> 13:51:13 Step    177 at 232.761 [mm], t= 778.475 [ps], E=6.312 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    177 at 232.761 [mm], t= 778.475 [ps], E=6.312 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00102.txt
-ParallelTTracker [3]> 13:51:13 Step    178 at 234.069 [mm], t= 782.849 [ps], E=6.311 [MeV]
+ParallelTTracker [3]> 12:56:06 Step    178 at 234.069 [mm], t= 782.849 [ps], E=6.311 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00103.txt
-ParallelTTracker [3]> 13:51:13 Step    179 at 235.377 [mm], t= 787.222 [ps], E=6.309 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    179 at 235.377 [mm], t= 787.222 [ps], E=6.309 [MeV]
 OPAL [3]> * Wrote beam statistics.
 OPAL > 
 OPAL > * ************** B U N C H ********************************************************* 
 OPAL > * NP              = 5000
 OPAL > * Qtot            =     1000.000 [pC]         Qi    =      200.000 [fC]
 OPAL > * Ekin            =       6.309 [MeV]         dEkin =     160.357 [keV]
-OPAL > * rmax            = (    633.27544 ,    659.97272 ,    417.72853 ) [um]
+OPAL > * rmax            = (    633.27740 ,    659.97272 ,    417.72829 ) [um]
 OPAL > * rmin            = (     -1.19540 ,     -0.67013 ,     -0.42593 ) [mm]
-OPAL > * rms beam size   = (    332.43458 ,    268.45384 ,    130.76159 ) [um]
+OPAL > * rms beam size   = (    332.43457 ,    268.45384 ,    130.76159 ) [um]
 OPAL > * rms momenta     = (  9.09586e-02 ,  3.76611e-03 ,  3.14696e-01 ) [beta gamma]
-OPAL > * mean position   = (   -293.27838 ,     -0.00285 ,     14.13299 ) [um]
-OPAL > * mean momenta    = ( -8.67677e-02 , -1.12489e-06 ,  1.33085e+01 ) [beta gamma]
+OPAL > * mean position   = (   -293.27639 ,     -0.00285 ,     14.13275 ) [um]
+OPAL > * mean momenta    = ( -8.67673e-02 , -1.12489e-06 ,  1.33085e+01 ) [beta gamma]
 OPAL > * rms emittance   = (  1.65723e-06 ,  7.51849e-08 ,  2.59104e-06 ) (not normalized)
 OPAL > * rms correlation = (  6.84060e-01 , -1.42952e-01 ,  5.45647e-01 )
 OPAL > * hr              = (    176.71164 ,    173.59283 ,      3.60963 ) [um]
@@ -830,97 +849,77 @@ OPAL > * spos            =      235.377 [mm]
 OPAL > * ********************************************************************************** 
 OPAL > 
 OPAL [2]> * Wrote beam phase space.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00104.txt
-ParallelTTracker [3]> 13:51:13 Step    180 at 236.684 [mm], t= 791.596 [ps], E=6.308 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    180 at 236.684 [mm], t= 791.596 [ps], E=6.308 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00105.txt
-ParallelTTracker [3]> 13:51:13 Step    181 at 237.992 [mm], t= 795.969 [ps], E=6.306 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    181 at 237.992 [mm], t= 795.969 [ps], E=6.306 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00106.txt
-ParallelTTracker [3]> 13:51:13 Step    182 at 239.299 [mm], t= 800.342 [ps], E=6.305 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    182 at 239.299 [mm], t= 800.342 [ps], E=6.305 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00107.txt
-ParallelTTracker [3]> 13:51:13 Step    183 at 240.607 [mm], t= 804.716 [ps], E=6.304 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    183 at 240.607 [mm], t= 804.716 [ps], E=6.304 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00108.txt
-ParallelTTracker [3]> 13:51:13 Step    184 at 241.915 [mm], t= 809.089 [ps], E=6.303 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    184 at 241.915 [mm], t= 809.089 [ps], E=6.303 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00109.txt
-ParallelTTracker [3]> 13:51:13 Step    185 at 243.222 [mm], t= 813.463 [ps], E=6.301 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    185 at 243.222 [mm], t= 813.463 [ps], E=6.301 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00110.txt
-ParallelTTracker [3]> 13:51:13 Step    186 at 244.530 [mm], t= 817.836 [ps], E=6.300 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    186 at 244.530 [mm], t= 817.836 [ps], E=6.300 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00111.txt
-ParallelTTracker [3]> 13:51:13 Step    187 at 245.838 [mm], t= 822.210 [ps], E=6.299 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    187 at 245.838 [mm], t= 822.210 [ps], E=6.299 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00112.txt
-ParallelTTracker [3]> 13:51:13 Step    188 at 247.145 [mm], t= 826.583 [ps], E=6.298 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    188 at 247.145 [mm], t= 826.583 [ps], E=6.298 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00113.txt
-ParallelTTracker [3]> 13:51:13 Step    189 at 248.453 [mm], t= 830.957 [ps], E=6.297 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    189 at 248.453 [mm], t= 830.957 [ps], E=6.297 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00114.txt
-ParallelTTracker [3]> 13:51:13 Step    190 at 249.761 [mm], t= 835.330 [ps], E=6.296 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    190 at 249.761 [mm], t= 835.330 [ps], E=6.296 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00115.txt
-ParallelTTracker [3]> 13:51:13 Step    191 at 251.068 [mm], t= 839.704 [ps], E=6.295 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    191 at 251.068 [mm], t= 839.704 [ps], E=6.295 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00116.txt
-ParallelTTracker [3]> 13:51:13 Step    192 at 252.376 [mm], t= 844.077 [ps], E=6.294 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    192 at 252.376 [mm], t= 844.077 [ps], E=6.294 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00117.txt
-ParallelTTracker [3]> 13:51:13 Step    193 at 253.684 [mm], t= 848.451 [ps], E=6.293 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    193 at 253.684 [mm], t= 848.451 [ps], E=6.293 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00118.txt
-ParallelTTracker [3]> 13:51:13 Step    194 at 254.991 [mm], t= 852.824 [ps], E=6.292 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    194 at 254.991 [mm], t= 852.824 [ps], E=6.292 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00119.txt
-ParallelTTracker [3]> 13:51:13 Step    195 at 256.299 [mm], t= 857.197 [ps], E=6.291 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    195 at 256.299 [mm], t= 857.197 [ps], E=6.291 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00120.txt
-ParallelTTracker [3]> 13:51:13 Step    196 at 257.607 [mm], t= 861.571 [ps], E=6.290 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    196 at 257.607 [mm], t= 861.571 [ps], E=6.290 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00121.txt
-ParallelTTracker [3]> 13:51:13 Step    197 at 258.914 [mm], t= 865.944 [ps], E=6.289 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    197 at 258.914 [mm], t= 865.944 [ps], E=6.289 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00122.txt
-ParallelTTracker [3]> 13:51:13 Step    198 at 260.222 [mm], t= 870.318 [ps], E=6.288 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    198 at 260.222 [mm], t= 870.318 [ps], E=6.288 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00123.txt
-ParallelTTracker [2]> 13:51:13 Step    199 at 261.530 [mm], t= 874.691 [ps], E=6.287 [MeV]
+ParallelTTracker [2]> 12:56:07 Step    199 at 261.530 [mm], t= 874.691 [ps], E=6.287 [MeV]
 OPAL [3]> * Wrote beam statistics.
 OPAL > 
 OPAL > * ************** B U N C H ********************************************************* 
 OPAL > * NP              = 5000
 OPAL > * Qtot            =     1000.000 [pC]         Qi    =      200.000 [fC]
 OPAL > * Ekin            =       6.287 [MeV]         dEkin =     167.327 [keV]
-OPAL > * rmax            = (    622.22343 ,    665.55266 ,    424.90335 ) [um]
-OPAL > * rmin            = (     -1.49534 ,     -0.67654 ,     -0.43542 ) [mm]
-OPAL > * rms beam size   = (    479.57797 ,    267.11491 ,    133.44413 ) [um]
+OPAL > * rmax            = (    622.22612 ,    665.55266 ,    424.90307 ) [um]
+OPAL > * rmin            = (     -1.49533 ,     -0.67654 ,     -0.43542 ) [mm]
+OPAL > * rms beam size   = (    479.57794 ,    267.11491 ,    133.44413 ) [um]
 OPAL > * rms momenta     = (  9.69250e-02 ,  3.82432e-03 ,  3.28380e-01 ) [beta gamma]
-OPAL > * mean position   = (   -475.78560 ,     -0.00625 ,     13.72075 ) [um]
-OPAL > * mean momenta    = ( -9.27949e-02 , -1.55053e-06 ,  1.32655e+01 ) [beta gamma]
+OPAL > * mean position   = (   -475.78288 ,     -0.00625 ,     13.72050 ) [um]
+OPAL > * mean momenta    = ( -9.27945e-02 , -1.55053e-06 ,  1.32655e+01 ) [beta gamma]
 OPAL > * rms emittance   = (  1.80158e-06 ,  7.54537e-08 ,  2.79615e-06 ) (not normalized)
 OPAL > * rms correlation = (  8.57690e-01 , -1.99564e-01 ,  5.32380e-01 )
 OPAL > * hr              = (    176.71164 ,    173.59283 ,      3.60963 ) [um]
@@ -930,97 +929,77 @@ OPAL > * spos            =      261.530 [mm]
 OPAL > * ********************************************************************************** 
 OPAL > 
 OPAL [2]> * Wrote beam phase space.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00124.txt
-ParallelTTracker [3]> 13:51:13 Step    200 at 262.837 [mm], t= 879.065 [ps], E=6.286 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    200 at 262.837 [mm], t= 879.065 [ps], E=6.286 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00125.txt
-ParallelTTracker [3]> 13:51:13 Step    201 at 264.145 [mm], t= 883.438 [ps], E=6.286 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    201 at 264.145 [mm], t= 883.438 [ps], E=6.286 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00126.txt
-ParallelTTracker [3]> 13:51:13 Step    202 at 265.452 [mm], t= 887.812 [ps], E=6.285 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    202 at 265.452 [mm], t= 887.812 [ps], E=6.285 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00127.txt
-ParallelTTracker [3]> 13:51:13 Step    203 at 266.760 [mm], t= 892.185 [ps], E=6.284 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    203 at 266.760 [mm], t= 892.185 [ps], E=6.284 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00128.txt
-ParallelTTracker [3]> 13:51:13 Step    204 at 268.068 [mm], t= 896.559 [ps], E=6.283 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    204 at 268.068 [mm], t= 896.559 [ps], E=6.283 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00129.txt
-ParallelTTracker [3]> 13:51:13 Step    205 at 269.375 [mm], t= 900.932 [ps], E=6.282 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    205 at 269.375 [mm], t= 900.932 [ps], E=6.282 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00130.txt
-ParallelTTracker [3]> 13:51:13 Step    206 at 270.683 [mm], t= 905.305 [ps], E=6.282 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    206 at 270.683 [mm], t= 905.305 [ps], E=6.282 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00131.txt
-ParallelTTracker [3]> 13:51:13 Step    207 at 271.991 [mm], t= 909.679 [ps], E=6.281 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    207 at 271.991 [mm], t= 909.679 [ps], E=6.281 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00132.txt
-ParallelTTracker [3]> 13:51:13 Step    208 at 273.298 [mm], t= 914.052 [ps], E=6.280 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    208 at 273.298 [mm], t= 914.052 [ps], E=6.280 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00133.txt
-ParallelTTracker [3]> 13:51:13 Step    209 at 274.606 [mm], t= 918.426 [ps], E=6.280 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    209 at 274.606 [mm], t= 918.426 [ps], E=6.280 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00134.txt
-ParallelTTracker [3]> 13:51:13 Step    210 at 275.914 [mm], t= 922.799 [ps], E=6.279 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    210 at 275.914 [mm], t= 922.799 [ps], E=6.279 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00135.txt
-ParallelTTracker [3]> 13:51:13 Step    211 at 277.221 [mm], t= 927.173 [ps], E=6.278 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    211 at 277.221 [mm], t= 927.173 [ps], E=6.278 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00136.txt
-ParallelTTracker [3]> 13:51:13 Step    212 at 278.529 [mm], t= 931.546 [ps], E=6.278 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    212 at 278.529 [mm], t= 931.546 [ps], E=6.278 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00137.txt
-ParallelTTracker [3]> 13:51:13 Step    213 at 279.837 [mm], t= 935.920 [ps], E=6.277 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    213 at 279.837 [mm], t= 935.920 [ps], E=6.277 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00138.txt
-ParallelTTracker [3]> 13:51:13 Step    214 at 281.144 [mm], t= 940.293 [ps], E=6.276 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    214 at 281.144 [mm], t= 940.293 [ps], E=6.276 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00139.txt
-ParallelTTracker [3]> 13:51:13 Step    215 at 282.452 [mm], t= 944.667 [ps], E=6.276 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    215 at 282.452 [mm], t= 944.667 [ps], E=6.276 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00140.txt
-ParallelTTracker [3]> 13:51:13 Step    216 at 283.760 [mm], t= 949.040 [ps], E=6.275 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    216 at 283.760 [mm], t= 949.040 [ps], E=6.275 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00141.txt
-ParallelTTracker [3]> 13:51:13 Step    217 at 285.067 [mm], t= 953.413 [ps], E=6.274 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    217 at 285.067 [mm], t= 953.413 [ps], E=6.274 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00142.txt
-ParallelTTracker [3]> 13:51:13 Step    218 at 286.375 [mm], t= 957.787 [ps], E=6.274 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    218 at 286.375 [mm], t= 957.787 [ps], E=6.274 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00143.txt
-ParallelTTracker [3]> 13:51:13 Step    219 at 287.683 [mm], t= 962.160 [ps], E=6.273 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    219 at 287.683 [mm], t= 962.160 [ps], E=6.273 [MeV]
 OPAL [3]> * Wrote beam statistics.
 OPAL > 
 OPAL > * ************** B U N C H ********************************************************* 
 OPAL > * NP              = 5000
 OPAL > * Qtot            =     1000.000 [pC]         Qi    =      200.000 [fC]
 OPAL > * Ekin            =       6.273 [MeV]         dEkin =     170.807 [keV]
-OPAL > * rmax            = (    808.30476 ,    670.29127 ,    427.00515 ) [um]
-OPAL > * rmin            = (     -1.80193 ,     -0.68208 ,     -0.43586 ) [mm]
-OPAL > * rms beam size   = (    652.40801 ,    265.61335 ,    135.63758 ) [um]
+OPAL > * rmax            = (    808.30810 ,    670.29128 ,    427.00488 ) [um]
+OPAL > * rmin            = (     -1.80192 ,     -0.68208 ,     -0.43586 ) [mm]
+OPAL > * rms beam size   = (    652.40796 ,    265.61335 ,    135.63758 ) [um]
 OPAL > * rms momenta     = (  9.73601e-02 ,  3.83545e-03 ,  3.35213e-01 ) [beta gamma]
-OPAL > * mean position   = (   -663.95645 ,     -0.01016 ,      7.80964 ) [um]
-OPAL > * mean momenta    = ( -9.29776e-02 , -1.61925e-06 ,  1.32378e+01 ) [beta gamma]
+OPAL > * mean position   = (   -663.95298 ,     -0.01016 ,      7.80940 ) [um]
+OPAL > * mean momenta    = ( -9.29772e-02 , -1.61925e-06 ,  1.32378e+01 ) [beta gamma]
 OPAL > * rms emittance   = (  1.82745e-06 ,  7.56137e-08 ,  2.87477e-06 ) (not normalized)
 OPAL > * rms correlation = (  9.24625e-01 , -1.85765e-01 ,  5.47155e-01 )
 OPAL > * hr              = (    176.71164 ,    173.59283 ,      3.60963 ) [um]
@@ -1030,85 +1009,65 @@ OPAL > * spos            =      287.683 [mm]
 OPAL > * ********************************************************************************** 
 OPAL > 
 OPAL [2]> * Wrote beam phase space.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00144.txt
-ParallelTTracker [3]> 13:51:13 Step    220 at 288.990 [mm], t= 966.534 [ps], E=6.273 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    220 at 288.990 [mm], t= 966.534 [ps], E=6.273 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00145.txt
-ParallelTTracker [3]> 13:51:13 Step    221 at 290.298 [mm], t= 970.907 [ps], E=6.272 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    221 at 290.298 [mm], t= 970.907 [ps], E=6.272 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00146.txt
-ParallelTTracker [3]> 13:51:13 Step    222 at 291.605 [mm], t= 975.281 [ps], E=6.271 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    222 at 291.605 [mm], t= 975.281 [ps], E=6.271 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00147.txt
-ParallelTTracker [3]> 13:51:13 Step    223 at 292.913 [mm], t= 979.654 [ps], E=6.271 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    223 at 292.913 [mm], t= 979.654 [ps], E=6.271 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00148.txt
-ParallelTTracker [3]> 13:51:13 Step    224 at 294.221 [mm], t= 984.028 [ps], E=6.270 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    224 at 294.221 [mm], t= 984.028 [ps], E=6.270 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00149.txt
-ParallelTTracker [3]> 13:51:13 Step    225 at 295.528 [mm], t= 988.401 [ps], E=6.270 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    225 at 295.528 [mm], t= 988.401 [ps], E=6.270 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00150.txt
-ParallelTTracker [3]> 13:51:13 Step    226 at 296.836 [mm], t= 992.775 [ps], E=6.269 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    226 at 296.836 [mm], t= 992.775 [ps], E=6.269 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00151.txt
-ParallelTTracker [3]> 13:51:13 Step    227 at 298.144 [mm], t= 997.148 [ps], E=6.269 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    227 at 298.144 [mm], t= 997.148 [ps], E=6.269 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00152.txt
-ParallelTTracker [3]> 13:51:13 Step    228 at 299.451 [mm], t= 1.002 [ns], E=6.268 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    228 at 299.451 [mm], t= 1.002 [ns], E=6.268 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00153.txt
-ParallelTTracker [3]> 13:51:13 Step    229 at 300.759 [mm], t= 1.006 [ns], E=6.268 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    229 at 300.759 [mm], t= 1.006 [ns], E=6.268 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00154.txt
-ParallelTTracker [3]> 13:51:13 Step    230 at 302.067 [mm], t= 1.010 [ns], E=6.267 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    230 at 302.067 [mm], t= 1.010 [ns], E=6.267 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00155.txt
-ParallelTTracker [3]> 13:51:13 Step    231 at 303.374 [mm], t= 1.015 [ns], E=6.267 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    231 at 303.374 [mm], t= 1.015 [ns], E=6.267 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00156.txt
-ParallelTTracker [3]> 13:51:13 Step    232 at 304.682 [mm], t= 1.019 [ns], E=6.266 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    232 at 304.682 [mm], t= 1.019 [ns], E=6.266 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00157.txt
-ParallelTTracker [3]> 13:51:13 Step    233 at 305.990 [mm], t= 1.023 [ns], E=6.266 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    233 at 305.990 [mm], t= 1.023 [ns], E=6.266 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00158.txt
-ParallelTTracker [3]> 13:51:13 Step    234 at 307.297 [mm], t= 1.028 [ns], E=6.265 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    234 at 307.297 [mm], t= 1.028 [ns], E=6.265 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00159.txt
-ParallelTTracker [3]> 13:51:13 Step    235 at 308.605 [mm], t= 1.032 [ns], E=6.265 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    235 at 308.605 [mm], t= 1.032 [ns], E=6.265 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00160.txt
-ParallelTTracker [3]> 13:51:14 Step    236 at 309.913 [mm], t= 1.037 [ns], E=6.264 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    236 at 309.913 [mm], t= 1.037 [ns], E=6.264 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00161.txt
-ParallelTTracker [3]> 13:51:14 Step    237 at 311.220 [mm], t= 1.041 [ns], E=6.264 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    237 at 311.220 [mm], t= 1.041 [ns], E=6.264 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00162.txt
-ParallelTTracker [3]> 13:51:14 Step    238 at 312.528 [mm], t= 1.045 [ns], E=6.263 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    238 at 312.528 [mm], t= 1.045 [ns], E=6.263 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00163.txt
-ParallelTTracker [3]> 13:51:14 Step    239 at 313.836 [mm], t= 1.050 [ns], E=6.263 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    239 at 313.836 [mm], t= 1.050 [ns], E=6.263 [MeV]
 OPAL [3]> * Wrote beam statistics.
 OPAL > 
 OPAL > * ************** B U N C H ********************************************************* 
@@ -1116,13 +1075,13 @@ OPAL > * NP              = 5000
 OPAL > * Qtot            =     1000.000 [pC]         Qi    =      200.000 [fC]
 OPAL > * Ekin            =       6.263 [MeV]         dEkin =     173.165 [keV]
 OPAL > * rmax            = (      1.08523 ,      0.67499 ,      0.42896 ) [mm]
-OPAL > * rmin            = (     -2.18332 ,     -0.68758 ,     -0.43584 ) [mm]
-OPAL > * rms beam size   = (    834.25555 ,    264.29880 ,    137.98481 ) [um]
+OPAL > * rmin            = (     -2.18331 ,     -0.68758 ,     -0.43584 ) [mm]
+OPAL > * rms beam size   = (    834.25549 ,    264.29880 ,    137.98480 ) [um]
 OPAL > * rms momenta     = (  9.73395e-02 ,  3.83545e-03 ,  3.39844e-01 ) [beta gamma]
-OPAL > * mean position   = (   -852.31471 ,     -0.01406 ,      1.26175 ) [um]
-OPAL > * mean momenta    = ( -9.28381e-02 , -1.61682e-06 ,  1.32180e+01 ) [beta gamma]
+OPAL > * mean position   = (   -852.31050 ,     -0.01406 ,      1.26152 ) [um]
+OPAL > * mean momenta    = ( -9.28377e-02 , -1.61682e-06 ,  1.32180e+01 ) [beta gamma]
 OPAL > * rms emittance   = (  1.83894e-06 ,  7.57244e-08 ,  2.92813e-06 ) (not normalized)
-OPAL > * rms correlation = (  9.54146e-01 , -1.57974e-01 ,  5.64542e-01 )
+OPAL > * rms correlation = (  9.54146e-01 , -1.57973e-01 ,  5.64542e-01 )
 OPAL > * hr              = (    176.71164 ,    173.59283 ,      3.60963 ) [um]
 OPAL > * dh              =   1.00000e-10 [%]
 OPAL > * t               =        1.050 [ns]         dT    =        4.373 [ps]
@@ -1130,85 +1089,65 @@ OPAL > * spos            =      313.836 [mm]
 OPAL > * ********************************************************************************** 
 OPAL > 
 OPAL [2]> * Wrote beam phase space.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00164.txt
-ParallelTTracker [3]> 13:51:14 Step    240 at 315.143 [mm], t= 1.054 [ns], E=6.263 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    240 at 315.143 [mm], t= 1.054 [ns], E=6.263 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00165.txt
-ParallelTTracker [3]> 13:51:14 Step    241 at 316.451 [mm], t= 1.058 [ns], E=6.262 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    241 at 316.451 [mm], t= 1.058 [ns], E=6.262 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00166.txt
-ParallelTTracker [3]> 13:51:14 Step    242 at 317.758 [mm], t= 1.063 [ns], E=6.262 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    242 at 317.758 [mm], t= 1.063 [ns], E=6.262 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00167.txt
-ParallelTTracker [3]> 13:51:14 Step    243 at 319.066 [mm], t= 1.067 [ns], E=6.261 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    243 at 319.066 [mm], t= 1.067 [ns], E=6.261 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00168.txt
-ParallelTTracker [3]> 13:51:14 Step    244 at 320.374 [mm], t= 1.071 [ns], E=6.261 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    244 at 320.374 [mm], t= 1.071 [ns], E=6.261 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00169.txt
-ParallelTTracker [3]> 13:51:14 Step    245 at 321.681 [mm], t= 1.076 [ns], E=6.260 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    245 at 321.681 [mm], t= 1.076 [ns], E=6.260 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00170.txt
-ParallelTTracker [3]> 13:51:14 Step    246 at 322.989 [mm], t= 1.080 [ns], E=6.260 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    246 at 322.989 [mm], t= 1.080 [ns], E=6.260 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00171.txt
-ParallelTTracker [3]> 13:51:14 Step    247 at 324.297 [mm], t= 1.085 [ns], E=6.260 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    247 at 324.297 [mm], t= 1.085 [ns], E=6.260 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00172.txt
-ParallelTTracker [3]> 13:51:14 Step    248 at 325.604 [mm], t= 1.089 [ns], E=6.259 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    248 at 325.604 [mm], t= 1.089 [ns], E=6.259 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00173.txt
-ParallelTTracker [3]> 13:51:14 Step    249 at 326.912 [mm], t= 1.093 [ns], E=6.259 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    249 at 326.912 [mm], t= 1.093 [ns], E=6.259 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00174.txt
-ParallelTTracker [3]> 13:51:14 Step    250 at 328.220 [mm], t= 1.098 [ns], E=6.259 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    250 at 328.220 [mm], t= 1.098 [ns], E=6.259 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00175.txt
-ParallelTTracker [3]> 13:51:14 Step    251 at 329.527 [mm], t= 1.102 [ns], E=6.258 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    251 at 329.527 [mm], t= 1.102 [ns], E=6.258 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00176.txt
-ParallelTTracker [3]> 13:51:14 Step    252 at 330.835 [mm], t= 1.106 [ns], E=6.258 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    252 at 330.835 [mm], t= 1.106 [ns], E=6.258 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00177.txt
-ParallelTTracker [3]> 13:51:14 Step    253 at 332.143 [mm], t= 1.111 [ns], E=6.257 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    253 at 332.143 [mm], t= 1.111 [ns], E=6.257 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00178.txt
-ParallelTTracker [3]> 13:51:14 Step    254 at 333.450 [mm], t= 1.115 [ns], E=6.257 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    254 at 333.450 [mm], t= 1.115 [ns], E=6.257 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00179.txt
-ParallelTTracker [3]> 13:51:14 Step    255 at 334.758 [mm], t= 1.120 [ns], E=6.257 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    255 at 334.758 [mm], t= 1.120 [ns], E=6.257 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00180.txt
-ParallelTTracker [3]> 13:51:14 Step    256 at 336.066 [mm], t= 1.124 [ns], E=6.256 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    256 at 336.066 [mm], t= 1.124 [ns], E=6.256 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00181.txt
-ParallelTTracker [3]> 13:51:14 Step    257 at 337.373 [mm], t= 1.128 [ns], E=6.256 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    257 at 337.373 [mm], t= 1.128 [ns], E=6.256 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00182.txt
-ParallelTTracker [3]> 13:51:14 Step    258 at 338.681 [mm], t= 1.133 [ns], E=6.256 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    258 at 338.681 [mm], t= 1.133 [ns], E=6.256 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00183.txt
-ParallelTTracker [3]> 13:51:14 Step    259 at 339.989 [mm], t= 1.137 [ns], E=6.255 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    259 at 339.989 [mm], t= 1.137 [ns], E=6.255 [MeV]
 OPAL [3]> * Wrote beam statistics.
 OPAL > 
 OPAL > * ************** B U N C H ********************************************************* 
@@ -1216,13 +1155,13 @@ OPAL > * NP              = 5000
 OPAL > * Qtot            =     1000.000 [pC]         Qi    =      200.000 [fC]
 OPAL > * Ekin            =       6.255 [MeV]         dEkin =     174.974 [keV]
 OPAL > * rmax            = (      1.36249 ,      0.67970 ,      0.43094 ) [mm]
-OPAL > * rmin            = (     -2.60372 ,     -0.69309 ,     -0.43583 ) [mm]
+OPAL > * rmin            = (     -2.60371 ,     -0.69309 ,     -0.43583 ) [mm]
 OPAL > * rms beam size   = (      1.02036 ,      0.26320 ,      0.14045 ) [mm]
 OPAL > * rms momenta     = (  9.73239e-02 ,  3.83545e-03 ,  3.43397e-01 ) [beta gamma]
-OPAL > * mean position   = (     -1.04072 ,     -0.00002 ,     -0.00549 ) [mm]
-OPAL > * mean momenta    = ( -9.27303e-02 , -1.61494e-06 ,  1.32026e+01 ) [beta gamma]
+OPAL > * mean position   = (     -1.04071 ,     -0.00002 ,     -0.00549 ) [mm]
+OPAL > * mean momenta    = ( -9.27300e-02 , -1.61494e-06 ,  1.32026e+01 ) [beta gamma]
 OPAL > * rms emittance   = (  1.85086e-06 ,  7.58095e-08 ,  2.96953e-06 ) (not normalized)
-OPAL > * rms correlation = (  9.69248e-01 , -1.29762e-01 ,  5.82361e-01 )
+OPAL > * rms correlation = (  9.69248e-01 , -1.29761e-01 ,  5.82360e-01 )
 OPAL > * hr              = (    176.71164 ,    173.59283 ,      3.60963 ) [um]
 OPAL > * dh              =   1.00000e-10 [%]
 OPAL > * t               =        1.137 [ns]         dT    =        4.373 [ps]
@@ -1230,98 +1169,78 @@ OPAL > * spos            =      339.989 [mm]
 OPAL > * ********************************************************************************** 
 OPAL > 
 OPAL [2]> * Wrote beam phase space.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00184.txt
-ParallelTTracker [3]> 13:51:14 Step    260 at 341.296 [mm], t= 1.141 [ns], E=6.255 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    260 at 341.296 [mm], t= 1.141 [ns], E=6.255 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00185.txt
-ParallelTTracker [3]> 13:51:14 Step    261 at 342.604 [mm], t= 1.146 [ns], E=6.255 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    261 at 342.604 [mm], t= 1.146 [ns], E=6.255 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00186.txt
-ParallelTTracker [3]> 13:51:14 Step    262 at 343.911 [mm], t= 1.150 [ns], E=6.254 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    262 at 343.911 [mm], t= 1.150 [ns], E=6.254 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00187.txt
-ParallelTTracker [3]> 13:51:14 Step    263 at 345.219 [mm], t= 1.155 [ns], E=6.254 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    263 at 345.219 [mm], t= 1.155 [ns], E=6.254 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00188.txt
-ParallelTTracker [3]> 13:51:14 Step    264 at 346.527 [mm], t= 1.159 [ns], E=6.254 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    264 at 346.527 [mm], t= 1.159 [ns], E=6.254 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00189.txt
-ParallelTTracker [3]> 13:51:14 Step    265 at 347.834 [mm], t= 1.163 [ns], E=6.253 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    265 at 347.834 [mm], t= 1.163 [ns], E=6.253 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00190.txt
-ParallelTTracker [3]> 13:51:14 Step    266 at 349.142 [mm], t= 1.168 [ns], E=6.253 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    266 at 349.142 [mm], t= 1.168 [ns], E=6.253 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00191.txt
-ParallelTTracker [3]> 13:51:14 Step    267 at 350.450 [mm], t= 1.172 [ns], E=6.253 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    267 at 350.450 [mm], t= 1.172 [ns], E=6.253 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00192.txt
-ParallelTTracker [3]> 13:51:14 Step    268 at 351.757 [mm], t= 1.176 [ns], E=6.252 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    268 at 351.757 [mm], t= 1.176 [ns], E=6.252 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00193.txt
-ParallelTTracker [3]> 13:51:14 Step    269 at 353.065 [mm], t= 1.181 [ns], E=6.252 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    269 at 353.065 [mm], t= 1.181 [ns], E=6.252 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00194.txt
-ParallelTTracker [3]> 13:51:14 Step    270 at 354.373 [mm], t= 1.185 [ns], E=6.252 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    270 at 354.373 [mm], t= 1.185 [ns], E=6.252 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00195.txt
-ParallelTTracker [3]> 13:51:14 Step    271 at 355.680 [mm], t= 1.190 [ns], E=6.251 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    271 at 355.680 [mm], t= 1.190 [ns], E=6.251 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00196.txt
-ParallelTTracker [3]> 13:51:14 Step    272 at 356.988 [mm], t= 1.194 [ns], E=6.251 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    272 at 356.988 [mm], t= 1.194 [ns], E=6.251 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00197.txt
-ParallelTTracker [3]> 13:51:14 Step    273 at 358.296 [mm], t= 1.198 [ns], E=6.251 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    273 at 358.296 [mm], t= 1.198 [ns], E=6.251 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00198.txt
-ParallelTTracker [3]> 13:51:14 Step    274 at 359.603 [mm], t= 1.203 [ns], E=6.250 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    274 at 359.603 [mm], t= 1.203 [ns], E=6.250 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00199.txt
-ParallelTTracker [3]> 13:51:14 Step    275 at 360.911 [mm], t= 1.207 [ns], E=6.250 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    275 at 360.911 [mm], t= 1.207 [ns], E=6.250 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00200.txt
-ParallelTTracker [3]> 13:51:14 Step    276 at 362.219 [mm], t= 1.211 [ns], E=6.250 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    276 at 362.219 [mm], t= 1.211 [ns], E=6.250 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00201.txt
-ParallelTTracker [3]> 13:51:14 Step    277 at 363.526 [mm], t= 1.216 [ns], E=6.249 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    277 at 363.526 [mm], t= 1.216 [ns], E=6.249 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00202.txt
-ParallelTTracker [3]> 13:51:14 Step    278 at 364.834 [mm], t= 1.220 [ns], E=6.249 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    278 at 364.834 [mm], t= 1.220 [ns], E=6.249 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00203.txt
-ParallelTTracker [3]> 13:51:14 Step    279 at 366.141 [mm], t= 1.225 [ns], E=6.249 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    279 at 366.141 [mm], t= 1.225 [ns], E=6.249 [MeV]
 OPAL [3]> * Wrote beam statistics.
 OPAL > 
 OPAL > * ************** B U N C H ********************************************************* 
 OPAL > * NP              = 5000
 OPAL > * Qtot            =     1000.000 [pC]         Qi    =      200.000 [fC]
 OPAL > * Ekin            =       6.249 [MeV]         dEkin =     176.458 [keV]
-OPAL > * rmax            = (      1.64003 ,      0.68442 ,      0.43293 ) [mm]
+OPAL > * rmax            = (      1.64004 ,      0.68442 ,      0.43293 ) [mm]
 OPAL > * rmin            = (     -3.02443 ,     -0.69861 ,     -0.43582 ) [mm]
 OPAL > * rms beam size   = (      1.20882 ,      0.26231 ,      0.14303 ) [mm]
 OPAL > * rms momenta     = (  9.73109e-02 ,  3.83545e-03 ,  3.46310e-01 ) [beta gamma]
 OPAL > * mean position   = (     -1.22916 ,     -0.00002 ,     -0.01240 ) [mm]
-OPAL > * mean momenta    = ( -9.26431e-02 , -1.61342e-06 ,  1.31902e+01 ) [beta gamma]
-OPAL > * rms emittance   = (  1.86326e-06 ,  7.58780e-08 ,  3.00325e-06 ) (not normalized)
+OPAL > * mean momenta    = ( -9.26427e-02 , -1.61342e-06 ,  1.31902e+01 ) [beta gamma]
+OPAL > * rms emittance   = (  1.86327e-06 ,  7.58780e-08 ,  3.00325e-06 ) (not normalized)
 OPAL > * rms correlation = (  9.77928e-01 , -1.01198e-01 ,  6.00274e-01 )
 OPAL > * hr              = (    176.71164 ,    173.59283 ,      3.60963 ) [um]
 OPAL > * dh              =   1.00000e-10 [%]
@@ -1330,99 +1249,79 @@ OPAL > * spos            =      366.141 [mm]
 OPAL > * ********************************************************************************** 
 OPAL > 
 OPAL [2]> * Wrote beam phase space.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00204.txt
-ParallelTTracker [3]> 13:51:14 Step    280 at 367.449 [mm], t= 1.229 [ns], E=6.249 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    280 at 367.449 [mm], t= 1.229 [ns], E=6.249 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00205.txt
-ParallelTTracker [3]> 13:51:14 Step    281 at 368.757 [mm], t= 1.233 [ns], E=6.248 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    281 at 368.757 [mm], t= 1.233 [ns], E=6.248 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00206.txt
-ParallelTTracker [3]> 13:51:14 Step    282 at 370.064 [mm], t= 1.238 [ns], E=6.248 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    282 at 370.064 [mm], t= 1.238 [ns], E=6.248 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00207.txt
-ParallelTTracker [3]> 13:51:14 Step    283 at 371.372 [mm], t= 1.242 [ns], E=6.248 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    283 at 371.372 [mm], t= 1.242 [ns], E=6.248 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00208.txt
-ParallelTTracker [3]> 13:51:14 Step    284 at 372.680 [mm], t= 1.246 [ns], E=6.247 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    284 at 372.680 [mm], t= 1.246 [ns], E=6.247 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00209.txt
-ParallelTTracker [3]> 13:51:14 Step    285 at 373.987 [mm], t= 1.251 [ns], E=6.247 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    285 at 373.987 [mm], t= 1.251 [ns], E=6.247 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00210.txt
-ParallelTTracker [3]> 13:51:14 Step    286 at 375.295 [mm], t= 1.255 [ns], E=6.247 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    286 at 375.295 [mm], t= 1.255 [ns], E=6.247 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00211.txt
-ParallelTTracker [3]> 13:51:14 Step    287 at 376.603 [mm], t= 1.260 [ns], E=6.247 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    287 at 376.603 [mm], t= 1.260 [ns], E=6.247 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00212.txt
-ParallelTTracker [3]> 13:51:14 Step    288 at 377.910 [mm], t= 1.264 [ns], E=6.246 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    288 at 377.910 [mm], t= 1.264 [ns], E=6.246 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00213.txt
-ParallelTTracker [3]> 13:51:14 Step    289 at 379.218 [mm], t= 1.268 [ns], E=6.246 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    289 at 379.218 [mm], t= 1.268 [ns], E=6.246 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00214.txt
-ParallelTTracker [3]> 13:51:14 Step    290 at 380.526 [mm], t= 1.273 [ns], E=6.246 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    290 at 380.526 [mm], t= 1.273 [ns], E=6.246 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00215.txt
-ParallelTTracker [3]> 13:51:14 Step    291 at 381.833 [mm], t= 1.277 [ns], E=6.246 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    291 at 381.833 [mm], t= 1.277 [ns], E=6.246 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00216.txt
-ParallelTTracker [3]> 13:51:14 Step    292 at 383.141 [mm], t= 1.281 [ns], E=6.245 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    292 at 383.141 [mm], t= 1.281 [ns], E=6.245 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00217.txt
-ParallelTTracker [3]> 13:51:14 Step    293 at 384.449 [mm], t= 1.286 [ns], E=6.245 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    293 at 384.449 [mm], t= 1.286 [ns], E=6.245 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00218.txt
-ParallelTTracker [3]> 13:51:14 Step    294 at 385.756 [mm], t= 1.290 [ns], E=6.245 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    294 at 385.756 [mm], t= 1.290 [ns], E=6.245 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00219.txt
-ParallelTTracker [3]> 13:51:14 Step    295 at 387.064 [mm], t= 1.295 [ns], E=6.245 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    295 at 387.064 [mm], t= 1.295 [ns], E=6.245 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00220.txt
-ParallelTTracker [3]> 13:51:14 Step    296 at 388.372 [mm], t= 1.299 [ns], E=6.244 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    296 at 388.372 [mm], t= 1.299 [ns], E=6.244 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00221.txt
-ParallelTTracker [3]> 13:51:14 Step    297 at 389.679 [mm], t= 1.303 [ns], E=6.244 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    297 at 389.679 [mm], t= 1.303 [ns], E=6.244 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00222.txt
-ParallelTTracker [3]> 13:51:14 Step    298 at 390.987 [mm], t= 1.308 [ns], E=6.244 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    298 at 390.987 [mm], t= 1.308 [ns], E=6.244 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00223.txt
-ParallelTTracker [2]> 13:51:14 Step    299 at 392.294 [mm], t= 1.312 [ns], E=6.244 [MeV]
+ParallelTTracker [2]> 12:56:07 Step    299 at 392.294 [mm], t= 1.312 [ns], E=6.244 [MeV]
 OPAL [3]> * Wrote beam statistics.
 OPAL > 
 OPAL > * ************** B U N C H ********************************************************* 
 OPAL > * NP              = 5000
 OPAL > * Qtot            =     1000.000 [pC]         Qi    =      200.000 [fC]
 OPAL > * Ekin            =       6.244 [MeV]         dEkin =     177.724 [keV]
-OPAL > * rmax            = (      1.91780 ,      0.68914 ,      0.43493 ) [mm]
-OPAL > * rmin            = (     -3.44541 ,     -0.70414 ,     -0.43581 ) [mm]
+OPAL > * rmax            = (      1.91781 ,      0.68914 ,      0.43493 ) [mm]
+OPAL > * rmin            = (     -3.44540 ,     -0.70414 ,     -0.43581 ) [mm]
 OPAL > * rms beam size   = (      1.39871 ,      0.26164 ,      0.14572 ) [mm]
 OPAL > * rms momenta     = (  9.72997e-02 ,  3.83545e-03 ,  3.48797e-01 ) [beta gamma]
-OPAL > * mean position   = (     -1.41764 ,     -0.00003 ,     -0.01944 ) [mm]
-OPAL > * mean momenta    = ( -9.25700e-02 , -1.61215e-06 ,  1.31798e+01 ) [beta gamma]
+OPAL > * mean position   = (     -1.41763 ,     -0.00003 ,     -0.01944 ) [mm]
+OPAL > * mean momenta    = ( -9.25696e-02 , -1.61215e-06 ,  1.31798e+01 ) [beta gamma]
 OPAL > * rms emittance   = (  1.87619e-06 ,  7.59349e-08 ,  3.03159e-06 ) (not normalized)
-OPAL > * rms correlation = (  9.83353e-01 , -7.23555e-02 ,  6.18011e-01 )
+OPAL > * rms correlation = (  9.83353e-01 , -7.23553e-02 ,  6.18011e-01 )
 OPAL > * hr              = (    176.71164 ,    173.59283 ,      3.60963 ) [um]
 OPAL > * dh              =   1.00000e-10 [%]
 OPAL > * t               =        1.312 [ns]         dT    =        4.373 [ps]
@@ -1430,85 +1329,65 @@ OPAL > * spos            =      392.294 [mm]
 OPAL > * ********************************************************************************** 
 OPAL > 
 OPAL [2]> * Wrote beam phase space.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00224.txt
-ParallelTTracker [3]> 13:51:14 Step    300 at 393.602 [mm], t= 1.316 [ns], E=6.243 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    300 at 393.602 [mm], t= 1.316 [ns], E=6.243 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00225.txt
-ParallelTTracker [3]> 13:51:14 Step    301 at 394.910 [mm], t= 1.321 [ns], E=6.243 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    301 at 394.910 [mm], t= 1.321 [ns], E=6.243 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00226.txt
-ParallelTTracker [3]> 13:51:14 Step    302 at 396.217 [mm], t= 1.325 [ns], E=6.243 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    302 at 396.217 [mm], t= 1.325 [ns], E=6.243 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00227.txt
-ParallelTTracker [3]> 13:51:14 Step    303 at 397.525 [mm], t= 1.330 [ns], E=6.243 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    303 at 397.525 [mm], t= 1.330 [ns], E=6.243 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00228.txt
-ParallelTTracker [3]> 13:51:14 Step    304 at 398.833 [mm], t= 1.334 [ns], E=6.242 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    304 at 398.833 [mm], t= 1.334 [ns], E=6.242 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00229.txt
-ParallelTTracker [3]> 13:51:14 Step    305 at 400.140 [mm], t= 1.338 [ns], E=6.242 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    305 at 400.140 [mm], t= 1.338 [ns], E=6.242 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00230.txt
-ParallelTTracker [3]> 13:51:14 Step    306 at 401.448 [mm], t= 1.343 [ns], E=6.242 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    306 at 401.448 [mm], t= 1.343 [ns], E=6.242 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00231.txt
-ParallelTTracker [3]> 13:51:14 Step    307 at 402.756 [mm], t= 1.347 [ns], E=6.242 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    307 at 402.756 [mm], t= 1.347 [ns], E=6.242 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00232.txt
-ParallelTTracker [3]> 13:51:14 Step    308 at 404.063 [mm], t= 1.351 [ns], E=6.241 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    308 at 404.063 [mm], t= 1.351 [ns], E=6.241 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00233.txt
-ParallelTTracker [3]> 13:51:14 Step    309 at 405.371 [mm], t= 1.356 [ns], E=6.241 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    309 at 405.371 [mm], t= 1.356 [ns], E=6.241 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00234.txt
-ParallelTTracker [3]> 13:51:14 Step    310 at 406.679 [mm], t= 1.360 [ns], E=6.241 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    310 at 406.679 [mm], t= 1.360 [ns], E=6.241 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00235.txt
-ParallelTTracker [3]> 13:51:14 Step    311 at 407.986 [mm], t= 1.365 [ns], E=6.241 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    311 at 407.986 [mm], t= 1.365 [ns], E=6.241 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00236.txt
-ParallelTTracker [3]> 13:51:14 Step    312 at 409.294 [mm], t= 1.369 [ns], E=6.241 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    312 at 409.294 [mm], t= 1.369 [ns], E=6.241 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00237.txt
-ParallelTTracker [3]> 13:51:14 Step    313 at 410.602 [mm], t= 1.373 [ns], E=6.240 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    313 at 410.602 [mm], t= 1.373 [ns], E=6.240 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00238.txt
-ParallelTTracker [3]> 13:51:14 Step    314 at 411.909 [mm], t= 1.378 [ns], E=6.240 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    314 at 411.909 [mm], t= 1.378 [ns], E=6.240 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00239.txt
-ParallelTTracker [3]> 13:51:14 Step    315 at 413.217 [mm], t= 1.382 [ns], E=6.240 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    315 at 413.217 [mm], t= 1.382 [ns], E=6.240 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00240.txt
-ParallelTTracker [3]> 13:51:14 Step    316 at 414.525 [mm], t= 1.386 [ns], E=6.240 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    316 at 414.525 [mm], t= 1.386 [ns], E=6.240 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00241.txt
-ParallelTTracker [3]> 13:51:14 Step    317 at 415.832 [mm], t= 1.391 [ns], E=6.239 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    317 at 415.832 [mm], t= 1.391 [ns], E=6.239 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00242.txt
-ParallelTTracker [3]> 13:51:14 Step    318 at 417.140 [mm], t= 1.395 [ns], E=6.239 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    318 at 417.140 [mm], t= 1.395 [ns], E=6.239 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00243.txt
-ParallelTTracker [3]> 13:51:14 Step    319 at 418.447 [mm], t= 1.400 [ns], E=6.239 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    319 at 418.447 [mm], t= 1.400 [ns], E=6.239 [MeV]
 OPAL [3]> * Wrote beam statistics.
 OPAL > 
 OPAL > * ************** B U N C H ********************************************************* 
@@ -1516,13 +1395,13 @@ OPAL > * NP              = 5000
 OPAL > * Qtot            =     1000.000 [pC]         Qi    =      200.000 [fC]
 OPAL > * Ekin            =       6.239 [MeV]         dEkin =     178.836 [keV]
 OPAL > * rmax            = (      2.19578 ,      0.69386 ,      0.43694 ) [mm]
-OPAL > * rmin            = (     -3.86660 ,     -0.70967 ,     -0.43579 ) [mm]
+OPAL > * rmin            = (     -3.86659 ,     -0.70967 ,     -0.43579 ) [mm]
 OPAL > * rms beam size   = (      1.58956 ,      0.26119 ,      0.14851 ) [mm]
 OPAL > * rms momenta     = (  9.72895e-02 ,  3.83545e-03 ,  3.50981e-01 ) [beta gamma]
-OPAL > * mean position   = (     -1.60614 ,     -0.00003 ,     -0.02660 ) [mm]
-OPAL > * mean momenta    = ( -9.25074e-02 , -1.61106e-06 ,  1.31709e+01 ) [beta gamma]
+OPAL > * mean position   = (     -1.60613 ,     -0.00003 ,     -0.02660 ) [mm]
+OPAL > * mean momenta    = ( -9.25070e-02 , -1.61106e-06 ,  1.31709e+01 ) [beta gamma]
 OPAL > * rms emittance   = (  1.88964e-06 ,  7.59834e-08 ,  3.05589e-06 ) (not normalized)
-OPAL > * rms correlation = (  9.86964e-01 , -4.33062e-02 ,  6.35388e-01 )
+OPAL > * rms correlation = (  9.86964e-01 , -4.33061e-02 ,  6.35388e-01 )
 OPAL > * hr              = (    176.71164 ,    173.59283 ,      3.60963 ) [um]
 OPAL > * dh              =   1.00000e-10 [%]
 OPAL > * t               =        1.400 [ns]         dT    =        4.373 [ps]
@@ -1530,99 +1409,79 @@ OPAL > * spos            =      418.447 [mm]
 OPAL > * ********************************************************************************** 
 OPAL > 
 OPAL [2]> * Wrote beam phase space.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00244.txt
-ParallelTTracker [3]> 13:51:14 Step    320 at 419.755 [mm], t= 1.404 [ns], E=6.239 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    320 at 419.755 [mm], t= 1.404 [ns], E=6.239 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00245.txt
-ParallelTTracker [3]> 13:51:14 Step    321 at 421.063 [mm], t= 1.408 [ns], E=6.239 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    321 at 421.063 [mm], t= 1.408 [ns], E=6.239 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00246.txt
-ParallelTTracker [3]> 13:51:14 Step    322 at 422.370 [mm], t= 1.413 [ns], E=6.238 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    322 at 422.370 [mm], t= 1.413 [ns], E=6.238 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00247.txt
-ParallelTTracker [3]> 13:51:14 Step    323 at 423.678 [mm], t= 1.417 [ns], E=6.238 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    323 at 423.678 [mm], t= 1.417 [ns], E=6.238 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00248.txt
-ParallelTTracker [3]> 13:51:14 Step    324 at 424.986 [mm], t= 1.421 [ns], E=6.238 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    324 at 424.986 [mm], t= 1.421 [ns], E=6.238 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00249.txt
-ParallelTTracker [3]> 13:51:14 Step    325 at 426.293 [mm], t= 1.426 [ns], E=6.238 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    325 at 426.293 [mm], t= 1.426 [ns], E=6.238 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00250.txt
-ParallelTTracker [3]> 13:51:14 Step    326 at 427.601 [mm], t= 1.430 [ns], E=6.238 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    326 at 427.601 [mm], t= 1.430 [ns], E=6.238 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00251.txt
-ParallelTTracker [3]> 13:51:14 Step    327 at 428.909 [mm], t= 1.434 [ns], E=6.237 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    327 at 428.909 [mm], t= 1.434 [ns], E=6.237 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00252.txt
-ParallelTTracker [3]> 13:51:14 Step    328 at 430.216 [mm], t= 1.439 [ns], E=6.237 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    328 at 430.216 [mm], t= 1.439 [ns], E=6.237 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00253.txt
-ParallelTTracker [3]> 13:51:14 Step    329 at 431.524 [mm], t= 1.443 [ns], E=6.237 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    329 at 431.524 [mm], t= 1.443 [ns], E=6.237 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00254.txt
-ParallelTTracker [3]> 13:51:14 Step    330 at 432.832 [mm], t= 1.448 [ns], E=6.237 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    330 at 432.832 [mm], t= 1.448 [ns], E=6.237 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00255.txt
-ParallelTTracker [3]> 13:51:14 Step    331 at 434.139 [mm], t= 1.452 [ns], E=6.237 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    331 at 434.139 [mm], t= 1.452 [ns], E=6.237 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00256.txt
-ParallelTTracker [3]> 13:51:14 Step    332 at 435.447 [mm], t= 1.456 [ns], E=6.236 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    332 at 435.447 [mm], t= 1.456 [ns], E=6.236 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00257.txt
-ParallelTTracker [3]> 13:51:14 Step    333 at 436.755 [mm], t= 1.461 [ns], E=6.236 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    333 at 436.755 [mm], t= 1.461 [ns], E=6.236 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00258.txt
-ParallelTTracker [3]> 13:51:14 Step    334 at 438.062 [mm], t= 1.465 [ns], E=6.236 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    334 at 438.062 [mm], t= 1.465 [ns], E=6.236 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00259.txt
-ParallelTTracker [3]> 13:51:14 Step    335 at 439.370 [mm], t= 1.469 [ns], E=6.236 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    335 at 439.370 [mm], t= 1.469 [ns], E=6.236 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00260.txt
-ParallelTTracker [3]> 13:51:14 Step    336 at 440.678 [mm], t= 1.474 [ns], E=6.236 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    336 at 440.678 [mm], t= 1.474 [ns], E=6.236 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00261.txt
-ParallelTTracker [3]> 13:51:14 Step    337 at 441.985 [mm], t= 1.478 [ns], E=6.235 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    337 at 441.985 [mm], t= 1.478 [ns], E=6.235 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00262.txt
-ParallelTTracker [3]> 13:51:14 Step    338 at 443.293 [mm], t= 1.483 [ns], E=6.235 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    338 at 443.293 [mm], t= 1.483 [ns], E=6.235 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00263.txt
-ParallelTTracker [3]> 13:51:14 Step    339 at 444.600 [mm], t= 1.487 [ns], E=6.235 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    339 at 444.600 [mm], t= 1.487 [ns], E=6.235 [MeV]
 OPAL [3]> * Wrote beam statistics.
 OPAL > 
 OPAL > * ************** B U N C H ********************************************************* 
 OPAL > * NP              = 5000
 OPAL > * Qtot            =     1000.000 [pC]         Qi    =      200.000 [fC]
 OPAL > * Ekin            =       6.235 [MeV]         dEkin =     179.832 [keV]
-OPAL > * rmax            = (      2.47392 ,      0.69859 ,      0.43895 ) [mm]
-OPAL > * rmin            = (     -4.28798 ,     -0.71520 ,     -0.43578 ) [mm]
+OPAL > * rmax            = (      2.47393 ,      0.69859 ,      0.43895 ) [mm]
+OPAL > * rmin            = (     -4.28797 ,     -0.71520 ,     -0.43578 ) [mm]
 OPAL > * rms beam size   = (      1.78108 ,      0.26096 ,      0.15141 ) [mm]
 OPAL > * rms momenta     = (  9.72802e-02 ,  3.83545e-03 ,  3.52936e-01 ) [beta gamma]
-OPAL > * mean position   = (     -1.79467 ,     -0.00003 ,     -0.03385 ) [mm]
-OPAL > * mean momenta    = ( -9.24527e-02 , -1.61010e-06 ,  1.31631e+01 ) [beta gamma]
+OPAL > * mean position   = (     -1.79466 ,     -0.00003 ,     -0.03385 ) [mm]
+OPAL > * mean momenta    = ( -9.24524e-02 , -1.61010e-06 ,  1.31631e+01 ) [beta gamma]
 OPAL > * rms emittance   = (  1.90363e-06 ,  7.60255e-08 ,  3.07706e-06 ) (not normalized)
-OPAL > * rms correlation = (  9.89486e-01 , -1.41258e-02 ,  6.52280e-01 )
+OPAL > * rms correlation = (  9.89486e-01 , -1.41257e-02 ,  6.52279e-01 )
 OPAL > * hr              = (    176.71164 ,    173.59283 ,      3.60963 ) [um]
 OPAL > * dh              =   1.00000e-10 [%]
 OPAL > * t               =        1.487 [ns]         dT    =        4.373 [ps]
@@ -1630,99 +1489,79 @@ OPAL > * spos            =      444.600 [mm]
 OPAL > * ********************************************************************************** 
 OPAL > 
 OPAL [2]> * Wrote beam phase space.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00264.txt
-ParallelTTracker [3]> 13:51:14 Step    340 at 445.908 [mm], t= 1.491 [ns], E=6.235 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    340 at 445.908 [mm], t= 1.491 [ns], E=6.235 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00265.txt
-ParallelTTracker [3]> 13:51:14 Step    341 at 447.216 [mm], t= 1.496 [ns], E=6.235 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    341 at 447.216 [mm], t= 1.496 [ns], E=6.235 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00266.txt
-ParallelTTracker [3]> 13:51:14 Step    342 at 448.523 [mm], t= 1.500 [ns], E=6.235 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    342 at 448.523 [mm], t= 1.500 [ns], E=6.235 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00267.txt
-ParallelTTracker [3]> 13:51:14 Step    343 at 449.831 [mm], t= 1.504 [ns], E=6.234 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    343 at 449.831 [mm], t= 1.504 [ns], E=6.234 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00268.txt
-ParallelTTracker [3]> 13:51:14 Step    344 at 451.139 [mm], t= 1.509 [ns], E=6.234 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    344 at 451.139 [mm], t= 1.509 [ns], E=6.234 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00269.txt
-ParallelTTracker [3]> 13:51:14 Step    345 at 452.446 [mm], t= 1.513 [ns], E=6.234 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    345 at 452.446 [mm], t= 1.513 [ns], E=6.234 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00270.txt
-ParallelTTracker [3]> 13:51:14 Step    346 at 453.754 [mm], t= 1.518 [ns], E=6.234 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    346 at 453.754 [mm], t= 1.518 [ns], E=6.234 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00271.txt
-ParallelTTracker [3]> 13:51:14 Step    347 at 455.062 [mm], t= 1.522 [ns], E=6.234 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    347 at 455.062 [mm], t= 1.522 [ns], E=6.234 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00272.txt
-ParallelTTracker [3]> 13:51:14 Step    348 at 456.369 [mm], t= 1.526 [ns], E=6.233 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    348 at 456.369 [mm], t= 1.526 [ns], E=6.233 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00273.txt
-ParallelTTracker [3]> 13:51:14 Step    349 at 457.677 [mm], t= 1.531 [ns], E=6.233 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    349 at 457.677 [mm], t= 1.531 [ns], E=6.233 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00274.txt
-ParallelTTracker [3]> 13:51:14 Step    350 at 458.985 [mm], t= 1.535 [ns], E=6.233 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    350 at 458.985 [mm], t= 1.535 [ns], E=6.233 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00275.txt
-ParallelTTracker [3]> 13:51:14 Step    351 at 460.292 [mm], t= 1.539 [ns], E=6.233 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    351 at 460.292 [mm], t= 1.539 [ns], E=6.233 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00276.txt
-ParallelTTracker [3]> 13:51:14 Step    352 at 461.600 [mm], t= 1.544 [ns], E=6.233 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    352 at 461.600 [mm], t= 1.544 [ns], E=6.233 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00277.txt
-ParallelTTracker [3]> 13:51:14 Step    353 at 462.908 [mm], t= 1.548 [ns], E=6.233 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    353 at 462.908 [mm], t= 1.548 [ns], E=6.233 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00278.txt
-ParallelTTracker [3]> 13:51:14 Step    354 at 464.215 [mm], t= 1.553 [ns], E=6.232 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    354 at 464.215 [mm], t= 1.553 [ns], E=6.232 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00279.txt
-ParallelTTracker [3]> 13:51:14 Step    355 at 465.523 [mm], t= 1.557 [ns], E=6.232 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    355 at 465.523 [mm], t= 1.557 [ns], E=6.232 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00280.txt
-ParallelTTracker [3]> 13:51:14 Step    356 at 466.831 [mm], t= 1.561 [ns], E=6.232 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    356 at 466.831 [mm], t= 1.561 [ns], E=6.232 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00281.txt
-ParallelTTracker [3]> 13:51:14 Step    357 at 468.138 [mm], t= 1.566 [ns], E=6.232 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    357 at 468.138 [mm], t= 1.566 [ns], E=6.232 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00282.txt
-ParallelTTracker [3]> 13:51:14 Step    358 at 469.446 [mm], t= 1.570 [ns], E=6.232 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    358 at 469.446 [mm], t= 1.570 [ns], E=6.232 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00283.txt
-ParallelTTracker [3]> 13:51:14 Step    359 at 470.753 [mm], t= 1.574 [ns], E=6.232 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    359 at 470.753 [mm], t= 1.574 [ns], E=6.232 [MeV]
 OPAL [3]> * Wrote beam statistics.
 OPAL > 
 OPAL > * ************** B U N C H ********************************************************* 
 OPAL > * NP              = 5000
 OPAL > * Qtot            =     1000.000 [pC]         Qi    =      200.000 [fC]
 OPAL > * Ekin            =       6.232 [MeV]         dEkin =     180.737 [keV]
-OPAL > * rmax            = (      2.75221 ,      0.70463 ,      0.44097 ) [mm]
-OPAL > * rmin            = (     -4.70952 ,     -0.72074 ,     -0.43577 ) [mm]
+OPAL > * rmax            = (      2.75222 ,      0.70463 ,      0.44096 ) [mm]
+OPAL > * rmin            = (     -4.70951 ,     -0.72074 ,     -0.43577 ) [mm]
 OPAL > * rms beam size   = (      1.97309 ,      0.26095 ,      0.15441 ) [mm]
 OPAL > * rms momenta     = (  9.72715e-02 ,  3.83545e-03 ,  3.54713e-01 ) [beta gamma]
-OPAL > * mean position   = (     -1.98322 ,     -0.00004 ,     -0.04119 ) [mm]
-OPAL > * mean momenta    = ( -9.24043e-02 , -1.60926e-06 ,  1.31562e+01 ) [beta gamma]
+OPAL > * mean position   = (     -1.98321 ,     -0.00004 ,     -0.04119 ) [mm]
+OPAL > * mean momenta    = ( -9.24039e-02 , -1.60926e-06 ,  1.31562e+01 ) [beta gamma]
 OPAL > * rms emittance   = (  1.91814e-06 ,  7.60625e-08 ,  3.09566e-06 ) (not normalized)
-OPAL > * rms correlation = (  9.91317e-01 ,  1.51093e-02 ,  6.68606e-01 )
+OPAL > * rms correlation = (  9.91317e-01 ,  1.51094e-02 ,  6.68606e-01 )
 OPAL > * hr              = (    176.71164 ,    173.59283 ,      3.60963 ) [um]
 OPAL > * dh              =   1.00000e-10 [%]
 OPAL > * t               =        1.574 [ns]         dT    =        4.373 [ps]
@@ -1730,99 +1569,79 @@ OPAL > * spos            =      470.753 [mm]
 OPAL > * ********************************************************************************** 
 OPAL > 
 OPAL [2]> * Wrote beam phase space.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00284.txt
-ParallelTTracker [3]> 13:51:14 Step    360 at 472.061 [mm], t= 1.579 [ns], E=6.231 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    360 at 472.061 [mm], t= 1.579 [ns], E=6.231 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00285.txt
-ParallelTTracker [3]> 13:51:14 Step    361 at 473.369 [mm], t= 1.583 [ns], E=6.231 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    361 at 473.369 [mm], t= 1.583 [ns], E=6.231 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00286.txt
-ParallelTTracker [3]> 13:51:14 Step    362 at 474.676 [mm], t= 1.588 [ns], E=6.231 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    362 at 474.676 [mm], t= 1.588 [ns], E=6.231 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00287.txt
-ParallelTTracker [3]> 13:51:14 Step    363 at 475.984 [mm], t= 1.592 [ns], E=6.231 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    363 at 475.984 [mm], t= 1.592 [ns], E=6.231 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00288.txt
-ParallelTTracker [3]> 13:51:14 Step    364 at 477.292 [mm], t= 1.596 [ns], E=6.231 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    364 at 477.292 [mm], t= 1.596 [ns], E=6.231 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00289.txt
-ParallelTTracker [3]> 13:51:14 Step    365 at 478.599 [mm], t= 1.601 [ns], E=6.231 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    365 at 478.599 [mm], t= 1.601 [ns], E=6.231 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00290.txt
-ParallelTTracker [3]> 13:51:14 Step    366 at 479.907 [mm], t= 1.605 [ns], E=6.230 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    366 at 479.907 [mm], t= 1.605 [ns], E=6.230 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00291.txt
-ParallelTTracker [3]> 13:51:14 Step    367 at 481.215 [mm], t= 1.609 [ns], E=6.230 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    367 at 481.215 [mm], t= 1.609 [ns], E=6.230 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00292.txt
-ParallelTTracker [3]> 13:51:14 Step    368 at 482.522 [mm], t= 1.614 [ns], E=6.230 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    368 at 482.522 [mm], t= 1.614 [ns], E=6.230 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00293.txt
-ParallelTTracker [3]> 13:51:14 Step    369 at 483.830 [mm], t= 1.618 [ns], E=6.230 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    369 at 483.830 [mm], t= 1.618 [ns], E=6.230 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00294.txt
-ParallelTTracker [3]> 13:51:14 Step    370 at 485.138 [mm], t= 1.623 [ns], E=6.230 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    370 at 485.138 [mm], t= 1.623 [ns], E=6.230 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00295.txt
-ParallelTTracker [3]> 13:51:14 Step    371 at 486.445 [mm], t= 1.627 [ns], E=6.230 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    371 at 486.445 [mm], t= 1.627 [ns], E=6.230 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00296.txt
-ParallelTTracker [3]> 13:51:14 Step    372 at 487.753 [mm], t= 1.631 [ns], E=6.229 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    372 at 487.753 [mm], t= 1.631 [ns], E=6.229 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00297.txt
-ParallelTTracker [3]> 13:51:14 Step    373 at 489.061 [mm], t= 1.636 [ns], E=6.229 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    373 at 489.061 [mm], t= 1.636 [ns], E=6.229 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00298.txt
-ParallelTTracker [3]> 13:51:14 Step    374 at 490.368 [mm], t= 1.640 [ns], E=6.229 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    374 at 490.368 [mm], t= 1.640 [ns], E=6.229 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00299.txt
-ParallelTTracker [3]> 13:51:14 Step    375 at 491.676 [mm], t= 1.644 [ns], E=6.229 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    375 at 491.676 [mm], t= 1.644 [ns], E=6.229 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00300.txt
-ParallelTTracker [3]> 13:51:14 Step    376 at 492.984 [mm], t= 1.649 [ns], E=6.229 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    376 at 492.984 [mm], t= 1.649 [ns], E=6.229 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00301.txt
-ParallelTTracker [3]> 13:51:14 Step    377 at 494.291 [mm], t= 1.653 [ns], E=6.229 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    377 at 494.291 [mm], t= 1.653 [ns], E=6.229 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00302.txt
-ParallelTTracker [3]> 13:51:14 Step    378 at 495.599 [mm], t= 1.658 [ns], E=6.229 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    378 at 495.599 [mm], t= 1.658 [ns], E=6.229 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00303.txt
-ParallelTTracker [3]> 13:51:14 Step    379 at 496.906 [mm], t= 1.662 [ns], E=6.228 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    379 at 496.906 [mm], t= 1.662 [ns], E=6.228 [MeV]
 OPAL [3]> * Wrote beam statistics.
 OPAL > 
 OPAL > * ************** B U N C H ********************************************************* 
 OPAL > * NP              = 5000
 OPAL > * Qtot            =     1000.000 [pC]         Qi    =      200.000 [fC]
 OPAL > * Ekin            =       6.228 [MeV]         dEkin =     181.569 [keV]
-OPAL > * rmax            = (      3.03063 ,      0.71141 ,      0.44298 ) [mm]
-OPAL > * rmin            = (     -5.13844 ,     -0.72629 ,     -0.43575 ) [mm]
+OPAL > * rmax            = (      3.03064 ,      0.71141 ,      0.44298 ) [mm]
+OPAL > * rmin            = (     -5.13843 ,     -0.72629 ,     -0.43575 ) [mm]
 OPAL > * rms beam size   = (      2.16548 ,      0.26117 ,      0.15751 ) [mm]
 OPAL > * rms momenta     = (  9.72633e-02 ,  3.83545e-03 ,  3.56348e-01 ) [beta gamma]
-OPAL > * mean position   = (     -2.17179 ,     -0.00004 ,     -0.04861 ) [mm]
-OPAL > * mean momenta    = ( -9.23608e-02 , -1.60850e-06 ,  1.31500e+01 ) [beta gamma]
+OPAL > * mean position   = (     -2.17178 ,     -0.00004 ,     -0.04861 ) [mm]
+OPAL > * mean momenta    = ( -9.23604e-02 , -1.60850e-06 ,  1.31500e+01 ) [beta gamma]
 OPAL > * rms emittance   = (  1.93317e-06 ,  7.60955e-08 ,  3.11214e-06 ) (not normalized)
-OPAL > * rms correlation = (  9.92689e-01 ,  4.43226e-02 ,  6.84321e-01 )
+OPAL > * rms correlation = (  9.92689e-01 ,  4.43227e-02 ,  6.84321e-01 )
 OPAL > * hr              = (    176.71164 ,    173.59283 ,      3.60963 ) [um]
 OPAL > * dh              =   1.00000e-10 [%]
 OPAL > * t               =        1.662 [ns]         dT    =        4.373 [ps]
@@ -1830,99 +1649,79 @@ OPAL > * spos            =      496.906 [mm]
 OPAL > * ********************************************************************************** 
 OPAL > 
 OPAL [2]> * Wrote beam phase space.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00304.txt
-ParallelTTracker [3]> 13:51:14 Step    380 at 498.214 [mm], t= 1.666 [ns], E=6.228 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    380 at 498.214 [mm], t= 1.666 [ns], E=6.228 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00305.txt
-ParallelTTracker [3]> 13:51:14 Step    381 at 499.522 [mm], t= 1.671 [ns], E=6.228 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    381 at 499.522 [mm], t= 1.671 [ns], E=6.228 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00306.txt
-ParallelTTracker [3]> 13:51:14 Step    382 at 500.829 [mm], t= 1.675 [ns], E=6.228 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    382 at 500.829 [mm], t= 1.675 [ns], E=6.228 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00307.txt
-ParallelTTracker [3]> 13:51:14 Step    383 at 502.137 [mm], t= 1.679 [ns], E=6.228 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    383 at 502.137 [mm], t= 1.679 [ns], E=6.228 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00308.txt
-ParallelTTracker [3]> 13:51:14 Step    384 at 503.445 [mm], t= 1.684 [ns], E=6.228 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    384 at 503.445 [mm], t= 1.684 [ns], E=6.228 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00309.txt
-ParallelTTracker [3]> 13:51:14 Step    385 at 504.752 [mm], t= 1.688 [ns], E=6.228 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    385 at 504.752 [mm], t= 1.688 [ns], E=6.228 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00310.txt
-ParallelTTracker [3]> 13:51:14 Step    386 at 506.060 [mm], t= 1.693 [ns], E=6.227 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    386 at 506.060 [mm], t= 1.693 [ns], E=6.227 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00311.txt
-ParallelTTracker [3]> 13:51:14 Step    387 at 507.368 [mm], t= 1.697 [ns], E=6.227 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    387 at 507.368 [mm], t= 1.697 [ns], E=6.227 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00312.txt
-ParallelTTracker [3]> 13:51:14 Step    388 at 508.675 [mm], t= 1.701 [ns], E=6.227 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    388 at 508.675 [mm], t= 1.701 [ns], E=6.227 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00313.txt
-ParallelTTracker [3]> 13:51:14 Step    389 at 509.983 [mm], t= 1.706 [ns], E=6.227 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    389 at 509.983 [mm], t= 1.706 [ns], E=6.227 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00314.txt
-ParallelTTracker [3]> 13:51:14 Step    390 at 511.291 [mm], t= 1.710 [ns], E=6.227 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    390 at 511.291 [mm], t= 1.710 [ns], E=6.227 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00315.txt
-ParallelTTracker [3]> 13:51:14 Step    391 at 512.598 [mm], t= 1.714 [ns], E=6.227 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    391 at 512.598 [mm], t= 1.714 [ns], E=6.227 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00316.txt
-ParallelTTracker [3]> 13:51:14 Step    392 at 513.906 [mm], t= 1.719 [ns], E=6.227 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    392 at 513.906 [mm], t= 1.719 [ns], E=6.227 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00317.txt
-ParallelTTracker [3]> 13:51:14 Step    393 at 515.214 [mm], t= 1.723 [ns], E=6.226 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    393 at 515.214 [mm], t= 1.723 [ns], E=6.226 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00318.txt
-ParallelTTracker [3]> 13:51:14 Step    394 at 516.521 [mm], t= 1.728 [ns], E=6.226 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    394 at 516.521 [mm], t= 1.728 [ns], E=6.226 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00319.txt
-ParallelTTracker [3]> 13:51:14 Step    395 at 517.829 [mm], t= 1.732 [ns], E=6.226 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    395 at 517.829 [mm], t= 1.732 [ns], E=6.226 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00320.txt
-ParallelTTracker [3]> 13:51:14 Step    396 at 519.137 [mm], t= 1.736 [ns], E=6.226 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    396 at 519.137 [mm], t= 1.736 [ns], E=6.226 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00321.txt
-ParallelTTracker [3]> 13:51:14 Step    397 at 520.444 [mm], t= 1.741 [ns], E=6.226 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    397 at 520.444 [mm], t= 1.741 [ns], E=6.226 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00322.txt
-ParallelTTracker [3]> 13:51:14 Step    398 at 521.752 [mm], t= 1.745 [ns], E=6.226 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    398 at 521.752 [mm], t= 1.745 [ns], E=6.226 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00323.txt
-ParallelTTracker [2]> 13:51:14 Step    399 at 523.059 [mm], t= 1.749 [ns], E=6.226 [MeV]
+ParallelTTracker [2]> 12:56:07 Step    399 at 523.059 [mm], t= 1.749 [ns], E=6.226 [MeV]
 OPAL [3]> * Wrote beam statistics.
 OPAL > 
 OPAL > * ************** B U N C H ********************************************************* 
 OPAL > * NP              = 5000
 OPAL > * Qtot            =     1000.000 [pC]         Qi    =      200.000 [fC]
 OPAL > * Ekin            =       6.226 [MeV]         dEkin =     182.342 [keV]
-OPAL > * rmax            = (      3.30916 ,      0.71820 ,      0.44500 ) [mm]
-OPAL > * rmin            = (     -5.57146 ,     -0.73277 ,     -0.43574 ) [mm]
+OPAL > * rmax            = (      3.30917 ,      0.71820 ,      0.44500 ) [mm]
+OPAL > * rmin            = (     -5.57145 ,     -0.73277 ,     -0.43574 ) [mm]
 OPAL > * rms beam size   = (      2.35816 ,      0.26161 ,      0.16069 ) [mm]
 OPAL > * rms momenta     = (  9.72555e-02 ,  3.83545e-03 ,  3.57866e-01 ) [beta gamma]
-OPAL > * mean position   = (     -2.36038 ,     -0.00004 ,     -0.05610 ) [mm]
-OPAL > * mean momenta    = ( -9.23214e-02 , -1.60782e-06 ,  1.31444e+01 ) [beta gamma]
+OPAL > * mean position   = (     -2.36037 ,     -0.00004 ,     -0.05610 ) [mm]
+OPAL > * mean momenta    = ( -9.23210e-02 , -1.60782e-06 ,  1.31444e+01 ) [beta gamma]
 OPAL > * rms emittance   = (  1.94872e-06 ,  7.61251e-08 ,  3.12678e-06 ) (not normalized)
-OPAL > * rms correlation = (  9.93743e-01 ,  7.34379e-02 ,  6.99397e-01 )
+OPAL > * rms correlation = (  9.93743e-01 ,  7.34380e-02 ,  6.99397e-01 )
 OPAL > * hr              = (    176.71164 ,    173.59283 ,      3.60963 ) [um]
 OPAL > * dh              =   1.00000e-10 [%]
 OPAL > * t               =        1.749 [ns]         dT    =        4.373 [ps]
@@ -1930,97 +1729,77 @@ OPAL > * spos            =      523.059 [mm]
 OPAL > * ********************************************************************************** 
 OPAL > 
 OPAL [2]> * Wrote beam phase space.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00324.txt
-ParallelTTracker [3]> 13:51:14 Step    400 at 524.367 [mm], t= 1.754 [ns], E=6.225 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    400 at 524.367 [mm], t= 1.754 [ns], E=6.225 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00325.txt
-ParallelTTracker [3]> 13:51:14 Step    401 at 525.675 [mm], t= 1.758 [ns], E=6.225 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    401 at 525.675 [mm], t= 1.758 [ns], E=6.225 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00326.txt
-ParallelTTracker [3]> 13:51:14 Step    402 at 526.982 [mm], t= 1.763 [ns], E=6.225 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    402 at 526.982 [mm], t= 1.763 [ns], E=6.225 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00327.txt
-ParallelTTracker [3]> 13:51:14 Step    403 at 528.290 [mm], t= 1.767 [ns], E=6.225 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    403 at 528.290 [mm], t= 1.767 [ns], E=6.225 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00328.txt
-ParallelTTracker [3]> 13:51:14 Step    404 at 529.598 [mm], t= 1.771 [ns], E=6.225 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    404 at 529.598 [mm], t= 1.771 [ns], E=6.225 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00329.txt
-ParallelTTracker [3]> 13:51:14 Step    405 at 530.905 [mm], t= 1.776 [ns], E=6.225 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    405 at 530.905 [mm], t= 1.776 [ns], E=6.225 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00330.txt
-ParallelTTracker [3]> 13:51:14 Step    406 at 532.213 [mm], t= 1.780 [ns], E=6.225 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    406 at 532.213 [mm], t= 1.780 [ns], E=6.225 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00331.txt
-ParallelTTracker [3]> 13:51:14 Step    407 at 533.521 [mm], t= 1.784 [ns], E=6.224 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    407 at 533.521 [mm], t= 1.784 [ns], E=6.224 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00332.txt
-ParallelTTracker [3]> 13:51:14 Step    408 at 534.828 [mm], t= 1.789 [ns], E=6.224 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    408 at 534.828 [mm], t= 1.789 [ns], E=6.224 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00333.txt
-ParallelTTracker [3]> 13:51:14 Step    409 at 536.136 [mm], t= 1.793 [ns], E=6.224 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    409 at 536.136 [mm], t= 1.793 [ns], E=6.224 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00334.txt
-ParallelTTracker [3]> 13:51:14 Step    410 at 537.444 [mm], t= 1.797 [ns], E=6.224 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    410 at 537.444 [mm], t= 1.797 [ns], E=6.224 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00335.txt
-ParallelTTracker [3]> 13:51:14 Step    411 at 538.751 [mm], t= 1.802 [ns], E=6.224 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    411 at 538.751 [mm], t= 1.802 [ns], E=6.224 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00336.txt
-ParallelTTracker [3]> 13:51:14 Step    412 at 540.059 [mm], t= 1.806 [ns], E=6.224 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    412 at 540.059 [mm], t= 1.806 [ns], E=6.224 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00337.txt
-ParallelTTracker [3]> 13:51:14 Step    413 at 541.367 [mm], t= 1.811 [ns], E=6.224 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    413 at 541.367 [mm], t= 1.811 [ns], E=6.224 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00338.txt
-ParallelTTracker [3]> 13:51:14 Step    414 at 542.674 [mm], t= 1.815 [ns], E=6.224 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    414 at 542.674 [mm], t= 1.815 [ns], E=6.224 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00339.txt
-ParallelTTracker [3]> 13:51:14 Step    415 at 543.982 [mm], t= 1.819 [ns], E=6.223 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    415 at 543.982 [mm], t= 1.819 [ns], E=6.223 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00340.txt
-ParallelTTracker [3]> 13:51:14 Step    416 at 545.289 [mm], t= 1.824 [ns], E=6.223 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    416 at 545.289 [mm], t= 1.824 [ns], E=6.223 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00341.txt
-ParallelTTracker [3]> 13:51:14 Step    417 at 546.597 [mm], t= 1.828 [ns], E=6.223 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    417 at 546.597 [mm], t= 1.828 [ns], E=6.223 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00342.txt
-ParallelTTracker [3]> 13:51:14 Step    418 at 547.905 [mm], t= 1.832 [ns], E=6.223 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    418 at 547.905 [mm], t= 1.832 [ns], E=6.223 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00343.txt
-ParallelTTracker [3]> 13:51:14 Step    419 at 549.212 [mm], t= 1.837 [ns], E=6.223 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    419 at 549.212 [mm], t= 1.837 [ns], E=6.223 [MeV]
 OPAL [3]> * Wrote beam statistics.
 OPAL > 
 OPAL > * ************** B U N C H ********************************************************* 
 OPAL > * NP              = 5000
 OPAL > * Qtot            =     1000.000 [pC]         Qi    =      200.000 [fC]
 OPAL > * Ekin            =       6.223 [MeV]         dEkin =     183.066 [keV]
-OPAL > * rmax            = (      3.58779 ,      0.72499 ,      0.44703 ) [mm]
-OPAL > * rmin            = (     -6.00461 ,     -0.73964 ,     -0.43573 ) [mm]
+OPAL > * rmax            = (      3.58780 ,      0.72499 ,      0.44703 ) [mm]
+OPAL > * rmin            = (     -6.00460 ,     -0.73964 ,     -0.43573 ) [mm]
 OPAL > * rms beam size   = (      2.55107 ,      0.26227 ,      0.16397 ) [mm]
 OPAL > * rms momenta     = (  9.72480e-02 ,  3.83545e-03 ,  3.59287e-01 ) [beta gamma]
-OPAL > * mean position   = (     -2.54899 ,     -0.00005 ,     -0.06365 ) [mm]
-OPAL > * mean momenta    = ( -9.22853e-02 , -1.60719e-06 ,  1.31393e+01 ) [beta gamma]
+OPAL > * mean position   = (     -2.54898 ,     -0.00005 ,     -0.06365 ) [mm]
+OPAL > * mean momenta    = ( -9.22850e-02 , -1.60719e-06 ,  1.31393e+01 ) [beta gamma]
 OPAL > * rms emittance   = (  1.96476e-06 ,  7.61521e-08 ,  3.13981e-06 ) (not normalized)
 OPAL > * rms correlation = (  9.94571e-01 ,  1.02381e-01 ,  7.13827e-01 )
 OPAL > * hr              = (    176.71164 ,    173.59283 ,      3.60963 ) [um]
@@ -2030,97 +1809,77 @@ OPAL > * spos            =      549.212 [mm]
 OPAL > * ********************************************************************************** 
 OPAL > 
 OPAL [2]> * Wrote beam phase space.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00344.txt
-ParallelTTracker [3]> 13:51:14 Step    420 at 550.520 [mm], t= 1.841 [ns], E=6.223 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    420 at 550.520 [mm], t= 1.841 [ns], E=6.223 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00345.txt
-ParallelTTracker [3]> 13:51:14 Step    421 at 551.828 [mm], t= 1.846 [ns], E=6.223 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    421 at 551.828 [mm], t= 1.846 [ns], E=6.223 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00346.txt
-ParallelTTracker [3]> 13:51:14 Step    422 at 553.135 [mm], t= 1.850 [ns], E=6.223 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    422 at 553.135 [mm], t= 1.850 [ns], E=6.223 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00347.txt
-ParallelTTracker [3]> 13:51:14 Step    423 at 554.443 [mm], t= 1.854 [ns], E=6.222 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    423 at 554.443 [mm], t= 1.854 [ns], E=6.222 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00348.txt
-ParallelTTracker [3]> 13:51:14 Step    424 at 555.751 [mm], t= 1.859 [ns], E=6.222 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    424 at 555.751 [mm], t= 1.859 [ns], E=6.222 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00349.txt
-ParallelTTracker [3]> 13:51:14 Step    425 at 557.058 [mm], t= 1.863 [ns], E=6.222 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    425 at 557.058 [mm], t= 1.863 [ns], E=6.222 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00350.txt
-ParallelTTracker [3]> 13:51:14 Step    426 at 558.366 [mm], t= 1.867 [ns], E=6.222 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    426 at 558.366 [mm], t= 1.867 [ns], E=6.222 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00351.txt
-ParallelTTracker [3]> 13:51:14 Step    427 at 559.674 [mm], t= 1.872 [ns], E=6.222 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    427 at 559.674 [mm], t= 1.872 [ns], E=6.222 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00352.txt
-ParallelTTracker [3]> 13:51:14 Step    428 at 560.981 [mm], t= 1.876 [ns], E=6.222 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    428 at 560.981 [mm], t= 1.876 [ns], E=6.222 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00353.txt
-ParallelTTracker [3]> 13:51:14 Step    429 at 562.289 [mm], t= 1.881 [ns], E=6.222 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    429 at 562.289 [mm], t= 1.881 [ns], E=6.222 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00354.txt
-ParallelTTracker [3]> 13:51:14 Step    430 at 563.597 [mm], t= 1.885 [ns], E=6.222 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    430 at 563.597 [mm], t= 1.885 [ns], E=6.222 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00355.txt
-ParallelTTracker [3]> 13:51:14 Step    431 at 564.904 [mm], t= 1.889 [ns], E=6.221 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    431 at 564.904 [mm], t= 1.889 [ns], E=6.221 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00356.txt
-ParallelTTracker [3]> 13:51:14 Step    432 at 566.212 [mm], t= 1.894 [ns], E=6.221 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    432 at 566.212 [mm], t= 1.894 [ns], E=6.221 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00357.txt
-ParallelTTracker [3]> 13:51:14 Step    433 at 567.520 [mm], t= 1.898 [ns], E=6.221 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    433 at 567.520 [mm], t= 1.898 [ns], E=6.221 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00358.txt
-ParallelTTracker [3]> 13:51:14 Step    434 at 568.827 [mm], t= 1.902 [ns], E=6.221 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    434 at 568.827 [mm], t= 1.902 [ns], E=6.221 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00359.txt
-ParallelTTracker [3]> 13:51:14 Step    435 at 570.135 [mm], t= 1.907 [ns], E=6.221 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    435 at 570.135 [mm], t= 1.907 [ns], E=6.221 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00360.txt
-ParallelTTracker [3]> 13:51:14 Step    436 at 571.442 [mm], t= 1.911 [ns], E=6.221 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    436 at 571.442 [mm], t= 1.911 [ns], E=6.221 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00361.txt
-ParallelTTracker [3]> 13:51:14 Step    437 at 572.750 [mm], t= 1.916 [ns], E=6.221 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    437 at 572.750 [mm], t= 1.916 [ns], E=6.221 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00362.txt
-ParallelTTracker [3]> 13:51:14 Step    438 at 574.058 [mm], t= 1.920 [ns], E=6.221 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    438 at 574.058 [mm], t= 1.920 [ns], E=6.221 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00363.txt
-ParallelTTracker [3]> 13:51:14 Step    439 at 575.365 [mm], t= 1.924 [ns], E=6.221 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    439 at 575.365 [mm], t= 1.924 [ns], E=6.221 [MeV]
 OPAL [3]> * Wrote beam statistics.
 OPAL > 
 OPAL > * ************** B U N C H ********************************************************* 
 OPAL > * NP              = 5000
 OPAL > * Qtot            =     1000.000 [pC]         Qi    =      200.000 [fC]
 OPAL > * Ekin            =       6.221 [MeV]         dEkin =     183.747 [keV]
-OPAL > * rmax            = (      3.86652 ,      0.73178 ,      0.44905 ) [mm]
-OPAL > * rmin            = (     -6.43788 ,     -0.74652 ,     -0.43572 ) [mm]
+OPAL > * rmax            = (      3.86653 ,      0.73178 ,      0.44905 ) [mm]
+OPAL > * rmin            = (     -6.43787 ,     -0.74652 ,     -0.43572 ) [mm]
 OPAL > * rms beam size   = (      2.74418 ,      0.26315 ,      0.16733 ) [mm]
 OPAL > * rms momenta     = (  9.72407e-02 ,  3.83545e-03 ,  3.60625e-01 ) [beta gamma]
-OPAL > * mean position   = (     -2.73762 ,     -0.00005 ,     -0.07126 ) [mm]
-OPAL > * mean momenta    = ( -9.22521e-02 , -1.60661e-06 ,  1.31345e+01 ) [beta gamma]
+OPAL > * mean position   = (     -2.73761 ,     -0.00005 ,     -0.07126 ) [mm]
+OPAL > * mean momenta    = ( -9.22517e-02 , -1.60661e-06 ,  1.31345e+01 ) [beta gamma]
 OPAL > * rms emittance   = (  1.98129e-06 ,  7.61768e-08 ,  3.15138e-06 ) (not normalized)
 OPAL > * rms correlation = (  9.95233e-01 ,  1.31079e-01 ,  7.27612e-01 )
 OPAL > * hr              = (    176.71164 ,    173.59283 ,      3.60963 ) [um]
@@ -2130,97 +1889,77 @@ OPAL > * spos            =      575.365 [mm]
 OPAL > * ********************************************************************************** 
 OPAL > 
 OPAL [2]> * Wrote beam phase space.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00364.txt
-ParallelTTracker [3]> 13:51:14 Step    440 at 576.673 [mm], t= 1.929 [ns], E=6.220 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    440 at 576.673 [mm], t= 1.929 [ns], E=6.220 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00365.txt
-ParallelTTracker [3]> 13:51:14 Step    441 at 577.981 [mm], t= 1.933 [ns], E=6.220 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    441 at 577.981 [mm], t= 1.933 [ns], E=6.220 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00366.txt
-ParallelTTracker [3]> 13:51:14 Step    442 at 579.288 [mm], t= 1.937 [ns], E=6.220 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    442 at 579.288 [mm], t= 1.937 [ns], E=6.220 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00367.txt
-ParallelTTracker [3]> 13:51:14 Step    443 at 580.596 [mm], t= 1.942 [ns], E=6.220 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    443 at 580.596 [mm], t= 1.942 [ns], E=6.220 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00368.txt
-ParallelTTracker [3]> 13:51:14 Step    444 at 581.904 [mm], t= 1.946 [ns], E=6.220 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    444 at 581.904 [mm], t= 1.946 [ns], E=6.220 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00369.txt
-ParallelTTracker [3]> 13:51:14 Step    445 at 583.211 [mm], t= 1.951 [ns], E=6.220 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    445 at 583.211 [mm], t= 1.951 [ns], E=6.220 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00370.txt
-ParallelTTracker [3]> 13:51:14 Step    446 at 584.519 [mm], t= 1.955 [ns], E=6.220 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    446 at 584.519 [mm], t= 1.955 [ns], E=6.220 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00371.txt
-ParallelTTracker [3]> 13:51:14 Step    447 at 585.827 [mm], t= 1.959 [ns], E=6.220 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    447 at 585.827 [mm], t= 1.959 [ns], E=6.220 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00372.txt
-ParallelTTracker [3]> 13:51:14 Step    448 at 587.134 [mm], t= 1.964 [ns], E=6.220 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    448 at 587.134 [mm], t= 1.964 [ns], E=6.220 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00373.txt
-ParallelTTracker [3]> 13:51:14 Step    449 at 588.442 [mm], t= 1.968 [ns], E=6.219 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    449 at 588.442 [mm], t= 1.968 [ns], E=6.219 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00374.txt
-ParallelTTracker [3]> 13:51:14 Step    450 at 589.750 [mm], t= 1.972 [ns], E=6.219 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    450 at 589.750 [mm], t= 1.972 [ns], E=6.219 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00375.txt
-ParallelTTracker [3]> 13:51:14 Step    451 at 591.057 [mm], t= 1.977 [ns], E=6.219 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    451 at 591.057 [mm], t= 1.977 [ns], E=6.219 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00376.txt
-ParallelTTracker [3]> 13:51:14 Step    452 at 592.365 [mm], t= 1.981 [ns], E=6.219 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    452 at 592.365 [mm], t= 1.981 [ns], E=6.219 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00377.txt
-ParallelTTracker [3]> 13:51:14 Step    453 at 593.673 [mm], t= 1.986 [ns], E=6.219 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    453 at 593.673 [mm], t= 1.986 [ns], E=6.219 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00378.txt
-ParallelTTracker [3]> 13:51:14 Step    454 at 594.980 [mm], t= 1.990 [ns], E=6.219 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    454 at 594.980 [mm], t= 1.990 [ns], E=6.219 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00379.txt
-ParallelTTracker [3]> 13:51:15 Step    455 at 596.288 [mm], t= 1.994 [ns], E=6.219 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    455 at 596.288 [mm], t= 1.994 [ns], E=6.219 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00380.txt
-ParallelTTracker [3]> 13:51:15 Step    456 at 597.595 [mm], t= 1.999 [ns], E=6.219 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    456 at 597.595 [mm], t= 1.999 [ns], E=6.219 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00381.txt
-ParallelTTracker [3]> 13:51:15 Step    457 at 598.903 [mm], t= 2.003 [ns], E=6.219 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    457 at 598.903 [mm], t= 2.003 [ns], E=6.219 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00382.txt
-ParallelTTracker [3]> 13:51:15 Step    458 at 600.211 [mm], t= 2.007 [ns], E=6.218 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    458 at 600.211 [mm], t= 2.007 [ns], E=6.218 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00383.txt
-ParallelTTracker [3]> 13:51:15 Step    459 at 601.518 [mm], t= 2.012 [ns], E=6.218 [MeV]
+ParallelTTracker [3]> 12:56:07 Step    459 at 601.518 [mm], t= 2.012 [ns], E=6.218 [MeV]
 OPAL [3]> * Wrote beam statistics.
 OPAL > 
 OPAL > * ************** B U N C H ********************************************************* 
 OPAL > * NP              = 5000
 OPAL > * Qtot            =     1000.000 [pC]         Qi    =      200.000 [fC]
 OPAL > * Ekin            =       6.218 [MeV]         dEkin =     184.393 [keV]
-OPAL > * rmax            = (      4.14533 ,      0.73858 ,      0.45108 ) [mm]
-OPAL > * rmin            = (     -6.87127 ,     -0.75339 ,     -0.43570 ) [mm]
+OPAL > * rmax            = (      4.14534 ,      0.73858 ,      0.45108 ) [mm]
+OPAL > * rmin            = (     -6.87126 ,     -0.75339 ,     -0.43570 ) [mm]
 OPAL > * rms beam size   = (      2.93746 ,      0.26425 ,      0.17077 ) [mm]
 OPAL > * rms momenta     = (  9.72336e-02 ,  3.83545e-03 ,  3.61892e-01 ) [beta gamma]
-OPAL > * mean position   = (     -2.92627 ,     -0.00006 ,     -0.07892 ) [mm]
-OPAL > * mean momenta    = ( -9.22213e-02 , -1.60607e-06 ,  1.31301e+01 ) [beta gamma]
+OPAL > * mean position   = (     -2.92626 ,     -0.00006 ,     -0.07892 ) [mm]
+OPAL > * mean momenta    = ( -9.22209e-02 , -1.60607e-06 ,  1.31301e+01 ) [beta gamma]
 OPAL > * rms emittance   = (  1.99829e-06 ,  7.61995e-08 ,  3.16162e-06 ) (not normalized)
 OPAL > * rms correlation = (  9.95771e-01 ,  1.59463e-01 ,  7.40765e-01 )
 OPAL > * hr              = (    176.71164 ,    173.59283 ,      3.60963 ) [um]
@@ -2230,99 +1969,79 @@ OPAL > * spos            =      601.518 [mm]
 OPAL > * ********************************************************************************** 
 OPAL > 
 OPAL [2]> * Wrote beam phase space.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00384.txt
-ParallelTTracker [3]> 13:51:15 Step    460 at 602.826 [mm], t= 2.016 [ns], E=6.218 [MeV]
+ParallelTTracker [3]> 12:56:08 Step    460 at 602.826 [mm], t= 2.016 [ns], E=6.218 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00385.txt
-ParallelTTracker [3]> 13:51:15 Step    461 at 604.134 [mm], t= 2.021 [ns], E=6.218 [MeV]
+ParallelTTracker [3]> 12:56:08 Step    461 at 604.134 [mm], t= 2.021 [ns], E=6.218 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00386.txt
-ParallelTTracker [3]> 13:51:15 Step    462 at 605.441 [mm], t= 2.025 [ns], E=6.218 [MeV]
+ParallelTTracker [3]> 12:56:08 Step    462 at 605.441 [mm], t= 2.025 [ns], E=6.218 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00387.txt
-ParallelTTracker [3]> 13:51:15 Step    463 at 606.749 [mm], t= 2.029 [ns], E=6.218 [MeV]
+ParallelTTracker [3]> 12:56:08 Step    463 at 606.749 [mm], t= 2.029 [ns], E=6.218 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00388.txt
-ParallelTTracker [3]> 13:51:15 Step    464 at 608.057 [mm], t= 2.034 [ns], E=6.218 [MeV]
+ParallelTTracker [3]> 12:56:08 Step    464 at 608.057 [mm], t= 2.034 [ns], E=6.218 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00389.txt
-ParallelTTracker [3]> 13:51:15 Step    465 at 609.364 [mm], t= 2.038 [ns], E=6.218 [MeV]
+ParallelTTracker [3]> 12:56:08 Step    465 at 609.364 [mm], t= 2.038 [ns], E=6.218 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00390.txt
-ParallelTTracker [3]> 13:51:15 Step    466 at 610.672 [mm], t= 2.042 [ns], E=6.218 [MeV]
+ParallelTTracker [3]> 12:56:08 Step    466 at 610.672 [mm], t= 2.042 [ns], E=6.218 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00391.txt
-ParallelTTracker [3]> 13:51:15 Step    467 at 611.980 [mm], t= 2.047 [ns], E=6.217 [MeV]
+ParallelTTracker [3]> 12:56:08 Step    467 at 611.980 [mm], t= 2.047 [ns], E=6.217 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00392.txt
-ParallelTTracker [3]> 13:51:15 Step    468 at 613.287 [mm], t= 2.051 [ns], E=6.217 [MeV]
+ParallelTTracker [3]> 12:56:08 Step    468 at 613.287 [mm], t= 2.051 [ns], E=6.217 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00393.txt
-ParallelTTracker [3]> 13:51:15 Step    469 at 614.595 [mm], t= 2.056 [ns], E=6.217 [MeV]
+ParallelTTracker [3]> 12:56:08 Step    469 at 614.595 [mm], t= 2.056 [ns], E=6.217 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00394.txt
-ParallelTTracker [3]> 13:51:15 Step    470 at 615.903 [mm], t= 2.060 [ns], E=6.217 [MeV]
+ParallelTTracker [3]> 12:56:08 Step    470 at 615.903 [mm], t= 2.060 [ns], E=6.217 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00395.txt
-ParallelTTracker [3]> 13:51:15 Step    471 at 617.210 [mm], t= 2.064 [ns], E=6.217 [MeV]
+ParallelTTracker [3]> 12:56:08 Step    471 at 617.210 [mm], t= 2.064 [ns], E=6.217 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00396.txt
-ParallelTTracker [3]> 13:51:15 Step    472 at 618.518 [mm], t= 2.069 [ns], E=6.217 [MeV]
+ParallelTTracker [3]> 12:56:08 Step    472 at 618.518 [mm], t= 2.069 [ns], E=6.217 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00397.txt
-ParallelTTracker [3]> 13:51:15 Step    473 at 619.826 [mm], t= 2.073 [ns], E=6.217 [MeV]
+ParallelTTracker [3]> 12:56:08 Step    473 at 619.826 [mm], t= 2.073 [ns], E=6.217 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00398.txt
-ParallelTTracker [3]> 13:51:15 Step    474 at 621.133 [mm], t= 2.077 [ns], E=6.217 [MeV]
+ParallelTTracker [3]> 12:56:08 Step    474 at 621.133 [mm], t= 2.077 [ns], E=6.217 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00399.txt
-ParallelTTracker [3]> 13:51:15 Step    475 at 622.441 [mm], t= 2.082 [ns], E=6.217 [MeV]
+ParallelTTracker [3]> 12:56:08 Step    475 at 622.441 [mm], t= 2.082 [ns], E=6.217 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00400.txt
-ParallelTTracker [3]> 13:51:15 Step    476 at 623.748 [mm], t= 2.086 [ns], E=6.217 [MeV]
+ParallelTTracker [3]> 12:56:08 Step    476 at 623.748 [mm], t= 2.086 [ns], E=6.217 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00401.txt
-ParallelTTracker [3]> 13:51:15 Step    477 at 625.056 [mm], t= 2.091 [ns], E=6.216 [MeV]
+ParallelTTracker [3]> 12:56:08 Step    477 at 625.056 [mm], t= 2.091 [ns], E=6.216 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00402.txt
-ParallelTTracker [3]> 13:51:15 Step    478 at 626.364 [mm], t= 2.095 [ns], E=6.216 [MeV]
+ParallelTTracker [3]> 12:56:08 Step    478 at 626.364 [mm], t= 2.095 [ns], E=6.216 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00403.txt
-ParallelTTracker [3]> 13:51:15 Step    479 at 627.671 [mm], t= 2.099 [ns], E=6.216 [MeV]
+ParallelTTracker [3]> 12:56:08 Step    479 at 627.671 [mm], t= 2.099 [ns], E=6.216 [MeV]
 OPAL [3]> * Wrote beam statistics.
 OPAL > 
 OPAL > * ************** B U N C H ********************************************************* 
 OPAL > * NP              = 5000
 OPAL > * Qtot            =     1000.000 [pC]         Qi    =      200.000 [fC]
 OPAL > * Ekin            =       6.216 [MeV]         dEkin =     185.007 [keV]
-OPAL > * rmax            = (      4.42421 ,      0.74572 ,      0.45311 ) [mm]
-OPAL > * rmin            = (     -7.30477 ,     -0.76027 ,     -0.43569 ) [mm]
+OPAL > * rmax            = (      4.42422 ,      0.74572 ,      0.45311 ) [mm]
+OPAL > * rmin            = (     -7.30476 ,     -0.76027 ,     -0.43569 ) [mm]
 OPAL > * rms beam size   = (      3.13087 ,      0.26557 ,      0.17429 ) [mm]
 OPAL > * rms momenta     = (  9.72267e-02 ,  3.83545e-03 ,  3.63099e-01 ) [beta gamma]
-OPAL > * mean position   = (     -3.11494 ,     -0.00006 ,     -0.08663 ) [mm]
-OPAL > * mean momenta    = ( -9.21925e-02 , -1.60557e-06 ,  1.31261e+01 ) [beta gamma]
+OPAL > * mean position   = (     -3.11492 ,     -0.00006 ,     -0.08663 ) [mm]
+OPAL > * mean momenta    = ( -9.21921e-02 , -1.60557e-06 ,  1.31261e+01 ) [beta gamma]
 OPAL > * rms emittance   = (  2.01574e-06 ,  7.62207e-08 ,  3.17061e-06 ) (not normalized)
-OPAL > * rms correlation = (  9.96215e-01 ,  1.87468e-01 ,  7.53302e-01 )
+OPAL > * rms correlation = (  9.96215e-01 ,  1.87468e-01 ,  7.53301e-01 )
 OPAL > * hr              = (    176.71164 ,    173.59283 ,      3.60963 ) [um]
 OPAL > * dh              =   1.00000e-10 [%]
 OPAL > * t               =        2.099 [ns]         dT    =        4.373 [ps]
@@ -2330,29 +2049,26 @@ OPAL > * spos            =      627.671 [mm]
 OPAL > * ********************************************************************************** 
 OPAL > 
 OPAL [2]> * Wrote beam phase space.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00404.txt
-ParallelTTracker [3]> 13:51:15 Step    480 at 628.979 [mm], t= 2.104 [ns], E=6.216 [MeV]
+ParallelTTracker [3]> 12:56:08 Step    480 at 628.979 [mm], t= 2.104 [ns], E=6.216 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00405.txt
-ParallelTTracker [3]> 13:51:15 Step    481 at 630.287 [mm], t= 2.108 [ns], E=6.216 [MeV]
+ParallelTTracker [3]> 12:56:08 Step    481 at 630.287 [mm], t= 2.108 [ns], E=6.216 [MeV]
 OPAL [3]> * Wrote beam statistics.
-OPAL> in drift
 CSRWake > ** wrote data/BEND1-CSRWake00406.txt
-ParallelTTracker [3]> 13:51:15 Step    482 at 631.594 [mm], t= 2.112 [ns], E=6.216 [MeV]
+ParallelTTracker [3]> 12:56:08 Step    482 at 631.594 [mm], t= 2.112 [ns], E=6.216 [MeV]
 OPAL [3]> * Wrote beam statistics.
 OPAL > 
 OPAL > * ************** B U N C H ********************************************************* 
 OPAL > * NP              = 5000
 OPAL > * Qtot            =     1000.000 [pC]         Qi    =      200.000 [fC]
 OPAL > * Ekin            =       6.216 [MeV]         dEkin =     185.097 [keV]
-OPAL > * rmax            = (      4.46611 ,      0.74696 ,      0.45341 ) [mm]
-OPAL > * rmin            = (     -7.36990 ,     -0.76131 ,     -0.43569 ) [mm]
-OPAL > * rms beam size   = (      3.15994 ,      0.26579 ,      0.17482 ) [mm]
+OPAL > * rmax            = (      4.46612 ,      0.74697 ,      0.45341 ) [mm]
+OPAL > * rmin            = (     -7.36988 ,     -0.76131 ,     -0.43569 ) [mm]
+OPAL > * rms beam size   = (      3.15993 ,      0.26579 ,      0.17482 ) [mm]
 OPAL > * rms momenta     = (  9.72257e-02 ,  3.83545e-03 ,  3.63275e-01 ) [beta gamma]
-OPAL > * mean position   = (     -3.14328 ,     -0.00006 ,     -0.08780 ) [mm]
-OPAL > * mean momenta    = ( -9.21883e-02 , -1.60550e-06 ,  1.31255e+01 ) [beta gamma]
+OPAL > * mean position   = (     -3.14326 ,     -0.00006 ,     -0.08780 ) [mm]
+OPAL > * mean momenta    = ( -9.21880e-02 , -1.60550e-06 ,  1.31255e+01 ) [beta gamma]
 OPAL > * rms emittance   = (  2.01840e-06 ,  7.62237e-08 ,  3.17185e-06 ) (not normalized)
 OPAL > * rms correlation = (  9.96275e-01 ,  1.91638e-01 ,  7.55133e-01 )
 OPAL > * hr              = (    176.71164 ,    173.59283 ,      3.60963 ) [um]
@@ -2363,40 +2079,40 @@ OPAL > * ***********************************************************************
 OPAL > 
 OPAL [2]> * Wrote beam phase space.
 ParallelTTracker [2]> Dump phase space of last step
-OPAL> done executing ParallelTTracker at 13:51:15
+OPAL> done executing ParallelTTracker at 12:56:08
 OPAL> * End of input stream "CSRBendDrift.in".
 Timings> -----------------------------------------------------------------
 Timings>      Timing results for 1 nodes:
 Timings> -----------------------------------------------------------------
-Timings> mainTimer........... Wall tot =       2.52, CPU tot =       1.57
+Timings> mainTimer........... Wall tot =    1.81373, CPU tot =       1.48
 Timings> 
 Timings> Binaryrepart........ Wall max =          0, CPU max =          0
 Timings>                      Wall avg =          0, CPU avg =          0
 Timings>                      Wall min =          0, CPU min =          0
 Timings> 
-Timings> Boundingbox......... Wall max =    9.3e-05, CPU max =          0
-Timings>                      Wall avg =    9.3e-05, CPU avg =          0
-Timings>                      Wall min =    9.3e-05, CPU min =          0
+Timings> Boundingbox......... Wall max = 8.6207e-05, CPU max =          0
+Timings>                      Wall avg = 8.6207e-05, CPU avg =          0
+Timings>                      Wall min = 8.6207e-05, CPU min =          0
 Timings> 
-Timings> Boundingbox-bounds.. Wall max =    1.8e-05, CPU max =          0
-Timings>                      Wall avg =    1.8e-05, CPU avg =          0
-Timings>                      Wall min =    1.8e-05, CPU min =          0
+Timings> Boundingbox-bounds.. Wall max = 1.9553e-05, CPU max =          0
+Timings>                      Wall avg = 1.9553e-05, CPU avg =          0
+Timings>                      Wall min = 1.9553e-05, CPU min =          0
 Timings> 
-Timings> Boundingbox-update.. Wall max =    3.1e-05, CPU max =          0
-Timings>                      Wall avg =    3.1e-05, CPU avg =          0
-Timings>                      Wall min =    3.1e-05, CPU min =          0
+Timings> Boundingbox-update.. Wall max = 3.5474e-05, CPU max =          0
+Timings>                      Wall avg = 3.5474e-05, CPU avg =          0
+Timings>                      Wall min = 3.5474e-05, CPU min =          0
 Timings> 
-Timings> Compute Statistics.. Wall max =   0.158504, CPU max =       0.14
-Timings>                      Wall avg =   0.158504, CPU avg =       0.14
-Timings>                      Wall min =   0.158504, CPU min =       0.14
+Timings> Compute Statistics.. Wall max =   0.237176, CPU max =       0.24
+Timings>                      Wall avg =   0.237176, CPU avg =       0.24
+Timings>                      Wall min =   0.237176, CPU min =       0.24
 Timings> 
-Timings> Create Distr........ Wall max =   0.019745, CPU max =       0.01
-Timings>                      Wall avg =   0.019745, CPU avg =       0.01
-Timings>                      Wall min =   0.019745, CPU min =       0.01
+Timings> Create Distr........ Wall max =  0.0206269, CPU max =       0.02
+Timings>                      Wall avg =  0.0206269, CPU avg =       0.02
+Timings>                      Wall min =  0.0206269, CPU min =       0.02
 Timings> 
-Timings> External field eval. Wall max =   0.417049, CPU max =       0.35
-Timings>                      Wall avg =   0.417049, CPU avg =       0.35
-Timings>                      Wall min =   0.417049, CPU min =       0.35
+Timings> External field eval. Wall max =   0.399556, CPU max =       0.42
+Timings>                      Wall avg =   0.399556, CPU avg =       0.42
+Timings>                      Wall min =   0.399556, CPU min =       0.42
 Timings> 
 Timings> Fast inside test.... Wall max =          0, CPU max =          0
 Timings>                      Wall avg =          0, CPU avg =          0
@@ -2434,24 +2150,24 @@ Timings> SelfField total..... Wall max =          0, CPU max =          0
 Timings>                      Wall avg =          0, CPU avg =          0
 Timings>                      Wall min =          0, CPU min =          0
 Timings> 
-Timings> TIntegration1....... Wall max =    0.05066, CPU max =       0.03
-Timings>                      Wall avg =    0.05066, CPU avg =       0.03
-Timings>                      Wall min =    0.05066, CPU min =       0.03
+Timings> TIntegration1....... Wall max =   0.048195, CPU max =       0.04
+Timings>                      Wall avg =   0.048195, CPU avg =       0.04
+Timings>                      Wall min =   0.048195, CPU min =       0.04
 Timings> 
-Timings> TIntegration2....... Wall max =   0.136434, CPU max =       0.19
-Timings>                      Wall avg =   0.136434, CPU avg =       0.19
-Timings>                      Wall min =   0.136434, CPU min =       0.19
+Timings> TIntegration2....... Wall max =   0.130529, CPU max =       0.12
+Timings>                      Wall avg =   0.130529, CPU avg =       0.12
+Timings>                      Wall min =   0.130529, CPU min =       0.12
 Timings> 
-Timings> WakeField........... Wall max =   0.611635, CPU max =       0.52
-Timings>                      Wall avg =   0.611635, CPU avg =       0.52
-Timings>                      Wall min =   0.611635, CPU min =       0.52
+Timings> WakeField........... Wall max =   0.599764, CPU max =        0.6
+Timings>                      Wall avg =   0.599764, CPU avg =        0.6
+Timings>                      Wall min =   0.599764, CPU min =        0.6
 Timings> 
-Timings> Write H5-File....... Wall max =   0.958868, CPU max =       0.15
-Timings>                      Wall avg =   0.958868, CPU avg =       0.15
-Timings>                      Wall min =   0.958868, CPU min =       0.15
+Timings> Write H5-File....... Wall max =   0.258067, CPU max =       0.05
+Timings>                      Wall avg =   0.258067, CPU avg =       0.05
+Timings>                      Wall min =   0.258067, CPU min =       0.05
 Timings> 
-Timings> Write Stat.......... Wall max =   0.159126, CPU max =       0.15
-Timings>                      Wall avg =   0.159126, CPU avg =       0.15
-Timings>                      Wall min =   0.159126, CPU min =       0.15
+Timings> Write Stat.......... Wall max =   0.198662, CPU max =       0.12
+Timings>                      Wall avg =   0.198662, CPU avg =       0.12
+Timings>                      Wall min =   0.198662, CPU min =       0.12
 Timings> 
 Timings> -----------------------------------------------------------------
