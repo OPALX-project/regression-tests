@@ -1,4 +1,3 @@
 #!/bin/bash
 
-${OPAL_EXE_PATH}/opal VFFA-1.in 2>&1
-
+mpirun -np 1 "${OPAL_EXE_PATH}/opal" VFFA-1.in --info 2 "$@" 2>&1
