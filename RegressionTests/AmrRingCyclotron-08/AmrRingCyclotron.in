@@ -1,0 +1,101 @@
+Option, ECHO=FALSE;
+Option, PSDUMPFREQ=4500;
+Option, PSDUMPFRAME=BUNCH_MEAN;
+Option, SPTDUMPFREQ = 1000000;
+Option, ENABLEHDF5=TRUE;
+Option, PSDUMPEACHTURN=TRUE;
+Option, REPARTFREQ=5;
+Option, ECHO=FALSE;
+Option, STATDUMPFREQ=1;
+Option, CZERO=FALSE;
+Option, VERSION=20000;
+Option, SCsolveFreq=40;
+Option, AMR=TRUE;
+Option, AMR_REGRID_FREQ=80;
+Option, AMR_YT_DUMP_FREQ=1000000;
+Option, MEMORYDUMP=TRUE;
+Option, TELL=TRUE;
+
+Title,string="OPAL-cycl: the first turn acceleration in PSI 590MeV Ring";
+
+REAL Edes=.072;
+REAL gamma=(Edes+PMASS)/PMASS;
+REAL beta=sqrt(1-(1/gamma^2));
+REAL gambet=gamma*beta;
+REAL P0 = gamma*beta*PMASS;
+REAL brho = (PMASS*1.0e9*gambet) / CLIGHT;
+
+//value,{gamma,brho,Edes,beta,gambet};
+
+REAL phi01=139.4281;
+REAL phi02=phi01+180.0;
+REAL phi04=phi01;
+REAL phi05=phi01+180.0;
+REAL phi03=phi01+10.0;
+
+REAL volt1st=0.9;
+REAL volt3rd=0.9*4.0*0.112;
+
+REAL turns =5;
+REAL nstep=360;
+
+REAL frequency=50.650;
+REAL frequency3=3.0*frequency;
+
+ring: Cyclotron, TYPE="RING", CYHARMON=6, PHIINIT=0.0,
+        PRINIT=-0.000174, RINIT=2130.0, SYMMETRY=8.0, RFFREQ=frequency,
+        FMAPFN="s03av.nar";
+
+rf0: RFCavity, VOLT=volt1st, FMAPFN="Cav1.dat", TYPE="SINGLEGAP",
+        FREQ=frequency, RMIN = 1900.0, RMAX = 4500.0, ANGLE=35.0,  PDIS = 416.0,
+        GAPWIDTH = 220.0, PHI0=phi01;
+
+rf1: RFCavity, VOLT=volt1st, FMAPFN="Cav1.dat", TYPE="SINGLEGAP",
+        FREQ=frequency, RMIN = 1900.0, RMAX = 4500.0, ANGLE=125.0, PDIS = 416.0,
+        GAPWIDTH = 220.0, PHI0=phi02;
+
+rf2: RFCavity, VOLT=volt3rd, FMAPFN="Cav3.dat", TYPE="SINGLEGAP",
+        FREQ=frequency3,RMIN = 1900.0, RMAX = 4500.0, ANGLE=170.0, PDIS = 452.0,
+        GAPWIDTH = 250.0, PHI0=phi03;
+
+rf3: RFCavity, VOLT=volt1st, FMAPFN="Cav1.dat", TYPE="SINGLEGAP",
+        FREQ=frequency, RMIN = 1900.0, RMAX = 4500.0, ANGLE=215.0, PDIS = 416.0,
+        GAPWIDTH = 220.0, PHI0=phi04;
+
+rf4: RFCavity, VOLT=volt1st, FMAPFN="Cav1.dat", TYPE="SINGLEGAP",
+        FREQ=frequency, RMIN = 1900.0, RMAX = 4500.0, ANGLE=305.0, PDIS = 416.0,
+        GAPWIDTH = 220.0, PHI0=phi05;
+
+l1:   Line = (ring,rf0,rf1,rf2,rf3,rf4);
+
+Dist1:DISTRIBUTION, TYPE=gauss,
+        sigmax = 2.0e-03,
+        sigmapx = 1.0e-7,
+        corrx = 0.0,
+        sigmay = 2.0e-03,
+        sigmapy = 1.0e-7,
+        corry = 0.0,
+        sigmat = 2.0e-03,
+        sigmapt = 3.394e-4,
+        corrt=0.0;
+
+Fs1:FIELDSOLVER, FSTYPE=AMR_MG, MX=32, MY=32, MT=32,
+        PARFFTX=true, PARFFTY=true, PARFFTT=true,
+        BCFFTX=dirichlet, BCFFTY=dirichlet, BCFFTT=dirichlet,
+        BBOXINCR=20, AMR_MAXLEVEL=3, AMR_MAXGRIDX=32, AMR_MAXGRIDY=32,
+        AMR_MAXGRIDZ=32, AMR_BFX=16, AMR_BFY=16, AMR_BFZ=16,
+        AMR_REFX=2, AMR_REFY=2, AMR_REFZ=2, AMR_DOMAIN_RATIO={1.0, 0.75, 0.75},
+        AMR_TAGGING=CHARGE_DENSITY, AMR_DENSITY=1.0e-9,
+        AMR_MG_REBALANCE=TRUE, AMR_MG_NSWEEPS=12, ITSOLVER=SA, AMR_MG_NORM=LINF;
+
+beam1: BEAM, PARTICLE=PROTON, pc=P0, NPART=32*32*32, BCURRENT=2.0E-3, CHARGE=1.0, BFREQ=frequency;
+
+Select, Line=l1;
+
+TRACK,LINE=l1, BEAM=beam1, MAXSTEPS=nstep*turns, STEPSPERTURN=nstep,TIMEINTEGRATOR="RK-4";
+ run, method = "CYCLOTRON-T", beam=beam1, fieldsolver=Fs1, distribution=Dist1,
+ MBMODE=FORCE, TURNS=4, MB_BINNING=GAMMA, MB_ETA=0.25;
+
+endtrack;
+
+Stop;
