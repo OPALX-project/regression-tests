@@ -1,9 +1,0 @@
-#!/bin/bash
-
-timeout 300 mpirun -np 4 $OPAL_EXE_PATH/opal RestartTest-8.in --commlib mpi --info 3 --warn 0 "$@" 2>&1
-
-for X in lbal stat h5;do mv RestartTest-8.$X RestartTest-8.2.$X;done
-
-timeout 300 mpirun -np 4 $OPAL_EXE_PATH/opal RestartTest-8.2.in -restart -1 --commlib mpi --info 3 --warn 0 "$@" 2>&1
-
-for X in lbal stat h5;do mv RestartTest-8.2.$X RestartTest-8.$X;done
