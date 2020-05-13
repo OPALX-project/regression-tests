@@ -36,7 +36,7 @@ REAL frequency3=3.0*frequency;
 
 ring: Cyclotron, TYPE="RING", CYHARMON=6, PHIINIT=0.0, PRINIT=-0.000174, RINIT=2130.0,
 	SYMMETRY=8.0, RFFREQ=frequency,
-	FMAPFN="s03av.nar", FMLOWE=72.0, FMHIGHE=590.0;
+	FMAPFN="s03av.nar", FMLOWE=0.072, FMHIGHE=0.590;
 
 rf0: RFCavity, VOLT=volt1st, FMAPFN="Cav1.dat", TYPE="SINGLEGAP",
 	FREQ=frequency, RMIN = 1900.0, RMAX = 4500.0, ANGLE=35.0,  PDIS = 416.0,
