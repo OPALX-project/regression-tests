@@ -35,19 +35,19 @@ REAL sigpy = sqrt((28.0*1.0e-9 / PMASS + 1.0)^2 - 1.0);
 REAL sigpz = sqrt((11.96*1.0e-9 / PMASS + 1.0)^2 - 1.0);
 
 Dist2:DISTRIBUTION, TYPE=BINOMIAL,
-		    SIGMAX = 2.15e-03,
-		    SIGMAPX = 1E-6,
-		    CORRX = 0.0,
-		    MX = 0.01,
-		    SIGMAY = 0.50*23.e-03,
-		    SIGMAPY = 28.0,
-		    CORRY = 0.5,
-		    MY = 990.0,
-		    SIGMAT = 1.0e-1,
-		    SIGMAPT = 11.96,
-		    CORRT = -0.5,
-		    MT = 2.0,
-		    INPUTMOUNITS = EV;
+                    SIGMAX = 2.15e-03,
+                    SIGMAPX = 44.2129,
+                    CORRX = 0.0,
+                    MX = 0.01,
+                    SIGMAY = 0.50*23.e-03,
+                    SIGMAPY = 229223,
+                    CORRY = 0.5,
+                    MY = 990.0,
+                    SIGMAT = 1.0e-1,
+                    SIGMAPZ = 149811,
+                    CORRZ = -0.5,
+                    MT = 2.0,
+                    INPUTMOUNITS = EV;
 
 beam1: BEAM, PARTICLE = PROTON, PC = P0, NPART = 1000000, BFREQ = BF * 1e-6, BCURRENT = BC;
 
