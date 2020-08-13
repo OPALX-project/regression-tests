@@ -1,861 +1,1638 @@
-libibverbs: Warning: couldn't load driver 'mlx5': /lib64/libmlx5-rdmav2.so: symbol ibv_exp_cmd_destroy_flow, version IBVERBS_1.1 not defined in file libibverbs.so.1 with link time reference
-libibverbs: Warning: couldn't load driver 'mlx4': /lib64/libmlx4-rdmav2.so: symbol ibv_exp_cmd_destroy_flow, version IBVERBS_1.1 not defined in file libibverbs.so.1 with link time reference
-libibverbs: Warning: no userspace device-specific driver found for /sys/class/infiniband_verbs/uverbs0
-libibverbs: Warning: couldn't load driver 'mlx5': /lib64/libmlx5-rdmav2.so: symbol ibv_exp_cmd_destroy_flow, version IBVERBS_1.1 not defined in file libibverbs.so.1 with link time reference
-libibverbs: Warning: couldn't load driver 'mlx4': /lib64/libmlx4-rdmav2.so: symbol ibv_exp_cmd_destroy_flow, version IBVERBS_1.1 not defined in file libibverbs.so.1 with link time reference
-libibverbs: Warning: no userspace device-specific driver found for /sys/class/infiniband_verbs/uverbs0
---------------------------------------------------------------------------
-[[12334,1],0]: A high-performance Open MPI point-to-point messaging module
-was unable to find any relevant network interfaces:
-
-Module: OpenFabrics (openib)
-  Host: merlin-l-01
-
-Another transport will be used instead, although this may result in
-lower performance.
-
-NOTE: You can disable this warning by setting the MCA parameter
-btl_base_warn_component_unused to 0.
---------------------------------------------------------------------------
 Ippl> CommMPI: Parent process waiting for children ...
+Ippl> CommMPI: Child 3 ready.
+Ippl> CommMPI: Child 1 ready.
+Ippl> CommMPI: Child 2 ready.
 Ippl> CommMPI: Initialization complete.
->                ____  _____       ___ 
->               / __ \|  __ \ /\   | | 
->              | |  | | |__) /  \  | |
->              | |  | |  ___/ /\ \ | |
->              | |__| | |  / ____ \| |____
->               \____/|_| /_/    \_\______|
-OPAL> 
-OPAL> This is OPAL (Object Oriented Parallel Accelerator Library) Version 2.1.0
-OPAL>             git rev. 1c35e1a4d7bfca97e8eecfe4b4904caac394952d
-OPAL> 
-OPAL> 
-OPAL>                      (c) PSI, http://amas.web.psi.ch
-OPAL> 
-OPAL> 
-OPAL> The optimiser (former opt-Pilot) is integrated 
-OPAL> 
-OPAL> Please send cookies, goodies or other motivations (wine and beer ... ) 
-OPAL> to the OPAL developers opal@lists.psi.ch
-OPAL> 
-OPAL> Time: 12:56:03 date: 26/11/2019
-OPAL> 
-OPAL> Couldn't find startup file "/psi/home/kraus/init.opal".
-OPAL> Note: this is not mandatory for an OPAL simulation!
-OPAL> 
-OPAL> * Reading input stream "BeamLine-1.in".
-OPAL> 
-OPAL> Current settings of options:
-OPAL> OPTION,ECHO=FALSE,INFO=TRUE,TRACE=FALSE,WARN=TRUE,SEED=1.23457e+08,
-OPAL>   TELL=TRUE,PSDUMPFREQ=1e+06,STATDUMPFREQ=10,PSDUMPEACHTURN=FALSE,
-OPAL>   PSDUMPFRAME="GLOBAL",SPTDUMPFREQ=1,REPARTFREQ=10,REBINFREQ=100,
-OPAL>   SCSOLVEFREQ=1,MTSSUBSTEPS=1,REMOTEPARTDEL=0,RHODUMP=FALSE,
-OPAL>   EBDUMP=FALSE,CSRDUMP=FALSE,AUTOPHASE=6,PPDEBUG=FALSE,
-OPAL>   SURFDUMPFREQ=-1,NUMBLOCKS=0,RECYCLEBLOCKS=0,NLHS=1,CZERO=FALSE,
-OPAL>   RNGTYPE="RANDOM",ENABLEHDF5=TRUE,ASCIIDUMP=FALSE,BOUNDPDESTROYFQ=10,
-OPAL>   BEAMHALOBOUNDARY=0,CLOTUNEONLY=FALSE,IDEALIZED=FALSE,
-OPAL>   LOGBENDTRAJECTORY=FALSE,VERSION=10000,MEMORYDUMP=FALSE,HALOSHIFT=0,
-OPAL>   MINBINEMITTED=10,MINSTEPFORREBIN=200;
-OPAL> 
-OPAL> 
-OPAL> value: {GAMMA,BRHO,EDES,BETA,GAMBET}={1.10947,1.504,0.102715,0.433135,0.480551}
-OPAL> 
+{0}>                ____  _____       ___ 
+{0}>               / __ \|  __ \ /\   | | 
+{0}>              | |  | | |__) /  \  | |
+{0}>              | |  | |  ___/ /\ \ | |
+{0}>              | |__| | |  / ____ \| |____
+{0}>               \____/|_| /_/    \_\______|
+OPAL{0}> 
+OPAL{0}> This is OPAL (Object Oriented Parallel Accelerator Library) Version 2.3.0
+OPAL{0}>             git rev. 7c1f8233a53e6c2f527d3e47bd53af635c650652
+OPAL{0}> 
+OPAL{0}> 
+OPAL{0}>                      (c) PSI, http://amas.web.psi.ch
+OPAL{0}> 
+OPAL{0}> 
+OPAL{0}> The optimiser (former opt-Pilot) is integrated 
+OPAL{0}> 
+OPAL{0}> Please send cookies, goodies or other motivations (wine and beer ... ) 
+OPAL{0}> to the OPAL developers opal@lists.psi.ch
+OPAL{0}> 
+OPAL{0}> Time: 23:51:39 date: 13/08/2020
+OPAL{0}> 
+Ippl> CommMPI: Started job 1 on host `arvika'.
+Ippl> CommMPI: Started job 2 on host `arvika'.
+Ippl> CommMPI: Started job 3 on host `arvika'.
+OPAL{0}> Couldn't find startup file "/home/baboch/init.opal".
+OPAL{0}> Note: this is not mandatory for an OPAL simulation!
+OPAL{0}> 
+OPAL{0}> * Reading input stream "BeamLine-1.in".
+OPAL{0}> 
+OPAL{0}> Current settings of options:
+OPAL{0}> OPTION,ECHO=FALSE,INFO=TRUE,TRACE=FALSE,WARN=TRUE,SEED=1.23457e+08,
+OPAL{0}>   TELL=TRUE,PSDUMPFREQ=1e+06,STATDUMPFREQ=750,PSDUMPEACHTURN=FALSE,
+OPAL{0}>   PSDUMPFRAME="GLOBAL",SPTDUMPFREQ=1,REPARTFREQ=10,REBINFREQ=100,
+OPAL{0}>   SCSOLVEFREQ=1,MTSSUBSTEPS=1,REMOTEPARTDEL=0,RHODUMP=FALSE,
+OPAL{0}>   EBDUMP=FALSE,CSRDUMP=FALSE,AUTOPHASE=6,SURFDUMPFREQ=-1,NUMBLOCKS=0,
+OPAL{0}>   RECYCLEBLOCKS=0,NLHS=1,CZERO=FALSE,RNGTYPE="RANDOM",
+OPAL{0}>   ENABLEHDF5=TRUE,ASCIIDUMP=FALSE,BOUNDPDESTROYFQ=10,
+OPAL{0}>   BEAMHALOBOUNDARY=0,CLOTUNEONLY=FALSE,IDEALIZED=FALSE,
+OPAL{0}>   LOGBENDTRAJECTORY=FALSE,VERSION=10000,MEMORYDUMP=FALSE,HALOSHIFT=0,
+OPAL{0}>   DELPARTFREQ=1,MINBINEMITTED=10,MINSTEPFORREBIN=200;
+OPAL{0}> 
+OPAL{0}> 
+OPAL{0}> value: {GAMMA,BRHO,EDES,BETA,GAMBET} = {1.10947, 1.504, 0.102715, 0.433135, 0.480551}
+OPAL{0}> 
 Start reading input stream "BeamLineG2_100_30RCOLs.opal".
 End reading input stream "BeamLineG2_100_30RCOLs.opal".
 Start reading input stream "InDistr_LG2_100.opal".
 End reading input stream "InDistr_LG2_100.opal".
-OPAL> * ********************************************************************************** 
-OPAL> * Selected Tracking Method == PARALLEL-T, NEW TRACK
-OPAL> * ********************************************************************************** 
-Ippl> no solver attached
-OPAL[2]> * Generation of distribution with seed = 123456789
-OPAL[2]> * isn't scalable with number of particles and cores.
-Ippl> Creating new file for data: BeamLine-1.stat
-Ippl> Creating new file for data: BeamLine-1.lbal
-OPAL> 
-OPAL> * ************* D I S T R I B U T I O N ********************************************
-OPAL> * 
-OPAL> * Number of particles: 3520
-OPAL> * 
-OPAL> * Distribution type: FROMFILE
-OPAL> * 
-OPAL> * Input file:        Sample_LG2.dat
-OPAL> * 
-OPAL> * Distribution is injected.
-OPAL> * 
-OPAL> * **********************************************************************************
-OPAL> 
-OPAL> * ************* B E A M ************************************************************ 
-OPAL> * BEAM        BEAM_4
-OPAL> * PARTICLE    PROTON
-OPAL> * CURRENT     2.885665e-08 A
-OPAL> * FREQUENCY   5.063280e+01 MHz
-OPAL> * CHARGE      +e * 1.000000e+00 
-OPAL> * REST MASS   9.382721e-01 GeV
-OPAL> * MOMENTUM    4.508876e-01
-OPAL> * NPART       3.520000e+03
-OPAL> * ********************************************************************************** 
-OPAL> 
-OPAL> * ************* F I E L D S O L V E R ********************************************** 
-OPAL> * FIELDSOLVER  FS1
-OPAL> * TYPE         NONE
-OPAL> * N-PROCESSORS 1
-OPAL> * MX           6.400000e+01
-OPAL> * MY           6.400000e+01
-OPAL> * MT           6.400000e+01
-OPAL> * BBOXINCR     1.000000e+00
-OPAL> * XDIM         parallel  
-OPAL> * YDIM         parallel  
-OPAL> * Z(T)DIM      parallel  
-OPAL> * ********************************************************************************** 
-OPAL> 
-OPAL[2]> Phase space dump frequency 1000000 and statistics dump frequency 10 w.r.t. the time step.
-SBend [2]> ======================================================================
-SBend [2]> ===== AMF1 ===========================================================
-SBend [2]> ======================================================================
-SBend [2]> AMF1 using file 1DPROFILE1-DEFAULT (1D Profile type 1)
-SBend [2]> 
-SBend [2]> Start of field map:      38.8652 m (in s coordinates)
-SBend [2]> End of field map:        41.0331 m (in s coordinates)
-SBend [2]> Entrance edge of magnet: 39.1706 m (in s coordinates)
-SBend [2]> 
-SBend [2]> Reference Trajectory Properties
-SBend [2]> ======================================================================
-SBend [2]> 
-SBend [2]> Bend angle magnitude:    1.00161 rad (57.3878 degrees)
-SBend [2]> Entrance edge angle:     0.1881 rad (10.7773 degrees)
-SBend [2]> Exit edge angle:         0.1881 rad (10.7773 degrees)
-SBend [2]> Bend design radius:      1.55468 m
-SBend [2]> Bend design energy:      1.02715e+08 eV
-SBend [2]> 
-SBend [2]> Bend Field and Rotation Properties
-SBend [2]> ======================================================================
-SBend [2]> 
-SBend [2]> Field amplitude:         0.9674 T
-SBend [2]> Field index:  0
-SBend [2]> Rotation about z axis:   0 rad (0 degrees)
-SBend [2]> 
-SBend [2]> Reference Trajectory Properties Through Bend Magnet with Fringe Fields
-SBend [2]> ======================================================================
-SBend [2]> 
-SBend [2]> Reference particle is bent: 1.00161 rad (57.3878 degrees) in x plane
-SBend [2]> Reference particle is bent: 0 rad (0 degrees) in y plane
-SBend [2]> 
-SBend [2]> Effective Field Map
-SBend [2]> ======================================================================
-SBend [2]> 
-SBend [2]> 1DProfile1 5 5 6
-SBend [2]> -30.0198 -0.0197754 29.9802 0
-SBend [2]> -29.9802 0.0197754 30.0198 0
-SBend [2]> 0.478959
-SBend [2]> 1.91129
-SBend [2]> -1.18595
-SBend [2]> 1.63055
-SBend [2]> -1.08266
-SBend [2]> 0.318111
-SBend [2]> 0.478959
-SBend [2]> 1.91129
-SBend [2]> -1.18595
-SBend [2]> 1.63055
-SBend [2]> -1.08266
-SBend [2]> 0.31811
-SBend [2]> 
-SBend [2]> ======================================================================
-SBend [2]> ======================================================================
-SBend [2]> 
-SBend [2]> ======================================================================
-SBend [2]> ===== AMF2 ===========================================================
-SBend [2]> ======================================================================
-SBend [2]> AMF2 using file 1DPROFILE1-DEFAULT (1D Profile type 1)
-SBend [2]> 
-SBend [2]> Start of field map:      42.4905 m (in s coordinates)
-SBend [2]> End of field map:        44.6577 m (in s coordinates)
-SBend [2]> Entrance edge of magnet: 42.7959 m (in s coordinates)
-SBend [2]> 
-SBend [2]> Reference Trajectory Properties
-SBend [2]> ======================================================================
-SBend [2]> 
-SBend [2]> Bend angle magnitude:    0.996179 rad (57.0768 degrees)
-SBend [2]> Entrance edge angle:     0.1881 rad (10.7773 degrees)
-SBend [2]> Exit edge angle:         0.1881 rad (10.7773 degrees)
-SBend [2]> Bend design radius:      1.56243 m
-SBend [2]> Bend design energy:      1.02715e+08 eV
-SBend [2]> 
-SBend [2]> Bend Field and Rotation Properties
-SBend [2]> ======================================================================
-SBend [2]> 
-SBend [2]> Field amplitude:         0.9626 T
-SBend [2]> Field index:  0
-SBend [2]> Rotation about z axis:   3.14159 rad (180 degrees)
-SBend [2]> 
-SBend [2]> Reference Trajectory Properties Through Bend Magnet with Fringe Fields
-SBend [2]> ======================================================================
-SBend [2]> 
-SBend [2]> Reference particle is bent: 0.996178 rad (57.0768 degrees) in x plane
-SBend [2]> Reference particle is bent: 0 rad (0 degrees) in y plane
-SBend [2]> 
-SBend [2]> Effective Field Map
-SBend [2]> ======================================================================
-SBend [2]> 
-SBend [2]> 1DProfile1 5 5 6
-SBend [2]> -30.0194 -0.0194092 29.9806 0
-SBend [2]> -29.9806 0.0194092 30.0194 0
-SBend [2]> 0.478959
-SBend [2]> 1.91129
-SBend [2]> -1.18595
-SBend [2]> 1.63055
-SBend [2]> -1.08266
-SBend [2]> 0.318111
-SBend [2]> 0.478959
-SBend [2]> 1.91129
-SBend [2]> -1.18595
-SBend [2]> 1.63055
-SBend [2]> -1.08266
-SBend [2]> 0.31811
-SBend [2]> 
-SBend [2]> ======================================================================
-SBend [2]> ======================================================================
-SBend [2]> 
-SBend [2]> ======================================================================
-SBend [2]> ===== AMF3 ===========================================================
-SBend [2]> ======================================================================
-SBend [2]> AMF3 using file 1DPROFILE1-DEFAULT (1D Profile type 1)
-SBend [2]> 
-SBend [2]> Start of field map:      47.2258 m (in s coordinates)
-SBend [2]> End of field map:        51.2212 m (in s coordinates)
-SBend [2]> Entrance edge of magnet: 47.9923 m (in s coordinates)
-SBend [2]> 
-SBend [2]> Reference Trajectory Properties
-SBend [2]> ======================================================================
-SBend [2]> 
-SBend [2]> Bend angle magnitude:    1.55731 rad (89.227 degrees)
-SBend [2]> Entrance edge angle:     0.2077 rad (11.9003 degrees)
-SBend [2]> Exit edge angle:         0.4014 rad (22.9985 degrees)
-SBend [2]> Bend design radius:      1.55019 m
-SBend [2]> Bend design energy:      1.02715e+08 eV
-SBend [2]> 
-SBend [2]> Bend Field and Rotation Properties
-SBend [2]> ======================================================================
-SBend [2]> 
-SBend [2]> Field amplitude:         0.9702 T
-SBend [2]> Field index:  0
-SBend [2]> Rotation about z axis:   3.14159 rad (180 degrees)
-SBend [2]> 
-SBend [2]> Reference Trajectory Properties Through Bend Magnet with Fringe Fields
-SBend [2]> ======================================================================
-SBend [2]> 
-SBend [2]> Reference particle is bent: 1.5573 rad (89.227 degrees) in x plane
-SBend [2]> Reference particle is bent: 0 rad (0 degrees) in y plane
-SBend [2]> 
-SBend [2]> Effective Field Map
-SBend [2]> ======================================================================
-SBend [2]> 
-SBend [2]> 1DProfile1 5 5 15
-SBend [2]> -75.2051 -0.205078 74.7949 0
-SBend [2]> -74.7949 0.205078 75.2051 0
-SBend [2]> 0.478959
-SBend [2]> 1.91129
-SBend [2]> -1.18595
-SBend [2]> 1.63055
-SBend [2]> -1.08266
-SBend [2]> 0.318111
-SBend [2]> 0.478959
-SBend [2]> 1.91129
-SBend [2]> -1.18595
-SBend [2]> 1.63055
-SBend [2]> -1.08266
-SBend [2]> 0.31811
-SBend [2]> 
-SBend [2]> ======================================================================
-SBend [2]> ======================================================================
-SBend [2]> 
-OPAL> 
-OPAL> Size of map 114 sections 
-OPAL> Key: (36.193219 - 36.426950) number of overlapping elements 0
-OPAL> Key: (36.426950 - 36.465905) number of overlapping elements 1
-OPAL>                              UPG2B
-OPAL> Key: (36.465905 - 36.478890) number of overlapping elements 1
-OPAL>                              D76
-OPAL> Key: (36.478890 - 36.543815) number of overlapping elements 1
-OPAL>                              D77
-OPAL> Key: (36.543815 - 36.634711) number of overlapping elements 1
-OPAL>                              D78
-OPAL> Key: (36.634711 - 37.037247) number of overlapping elements 1
-OPAL>                              DEG
-OPAL> Key: (37.037247 - 37.180083) number of overlapping elements 1
-OPAL>                              D79
-OPAL> Key: (37.180083 - 37.504709) number of overlapping elements 1
-OPAL>                              D80
-OPAL> Key: (37.504709 - 37.790380) number of overlapping elements 1
-OPAL>                              D81
-OPAL> Key: (37.790380 - 37.868291) number of overlapping elements 2
-OPAL>                              QMF1
-OPAL>                              QMF1_R0
-OPAL> Key: (37.868291 - 37.946201) number of overlapping elements 2
-OPAL>                              QMF1
-OPAL>                              QMF1_R1
-OPAL> Key: (37.946201 - 38.024111) number of overlapping elements 2
-OPAL>                              QMF1
-OPAL>                              QMF1_R2
-OPAL> Key: (38.024111 - 38.102021) number of overlapping elements 2
-OPAL>                              QMF1
-OPAL>                              QMF1_R3
-OPAL> Key: (38.102021 - 38.257842) number of overlapping elements 1
-OPAL>                              QMFC
-OPAL> Key: (38.257842 - 38.413663) number of overlapping elements 1
-OPAL>                              D82
-OPAL> Key: (38.413663 - 38.491573) number of overlapping elements 2
-OPAL>                              QMF2
-OPAL>                              QMF2_R0
-OPAL> Key: (38.491573 - 38.569483) number of overlapping elements 2
-OPAL>                              QMF2
-OPAL>                              QMF2_R1
-OPAL> Key: (38.569483 - 38.660379) number of overlapping elements 2
-OPAL>                              QMF2
-OPAL>                              QMF2_R2
-OPAL> Key: (38.660379 - 38.738289) number of overlapping elements 2
-OPAL>                              QMF2
-OPAL>                              QMF2_R3
-OPAL> Key: (38.738289 - 38.868139) number of overlapping elements 1
-OPAL>                              D83
-OPAL> Key: (38.868139 - 39.166796) number of overlapping elements 2
-OPAL>                              D83
-OPAL>                              AMF1
-OPAL> Key: (39.166796 - 39.218736) number of overlapping elements 2
-OPAL>                              AMF1
-OPAL>                              AMF1_R0
-OPAL> Key: (39.218736 - 39.270675) number of overlapping elements 2
-OPAL>                              AMF1_R1
-OPAL>                              AMF1
-OPAL> Key: (39.270675 - 39.283660) number of overlapping elements 1
-OPAL>                              AMF1
-OPAL> Key: (39.283660 - 39.335600) number of overlapping elements 2
-OPAL>                              AMF1
-OPAL>                              AMF1_R2
-OPAL> Key: (39.335600 - 39.387540) number of overlapping elements 2
-OPAL>                              AMF1
-OPAL>                              AMF1_R3
-OPAL> Key: (39.387540 - 39.439479) number of overlapping elements 2
-OPAL>                              AMF1
-OPAL>                              AMF1_R4
-OPAL> Key: (39.439479 - 39.491419) number of overlapping elements 2
-OPAL>                              AMF1
-OPAL>                              AMF1_R5
-OPAL> Key: (39.491419 - 39.543359) number of overlapping elements 2
-OPAL>                              AMF1
-OPAL>                              AMF1_R6
-OPAL> Key: (39.543359 - 39.595299) number of overlapping elements 2
-OPAL>                              AMF1
-OPAL>                              AMF1_R7
-OPAL> Key: (39.595299 - 39.647238) number of overlapping elements 2
-OPAL>                              AMF1
-OPAL>                              AMF1_R8
-OPAL> Key: (39.647238 - 39.660223) number of overlapping elements 1
-OPAL>                              AMF1
-OPAL> Key: (39.660223 - 39.712163) number of overlapping elements 2
-OPAL>                              AMF1
-OPAL>                              AMF1_R9
-OPAL> Key: (39.712163 - 39.764103) number of overlapping elements 2
-OPAL>                              AMF1
-OPAL>                              AMF1_R10
-OPAL> Key: (39.764103 - 39.816043) number of overlapping elements 2
-OPAL>                              AMF1
-OPAL>                              AMF1_R11
-OPAL> Key: (39.816043 - 39.867982) number of overlapping elements 2
-OPAL>                              AMF1
-OPAL>                              AMF1_R12
-OPAL> Key: (39.867982 - 39.919922) number of overlapping elements 2
-OPAL>                              AMF1
-OPAL>                              AMF1_R13
-OPAL> Key: (39.919922 - 39.971862) number of overlapping elements 2
-OPAL>                              AMF1
-OPAL>                              AMF1_R14
-OPAL> Key: (39.971862 - 40.023802) number of overlapping elements 2
-OPAL>                              AMF1
-OPAL>                              AMF1_R15
-OPAL> Key: (40.023802 - 40.075741) number of overlapping elements 2
-OPAL>                              AMF1
-OPAL>                              AMF1_R16
-OPAL> Key: (40.075741 - 40.088726) number of overlapping elements 1
-OPAL>                              AMF1
-OPAL> Key: (40.088726 - 40.140666) number of overlapping elements 2
-OPAL>                              AMF1
-OPAL>                              AMF1_R17
-OPAL> Key: (40.140666 - 40.192606) number of overlapping elements 2
-OPAL>                              AMF1
-OPAL>                              AMF1_R18
-OPAL> Key: (40.192606 - 40.244546) number of overlapping elements 2
-OPAL>                              AMF1
-OPAL>                              AMF1_R19
-OPAL> Key: (40.244546 - 40.296485) number of overlapping elements 2
-OPAL>                              AMF1
-OPAL>                              AMF1_R20
-OPAL> Key: (40.296485 - 40.348425) number of overlapping elements 2
-OPAL>                              AMF1
-OPAL>                              AMF1_R21
-OPAL> Key: (40.348425 - 40.400365) number of overlapping elements 2
-OPAL>                              AMF1
-OPAL>                              AMF1_R22
-OPAL> Key: (40.400365 - 40.452305) number of overlapping elements 2
-OPAL>                              AMF1
-OPAL>                              AMF1_R23
-OPAL> Key: (40.452305 - 40.465289) number of overlapping elements 1
-OPAL>                              AMF1
-OPAL> Key: (40.465289 - 40.517229) number of overlapping elements 2
-OPAL>                              AMF1
-OPAL>                              AMF1_R24
-OPAL> Key: (40.517229 - 40.569169) number of overlapping elements 2
-OPAL>                              AMF1
-OPAL>                              AMF1_R25
-OPAL> Key: (40.569169 - 40.621109) number of overlapping elements 2
-OPAL>                              AMF1
-OPAL>                              AMF1_R26
-OPAL> Key: (40.621109 - 40.673048) number of overlapping elements 2
-OPAL>                              AMF1
-OPAL>                              AMF1_R27
-OPAL> Key: (40.673048 - 40.724988) number of overlapping elements 2
-OPAL>                              AMF1
-OPAL>                              AMF1_R28
-OPAL> Key: (40.724988 - 40.776929) number of overlapping elements 3
-OPAL>                              AMF1
-OPAL>                              AMF1_R29
-OPAL>                              D84
-OPAL> Key: (40.776929 - 41.036630) number of overlapping elements 2
-OPAL>                              AMF1
-OPAL>                              D84
-OPAL> Key: (41.036630 - 41.114540) number of overlapping elements 1
-OPAL>                              D84
-OPAL> Key: (41.114540 - 41.127525) number of overlapping elements 3
-OPAL>                              D84
-OPAL>                              MMFP3X
-OPAL>                              MMFP4Y
-OPAL> Key: (41.127525 - 41.387226) number of overlapping elements 1
-OPAL>                              D86
-OPAL> Key: (41.387226 - 41.465136) number of overlapping elements 2
-OPAL>                              QMF3
-OPAL>                              QMF3_R0
-OPAL> Key: (41.465136 - 41.556032) number of overlapping elements 2
-OPAL>                              QMF3
-OPAL>                              QMF3_R1
-OPAL> Key: (41.556032 - 41.633942) number of overlapping elements 2
-OPAL>                              QMF3
-OPAL>                              QMF3_R2
-OPAL> Key: (41.633942 - 41.711852) number of overlapping elements 2
-OPAL>                              QMF3
-OPAL>                              QMF3_R3
-OPAL> Key: (41.711852 - 41.880658) number of overlapping elements 1
-OPAL>                              SMF2
-OPAL> Key: (41.880658 - 42.049463) number of overlapping elements 1
-OPAL>                              D87
-OPAL> Key: (42.049463 - 42.127374) number of overlapping elements 2
-OPAL>                              QMF4
-OPAL>                              QMF4_R0
-OPAL> Key: (42.127374 - 42.205284) number of overlapping elements 2
-OPAL>                              QMF4
-OPAL>                              QMF4_R1
-OPAL> Key: (42.205284 - 42.296179) number of overlapping elements 2
-OPAL>                              QMF4
-OPAL>                              QMF4_R2
-OPAL> Key: (42.296179 - 42.374090) number of overlapping elements 2
-OPAL>                              QMF4
-OPAL>                              QMF4_R3
-OPAL> Key: (42.374090 - 42.490955) number of overlapping elements 1
-OPAL>                              D88
-OPAL> Key: (42.490955 - 42.789611) number of overlapping elements 2
-OPAL>                              D88
-OPAL>                              AMF2
-OPAL> Key: (42.789611 - 42.802596) number of overlapping elements 3
-OPAL>                              D88
-OPAL>                              AMF2
-OPAL>                              AMF2_R0
-OPAL> Key: (42.802596 - 42.841551) number of overlapping elements 2
-OPAL>                              AMF2
-OPAL>                              AMF2_R0
-OPAL> Key: (42.841551 - 42.854536) number of overlapping elements 1
-OPAL>                              AMF2
-OPAL> Key: (42.854536 - 42.906476) number of overlapping elements 2
-OPAL>                              AMF2
-OPAL>                              AMF2_R1
-OPAL> Key: (42.906476 - 42.958416) number of overlapping elements 2
-OPAL>                              AMF2
-OPAL>                              AMF2_R2
-OPAL> Key: (42.958416 - 43.010356) number of overlapping elements 2
-OPAL>                              AMF2
-OPAL>                              AMF2_R3
-OPAL> Key: (43.010356 - 43.062295) number of overlapping elements 2
-OPAL>                              AMF2
-OPAL>                              AMF2_R4
-OPAL> Key: (43.062295 - 43.114235) number of overlapping elements 2
-OPAL>                              AMF2
-OPAL>                              AMF2_R5
-OPAL> Key: (43.114235 - 43.166175) number of overlapping elements 2
-OPAL>                              AMF2
-OPAL>                              AMF2_R6
-OPAL> Key: (43.166175 - 43.218115) number of overlapping elements 2
-OPAL>                              AMF2
-OPAL>                              AMF2_R7
-OPAL> Key: (43.218115 - 43.270054) number of overlapping elements 2
-OPAL>                              AMF2
-OPAL>                              AMF2_R8
-OPAL> Key: (43.270054 - 43.283039) number of overlapping elements 1
-OPAL>                              AMF2
-OPAL> Key: (43.283039 - 43.334979) number of overlapping elements 2
-OPAL>                              AMF2
-OPAL>                              AMF2_R9
-OPAL> Key: (43.334979 - 43.386919) number of overlapping elements 2
-OPAL>                              AMF2
-OPAL>                              AMF2_R10
-OPAL> Key: (43.386919 - 43.438859) number of overlapping elements 2
-OPAL>                              AMF2
-OPAL>                              AMF2_R11
-OPAL> Key: (43.438859 - 43.490798) number of overlapping elements 2
-OPAL>                              AMF2
-OPAL>                              AMF2_R12
-OPAL> Key: (43.490798 - 43.542738) number of overlapping elements 2
-OPAL>                              AMF2
-OPAL>                              AMF2_R13
-OPAL> Key: (43.542738 - 43.594678) number of overlapping elements 2
-OPAL>                              AMF2
-OPAL>                              AMF2_R14
-OPAL> Key: (43.594678 - 43.646618) number of overlapping elements 2
-OPAL>                              AMF2
-OPAL>                              AMF2_R15
-OPAL> Key: (43.646618 - 43.698557) number of overlapping elements 2
-OPAL>                              AMF2
-OPAL>                              AMF2_R16
-OPAL> Key: (43.698557 - 43.711542) number of overlapping elements 1
-OPAL>                              AMF2
-OPAL> Key: (43.711542 - 43.763482) number of overlapping elements 2
-OPAL>                              AMF2
-OPAL>                              AMF2_R17
-OPAL> Key: (43.763482 - 43.815422) number of overlapping elements 2
-OPAL>                              AMF2
-OPAL>                              AMF2_R18
-OPAL> Key: (43.815422 - 43.867361) number of overlapping elements 2
-OPAL>                              AMF2
-OPAL>                              AMF2_R19
-OPAL> Key: (43.867361 - 43.919301) number of overlapping elements 2
-OPAL>                              AMF2
-OPAL>                              AMF2_R20
-OPAL> Key: (43.919301 - 43.971241) number of overlapping elements 2
-OPAL>                              AMF2
-OPAL>                              AMF2_R21
-OPAL> Key: (43.971241 - 44.023181) number of overlapping elements 2
-OPAL>                              AMF2
-OPAL>                              AMF2_R22
-OPAL> Key: (44.023181 - 44.075120) number of overlapping elements 2
-OPAL>                              AMF2
-OPAL>                              AMF2_R23
-OPAL> Key: (44.075120 - 44.127060) number of overlapping elements 2
-OPAL>                              AMF2
-OPAL>                              AMF2_R24
-OPAL> Key: (44.127060 - 44.140045) number of overlapping elements 1
-OPAL>                              AMF2
-OPAL> Key: (44.140045 - 44.191985) number of overlapping elements 2
-OPAL>                              AMF2
-OPAL>                              AMF2_R25
-OPAL> Key: (44.191985 - 44.243925) number of overlapping elements 2
-OPAL>                              AMF2
-OPAL>                              AMF2_R26
-OPAL> Key: (44.243925 - 44.295864) number of overlapping elements 2
-OPAL>                              AMF2
-OPAL>                              AMF2_R27
-OPAL> Key: (44.295864 - 44.347804) number of overlapping elements 2
-OPAL>                              AMF2
-OPAL>                              AMF2_R28
-OPAL> Key: (44.347804 - 44.360789) number of overlapping elements 2
-OPAL>                              AMF2
-OPAL>                              AMF2_R29
-OPAL> Key: (44.360789 - 44.399745) number of overlapping elements 3
-OPAL>                              AMF2
-OPAL>                              AMF2_R29
-OPAL>                              D89
-OPAL> Key: (44.399745 - 44.659446) number of overlapping elements 2
-OPAL>                              AMF2
-OPAL>                              D89
-OPAL> Key: (44.659446 - 44.750341) number of overlapping elements 1
-OPAL>                              D89
-OPAL> Key: (44.750341 - 45.100937) number of overlapping elements 1
-OPAL>                              SMF3
-OPAL> Key: (45.100937 - 45.217803) number of overlapping elements 1
-OPAL>                              D92
-OPAL> Key: (45.217803 - 45.308698) number of overlapping elements 2
-OPAL>                              QMF5
-OPAL>                              QMF5_R0
-OPAL> Key: (45.308698 - 45.386608) number of overlapping elements 2
-OPAL>                              QMF5
-OPAL>                              QMF5_R1
-OPAL> Key: (45.386608 - 45.438549) number of overlapping elements 2
-OPAL>                              QMF5
-OPAL>                              QMF5_R2
-OPAL> 
-Ippl> Creating new file for data: data/BeamLine-1_ElementPositions.sdds
-OPAL> 
-OPAL> * ************** B U N C H ********************************************************* 
-OPAL> * NP              = 3520
-OPAL> * Qtot            =        0.570 [fC]         Qi    =        0.000 [fC]
-OPAL> * Ekin            =     102.716 [MeV]         dEkin =     809.283 [keV]
-OPAL> * rmax            = (      3.79700 ,      3.24300 ,    216.47700 ) [mm]
-OPAL> * rmin            = (     -3.72900 ,     -3.09100 ,   -224.36700 ) [mm]
-OPAL> * rms beam size   = (      1.74875 ,      1.26568 ,    106.36239 ) [mm]
-OPAL> * rms momenta     = (  2.43766e-03 ,  3.01097e-03 ,  1.99134e-03 ) [beta gamma]
-OPAL> * mean position   = (     -0.00256 ,      0.00369 ,      0.00021 ) [um]
-OPAL> * mean momenta    = ( -3.18466e-07 , -8.21023e-08 ,  4.80535e-01 ) [beta gamma]
-OPAL> * rms emittance   = (  5.63944e-06 ,  7.79270e-06 ,  2.46971e-06 ) (not normalized)
-OPAL> * rms correlation = ( -7.71906e-01 , -1.85437e-01 ,  9.99984e-01 )
-OPAL> * hr              = (      0.11946 ,      0.10054 ,      6.99752 ) [mm]
-OPAL> * dh              =   1.00000e-10 [%]
-OPAL> * t               =      280.530 [ns]         dT    =      100.000 [ps]
-OPAL> * spos            =        36.427 [m]
-OPAL> * ********************************************************************************** 
-OPAL> 
-OPAL> Track start at: 12:56:03, t= 280.530 [ns]; zstart at: 36.427 [m]
-OPAL> Executing ParallelTTracker, initial dt= 100.000 [ps];
-OPAL> max integration steps 1243, next step= 0
-ParallelTTracker [2]> MINBINEMITTED 10
-ParallelTTracker [2]> MINSTEPFORREBIN 200
-ParallelTTracker [2]> 12:56:03 Step     99 at 37.725 [m], t= 290.530 [ns], E=102.716 [MeV]
-ParallelTTracker [2]> 12:56:03 Step    199 at 39.024 [m], t= 300.530 [ns], E=102.716 [MeV]
-ParallelTTracker > * Deleted 1 particles, remaining 3519 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3518 particles
-ParallelTTracker > * Deleted 2 particles, remaining 3516 particles
-ParallelTTracker > * Deleted 2 particles, remaining 3514 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3513 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3512 particles
-ParallelTTracker > * Deleted 2 particles, remaining 3510 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3509 particles
-ParallelTTracker > * Deleted 3 particles, remaining 3506 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3505 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3504 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3503 particles
-ParallelTTracker > * Deleted 2 particles, remaining 3501 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3500 particles
-ParallelTTracker > * Deleted 7 particles, remaining 3493 particles
-ParallelTTracker > * Deleted 2 particles, remaining 3491 particles
-ParallelTTracker > * Deleted 3 particles, remaining 3488 particles
-ParallelTTracker > * Deleted 3 particles, remaining 3485 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3481 particles
-ParallelTTracker > * Deleted 2 particles, remaining 3479 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3478 particles
-ParallelTTracker > * Deleted 2 particles, remaining 3476 particles
-ParallelTTracker > * Deleted 3 particles, remaining 3473 particles
-ParallelTTracker > * Deleted 6 particles, remaining 3467 particles
-ParallelTTracker > * Deleted 2 particles, remaining 3465 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3461 particles
-ParallelTTracker > * Deleted 3 particles, remaining 3458 particles
-ParallelTTracker > * Deleted 5 particles, remaining 3453 particles
-ParallelTTracker > * Deleted 8 particles, remaining 3445 particles
-ParallelTTracker > * Deleted 5 particles, remaining 3440 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3439 particles
-ParallelTTracker > * Deleted 7 particles, remaining 3432 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3431 particles
-ParallelTTracker > * Deleted 5 particles, remaining 3426 particles
-ParallelTTracker > * Deleted 6 particles, remaining 3420 particles
-ParallelTTracker > * Deleted 5 particles, remaining 3415 particles
-ParallelTTracker > * Deleted 3 particles, remaining 3412 particles
-ParallelTTracker > * Deleted 6 particles, remaining 3406 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3402 particles
-ParallelTTracker > * Deleted 2 particles, remaining 3400 particles
-ParallelTTracker > * Deleted 2 particles, remaining 3398 particles
-ParallelTTracker > * Deleted 3 particles, remaining 3395 particles
-ParallelTTracker > * Deleted 5 particles, remaining 3390 particles
-ParallelTTracker > * Deleted 6 particles, remaining 3384 particles
-ParallelTTracker > * Deleted 5 particles, remaining 3379 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3375 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3371 particles
-ParallelTTracker [2]> 12:56:03 Step    299 at 40.322 [m], t= 310.530 [ns], E=102.691 [MeV]
-ParallelTTracker > * Deleted 9 particles, remaining 3362 particles
-ParallelTTracker > * Deleted 8 particles, remaining 3354 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3350 particles
-ParallelTTracker > * Deleted 6 particles, remaining 3344 particles
-ParallelTTracker > * Deleted 8 particles, remaining 3336 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3332 particles
-ParallelTTracker > * Deleted 5 particles, remaining 3327 particles
-ParallelTTracker > * Deleted 3 particles, remaining 3324 particles
-ParallelTTracker > * Deleted 2 particles, remaining 3322 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3318 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3314 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3310 particles
-ParallelTTracker > * Deleted 2 particles, remaining 3308 particles
-ParallelTTracker > * Deleted 9 particles, remaining 3299 particles
-ParallelTTracker > * Deleted 5 particles, remaining 3294 particles
-ParallelTTracker > * Deleted 3 particles, remaining 3291 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3287 particles
-ParallelTTracker > * Deleted 5 particles, remaining 3282 particles
-ParallelTTracker > * Deleted 7 particles, remaining 3275 particles
-ParallelTTracker > * Deleted 10 particles, remaining 3265 particles
-ParallelTTracker > * Deleted 6 particles, remaining 3259 particles
-ParallelTTracker > * Deleted 9 particles, remaining 3250 particles
-ParallelTTracker > * Deleted 7 particles, remaining 3243 particles
-ParallelTTracker > * Deleted 6 particles, remaining 3237 particles
-ParallelTTracker > * Deleted 6 particles, remaining 3231 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3227 particles
-ParallelTTracker > * Deleted 7 particles, remaining 3220 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3216 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3212 particles
-ParallelTTracker > * Deleted 5 particles, remaining 3207 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3206 particles
-ParallelTTracker > * Deleted 5 particles, remaining 3201 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3200 particles
-ParallelTTracker > * Deleted 6 particles, remaining 3194 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3193 particles
-ParallelTTracker > * Deleted 2 particles, remaining 3191 particles
-ParallelTTracker > * Deleted 3 particles, remaining 3188 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3187 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3186 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3185 particles
-ParallelTTracker > * Deleted 3 particles, remaining 3182 particles
-ParallelTTracker > * Deleted 3 particles, remaining 3179 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3178 particles
-ParallelTTracker [2]> 12:56:04 Step    399 at 41.621 [m], t= 320.530 [ns], E=102.686 [MeV]
-ParallelTTracker > * Deleted 1 particles, remaining 3177 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3176 particles
-ParallelTTracker > * Deleted 3 particles, remaining 3173 particles
-ParallelTTracker > * Deleted 3 particles, remaining 3170 particles
-ParallelTTracker > * Deleted 3 particles, remaining 3167 particles
-ParallelTTracker > * Deleted 2 particles, remaining 3165 particles
-ParallelTTracker > * Deleted 4 particles, remaining 3161 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3160 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3159 particles
-ParallelTTracker > * Deleted 1 particles, remaining 3158 particles
-ParallelTTracker [2]> 12:56:04 Step    499 at 42.919 [m], t= 330.530 [ns], E=102.694 [MeV]
-ParallelTTracker [2]> 12:56:04 Step    599 at 44.218 [m], t= 340.530 [ns], E=102.694 [MeV]
-OPAL > 
-OPAL > * ************** B U N C H ********************************************************* 
-OPAL > * NP              = 3158
-OPAL > * Qtot            =        0.511 [fC]         Qi    =        0.000 [fC]
-OPAL > * Ekin            =     102.694 [MeV]         dEkin =     807.449 [keV]
-OPAL > * rmax            = (     22.94211 ,     15.88625 ,    287.00788 ) [mm]
-OPAL > * rmin            = (    -32.96153 ,    -15.57630 ,   -301.22488 ) [mm]
-OPAL > * rms beam size   = (     14.02188 ,      5.38758 ,    136.46298 ) [mm]
-OPAL > * rms momenta     = (  6.26765e-03 ,  1.96961e-03 ,  1.98701e-03 ) [beta gamma]
-OPAL > * mean position   = (     -0.83089 ,     -0.00191 ,     -4.06370 ) [mm]
-OPAL > * mean momenta    = (  2.82810e-04 , -2.23274e-06 ,  4.80452e-01 ) [beta gamma]
-OPAL > * rms emittance   = (  6.46489e-05 ,  9.16981e-06 ,  5.91606e-05 ) (not normalized)
-OPAL > * rms correlation = (  9.35449e-01 ,  9.09720e-01 ,  9.94490e-01 )
-OPAL > * hr              = (      0.11946 ,      0.10054 ,      6.99752 ) [mm]
-OPAL > * dh              =   1.00000e-10 [%]
-OPAL > * t               =      346.530 [ns]         dT    =      100.000 [ps]
-OPAL > * spos            =        45.000 [m]
-OPAL > * ********************************************************************************** 
-OPAL > 
-OPAL [2]> * Wrote beam phase space.
-ParallelTTracker [2]> Dump phase space of last step
-Ippl[2]> Save AMF1_R9.h5
-Ippl[2]> Save AMF1_R10.h5
-Ippl[2]> Save AMF1_R11.h5
-Ippl[2]> Save AMF1_R12.h5
-Ippl[2]> Save AMF1_R13.h5
-Ippl[2]> Save AMF1_R14.h5
-Ippl[2]> Save AMF1_R15.h5
-Ippl[2]> Save AMF1_R16.h5
-Ippl[2]> Save AMF1_R17.h5
-Ippl[2]> Save AMF1_R18.h5
-Ippl[2]> Save AMF1_R19.h5
-Ippl[2]> Save AMF1_R20.h5
-Ippl[2]> Save AMF1_R21.h5
-Ippl[2]> Save AMF1_R22.h5
-Ippl[2]> Save AMF1_R23.h5
-Ippl[2]> Save AMF1_R24.h5
-Ippl[2]> Save AMF1_R25.h5
-Ippl[2]> Save AMF1_R26.h5
-Ippl[2]> Save AMF1_R27.h5
-Ippl[2]> Save AMF1_R28.h5
-Ippl[2]> Save AMF1_R29.h5
-Ippl[2]> Save MMFP3X.h5
-Ippl[2]> Save MMFP4Y.h5
-Ippl[2]> Save QMF4_R0.h5
-Ippl[2]> Save QMF4_R1.h5
-OPAL> done executing ParallelTTracker at 12:56:05
-Ippl> Creating new file for data: BeamLine-1_Monitors.stat
-OPAL> * End of input stream "BeamLine-1.in".
-Timings> -----------------------------------------------------------------
-Timings>      Timing results for 1 nodes:
-Timings> -----------------------------------------------------------------
-Timings> mainTimer........... Wall tot =    2.18267, CPU tot =       1.92
-Timings> 
-Timings> Binaryrepart........ Wall max =          0, CPU max =          0
-Timings>                      Wall avg =          0, CPU avg =          0
-Timings>                      Wall min =          0, CPU min =          0
-Timings> 
-Timings> Boundingbox......... Wall max = 0.000282035, CPU max =          0
-Timings>                      Wall avg = 0.000282035, CPU avg =          0
-Timings>                      Wall min = 0.000282035, CPU min =          0
-Timings> 
-Timings> Boundingbox-bounds.. Wall max = 1.6265e-05, CPU max =          0
-Timings>                      Wall avg = 1.6265e-05, CPU avg =          0
-Timings>                      Wall min = 1.6265e-05, CPU min =          0
-Timings> 
-Timings> Boundingbox-update.. Wall max = 2.9016e-05, CPU max =          0
-Timings>                      Wall avg = 2.9016e-05, CPU avg =          0
-Timings>                      Wall min = 2.9016e-05, CPU min =          0
-Timings> 
-Timings> Compute Statistics.. Wall max =  0.0246043, CPU max =       0.03
-Timings>                      Wall avg =  0.0246043, CPU avg =       0.03
-Timings>                      Wall min =  0.0246043, CPU min =       0.03
-Timings> 
-Timings> Create Distr........ Wall max =   0.013033, CPU max =       0.01
-Timings>                      Wall avg =   0.013033, CPU avg =       0.01
-Timings>                      Wall min =   0.013033, CPU min =       0.01
-Timings> 
-Timings> External field eval. Wall max =    1.43422, CPU max =       1.41
-Timings>                      Wall avg =    1.43422, CPU avg =       1.41
-Timings>                      Wall min =    1.43422, CPU min =       1.41
-Timings> 
-Timings> Fast inside test.... Wall max =          0, CPU max =          0
-Timings>                      Wall avg =          0, CPU avg =          0
-Timings>                      Wall min =          0, CPU min =          0
-Timings> 
-Timings> Histogram........... Wall max =          0, CPU max =          0
-Timings>                      Wall avg =          0, CPU avg =          0
-Timings>                      Wall min =          0, CPU min =          0
-Timings> 
-Timings> Initialize geometry. Wall max =          0, CPU max =          0
-Timings>                      Wall avg =          0, CPU avg =          0
-Timings>                      Wall min =          0, CPU min =          0
-Timings> 
-Timings> Inside test......... Wall max =          0, CPU max =          0
-Timings>                      Wall avg =          0, CPU avg =          0
-Timings>                      Wall min =          0, CPU min =          0
-Timings> 
-Timings> Load Distr.......... Wall max =          0, CPU max =          0
-Timings>                      Wall avg =          0, CPU avg =          0
-Timings>                      Wall min =          0, CPU min =          0
-Timings> 
-Timings> Particle Inside..... Wall max =          0, CPU max =          0
-Timings>                      Wall avg =          0, CPU avg =          0
-Timings>                      Wall min =          0, CPU min =          0
-Timings> 
-Timings> Ray tracing......... Wall max =          0, CPU max =          0
-Timings>                      Wall avg =          0, CPU avg =          0
-Timings>                      Wall min =          0, CPU min =          0
-Timings> 
-Timings> Secondary emission.. Wall max =          0, CPU max =          0
-Timings>                      Wall avg =          0, CPU avg =          0
-Timings>                      Wall min =          0, CPU min =          0
-Timings> 
-Timings> SelfField total..... Wall max =          0, CPU max =          0
-Timings>                      Wall avg =          0, CPU avg =          0
-Timings>                      Wall min =          0, CPU min =          0
-Timings> 
-Timings> TIntegration1....... Wall max =  0.0383856, CPU max =       0.03
-Timings>                      Wall avg =  0.0383856, CPU avg =       0.03
-Timings>                      Wall min =  0.0383856, CPU min =       0.03
-Timings> 
-Timings> TIntegration2....... Wall max =   0.114598, CPU max =       0.13
-Timings>                      Wall avg =   0.114598, CPU avg =       0.13
-Timings>                      Wall min =   0.114598, CPU min =       0.13
-Timings> 
-Timings> WakeField........... Wall max =          0, CPU max =          0
-Timings>                      Wall avg =          0, CPU avg =          0
-Timings>                      Wall min =          0, CPU min =          0
-Timings> 
-Timings> Write H5-File....... Wall max =  0.0100158, CPU max =       0.01
-Timings>                      Wall avg =  0.0100158, CPU avg =       0.01
-Timings>                      Wall min =  0.0100158, CPU min =       0.01
-Timings> 
-Timings> Write Stat.......... Wall max =  0.0226289, CPU max =       0.02
-Timings>                      Wall avg =  0.0226289, CPU avg =       0.02
-Timings>                      Wall min =  0.0226289, CPU min =       0.02
-Timings> 
-Timings> -----------------------------------------------------------------
+OPAL{0}> * ********************************************************************************** 
+OPAL{0}> * Selected Tracking Method == PARALLEL-T, NEW TRACK
+OPAL{0}> * ********************************************************************************** 
+Ippl{0}> no solver attached
+OPAL{0}[2]> * Generation of distribution with seed = 123456789
+OPAL{0}[2]> * isn't scalable with number of particles and cores.
+Ippl{0}> Creating new file for data: BeamLine-1.stat
+Ippl{0}> Creating new file for data: BeamLine-1.lbal
+OPAL{0}> 
+OPAL{0}> * ************* D I S T R I B U T I O N ********************************************
+OPAL{0}> * 
+OPAL{0}> * Number of particles: 3520
+OPAL{0}> * 
+OPAL{0}> * Distribution type: FROMFILE
+OPAL{0}> * 
+OPAL{0}> * Input file:        Sample_LG2.dat
+OPAL{0}> * 
+OPAL{0}> * Distribution is injected.
+OPAL{0}> * 
+OPAL{0}> * **********************************************************************************
+OPAL{0}> 
+OPAL{0}> * ************* B E A M ************************************************************ 
+OPAL{0}> * BEAM        BEAM_4
+OPAL{0}> * PARTICLE    PROTON
+OPAL{0}> * CURRENT     2.885665e-08 A
+OPAL{0}> * FREQUENCY   5.063280e+01 MHz
+OPAL{0}> * CHARGE      +e * 1.000000e+00 
+OPAL{0}> * REST MASS   9.382721e-01 GeV
+OPAL{0}> * MOMENTUM    4.508876e-01
+OPAL{0}> * NPART       3.520000e+03
+OPAL{0}> * ********************************************************************************** 
+OPAL{0}> 
+OPAL{0}> * ************* F I E L D S O L V E R ********************************************** 
+OPAL{0}> * FIELDSOLVER  FS1
+OPAL{0}> * TYPE         NONE
+OPAL{0}> * N-PROCESSORS 4
+OPAL{0}> * MX           6.400000e+01
+OPAL{0}> * MY           6.400000e+01
+OPAL{0}> * MT           6.400000e+01
+OPAL{0}> * BBOXINCR     1.000000e+00
+OPAL{0}> * XDIM         parallel  
+OPAL{0}> * YDIM         parallel  
+OPAL{0}> * Z(T)DIM      parallel  
+OPAL{0}> * ********************************************************************************** 
+OPAL{0}> 
+OPAL{0}[2]> Phase space dump frequency 1000000 and statistics dump frequency 750 w.r.t. the time step.
+SBend {0}[2]> ======================================================================
+SBend {0}[2]> ===== AMF1 ===========================================================
+SBend {0}[2]> ======================================================================
+SBend {0}[2]> AMF1 using file 1DPROFILE1-DEFAULT (1D Profile type 1)
+SBend {0}[2]> 
+SBend {0}[2]> Start of field map:      38.8652 m (in s coordinates)
+SBend {0}[2]> End of field map:        41.0331 m (in s coordinates)
+SBend {0}[2]> Entrance edge of magnet: 39.1706 m (in s coordinates)
+SBend {0}[2]> 
+SBend {0}[2]> Reference Trajectory Properties
+SBend {0}[2]> ======================================================================
+SBend {0}[2]> 
+SBend {0}[2]> Bend angle magnitude:    1.00161 rad (57.3878 degrees)
+SBend {0}[2]> Entrance edge angle:     0.1881 rad (10.7773 degrees)
+SBend {0}[2]> Exit edge angle:         0.1881 rad (10.7773 degrees)
+SBend {0}[2]> Bend design radius:      1.55468 m
+SBend {0}[2]> Bend design energy:      1.02715e+08 eV
+SBend {0}[2]> 
+SBend {0}[2]> Bend Field and Rotation Properties
+SBend {0}[2]> ======================================================================
+SBend {0}[2]> 
+SBend {0}[2]> Field amplitude:         0.9674 T
+SBend {0}[2]> Field index:  0
+SBend {0}[2]> Rotation about z axis:   0 rad (0 degrees)
+SBend {0}[2]> 
+SBend {0}[2]> Reference Trajectory Properties Through Bend Magnet with Fringe Fields
+SBend {0}[2]> ======================================================================
+SBend {0}[2]> 
+SBend {0}[2]> Reference particle is bent: 1.00161 rad (57.3878 degrees) in x plane
+SBend {0}[2]> Reference particle is bent: 0 rad (0 degrees) in y plane
+SBend {0}[2]> 
+SBend {0}[2]> Effective Field Map
+SBend {0}[2]> ======================================================================
+SBend {0}[2]> 
+SBend {0}[2]> 1DProfile1 5 5 6
+SBend {0}[2]> -30.0194 -0.0194092 29.9806 0
+SBend {0}[2]> -29.9806 0.0194092 30.0194 0
+SBend {0}[2]> 0.478959
+SBend {0}[2]> 1.91129
+SBend {0}[2]> -1.18595
+SBend {0}[2]> 1.63055
+SBend {0}[2]> -1.08266
+SBend {0}[2]> 0.318111
+SBend {0}[2]> 0.478959
+SBend {0}[2]> 1.91129
+SBend {0}[2]> -1.18595
+SBend {0}[2]> 1.63055
+SBend {0}[2]> -1.08266
+SBend {0}[2]> 0.31811
+SBend {0}[2]> 
+SBend {0}[2]> ======================================================================
+SBend {0}[2]> ======================================================================
+SBend {0}[2]> 
+SBend {0}[2]> ======================================================================
+SBend {0}[2]> ===== AMF2 ===========================================================
+SBend {0}[2]> ======================================================================
+SBend {0}[2]> AMF2 using file 1DPROFILE1-DEFAULT (1D Profile type 1)
+SBend {0}[2]> 
+SBend {0}[2]> Start of field map:      42.4905 m (in s coordinates)
+SBend {0}[2]> End of field map:        44.6577 m (in s coordinates)
+SBend {0}[2]> Entrance edge of magnet: 42.7959 m (in s coordinates)
+SBend {0}[2]> 
+SBend {0}[2]> Reference Trajectory Properties
+SBend {0}[2]> ======================================================================
+SBend {0}[2]> 
+SBend {0}[2]> Bend angle magnitude:    0.996179 rad (57.0768 degrees)
+SBend {0}[2]> Entrance edge angle:     0.1881 rad (10.7773 degrees)
+SBend {0}[2]> Exit edge angle:         0.1881 rad (10.7773 degrees)
+SBend {0}[2]> Bend design radius:      1.56243 m
+SBend {0}[2]> Bend design energy:      1.02715e+08 eV
+SBend {0}[2]> 
+SBend {0}[2]> Bend Field and Rotation Properties
+SBend {0}[2]> ======================================================================
+SBend {0}[2]> 
+SBend {0}[2]> Field amplitude:         0.9626 T
+SBend {0}[2]> Field index:  0
+SBend {0}[2]> Rotation about z axis:   3.14159 rad (180 degrees)
+SBend {0}[2]> 
+SBend {0}[2]> Reference Trajectory Properties Through Bend Magnet with Fringe Fields
+SBend {0}[2]> ======================================================================
+SBend {0}[2]> 
+SBend {0}[2]> Reference particle is bent: 0.996178 rad (57.0768 degrees) in x plane
+SBend {0}[2]> Reference particle is bent: 0 rad (0 degrees) in y plane
+SBend {0}[2]> 
+SBend {0}[2]> Effective Field Map
+SBend {0}[2]> ======================================================================
+SBend {0}[2]> 
+SBend {0}[2]> 1DProfile1 5 5 6
+SBend {0}[2]> -30.019 -0.019043 29.981 0
+SBend {0}[2]> -29.981 0.019043 30.019 0
+SBend {0}[2]> 0.478959
+SBend {0}[2]> 1.91129
+SBend {0}[2]> -1.18595
+SBend {0}[2]> 1.63055
+SBend {0}[2]> -1.08266
+SBend {0}[2]> 0.318111
+SBend {0}[2]> 0.478959
+SBend {0}[2]> 1.91129
+SBend {0}[2]> -1.18595
+SBend {0}[2]> 1.63055
+SBend {0}[2]> -1.08266
+SBend {0}[2]> 0.31811
+SBend {0}[2]> 
+SBend {0}[2]> ======================================================================
+SBend {0}[2]> ======================================================================
+SBend {0}[2]> 
+SBend {0}[2]> ======================================================================
+SBend {0}[2]> ===== AMF3 ===========================================================
+SBend {0}[2]> ======================================================================
+SBend {0}[2]> AMF3 using file 1DPROFILE1-DEFAULT (1D Profile type 1)
+SBend {0}[2]> 
+SBend {0}[2]> Start of field map:      47.2258 m (in s coordinates)
+SBend {0}[2]> End of field map:        51.2212 m (in s coordinates)
+SBend {0}[2]> Entrance edge of magnet: 47.9923 m (in s coordinates)
+SBend {0}[2]> 
+SBend {0}[2]> Reference Trajectory Properties
+SBend {0}[2]> ======================================================================
+SBend {0}[2]> 
+SBend {0}[2]> Bend angle magnitude:    1.55731 rad (89.227 degrees)
+SBend {0}[2]> Entrance edge angle:     0.2077 rad (11.9003 degrees)
+SBend {0}[2]> Exit edge angle:         0.4014 rad (22.9985 degrees)
+SBend {0}[2]> Bend design radius:      1.55019 m
+SBend {0}[2]> Bend design energy:      1.02715e+08 eV
+SBend {0}[2]> 
+SBend {0}[2]> Bend Field and Rotation Properties
+SBend {0}[2]> ======================================================================
+SBend {0}[2]> 
+SBend {0}[2]> Field amplitude:         0.9702 T
+SBend {0}[2]> Field index:  0
+SBend {0}[2]> Rotation about z axis:   3.14159 rad (180 degrees)
+SBend {0}[2]> 
+SBend {0}[2]> Reference Trajectory Properties Through Bend Magnet with Fringe Fields
+SBend {0}[2]> ======================================================================
+SBend {0}[2]> 
+SBend {0}[2]> Reference particle is bent: 1.55731 rad (89.227 degrees) in x plane
+SBend {0}[2]> Reference particle is bent: 0 rad (0 degrees) in y plane
+SBend {0}[2]> 
+SBend {0}[2]> Effective Field Map
+SBend {0}[2]> ======================================================================
+SBend {0}[2]> 
+SBend {0}[2]> 1DProfile1 5 5 15
+SBend {0}[2]> -75.2046 -0.20462 74.7954 0
+SBend {0}[2]> -74.7954 0.20462 75.2046 0
+SBend {0}[2]> 0.478959
+SBend {0}[2]> 1.91129
+SBend {0}[2]> -1.18595
+SBend {0}[2]> 1.63055
+SBend {0}[2]> -1.08266
+SBend {0}[2]> 0.318111
+SBend {0}[2]> 0.478959
+SBend {0}[2]> 1.91129
+SBend {0}[2]> -1.18595
+SBend {0}[2]> 1.63055
+SBend {0}[2]> -1.08266
+SBend {0}[2]> 0.31811
+SBend {0}[2]> 
+SBend {0}[2]> ======================================================================
+SBend {0}[2]> ======================================================================
+SBend {0}[2]> 
+OPAL{0}> ParallelTTracker.cpp: 254	
+OPAL{0}> 
+OPAL{0}> Size of map 172 sections 
+OPAL{0}> Key: (36.200664 - 36.426950) number of overlapping elements 0
+OPAL{0}> Key: (36.426950 - 36.464520) number of overlapping elements 1
+OPAL{0}>                              UPG2B
+OPAL{0}> Key: (36.464520 - 36.466425) number of overlapping elements 1
+OPAL{0}>                              KMB2O
+OPAL{0}> Key: (36.466425 - 36.479410) number of overlapping elements 1
+OPAL{0}>                              D76
+OPAL{0}> Key: (36.479410 - 36.543469) number of overlapping elements 1
+OPAL{0}>                              D77
+OPAL{0}> Key: (36.543469 - 36.635923) number of overlapping elements 1
+OPAL{0}>                              D78
+OPAL{0}> Key: (36.635923 - 37.036035) number of overlapping elements 1
+OPAL{0}>                              DEG
+OPAL{0}> Key: (37.036035 - 37.181641) number of overlapping elements 1
+OPAL{0}>                              D79
+OPAL{0}> Key: (37.181641 - 37.501073) number of overlapping elements 1
+OPAL{0}>                              D80
+OPAL{0}> Key: (37.501073 - 37.506094) number of overlapping elements 3
+OPAL{0}>                              D80
+OPAL{0}>                              MMFP1X
+OPAL{0}>                              MMFP2Y
+OPAL{0}> Key: (37.506094 - 37.511115) number of overlapping elements 3
+OPAL{0}>                              MMFP1X
+OPAL{0}>                              MMFP2Y
+OPAL{0}>                              D81
+OPAL{0}> Key: (37.511115 - 37.784494) number of overlapping elements 1
+OPAL{0}>                              D81
+OPAL{0}> Key: (37.784494 - 37.864655) number of overlapping elements 2
+OPAL{0}>                              QMF1
+OPAL{0}>                              QMF1_R0
+OPAL{0}> Key: (37.864655 - 37.944643) number of overlapping elements 2
+OPAL{0}>                              QMF1
+OPAL{0}>                              QMF1_R1
+OPAL{0}> Key: (37.944643 - 38.024631) number of overlapping elements 2
+OPAL{0}>                              QMF1
+OPAL{0}>                              QMF1_R2
+OPAL{0}> Key: (38.024631 - 38.104618) number of overlapping elements 2
+OPAL{0}>                              QMF1
+OPAL{0}>                              QMF1_R3
+OPAL{0}> Key: (38.104618 - 38.259573) number of overlapping elements 1
+OPAL{0}>                              QMFC
+OPAL{0}> Key: (38.259573 - 38.414528) number of overlapping elements 1
+OPAL{0}>                              D82
+OPAL{0}> Key: (38.414528 - 38.494516) number of overlapping elements 2
+OPAL{0}>                              QMF2
+OPAL{0}>                              QMF2_R0
+OPAL{0}> Key: (38.494516 - 38.574504) number of overlapping elements 2
+OPAL{0}>                              QMF2
+OPAL{0}>                              QMF2_R1
+OPAL{0}> Key: (38.574504 - 38.654665) number of overlapping elements 2
+OPAL{0}>                              QMF2
+OPAL{0}>                              QMF2_R2
+OPAL{0}> Key: (38.654665 - 38.734653) number of overlapping elements 2
+OPAL{0}>                              QMF2
+OPAL{0}>                              QMF2_R3
+OPAL{0}> Key: (38.734653 - 38.865023) number of overlapping elements 1
+OPAL{0}>                              D83
+OPAL{0}> Key: (38.865023 - 39.170258) number of overlapping elements 2
+OPAL{0}>                              D83
+OPAL{0}>                              AMF1
+OPAL{0}> Key: (39.170258 - 39.170605) number of overlapping elements 3
+OPAL{0}>                              D83
+OPAL{0}>                              AMF1
+OPAL{0}>                              AMF1_R0
+OPAL{0}> Key: (39.170605 - 39.222198) number of overlapping elements 2
+OPAL{0}>                              AMF1
+OPAL{0}>                              AMF1_R0
+OPAL{0}> Key: (39.222198 - 39.223930) number of overlapping elements 1
+OPAL{0}>                              AMF1
+OPAL{0}> Key: (39.223930 - 39.275870) number of overlapping elements 2
+OPAL{0}>                              AMF1
+OPAL{0}>                              AMF1_R1
+OPAL{0}> Key: (39.275870 - 39.277774) number of overlapping elements 1
+OPAL{0}>                              AMF1
+OPAL{0}> Key: (39.277774 - 39.329715) number of overlapping elements 2
+OPAL{0}>                              AMF1
+OPAL{0}>                              AMF1_R2
+OPAL{0}> Key: (39.329715 - 39.331446) number of overlapping elements 1
+OPAL{0}>                              AMF1
+OPAL{0}> Key: (39.331446 - 39.383386) number of overlapping elements 2
+OPAL{0}>                              AMF1
+OPAL{0}>                              AMF1_R3
+OPAL{0}> Key: (39.383386 - 39.385118) number of overlapping elements 1
+OPAL{0}>                              AMF1
+OPAL{0}> Key: (39.385118 - 39.437231) number of overlapping elements 2
+OPAL{0}>                              AMF1
+OPAL{0}>                              AMF1_R4
+OPAL{0}> Key: (39.437231 - 39.438962) number of overlapping elements 1
+OPAL{0}>                              AMF1
+OPAL{0}> Key: (39.438962 - 39.490902) number of overlapping elements 2
+OPAL{0}>                              AMF1
+OPAL{0}>                              AMF1_R5
+OPAL{0}> Key: (39.490902 - 39.492634) number of overlapping elements 1
+OPAL{0}>                              AMF1
+OPAL{0}> Key: (39.492634 - 39.544574) number of overlapping elements 2
+OPAL{0}>                              AMF1
+OPAL{0}>                              AMF1_R6
+OPAL{0}> Key: (39.544574 - 39.546478) number of overlapping elements 1
+OPAL{0}>                              AMF1
+OPAL{0}> Key: (39.546478 - 39.598419) number of overlapping elements 2
+OPAL{0}>                              AMF1
+OPAL{0}>                              AMF1_R7
+OPAL{0}> Key: (39.598419 - 39.600150) number of overlapping elements 1
+OPAL{0}>                              AMF1
+OPAL{0}> Key: (39.600150 - 39.652090) number of overlapping elements 2
+OPAL{0}>                              AMF1
+OPAL{0}>                              AMF1_R8
+OPAL{0}> Key: (39.652090 - 39.653822) number of overlapping elements 1
+OPAL{0}>                              AMF1
+OPAL{0}> Key: (39.653822 - 39.705935) number of overlapping elements 2
+OPAL{0}>                              AMF1
+OPAL{0}>                              AMF1_R9
+OPAL{0}> Key: (39.705935 - 39.707666) number of overlapping elements 1
+OPAL{0}>                              AMF1
+OPAL{0}> Key: (39.707666 - 39.759606) number of overlapping elements 2
+OPAL{0}>                              AMF1
+OPAL{0}>                              AMF1_R10
+OPAL{0}> Key: (39.759606 - 39.761338) number of overlapping elements 1
+OPAL{0}>                              AMF1
+OPAL{0}> Key: (39.761338 - 39.813278) number of overlapping elements 2
+OPAL{0}>                              AMF1
+OPAL{0}>                              AMF1_R11
+OPAL{0}> Key: (39.813278 - 39.815182) number of overlapping elements 1
+OPAL{0}>                              AMF1
+OPAL{0}> Key: (39.815182 - 39.867123) number of overlapping elements 2
+OPAL{0}>                              AMF1
+OPAL{0}>                              AMF1_R12
+OPAL{0}> Key: (39.867123 - 39.868854) number of overlapping elements 1
+OPAL{0}>                              AMF1
+OPAL{0}> Key: (39.868854 - 39.920794) number of overlapping elements 2
+OPAL{0}>                              AMF1
+OPAL{0}>                              AMF1_R13
+OPAL{0}> Key: (39.920794 - 39.922525) number of overlapping elements 1
+OPAL{0}>                              AMF1
+OPAL{0}> Key: (39.922525 - 39.974639) number of overlapping elements 2
+OPAL{0}>                              AMF1
+OPAL{0}>                              AMF1_R14
+OPAL{0}> Key: (39.974639 - 39.976370) number of overlapping elements 1
+OPAL{0}>                              AMF1
+OPAL{0}> Key: (39.976370 - 40.028310) number of overlapping elements 2
+OPAL{0}>                              AMF1
+OPAL{0}>                              AMF1_R15
+OPAL{0}> Key: (40.028310 - 40.030042) number of overlapping elements 1
+OPAL{0}>                              AMF1
+OPAL{0}> Key: (40.030042 - 40.081982) number of overlapping elements 2
+OPAL{0}>                              AMF1
+OPAL{0}>                              AMF1_R16
+OPAL{0}> Key: (40.081982 - 40.083886) number of overlapping elements 1
+OPAL{0}>                              AMF1
+OPAL{0}> Key: (40.083886 - 40.135827) number of overlapping elements 2
+OPAL{0}>                              AMF1
+OPAL{0}>                              AMF1_R17
+OPAL{0}> Key: (40.135827 - 40.137558) number of overlapping elements 1
+OPAL{0}>                              AMF1
+OPAL{0}> Key: (40.137558 - 40.189498) number of overlapping elements 2
+OPAL{0}>                              AMF1
+OPAL{0}>                              AMF1_R18
+OPAL{0}> Key: (40.189498 - 40.191229) number of overlapping elements 1
+OPAL{0}>                              AMF1
+OPAL{0}> Key: (40.191229 - 40.243170) number of overlapping elements 2
+OPAL{0}>                              AMF1
+OPAL{0}>                              AMF1_R19
+OPAL{0}> Key: (40.243170 - 40.245074) number of overlapping elements 1
+OPAL{0}>                              AMF1
+OPAL{0}> Key: (40.245074 - 40.297014) number of overlapping elements 2
+OPAL{0}>                              AMF1
+OPAL{0}>                              AMF1_R20
+OPAL{0}> Key: (40.297014 - 40.298746) number of overlapping elements 1
+OPAL{0}>                              AMF1
+OPAL{0}> Key: (40.298746 - 40.350686) number of overlapping elements 2
+OPAL{0}>                              AMF1
+OPAL{0}>                              AMF1_R21
+OPAL{0}> Key: (40.350686 - 40.352417) number of overlapping elements 1
+OPAL{0}>                              AMF1
+OPAL{0}> Key: (40.352417 - 40.404357) number of overlapping elements 2
+OPAL{0}>                              AMF1
+OPAL{0}>                              AMF1_R22
+OPAL{0}> Key: (40.404357 - 40.406262) number of overlapping elements 1
+OPAL{0}>                              AMF1
+OPAL{0}> Key: (40.406262 - 40.458202) number of overlapping elements 2
+OPAL{0}>                              AMF1
+OPAL{0}>                              AMF1_R23
+OPAL{0}> Key: (40.458202 - 40.459933) number of overlapping elements 1
+OPAL{0}>                              AMF1
+OPAL{0}> Key: (40.459933 - 40.511874) number of overlapping elements 2
+OPAL{0}>                              AMF1
+OPAL{0}>                              AMF1_R24
+OPAL{0}> Key: (40.511874 - 40.513605) number of overlapping elements 1
+OPAL{0}>                              AMF1
+OPAL{0}> Key: (40.513605 - 40.565545) number of overlapping elements 2
+OPAL{0}>                              AMF1
+OPAL{0}>                              AMF1_R25
+OPAL{0}> Key: (40.565545 - 40.567450) number of overlapping elements 1
+OPAL{0}>                              AMF1
+OPAL{0}> Key: (40.567450 - 40.619390) number of overlapping elements 2
+OPAL{0}>                              AMF1
+OPAL{0}>                              AMF1_R26
+OPAL{0}> Key: (40.619390 - 40.621121) number of overlapping elements 1
+OPAL{0}>                              AMF1
+OPAL{0}> Key: (40.621121 - 40.673061) number of overlapping elements 2
+OPAL{0}>                              AMF1
+OPAL{0}>                              AMF1_R27
+OPAL{0}> Key: (40.673061 - 40.674793) number of overlapping elements 1
+OPAL{0}>                              AMF1
+OPAL{0}> Key: (40.674793 - 40.726733) number of overlapping elements 2
+OPAL{0}>                              AMF1
+OPAL{0}>                              AMF1_R28
+OPAL{0}> Key: (40.726733 - 40.728637) number of overlapping elements 1
+OPAL{0}>                              AMF1
+OPAL{0}> Key: (40.728637 - 40.729157) number of overlapping elements 2
+OPAL{0}>                              AMF1
+OPAL{0}>                              AMF1_R29
+OPAL{0}> Key: (40.729157 - 40.780578) number of overlapping elements 3
+OPAL{0}>                              AMF1
+OPAL{0}>                              AMF1_R29
+OPAL{0}>                              D84
+OPAL{0}> Key: (40.780578 - 41.032661) number of overlapping elements 2
+OPAL{0}>                              AMF1
+OPAL{0}>                              D84
+OPAL{0}> Key: (41.032661 - 41.119228) number of overlapping elements 1
+OPAL{0}>                              D84
+OPAL{0}> Key: (41.119228 - 41.124249) number of overlapping elements 3
+OPAL{0}>                              D84
+OPAL{0}>                              MMFP3X
+OPAL{0}>                              MMFP4Y
+OPAL{0}> Key: (41.124249 - 41.129269) number of overlapping elements 3
+OPAL{0}>                              MMFP3X
+OPAL{0}>                              MMFP4Y
+OPAL{0}>                              D86
+OPAL{0}> Key: (41.129269 - 41.390875) number of overlapping elements 1
+OPAL{0}>                              D86
+OPAL{0}> Key: (41.390875 - 41.470863) number of overlapping elements 2
+OPAL{0}>                              QMF3
+OPAL{0}>                              QMF3_R0
+OPAL{0}> Key: (41.470863 - 41.550851) number of overlapping elements 2
+OPAL{0}>                              QMF3_R1
+OPAL{0}>                              QMF3
+OPAL{0}> Key: (41.550851 - 41.630839) number of overlapping elements 2
+OPAL{0}>                              QMF3_R2
+OPAL{0}>                              QMF3
+OPAL{0}> Key: (41.630839 - 41.710827) number of overlapping elements 2
+OPAL{0}>                              QMF3_R3
+OPAL{0}>                              QMF3
+OPAL{0}> Key: (41.710827 - 41.880844) number of overlapping elements 1
+OPAL{0}>                              SMF2
+OPAL{0}> Key: (41.880844 - 42.050862) number of overlapping elements 1
+OPAL{0}>                              D87
+OPAL{0}> Key: (42.050862 - 42.130850) number of overlapping elements 2
+OPAL{0}>                              QMF4
+OPAL{0}>                              QMF4_R0
+OPAL{0}> Key: (42.130850 - 42.210838) number of overlapping elements 2
+OPAL{0}>                              QMF4
+OPAL{0}>                              QMF4_R1
+OPAL{0}> Key: (42.210838 - 42.290999) number of overlapping elements 2
+OPAL{0}>                              QMF4
+OPAL{0}>                              QMF4_R2
+OPAL{0}> Key: (42.290999 - 42.370987) number of overlapping elements 2
+OPAL{0}>                              QMF4
+OPAL{0}>                              QMF4_R3
+OPAL{0}> Key: (42.370987 - 42.490276) number of overlapping elements 1
+OPAL{0}>                              D88
+OPAL{0}> Key: (42.490276 - 42.795857) number of overlapping elements 2
+OPAL{0}>                              D88
+OPAL{0}>                              AMF2
+OPAL{0}> Key: (42.795857 - 42.796030) number of overlapping elements 1
+OPAL{0}>                              AMF2
+OPAL{0}> Key: (42.796030 - 42.847971) number of overlapping elements 2
+OPAL{0}>                              AMF2
+OPAL{0}>                              AMF2_R0
+OPAL{0}> Key: (42.847971 - 42.849529) number of overlapping elements 1
+OPAL{0}>                              AMF2
+OPAL{0}> Key: (42.849529 - 42.901469) number of overlapping elements 2
+OPAL{0}>                              AMF2
+OPAL{0}>                              AMF2_R1
+OPAL{0}> Key: (42.901469 - 42.903027) number of overlapping elements 1
+OPAL{0}>                              AMF2
+OPAL{0}> Key: (42.903027 - 42.954968) number of overlapping elements 2
+OPAL{0}>                              AMF2
+OPAL{0}>                              AMF2_R2
+OPAL{0}> Key: (42.954968 - 42.956353) number of overlapping elements 1
+OPAL{0}>                              AMF2
+OPAL{0}> Key: (42.956353 - 43.008293) number of overlapping elements 2
+OPAL{0}>                              AMF2
+OPAL{0}>                              AMF2_R3
+OPAL{0}> Key: (43.008293 - 43.009851) number of overlapping elements 1
+OPAL{0}>                              AMF2
+OPAL{0}> Key: (43.009851 - 43.061791) number of overlapping elements 2
+OPAL{0}>                              AMF2
+OPAL{0}>                              AMF2_R4
+OPAL{0}> Key: (43.061791 - 43.063349) number of overlapping elements 1
+OPAL{0}>                              AMF2
+OPAL{0}> Key: (43.063349 - 43.115290) number of overlapping elements 2
+OPAL{0}>                              AMF2
+OPAL{0}>                              AMF2_R5
+OPAL{0}> Key: (43.115290 - 43.116848) number of overlapping elements 1
+OPAL{0}>                              AMF2
+OPAL{0}> Key: (43.116848 - 43.168788) number of overlapping elements 2
+OPAL{0}>                              AMF2
+OPAL{0}>                              AMF2_R6
+OPAL{0}> Key: (43.168788 - 43.170346) number of overlapping elements 1
+OPAL{0}>                              AMF2
+OPAL{0}> Key: (43.170346 - 43.222286) number of overlapping elements 2
+OPAL{0}>                              AMF2
+OPAL{0}>                              AMF2_R7
+OPAL{0}> Key: (43.222286 - 43.223845) number of overlapping elements 1
+OPAL{0}>                              AMF2
+OPAL{0}> Key: (43.223845 - 43.275785) number of overlapping elements 2
+OPAL{0}>                              AMF2
+OPAL{0}>                              AMF2_R8
+OPAL{0}> Key: (43.275785 - 43.277343) number of overlapping elements 1
+OPAL{0}>                              AMF2
+OPAL{0}> Key: (43.277343 - 43.329283) number of overlapping elements 2
+OPAL{0}>                              AMF2
+OPAL{0}>                              AMF2_R9
+OPAL{0}> Key: (43.329283 - 43.330841) number of overlapping elements 1
+OPAL{0}>                              AMF2
+OPAL{0}> Key: (43.330841 - 43.382782) number of overlapping elements 2
+OPAL{0}>                              AMF2
+OPAL{0}>                              AMF2_R10
+OPAL{0}> Key: (43.382782 - 43.384340) number of overlapping elements 1
+OPAL{0}>                              AMF2
+OPAL{0}> Key: (43.384340 - 43.436280) number of overlapping elements 2
+OPAL{0}>                              AMF2
+OPAL{0}>                              AMF2_R11
+OPAL{0}> Key: (43.436280 - 43.437838) number of overlapping elements 1
+OPAL{0}>                              AMF2
+OPAL{0}> Key: (43.437838 - 43.489778) number of overlapping elements 2
+OPAL{0}>                              AMF2
+OPAL{0}>                              AMF2_R12
+OPAL{0}> Key: (43.489778 - 43.491337) number of overlapping elements 1
+OPAL{0}>                              AMF2
+OPAL{0}> Key: (43.491337 - 43.543277) number of overlapping elements 2
+OPAL{0}>                              AMF2
+OPAL{0}>                              AMF2_R13
+OPAL{0}> Key: (43.543277 - 43.544835) number of overlapping elements 1
+OPAL{0}>                              AMF2
+OPAL{0}> Key: (43.544835 - 43.596948) number of overlapping elements 2
+OPAL{0}>                              AMF2
+OPAL{0}>                              AMF2_R14
+OPAL{0}> Key: (43.596948 - 43.598507) number of overlapping elements 1
+OPAL{0}>                              AMF2
+OPAL{0}> Key: (43.598507 - 43.650447) number of overlapping elements 2
+OPAL{0}>                              AMF2
+OPAL{0}>                              AMF2_R15
+OPAL{0}> Key: (43.650447 - 43.652005) number of overlapping elements 1
+OPAL{0}>                              AMF2
+OPAL{0}> Key: (43.652005 - 43.703945) number of overlapping elements 2
+OPAL{0}>                              AMF2
+OPAL{0}>                              AMF2_R16
+OPAL{0}> Key: (43.703945 - 43.705677) number of overlapping elements 1
+OPAL{0}>                              AMF2
+OPAL{0}> Key: (43.705677 - 43.757617) number of overlapping elements 2
+OPAL{0}>                              AMF2
+OPAL{0}>                              AMF2_R17
+OPAL{0}> Key: (43.757617 - 43.759175) number of overlapping elements 1
+OPAL{0}>                              AMF2
+OPAL{0}> Key: (43.759175 - 43.811115) number of overlapping elements 2
+OPAL{0}>                              AMF2
+OPAL{0}>                              AMF2_R18
+OPAL{0}> Key: (43.811115 - 43.812673) number of overlapping elements 1
+OPAL{0}>                              AMF2
+OPAL{0}> Key: (43.812673 - 43.864787) number of overlapping elements 2
+OPAL{0}>                              AMF2
+OPAL{0}>                              AMF2_R19
+OPAL{0}> Key: (43.864787 - 43.866345) number of overlapping elements 1
+OPAL{0}>                              AMF2
+OPAL{0}> Key: (43.866345 - 43.918285) number of overlapping elements 2
+OPAL{0}>                              AMF2
+OPAL{0}>                              AMF2_R20
+OPAL{0}> Key: (43.918285 - 43.919843) number of overlapping elements 1
+OPAL{0}>                              AMF2
+OPAL{0}> Key: (43.919843 - 43.971957) number of overlapping elements 2
+OPAL{0}>                              AMF2
+OPAL{0}>                              AMF2_R21
+OPAL{0}> Key: (43.971957 - 43.973515) number of overlapping elements 1
+OPAL{0}>                              AMF2
+OPAL{0}> Key: (43.973515 - 44.025455) number of overlapping elements 2
+OPAL{0}>                              AMF2
+OPAL{0}>                              AMF2_R22
+OPAL{0}> Key: (44.025455 - 44.027186) number of overlapping elements 1
+OPAL{0}>                              AMF2
+OPAL{0}> Key: (44.027186 - 44.079127) number of overlapping elements 2
+OPAL{0}>                              AMF2
+OPAL{0}>                              AMF2_R23
+OPAL{0}> Key: (44.079127 - 44.080685) number of overlapping elements 1
+OPAL{0}>                              AMF2
+OPAL{0}> Key: (44.080685 - 44.132625) number of overlapping elements 2
+OPAL{0}>                              AMF2
+OPAL{0}>                              AMF2_R24
+OPAL{0}> Key: (44.132625 - 44.134356) number of overlapping elements 1
+OPAL{0}>                              AMF2
+OPAL{0}> Key: (44.134356 - 44.186297) number of overlapping elements 2
+OPAL{0}>                              AMF2
+OPAL{0}>                              AMF2_R25
+OPAL{0}> Key: (44.186297 - 44.188028) number of overlapping elements 1
+OPAL{0}>                              AMF2
+OPAL{0}> Key: (44.188028 - 44.239968) number of overlapping elements 2
+OPAL{0}>                              AMF2
+OPAL{0}>                              AMF2_R26
+OPAL{0}> Key: (44.239968 - 44.241526) number of overlapping elements 1
+OPAL{0}>                              AMF2
+OPAL{0}> Key: (44.241526 - 44.293466) number of overlapping elements 2
+OPAL{0}>                              AMF2
+OPAL{0}>                              AMF2_R27
+OPAL{0}> Key: (44.293466 - 44.295198) number of overlapping elements 1
+OPAL{0}>                              AMF2
+OPAL{0}> Key: (44.295198 - 44.347138) number of overlapping elements 2
+OPAL{0}>                              AMF2
+OPAL{0}>                              AMF2_R28
+OPAL{0}> Key: (44.347138 - 44.348869) number of overlapping elements 1
+OPAL{0}>                              AMF2
+OPAL{0}> Key: (44.348869 - 44.354583) number of overlapping elements 2
+OPAL{0}>                              AMF2
+OPAL{0}>                              AMF2_R29
+OPAL{0}> Key: (44.354583 - 44.400810) number of overlapping elements 3
+OPAL{0}>                              AMF2
+OPAL{0}>                              AMF2_R29
+OPAL{0}>                              D89
+OPAL{0}> Key: (44.400810 - 44.657394) number of overlapping elements 2
+OPAL{0}>                              AMF2
+OPAL{0}>                              D89
+OPAL{0}> Key: (44.657394 - 44.744654) number of overlapping elements 1
+OPAL{0}>                              D89
+OPAL{0}> Key: (44.744654 - 44.749501) number of overlapping elements 3
+OPAL{0}>                              D89
+OPAL{0}>                              MMFP5X
+OPAL{0}>                              MMFP6Y
+OPAL{0}> Key: (44.749501 - 44.754522) number of overlapping elements 3
+OPAL{0}>                              MMFP5X
+OPAL{0}>                              MMFP6Y
+OPAL{0}>                              SMF3
+OPAL{0}> Key: (44.754522 - 45.094211) number of overlapping elements 1
+OPAL{0}>                              SMF3
+OPAL{0}> Key: (45.094211 - 45.221118) number of overlapping elements 1
+OPAL{0}>                              D92
+OPAL{0}> Key: (45.221118 - 45.301106) number of overlapping elements 2
+OPAL{0}>                              QMF5
+OPAL{0}>                              QMF5_R0
+OPAL{0}> Key: (45.301106 - 45.381094) number of overlapping elements 2
+OPAL{0}>                              QMF5
+OPAL{0}>                              QMF5_R1
+OPAL{0}> Key: (45.381094 - 45.430091) number of overlapping elements 2
+OPAL{0}>                              QMF5
+OPAL{0}>                              QMF5_R2
+OPAL{0}> 
+Ippl{0}> Creating new file for data: data/BeamLine-1_ElementPositions.sdds
+OPAL{0}> ParallelTTracker.cpp: 256	
+OPAL{0}> 
+OPAL{0}> * ************** B U N C H ********************************************************* 
+OPAL{0}> * NP              = 3520
+OPAL{0}> * Qtot            =        0.570 [fC]         Qi    =        0.000 [fC]
+OPAL{0}> * Ekin            =     102.716 [MeV]         dEkin =     809.283 [keV]
+OPAL{0}> * rmax            = (      3.79700 ,      3.24300 ,    216.47700 ) [mm]
+OPAL{0}> * rmin            = (     -3.72900 ,     -3.09100 ,   -224.36700 ) [mm]
+OPAL{0}> * rms beam size   = (      1.74875 ,      1.26568 ,    106.36239 ) [mm]
+OPAL{0}> * rms momenta     = (  2.43766e-03 ,  3.01097e-03 ,  1.99134e-03 ) [beta gamma]
+OPAL{0}> * mean position   = (     -0.00256 ,      0.00369 ,      0.00021 ) [um]
+OPAL{0}> * mean momenta    = ( -3.18466e-07 , -8.21023e-08 ,  4.80535e-01 ) [beta gamma]
+OPAL{0}> * rms emittance   = (  5.63944e-06 ,  7.79270e-06 ,  2.46971e-06 ) (not normalized)
+OPAL{0}> * rms correlation = ( -7.71906e-01 , -1.85437e-01 ,  9.99984e-01 )
+OPAL{0}> * hr              = (      0.11946 ,      0.10054 ,      6.99752 ) [mm]
+OPAL{0}> * dh              =   1.00000e-10 [%]
+OPAL{0}> * t               =      280.530 [ns]         dT    =        1.333 [ps]
+OPAL{0}> * spos            =        36.427 [m]
+OPAL{0}> * ********************************************************************************** 
+OPAL{0}> 
+OPAL{0}> Track start at: 23:51:45, t= 280.530 [ns]; zstart at: 36.427 [m]
+OPAL{0}> Executing ParallelTTracker, initial dt= 1.333 [ps];
+OPAL{0}> max integration steps 6993509, next step= 0
+ParallelTTracker {0}[2]> MINBINEMITTED 10
+ParallelTTracker {0}[2]> MINSTEPFORREBIN 200
+ParallelTTracker {0}[2]> REPARTFREQ 1000
+ParallelTTracker {0}[2]> 23:51:45 Step     99 at 36.444 [m], t= 280.663 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:46 Step    199 at 36.462 [m], t= 280.797 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:46 Step    299 at 36.479 [m], t= 280.930 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:46 Step    399 at 36.496 [m], t= 281.063 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:46 Step    499 at 36.514 [m], t= 281.197 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:46 Step    599 at 36.531 [m], t= 281.330 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:46 Step    699 at 36.548 [m], t= 281.463 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:46 Step    799 at 36.565 [m], t= 281.597 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:46 Step    899 at 36.583 [m], t= 281.730 [ns], E=102.716 [MeV]
+ParallelTTracker {0}> 23:51:46 Step    999 at 36.600 [m], t= 281.863 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:46 Step   1099 at 36.617 [m], t= 281.997 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:46 Step   1199 at 36.635 [m], t= 282.130 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:47 Step   1299 at 36.652 [m], t= 282.263 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:47 Step   1399 at 36.669 [m], t= 282.397 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:47 Step   1499 at 36.687 [m], t= 282.530 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:47 Step   1599 at 36.704 [m], t= 282.663 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:47 Step   1699 at 36.721 [m], t= 282.797 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:47 Step   1799 at 36.739 [m], t= 282.930 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:47 Step   1899 at 36.756 [m], t= 283.063 [ns], E=102.716 [MeV]
+ParallelTTracker {0}> 23:51:47 Step   1999 at 36.773 [m], t= 283.197 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:47 Step   2099 at 36.791 [m], t= 283.330 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:47 Step   2199 at 36.808 [m], t= 283.463 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:48 Step   2299 at 36.825 [m], t= 283.597 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:48 Step   2399 at 36.842 [m], t= 283.730 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:48 Step   2499 at 36.860 [m], t= 283.863 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:48 Step   2599 at 36.877 [m], t= 283.997 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:48 Step   2699 at 36.894 [m], t= 284.130 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:48 Step   2799 at 36.912 [m], t= 284.263 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:48 Step   2899 at 36.929 [m], t= 284.397 [ns], E=102.716 [MeV]
+ParallelTTracker {0}> 23:51:48 Step   2999 at 36.946 [m], t= 284.530 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:48 Step   3099 at 36.964 [m], t= 284.663 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:48 Step   3199 at 36.981 [m], t= 284.797 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:48 Step   3299 at 36.998 [m], t= 284.930 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:48 Step   3399 at 37.016 [m], t= 285.063 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:48 Step   3499 at 37.033 [m], t= 285.197 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:49 Step   3599 at 37.050 [m], t= 285.330 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:49 Step   3699 at 37.068 [m], t= 285.463 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:49 Step   3799 at 37.085 [m], t= 285.597 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:49 Step   3899 at 37.102 [m], t= 285.730 [ns], E=102.716 [MeV]
+ParallelTTracker {0}> 23:51:49 Step   3999 at 37.119 [m], t= 285.863 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:49 Step   4099 at 37.137 [m], t= 285.997 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:49 Step   4199 at 37.154 [m], t= 286.130 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:49 Step   4299 at 37.171 [m], t= 286.263 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:49 Step   4399 at 37.189 [m], t= 286.397 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:49 Step   4499 at 37.206 [m], t= 286.530 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:49 Step   4599 at 37.223 [m], t= 286.663 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:49 Step   4699 at 37.241 [m], t= 286.797 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:50 Step   4799 at 37.258 [m], t= 286.930 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:50 Step   4899 at 37.275 [m], t= 287.063 [ns], E=102.716 [MeV]
+ParallelTTracker {0}> 23:51:50 Step   4999 at 37.293 [m], t= 287.197 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:50 Step   5099 at 37.310 [m], t= 287.330 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:50 Step   5199 at 37.327 [m], t= 287.463 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:50 Step   5299 at 37.345 [m], t= 287.597 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:50 Step   5399 at 37.362 [m], t= 287.730 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:50 Step   5499 at 37.379 [m], t= 287.863 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:50 Step   5599 at 37.397 [m], t= 287.997 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:50 Step   5699 at 37.414 [m], t= 288.130 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:50 Step   5799 at 37.431 [m], t= 288.263 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:50 Step   5899 at 37.448 [m], t= 288.397 [ns], E=102.716 [MeV]
+ParallelTTracker {0}> 23:51:51 Step   5999 at 37.466 [m], t= 288.530 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:51 Step   6099 at 37.483 [m], t= 288.663 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:51 Step   6199 at 37.500 [m], t= 288.797 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:51 Step   6299 at 37.518 [m], t= 288.930 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:51 Step   6399 at 37.535 [m], t= 289.063 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:51 Step   6499 at 37.552 [m], t= 289.197 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:51 Step   6599 at 37.570 [m], t= 289.330 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:51 Step   6699 at 37.587 [m], t= 289.463 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:51 Step   6799 at 37.604 [m], t= 289.597 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:52 Step   6899 at 37.622 [m], t= 289.730 [ns], E=102.716 [MeV]
+ParallelTTracker {0}> 23:51:52 Step   6999 at 37.639 [m], t= 289.863 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:52 Step   7099 at 37.656 [m], t= 289.997 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:52 Step   7199 at 37.674 [m], t= 290.130 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:52 Step   7299 at 37.691 [m], t= 290.263 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:52 Step   7399 at 37.708 [m], t= 290.397 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:52 Step   7499 at 37.725 [m], t= 290.530 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:52 Step   7599 at 37.743 [m], t= 290.663 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:53 Step   7699 at 37.760 [m], t= 290.797 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:53 Step   7799 at 37.777 [m], t= 290.930 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:53 Step   7899 at 37.795 [m], t= 291.063 [ns], E=102.716 [MeV]
+ParallelTTracker {0}> 23:51:53 Step   7999 at 37.812 [m], t= 291.197 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:53 Step   8099 at 37.829 [m], t= 291.330 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:53 Step   8199 at 37.847 [m], t= 291.463 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:53 Step   8299 at 37.864 [m], t= 291.597 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:54 Step   8399 at 37.881 [m], t= 291.730 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:54 Step   8499 at 37.899 [m], t= 291.863 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:54 Step   8599 at 37.916 [m], t= 291.997 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:54 Step   8699 at 37.933 [m], t= 292.130 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:54 Step   8799 at 37.951 [m], t= 292.263 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:54 Step   8899 at 37.968 [m], t= 292.397 [ns], E=102.716 [MeV]
+ParallelTTracker {0}> 23:51:55 Step   8999 at 37.985 [m], t= 292.530 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:55 Step   9099 at 38.002 [m], t= 292.663 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:55 Step   9199 at 38.020 [m], t= 292.797 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:55 Step   9299 at 38.037 [m], t= 292.930 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:55 Step   9399 at 38.054 [m], t= 293.063 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:56 Step   9499 at 38.072 [m], t= 293.197 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:56 Step   9599 at 38.089 [m], t= 293.330 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:56 Step   9699 at 38.106 [m], t= 293.463 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:56 Step   9799 at 38.124 [m], t= 293.597 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:56 Step   9899 at 38.141 [m], t= 293.730 [ns], E=102.716 [MeV]
+ParallelTTracker {0}> 23:51:56 Step   9999 at 38.158 [m], t= 293.863 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:56 Step  10099 at 38.176 [m], t= 293.997 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:57 Step  10199 at 38.193 [m], t= 294.130 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:57 Step  10299 at 38.210 [m], t= 294.263 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:57 Step  10399 at 38.228 [m], t= 294.397 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:57 Step  10499 at 38.245 [m], t= 294.530 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:57 Step  10599 at 38.262 [m], t= 294.663 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:57 Step  10699 at 38.279 [m], t= 294.797 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:58 Step  10799 at 38.297 [m], t= 294.930 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:58 Step  10899 at 38.314 [m], t= 295.063 [ns], E=102.716 [MeV]
+ParallelTTracker {0}> 23:51:58 Step  10999 at 38.331 [m], t= 295.197 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:58 Step  11099 at 38.349 [m], t= 295.330 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:58 Step  11199 at 38.366 [m], t= 295.463 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:58 Step  11299 at 38.383 [m], t= 295.597 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:58 Step  11399 at 38.401 [m], t= 295.730 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:59 Step  11499 at 38.418 [m], t= 295.863 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:59 Step  11599 at 38.435 [m], t= 295.997 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:59 Step  11699 at 38.453 [m], t= 296.130 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:59 Step  11799 at 38.470 [m], t= 296.263 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:51:59 Step  11899 at 38.487 [m], t= 296.397 [ns], E=102.716 [MeV]
+ParallelTTracker {0}> 23:52:00 Step  11999 at 38.505 [m], t= 296.530 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:00 Step  12099 at 38.522 [m], t= 296.663 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:00 Step  12199 at 38.539 [m], t= 296.797 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:00 Step  12299 at 38.556 [m], t= 296.930 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:00 Step  12399 at 38.574 [m], t= 297.063 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:01 Step  12499 at 38.591 [m], t= 297.197 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:01 Step  12599 at 38.608 [m], t= 297.330 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:01 Step  12699 at 38.626 [m], t= 297.463 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:01 Step  12799 at 38.643 [m], t= 297.597 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:01 Step  12899 at 38.660 [m], t= 297.730 [ns], E=102.716 [MeV]
+ParallelTTracker {0}> 23:52:01 Step  12999 at 38.678 [m], t= 297.863 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:01 Step  13099 at 38.695 [m], t= 297.997 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:02 Step  13199 at 38.712 [m], t= 298.130 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:02 Step  13299 at 38.730 [m], t= 298.263 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:02 Step  13399 at 38.747 [m], t= 298.397 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:02 Step  13499 at 38.764 [m], t= 298.530 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:02 Step  13599 at 38.782 [m], t= 298.663 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:02 Step  13699 at 38.799 [m], t= 298.797 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:03 Step  13799 at 38.816 [m], t= 298.930 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:03 Step  13899 at 38.834 [m], t= 299.063 [ns], E=102.716 [MeV]
+ParallelTTracker {0}> 23:52:03 Step  13999 at 38.851 [m], t= 299.197 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:03 Step  14099 at 38.868 [m], t= 299.330 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:03 Step  14199 at 38.885 [m], t= 299.463 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:03 Step  14299 at 38.903 [m], t= 299.597 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:04 Step  14399 at 38.920 [m], t= 299.730 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:04 Step  14499 at 38.937 [m], t= 299.863 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:04 Step  14599 at 38.955 [m], t= 299.997 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:04 Step  14699 at 38.972 [m], t= 300.130 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:04 Step  14799 at 38.989 [m], t= 300.263 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:05 Step  14899 at 39.007 [m], t= 300.397 [ns], E=102.716 [MeV]
+ParallelTTracker {0}> 23:52:05 Step  14999 at 39.024 [m], t= 300.530 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:05 Step  15099 at 39.041 [m], t= 300.663 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:05 Step  15199 at 39.059 [m], t= 300.797 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:05 Step  15299 at 39.076 [m], t= 300.930 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:05 Step  15399 at 39.093 [m], t= 301.063 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:06 Step  15499 at 39.111 [m], t= 301.197 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:06 Step  15599 at 39.128 [m], t= 301.330 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:06 Step  15699 at 39.145 [m], t= 301.463 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:06 Step  15799 at 39.162 [m], t= 301.597 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:06 Step  15899 at 39.180 [m], t= 301.730 [ns], E=102.716 [MeV]
+ParallelTTracker {0}> 23:52:07 Step  15999 at 39.197 [m], t= 301.863 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:07 Step  16099 at 39.214 [m], t= 301.997 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:07 Step  16199 at 39.232 [m], t= 302.130 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:07 Step  16299 at 39.249 [m], t= 302.263 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:08 Step  16399 at 39.266 [m], t= 302.397 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:08 Step  16499 at 39.284 [m], t= 302.530 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:08 Step  16599 at 39.301 [m], t= 302.663 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:08 Step  16699 at 39.318 [m], t= 302.797 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:08 Step  16799 at 39.336 [m], t= 302.930 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:09 Step  16899 at 39.353 [m], t= 303.063 [ns], E=102.716 [MeV]
+ParallelTTracker {0}> 23:52:09 Step  16999 at 39.370 [m], t= 303.197 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:09 Step  17099 at 39.388 [m], t= 303.330 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:09 Step  17199 at 39.405 [m], t= 303.463 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:09 Step  17299 at 39.422 [m], t= 303.597 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:10 Step  17399 at 39.439 [m], t= 303.730 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:10 Step  17499 at 39.457 [m], t= 303.863 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:10 Step  17599 at 39.474 [m], t= 303.997 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:10 Step  17699 at 39.491 [m], t= 304.130 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:11 Step  17799 at 39.509 [m], t= 304.263 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:11 Step  17899 at 39.526 [m], t= 304.397 [ns], E=102.716 [MeV]
+ParallelTTracker {0}> 23:52:11 Step  17999 at 39.543 [m], t= 304.530 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:11 Step  18099 at 39.561 [m], t= 304.663 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:11 Step  18199 at 39.578 [m], t= 304.797 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:12 Step  18299 at 39.595 [m], t= 304.930 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:12 Step  18399 at 39.613 [m], t= 305.063 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:12 Step  18499 at 39.630 [m], t= 305.197 [ns], E=102.716 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3519 particles
+ParallelTTracker {0}[2]> 23:52:12 Step  18599 at 39.647 [m], t= 305.330 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:13 Step  18699 at 39.665 [m], t= 305.463 [ns], E=102.716 [MeV]
+ParallelTTracker {0}[2]> 23:52:13 Step  18799 at 39.682 [m], t= 305.597 [ns], E=102.716 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3518 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3517 particles
+ParallelTTracker {0}[2]> 23:52:13 Step  18899 at 39.699 [m], t= 305.730 [ns], E=102.716 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3516 particles
+ParallelTTracker {0}> 23:52:13 Step  18999 at 39.716 [m], t= 305.863 [ns], E=102.715 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3515 particles
+ParallelTTracker {0}[2]> 23:52:13 Step  19099 at 39.734 [m], t= 305.997 [ns], E=102.715 [MeV]
+ParallelTTracker {0}[2]> 23:52:14 Step  19199 at 39.751 [m], t= 306.130 [ns], E=102.715 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3514 particles
+ParallelTTracker {0}[2]> 23:52:14 Step  19299 at 39.768 [m], t= 306.263 [ns], E=102.715 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3513 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3512 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3511 particles
+ParallelTTracker {0}[2]> 23:52:14 Step  19399 at 39.786 [m], t= 306.397 [ns], E=102.714 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3510 particles
+ParallelTTracker {0}[2]> 23:52:14 Step  19499 at 39.803 [m], t= 306.530 [ns], E=102.713 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3509 particles
+ParallelTTracker {0}[2]> 23:52:14 Step  19599 at 39.820 [m], t= 306.663 [ns], E=102.713 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3508 particles
+ParallelTTracker {0}[2]> 23:52:15 Step  19699 at 39.838 [m], t= 306.797 [ns], E=102.713 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3507 particles
+ParallelTTracker {0}[2]> 23:52:15 Step  19799 at 39.855 [m], t= 306.930 [ns], E=102.712 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3506 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3505 particles
+ParallelTTracker {0}[2]> 23:52:15 Step  19899 at 39.872 [m], t= 307.063 [ns], E=102.712 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3504 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3503 particles
+ParallelTTracker {0}> 23:52:15 Step  19999 at 39.890 [m], t= 307.197 [ns], E=102.711 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3502 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3501 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3500 particles
+ParallelTTracker {0}[2]> 23:52:15 Step  20099 at 39.907 [m], t= 307.330 [ns], E=102.710 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3499 particles
+ParallelTTracker {0}[2]> 23:52:16 Step  20199 at 39.924 [m], t= 307.463 [ns], E=102.710 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3498 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3497 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3496 particles
+ParallelTTracker {0}[2]> 23:52:16 Step  20299 at 39.942 [m], t= 307.597 [ns], E=102.709 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3495 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3494 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3493 particles
+ParallelTTracker {0}[2]> 23:52:16 Step  20399 at 39.959 [m], t= 307.730 [ns], E=102.709 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3492 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3491 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3490 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3489 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3488 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3487 particles
+ParallelTTracker {0}[2]> 23:52:16 Step  20499 at 39.976 [m], t= 307.863 [ns], E=102.708 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3486 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3485 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3484 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3483 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3482 particles
+ParallelTTracker {0}[2]> 23:52:17 Step  20599 at 39.994 [m], t= 307.997 [ns], E=102.706 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3481 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3480 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3479 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3478 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3477 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3476 particles
+ParallelTTracker {0}[2]> 23:52:17 Step  20699 at 40.011 [m], t= 308.130 [ns], E=102.706 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3475 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3474 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3473 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3472 particles
+ParallelTTracker {0}[2]> 23:52:17 Step  20799 at 40.028 [m], t= 308.263 [ns], E=102.705 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3471 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3470 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3469 particles
+ParallelTTracker {0}[2]> 23:52:17 Step  20899 at 40.045 [m], t= 308.397 [ns], E=102.704 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3468 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3467 particles
+ParallelTTracker {0}> 23:52:17 Step  20999 at 40.063 [m], t= 308.530 [ns], E=102.704 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3466 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3465 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3464 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3463 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3462 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3461 particles
+ParallelTTracker {0}[2]> 23:52:18 Step  21099 at 40.080 [m], t= 308.663 [ns], E=102.702 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3460 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3459 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3458 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3457 particles
+ParallelTTracker {0}[2]> 23:52:18 Step  21199 at 40.097 [m], t= 308.797 [ns], E=102.702 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3456 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3455 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3454 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3453 particles
+ParallelTTracker {0}[2]> 23:52:18 Step  21299 at 40.115 [m], t= 308.930 [ns], E=102.701 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3452 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3451 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3450 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3449 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3448 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3447 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3446 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3445 particles
+ParallelTTracker {0}[2]> 23:52:18 Step  21399 at 40.132 [m], t= 309.063 [ns], E=102.700 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3444 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3443 particles
+ParallelTTracker {0}> * Deleted 2 particles, remaining 3441 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3440 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3439 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3438 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3437 particles
+ParallelTTracker {0}[2]> 23:52:19 Step  21499 at 40.149 [m], t= 309.197 [ns], E=102.699 [MeV]
+ParallelTTracker {0}> * Deleted 2 particles, remaining 3435 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3434 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3433 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3432 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3431 particles
+ParallelTTracker {0}[2]> 23:52:19 Step  21599 at 40.167 [m], t= 309.330 [ns], E=102.698 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3430 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3429 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3428 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3427 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3426 particles
+ParallelTTracker {0}[2]> 23:52:19 Step  21699 at 40.184 [m], t= 309.463 [ns], E=102.697 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3425 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3424 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3423 particles
+ParallelTTracker {0}[2]> 23:52:19 Step  21799 at 40.201 [m], t= 309.597 [ns], E=102.697 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3422 particles
+ParallelTTracker {0}> * Deleted 2 particles, remaining 3420 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3419 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3418 particles
+ParallelTTracker {0}[2]> 23:52:20 Step  21899 at 40.219 [m], t= 309.730 [ns], E=102.696 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3417 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3416 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3415 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3414 particles
+ParallelTTracker {0}> 23:52:20 Step  21999 at 40.236 [m], t= 309.863 [ns], E=102.695 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3413 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3412 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3411 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3410 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3409 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3408 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3407 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3406 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3405 particles
+ParallelTTracker {0}[2]> 23:52:20 Step  22099 at 40.253 [m], t= 309.997 [ns], E=102.694 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3404 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3403 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3402 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3401 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3400 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3399 particles
+ParallelTTracker {0}[2]> 23:52:20 Step  22199 at 40.271 [m], t= 310.130 [ns], E=102.692 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3398 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3397 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3396 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3395 particles
+ParallelTTracker {0}[2]> 23:52:21 Step  22299 at 40.288 [m], t= 310.263 [ns], E=102.693 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3394 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3393 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3392 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3391 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3390 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3389 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3388 particles
+ParallelTTracker {0}[2]> 23:52:21 Step  22399 at 40.305 [m], t= 310.397 [ns], E=102.692 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3387 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3386 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3385 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3384 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3383 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3382 particles
+ParallelTTracker {0}[2]> 23:52:21 Step  22499 at 40.322 [m], t= 310.530 [ns], E=102.690 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3381 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3380 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3379 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3378 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3377 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3376 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3375 particles
+ParallelTTracker {0}[2]> 23:52:21 Step  22599 at 40.340 [m], t= 310.663 [ns], E=102.689 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3374 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3373 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3372 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3371 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3370 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3369 particles
+ParallelTTracker {0}[2]> 23:52:21 Step  22699 at 40.357 [m], t= 310.797 [ns], E=102.688 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3368 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3367 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3366 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3365 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3364 particles
+ParallelTTracker {0}[2]> 23:52:22 Step  22799 at 40.374 [m], t= 310.930 [ns], E=102.687 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3363 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3362 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3361 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3360 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3359 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3358 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3357 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3356 particles
+ParallelTTracker {0}[2]> 23:52:22 Step  22899 at 40.392 [m], t= 311.063 [ns], E=102.686 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3355 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3354 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3353 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3352 particles
+ParallelTTracker {0}> * Deleted 2 particles, remaining 3350 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3349 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3348 particles
+ParallelTTracker {0}> 23:52:22 Step  22999 at 40.409 [m], t= 311.197 [ns], E=102.685 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3347 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3346 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3345 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3344 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3343 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3342 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3341 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3340 particles
+ParallelTTracker {0}> * Deleted 2 particles, remaining 3338 particles
+ParallelTTracker {0}[2]> 23:52:22 Step  23099 at 40.426 [m], t= 311.330 [ns], E=102.684 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3337 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3336 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3335 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3334 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3333 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3332 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3331 particles
+ParallelTTracker {0}[2]> 23:52:23 Step  23199 at 40.444 [m], t= 311.463 [ns], E=102.684 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3330 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3329 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3328 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3327 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3326 particles
+ParallelTTracker {0}[2]> 23:52:23 Step  23299 at 40.461 [m], t= 311.597 [ns], E=102.683 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3325 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3324 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3323 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3322 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3321 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3320 particles
+ParallelTTracker {0}[2]> 23:52:23 Step  23399 at 40.478 [m], t= 311.730 [ns], E=102.682 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3319 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3318 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3317 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3316 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3315 particles
+ParallelTTracker {0}[2]> 23:52:23 Step  23499 at 40.496 [m], t= 311.863 [ns], E=102.683 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3314 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3313 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3312 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3311 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3310 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3309 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3308 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3307 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3306 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3305 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3304 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3303 particles
+ParallelTTracker {0}[2]> 23:52:24 Step  23599 at 40.513 [m], t= 311.997 [ns], E=102.683 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3302 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3301 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3300 particles
+ParallelTTracker {0}[2]> 23:52:24 Step  23699 at 40.530 [m], t= 312.130 [ns], E=102.683 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3299 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3298 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3297 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3296 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3295 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3294 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3293 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3292 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3291 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3290 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3289 particles
+ParallelTTracker {0}[2]> 23:52:24 Step  23799 at 40.548 [m], t= 312.263 [ns], E=102.682 [MeV]
+ParallelTTracker {0}> * Deleted 2 particles, remaining 3287 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3286 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3285 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3284 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3283 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3282 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3281 particles
+ParallelTTracker {0}[2]> 23:52:24 Step  23899 at 40.565 [m], t= 312.397 [ns], E=102.683 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3280 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3279 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3278 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3277 particles
+ParallelTTracker {0}> * Deleted 2 particles, remaining 3275 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3274 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3273 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3272 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3271 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3270 particles
+ParallelTTracker {0}> 23:52:25 Step  23999 at 40.582 [m], t= 312.530 [ns], E=102.682 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3269 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3268 particles
+ParallelTTracker {0}> * Deleted 2 particles, remaining 3266 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3265 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3264 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3263 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3262 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3261 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3260 particles
+ParallelTTracker {0}[2]> 23:52:25 Step  24099 at 40.599 [m], t= 312.663 [ns], E=102.681 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3259 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3258 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3257 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3256 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3255 particles
+ParallelTTracker {0}> * Deleted 2 particles, remaining 3253 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3252 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3251 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3250 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3249 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3248 particles
+ParallelTTracker {0}[2]> 23:52:25 Step  24199 at 40.617 [m], t= 312.797 [ns], E=102.681 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3247 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3246 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3245 particles
+ParallelTTracker {0}[2]> 23:52:25 Step  24299 at 40.634 [m], t= 312.930 [ns], E=102.680 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3244 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3243 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3242 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3241 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3240 particles
+ParallelTTracker {0}[2]> 23:52:26 Step  24399 at 40.651 [m], t= 313.063 [ns], E=102.681 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3239 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3238 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3237 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3236 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3235 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3234 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3233 particles
+ParallelTTracker {0}[2]> 23:52:26 Step  24499 at 40.669 [m], t= 313.197 [ns], E=102.682 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3232 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3231 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3230 particles
+ParallelTTracker {0}[2]> 23:52:26 Step  24599 at 40.686 [m], t= 313.330 [ns], E=102.683 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3229 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3228 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3227 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3226 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3225 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3224 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3223 particles
+ParallelTTracker {0}[2]> 23:52:26 Step  24699 at 40.703 [m], t= 313.463 [ns], E=102.682 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3222 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3221 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3220 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3219 particles
+ParallelTTracker {0}[2]> 23:52:27 Step  24799 at 40.721 [m], t= 313.597 [ns], E=102.682 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3218 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3217 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3216 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3215 particles
+ParallelTTracker {0}[2]> 23:52:27 Step  24899 at 40.738 [m], t= 313.730 [ns], E=102.683 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3214 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3213 particles
+ParallelTTracker {0}> 23:52:27 Step  24999 at 40.755 [m], t= 313.863 [ns], E=102.683 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3212 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3211 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3210 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3209 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3208 particles
+ParallelTTracker {0}[2]> 23:52:27 Step  25099 at 40.773 [m], t= 313.997 [ns], E=102.684 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3207 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3206 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3205 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3204 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3203 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3202 particles
+ParallelTTracker {0}[2]> 23:52:27 Step  25199 at 40.790 [m], t= 314.130 [ns], E=102.686 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3201 particles
+ParallelTTracker {0}[2]> 23:52:28 Step  25299 at 40.807 [m], t= 314.263 [ns], E=102.686 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3200 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3199 particles
+ParallelTTracker {0}[2]> 23:52:28 Step  25399 at 40.825 [m], t= 314.397 [ns], E=102.687 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3198 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3197 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3196 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3195 particles
+ParallelTTracker {0}[2]> 23:52:28 Step  25499 at 40.842 [m], t= 314.530 [ns], E=102.688 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3194 particles
+ParallelTTracker {0}[2]> 23:52:28 Step  25599 at 40.859 [m], t= 314.663 [ns], E=102.688 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3193 particles
+ParallelTTracker {0}[2]> 23:52:28 Step  25699 at 40.876 [m], t= 314.797 [ns], E=102.688 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3192 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3191 particles
+ParallelTTracker {0}[2]> 23:52:29 Step  25799 at 40.894 [m], t= 314.930 [ns], E=102.689 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3190 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3189 particles
+ParallelTTracker {0}[2]> 23:52:29 Step  25899 at 40.911 [m], t= 315.063 [ns], E=102.689 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3188 particles
+ParallelTTracker {0}> 23:52:29 Step  25999 at 40.928 [m], t= 315.197 [ns], E=102.690 [MeV]
+ParallelTTracker {0}[2]> 23:52:29 Step  26099 at 40.946 [m], t= 315.330 [ns], E=102.690 [MeV]
+ParallelTTracker {0}[2]> 23:52:29 Step  26199 at 40.963 [m], t= 315.463 [ns], E=102.690 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3187 particles
+ParallelTTracker {0}[2]> 23:52:30 Step  26299 at 40.980 [m], t= 315.597 [ns], E=102.690 [MeV]
+ParallelTTracker {0}[2]> 23:52:30 Step  26399 at 40.998 [m], t= 315.730 [ns], E=102.690 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3186 particles
+ParallelTTracker {0}[2]> 23:52:30 Step  26499 at 41.015 [m], t= 315.863 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:30 Step  26599 at 41.032 [m], t= 315.997 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:30 Step  26699 at 41.050 [m], t= 316.130 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:30 Step  26799 at 41.067 [m], t= 316.263 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:31 Step  26899 at 41.084 [m], t= 316.397 [ns], E=102.691 [MeV]
+ParallelTTracker {0}> 23:52:31 Step  26999 at 41.102 [m], t= 316.530 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:31 Step  27099 at 41.119 [m], t= 316.663 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:31 Step  27199 at 41.136 [m], t= 316.797 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:31 Step  27299 at 41.154 [m], t= 316.930 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:31 Step  27399 at 41.171 [m], t= 317.063 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:32 Step  27499 at 41.188 [m], t= 317.197 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:32 Step  27599 at 41.205 [m], t= 317.330 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:32 Step  27699 at 41.223 [m], t= 317.463 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:32 Step  27799 at 41.240 [m], t= 317.597 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:32 Step  27899 at 41.257 [m], t= 317.730 [ns], E=102.691 [MeV]
+ParallelTTracker {0}> 23:52:32 Step  27999 at 41.275 [m], t= 317.863 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:32 Step  28099 at 41.292 [m], t= 317.997 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:32 Step  28199 at 41.309 [m], t= 318.130 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:33 Step  28299 at 41.327 [m], t= 318.263 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:33 Step  28399 at 41.344 [m], t= 318.397 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:33 Step  28499 at 41.361 [m], t= 318.530 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:33 Step  28599 at 41.379 [m], t= 318.663 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:33 Step  28699 at 41.396 [m], t= 318.797 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:33 Step  28799 at 41.413 [m], t= 318.930 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:33 Step  28899 at 41.431 [m], t= 319.063 [ns], E=102.691 [MeV]
+ParallelTTracker {0}> 23:52:34 Step  28999 at 41.448 [m], t= 319.197 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:34 Step  29099 at 41.465 [m], t= 319.330 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:34 Step  29199 at 41.482 [m], t= 319.463 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:34 Step  29299 at 41.500 [m], t= 319.597 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:34 Step  29399 at 41.517 [m], t= 319.730 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:34 Step  29499 at 41.534 [m], t= 319.863 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:35 Step  29599 at 41.552 [m], t= 319.997 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:35 Step  29699 at 41.569 [m], t= 320.130 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:35 Step  29799 at 41.586 [m], t= 320.263 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:35 Step  29899 at 41.604 [m], t= 320.397 [ns], E=102.691 [MeV]
+ParallelTTracker {0}> 23:52:35 Step  29999 at 41.621 [m], t= 320.530 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:35 Step  30099 at 41.638 [m], t= 320.663 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:36 Step  30199 at 41.656 [m], t= 320.797 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:36 Step  30299 at 41.673 [m], t= 320.930 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:36 Step  30399 at 41.690 [m], t= 321.063 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:36 Step  30499 at 41.708 [m], t= 321.197 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:36 Step  30599 at 41.725 [m], t= 321.330 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:36 Step  30699 at 41.742 [m], t= 321.463 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:36 Step  30799 at 41.759 [m], t= 321.597 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:37 Step  30899 at 41.777 [m], t= 321.730 [ns], E=102.691 [MeV]
+ParallelTTracker {0}> 23:52:37 Step  30999 at 41.794 [m], t= 321.863 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:37 Step  31099 at 41.811 [m], t= 321.997 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:37 Step  31199 at 41.829 [m], t= 322.130 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:37 Step  31299 at 41.846 [m], t= 322.263 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:37 Step  31399 at 41.863 [m], t= 322.397 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:37 Step  31499 at 41.881 [m], t= 322.530 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:38 Step  31599 at 41.898 [m], t= 322.663 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:38 Step  31699 at 41.915 [m], t= 322.797 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:38 Step  31799 at 41.933 [m], t= 322.930 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:38 Step  31899 at 41.950 [m], t= 323.063 [ns], E=102.691 [MeV]
+ParallelTTracker {0}> 23:52:38 Step  31999 at 41.967 [m], t= 323.197 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:38 Step  32099 at 41.985 [m], t= 323.330 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:38 Step  32199 at 42.002 [m], t= 323.463 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:39 Step  32299 at 42.019 [m], t= 323.597 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:39 Step  32399 at 42.036 [m], t= 323.730 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:39 Step  32499 at 42.054 [m], t= 323.863 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:39 Step  32599 at 42.071 [m], t= 323.997 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:39 Step  32699 at 42.088 [m], t= 324.130 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:39 Step  32799 at 42.106 [m], t= 324.263 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:40 Step  32899 at 42.123 [m], t= 324.397 [ns], E=102.691 [MeV]
+ParallelTTracker {0}> 23:52:40 Step  32999 at 42.140 [m], t= 324.530 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:40 Step  33099 at 42.158 [m], t= 324.663 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:40 Step  33199 at 42.175 [m], t= 324.797 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:40 Step  33299 at 42.192 [m], t= 324.930 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:40 Step  33399 at 42.210 [m], t= 325.063 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:41 Step  33499 at 42.227 [m], t= 325.197 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:41 Step  33599 at 42.244 [m], t= 325.330 [ns], E=102.691 [MeV]
+ParallelTTracker {0}[2]> 23:52:41 Step  33699 at 42.262 [m], t= 325.463 [ns], E=102.691 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3185 particles
+ParallelTTracker {0}[2]> 23:52:41 Step  33799 at 42.279 [m], t= 325.597 [ns], E=102.691 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3184 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3183 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3182 particles
+ParallelTTracker {0}[2]> 23:52:41 Step  33899 at 42.296 [m], t= 325.730 [ns], E=102.692 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3181 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3180 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3179 particles
+ParallelTTracker {0}> 23:52:41 Step  33999 at 42.314 [m], t= 325.863 [ns], E=102.694 [MeV]
+ParallelTTracker {0}[2]> 23:52:41 Step  34099 at 42.331 [m], t= 325.997 [ns], E=102.694 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3178 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3177 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3176 particles
+ParallelTTracker {0}[2]> 23:52:42 Step  34199 at 42.348 [m], t= 326.130 [ns], E=102.695 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3175 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3174 particles
+ParallelTTracker {0}[2]> 23:52:42 Step  34299 at 42.365 [m], t= 326.263 [ns], E=102.696 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3173 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3172 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3171 particles
+ParallelTTracker {0}[2]> 23:52:42 Step  34399 at 42.383 [m], t= 326.397 [ns], E=102.697 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3170 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3169 particles
+ParallelTTracker {0}[2]> 23:52:42 Step  34499 at 42.400 [m], t= 326.530 [ns], E=102.698 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3168 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3167 particles
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3166 particles
+ParallelTTracker {0}[2]> 23:52:42 Step  34599 at 42.417 [m], t= 326.663 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:42 Step  34699 at 42.435 [m], t= 326.797 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:43 Step  34799 at 42.452 [m], t= 326.930 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:43 Step  34899 at 42.469 [m], t= 327.063 [ns], E=102.699 [MeV]
+ParallelTTracker {0}> 23:52:43 Step  34999 at 42.487 [m], t= 327.197 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:43 Step  35099 at 42.504 [m], t= 327.330 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:43 Step  35199 at 42.521 [m], t= 327.463 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:43 Step  35299 at 42.539 [m], t= 327.597 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:44 Step  35399 at 42.556 [m], t= 327.730 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:44 Step  35499 at 42.573 [m], t= 327.863 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:44 Step  35599 at 42.591 [m], t= 327.997 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:44 Step  35699 at 42.608 [m], t= 328.130 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:44 Step  35799 at 42.625 [m], t= 328.263 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:45 Step  35899 at 42.642 [m], t= 328.397 [ns], E=102.699 [MeV]
+ParallelTTracker {0}> 23:52:45 Step  35999 at 42.660 [m], t= 328.530 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:45 Step  36099 at 42.677 [m], t= 328.663 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:45 Step  36199 at 42.694 [m], t= 328.797 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:45 Step  36299 at 42.712 [m], t= 328.930 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:46 Step  36399 at 42.729 [m], t= 329.063 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:46 Step  36499 at 42.746 [m], t= 329.197 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:46 Step  36599 at 42.764 [m], t= 329.330 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:46 Step  36699 at 42.781 [m], t= 329.463 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:46 Step  36799 at 42.798 [m], t= 329.597 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:47 Step  36899 at 42.816 [m], t= 329.730 [ns], E=102.699 [MeV]
+ParallelTTracker {0}> 23:52:47 Step  36999 at 42.833 [m], t= 329.863 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:47 Step  37099 at 42.850 [m], t= 329.997 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:47 Step  37199 at 42.868 [m], t= 330.130 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:47 Step  37299 at 42.885 [m], t= 330.263 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:48 Step  37399 at 42.902 [m], t= 330.397 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:48 Step  37499 at 42.919 [m], t= 330.530 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:48 Step  37599 at 42.937 [m], t= 330.663 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:48 Step  37699 at 42.954 [m], t= 330.797 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:48 Step  37799 at 42.971 [m], t= 330.930 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:49 Step  37899 at 42.989 [m], t= 331.063 [ns], E=102.699 [MeV]
+ParallelTTracker {0}> 23:52:49 Step  37999 at 43.006 [m], t= 331.197 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:49 Step  38099 at 43.023 [m], t= 331.330 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:49 Step  38199 at 43.041 [m], t= 331.463 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:49 Step  38299 at 43.058 [m], t= 331.597 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:50 Step  38399 at 43.075 [m], t= 331.730 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:50 Step  38499 at 43.093 [m], t= 331.863 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:50 Step  38599 at 43.110 [m], t= 331.997 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:50 Step  38699 at 43.127 [m], t= 332.130 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:50 Step  38799 at 43.145 [m], t= 332.263 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:51 Step  38899 at 43.162 [m], t= 332.397 [ns], E=102.699 [MeV]
+ParallelTTracker {0}> 23:52:51 Step  38999 at 43.179 [m], t= 332.530 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:51 Step  39099 at 43.196 [m], t= 332.663 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:51 Step  39199 at 43.214 [m], t= 332.797 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:52 Step  39299 at 43.231 [m], t= 332.930 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:52 Step  39399 at 43.248 [m], t= 333.063 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:52 Step  39499 at 43.266 [m], t= 333.197 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:52 Step  39599 at 43.283 [m], t= 333.330 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:52 Step  39699 at 43.300 [m], t= 333.463 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:53 Step  39799 at 43.318 [m], t= 333.597 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:53 Step  39899 at 43.335 [m], t= 333.730 [ns], E=102.699 [MeV]
+ParallelTTracker {0}> 23:52:53 Step  39999 at 43.352 [m], t= 333.863 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:53 Step  40099 at 43.370 [m], t= 333.997 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:54 Step  40199 at 43.387 [m], t= 334.130 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:54 Step  40299 at 43.404 [m], t= 334.263 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:54 Step  40399 at 43.422 [m], t= 334.397 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:54 Step  40499 at 43.439 [m], t= 334.530 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:55 Step  40599 at 43.456 [m], t= 334.663 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:55 Step  40699 at 43.474 [m], t= 334.797 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:55 Step  40799 at 43.491 [m], t= 334.930 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:55 Step  40899 at 43.508 [m], t= 335.063 [ns], E=102.699 [MeV]
+ParallelTTracker {0}> 23:52:55 Step  40999 at 43.525 [m], t= 335.197 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:56 Step  41099 at 43.543 [m], t= 335.330 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:56 Step  41199 at 43.560 [m], t= 335.463 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:56 Step  41299 at 43.577 [m], t= 335.597 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:56 Step  41399 at 43.595 [m], t= 335.730 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:57 Step  41499 at 43.612 [m], t= 335.863 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:57 Step  41599 at 43.629 [m], t= 335.997 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:57 Step  41699 at 43.647 [m], t= 336.130 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:57 Step  41799 at 43.664 [m], t= 336.263 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:58 Step  41899 at 43.681 [m], t= 336.397 [ns], E=102.699 [MeV]
+ParallelTTracker {0}> 23:52:58 Step  41999 at 43.699 [m], t= 336.530 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:58 Step  42099 at 43.716 [m], t= 336.663 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:58 Step  42199 at 43.733 [m], t= 336.797 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:58 Step  42299 at 43.751 [m], t= 336.930 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:59 Step  42399 at 43.768 [m], t= 337.063 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:59 Step  42499 at 43.785 [m], t= 337.197 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:59 Step  42599 at 43.802 [m], t= 337.330 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:52:59 Step  42699 at 43.820 [m], t= 337.463 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:00 Step  42799 at 43.837 [m], t= 337.597 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:00 Step  42899 at 43.854 [m], t= 337.730 [ns], E=102.699 [MeV]
+ParallelTTracker {0}> 23:53:00 Step  42999 at 43.872 [m], t= 337.863 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:00 Step  43099 at 43.889 [m], t= 337.997 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:01 Step  43199 at 43.906 [m], t= 338.130 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:01 Step  43299 at 43.924 [m], t= 338.263 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:01 Step  43399 at 43.941 [m], t= 338.397 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:01 Step  43499 at 43.958 [m], t= 338.530 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:02 Step  43599 at 43.976 [m], t= 338.663 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:02 Step  43699 at 43.993 [m], t= 338.797 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:02 Step  43799 at 44.010 [m], t= 338.930 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:02 Step  43899 at 44.028 [m], t= 339.063 [ns], E=102.699 [MeV]
+ParallelTTracker {0}> 23:53:02 Step  43999 at 44.045 [m], t= 339.197 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:03 Step  44099 at 44.062 [m], t= 339.330 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:03 Step  44199 at 44.079 [m], t= 339.463 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:03 Step  44299 at 44.097 [m], t= 339.597 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:03 Step  44399 at 44.114 [m], t= 339.730 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:04 Step  44499 at 44.131 [m], t= 339.863 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:04 Step  44599 at 44.149 [m], t= 339.997 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:04 Step  44699 at 44.166 [m], t= 340.130 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:04 Step  44799 at 44.183 [m], t= 340.263 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:05 Step  44899 at 44.201 [m], t= 340.397 [ns], E=102.699 [MeV]
+ParallelTTracker {0}> 23:53:05 Step  44999 at 44.218 [m], t= 340.530 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:05 Step  45099 at 44.235 [m], t= 340.663 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:05 Step  45199 at 44.253 [m], t= 340.797 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:06 Step  45299 at 44.270 [m], t= 340.930 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:06 Step  45399 at 44.287 [m], t= 341.063 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:06 Step  45499 at 44.305 [m], t= 341.197 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:06 Step  45599 at 44.322 [m], t= 341.330 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:07 Step  45699 at 44.339 [m], t= 341.463 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:07 Step  45799 at 44.356 [m], t= 341.597 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:07 Step  45899 at 44.374 [m], t= 341.730 [ns], E=102.699 [MeV]
+ParallelTTracker {0}> 23:53:07 Step  45999 at 44.391 [m], t= 341.863 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:08 Step  46099 at 44.408 [m], t= 341.997 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:08 Step  46199 at 44.426 [m], t= 342.130 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:08 Step  46299 at 44.443 [m], t= 342.263 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:08 Step  46399 at 44.460 [m], t= 342.397 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:08 Step  46499 at 44.478 [m], t= 342.530 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:09 Step  46599 at 44.495 [m], t= 342.663 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:09 Step  46699 at 44.512 [m], t= 342.797 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:09 Step  46799 at 44.530 [m], t= 342.930 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:09 Step  46899 at 44.547 [m], t= 343.063 [ns], E=102.699 [MeV]
+ParallelTTracker {0}> 23:53:09 Step  46999 at 44.564 [m], t= 343.197 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:10 Step  47099 at 44.582 [m], t= 343.330 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:10 Step  47199 at 44.599 [m], t= 343.463 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:10 Step  47299 at 44.616 [m], t= 343.597 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:10 Step  47399 at 44.634 [m], t= 343.730 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:10 Step  47499 at 44.651 [m], t= 343.863 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:11 Step  47599 at 44.668 [m], t= 343.997 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:11 Step  47699 at 44.685 [m], t= 344.130 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:11 Step  47799 at 44.703 [m], t= 344.263 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:11 Step  47899 at 44.720 [m], t= 344.397 [ns], E=102.699 [MeV]
+ParallelTTracker {0}> 23:53:11 Step  47999 at 44.737 [m], t= 344.530 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:12 Step  48099 at 44.755 [m], t= 344.663 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:12 Step  48199 at 44.772 [m], t= 344.797 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:12 Step  48299 at 44.789 [m], t= 344.930 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:12 Step  48399 at 44.807 [m], t= 345.063 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:12 Step  48499 at 44.824 [m], t= 345.197 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:12 Step  48599 at 44.841 [m], t= 345.330 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:13 Step  48699 at 44.859 [m], t= 345.463 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:13 Step  48799 at 44.876 [m], t= 345.597 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:13 Step  48899 at 44.893 [m], t= 345.730 [ns], E=102.699 [MeV]
+ParallelTTracker {0}> 23:53:13 Step  48999 at 44.911 [m], t= 345.863 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:13 Step  49099 at 44.928 [m], t= 345.997 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:13 Step  49199 at 44.945 [m], t= 346.130 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:13 Step  49299 at 44.962 [m], t= 346.263 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:13 Step  49399 at 44.980 [m], t= 346.397 [ns], E=102.699 [MeV]
+ParallelTTracker {0}[2]> 23:53:14 Step  49499 at 44.997 [m], t= 346.530 [ns], E=102.699 [MeV]
+OPAL {0}> 
+OPAL {0}> * ************** B U N C H ********************************************************* 
+OPAL {0}> * NP              = 3166
+OPAL {0}> * Qtot            =        0.513 [fC]         Qi    =        0.000 [fC]
+OPAL {0}> * Ekin            =     102.699 [MeV]         dEkin =     805.825 [keV]
+OPAL {0}> * rmax            = (     21.52492 ,     13.71440 ,    287.93897 ) [mm]
+OPAL {0}> * rmin            = (    -31.26933 ,    -14.17174 ,   -301.07319 ) [mm]
+OPAL {0}> * rms beam size   = (     13.92528 ,      5.06056 ,    136.12157 ) [mm]
+OPAL {0}> * rms momenta     = (  6.23111e-03 ,  1.96424e-03 ,  1.98298e-03 ) [beta gamma]
+OPAL {0}> * mean position   = (     -0.91507 ,     -0.01902 ,     -3.22923 ) [mm]
+OPAL {0}> * mean momenta    = (  2.43903e-04 , -3.12159e-06 ,  4.80464e-01 ) [beta gamma]
+OPAL {0}> * rms emittance   = (  6.34080e-05 ,  7.53926e-06 ,  5.87754e-05 ) (not normalized)
+OPAL {0}> * rms correlation = (  9.36323e-01 ,  9.31222e-01 ,  9.94511e-01 )
+OPAL {0}> * hr              = (      0.11946 ,      0.10054 ,      6.99752 ) [mm]
+OPAL {0}> * dh              =   1.00000e-10 [%]
+OPAL {0}> * t               =      346.530 [ns]         dT    =        1.333 [ps]
+OPAL {0}> * spos            =        44.997 [m]
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}> 
+OPAL {0}[2]> * Wrote beam phase space.
+ParallelTTracker {0}[2]> Dump phase space of last step
+Ippl{0}[2]> Save AMF1_R1.h5
+Ippl{0}[2]> Save AMF1_R2.h5
+Ippl{0}[2]> Save AMF1_R3.h5
+Ippl{0}[2]> Save AMF1_R4.h5
+Ippl{0}[2]> Save AMF1_R23.h5
+Ippl{0}[2]> Save AMF1_R24.h5
+Ippl{0}[2]> Save AMF1_R25.h5
+Ippl{0}[2]> Save AMF1_R26.h5
+Ippl{0}[2]> Save AMF1_R27.h5
+Ippl{0}[2]> Save AMF1_R28.h5
+Ippl{0}[2]> Save AMF1_R29.h5
+Ippl{0}[2]> Save AMF1_R12.h5
+Ippl{0}[2]> Save AMF1_R13.h5
+Ippl{0}[2]> Save AMF1_R14.h5
+Ippl{0}[2]> Save AMF1_R15.h5
+Ippl{0}[2]> Save AMF1_R16.h5
+Ippl{0}[2]> Save AMF1_R17.h5
+Ippl{0}[2]> Save AMF1_R18.h5
+Ippl{0}[2]> Save AMF1_R19.h5
+Ippl{0}[2]> Save AMF1_R20.h5
+[proc 1] E: H5OpenFile: Cannot open file 'AMF2_R0.h5' with mode '(null)'
+[proc 2] E: H5OpenFile: Cannot open file 'AMF2_R0.h5' with mode '(null)'
+[proc 3] E: H5OpenFile: Cannot open file 'AMF2_R0.h5' with mode '(null)'
+[proc 0] E: H5OpenFile: Cannot open file 'AMF1_R20.h5' with mode '(null)'
+Error{1}> 
+Error{2}> 
+Error{2}> *** User error detected by function "openH5"
+Error{2}>     failed to open file AMF2_R0.h5
+ErrorError{1}> *** User error detected by function "openH5"
+Error{1}>     failed to open file AMF2_R0.h5
+Error{1}>     failed to open file AMF2_R0.h5
+Error{2}>     failed to open file AMF2_R0.h5
+application called MPI_Abort(MPI_COMM_WORLD, -100) - process 2
+application called MPI_Abort(MPI_COMM_WORLD, -100) - process 1
+Error{0}> 
+Error{0}> *** User error detected by function "openH5"
+Error{0}>     failed to open file AMF1_R20.h5
+Error{0}>     failed to open file AMF1_R20.h5
+application called MPI_Abort(MPI_COMM_WORLD, -100) - process 0
+{3}> 
+Error{3}> *** User error detected by function "openH5"
+Error{3}>     failed to open file AMF2_R0.h5
+Error{3}>     failed to open file AMF2_R0.h5
+application called MPI_Abort(MPI_COMM_WORLD, -100) - process 3
