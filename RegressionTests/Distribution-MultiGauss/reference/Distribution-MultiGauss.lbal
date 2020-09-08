@@ -1,0 +1,40 @@
+SDDS1
+&description
+        text="Processor statistics 'Distribution-MultiGauss.in' 08/09/202011:35:04",
+        contents="lbal parameters"
+&end
+&parameter
+        name=processors,
+        type=long,
+        description="Number of Cores used"
+&end
+&parameter
+        name=revision,
+        type=string,
+        description="git revision of opal"
+&end
+&parameter
+        name=flavor,
+        type=string,
+        description="OPAL flavor that wrote file"
+&end
+&column
+        name=t,
+        type=double,
+        units=ns,
+        description="1 Time"
+&end
+&column
+        name="processor-0",
+        type=long,
+        units=1,
+        description="2 Number of particles of processor 0"
+&end
+&data
+        mode=ascii,
+        no_row_counts=1
+&end
+1
+OPAL 2.3.0 git rev. #40634beaad6e3b782bed353b206083821fbae5f4
+opal-t
+1.669999999999996e+00         	1000000         	

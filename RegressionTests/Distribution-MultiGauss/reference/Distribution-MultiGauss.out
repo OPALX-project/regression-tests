@@ -1,0 +1,236 @@
+[merlin-l-001][[15151,1],0][/var/tmp/caubet_m/openmpi-3.1.6_slurm/src/opal/mca/btl/openib/btl_openib_component.c:1671:init_one_device] error obtaining device attributes for mlx5_0 errno says Protocol not supported
+--------------------------------------------------------------------------
+WARNING: There was an error initializing an OpenFabrics device.
+
+  Local host:   merlin-l-001
+  Local device: mlx5_0
+--------------------------------------------------------------------------
+Ippl> CommMPI: Parent process waiting for children ...
+Ippl> CommMPI: Initialization complete.
+>                ____  _____       ___ 
+>               / __ \|  __ \ /\   | | 
+>              | |  | | |__) /  \  | |
+>              | |  | |  ___/ /\ \ | |
+>              | |__| | |  / ____ \| |____
+>               \____/|_| /_/    \_\______|
+OPAL> 
+OPAL> This is OPAL (Object Oriented Parallel Accelerator Library) Version 2.3.0
+OPAL>             git rev. 40634beaad6e3b782bed353b206083821fbae5f4
+OPAL> 
+OPAL> 
+OPAL>                      (c) PSI, http://amas.web.psi.ch
+OPAL> 
+OPAL> 
+OPAL> The optimiser (former opt-Pilot) is integrated 
+OPAL> 
+OPAL> Please send cookies, goodies or other motivations (wine and beer ... ) 
+OPAL> to the OPAL developers opal@lists.psi.ch
+OPAL> 
+OPAL> Time: 11:33:58 date: 08/09/2020
+OPAL> 
+OPAL> Couldn't find startup file "/psi/home/albajacas_a/init.opal".
+OPAL> Note: this is not mandatory for an OPAL simulation!
+OPAL> 
+OPAL> * Reading input stream "Distribution-MultiGauss.in".
+OPAL> 
+OPAL> value: {GAMMA,P0} = {84.1489, 0.042997}
+OPAL> 
+OPAL> * ********************************************************************************** 
+OPAL> * Selected Tracking Method == PARALLEL-T, NEW TRACK
+OPAL> * ********************************************************************************** 
+Ippl> Creating new file for data: Distribution-MultiGauss.stat
+Ippl> Creating new file for data: Distribution-MultiGauss.lbal
+OPAL> 
+OPAL> * ************* D I S T R I B U T I O N ********************************************
+OPAL> * 
+OPAL> * Number of particles: 1000000
+OPAL> * 
+OPAL> * Distribution type: MULTIGAUSS
+OPAL> * 
+OPAL> * SIGMAX                        = 1.000000e-03 [m]
+OPAL> * SIGMAY                        = 1.000000e-03 [m]
+OPAL> * SIGMAZ                        = 4.246285e-05 [m]
+OPAL> * CUTOFFLONG                    = 4.000000e+00 [units of SIGMAZ]
+OPAL> * SEPPEAKS                      = 1.200000e-04 [m]
+OPAL> * NPEAKS                        = 4
+OPAL> * SIGMAPX                        = 0.000000e+00 [Beta Gamma]
+OPAL> * SIGMAPY                        = 0.000000e+00 [Beta Gamma]
+OPAL> * SIGMAPZ                        = 0.000000e+00 [Beta Gamma]
+OPAL> * CUTOFFPX                       = 3.000000e+00 [units of SIGMAPX]
+OPAL> * CUTOFFPY                       = 3.000000e+00 [units of SIGMAPY]
+OPAL> * CUTOFFPZ                       = 3.000000e+00 [units of SIGMAPZ]
+OPAL> * 
+OPAL> * Distribution is injected.
+OPAL> * 
+OPAL> * **********************************************************************************
+OPAL> 
+OPAL> * ************* B E A M ************************************************************ 
+OPAL> * BEAM        BEAM1
+OPAL> * PARTICLE    ELECTRON
+OPAL> * CURRENT     3.000000e-04 A
+OPAL> * FREQUENCY   1.000000e+00 MHz
+OPAL> * CHARGE      -e * 1.000000e+00 
+OPAL> * REST MASS   5.109990e-04 GeV
+OPAL> * MOMENTUM    4.299696e-02
+OPAL> * NPART       1.000000e+06
+OPAL> * ********************************************************************************** 
+OPAL> 
+OPAL> * ************* F I E L D S O L V E R ********************************************** 
+OPAL> * FIELDSOLVER  FS_SC
+OPAL> * TYPE         FFT
+OPAL> * N-PROCESSORS 1
+OPAL> * MX           8.000000e+00
+OPAL> * MY           8.000000e+00
+OPAL> * MT           8.000000e+00
+OPAL> * BBOXINCR     1.000000e+00
+OPAL> * GRRENSF      INTEGRATED
+OPAL> * XDIM         parallel  
+OPAL> * YDIM         parallel  
+OPAL> * Z(T)DIM      parallel  
+OPAL> 
+OPAL> * ********************************************************************************** 
+OPAL> 
+OPAL> 
+OPAL> Size of map 2 sections 
+OPAL> Key: (0.000000 - 0.098925) number of overlapping elements 1
+OPAL>                            DR1
+OPAL> Key: (0.098925 - 0.500688) number of overlapping elements 0
+OPAL> 
+Ippl> Creating new file for data: data/Distribution-MultiGauss_ElementPositions.sdds
+OPAL> 
+OPAL> * ************** B U N C H ********************************************************* 
+OPAL> * NP              = 1000000
+OPAL> * Qtot            =      300.000 [pC]         Qi    =        0.300 [fC]
+OPAL> * Ekin            =      42.489 [MeV]         dEkin =        0.000 [eV]
+OPAL> * rmax            = (      1.00084 ,      1.00044 ,      0.34712 ) [mm]
+OPAL> * rmin            = (   -998.90638 ,   -999.14089 ,   -344.18927 ) [um]
+OPAL> * rms beam size   = (    500.05490 ,    500.07846 ,    140.86421 ) [um]
+OPAL> * rms momenta     = (  0.00000e+00 ,  0.00000e+00 ,  0.00000e+00 ) [beta gamma]
+OPAL> * mean position   = (     -0.00000 ,      0.00000 ,      0.00000 ) [um]
+OPAL> * mean momenta    = (  0.00000e+00 ,  0.00000e+00 ,  8.41430e+01 ) [beta gamma]
+OPAL> * rms emittance   = (  0.00000e+00 ,  0.00000e+00 ,  0.00000e+00 ) (not normalized)
+OPAL> * rms correlation = (  0.00000e+00 ,  0.00000e+00 , -0.00000e+00 )
+OPAL> * hr              = (    291.39157 ,    291.36745 ,    100.73340 ) [um]
+OPAL> * dh              =   1.00000e+00 [%]
+OPAL> * t               =        0.000 [fs]         dT    =       10.000 [ps]
+OPAL> * spos            =        0.000 [um]
+OPAL> * ********************************************************************************** 
+OPAL> 
+OPAL> Track start at: 11:34:00, t= 0.000 [fs]; zstart at: 0.000 [um]
+OPAL> Executing ParallelTTracker, initial dt= 10.000 [ps];
+OPAL> max integration steps 1000000, next step= 0
+OPAL > 
+OPAL > * ************** B U N C H ********************************************************* 
+OPAL > * NP              = 1000000
+OPAL > * Qtot            =      300.000 [pC]         Qi    =        0.300 [fC]
+OPAL > * Ekin            =      42.489 [MeV]         dEkin =       5.836 [keV]
+OPAL > * rmax            = (      1.00360 ,      1.00331 ,      0.34712 ) [mm]
+OPAL > * rmin            = (     -1.00152 ,     -1.00200 ,     -0.34420 ) [mm]
+OPAL > * rms beam size   = (    501.56662 ,    501.59027 ,    140.86897 ) [um]
+OPAL > * rms momenta     = (  5.24333e-04 ,  5.24356e-04 ,  1.14208e-02 ) [beta gamma]
+OPAL > * mean position   = (      0.00038 ,      0.00007 ,     -0.00000 ) [um]
+OPAL > * mean momenta    = (  1.28256e-07 ,  2.31791e-08 ,  8.41430e+01 ) [beta gamma]
+OPAL > * rms emittance   = (  7.44989e-10 ,  7.44898e-10 ,  1.79828e-09 ) (not normalized)
+OPAL > * rms correlation = (  9.71177e-01 ,  9.71190e-01 ,  9.95567e-01 )
+OPAL > * hr              = (    292.17051 ,    292.19932 ,    100.73520 ) [um]
+OPAL > * dh              =   1.00000e+00 [%]
+OPAL > * t               =        1.670 [ns]         dT    =       10.000 [ps]
+OPAL > * spos            =      500.000 [mm]
+OPAL > * ********************************************************************************** 
+OPAL > 
+OPAL> done executing ParallelTTracker at 11:35:05
+OPAL> * End of input stream "Distribution-MultiGauss.in".
+Timings> -----------------------------------------------------------------
+Timings>      Timing results for 1 nodes:
+Timings> -----------------------------------------------------------------
+Timings> mainTimer........... Wall tot =     66.428, CPU tot =      66.32
+Timings> 
+Timings> Binaryrepart........ Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Boundingbox......... Wall max =    1.59274, CPU max =       1.54
+Timings>                      Wall avg =    1.59274, CPU avg =       1.54
+Timings>                      Wall min =    1.59274, CPU min =       1.54
+Timings> 
+Timings> Boundingbox-bounds.. Wall max =    0.62952, CPU max =       0.52
+Timings>                      Wall avg =    0.62952, CPU avg =       0.52
+Timings>                      Wall min =    0.62952, CPU min =       0.52
+Timings> 
+Timings> Boundingbox-update.. Wall max =   0.959706, CPU max =       1.02
+Timings>                      Wall avg =   0.959706, CPU avg =       1.02
+Timings>                      Wall min =   0.959706, CPU min =       1.02
+Timings> 
+Timings> Compute Statistics.. Wall max =     6.1594, CPU max =       6.08
+Timings>                      Wall avg =     6.1594, CPU avg =       6.08
+Timings>                      Wall min =     6.1594, CPU min =       6.08
+Timings> 
+Timings> ComputePotential.... Wall max =  0.0806861, CPU max =       0.07
+Timings>                      Wall avg =  0.0806861, CPU avg =       0.07
+Timings>                      Wall min =  0.0806861, CPU min =       0.07
+Timings> 
+Timings> Create Distr........ Wall max =    1.26068, CPU max =       1.25
+Timings>                      Wall avg =    1.26068, CPU avg =       1.25
+Timings>                      Wall min =    1.26068, CPU min =       1.25
+Timings> 
+Timings> External field eval. Wall max =     1.7929, CPU max =       1.95
+Timings>                      Wall avg =     1.7929, CPU avg =       1.95
+Timings>                      Wall min =     1.7929, CPU min =       1.95
+Timings> 
+Timings> Fast inside test.... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Histogram........... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Initialize geometry. Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Inside test......... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Load Distr.......... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Particle Inside..... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Ray tracing......... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> SelfField total..... Wall max =    35.8603, CPU max =      35.77
+Timings>                      Wall avg =    35.8603, CPU avg =      35.77
+Timings>                      Wall min =    35.8603, CPU min =      35.77
+Timings> 
+Timings> SF: GreensFTotal.... Wall max =  0.0565687, CPU max =       0.06
+Timings>                      Wall avg =  0.0565687, CPU avg =       0.06
+Timings>                      Wall min =  0.0565687, CPU min =       0.06
+Timings> 
+Timings> TIntegration1....... Wall max =    2.95651, CPU max =       2.89
+Timings>                      Wall avg =    2.95651, CPU avg =       2.89
+Timings>                      Wall min =    2.95651, CPU min =       2.89
+Timings> 
+Timings> TIntegration2....... Wall max =    8.21723, CPU max =       8.06
+Timings>                      Wall avg =    8.21723, CPU avg =       8.06
+Timings>                      Wall min =    8.21723, CPU min =       8.06
+Timings> 
+Timings> WakeField........... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Write H5-File....... Wall max =   0.112137, CPU max =       0.09
+Timings>                      Wall avg =   0.112137, CPU avg =       0.09
+Timings>                      Wall min =   0.112137, CPU min =       0.09
+Timings> 
+Timings> Write Stat.......... Wall max = 0.00403603, CPU max =          0
+Timings>                      Wall avg = 0.00403603, CPU avg =          0
+Timings>                      Wall min = 0.00403603, CPU min =          0
+Timings> 
+Timings> -----------------------------------------------------------------
