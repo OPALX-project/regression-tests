@@ -1,0 +1,71 @@
+OPTION, PSDUMPFREQ = 100000000;
+OPTION, STATDUMPFREQ = 1000;
+OPTION, BOUNDPDESTROYFQ=10; // Delete lost particles, if any
+
+OPTION, VERSION=10900;
+
+REAL REPARTFREQ=1000000;
+
+Title, string="UNDULATOR";
+
+//----------------------------------------------------------------------------
+//Global Parameters
+
+REAL rf_freq             = 1.0;     //RF frequency. (Hz)
+REAL n_particles         = 1e6;      //Number of particles in simulation.
+REAL beam_bunch_charge   = .3e-09;      //Charge of bunch. (C)
+
+//Initial Momentum Calculation
+REAL gamma   = 43e-3 / EMASS; // Energy in GeV
+REAL beta    = sqrt(1-(1/gamma^2));
+REAL P0      = gamma*beta*EMASS;    //inital z momentum
+
+//Printing initial energy and momentum to terminal output.
+value , {gamma, P0};
+
+// Drift in the beginning
+DR1: DRIFT, L = .1, ELEMEDGE = 0.0;
+
+DRIVE: Line = (DR1);
+
+//----------------------------------------------------------------------------
+// INITIAL DISTRIBUTION
+
+Dist: DISTRIBUTION, TYPE = MULTIGAUSS,
+      SIGMAR = 1e-3,
+      SIGMAZ = 1e-4 / 2.355,  // FWHM  = 2.355 * sigma
+      CUTOFFLONG = 4.0,  // In units of SIGZ
+      SEPPEAKS = 1.2e-4,
+      NPEAKS = 4;
+
+	
+//----------------------------------------------------------------------------
+// Define Field solvers
+// The mesh sizes should be a factor of 2 
+// for most efficient space charge calculation.
+
+FS_SC: Fieldsolver, FSTYPE = FFT, 
+            MX = 8, MY = 8, MT = 8, // SC grid size is 8^3
+            PARFFTX = true,
+            PARFFTY = true, 
+            PARFFTT = true, 
+            BCFFTX = open, 
+            BCFFTY = open, 
+            BCFFTT = open,
+            BBOXINCR = 1, 
+            GREENSF = INTEGRATED;
+
+//----------------------------------------------------------------------------
+// Electron Beam Definition
+BEAM1:  BEAM, PARTICLE = ELECTRON, GAMMA = gamma, NPART = n_particles,
+	BFREQ = 1, BCURRENT = beam_bunch_charge * 1e6 , CHARGE = -1;
+
+//----------------------------------------------------------------------------
+// Simulate the beamline using TRACK and RUN.
+
+TRACK, LINE = DRIVE, BEAM = BEAM1, MAXSTEPS = 1000000, DT = 1E-11, ZSTOP= 0.5;
+RUN, METHOD = "PARALLEL-T", BEAM = BEAM1, 
+    FIELDSOLVER = FS_SC, DISTRIBUTION = Dist;
+ENDTRACK;
+
+Quit;
