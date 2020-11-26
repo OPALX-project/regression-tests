@@ -1,0 +1,67 @@
+OPTION, PSDUMPFREQ = 100000000;   // 6d data written every 300 time steps (h5).
+OPTION, STATDUMPFREQ = 10;  // Beam Stats written every 10 time steps (stat).
+OPTION, BOUNDPDESTROYFQ=10; // Delete lost particles, if any
+OPTION, AUTOPHASE=4;        // Autophase is on, and phase of max energy
+                            // gain will be found automatically for cavities.
+OPTION, VERSION=20300;
+
+REAL REPARTFREQ=1000000;
+
+Title, string="AWA_WIGGLER";
+
+//----------------------------------------------------------------------------
+//Global Parameters
+
+REAL rf_freq             = 1.0;     //RF frequency. (Hz)
+REAL n_particles         = 1e4;     // number of particles
+REAL beam_bunch_charge   =  0.3 * 1e-9;      //Charge of bunch. (C) 
+
+//Initial Momentum Calculation
+REAL gamma   = 44e-3 / EMASS; // Energy in GeV
+REAL beta    = sqrt(1-(1/gamma^2));
+REAL P0      = gamma*beta*EMASS;    //inital z momentum
+
+    
+// Undulator of length 85cm + 17cm fringe distance at the entrance and at exit
+UND: UNDULATOR, ELEMEDGE = 1.0e-2, K = 10.81, LAMBDA = 8.5e-2, NUMPERIODS = 10, ANGLE = PI/2,
+     MESHLENGTH = {10e-3, 10e-3, 2e-3}, MESHRESOLUTION = {30e-6, 30e-6, 8e-6};
+
+DRIVE: Line = (UND);
+    
+//----------------------------------------------------------------------------
+// INITIAL DISTRIBUTION
+
+Dist: DISTRIBUTION, TYPE = GAUSS,
+      SIGMAX = .4e-3,
+      SIGMAY = .4e-3,
+      SIGMAZ = .1e-3,
+      WRITETOFILE = FALSE,
+      EMITTED = FALSE;
+
+	
+//----------------------------------------------------------------------------
+
+FS_SC: Fieldsolver, FSTYPE = FFT, 
+            MX = 8, MY = 8, MT = 8, // SC grid size is 8^3
+            PARFFTX = true,
+            PARFFTY = true, 
+            PARFFTT = true, 
+            BCFFTX = open, 
+            BCFFTY = open, 
+            BCFFTT = open,
+            BBOXINCR = 1, 
+            GREENSF = INTEGRATED;
+
+//----------------------------------------------------------------------------
+// Electron Beam Definition
+BEAM1:  BEAM, PARTICLE = ELECTRON, GAMMA = gamma, NPART = n_particles,
+	BFREQ = 1, BCURRENT = beam_bunch_charge * 1e6 , CHARGE = -1;
+//----------------------------------------------------------------------------
+// Simulate the beamline using TRACK and RUN.
+
+TRACK, LINE = DRIVE, BEAM = BEAM1, MAXSTEPS = 1000000, DT = 3.E-12, ZSTOP= 1.5;
+RUN, METHOD = "PARALLEL-T", BEAM = BEAM1, 
+    FIELDSOLVER = FS_SC, DISTRIBUTION = Dist;
+ENDTRACK;
+
+Quit;
