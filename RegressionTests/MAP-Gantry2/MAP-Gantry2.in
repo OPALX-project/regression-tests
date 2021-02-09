@@ -85,12 +85,12 @@ D71A: DRIFT, L=0.3175, ELEMEDGE=34.14, NSLICES=1;
 
 D72: DRIFT, L=0.04250, ELEMEDGE=34.4575; //D72: DRIFT, L=0.1687, ELEMEDGE=34.4575;
 
-//CollPHYS_Cu :  SURFACEPHYSICS, TYPE="Collimator", MATERIAL="Copper";
+//CollPHYS_Cu :  PARTICLEMATTERINTERACTION, TYPE=SCATTERING, MATERIAL="Copper";
 
 
 //Coll_b4gap_size=0.0550; //default=0.0550
 //Coll_b4gap: ECOLLIMATOR, XSIZE=Coll_b4gap_size, YSIZE=Coll_b4gap_size, DX=0,  DY=0,
-//L=0.050, ELEMEDGE=34.50, OUTFN="Coll_b4Gap_size.h5";// , SURFACEPHYSICS=CollPHYS_Cu ;
+//L=0.050, ELEMEDGE=34.50, OUTFN="Coll_b4Gap_size.h5";// , PARTICLEMATTERINTERACTION=CollPHYS_Cu ;
 //Mon_Coll_b4gap: MONITOR, OUTFN="Mon_Coll_beforeGap.h5", ELEMEDGE=34.55;		//here
 
 //
@@ -110,7 +110,7 @@ D74B: DRIFT, L=0.02, ELEMEDGE=36.1771, NSLICES=5;
 
 //Coll_atgap_size=0.0150;  //default=0.0150
 //Coll_atgap: ECOLLIMATOR, XSIZE=Coll_atgap_size, YSIZE=Coll_atgap_size, DX=0,  DY=0,
-//L=0.050, ELEMEDGE=36.2071, OUTFN="Coll_atGap.h5";//, SURFACEPHYSICS=CollPHYS_Cu ;
+//L=0.050, ELEMEDGE=36.2071, OUTFN="Coll_atGap.h5";//, PARTICLEMATTERINTERACTION=CollPHYS_Cu ;
 //Mon_Coll_atgap: MONITOR, OUTFN="Mon_Coll_atGap.h5", ELEMEDGE=36.2071+0.050+0.010;
 
 //
@@ -145,7 +145,7 @@ D81a: DRIFT, L=0.160, ELEMEDGE=37.3717, NSLICES=1; //original length L=0.2785
 //
 //Coll_aftrgap_size=0.0240;     //default= 0.0240
 //Coll_aftergap: ECOLLIMATOR, XSIZE=Coll_aftrgap_size, YSIZE=Coll_aftrgap_size, DX=0,  DY=0,
-//L=0.050, ELEMEDGE=37.5317, OUTFN="Coll_afterGap.h5";//, SURFACEPHYSICS=CollPHYS_Cu ;
+//L=0.050, ELEMEDGE=37.5317, OUTFN="Coll_afterGap.h5";//, PARTICLEMATTERINTERACTION=CollPHYS_Cu ;
 //Mon_Coll_aftrgap: MONITOR, OUTFN="Mon_Coll_afterGap.h5", ELEMEDGE=37.5317+0.050+0.010;	
 
 
