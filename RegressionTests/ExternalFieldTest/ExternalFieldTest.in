@@ -24,13 +24,13 @@ FINSS_RGUN: RFCavity, L = 0.34986, VOLT = 100.0, FMAPFN = "CTF3_Ez_ASTRA.opal",
 		ELEMEDGE =0.0, TYPE = "STANDING", FREQ = BF,
 		LAG = FINSS_RGUN_phi, APVETO=TRUE; // -(14.0/180.0*PI);
 
-FIND1_MSOL10: Solenoid, L = 0.6, KS = 0.206, FMAPFN = "NEW_SINGLE_SOL_NOFRINGE_ASTRA.opal", ELEMEDGE = 0.3;
+FIND1_MSOL010: Solenoid, L = 0.6, KS = 0.206, FMAPFN = "NEW_SINGLE_SOL_NOFRINGE_ASTRA.opal", ELEMEDGE = 0.3;
 
 FIND1_MQ10: Quadrupole, L=0.1, K1= 0.0, ELEMEDGE=1.38;
 FIND1_MQ20: Quadrupole, L=0.1, K1= 0.0, ELEMEDGE=1.56;
 FIND1_MQ30: Quadrupole, L=0.1, K1= 0.0, ELEMEDGE=1.74;
 
-Injector: Line = (CATHODE, FINSS_RGUN, FIND1_MSOL10, FIND1_MQ10, FIND1_MQ20, FIND1_MQ30);
+Injector: Line = (CATHODE, FINSS_RGUN, FIND1_MSOL010, FIND1_MQ10, FIND1_MQ20, FIND1_MQ30);
 
 // L-Band Structure starts here
 // 40 cells in 2\pi/3 mode at 1.5 GHz (rfdata[1-4]); with 4 solenoids on top (1T6.T7)
@@ -55,7 +55,7 @@ FINLB02: Line = (FINLB02_RAC,
                  FINLB02_MSLAC30,
                  FINLB02_MSLAC40);
 
-l1:   Line = (Injector,FINLB02);
+line1:  Line = (Injector,FINLB02);
 
 /*
  We can specity ONE distribution
@@ -92,9 +92,9 @@ Fs1:FIELDSOLVER, FSTYPE=None, MX=16, MY=16, MT=128,
 
 beam1: BEAM, PARTICLE=ELECTRON, pc=P0, NPART=1e3, BFREQ=1498.953425154, BCURRENT=0.032912, CHARGE=-1;
 
-Select, Line=l1;
+Select, Line=line1;
 
-track,line=l1, beam=beam1, ZSTOP=5.0, MAXSTEPS=14226, DT=1.0e-11;
+track,line=line1, beam=beam1, ZSTOP=5.0, MAXSTEPS=14226, DT=1.0e-11;
  run, method = "PARALLEL-T", beam=beam1, fieldsolver=Fs1, distribution=Dist1;
 endtrack;
 Stop;

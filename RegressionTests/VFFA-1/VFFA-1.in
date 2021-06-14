@@ -366,7 +366,6 @@ IF (DO_REF_PROBES) {
         REAL REF_Y0 = (REF_PROBE_Y-REF_DY)*1000*sin(ANGLE);
         REAL REF_Y1 = (REF_PROBE_Y+REF_DY)*1000*sin(ANGLE);
 
-        ECHO,MESSAGE=NAME;
         VALUE, VALUE={ANGLE, REF_X0, REF_X1, REF_Y0, REF_Y1};
 
         NAME: PROBE, xstart=REF_X0,  xend=REF_X1, ystart=REF_Y0,  yend=REF_Y1;
@@ -397,7 +396,7 @@ ringdef: RINGDEFINITION, HARMONIC_NUMBER=1, LAT_RINIT=R0, LAT_PHIINIT=LAT_PHI_IN
          MIN_R=0., MAX_R=40;
 // magnet_d_placement_in, magnet_d_placement_out, 
 cell: Line = (d_single, d_half_cell_drift, f_single, f_half_cell_drift);
-l1: Line = (ringdef, ringprobe, refprobe, f_test,
+line1: Line = (ringdef, ringprobe, refprobe, f_test,
             cell, cell, cell, cell, cell,
             cell, cell, cell, cell, cell,
             cell, cell, cell, cell, cell
@@ -421,7 +420,7 @@ beam1: BEAM, PARTICLE=PROTON, pc=P0/1000., NPART=N_PARTICLES, BCURRENT=1, CHARGE
 
 VALUE, VALUE={E0, P0, P_MASS};
 
-TRACK, LINE=l1, BEAM=beam1, MAXSTEPS=MAX_STEPS, STEPSPERTURN=STEPS_PER_TURN;
+TRACK, LINE=line1, BEAM=beam1, MAXSTEPS=MAX_STEPS, STEPSPERTURN=STEPS_PER_TURN;
 RUN, METHOD="CYCLOTRON-T", BEAM=beam1, FIELDSOLVER=Fs1, DISTRIBUTION=Dist1;
 ENDTRACK;
 STOP;
