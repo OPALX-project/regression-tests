@@ -1,0 +1,1636 @@
+OPAL{0}>                ____  _____       ___ 
+OPAL{0}>               / __ \|  __ \ /\   | | 
+OPAL{0}>              | |  | | |__) /  \  | |
+OPAL{0}>              | |  | |  ___/ /\ \ | |
+OPAL{0}>              | |__| | |  / ____ \| |____
+OPAL{0}>               \____/|_| /_/    \_\______|
+OPAL{0}> 
+OPAL{0}> This is OPAL (Object Oriented Parallel Accelerator Library) Version 2021.1.99
+OPAL{0}>             git rev. 8bc74fb0d3848f45e1ef31fb261ba2c4ef3cc1bc
+OPAL{0}> 
+OPAL{0}> 
+OPAL{0}>                      (c) PSI, http://amas.web.psi.ch
+OPAL{0}> 
+OPAL{0}> 
+OPAL{0}> The optimiser (former opt-Pilot) is integrated 
+OPAL{0}> 
+OPAL{0}> Please send cookies, goodies or other motivations (wine and beer ... ) 
+OPAL{0}> to the OPAL developers opal@lists.psi.ch
+OPAL{0}> 
+OPAL{0}> Time: 11:12:01 date: 04/04/2022
+OPAL{0}> 
+OPAL{0}> * Reading input stream 'AmrRingCyclotron-02.in'
+OPAL{0}> 
+OPAL{0}> Current settings of options:
+OPAL{0}> OPTION,ECHO=FALSE,INFO=TRUE,TRACE=FALSE,WARN=TRUE,SEED=1.23457e+08,
+OPAL{0}>   TELL=TRUE,PSDUMPFREQ=4500,STATDUMPFREQ=1,PSDUMPEACHTURN=TRUE,
+OPAL{0}>   PSDUMPFRAME="BUNCH_MEAN",SPTDUMPFREQ=1e+06,REPARTFREQ=5,
+OPAL{0}>   REBINFREQ=100,SCSOLVEFREQ=2,MTSSUBSTEPS=1,REMOTEPARTDEL=0,
+OPAL{0}>   RHODUMP=FALSE,EBDUMP=FALSE,CSRDUMP=FALSE,AUTOPHASE=6,NUMBLOCKS=0,
+OPAL{0}>   RECYCLEBLOCKS=0,NLHS=1,CZERO=FALSE,RNGTYPE="RANDOM",
+OPAL{0}>   ENABLEHDF5=TRUE,ENABLEVTK=TRUE,ASCIIDUMP=FALSE,BOUNDPDESTROYFQ=10,
+OPAL{0}>   BEAMHALOBOUNDARY=0,CLOTUNEONLY=FALSE,IDEALIZED=FALSE,
+OPAL{0}>   LOGBENDTRAJECTORY=FALSE,VERSION=20000,AMR=TRUE,
+OPAL{0}>   AMR_YT_DUMP_FREQ=1e+06,AMR_REGRID_FREQ=10,MEMORYDUMP=TRUE,
+OPAL{0}>   HALOSHIFT=0,DELPARTFREQ=1,MINBINEMITTED=10,MINSTEPFORREBIN=200,
+OPAL{0}>   COMPUTEPERCENTILES=FALSE;
+OPAL{0}> 
+OPAL{0}[2]> 
+OPAL{0}[2]> 8 elements selected.
+OPAL{0}[2]> 
+OPAL{0}[2]> * Generation of distribution with seed = 123456789
+OPAL{0}[2]> * isn't scalable with number of particles and cores.
+OPAL{0}> * m before gsl_linalg_cholesky_decomp
+OPAL{0}> * r(0, : ) =          1 &          0 &          0 &          0 &          0 &          0 \\
+OPAL{0}> * r(1, : ) =          0 &          1 &          0 &          0 &          0 &          0 \\
+OPAL{0}> * r(2, : ) =          0 &          0 &          1 &          0 &          0 &          0 \\
+OPAL{0}> * r(3, : ) =          0 &          0 &          0 &          1 &          0 &          0 \\
+OPAL{0}> * r(4, : ) =          0 &          0 &          0 &          0 &          1 &          0 \\
+OPAL{0}> * r(5, : ) =          0 &          0 &          0 &          0 &          0 &          1 \\
+OPAL{0}> * m after gsl_linalg_cholesky_decomp
+OPAL{0}> * r(0, : ) =          1 &          0 &          0 &          0 &          0 &          0 \\
+OPAL{0}> * r(1, : ) =          0 &          1 &          0 &          0 &          0 &          0 \\
+OPAL{0}> * r(2, : ) =          0 &          0 &          1 &          0 &          0 &          0 \\
+OPAL{0}> * r(3, : ) =          0 &          0 &          0 &          1 &          0 &          0 \\
+OPAL{0}> * r(4, : ) =          0 &          0 &          0 &          0 &          1 &          0 \\
+OPAL{0}> * r(5, : ) =          0 &          0 &          0 &          0 &          0 &          1 \\
+Ippl{0}> * Creating new file for data: 'AmrRingCyclotron-02.stat'
+Ippl{0}> * Creating new file for data: 'AmrRingCyclotron-02.lbal'
+Ippl{0}> * Creating new file for data: 'AmrRingCyclotron-02.grid'
+Ippl{0}> * Creating new file for data: 'AmrRingCyclotron-02.mem'
+Ippl{0}> * Creating new file for data: 'AmrRingCyclotron-02-bunch-0000.smb'
+Ippl{0}> * Creating new file for data: 'AmrRingCyclotron-02-bunch-0001.smb'
+OPAL{0}> Use 'GAMMA_BINNING' for binning.
+OPAL{0}> ***---------------------------- MULTI-BUNCHES MULTI-ENERGY-BINS MODE ----------------------------*** 
+OPAL{0}> Read in: Bin=0 Particles Num=131072
+OPAL{0}> FORCE mode: The multi bunches will be injected consecutively
+OPAL{0}>             after each revolution, until get "TURNS" bunches.
+OPAL{0}> 
+OPAL{0}> * ************* T R A C K  R U N *************************************************** 
+OPAL{0}> * Selected Tracking Method == CYCLOTRON-T, NEW TRACK
+OPAL{0}> * ********************************************************************************** 
+OPAL{0}> * Phase space dump frequency    = 4500
+OPAL{0}> * Statistics dump frequency     = 1 w.r.t. the time step.
+OPAL{0}> * DT                            = 1e-12 [s]
+OPAL{0}> * MAXSTEPS                      = 1080
+OPAL{0}> * Mass of simulation particle   = 7057 [GeV/c^2]
+OPAL{0}> * Charge of simulation particle = 1.205e-15 [C]
+OPAL{0}> * Number of neighbour bunches   = 2
+OPAL{0}> * STEPSPERTURN                  = 360
+OPAL{0}> * ********************************************************************************** 
+OPAL{0}> 
+OPAL{0}> * ************* D I S T R I B U T I O N ********************************************
+OPAL{0}> * 
+OPAL{0}> * Number of particles: 32768
+OPAL{0}> * 
+OPAL{0}> * Distribution input momentum units: [eV/c]
+OPAL{0}> * 
+OPAL{0}> * Distribution type: GAUSS
+OPAL{0}> * 
+OPAL{0}> * SIGMAX     = 0.002 [m]
+OPAL{0}> * SIGMAY     = 0.002 [m]
+OPAL{0}> * SIGMAZ     = 0.002 [m]
+OPAL{0}> * SIGMAPX    = 1.066e-16 [Beta Gamma]
+OPAL{0}> * SIGMAPY    = 1.066e-16 [Beta Gamma]
+OPAL{0}> * SIGMAPZ    = 3.617e-13 [Beta Gamma]
+OPAL{0}> * AVRGPZ     = 0 [Beta Gamma]
+OPAL{0}> * CORRX      = 0
+OPAL{0}> * CORRY      = 0
+OPAL{0}> * CORRZ      = 0
+OPAL{0}> * R61        = 0
+OPAL{0}> * R62        = 0
+OPAL{0}> * R51        = 0
+OPAL{0}> * R52        = 0
+OPAL{0}> * CUTOFFX    = 3 [units of SIGMAX]
+OPAL{0}> * CUTOFFY    = 3 [units of SIGMAY]
+OPAL{0}> * CUTOFFLONG = 3 [units of SIGMAZ]
+OPAL{0}> * CUTOFFPX   = 3 [units of SIGMAPX]
+OPAL{0}> * CUTOFFPY   = 3 [units of SIGMAPY]
+OPAL{0}> * CUTOFFPZ   = 3 [units of SIGMAPY]
+OPAL{0}> * 
+OPAL{0}> * Distribution is injected.
+OPAL{0}> * 
+OPAL{0}> * **********************************************************************************
+OPAL{0}> 
+OPAL{0}> * ************* B E A M ************************************************************ 
+OPAL{0}> * BEAM        BEAM1
+OPAL{0}> * PARTICLE    PROTON
+OPAL{0}> * REST MASS   0.9383 [GeV]
+OPAL{0}> * CHARGE      +e * 1 
+OPAL{0}> * MOMENTUM    3.746e+08 [eV/c]
+OPAL{0}> * CURRENT     0.002 [A]
+OPAL{0}> * FREQUENCY   50.65 [MHz]
+OPAL{0}> * NPART       3.277e+04
+OPAL{0}> * ********************************************************************************** 
+OPAL{0}> 
+OPAL{0}> * ************* F I E L D S O L V E R ********************************************** 
+OPAL{0}> * FIELDSOLVER  FS1
+OPAL{0}> * TYPE         ML
+OPAL{0}> * N-PROCESSORS 4
+OPAL{0}> * MX           32
+OPAL{0}> * MY           32
+OPAL{0}> * MT           32
+OPAL{0}> * BBOXINCR     20
+OPAL{0}> * AMR_MAXLEVEL     2
+OPAL{0}> * AMR_REFX         2
+OPAL{0}> * AMR_REFY         2
+OPAL{0}> * AMR_REFZ         2
+OPAL{0}> * AMR_MAXGRIDX     32
+OPAL{0}> * AMR_MAXGRIDY     32
+OPAL{0}> * AMR_MAXGRIDZ     32
+OPAL{0}> * AMR_BFX          16
+OPAL{0}> * AMR_BFY          16
+OPAL{0}> * AMR_BFZ          16
+OPAL{0}> * AMR_TAGGING      CHARGE_DENSITY
+OPAL{0}> * AMR_DENSITY      1e-09
+OPAL{0}> * AMR_MAX_NUM_PART 1
+OPAL{0}> * AMR_MIN_NUM_PART 1
+OPAL{0}> * AMR_DENSITY      1e-09
+OPAL{0}> * AMR_SCALING      0.75
+OPAL{0}> * AMR_DOMAIN_RATIO ( 1 0.75 0.75 )
+OPAL{0}> * XDIM         parallel  
+OPAL{0}> * YDIM         parallel  
+OPAL{0}> * Z(T)DIM      parallel  
+OPAL{0}> 
+OPAL{0}> * ********************************************************************************** 
+OPAL{0}> 
+OPAL{0}> * ----------------------------- Cyclotron -------------------------------- *
+OPAL{0}> 
+OPAL{0}> * Bunch global starting position:
+OPAL{0}> * RINIT   = 2130 [mm]
+OPAL{0}> * PHIINIT = 0 [deg]
+OPAL{0}> * ZINIT   = 0 [mm]
+OPAL{0}> 
+OPAL{0}> * Bunch global starting momenta:
+OPAL{0}> * Initial gamma = 1.077
+OPAL{0}> * Initial beta  = 0.3708
+OPAL{0}> * Reference total momentum          = 0.3992 [beta gamma]
+OPAL{0}> * Reference azimuthal momentum (Pt) = 0.3992 [beta gamma]
+OPAL{0}> * Reference radial momentum (Pr)    = -0.000174 [beta gamma]
+OPAL{0}> * Reference axial momentum (Pz)     = 0 [beta gamma]
+OPAL{0}> 
+OPAL{0}> * 8-fold field symmetry 
+OPAL{0}> * Field map file       = 's03av.nar'
+OPAL{0}> * Type of cyclotron    = RING 
+OPAL{0}> * Radial aperture      = 0 ... 10 [m] 
+OPAL{0}> * Vertical aperture    = -10 ... 10 [m]
+OPAL{0}> * Number of trimcoils  = 0
+OPAL{0}> * Harmonic number h    = 6 
+OPAL{0}> * RF frequency         = 50.65 [MHz]
+OPAL{0}> * Read field data from PSI format field map file
+OPAL{0}> * ----------------------------------------------
+OPAL{0}> *             READ IN RING FIELD MAP            
+OPAL{0}> *      (The first data block is useless)        
+OPAL{0}> * ----------------------------------------------
+OPAL{0}> * Minimal radius of measured field map: 1900 [mm]
+OPAL{0}> * Stepsize in radial direction: 20 [mm]
+OPAL{0}> * Minimal angle of measured field map: 0 [deg]
+OPAL{0}> * Stepsize in azimuth direction: 0.3333 [deg]
+OPAL{0}> * Index in radial direction: 141
+OPAL{0}> * Index in azimuthal direction: 135
+OPAL{0}> * Accordingly, total grid point along azimuth:  136
+OPAL{0}> * Total stored grid point number ( ntetS * nrad ): 19176
+OPAL{0}> * Read-in loop one block per radius
+OPAL{0}> * Rescaling of the magnetic fields with factor: 1
+OPAL{0}> * Field Map read successfully!
+OPAL{0}> 
+OPAL{0}> * ----------------------------- RFCavity --------------------------------- * 
+OPAL{0}> * Name                      = RF0
+OPAL{0}> * RF Field map file         = 'Cav1.dat'
+OPAL{0}> * Minimal radius of cavity  = 1900 [mm]
+OPAL{0}> * Maximal radius of cavity  = 4500 [mm]
+OPAL{0}> * RF frequency (2*pi*f)     = 3.182e+08 [rad/s]
+OPAL{0}> * Cavity azimuth position   = 35 [deg] 
+OPAL{0}> * Cavity gap width          = 220 [mm] 
+OPAL{0}> * Cavity Shift distance     = 416 [mm] 
+OPAL{0}> * Initial RF phase (t=0)    = 139.4 [deg] 
+OPAL{0}> * Cavity voltage data read successfully!
+OPAL{0}> * ----------------------------- RFCavity --------------------------------- * 
+OPAL{0}> * Name                      = RF1
+OPAL{0}> * RF Field map file         = 'Cav1.dat'
+OPAL{0}> * Minimal radius of cavity  = 1900 [mm]
+OPAL{0}> * Maximal radius of cavity  = 4500 [mm]
+OPAL{0}> * RF frequency (2*pi*f)     = 3.182e+08 [rad/s]
+OPAL{0}> * Cavity azimuth position   = 125 [deg] 
+OPAL{0}> * Cavity gap width          = 220 [mm] 
+OPAL{0}> * Cavity Shift distance     = 416 [mm] 
+OPAL{0}> * Initial RF phase (t=0)    = 319.4 [deg] 
+OPAL{0}> * Cavity voltage data read successfully!
+OPAL{0}> * ----------------------------- RFCavity --------------------------------- * 
+OPAL{0}> * Name                      = RF2
+OPAL{0}> * RF Field map file         = 'Cav3.dat'
+OPAL{0}> * Minimal radius of cavity  = 1900 [mm]
+OPAL{0}> * Maximal radius of cavity  = 4500 [mm]
+OPAL{0}> * RF frequency (2*pi*f)     = 9.547e+08 [rad/s]
+OPAL{0}> * Cavity azimuth position   = 170 [deg] 
+OPAL{0}> * Cavity gap width          = 250 [mm] 
+OPAL{0}> * Cavity Shift distance     = 452 [mm] 
+OPAL{0}> * Initial RF phase (t=0)    = 149.4 [deg] 
+OPAL{0}> * Cavity voltage data read successfully!
+OPAL{0}> * ----------------------------- RFCavity --------------------------------- * 
+OPAL{0}> * Name                      = RF3
+OPAL{0}> * RF Field map file         = 'Cav1.dat'
+OPAL{0}> * Minimal radius of cavity  = 1900 [mm]
+OPAL{0}> * Maximal radius of cavity  = 4500 [mm]
+OPAL{0}> * RF frequency (2*pi*f)     = 3.182e+08 [rad/s]
+OPAL{0}> * Cavity azimuth position   = 215 [deg] 
+OPAL{0}> * Cavity gap width          = 220 [mm] 
+OPAL{0}> * Cavity Shift distance     = 416 [mm] 
+OPAL{0}> * Initial RF phase (t=0)    = 139.4 [deg] 
+OPAL{0}> * Cavity voltage data read successfully!
+OPAL{0}> * ----------------------------- RFCavity --------------------------------- * 
+OPAL{0}> * Name                      = RF4
+OPAL{0}> * RF Field map file         = 'Cav1.dat'
+OPAL{0}> * Minimal radius of cavity  = 1900 [mm]
+OPAL{0}> * Maximal radius of cavity  = 4500 [mm]
+OPAL{0}> * RF frequency (2*pi*f)     = 3.182e+08 [rad/s]
+OPAL{0}> * Cavity azimuth position   = 305 [deg] 
+OPAL{0}> * Cavity gap width          = 220 [mm] 
+OPAL{0}> * Cavity Shift distance     = 416 [mm] 
+OPAL{0}> * Initial RF phase (t=0)    = 319.4 [deg] 
+OPAL{0}> * Cavity voltage data read successfully!
+OPAL{0}> * ------------------------------------------------------------------------ *
+OPAL{0}> * The selected Beam line elements are :
+OPAL{0}> * -> Cyclotron
+OPAL{0}> * -> RFCavity
+OPAL{0}> * -> RFCavity
+OPAL{0}> * -> RFCavity
+OPAL{0}> * -> RFCavity
+OPAL{0}> * -> RFCavity
+OPAL{0}> * ------------------------------------------------------------------------ *
+OPAL{0}> 
+OPAL{0}> * 4th order Runge-Kutta integrator
+OPAL{0}> 
+OPAL{0}> * Store beam to H5 file for multibunch simulation ... Done.
+OPAL{0}> 
+OPAL{0}> * Before repartition: min local particle number: 8120
+OPAL{0}> *                     max local particle number: 8255
+OPAL{0}> 
+OPAL{0}> * After repartition:  min local particle number: 8120
+OPAL{0}> *                     max local particle number: 8255
+OPAL{0}> 
+OPAL{0}> * *********************** Bunch information in local frame: ************************
+OPAL{0}> * ************** B U N C H ********************************************************* 
+OPAL{0}> * NP              = 32768
+OPAL{0}> * Qtot            =       39.487 [pC]         Qi    =        1.205 [fC]
+OPAL{0}> * Ekin            =      72.000 [MeV]         dEkin =        0.000 [eV]
+OPAL{0}> * rmax            = (      5.92953 ,      5.98517 ,      5.96754 ) [mm]
+OPAL{0}> * rmin            = (     -5.98308 ,     -6.00790 ,     -5.98716 ) [mm]
+OPAL{0}> * rms beam size   = (      1.94725 ,      1.95178 ,      1.98421 ) [mm]
+OPAL{0}> * rms momenta     = (  1.03714e-16 ,  5.73422e-14 ,  3.54718e-13 ) [beta gamma]
+OPAL{0}> * mean position   = (      0.00000 ,     -0.00000 ,     -0.00000 ) [um]
+OPAL{0}> * mean momenta    = ( -1.64450e-17 ,  3.99202e-01 ,  6.95062e-18 ) [beta gamma]
+OPAL{0}> * rms emittance   = (  5.05902e-19 ,  2.80358e-16 ,  1.76305e-15 ) (not normalized)
+OPAL{0}> * rms correlation = (  2.00994e-03 , -9.33442e-04 ,  7.92795e-03 )
+OPAL{0}> * hr              = (    600.78992 ,    450.59244 ,    450.59244 ) [um]
+OPAL{0}> * dh              =   2.00000e+01 [%]
+OPAL{0}> * t               =        0.000 [fs]         dT    =       54.843 [ps]
+OPAL{0}> * spos            =        0.000 [um]
+OPAL{0}> * ********************************************************************************** 
+OPAL{0}> 
+OPAL{0}> 
+OPAL{0}> * Phase space dump 0 (local frame) at integration step 0
+OPAL{0}> * T = 0 ns, Live Particles: 32768
+OPAL{0}> * E = 72 MeV, beta * gamma = 0.3992
+OPAL{0}> * Bunch position: R =  2130 mm, Theta = 0.00027079 Deg, Z = 0.0017547 mm
+OPAL{0}> * Local Azimuth = 0.024973 Deg, Local Elevation = -2.5444e-14 Deg
+OPAL{0}> 
+OPAL{0}> * *********************** Bunch information in global frame: ***********************
+OPAL{0}> * ************** B U N C H ********************************************************* 
+OPAL{0}> * NP              = 32768
+OPAL{0}> * Qtot            =       39.487 [pC]         Qi    =        1.205 [fC]
+OPAL{0}> * Ekin            =      72.000 [MeV]         dEkin =        0.000 [eV]
+OPAL{0}> * rmax            = (      2.13595 ,      0.00600 ,      0.00597 ) [m]
+OPAL{0}> * rmin            = (      2.12404 ,     -0.00600 ,     -0.00599 ) [m]
+OPAL{0}> * rms beam size   = (      1.94724 ,      1.95179 ,      1.98421 ) [mm]
+OPAL{0}> * rms momenta     = (  1.03715e-16 ,  1.97602e-16 ,  3.54718e-13 ) [beta gamma]
+OPAL{0}> * mean position   = (      2.13002 ,      0.00001 ,      0.00000 ) [m]
+OPAL{0}> * mean momenta    = ( -1.74000e-04 ,  3.99202e-01 , -1.70331e-16 ) [beta gamma]
+OPAL{0}> * rms emittance   = (  0.00000e+00 ,  0.00000e+00 ,  1.76305e-15 ) (not normalized)
+OPAL{0}> * rms correlation = (  3.22108e+00 , -4.17941e+00 ,  7.92795e-03 )
+OPAL{0}> * hr              = (    600.78992 ,    450.59244 ,    450.59244 ) [um]
+OPAL{0}> * dh              =   2.00000e+01 [%]
+OPAL{0}> * t               =        0.000 [fs]         dT    =       54.843 [ps]
+OPAL{0}> * spos            =        0.000 [um]
+OPAL{0}> * ********************************************************************************** 
+OPAL{0}> 
+OPAL{0}> * Beginning of this run is at t = 0 [ns]
+OPAL{0}> * The time step is set to dt = 0.32906 [ns]
+OPAL{0}> * MBM: Time interval between neighbour bunches is set to 118.46[ns]
+OPAL{0}> * MBM: The particles energy bin reset frequency is set to 100
+OPAL{0}> * Single particle trajectory dump frequency is set to 1000000
+OPAL{0}> * The frequency to solve space charge fields is set to 2
+OPAL{0}> * The repartition frequency is set to 5
+OPAL{0}> 
+OPAL{0}> * ---------------------- Start tracking ---------------------------------- *
+OPAL{0}> 
+OPAL{0}> *** Finished turn 1, Total number of live particles: 32768
+OPAL{0}> 
+OPAL{0}> * Phase space dump 1 (local frame) at integration step 360
+OPAL{0}> * T = 118.46 ns, Live Particles: 32768
+OPAL{0}> * E = 72 MeV, beta * gamma = 0.40581
+OPAL{0}> * Bunch position: R =  2154.3 mm, Theta = -0.10536 Deg, Z = -0.074456 mm
+OPAL{0}> * Local Azimuth = -0.36032 Deg, Local Elevation = -0.003497 Deg
+OPAL{0}> * MBM: Injecting a new bunch ...
+OPAL{0}> 
+OPAL{0}> * Read beam from H5 file for multibunch simulation ... Done.
+Ippl{0}> Before reset Bin: 
+Ippl{0}> Bin 0 : particle number = 131072 gamma = 0.269801
+Ippl{0}> minimal beta*gamma = 0.399202
+Ippl{0}> After reset Bin: 
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07797
+OPAL{0}> * MBM: Bunch 2 injected, total particle number = 65536
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07797
+OPAL{0}> * Initialization of all levels
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 0
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+OPAL{0}> * Initialization done.
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07797
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07797
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07797
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07797
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07797
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07797
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07797
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07797
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07797
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07797
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07797
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Before reset Bin: 
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> minimal beta*gamma = 0.400838
+Ippl{0}> After reset Bin: 
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07861
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07925
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07925
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07925
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07925
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07925
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07925
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07925
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07925
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07925
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07925
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07925
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07925
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07925
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07925
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Before reset Bin: 
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07925
+Ippl{0}> minimal beta*gamma = 0.402455
+Ippl{0}> After reset Bin: 
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07925
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07925
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07925
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07925
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07925
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07925
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07925
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07925
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07925
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07917
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07917
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07917
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07917
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07917
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07917
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07917
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07917
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07917
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07917
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07917
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07917
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07917
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07917
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07917
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07917
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07917
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07917
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07917
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07917
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07917
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07917
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07917
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07982
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07982
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07982
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07982
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07982
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07982
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07982
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07982
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07982
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07982
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07982
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07982
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07982
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07982
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07982
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07982
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07982
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07982
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07982
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Before reset Bin: 
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07982
+Ippl{0}> minimal beta*gamma = 0.404
+Ippl{0}> After reset Bin: 
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07982
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07982
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07982
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07982
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07982
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07982
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07982
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07982
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07982
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07982
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07982
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07981
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07981
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07981
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07981
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07981
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07981
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07981
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07981
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07981
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07981
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07981
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07981
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07981
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07981
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07981
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.07981
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Before reset Bin: 
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> minimal beta*gamma = 0.405726
+Ippl{0}> After reset Bin: 
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+OPAL{0}> 
+OPAL{0}> *** Finished turn 2, Total number of live particles: 65536
+OPAL{0}> 
+OPAL{0}> * Phase space dump 2 (local frame) at integration step 720
+OPAL{0}> * T = 236.92 ns, Live Particles: 65536
+OPAL{0}> * E = 74.315 MeV, beta * gamma = 0.40912
+OPAL{0}> * Bunch position: R =  2169.2 mm, Theta = -0.014932 Deg, Z = -0.050571 mm
+OPAL{0}> * Local Azimuth = -0.19747 Deg, Local Elevation = -0.0034407 Deg
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08046
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Before reset Bin: 
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> minimal beta*gamma = 0.407265
+Ippl{0}> After reset Bin: 
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08111
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08177
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08177
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08177
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08177
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08177
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08177
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08177
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08177
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08177
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08177
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08177
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08177
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08177
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08177
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08177
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08177
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08177
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08177
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08177
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08177
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08177
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08177
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08167
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08167
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08167
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08167
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08167
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08167
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08167
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08167
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08167
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08167
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08167
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08167
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Before reset Bin: 
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08167
+Ippl{0}> minimal beta*gamma = 0.408746
+Ippl{0}> After reset Bin: 
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08167
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08167
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08167
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08167
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08167
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08167
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08167
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08167
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08167
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08167
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08167
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08167
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08233
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08233
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08233
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08233
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08233
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Before reset Bin: 
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> minimal beta*gamma = 0.410582
+Ippl{0}> After reset Bin: 
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08232
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08298
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08298
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08298
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08298
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08298
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08298
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08298
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08298
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08298
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08298
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08298
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08298
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08298
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08298
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08298
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08298
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08298
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08298
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08298
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08298
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08298
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08298
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08298
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08298
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08298
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08298
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08298
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08298
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08298
+OPAL{0}> * Start regriding:
+OPAL{0}> *     Old finest level: 2
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}[2]> *         Start tagging of level 0
+OPAL{0}[2]> *         Finished tagging of level 0
+OPAL{0}[2]> *         Start tagging of level 1
+OPAL{0}[2]> *         Finished tagging of level 1
+OPAL{0}> *     New finest level: 2
+OPAL{0}> * Finished regriding
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08298
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08298
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08298
+Ippl{0}> Bin 0 : particle number = 65536 gamma = 1.08298
+OPAL{0}> 
+OPAL{0}> *** Finished turn 3, Total number of live particles: 65536
+OPAL{0}> 
+OPAL{0}> * Phase space dump 3 (local frame) at integration step 1080
+OPAL{0}> * T = 355.38 ns, Live Particles: 65536
+OPAL{0}> * E = 75.492 MeV, beta * gamma = 0.41572
+OPAL{0}> * Bunch position: R =  2200.5 mm, Theta = 0.17465 Deg, Z = -0.053807 mm
+OPAL{0}> * Local Azimuth = 0.17361 Deg, Local Elevation = -0.00364 Deg
+OPAL{0}> 
+OPAL{0}> * ---------------------- DONE TRACKING PARTICLES ------------------------- *
+OPAL{0}> 
+OPAL{0}> * *********************** Bunch information in global frame: ***********************
+OPAL{0}> * ************** B U N C H ********************************************************* 
+OPAL{0}> * NP              = 65536
+OPAL{0}> * Qtot            =       78.973 [pC]         Qi    =        1.205 [fC]
+OPAL{0}> * Ekin            =      77.855 [MeV]         dEkin =       1.189 [MeV]
+OPAL{0}> * rmax            = (      2.22955 ,      0.02332 ,      0.00335 ) [m]
+OPAL{0}> * rmin            = (      2.16984 ,     -0.00524 ,     -0.00331 ) [m]
+OPAL{0}> * rms beam size   = (     17.01640 ,      4.75077 ,      1.04649 ) [mm]
+OPAL{0}> * rms momenta     = (  1.78371e-03 ,  3.29521e-03 ,  2.47856e-04 ) [beta gamma]
+OPAL{0}> * mean position   = (      2.20045 ,      0.00671 ,     -0.00005 ) [m]
+OPAL{0}> * mean momenta    = ( -1.25967e-03 ,  4.15722e-01 , -2.64111e-05 ) [beta gamma]
+OPAL{0}> * rms emittance   = (  5.61989e-05 ,  2.37284e-05 ,  5.70791e-07 ) (not normalized)
+OPAL{0}> * rms correlation = ( -6.38330e-01 ,  7.76475e-01 , -4.03734e-01 )
+OPAL{0}> * hr              = (      2.29020 ,      1.71765 ,      1.71765 ) [mm]
+OPAL{0}> * dh              =   2.00000e+01 [%]
+OPAL{0}> * t               =      355.380 [ns]         dT    =       54.843 [ps]
+OPAL{0}> * spos            =        40.188 [m]
+OPAL{0}> * ********************************************************************************** 
+OPAL{0}> 
+OPAL{0}> * ------------------------------------------------------------------------ *
+OPAL{0}> * Finalizing i.e. write data and close files :
+OPAL{0}> * Finalize cyclotron RINGCYCLOTRON
+OPAL{0}> * ------------------------------------------------------------------------ *
+OPAL{0}> * End of input stream 'AmrRingCyclotron-02.in'
+Timings{0}> -----------------------------------------------------------------
+Timings{0}>      Timing results for 4 nodes:
+Timings{0}> -----------------------------------------------------------------
+Timings{0}> mainTimer........... Wall tot =    107.371, CPU tot =     107.13
+Timings{0}> 
+Timings{0}> AMR AssignDensity... Wall max =    1.90934, CPU max =       1.87
+Timings{0}>                      Wall avg =    1.86421, CPU avg =       1.82
+Timings{0}>                      Wall min =    1.82385, CPU min =       1.74
+Timings{0}> 
+Timings{0}> AMR map particles... Wall max =   0.144907, CPU max =       0.17
+Timings{0}>                      Wall avg =    0.13677, CPU avg =     0.1425
+Timings{0}>                      Wall min =   0.132208, CPU min =       0.08
+Timings{0}> 
+Timings{0}> AMR regrid.......... Wall max =    15.4067, CPU max =       15.4
+Timings{0}>                      Wall avg =    15.3976, CPU avg =    15.3625
+Timings{0}>                      Wall min =    15.3932, CPU min =      15.33
+Timings{0}> 
+Timings{0}> AMR solve........... Wall max =    55.3304, CPU max =      55.42
+Timings{0}>                      Wall avg =    55.3241, CPU avg =    55.1725
+Timings{0}>                      Wall min =     55.318, CPU min =      54.93
+Timings{0}> 
+Timings{0}> AMR sort particles.. Wall max =    2.58282, CPU max =       2.76
+Timings{0}>                      Wall avg =     2.4751, CPU avg =     2.5425
+Timings{0}>                      Wall min =    2.30319, CPU min =       2.23
+Timings{0}> 
+Timings{0}> AMR update particle. Wall max =    13.0836, CPU max =      13.24
+Timings{0}>                      Wall avg =    12.9754, CPU avg =    12.9975
+Timings{0}>                      Wall min =    12.8122, CPU min =      12.73
+Timings{0}> 
+Timings{0}> Binaryrepart........ Wall max =   0.317055, CPU max =       0.33
+Timings{0}>                      Wall avg =   0.315481, CPU avg =       0.31
+Timings{0}>                      Wall min =   0.313633, CPU min =       0.27
+Timings{0}> 
+Timings{0}> Boundingbox......... Wall max =    2.30074, CPU max =       2.32
+Timings{0}>                      Wall avg =     2.2411, CPU avg =        2.2
+Timings{0}>                      Wall min =    2.14726, CPU min =       2.06
+Timings{0}> 
+Timings{0}> Boundingbox-bounds.. Wall max =          0, CPU max =          0
+Timings{0}>                      Wall avg =          0, CPU avg =          0
+Timings{0}>                      Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> Boundingbox-update.. Wall max =          0, CPU max =          0
+Timings{0}>                      Wall avg =          0, CPU avg =          0
+Timings{0}>                      Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> Compute Statistics.. Wall max = 0.00628242, CPU max =       0.02
+Timings{0}>                      Wall avg = 0.00617897, CPU avg =       0.01
+Timings{0}>                      Wall min = 0.00606099, CPU min =          0
+Timings{0}> 
+Timings{0}> Create Distr........ Wall max =          0, CPU max =          0
+Timings{0}>                      Wall avg =          0, CPU avg =          0
+Timings{0}>                      Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> DeleteParticles..... Wall max =     8.8983, CPU max =       8.72
+Timings{0}>                      Wall avg =    7.55262, CPU avg =     7.4925
+Timings{0}>                      Wall min =    6.91407, CPU min =       6.85
+Timings{0}> 
+Timings{0}> Dump................ Wall max =    1.05709, CPU max =       1.08
+Timings{0}>                      Wall avg =    1.01636, CPU avg =     0.9625
+Timings{0}>                      Wall min =   0.993136, CPU min =       0.85
+Timings{0}> 
+Timings{0}> Fast inside test.... Wall max =          0, CPU max =          0
+Timings{0}>                      Wall avg =          0, CPU avg =          0
+Timings{0}>                      Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> Frametransform...... Wall max =   0.636099, CPU max =       0.65
+Timings{0}>                      Wall avg =   0.615406, CPU avg =       0.62
+Timings{0}>                      Wall min =   0.577492, CPU min =       0.58
+Timings{0}> 
+Timings{0}> Histogram........... Wall max =          0, CPU max =          0
+Timings{0}>                      Wall avg =          0, CPU avg =          0
+Timings{0}>                      Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> Initialize geometry. Wall max =          0, CPU max =          0
+Timings{0}>                      Wall avg =          0, CPU avg =          0
+Timings{0}>                      Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> Inside test......... Wall max =          0, CPU max =          0
+Timings{0}>                      Wall avg =          0, CPU avg =          0
+Timings{0}>                      Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> Integration......... Wall max =    19.4581, CPU max =      19.41
+Timings{0}>                      Wall avg =    18.8443, CPU avg =    18.8775
+Timings{0}>                      Wall min =    17.5359, CPU min =       17.8
+Timings{0}> 
+Timings{0}> Load Distr.......... Wall max =          0, CPU max =          0
+Timings{0}>                      Wall avg =          0, CPU avg =          0
+Timings{0}>                      Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> Particle Binning.... Wall max = 0.00959786, CPU max =       0.02
+Timings{0}>                      Wall avg = 0.00887877, CPU avg =     0.0125
+Timings{0}>                      Wall min = 0.00786502, CPU min =       0.01
+Timings{0}> 
+Timings{0}> Particle Inside..... Wall max =          0, CPU max =          0
+Timings{0}>                      Wall avg =          0, CPU avg =          0
+Timings{0}>                      Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> PluginElements...... Wall max = 0.00108712, CPU max =          0
+Timings{0}>                      Wall avg = 0.00100156, CPU avg =          0
+Timings{0}>                      Wall min = 0.000924197, CPU min =          0
+Timings{0}> 
+Timings{0}> Ray tracing......... Wall max =          0, CPU max =          0
+Timings{0}>                      Wall avg =          0, CPU avg =          0
+Timings{0}>                      Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> Read Bunch H5....... Wall max =  0.0457146, CPU max =       0.04
+Timings{0}>                      Wall avg =  0.0447329, CPU avg =       0.03
+Timings{0}>                      Wall min =   0.044022, CPU min =       0.02
+Timings{0}> 
+Timings{0}> Save Bunch H5....... Wall max =  0.0171307, CPU max =       0.01
+Timings{0}>                      Wall avg =   0.017018, CPU avg =      0.005
+Timings{0}>                      Wall min =  0.0168265, CPU min =          0
+Timings{0}> 
+Timings{0}> SelfField total..... Wall max =    76.1432, CPU max =      76.11
+Timings{0}>                      Wall avg =    76.1206, CPU avg =     75.945
+Timings{0}>                      Wall min =    76.1023, CPU min =      75.66
+Timings{0}> 
+Timings{0}> Write H5-File....... Wall max =  0.0894733, CPU max =       0.04
+Timings{0}>                      Wall avg =  0.0893353, CPU avg =      0.025
+Timings{0}>                      Wall min =  0.0891432, CPU min =       0.01
+Timings{0}> 
+Timings{0}> Write Stat.......... Wall max =   0.397729, CPU max =       0.43
+Timings{0}>                      Wall avg =   0.363949, CPU avg =     0.3725
+Timings{0}>                      Wall min =   0.346303, CPU min =       0.29
+Timings{0}> 
+Timings{0}> -----------------------------------------------------------------
