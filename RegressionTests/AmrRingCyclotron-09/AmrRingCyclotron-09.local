@@ -1,0 +1,10 @@
+#!/bin/bash
+
+cp AmrRingCyclotron-09.h5.bak AmrRingCyclotron-09.h5
+cp AmrRingCyclotron-09.lbal.bak AmrRingCyclotron-09.lbal
+cp AmrRingCyclotron-09.grid.bak AmrRingCyclotron-09.grid
+cp AmrRingCyclotron-09.mem.bak AmrRingCyclotron-09.mem
+cp AmrRingCyclotron-09-bunch-0000.smb.bak AmrRingCyclotron-09-bunch-0000.smb
+cp AmrRingCyclotron-09-bunch-0001.smb.bak AmrRingCyclotron-09-bunch-0000.smb
+
+mpirun -np 4 $OPAL_EXE_PATH/opal AmrRingCyclotron-09.in --restart -1 --info 2 --warn 0 "$@" 2>&1
