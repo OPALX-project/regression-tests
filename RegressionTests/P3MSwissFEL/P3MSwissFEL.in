@@ -1,0 +1,188 @@
+Title, string="Swiss FEL Gun & Booster"; 
+OPTION, VERSION = 20212;
+OPTION, PSDUMPFREQ=1000;
+//------------------------------------------------------------------------ 
+// Global Parameters 
+//------------------------------------------------------------------------ 
+REAL rf_freq = 2997.912; // RF frequency. (MHz) 
+REAL n_particles = 936329; // Number of particles in simulation. 
+REAL beam_bunch_charge = 150e-15; // Charge of bunch. (C) 
+REAL beam_current = rf_freq*beam_bunch_charge*1e6; 
+REAL fs_decomp = 3; 
+
+//------------------------------------------------------------------------ 
+// Initial energy Calc 
+//------------------------------------------------------------------------ 
+REAL Edes = 1.4e-9; 
+REAL gamma = (Edes+EMASS)/EMASS; 
+REAL beta = sqrt(1-(1/gamma^2)); 
+REAL P0 = gamma*beta*EMASS;
+
+VALUE, {Edes, P0};
+//-------------------------------------------------------------------------------------
+// Diagnostics
+//-------------------------------------------------------------------------------------
+M1: Monitor, TYPE=TEMPORAL, OUTFN = "M1.h5", ELEMEDGE=0.10;
+M2: Monitor, TYPE=TEMPORAL, OUTFN = "M2.h5", ELEMEDGE=0.30;
+M3: Monitor, TYPE=TEMPORAL, OUTFN = "M3.h5", ELEMEDGE=2.95; 
+M4: Monitor, TYPE=TEMPORAL, OUTFN = "M4.h5", ELEMEDGE=8.0; 
+M5: Monitor, TYPE=TEMPORAL, OUTFN = "M5.h5", ELEMEDGE=12.0;
+M6: Monitor, TYPE=TEMPORAL, OUTFN = "M6.h5", ELEMEDGE=13.00; 
+//-------------------------------------------------------------------------------------
+
+//-------------------------------------------------------------------------------------
+// Gun
+REAL gun_l   = 1.749820E-01;  // Gun length
+REAL gun_f   = rf_freq;       // Gun frequency 
+
+GUN: RFCavity, L = gun_l, VOLT = 100.0, ELEMEDGE = 0.0, TYPE = "STANDING",
+     FMAPFN = "SwissFEL_Feb2011.T7",
+     FREQ = gun_f, LAG = (Pi)/180.0*(1.3);
+//-------------------------------------------------------------------------------------
+
+
+//-------------------------------------------------------------------------------------
+// Solenoids
+REAL KBF = 0.2081; 
+
+REAL KS1TW1 = 0.023026;
+REAL KS2TW1 = 0.023026;
+REAL KS3TW1 = 0.094228;
+REAL KS4TW1 = 0.094228;
+
+REAL KS1TW2 = 0.068;
+REAL KS2TW2 = 0.068;
+REAL KS3TW2 = 0.068;
+REAL KS4TW2 = 0.068;
+
+BF: Solenoid, L = 0.3, ELEMEDGE=0.3, KS = KBF, 
+FMAPFN = "NEW_SINGLE_SOL_NOFRINGE_ASTRA.T7";
+
+S1TW1: Solenoid, L = 1.5, ELEMEDGE=3.3, KS = KS1TW1, 
+FMAPFN = "INSB_MSLAC_Bz_NOFRINGE_ASTRA.T7";
+S2TW1: Solenoid, L = 1.5, ELEMEDGE=4.2, KS = KS2TW1, 
+FMAPFN = "INSB_MSLAC_Bz_NOFRINGE_ASTRA.T7";
+S3TW1: Solenoid, L = 1.5, ELEMEDGE=5.05, KS = KS3TW1, 
+FMAPFN = "INSB_MSLAC_Bz_NOFRINGE_ASTRA.T7";
+S4TW1: Solenoid, L = 1.5, ELEMEDGE=5.9, KS = KS4TW1, 
+FMAPFN = "INSB_MSLAC_Bz_NOFRINGE_ASTRA.T7";
+
+S1TW2: Solenoid, L = 1.5, ELEMEDGE=8.35, KS = KS1TW2, 
+FMAPFN = "INSB_MSLAC_Bz_NOFRINGE_ASTRA.T7";
+S2TW2: Solenoid, L = 1.5, ELEMEDGE=9.2, KS = KS2TW2, 
+FMAPFN = "INSB_MSLAC_Bz_NOFRINGE_ASTRA.T7";
+S3TW2: Solenoid, L = 1.5, ELEMEDGE=9.7, KS = KS3TW2, 
+FMAPFN = "INSB_MSLAC_Bz_NOFRINGE_ASTRA.T7";
+S4TW2: Solenoid, L = 1.5, ELEMEDGE=10.9, KS = KS4TW2, 
+FMAPFN = "INSB_MSLAC_Bz_NOFRINGE_ASTRA.T7";
+//------------------------------------------------------------------------------------
+//Collimator
+Col: ECOLLIMATOR, L=1.0E-3, ELEMEDGE=1.0E-6, XSIZE=343.35E-6, YSIZE=343.35E-6, OUTFN="Coll.h5";
+
+//------------------------------------------------------------------------------------
+// Linac 1 & 2 
+REAL linac_f = rf_freq;
+
+REAL TW1_phi = 0.0;
+REAL TW1_volt = 19.0;
+
+REAL TW2_phi = 0.0;
+REAL TW2_volt = 20.0;
+
+REAL dz = 0.05;    
+TW1: TravelingWave, L=2.80, VOLT=TW1_volt,
+FMAPFN="TWS_PSI_Sband_ASTRA.T7",
+ELEMEDGE=3.3+dz, NUMCELLS=121, MODE=1/3, FREQ=linac_f, LAG=TW1_phi;
+
+TW2: TravelingWave, L=2.80, VOLT=TW2_volt,
+FMAPFN="TWS_PSI_Sband_ASTRA.T7",
+ELEMEDGE=8.3+dz, NUMCELLS=121, MODE=1/3, FREQ=linac_f, LAG=TW2_phi;
+//------------------------------------------------------------------------------------
+
+
+SWISSFEL: Line = (GUN, Col, BF, TW1, S1TW1, S2TW1, S3TW1, S4TW1, TW2, S1TW2, S2TW2, S3TW2, S4TW2, M1, M2, M3, M4, M5, M6);
+
+
+//-------------------------------------------------------------------------------------
+// DISTRIBUTION: FLATTOP
+//
+// SIGMAX/Y:  	RMS radius of transverse (m).
+// TRISE/FALL:	Rise time and fall time of longitudinal guassian (s).
+// TPULSEFWHM:	FWHM of longitudinal guassian (s).
+// CUTOFFLONG:		Longitudinal cuttoff in units of sigma.
+// NBIN:		Number of energy bins to use during emission.
+// DEBIN: 		Min energy band for a bin in KeV. Defines when to combine bins.
+// EMISSIONMODEL:	NOEQUIL emission mode simulates photoinjector. 
+// EMISSIONSTEPS: 	Number of steps during emission. 
+//			Emission time step is adjusted to fit this number.
+// EKIN:	Kinetic energy of electrons at emission (eV). Used for emission model.
+// ELASER:	Energy of laser (eV). Used for NONEQUIL mode.
+// W:		Photocathode work function (eV). Used for NONEQUIL mode.
+// FE:		Fermi energy of photocathode (eV). Used for NONEQUIL mode.
+// CATHTEMP:	Temperature of photocathode (K). Used for NONEQUIL mode.
+
+
+
+REAL xy      = 211.72610512085532*1e-6;  //Astra values      
+REAL TPULSEW = 3.9999*1e-12; //Astra values
+REAL nb      = 5.0;
+
+Dist: DISTRIBUTION, TYPE = GAUSS,
+		SIGMAX = xy,
+		SIGMAY = xy,
+		//TRISE = 1.0745e-12,	// (s)
+		//TFALL = 1.0745e-12,
+		//TPULSEFWHM = TPULSEW,	// FWHM length in time (s)
+		SIGMAT = TPULSEW,
+		CUTOFFLONG = 4.0,
+		NBIN = nb,   // was 9 before
+		EMISSIONSTEPS = 200,
+		EMISSIONMODEL = ASTRA, // NONEQUIL,
+		EKIN = 0.234,  
+		ELASER = 5.0,
+		W = 3.2,
+		FE = 3.2,
+		CATHTEMP = 321.95,
+		EMITTED = True,
+		WRITETOFILE = True;
+	
+// NOTE: FWHM pulse width divided by emission steps gives the time step for the 
+// 	 emissions process. i.e 2e-12 / 100 gives a time step of 0.2e-13 (s) 
+//	 during emission.This is the not the same as the time step used in rest of the file. 
+//-------------------------------------------------------------------------------------		   
+
+//-------------------------------------------------------------------------------------
+// Define Field solvers
+
+if (fs_decomp == 2.0){
+ BOOL decx = true;
+ BOOL decy = true;
+ BOOL decz = false;
+}
+else if (fs_decomp == 1.0){
+ BOOL decx = false;
+ BOOL decy = false;
+ BOOL decz = true;
+}
+else if (fs_decomp == 3.0){
+ BOOL decx = true;
+ BOOL decy = true;
+ BOOL decz = true;
+}
+
+REAL inter_rad = 3.125e-5;
+
+FS_P3M: Fieldsolver, FSTYPE = "P3M", MX = 64, MY = 64, MT = 64, PARFFTX = decx, PARFFTY = decy, 
+       PARFFTT = decz, BCFFTX = open, BCFFTY = open, BCFFTT = open, RC=inter_rad, GREENSF = INTEGRATED;
+
+//-------------------------------------------------------------------------------------
+BEAM1:  BEAM, PARTICLE = ELECTRON, pc = P0, NPART = n_particles, BFREQ = rf_freq, 
+        BCURRENT = beam_current, CHARGE = -1;
+//-------------------------------------------------------------------------------------
+
+
+TRACK, LINE = SWISSFEL, BEAM = BEAM1, MAXSTEPS = 100, DT = {2.0e-12}, ZSTOP={7.0};
+RUN, METHOD = "PARALLEL-T", BEAM = BEAM1, FIELDSOLVER = FS_P3M, DISTRIBUTION = Dist;
+ENDTRACK;
+
+STOP;
