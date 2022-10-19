@@ -84,7 +84,7 @@ magnetF: VERTICALFFAMAGNET,
           FIELD_INDEX=M_INDEX,
           MAX_HORIZONTAL_POWER=MAX_HORIZONTAL_POWER,
           END_LENGTH=F_END_LENGTH,
-          CENTRE_LENGTH=F_CENTRE_LENGTH,
+          CENTRE_LENGTH=F_CENTRE_LENGTH/2,
           HEIGHT_NEG_EXTENT=NEG_EXTENT,
           HEIGHT_POS_EXTENT=POS_EXTENT,
           WIDTH=MAG_WIDTH,
@@ -95,7 +95,7 @@ magnetD: VERTICALFFAMAGNET,
           FIELD_INDEX=M_INDEX,
           MAX_HORIZONTAL_POWER=MAX_HORIZONTAL_POWER,
           END_LENGTH=D_END_LENGTH,
-          CENTRE_LENGTH=D_CENTRE_LENGTH,
+          CENTRE_LENGTH=D_CENTRE_LENGTH/2,
           HEIGHT_NEG_EXTENT=NEG_EXTENT,
           HEIGHT_POS_EXTENT=POS_EXTENT,
           WIDTH=MAG_WIDTH,
@@ -374,10 +374,7 @@ IF (DO_REF_PROBES) {
     REAL THIS_PROBE_PHI=PI/2;
     BUILD_REF_PROBE(RefProbe01, REF_PROBE_X_, REF_PROBE_Y_, THIS_PROBE_PHI, REF_PROBE_X_NORM_, REF_PROBE_Y_NORM_);
 
-    refprobe: Line = (RefProbe01)
-        //, RefProbe02, RefProbe03, RefProbe04, RefProbe05, 
-        //              RefProbe06, RefProbe07, RefProbe08, RefProbe09, RefProbe10,
-        //              RefProbe11, RefProbe12, RefProbe13, RefProbe14, RefProbe15);
+    refprobe: Line = (RefProbe01);
 } ELSE {
     dummy_offset: LOCAL_CARTESIAN_OFFSET,
                     end_position_x=0., end_position_y=0.,
