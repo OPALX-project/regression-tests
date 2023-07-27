@@ -1,3 +1,4 @@
 #!/bin/bash
 
-mpirun -np 4 $OPAL_EXE_PATH/opal AmrRingCyclotron-05.in --info 2 --warn 0 "$@" 2>&1
+cd "$(dirname "$(readlink -nf "$0")")"
+mpirun -np 4 "$OPAL_EXE_PATH/opal" AmrRingCyclotron-05.in --info 2 --warn 0 "$@" 2>&1

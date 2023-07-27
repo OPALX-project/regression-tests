@@ -1,2 +1,4 @@
 #!/bin/bash
-mpirun -np 4 $OPAL_EXE_PATH/opal P3MSwissFEL.in --commlib mpi --restartfn swissfel-0.5m.h5 --restart -1 --info 6 --warn 0 2>&1
+
+cd "$(dirname "$(readlink -nf "$0")")"
+mpirun -np 4 "$OPAL_EXE_PATH/opal" P3MSwissFEL.in --commlib mpi --restartfn swissfel-0.5m.h5 --restart -1 --info 6 --warn 0 2>&1

@@ -1,3 +1,4 @@
 #!/bin/bash
 
+cd "$(dirname "$(readlink -nf "$0")")"
 timeout 300 mpirun -np 2 "$OPAL_EXE_PATH/opal" "$@" Mask-1.in --info 3 --warn 0 "$@" 2>&1
