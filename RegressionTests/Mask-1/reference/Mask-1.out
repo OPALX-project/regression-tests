@@ -1,38 +1,32 @@
-Ippl> CommMPI: Parent process waiting for children ...
-Ippl> CommMPI: Child 1 ready.
-Ippl> CommMPI: Initialization complete.
-{0}>                ____  _____       ___ 
-{0}>               / __ \|  __ \ /\   | | 
-{0}>              | |  | | |__) /  \  | |
-{0}>              | |  | |  ___/ /\ \ | |
-{0}>              | |__| | |  / ____ \| |____
-{0}>               \____/|_| /_/    \_\______|
+OPAL{0}>                ____  _____       ___ 
+OPAL{0}>               / __ \|  __ \ /\   | | 
+OPAL{0}>              | |  | | |__) /  \  | |
+OPAL{0}>              | |  | |  ___/ /\ \ | |
+OPAL{0}>              | |__| | |  / ____ \| |____
+OPAL{0}>               \____/|_| /_/    \_\______|
 OPAL{0}> 
-OPAL{0}> This is OPAL (Object Oriented Parallel Accelerator Library) Version 2.0.0
+OPAL{0}> This is OPAL (Object Oriented Parallel Accelerator Library) Version 2022.2.99
+OPAL{0}>             git rev. 8a76dc839815fc4ab853089777906ced5f17cf22
 OPAL{0}> 
-OPAL{0}>                 (c) PSI, http://amas.web.psi.ch
+OPAL{0}> 
+OPAL{0}>                      (c) PSI, http://amas.web.psi.ch
+OPAL{0}> 
+OPAL{0}> 
 OPAL{0}> The optimiser (former opt-Pilot) is integrated 
 OPAL{0}> 
 OPAL{0}> Please send cookies, goodies or other motivations (wine and beer ... ) 
 OPAL{0}> to the OPAL developers opal@lists.psi.ch
 OPAL{0}> 
-OPAL{0}> Time: 06:34:14 date: 21/11/2018
+OPAL{0}> Time: 09:30:45 date: 01/09/2023
 OPAL{0}> 
-Ippl> CommMPI: Started job 1 on host `falun'.
-OPAL{0}> Couldn't find startup file "/home/baboch/init.opal".
-OPAL{0}> Note: this is not mandatory for an OPAL simulation!
+OPAL{0}> * Reading input stream 'Mask-1.in'
 OPAL{0}> 
-OPAL{0}> * Reading input stream "Mask-1.in".
+OPAL{0}> value: {GAMMA,EDES,BETA,GAMBET} = {1.07867, 0.07381, 0.374885, 0.404376}
 OPAL{0}> 
-OPAL{0}> value: {GAMMA,EDES,BETA,GAMBET}={1.07867,0.07381,0.374885,0.404376}
-OPAL{0}> 
-OPAL{0}[3]> 
-OPAL{0}[3]> 5 elements selected.
-OPAL{0}[3]> 
-OPAL{0}> * ********************************************************************************** 
-OPAL{0}> * Selected Tracking Method == PARALLEL-T, NEW TRACK
-OPAL{0}> * ********************************************************************************** 
-Ippl{0}> no solver attached
+OPAL{0}[2]> 
+OPAL{0}[2]> 5 elements selected.
+OPAL{0}[2]> 
+Ippl{0}> No solver attached
 Ippl{0}[3]> BC set for normal Beam
 OPAL{0}[2]> * Generation of distribution with seed = 123456789
 OPAL{0}[2]> * isn't scalable with number of particles and cores.
@@ -51,9 +45,24 @@ OPAL{0}> * r(3, : ) =          0 &          0 &     0.9676 &     0.2523 &       
 OPAL{0}> * r(4, : ) =  -0.009576 &     0.2169 &          0 &          0 &     0.9761 &          0 \\
 OPAL{0}> * r(5, : ) =  -0.007475 &     0.2174 &          0 &          0 &      0.976 &   0.005777 \\
 OPAL{0}> 
+OPAL{0}> * ************* T R A C K  R U N *************************************************** 
+OPAL{0}> * Selected Tracking Method == PARALLEL-T, NEW TRACK
+OPAL{0}> * ********************************************************************************** 
+OPAL{0}> * Phase space dump frequency    = 1000000
+OPAL{0}> * Statistics dump frequency     = 4 w.r.t. the time step.
+OPAL{0}> * DT                            = 5e-12 [s]
+OPAL{0}> * MAXSTEPS                      = 355910
+OPAL{0}> * Mass of simulation particle   = 9.37e-07 [GeV/c^2]
+OPAL{0}> * Charge of simulation particle = 1.6e-25 [C]
+OPAL{0}> * ********************************************************************************** 
+Ippl{0}> * Creating new file for data: 'Mask-1.stat'
+Ippl{0}> * Creating new file for data: 'Mask-1.lbal'
+OPAL{0}> 
 OPAL{0}> * ************* D I S T R I B U T I O N ********************************************
 OPAL{0}> * 
 OPAL{0}> * Number of particles: 100000
+OPAL{0}> * 
+OPAL{0}> * Distribution input momentum units: [Beta Gamma]
 OPAL{0}> * 
 OPAL{0}> * Distribution type: GAUSS
 OPAL{0}> * 
@@ -85,11 +94,12 @@ OPAL{0}>
 OPAL{0}> * ************* B E A M ************************************************************ 
 OPAL{0}> * BEAM        BEAM_
 OPAL{0}> * PARTICLE    PROTON
-OPAL{0}> * CURRENT     8.1012e-07 A
-OPAL{0}> * FREQUENCY   5.0633e+07 MHz
+OPAL{0}> * REST MASS   9.3827e-01 [GeV]
 OPAL{0}> * CHARGE      +e * 1.0000e+00 
-OPAL{0}> * REST MASS   9.3827e-01 GeV
-OPAL{0}> * MOMENTUM    3.7941e-01
+OPAL{0}> * MOMENTUM    3.7941e+08 [eV/c]
+OPAL{0}> * MOMENTUM TOLERANCE 1.0000e-02
+OPAL{0}> * CURRENT     8.1012e-07 [A]
+OPAL{0}> * FREQUENCY   5.0633e+07 [MHz]
 OPAL{0}> * NPART       1.0000e+05
 OPAL{0}> * ********************************************************************************** 
 OPAL{0}> 
@@ -140,23 +150,23 @@ Ippl{0}[3]>  vnode 0 : Node = 1 ; vnode_m = 1 ; Domain = {[32:63:1],[0:63:1],[0:
 Ippl{0}[3]> 
 OPAL{0}> * ********************************************************************************** 
 OPAL{0}> 
-OPAL{0}[2]> Phase space dump frequency 1000000 and statistics dump frequency 2 w.r.t. the time step.
 Ippl{0}[3]> MSLIT1 gone live
 Ippl{0}[3]> MASK1 gone live
 Ippl{0}[3]> MSLIT2 gone live
 OPAL{0}> 
-OPAL{0}> Size of map 7 sections 
-OPAL{0}> Key: (30.876122 - 32.416959) number of overlapping elements 0
-OPAL{0}> Key: (32.416959 - 32.427074) number of overlapping elements 1
-OPAL{0}>                              MSLIT1
-OPAL{0}> Key: (32.427074 - 32.431569) number of overlapping elements 0
-OPAL{0}> Key: (32.431569 - 32.441684) number of overlapping elements 1
-OPAL{0}>                              MASK1
-OPAL{0}> Key: (32.441684 - 32.466410) number of overlapping elements 0
-OPAL{0}> Key: (32.466410 - 32.476524) number of overlapping elements 1
-OPAL{0}>                              MSLIT2
-OPAL{0}> Key: (32.476524 - 32.563063) number of overlapping elements 0
+OPAL{0}> * Size of map 7 sections 
+OPAL{0}> * Key: (31.999438 - 32.416959) number of overlapping elements 0
+OPAL{0}> * Key: (32.416959 - 32.427074) number of overlapping elements 1
+OPAL{0}> *                              MSLIT1
+OPAL{0}> * Key: (32.427074 - 32.432131) number of overlapping elements 0
+OPAL{0}> * Key: (32.432131 - 32.442246) number of overlapping elements 1
+OPAL{0}> *                              MASK1
+OPAL{0}> * Key: (32.442246 - 32.466971) number of overlapping elements 0
+OPAL{0}> * Key: (32.466971 - 32.477086) number of overlapping elements 1
+OPAL{0}> *                              MSLIT2
+OPAL{0}> * Key: (32.477086 - 32.562000) number of overlapping elements 0
 OPAL{0}> 
+Ippl{0}> * Creating new file for data: 'data/Mask-1_ElementPositions.sdds'
 OPAL{0}> 
 OPAL{0}> * ************** B U N C H ********************************************************* 
 OPAL{0}> * NP              = 100000
@@ -168,843 +178,1360 @@ OPAL{0}> * rms beam size   = (     17.75538 ,     17.75706 ,      0.00001 ) [mm]
 OPAL{0}> * rms momenta     = (  0.00000e+00 ,  0.00000e+00 ,  1.59152e-03 ) [beta gamma]
 OPAL{0}> * mean position   = (      0.00000 ,      0.00000 ,      0.00000 ) [um]
 OPAL{0}> * mean momenta    = (  0.00000e+00 ,  0.00000e+00 ,  4.04376e-01 ) [beta gamma]
-OPAL{0}> * rms emittance   = (  0.00000e+00 ,  0.00000e+00 ,  2.21078e-13 ) (not normalized)
-OPAL{0}> * rms correlation = (  0.00000e+00 ,  0.00000e+00 ,  9.99983e-01 )
+OPAL{0}> * rms emittance   = (  0.00000e+00 ,  0.00000e+00 ,  2.21075e-13 ) (not normalized)
+OPAL{0}> * rms correlation = (         -nan ,         -nan ,  9.99983e-01 )
 OPAL{0}> * hr              = (      1.12507 ,      1.12473 ,      0.00000 ) [mm]
 OPAL{0}> * dh              =   1.00000e-10 [%]
-OPAL{0}> * t               =      284.732 [ns]         dT    =       10.000 [ps]
+OPAL{0}> * t               =      284.728 [ns]         dT    =        5.000 [ps]
 OPAL{0}> * spos            =        32.000 [m]
 OPAL{0}> * ********************************************************************************** 
 OPAL{0}> 
-OPAL{0}> Track start at: 06:34:24, t= 284.732 [ns]; zstart at: 32.000 [m]
-OPAL{0}> Executing ParallelTTracker, initial dt= 10.000 [ps];
-OPAL{0}> max integration steps 88977, next step= 0
+OPAL{0}> * Track start at: 09:31:00, t= 284.728 [ns]; zstart at: 32.000 [m]
+OPAL{0}> * Executing ParallelTTracker
+OPAL{0}> * Initial dt = 5.000 [ps]
+OPAL{0}> * Max integration steps = 355910, next step = 0
+OPAL{0}> 
 ParallelTTracker {0}[2]> MINBINEMITTED 10
 ParallelTTracker {0}[2]> MINSTEPFORREBIN 200
 ParallelTTracker {0}[2]> REPARTFREQ 1000
-ParallelTTracker {0}[3]> 06:34:24 Step      0 at 32.001 [m], t= 284.742 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step      1 at 32.002 [m], t= 284.752 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step      2 at 32.003 [m], t= 284.762 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step      3 at 32.004 [m], t= 284.772 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step      4 at 32.006 [m], t= 284.782 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step      5 at 32.007 [m], t= 284.792 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step      6 at 32.008 [m], t= 284.802 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step      7 at 32.009 [m], t= 284.812 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step      8 at 32.010 [m], t= 284.822 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step      9 at 32.011 [m], t= 284.832 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     10 at 32.012 [m], t= 284.842 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     11 at 32.013 [m], t= 284.852 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     12 at 32.015 [m], t= 284.862 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     13 at 32.016 [m], t= 284.872 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     14 at 32.017 [m], t= 284.882 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     15 at 32.018 [m], t= 284.892 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     16 at 32.019 [m], t= 284.902 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     17 at 32.020 [m], t= 284.912 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     18 at 32.021 [m], t= 284.922 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     19 at 32.022 [m], t= 284.932 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     20 at 32.024 [m], t= 284.942 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     21 at 32.025 [m], t= 284.952 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     22 at 32.026 [m], t= 284.962 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     23 at 32.027 [m], t= 284.972 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     24 at 32.028 [m], t= 284.982 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     25 at 32.029 [m], t= 284.992 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     26 at 32.030 [m], t= 285.002 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     27 at 32.031 [m], t= 285.012 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     28 at 32.033 [m], t= 285.022 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     29 at 32.034 [m], t= 285.032 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     30 at 32.035 [m], t= 285.042 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     31 at 32.036 [m], t= 285.052 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     32 at 32.037 [m], t= 285.062 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     33 at 32.038 [m], t= 285.072 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     34 at 32.039 [m], t= 285.082 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     35 at 32.040 [m], t= 285.092 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     36 at 32.042 [m], t= 285.102 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     37 at 32.043 [m], t= 285.112 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     38 at 32.044 [m], t= 285.122 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     39 at 32.045 [m], t= 285.132 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     40 at 32.046 [m], t= 285.142 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     41 at 32.047 [m], t= 285.152 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     42 at 32.048 [m], t= 285.162 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     43 at 32.049 [m], t= 285.172 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     44 at 32.051 [m], t= 285.182 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     45 at 32.052 [m], t= 285.192 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     46 at 32.053 [m], t= 285.202 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     47 at 32.054 [m], t= 285.212 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     48 at 32.055 [m], t= 285.222 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     49 at 32.056 [m], t= 285.232 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     50 at 32.057 [m], t= 285.242 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     51 at 32.058 [m], t= 285.252 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     52 at 32.060 [m], t= 285.262 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     53 at 32.061 [m], t= 285.272 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     54 at 32.062 [m], t= 285.282 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     55 at 32.063 [m], t= 285.292 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     56 at 32.064 [m], t= 285.302 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     57 at 32.065 [m], t= 285.312 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     58 at 32.066 [m], t= 285.322 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     59 at 32.067 [m], t= 285.332 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     60 at 32.069 [m], t= 285.342 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     61 at 32.070 [m], t= 285.352 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     62 at 32.071 [m], t= 285.362 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     63 at 32.072 [m], t= 285.372 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     64 at 32.073 [m], t= 285.382 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     65 at 32.074 [m], t= 285.392 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     66 at 32.075 [m], t= 285.402 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     67 at 32.076 [m], t= 285.412 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     68 at 32.078 [m], t= 285.422 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     69 at 32.079 [m], t= 285.432 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     70 at 32.080 [m], t= 285.442 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     71 at 32.081 [m], t= 285.452 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     72 at 32.082 [m], t= 285.462 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     73 at 32.083 [m], t= 285.472 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     74 at 32.084 [m], t= 285.482 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     75 at 32.085 [m], t= 285.492 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     76 at 32.087 [m], t= 285.502 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     77 at 32.088 [m], t= 285.512 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     78 at 32.089 [m], t= 285.522 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     79 at 32.090 [m], t= 285.532 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     80 at 32.091 [m], t= 285.542 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     81 at 32.092 [m], t= 285.552 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     82 at 32.093 [m], t= 285.562 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     83 at 32.094 [m], t= 285.572 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     84 at 32.096 [m], t= 285.582 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     85 at 32.097 [m], t= 285.592 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     86 at 32.098 [m], t= 285.602 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     87 at 32.099 [m], t= 285.612 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     88 at 32.100 [m], t= 285.622 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     89 at 32.101 [m], t= 285.632 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     90 at 32.102 [m], t= 285.642 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     91 at 32.103 [m], t= 285.652 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     92 at 32.105 [m], t= 285.662 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     93 at 32.106 [m], t= 285.672 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     94 at 32.107 [m], t= 285.682 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     95 at 32.108 [m], t= 285.692 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     96 at 32.109 [m], t= 285.702 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step     97 at 32.110 [m], t= 285.712 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step     98 at 32.111 [m], t= 285.722 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[2]> 06:34:24 Step     99 at 32.112 [m], t= 285.732 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step    100 at 32.114 [m], t= 285.742 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step    101 at 32.115 [m], t= 285.752 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step    102 at 32.116 [m], t= 285.762 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step    103 at 32.117 [m], t= 285.772 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step    104 at 32.118 [m], t= 285.782 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:24 Step    105 at 32.119 [m], t= 285.792 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:24 Step    106 at 32.120 [m], t= 285.802 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    107 at 32.121 [m], t= 285.812 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    108 at 32.123 [m], t= 285.822 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    109 at 32.124 [m], t= 285.832 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    110 at 32.125 [m], t= 285.842 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    111 at 32.126 [m], t= 285.852 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    112 at 32.127 [m], t= 285.862 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    113 at 32.128 [m], t= 285.872 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    114 at 32.129 [m], t= 285.882 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    115 at 32.130 [m], t= 285.892 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    116 at 32.131 [m], t= 285.902 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    117 at 32.133 [m], t= 285.912 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    118 at 32.134 [m], t= 285.922 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    119 at 32.135 [m], t= 285.932 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    120 at 32.136 [m], t= 285.942 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    121 at 32.137 [m], t= 285.952 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    122 at 32.138 [m], t= 285.962 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    123 at 32.139 [m], t= 285.972 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    124 at 32.140 [m], t= 285.982 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    125 at 32.142 [m], t= 285.992 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    126 at 32.143 [m], t= 286.002 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    127 at 32.144 [m], t= 286.012 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    128 at 32.145 [m], t= 286.022 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    129 at 32.146 [m], t= 286.032 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    130 at 32.147 [m], t= 286.042 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    131 at 32.148 [m], t= 286.052 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    132 at 32.149 [m], t= 286.062 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    133 at 32.151 [m], t= 286.072 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    134 at 32.152 [m], t= 286.082 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    135 at 32.153 [m], t= 286.092 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    136 at 32.154 [m], t= 286.102 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    137 at 32.155 [m], t= 286.112 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    138 at 32.156 [m], t= 286.122 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    139 at 32.157 [m], t= 286.132 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    140 at 32.158 [m], t= 286.142 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    141 at 32.160 [m], t= 286.152 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    142 at 32.161 [m], t= 286.162 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    143 at 32.162 [m], t= 286.172 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    144 at 32.163 [m], t= 286.182 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    145 at 32.164 [m], t= 286.192 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    146 at 32.165 [m], t= 286.202 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    147 at 32.166 [m], t= 286.212 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    148 at 32.167 [m], t= 286.222 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    149 at 32.169 [m], t= 286.232 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    150 at 32.170 [m], t= 286.242 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    151 at 32.171 [m], t= 286.252 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    152 at 32.172 [m], t= 286.262 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    153 at 32.173 [m], t= 286.272 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    154 at 32.174 [m], t= 286.282 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    155 at 32.175 [m], t= 286.292 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    156 at 32.176 [m], t= 286.302 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    157 at 32.178 [m], t= 286.312 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    158 at 32.179 [m], t= 286.322 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    159 at 32.180 [m], t= 286.332 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    160 at 32.181 [m], t= 286.342 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    161 at 32.182 [m], t= 286.352 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    162 at 32.183 [m], t= 286.362 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    163 at 32.184 [m], t= 286.372 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    164 at 32.185 [m], t= 286.382 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    165 at 32.187 [m], t= 286.392 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    166 at 32.188 [m], t= 286.402 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    167 at 32.189 [m], t= 286.412 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    168 at 32.190 [m], t= 286.422 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    169 at 32.191 [m], t= 286.432 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    170 at 32.192 [m], t= 286.442 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    171 at 32.193 [m], t= 286.452 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    172 at 32.194 [m], t= 286.462 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    173 at 32.196 [m], t= 286.472 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    174 at 32.197 [m], t= 286.482 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    175 at 32.198 [m], t= 286.492 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    176 at 32.199 [m], t= 286.502 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    177 at 32.200 [m], t= 286.512 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    178 at 32.201 [m], t= 286.522 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    179 at 32.202 [m], t= 286.532 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    180 at 32.203 [m], t= 286.542 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    181 at 32.205 [m], t= 286.552 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    182 at 32.206 [m], t= 286.562 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    183 at 32.207 [m], t= 286.572 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    184 at 32.208 [m], t= 286.582 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    185 at 32.209 [m], t= 286.592 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    186 at 32.210 [m], t= 286.602 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    187 at 32.211 [m], t= 286.612 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    188 at 32.212 [m], t= 286.622 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    189 at 32.214 [m], t= 286.632 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    190 at 32.215 [m], t= 286.642 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    191 at 32.216 [m], t= 286.652 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    192 at 32.217 [m], t= 286.662 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    193 at 32.218 [m], t= 286.672 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    194 at 32.219 [m], t= 286.682 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    195 at 32.220 [m], t= 286.692 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    196 at 32.221 [m], t= 286.702 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    197 at 32.223 [m], t= 286.712 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    198 at 32.224 [m], t= 286.722 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[2]> 06:34:25 Step    199 at 32.225 [m], t= 286.732 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    200 at 32.226 [m], t= 286.742 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    201 at 32.227 [m], t= 286.752 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    202 at 32.228 [m], t= 286.762 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    203 at 32.229 [m], t= 286.772 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    204 at 32.230 [m], t= 286.782 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    205 at 32.232 [m], t= 286.792 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    206 at 32.233 [m], t= 286.802 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    207 at 32.234 [m], t= 286.812 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    208 at 32.235 [m], t= 286.822 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    209 at 32.236 [m], t= 286.832 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    210 at 32.237 [m], t= 286.842 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    211 at 32.238 [m], t= 286.852 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    212 at 32.239 [m], t= 286.862 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    213 at 32.241 [m], t= 286.872 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    214 at 32.242 [m], t= 286.882 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    215 at 32.243 [m], t= 286.892 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    216 at 32.244 [m], t= 286.902 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    217 at 32.245 [m], t= 286.912 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    218 at 32.246 [m], t= 286.922 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    219 at 32.247 [m], t= 286.932 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    220 at 32.248 [m], t= 286.942 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    221 at 32.250 [m], t= 286.952 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    222 at 32.251 [m], t= 286.962 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    223 at 32.252 [m], t= 286.972 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    224 at 32.253 [m], t= 286.982 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    225 at 32.254 [m], t= 286.992 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    226 at 32.255 [m], t= 287.002 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    227 at 32.256 [m], t= 287.012 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    228 at 32.257 [m], t= 287.022 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    229 at 32.258 [m], t= 287.032 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    230 at 32.260 [m], t= 287.042 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    231 at 32.261 [m], t= 287.052 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    232 at 32.262 [m], t= 287.062 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    233 at 32.263 [m], t= 287.072 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    234 at 32.264 [m], t= 287.082 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    235 at 32.265 [m], t= 287.092 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    236 at 32.266 [m], t= 287.102 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    237 at 32.267 [m], t= 287.112 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    238 at 32.269 [m], t= 287.122 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    239 at 32.270 [m], t= 287.132 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    240 at 32.271 [m], t= 287.142 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    241 at 32.272 [m], t= 287.152 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    242 at 32.273 [m], t= 287.162 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    243 at 32.274 [m], t= 287.172 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    244 at 32.275 [m], t= 287.182 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    245 at 32.276 [m], t= 287.192 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    246 at 32.278 [m], t= 287.202 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    247 at 32.279 [m], t= 287.212 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    248 at 32.280 [m], t= 287.222 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    249 at 32.281 [m], t= 287.232 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:25 Step    250 at 32.282 [m], t= 287.242 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:25 Step    251 at 32.283 [m], t= 287.252 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    252 at 32.284 [m], t= 287.262 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    253 at 32.285 [m], t= 287.272 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    254 at 32.287 [m], t= 287.282 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    255 at 32.288 [m], t= 287.292 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    256 at 32.289 [m], t= 287.302 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    257 at 32.290 [m], t= 287.312 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    258 at 32.291 [m], t= 287.322 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    259 at 32.292 [m], t= 287.332 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    260 at 32.293 [m], t= 287.342 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    261 at 32.294 [m], t= 287.352 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    262 at 32.296 [m], t= 287.362 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    263 at 32.297 [m], t= 287.372 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    264 at 32.298 [m], t= 287.382 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    265 at 32.299 [m], t= 287.392 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    266 at 32.300 [m], t= 287.402 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    267 at 32.301 [m], t= 287.412 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    268 at 32.302 [m], t= 287.422 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    269 at 32.303 [m], t= 287.432 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    270 at 32.305 [m], t= 287.442 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    271 at 32.306 [m], t= 287.452 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    272 at 32.307 [m], t= 287.462 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    273 at 32.308 [m], t= 287.472 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    274 at 32.309 [m], t= 287.482 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    275 at 32.310 [m], t= 287.492 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    276 at 32.311 [m], t= 287.502 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    277 at 32.312 [m], t= 287.512 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    278 at 32.314 [m], t= 287.522 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    279 at 32.315 [m], t= 287.532 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    280 at 32.316 [m], t= 287.542 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    281 at 32.317 [m], t= 287.552 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    282 at 32.318 [m], t= 287.562 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    283 at 32.319 [m], t= 287.572 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    284 at 32.320 [m], t= 287.582 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    285 at 32.321 [m], t= 287.592 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    286 at 32.323 [m], t= 287.602 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    287 at 32.324 [m], t= 287.612 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    288 at 32.325 [m], t= 287.622 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    289 at 32.326 [m], t= 287.632 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    290 at 32.327 [m], t= 287.642 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    291 at 32.328 [m], t= 287.652 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    292 at 32.329 [m], t= 287.662 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    293 at 32.330 [m], t= 287.672 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    294 at 32.332 [m], t= 287.682 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    295 at 32.333 [m], t= 287.692 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    296 at 32.334 [m], t= 287.702 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    297 at 32.335 [m], t= 287.712 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    298 at 32.336 [m], t= 287.722 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[2]> 06:34:26 Step    299 at 32.337 [m], t= 287.732 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    300 at 32.338 [m], t= 287.742 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    301 at 32.339 [m], t= 287.752 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    302 at 32.341 [m], t= 287.762 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    303 at 32.342 [m], t= 287.772 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    304 at 32.343 [m], t= 287.782 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    305 at 32.344 [m], t= 287.792 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    306 at 32.345 [m], t= 287.802 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    307 at 32.346 [m], t= 287.812 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    308 at 32.347 [m], t= 287.822 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    309 at 32.348 [m], t= 287.832 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    310 at 32.350 [m], t= 287.842 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    311 at 32.351 [m], t= 287.852 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    312 at 32.352 [m], t= 287.862 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    313 at 32.353 [m], t= 287.872 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    314 at 32.354 [m], t= 287.882 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    315 at 32.355 [m], t= 287.892 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    316 at 32.356 [m], t= 287.902 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    317 at 32.357 [m], t= 287.912 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    318 at 32.359 [m], t= 287.922 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    319 at 32.360 [m], t= 287.932 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    320 at 32.361 [m], t= 287.942 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    321 at 32.362 [m], t= 287.952 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    322 at 32.363 [m], t= 287.962 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    323 at 32.364 [m], t= 287.972 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    324 at 32.365 [m], t= 287.982 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    325 at 32.366 [m], t= 287.992 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    326 at 32.368 [m], t= 288.002 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    327 at 32.369 [m], t= 288.012 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    328 at 32.370 [m], t= 288.022 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    329 at 32.371 [m], t= 288.032 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    330 at 32.372 [m], t= 288.042 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    331 at 32.373 [m], t= 288.052 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    332 at 32.374 [m], t= 288.062 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    333 at 32.375 [m], t= 288.072 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    334 at 32.376 [m], t= 288.082 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    335 at 32.378 [m], t= 288.092 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    336 at 32.379 [m], t= 288.102 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    337 at 32.380 [m], t= 288.112 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    338 at 32.381 [m], t= 288.122 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    339 at 32.382 [m], t= 288.132 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    340 at 32.383 [m], t= 288.142 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    341 at 32.384 [m], t= 288.152 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    342 at 32.385 [m], t= 288.162 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    343 at 32.387 [m], t= 288.172 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    344 at 32.388 [m], t= 288.182 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    345 at 32.389 [m], t= 288.192 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    346 at 32.390 [m], t= 288.202 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    347 at 32.391 [m], t= 288.212 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    348 at 32.392 [m], t= 288.222 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    349 at 32.393 [m], t= 288.232 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    350 at 32.394 [m], t= 288.242 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    351 at 32.396 [m], t= 288.252 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    352 at 32.397 [m], t= 288.262 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    353 at 32.398 [m], t= 288.272 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    354 at 32.399 [m], t= 288.282 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    355 at 32.400 [m], t= 288.292 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    356 at 32.401 [m], t= 288.302 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    357 at 32.402 [m], t= 288.312 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    358 at 32.403 [m], t= 288.322 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    359 at 32.405 [m], t= 288.332 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    360 at 32.406 [m], t= 288.342 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    361 at 32.407 [m], t= 288.352 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    362 at 32.408 [m], t= 288.362 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    363 at 32.409 [m], t= 288.372 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    364 at 32.410 [m], t= 288.382 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    365 at 32.411 [m], t= 288.392 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    366 at 32.412 [m], t= 288.402 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    367 at 32.414 [m], t= 288.412 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    368 at 32.415 [m], t= 288.422 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    369 at 32.416 [m], t= 288.432 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    370 at 32.417 [m], t= 288.442 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    371 at 32.418 [m], t= 288.452 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    372 at 32.419 [m], t= 288.462 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    373 at 32.420 [m], t= 288.472 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    374 at 32.421 [m], t= 288.482 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    375 at 32.423 [m], t= 288.492 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    376 at 32.424 [m], t= 288.502 [ns], E=73.811 [MeV]
-ParallelTTracker {0}[3]> 06:34:26 Step    377 at 32.425 [m], t= 288.512 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:26 Step    378 at 32.426 [m], t= 288.522 [ns], E=73.811 [MeV]
-ParallelTTracker {0}> * Deleted 12 particles, remaining 99988 particles
-ParallelTTracker {0}[3]> 06:34:26 Step    379 at 32.427 [m], t= 288.532 [ns], E=73.811 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}> * Deleted 211 particles, remaining 99777 particles
-ParallelTTracker {0}[3]> 06:34:26 Step    380 at 32.428 [m], t= 288.542 [ns], E=73.807 [MeV]
-ParallelTTracker {0}> * Deleted 1823 particles, remaining 97954 particles
-ParallelTTracker {0}[3]> 06:34:26 Step    381 at 32.429 [m], t= 288.552 [ns], E=73.783 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}> * Deleted 7880 particles, remaining 90074 particles
-ParallelTTracker {0}[3]> 06:34:26 Step    382 at 32.430 [m], t= 288.562 [ns], E=73.703 [MeV]
-ParallelTTracker {0}> * Deleted 20323 particles, remaining 69751 particles
-ParallelTTracker {0}[3]> 06:34:27 Step    383 at 32.432 [m], t= 288.572 [ns], E=73.536 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}> * Deleted 28788 particles, remaining 40963 particles
-ParallelTTracker {0}[3]> 06:34:27 Step    384 at 32.433 [m], t= 288.582 [ns], E=73.306 [MeV]
-ParallelTTracker {0}> * Deleted 23158 particles, remaining 17805 particles
-ParallelTTracker {0}[3]> 06:34:27 Step    385 at 32.434 [m], t= 288.592 [ns], E=73.110 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}> * Deleted 10874 particles, remaining 6931 particles
-ParallelTTracker {0}[3]> 06:34:27 Step    386 at 32.435 [m], t= 288.602 [ns], E=73.204 [MeV]
-ParallelTTracker {0}> * Deleted 2947 particles, remaining 3984 particles
-ParallelTTracker {0}[3]> 06:34:27 Step    387 at 32.436 [m], t= 288.612 [ns], E=73.617 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}> * Deleted 405 particles, remaining 3579 particles
-ParallelTTracker {0}[3]> 06:34:27 Step    388 at 32.437 [m], t= 288.622 [ns], E=73.773 [MeV]
-ParallelTTracker {0}> * Deleted 45 particles, remaining 3534 particles
-ParallelTTracker {0}[3]> 06:34:27 Step    389 at 32.438 [m], t= 288.632 [ns], E=73.797 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}> * Deleted 3 particles, remaining 3531 particles
-ParallelTTracker {0}[3]> 06:34:27 Step    390 at 32.439 [m], t= 288.642 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    391 at 32.441 [m], t= 288.652 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    392 at 32.442 [m], t= 288.662 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    393 at 32.443 [m], t= 288.672 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    394 at 32.444 [m], t= 288.682 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    395 at 32.445 [m], t= 288.692 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    396 at 32.446 [m], t= 288.702 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    397 at 32.447 [m], t= 288.712 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    398 at 32.448 [m], t= 288.722 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[2]> 06:34:27 Step    399 at 32.450 [m], t= 288.732 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    400 at 32.451 [m], t= 288.742 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    401 at 32.452 [m], t= 288.752 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    402 at 32.453 [m], t= 288.762 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    403 at 32.454 [m], t= 288.772 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    404 at 32.455 [m], t= 288.782 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    405 at 32.456 [m], t= 288.792 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    406 at 32.457 [m], t= 288.802 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    407 at 32.459 [m], t= 288.812 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    408 at 32.460 [m], t= 288.822 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    409 at 32.461 [m], t= 288.832 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    410 at 32.462 [m], t= 288.842 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    411 at 32.463 [m], t= 288.852 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    412 at 32.464 [m], t= 288.862 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    413 at 32.465 [m], t= 288.872 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    414 at 32.466 [m], t= 288.882 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    415 at 32.468 [m], t= 288.892 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    416 at 32.469 [m], t= 288.902 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    417 at 32.470 [m], t= 288.912 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    418 at 32.471 [m], t= 288.922 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    419 at 32.472 [m], t= 288.932 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    420 at 32.473 [m], t= 288.942 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    421 at 32.474 [m], t= 288.952 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    422 at 32.475 [m], t= 288.962 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    423 at 32.477 [m], t= 288.972 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    424 at 32.478 [m], t= 288.982 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    425 at 32.479 [m], t= 288.992 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    426 at 32.480 [m], t= 289.002 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    427 at 32.481 [m], t= 289.012 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    428 at 32.482 [m], t= 289.022 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    429 at 32.483 [m], t= 289.032 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    430 at 32.484 [m], t= 289.042 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    431 at 32.486 [m], t= 289.052 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    432 at 32.487 [m], t= 289.062 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    433 at 32.488 [m], t= 289.072 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    434 at 32.489 [m], t= 289.082 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    435 at 32.490 [m], t= 289.092 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    436 at 32.491 [m], t= 289.102 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    437 at 32.492 [m], t= 289.112 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    438 at 32.493 [m], t= 289.122 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    439 at 32.495 [m], t= 289.132 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    440 at 32.496 [m], t= 289.142 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    441 at 32.497 [m], t= 289.152 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    442 at 32.498 [m], t= 289.162 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    443 at 32.499 [m], t= 289.172 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    444 at 32.500 [m], t= 289.182 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    445 at 32.501 [m], t= 289.192 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    446 at 32.502 [m], t= 289.202 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    447 at 32.503 [m], t= 289.212 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    448 at 32.505 [m], t= 289.222 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    449 at 32.506 [m], t= 289.232 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    450 at 32.507 [m], t= 289.242 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    451 at 32.508 [m], t= 289.252 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    452 at 32.509 [m], t= 289.262 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    453 at 32.510 [m], t= 289.272 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    454 at 32.511 [m], t= 289.282 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    455 at 32.512 [m], t= 289.292 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    456 at 32.514 [m], t= 289.302 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    457 at 32.515 [m], t= 289.312 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    458 at 32.516 [m], t= 289.322 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    459 at 32.517 [m], t= 289.332 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    460 at 32.518 [m], t= 289.342 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    461 at 32.519 [m], t= 289.352 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    462 at 32.520 [m], t= 289.362 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    463 at 32.521 [m], t= 289.372 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    464 at 32.523 [m], t= 289.382 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    465 at 32.524 [m], t= 289.392 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    466 at 32.525 [m], t= 289.402 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    467 at 32.526 [m], t= 289.412 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    468 at 32.527 [m], t= 289.422 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    469 at 32.528 [m], t= 289.432 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    470 at 32.529 [m], t= 289.442 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    471 at 32.530 [m], t= 289.452 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    472 at 32.532 [m], t= 289.462 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    473 at 32.533 [m], t= 289.472 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    474 at 32.534 [m], t= 289.482 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    475 at 32.535 [m], t= 289.492 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    476 at 32.536 [m], t= 289.502 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    477 at 32.537 [m], t= 289.512 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    478 at 32.538 [m], t= 289.522 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    479 at 32.539 [m], t= 289.532 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    480 at 32.541 [m], t= 289.542 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    481 at 32.542 [m], t= 289.552 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    482 at 32.543 [m], t= 289.562 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    483 at 32.544 [m], t= 289.572 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    484 at 32.545 [m], t= 289.582 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    485 at 32.546 [m], t= 289.592 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    486 at 32.547 [m], t= 289.602 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    487 at 32.548 [m], t= 289.612 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    488 at 32.550 [m], t= 289.622 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    489 at 32.551 [m], t= 289.632 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    490 at 32.552 [m], t= 289.642 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    491 at 32.553 [m], t= 289.652 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    492 at 32.554 [m], t= 289.662 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    493 at 32.555 [m], t= 289.672 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    494 at 32.556 [m], t= 289.682 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    495 at 32.557 [m], t= 289.692 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    496 at 32.559 [m], t= 289.702 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[3]> 06:34:27 Step    497 at 32.560 [m], t= 289.712 [ns], E=73.799 [MeV]
-OPAL {0}[3]> * Wrote beam statistics.
-ParallelTTracker {0}[3]> 06:34:27 Step    498 at 32.561 [m], t= 289.722 [ns], E=73.799 [MeV]
-ParallelTTracker {0}[2]> 06:34:27 Step    499 at 32.562 [m], t= 289.732 [ns], E=73.799 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step      0 at 32.001 [m], t= 284.733 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step      1 at 32.001 [m], t= 284.738 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step      2 at 32.002 [m], t= 284.743 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step      3 at 32.002 [m], t= 284.748 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:00 Step      4 at 32.003 [m], t= 284.753 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step      5 at 32.003 [m], t= 284.758 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step      6 at 32.004 [m], t= 284.763 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step      7 at 32.004 [m], t= 284.768 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:00 Step      8 at 32.005 [m], t= 284.773 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step      9 at 32.006 [m], t= 284.778 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     10 at 32.006 [m], t= 284.783 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     11 at 32.007 [m], t= 284.788 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:00 Step     12 at 32.007 [m], t= 284.793 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     13 at 32.008 [m], t= 284.798 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     14 at 32.008 [m], t= 284.803 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     15 at 32.009 [m], t= 284.808 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:00 Step     16 at 32.010 [m], t= 284.813 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     17 at 32.010 [m], t= 284.818 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     18 at 32.011 [m], t= 284.823 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     19 at 32.011 [m], t= 284.828 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:00 Step     20 at 32.012 [m], t= 284.833 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     21 at 32.012 [m], t= 284.838 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     22 at 32.013 [m], t= 284.843 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     23 at 32.013 [m], t= 284.848 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:00 Step     24 at 32.014 [m], t= 284.853 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     25 at 32.015 [m], t= 284.858 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     26 at 32.015 [m], t= 284.863 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     27 at 32.016 [m], t= 284.868 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:00 Step     28 at 32.016 [m], t= 284.873 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     29 at 32.017 [m], t= 284.878 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     30 at 32.017 [m], t= 284.883 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     31 at 32.018 [m], t= 284.888 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:00 Step     32 at 32.019 [m], t= 284.893 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     33 at 32.019 [m], t= 284.898 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     34 at 32.020 [m], t= 284.903 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     35 at 32.020 [m], t= 284.908 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:00 Step     36 at 32.021 [m], t= 284.913 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     37 at 32.021 [m], t= 284.918 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     38 at 32.022 [m], t= 284.923 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     39 at 32.022 [m], t= 284.928 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:00 Step     40 at 32.023 [m], t= 284.933 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     41 at 32.024 [m], t= 284.938 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     42 at 32.024 [m], t= 284.943 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     43 at 32.025 [m], t= 284.948 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:00 Step     44 at 32.025 [m], t= 284.953 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     45 at 32.026 [m], t= 284.958 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     46 at 32.026 [m], t= 284.963 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     47 at 32.027 [m], t= 284.968 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:00 Step     48 at 32.028 [m], t= 284.973 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     49 at 32.028 [m], t= 284.978 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     50 at 32.029 [m], t= 284.983 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     51 at 32.029 [m], t= 284.988 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:00 Step     52 at 32.030 [m], t= 284.993 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     53 at 32.030 [m], t= 284.998 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     54 at 32.031 [m], t= 285.003 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:00 Step     55 at 32.031 [m], t= 285.008 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:01 Step     56 at 32.032 [m], t= 285.013 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step     57 at 32.033 [m], t= 285.018 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step     58 at 32.033 [m], t= 285.023 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step     59 at 32.034 [m], t= 285.028 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:01 Step     60 at 32.034 [m], t= 285.033 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step     61 at 32.035 [m], t= 285.038 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step     62 at 32.035 [m], t= 285.043 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step     63 at 32.036 [m], t= 285.048 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:01 Step     64 at 32.037 [m], t= 285.053 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step     65 at 32.037 [m], t= 285.058 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step     66 at 32.038 [m], t= 285.063 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step     67 at 32.038 [m], t= 285.068 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:01 Step     68 at 32.039 [m], t= 285.073 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step     69 at 32.039 [m], t= 285.078 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step     70 at 32.040 [m], t= 285.083 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step     71 at 32.040 [m], t= 285.088 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:01 Step     72 at 32.041 [m], t= 285.093 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step     73 at 32.042 [m], t= 285.098 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step     74 at 32.042 [m], t= 285.103 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step     75 at 32.043 [m], t= 285.108 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:01 Step     76 at 32.043 [m], t= 285.113 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step     77 at 32.044 [m], t= 285.118 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step     78 at 32.044 [m], t= 285.123 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step     79 at 32.045 [m], t= 285.128 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:01 Step     80 at 32.046 [m], t= 285.133 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step     81 at 32.046 [m], t= 285.138 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step     82 at 32.047 [m], t= 285.143 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step     83 at 32.047 [m], t= 285.148 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:01 Step     84 at 32.048 [m], t= 285.153 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step     85 at 32.048 [m], t= 285.158 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step     86 at 32.049 [m], t= 285.163 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step     87 at 32.049 [m], t= 285.168 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:01 Step     88 at 32.050 [m], t= 285.173 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step     89 at 32.051 [m], t= 285.178 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step     90 at 32.051 [m], t= 285.183 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step     91 at 32.052 [m], t= 285.188 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:01 Step     92 at 32.052 [m], t= 285.193 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step     93 at 32.053 [m], t= 285.198 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step     94 at 32.053 [m], t= 285.203 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step     95 at 32.054 [m], t= 285.208 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:01 Step     96 at 32.055 [m], t= 285.213 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step     97 at 32.055 [m], t= 285.218 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step     98 at 32.056 [m], t= 285.223 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[2]> 09:31:01 Step     99 at 32.056 [m], t= 285.228 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:01 Step    100 at 32.057 [m], t= 285.233 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step    101 at 32.057 [m], t= 285.238 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step    102 at 32.058 [m], t= 285.243 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step    103 at 32.058 [m], t= 285.248 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:01 Step    104 at 32.059 [m], t= 285.253 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step    105 at 32.060 [m], t= 285.258 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step    106 at 32.060 [m], t= 285.263 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step    107 at 32.061 [m], t= 285.268 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:01 Step    108 at 32.061 [m], t= 285.273 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step    109 at 32.062 [m], t= 285.278 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step    110 at 32.062 [m], t= 285.283 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step    111 at 32.063 [m], t= 285.288 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:01 Step    112 at 32.063 [m], t= 285.293 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step    113 at 32.064 [m], t= 285.298 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step    114 at 32.065 [m], t= 285.303 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step    115 at 32.065 [m], t= 285.308 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:01 Step    116 at 32.066 [m], t= 285.313 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step    117 at 32.066 [m], t= 285.318 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step    118 at 32.067 [m], t= 285.323 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step    119 at 32.067 [m], t= 285.328 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:01 Step    120 at 32.068 [m], t= 285.333 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step    121 at 32.069 [m], t= 285.338 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step    122 at 32.069 [m], t= 285.343 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step    123 at 32.070 [m], t= 285.348 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:01 Step    124 at 32.070 [m], t= 285.353 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step    125 at 32.071 [m], t= 285.358 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:01 Step    126 at 32.071 [m], t= 285.363 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    127 at 32.072 [m], t= 285.368 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:02 Step    128 at 32.072 [m], t= 285.373 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    129 at 32.073 [m], t= 285.378 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    130 at 32.074 [m], t= 285.383 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    131 at 32.074 [m], t= 285.388 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:02 Step    132 at 32.075 [m], t= 285.393 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    133 at 32.075 [m], t= 285.398 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    134 at 32.076 [m], t= 285.403 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    135 at 32.076 [m], t= 285.408 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:02 Step    136 at 32.077 [m], t= 285.413 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    137 at 32.078 [m], t= 285.418 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    138 at 32.078 [m], t= 285.423 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    139 at 32.079 [m], t= 285.428 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:02 Step    140 at 32.079 [m], t= 285.433 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    141 at 32.080 [m], t= 285.438 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    142 at 32.080 [m], t= 285.443 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    143 at 32.081 [m], t= 285.448 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:02 Step    144 at 32.081 [m], t= 285.453 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    145 at 32.082 [m], t= 285.458 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    146 at 32.083 [m], t= 285.463 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    147 at 32.083 [m], t= 285.468 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:02 Step    148 at 32.084 [m], t= 285.473 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    149 at 32.084 [m], t= 285.478 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    150 at 32.085 [m], t= 285.483 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    151 at 32.085 [m], t= 285.488 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:02 Step    152 at 32.086 [m], t= 285.493 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    153 at 32.087 [m], t= 285.498 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    154 at 32.087 [m], t= 285.503 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    155 at 32.088 [m], t= 285.508 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:02 Step    156 at 32.088 [m], t= 285.513 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    157 at 32.089 [m], t= 285.518 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    158 at 32.089 [m], t= 285.523 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    159 at 32.090 [m], t= 285.528 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:02 Step    160 at 32.090 [m], t= 285.533 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    161 at 32.091 [m], t= 285.538 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    162 at 32.092 [m], t= 285.543 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    163 at 32.092 [m], t= 285.548 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:02 Step    164 at 32.093 [m], t= 285.553 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    165 at 32.093 [m], t= 285.558 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    166 at 32.094 [m], t= 285.563 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    167 at 32.094 [m], t= 285.568 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:02 Step    168 at 32.095 [m], t= 285.573 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    169 at 32.096 [m], t= 285.578 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    170 at 32.096 [m], t= 285.583 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    171 at 32.097 [m], t= 285.588 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:02 Step    172 at 32.097 [m], t= 285.593 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    173 at 32.098 [m], t= 285.598 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    174 at 32.098 [m], t= 285.603 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    175 at 32.099 [m], t= 285.608 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:02 Step    176 at 32.099 [m], t= 285.613 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    177 at 32.100 [m], t= 285.618 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    178 at 32.101 [m], t= 285.623 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    179 at 32.101 [m], t= 285.628 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:02 Step    180 at 32.102 [m], t= 285.633 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    181 at 32.102 [m], t= 285.638 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    182 at 32.103 [m], t= 285.643 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    183 at 32.103 [m], t= 285.648 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:02 Step    184 at 32.104 [m], t= 285.653 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    185 at 32.105 [m], t= 285.658 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    186 at 32.105 [m], t= 285.663 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    187 at 32.106 [m], t= 285.668 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:02 Step    188 at 32.106 [m], t= 285.673 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    189 at 32.107 [m], t= 285.678 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    190 at 32.107 [m], t= 285.683 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    191 at 32.108 [m], t= 285.688 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:02 Step    192 at 32.108 [m], t= 285.693 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    193 at 32.109 [m], t= 285.698 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    194 at 32.110 [m], t= 285.703 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    195 at 32.110 [m], t= 285.708 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:02 Step    196 at 32.111 [m], t= 285.713 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:02 Step    197 at 32.111 [m], t= 285.718 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    198 at 32.112 [m], t= 285.723 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[2]> 09:31:03 Step    199 at 32.112 [m], t= 285.728 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:03 Step    200 at 32.113 [m], t= 285.733 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    201 at 32.114 [m], t= 285.738 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    202 at 32.114 [m], t= 285.743 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    203 at 32.115 [m], t= 285.748 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:03 Step    204 at 32.115 [m], t= 285.753 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    205 at 32.116 [m], t= 285.758 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    206 at 32.116 [m], t= 285.763 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    207 at 32.117 [m], t= 285.768 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:03 Step    208 at 32.117 [m], t= 285.773 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    209 at 32.118 [m], t= 285.778 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    210 at 32.119 [m], t= 285.783 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    211 at 32.119 [m], t= 285.788 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:03 Step    212 at 32.120 [m], t= 285.793 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    213 at 32.120 [m], t= 285.798 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    214 at 32.121 [m], t= 285.803 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    215 at 32.121 [m], t= 285.808 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:03 Step    216 at 32.122 [m], t= 285.813 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    217 at 32.123 [m], t= 285.818 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    218 at 32.123 [m], t= 285.823 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    219 at 32.124 [m], t= 285.828 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:03 Step    220 at 32.124 [m], t= 285.833 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    221 at 32.125 [m], t= 285.838 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    222 at 32.125 [m], t= 285.843 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    223 at 32.126 [m], t= 285.848 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:03 Step    224 at 32.126 [m], t= 285.853 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    225 at 32.127 [m], t= 285.858 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    226 at 32.128 [m], t= 285.863 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    227 at 32.128 [m], t= 285.868 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:03 Step    228 at 32.129 [m], t= 285.873 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    229 at 32.129 [m], t= 285.878 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    230 at 32.130 [m], t= 285.883 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    231 at 32.130 [m], t= 285.888 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:03 Step    232 at 32.131 [m], t= 285.893 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    233 at 32.131 [m], t= 285.898 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    234 at 32.132 [m], t= 285.903 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    235 at 32.133 [m], t= 285.908 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:03 Step    236 at 32.133 [m], t= 285.913 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    237 at 32.134 [m], t= 285.918 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    238 at 32.134 [m], t= 285.923 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    239 at 32.135 [m], t= 285.928 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:03 Step    240 at 32.135 [m], t= 285.933 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    241 at 32.136 [m], t= 285.938 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    242 at 32.137 [m], t= 285.943 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    243 at 32.137 [m], t= 285.948 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:03 Step    244 at 32.138 [m], t= 285.953 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    245 at 32.138 [m], t= 285.958 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    246 at 32.139 [m], t= 285.963 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    247 at 32.139 [m], t= 285.968 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:03 Step    248 at 32.140 [m], t= 285.973 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    249 at 32.140 [m], t= 285.978 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    250 at 32.141 [m], t= 285.983 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    251 at 32.142 [m], t= 285.988 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:03 Step    252 at 32.142 [m], t= 285.993 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    253 at 32.143 [m], t= 285.998 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    254 at 32.143 [m], t= 286.003 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    255 at 32.144 [m], t= 286.008 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:03 Step    256 at 32.144 [m], t= 286.013 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    257 at 32.145 [m], t= 286.018 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:03 Step    258 at 32.146 [m], t= 286.023 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    259 at 32.146 [m], t= 286.028 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:04 Step    260 at 32.147 [m], t= 286.033 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    261 at 32.147 [m], t= 286.038 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    262 at 32.148 [m], t= 286.043 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    263 at 32.148 [m], t= 286.048 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:04 Step    264 at 32.149 [m], t= 286.053 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    265 at 32.149 [m], t= 286.058 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    266 at 32.150 [m], t= 286.063 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    267 at 32.151 [m], t= 286.068 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:04 Step    268 at 32.151 [m], t= 286.073 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    269 at 32.152 [m], t= 286.078 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    270 at 32.152 [m], t= 286.083 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    271 at 32.153 [m], t= 286.088 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:04 Step    272 at 32.153 [m], t= 286.093 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    273 at 32.154 [m], t= 286.098 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    274 at 32.155 [m], t= 286.103 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    275 at 32.155 [m], t= 286.108 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:04 Step    276 at 32.156 [m], t= 286.113 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    277 at 32.156 [m], t= 286.118 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    278 at 32.157 [m], t= 286.123 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    279 at 32.157 [m], t= 286.128 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:04 Step    280 at 32.158 [m], t= 286.133 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    281 at 32.158 [m], t= 286.138 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    282 at 32.159 [m], t= 286.143 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    283 at 32.160 [m], t= 286.148 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:04 Step    284 at 32.160 [m], t= 286.153 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    285 at 32.161 [m], t= 286.158 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    286 at 32.161 [m], t= 286.163 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    287 at 32.162 [m], t= 286.168 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:04 Step    288 at 32.162 [m], t= 286.173 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    289 at 32.163 [m], t= 286.178 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    290 at 32.164 [m], t= 286.183 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    291 at 32.164 [m], t= 286.188 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:04 Step    292 at 32.165 [m], t= 286.193 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    293 at 32.165 [m], t= 286.198 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    294 at 32.166 [m], t= 286.203 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    295 at 32.166 [m], t= 286.208 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:04 Step    296 at 32.167 [m], t= 286.213 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    297 at 32.167 [m], t= 286.218 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    298 at 32.168 [m], t= 286.223 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[2]> 09:31:04 Step    299 at 32.169 [m], t= 286.228 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:04 Step    300 at 32.169 [m], t= 286.233 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    301 at 32.170 [m], t= 286.238 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    302 at 32.170 [m], t= 286.243 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    303 at 32.171 [m], t= 286.248 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:04 Step    304 at 32.171 [m], t= 286.253 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    305 at 32.172 [m], t= 286.258 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    306 at 32.173 [m], t= 286.263 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    307 at 32.173 [m], t= 286.268 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:04 Step    308 at 32.174 [m], t= 286.273 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    309 at 32.174 [m], t= 286.278 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    310 at 32.175 [m], t= 286.283 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    311 at 32.175 [m], t= 286.288 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:04 Step    312 at 32.176 [m], t= 286.293 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    313 at 32.176 [m], t= 286.298 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    314 at 32.177 [m], t= 286.303 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    315 at 32.178 [m], t= 286.308 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:04 Step    316 at 32.178 [m], t= 286.313 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    317 at 32.179 [m], t= 286.318 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    318 at 32.179 [m], t= 286.323 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    319 at 32.180 [m], t= 286.328 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:04 Step    320 at 32.180 [m], t= 286.333 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    321 at 32.181 [m], t= 286.338 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    322 at 32.182 [m], t= 286.343 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:04 Step    323 at 32.182 [m], t= 286.348 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:04 Step    324 at 32.183 [m], t= 286.353 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    325 at 32.183 [m], t= 286.358 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    326 at 32.184 [m], t= 286.363 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    327 at 32.184 [m], t= 286.368 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:05 Step    328 at 32.185 [m], t= 286.373 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    329 at 32.185 [m], t= 286.378 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    330 at 32.186 [m], t= 286.383 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    331 at 32.187 [m], t= 286.388 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:05 Step    332 at 32.187 [m], t= 286.393 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    333 at 32.188 [m], t= 286.398 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    334 at 32.188 [m], t= 286.403 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    335 at 32.189 [m], t= 286.408 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:05 Step    336 at 32.189 [m], t= 286.413 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    337 at 32.190 [m], t= 286.418 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    338 at 32.190 [m], t= 286.423 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    339 at 32.191 [m], t= 286.428 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:05 Step    340 at 32.192 [m], t= 286.433 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    341 at 32.192 [m], t= 286.438 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    342 at 32.193 [m], t= 286.443 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    343 at 32.193 [m], t= 286.448 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:05 Step    344 at 32.194 [m], t= 286.453 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    345 at 32.194 [m], t= 286.458 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    346 at 32.195 [m], t= 286.463 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    347 at 32.196 [m], t= 286.468 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:05 Step    348 at 32.196 [m], t= 286.473 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    349 at 32.197 [m], t= 286.478 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    350 at 32.197 [m], t= 286.483 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    351 at 32.198 [m], t= 286.488 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:05 Step    352 at 32.198 [m], t= 286.493 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    353 at 32.199 [m], t= 286.498 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    354 at 32.199 [m], t= 286.503 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    355 at 32.200 [m], t= 286.508 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:05 Step    356 at 32.201 [m], t= 286.513 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    357 at 32.201 [m], t= 286.518 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    358 at 32.202 [m], t= 286.523 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    359 at 32.202 [m], t= 286.528 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:05 Step    360 at 32.203 [m], t= 286.533 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    361 at 32.203 [m], t= 286.538 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    362 at 32.204 [m], t= 286.543 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    363 at 32.205 [m], t= 286.548 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:05 Step    364 at 32.205 [m], t= 286.553 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    365 at 32.206 [m], t= 286.558 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    366 at 32.206 [m], t= 286.563 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    367 at 32.207 [m], t= 286.568 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:05 Step    368 at 32.207 [m], t= 286.573 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    369 at 32.208 [m], t= 286.578 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    370 at 32.208 [m], t= 286.583 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    371 at 32.209 [m], t= 286.588 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:05 Step    372 at 32.210 [m], t= 286.593 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    373 at 32.210 [m], t= 286.598 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    374 at 32.211 [m], t= 286.603 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    375 at 32.211 [m], t= 286.608 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:05 Step    376 at 32.212 [m], t= 286.613 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    377 at 32.212 [m], t= 286.618 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    378 at 32.213 [m], t= 286.623 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    379 at 32.214 [m], t= 286.628 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:05 Step    380 at 32.214 [m], t= 286.633 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    381 at 32.215 [m], t= 286.638 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    382 at 32.215 [m], t= 286.643 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    383 at 32.216 [m], t= 286.648 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:05 Step    384 at 32.216 [m], t= 286.653 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    385 at 32.217 [m], t= 286.658 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    386 at 32.217 [m], t= 286.663 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    387 at 32.218 [m], t= 286.668 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:05 Step    388 at 32.219 [m], t= 286.673 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:05 Step    389 at 32.219 [m], t= 286.678 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    390 at 32.220 [m], t= 286.683 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    391 at 32.220 [m], t= 286.688 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:06 Step    392 at 32.221 [m], t= 286.693 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    393 at 32.221 [m], t= 286.698 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    394 at 32.222 [m], t= 286.703 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    395 at 32.223 [m], t= 286.708 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:06 Step    396 at 32.223 [m], t= 286.713 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    397 at 32.224 [m], t= 286.718 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    398 at 32.224 [m], t= 286.723 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[2]> 09:31:06 Step    399 at 32.225 [m], t= 286.728 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:06 Step    400 at 32.225 [m], t= 286.733 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    401 at 32.226 [m], t= 286.738 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    402 at 32.226 [m], t= 286.743 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    403 at 32.227 [m], t= 286.748 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:06 Step    404 at 32.228 [m], t= 286.753 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    405 at 32.228 [m], t= 286.758 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    406 at 32.229 [m], t= 286.763 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    407 at 32.229 [m], t= 286.768 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:06 Step    408 at 32.230 [m], t= 286.773 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    409 at 32.230 [m], t= 286.778 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    410 at 32.231 [m], t= 286.783 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    411 at 32.232 [m], t= 286.788 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:06 Step    412 at 32.232 [m], t= 286.793 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    413 at 32.233 [m], t= 286.798 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    414 at 32.233 [m], t= 286.803 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    415 at 32.234 [m], t= 286.808 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:06 Step    416 at 32.234 [m], t= 286.813 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    417 at 32.235 [m], t= 286.818 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    418 at 32.235 [m], t= 286.823 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    419 at 32.236 [m], t= 286.828 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:06 Step    420 at 32.237 [m], t= 286.833 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    421 at 32.237 [m], t= 286.838 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    422 at 32.238 [m], t= 286.843 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    423 at 32.238 [m], t= 286.848 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:06 Step    424 at 32.239 [m], t= 286.853 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    425 at 32.239 [m], t= 286.858 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    426 at 32.240 [m], t= 286.863 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    427 at 32.241 [m], t= 286.868 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:06 Step    428 at 32.241 [m], t= 286.873 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    429 at 32.242 [m], t= 286.878 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    430 at 32.242 [m], t= 286.883 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    431 at 32.243 [m], t= 286.888 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:06 Step    432 at 32.243 [m], t= 286.893 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    433 at 32.244 [m], t= 286.898 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    434 at 32.244 [m], t= 286.903 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    435 at 32.245 [m], t= 286.908 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:06 Step    436 at 32.246 [m], t= 286.913 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    437 at 32.246 [m], t= 286.918 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    438 at 32.247 [m], t= 286.923 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    439 at 32.247 [m], t= 286.928 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:06 Step    440 at 32.248 [m], t= 286.933 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    441 at 32.248 [m], t= 286.938 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    442 at 32.249 [m], t= 286.943 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    443 at 32.250 [m], t= 286.948 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:06 Step    444 at 32.250 [m], t= 286.953 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    445 at 32.251 [m], t= 286.958 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    446 at 32.251 [m], t= 286.963 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    447 at 32.252 [m], t= 286.968 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:06 Step    448 at 32.252 [m], t= 286.973 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    449 at 32.253 [m], t= 286.978 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    450 at 32.253 [m], t= 286.983 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    451 at 32.254 [m], t= 286.988 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:06 Step    452 at 32.255 [m], t= 286.993 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    453 at 32.255 [m], t= 286.998 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    454 at 32.256 [m], t= 287.003 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:06 Step    455 at 32.256 [m], t= 287.008 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:07 Step    456 at 32.257 [m], t= 287.013 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    457 at 32.257 [m], t= 287.018 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    458 at 32.258 [m], t= 287.023 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    459 at 32.258 [m], t= 287.028 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:07 Step    460 at 32.259 [m], t= 287.033 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    461 at 32.260 [m], t= 287.038 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    462 at 32.260 [m], t= 287.043 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    463 at 32.261 [m], t= 287.048 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:07 Step    464 at 32.261 [m], t= 287.053 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    465 at 32.262 [m], t= 287.058 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    466 at 32.262 [m], t= 287.063 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    467 at 32.263 [m], t= 287.068 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:07 Step    468 at 32.264 [m], t= 287.073 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    469 at 32.264 [m], t= 287.078 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    470 at 32.265 [m], t= 287.083 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    471 at 32.265 [m], t= 287.088 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:07 Step    472 at 32.266 [m], t= 287.093 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    473 at 32.266 [m], t= 287.098 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    474 at 32.267 [m], t= 287.103 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    475 at 32.267 [m], t= 287.108 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:07 Step    476 at 32.268 [m], t= 287.113 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    477 at 32.269 [m], t= 287.118 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    478 at 32.269 [m], t= 287.123 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    479 at 32.270 [m], t= 287.128 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:07 Step    480 at 32.270 [m], t= 287.133 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    481 at 32.271 [m], t= 287.138 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    482 at 32.271 [m], t= 287.143 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    483 at 32.272 [m], t= 287.148 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:07 Step    484 at 32.273 [m], t= 287.153 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    485 at 32.273 [m], t= 287.158 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    486 at 32.274 [m], t= 287.163 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    487 at 32.274 [m], t= 287.168 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:07 Step    488 at 32.275 [m], t= 287.173 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    489 at 32.275 [m], t= 287.178 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    490 at 32.276 [m], t= 287.183 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    491 at 32.276 [m], t= 287.188 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:07 Step    492 at 32.277 [m], t= 287.193 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    493 at 32.278 [m], t= 287.198 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    494 at 32.278 [m], t= 287.203 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    495 at 32.279 [m], t= 287.208 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:07 Step    496 at 32.279 [m], t= 287.213 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    497 at 32.280 [m], t= 287.218 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    498 at 32.280 [m], t= 287.223 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[2]> 09:31:07 Step    499 at 32.281 [m], t= 287.228 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:07 Step    500 at 32.282 [m], t= 287.233 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    501 at 32.282 [m], t= 287.238 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    502 at 32.283 [m], t= 287.243 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    503 at 32.283 [m], t= 287.248 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:07 Step    504 at 32.284 [m], t= 287.253 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    505 at 32.284 [m], t= 287.258 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    506 at 32.285 [m], t= 287.263 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    507 at 32.285 [m], t= 287.268 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:07 Step    508 at 32.286 [m], t= 287.273 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    509 at 32.287 [m], t= 287.278 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    510 at 32.287 [m], t= 287.283 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    511 at 32.288 [m], t= 287.288 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:07 Step    512 at 32.288 [m], t= 287.293 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    513 at 32.289 [m], t= 287.298 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    514 at 32.289 [m], t= 287.303 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    515 at 32.290 [m], t= 287.308 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:07 Step    516 at 32.291 [m], t= 287.313 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    517 at 32.291 [m], t= 287.318 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    518 at 32.292 [m], t= 287.323 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    519 at 32.292 [m], t= 287.328 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:07 Step    520 at 32.293 [m], t= 287.333 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:07 Step    521 at 32.293 [m], t= 287.338 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    522 at 32.294 [m], t= 287.343 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    523 at 32.294 [m], t= 287.348 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:08 Step    524 at 32.295 [m], t= 287.353 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    525 at 32.296 [m], t= 287.358 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    526 at 32.296 [m], t= 287.363 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    527 at 32.297 [m], t= 287.368 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:08 Step    528 at 32.297 [m], t= 287.373 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    529 at 32.298 [m], t= 287.378 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    530 at 32.298 [m], t= 287.383 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    531 at 32.299 [m], t= 287.388 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:08 Step    532 at 32.300 [m], t= 287.393 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    533 at 32.300 [m], t= 287.398 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    534 at 32.301 [m], t= 287.403 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    535 at 32.301 [m], t= 287.408 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:08 Step    536 at 32.302 [m], t= 287.413 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    537 at 32.302 [m], t= 287.418 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    538 at 32.303 [m], t= 287.423 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    539 at 32.303 [m], t= 287.428 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:08 Step    540 at 32.304 [m], t= 287.433 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    541 at 32.305 [m], t= 287.438 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    542 at 32.305 [m], t= 287.443 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    543 at 32.306 [m], t= 287.448 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:08 Step    544 at 32.306 [m], t= 287.453 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    545 at 32.307 [m], t= 287.458 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    546 at 32.307 [m], t= 287.463 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    547 at 32.308 [m], t= 287.468 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:08 Step    548 at 32.309 [m], t= 287.473 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    549 at 32.309 [m], t= 287.478 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    550 at 32.310 [m], t= 287.483 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    551 at 32.310 [m], t= 287.488 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:08 Step    552 at 32.311 [m], t= 287.493 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    553 at 32.311 [m], t= 287.498 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    554 at 32.312 [m], t= 287.503 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    555 at 32.312 [m], t= 287.508 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:08 Step    556 at 32.313 [m], t= 287.513 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    557 at 32.314 [m], t= 287.518 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    558 at 32.314 [m], t= 287.523 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    559 at 32.315 [m], t= 287.528 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:08 Step    560 at 32.315 [m], t= 287.533 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    561 at 32.316 [m], t= 287.538 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    562 at 32.316 [m], t= 287.543 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    563 at 32.317 [m], t= 287.548 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:08 Step    564 at 32.317 [m], t= 287.553 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    565 at 32.318 [m], t= 287.558 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    566 at 32.319 [m], t= 287.563 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    567 at 32.319 [m], t= 287.568 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:08 Step    568 at 32.320 [m], t= 287.573 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    569 at 32.320 [m], t= 287.578 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    570 at 32.321 [m], t= 287.583 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    571 at 32.321 [m], t= 287.588 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:08 Step    572 at 32.322 [m], t= 287.593 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    573 at 32.323 [m], t= 287.598 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    574 at 32.323 [m], t= 287.603 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    575 at 32.324 [m], t= 287.608 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:08 Step    576 at 32.324 [m], t= 287.613 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    577 at 32.325 [m], t= 287.618 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    578 at 32.325 [m], t= 287.623 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    579 at 32.326 [m], t= 287.628 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:08 Step    580 at 32.326 [m], t= 287.633 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    581 at 32.327 [m], t= 287.638 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    582 at 32.328 [m], t= 287.643 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    583 at 32.328 [m], t= 287.648 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:08 Step    584 at 32.329 [m], t= 287.653 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    585 at 32.329 [m], t= 287.658 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    586 at 32.330 [m], t= 287.663 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:08 Step    587 at 32.330 [m], t= 287.668 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:09 Step    588 at 32.331 [m], t= 287.673 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    589 at 32.332 [m], t= 287.678 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    590 at 32.332 [m], t= 287.683 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    591 at 32.333 [m], t= 287.688 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:09 Step    592 at 32.333 [m], t= 287.693 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    593 at 32.334 [m], t= 287.698 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    594 at 32.334 [m], t= 287.703 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    595 at 32.335 [m], t= 287.708 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:09 Step    596 at 32.335 [m], t= 287.713 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    597 at 32.336 [m], t= 287.718 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    598 at 32.337 [m], t= 287.723 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[2]> 09:31:09 Step    599 at 32.337 [m], t= 287.728 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:09 Step    600 at 32.338 [m], t= 287.733 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    601 at 32.338 [m], t= 287.738 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    602 at 32.339 [m], t= 287.743 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    603 at 32.339 [m], t= 287.748 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:09 Step    604 at 32.340 [m], t= 287.753 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    605 at 32.341 [m], t= 287.758 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    606 at 32.341 [m], t= 287.763 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    607 at 32.342 [m], t= 287.768 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:09 Step    608 at 32.342 [m], t= 287.773 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    609 at 32.343 [m], t= 287.778 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    610 at 32.343 [m], t= 287.783 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    611 at 32.344 [m], t= 287.788 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:09 Step    612 at 32.344 [m], t= 287.793 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    613 at 32.345 [m], t= 287.798 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    614 at 32.346 [m], t= 287.803 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    615 at 32.346 [m], t= 287.808 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:09 Step    616 at 32.347 [m], t= 287.813 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    617 at 32.347 [m], t= 287.818 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    618 at 32.348 [m], t= 287.823 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    619 at 32.348 [m], t= 287.828 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:09 Step    620 at 32.349 [m], t= 287.833 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    621 at 32.350 [m], t= 287.838 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    622 at 32.350 [m], t= 287.843 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    623 at 32.351 [m], t= 287.848 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:09 Step    624 at 32.351 [m], t= 287.853 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    625 at 32.352 [m], t= 287.858 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    626 at 32.352 [m], t= 287.863 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    627 at 32.353 [m], t= 287.868 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:09 Step    628 at 32.353 [m], t= 287.873 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    629 at 32.354 [m], t= 287.878 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    630 at 32.355 [m], t= 287.883 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    631 at 32.355 [m], t= 287.888 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:09 Step    632 at 32.356 [m], t= 287.893 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    633 at 32.356 [m], t= 287.898 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    634 at 32.357 [m], t= 287.903 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    635 at 32.357 [m], t= 287.908 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:09 Step    636 at 32.358 [m], t= 287.913 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    637 at 32.359 [m], t= 287.918 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    638 at 32.359 [m], t= 287.923 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    639 at 32.360 [m], t= 287.928 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:09 Step    640 at 32.360 [m], t= 287.933 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    641 at 32.361 [m], t= 287.938 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    642 at 32.361 [m], t= 287.943 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    643 at 32.362 [m], t= 287.948 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:09 Step    644 at 32.362 [m], t= 287.953 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    645 at 32.363 [m], t= 287.958 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    646 at 32.364 [m], t= 287.963 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    647 at 32.364 [m], t= 287.968 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:09 Step    648 at 32.365 [m], t= 287.973 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    649 at 32.365 [m], t= 287.978 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    650 at 32.366 [m], t= 287.983 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:09 Step    651 at 32.366 [m], t= 287.988 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:09 Step    652 at 32.367 [m], t= 287.993 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    653 at 32.368 [m], t= 287.998 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    654 at 32.368 [m], t= 288.003 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    655 at 32.369 [m], t= 288.008 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:10 Step    656 at 32.369 [m], t= 288.013 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    657 at 32.370 [m], t= 288.018 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    658 at 32.370 [m], t= 288.023 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    659 at 32.371 [m], t= 288.028 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:10 Step    660 at 32.371 [m], t= 288.033 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    661 at 32.372 [m], t= 288.038 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    662 at 32.373 [m], t= 288.043 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    663 at 32.373 [m], t= 288.048 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:10 Step    664 at 32.374 [m], t= 288.053 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    665 at 32.374 [m], t= 288.058 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    666 at 32.375 [m], t= 288.063 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    667 at 32.375 [m], t= 288.068 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:10 Step    668 at 32.376 [m], t= 288.073 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    669 at 32.376 [m], t= 288.078 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    670 at 32.377 [m], t= 288.083 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    671 at 32.378 [m], t= 288.088 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:10 Step    672 at 32.378 [m], t= 288.093 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    673 at 32.379 [m], t= 288.098 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    674 at 32.379 [m], t= 288.103 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    675 at 32.380 [m], t= 288.108 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:10 Step    676 at 32.380 [m], t= 288.113 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    677 at 32.381 [m], t= 288.118 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    678 at 32.382 [m], t= 288.123 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    679 at 32.382 [m], t= 288.128 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:10 Step    680 at 32.383 [m], t= 288.133 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    681 at 32.383 [m], t= 288.138 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    682 at 32.384 [m], t= 288.143 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    683 at 32.384 [m], t= 288.148 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:10 Step    684 at 32.385 [m], t= 288.153 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    685 at 32.385 [m], t= 288.158 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    686 at 32.386 [m], t= 288.163 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    687 at 32.387 [m], t= 288.168 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:10 Step    688 at 32.387 [m], t= 288.173 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    689 at 32.388 [m], t= 288.178 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    690 at 32.388 [m], t= 288.183 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    691 at 32.389 [m], t= 288.188 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:10 Step    692 at 32.389 [m], t= 288.193 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    693 at 32.390 [m], t= 288.198 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    694 at 32.391 [m], t= 288.203 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    695 at 32.391 [m], t= 288.208 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:10 Step    696 at 32.392 [m], t= 288.213 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    697 at 32.392 [m], t= 288.218 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    698 at 32.393 [m], t= 288.223 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[2]> 09:31:10 Step    699 at 32.393 [m], t= 288.228 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:10 Step    700 at 32.394 [m], t= 288.233 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    701 at 32.394 [m], t= 288.238 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    702 at 32.395 [m], t= 288.243 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    703 at 32.396 [m], t= 288.248 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:10 Step    704 at 32.396 [m], t= 288.253 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    705 at 32.397 [m], t= 288.258 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    706 at 32.397 [m], t= 288.263 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    707 at 32.398 [m], t= 288.268 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:10 Step    708 at 32.398 [m], t= 288.273 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    709 at 32.399 [m], t= 288.278 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    710 at 32.400 [m], t= 288.283 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    711 at 32.400 [m], t= 288.288 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:10 Step    712 at 32.401 [m], t= 288.293 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    713 at 32.401 [m], t= 288.298 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    714 at 32.402 [m], t= 288.303 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:10 Step    715 at 32.402 [m], t= 288.308 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:10 Step    716 at 32.403 [m], t= 288.313 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:11 Step    717 at 32.403 [m], t= 288.318 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:11 Step    718 at 32.404 [m], t= 288.323 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:11 Step    719 at 32.405 [m], t= 288.328 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:11 Step    720 at 32.405 [m], t= 288.333 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:11 Step    721 at 32.406 [m], t= 288.338 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:11 Step    722 at 32.406 [m], t= 288.343 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:11 Step    723 at 32.407 [m], t= 288.348 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:11 Step    724 at 32.407 [m], t= 288.353 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:11 Step    725 at 32.408 [m], t= 288.358 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:11 Step    726 at 32.409 [m], t= 288.363 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:11 Step    727 at 32.409 [m], t= 288.368 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:11 Step    728 at 32.410 [m], t= 288.373 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:11 Step    729 at 32.410 [m], t= 288.378 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:11 Step    730 at 32.411 [m], t= 288.383 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:11 Step    731 at 32.411 [m], t= 288.388 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:11 Step    732 at 32.412 [m], t= 288.393 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:11 Step    733 at 32.412 [m], t= 288.398 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:11 Step    734 at 32.413 [m], t= 288.403 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:11 Step    735 at 32.414 [m], t= 288.408 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:11 Step    736 at 32.414 [m], t= 288.413 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:11 Step    737 at 32.415 [m], t= 288.418 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:11 Step    738 at 32.415 [m], t= 288.423 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:11 Step    739 at 32.416 [m], t= 288.428 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:11 Step    740 at 32.416 [m], t= 288.433 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:11 Step    741 at 32.417 [m], t= 288.438 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:11 Step    742 at 32.418 [m], t= 288.443 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:11 Step    743 at 32.418 [m], t= 288.448 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:11 Step    744 at 32.419 [m], t= 288.453 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:11 Step    745 at 32.419 [m], t= 288.458 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:11 Step    746 at 32.420 [m], t= 288.463 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:11 Step    747 at 32.420 [m], t= 288.468 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:11 Step    748 at 32.421 [m], t= 288.473 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:12 Step    749 at 32.421 [m], t= 288.478 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:12 Step    750 at 32.422 [m], t= 288.483 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:12 Step    751 at 32.423 [m], t= 288.488 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:12 Step    752 at 32.423 [m], t= 288.493 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:12 Step    753 at 32.424 [m], t= 288.498 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:12 Step    754 at 32.424 [m], t= 288.503 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:12 Step    755 at 32.425 [m], t= 288.508 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:12 Step    756 at 32.425 [m], t= 288.513 [ns], E=73.811 [MeV]
+ParallelTTracker {0}[3]> 09:31:12 Step    757 at 32.426 [m], t= 288.518 [ns], E=73.811 [MeV]
+ParallelTTracker {0}> * Deleted 2 particles, remaining 99998 particles
+ParallelTTracker {0}[3]> 09:31:12 Step    758 at 32.427 [m], t= 288.523 [ns], E=73.811 [MeV]
+ParallelTTracker {0}> * Deleted 10 particles, remaining 99988 particles
+ParallelTTracker {0}[3]> 09:31:12 Step    759 at 32.427 [m], t= 288.528 [ns], E=73.811 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}> * Deleted 48 particles, remaining 99940 particles
+ParallelTTracker {0}[3]> 09:31:12 Step    760 at 32.428 [m], t= 288.533 [ns], E=73.810 [MeV]
+ParallelTTracker {0}> * Deleted 163 particles, remaining 99777 particles
+ParallelTTracker {0}[3]> 09:31:12 Step    761 at 32.428 [m], t= 288.538 [ns], E=73.807 [MeV]
+ParallelTTracker {0}> * Deleted 484 particles, remaining 99293 particles
+ParallelTTracker {0}[3]> 09:31:12 Step    762 at 32.429 [m], t= 288.543 [ns], E=73.800 [MeV]
+ParallelTTracker {0}> * Deleted 1335 particles, remaining 97958 particles
+ParallelTTracker {0}[3]> 09:31:12 Step    763 at 32.429 [m], t= 288.548 [ns], E=73.783 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}> * Deleted 2717 particles, remaining 95241 particles
+ParallelTTracker {0}[3]> 09:31:12 Step    764 at 32.430 [m], t= 288.553 [ns], E=73.753 [MeV]
+ParallelTTracker {0}> * Deleted 5147 particles, remaining 90094 particles
+ParallelTTracker {0}[3]> 09:31:12 Step    765 at 32.430 [m], t= 288.558 [ns], E=73.703 [MeV]
+ParallelTTracker {0}> * Deleted 8482 particles, remaining 81612 particles
+ParallelTTracker {0}[3]> 09:31:12 Step    766 at 32.431 [m], t= 288.563 [ns], E=73.631 [MeV]
+ParallelTTracker {0}> * Deleted 11799 particles, remaining 69813 particles
+ParallelTTracker {0}[3]> 09:31:12 Step    767 at 32.432 [m], t= 288.568 [ns], E=73.537 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}> * Deleted 14070 particles, remaining 55743 particles
+ParallelTTracker {0}[3]> 09:31:12 Step    768 at 32.432 [m], t= 288.573 [ns], E=73.426 [MeV]
+ParallelTTracker {0}> * Deleted 14684 particles, remaining 41059 particles
+ParallelTTracker {0}[3]> 09:31:12 Step    769 at 32.433 [m], t= 288.578 [ns], E=73.306 [MeV]
+ParallelTTracker {0}> * Deleted 13108 particles, remaining 27951 particles
+ParallelTTracker {0}[3]> 09:31:12 Step    770 at 32.433 [m], t= 288.583 [ns], E=73.192 [MeV]
+ParallelTTracker {0}> * Deleted 10090 particles, remaining 17861 particles
+ParallelTTracker {0}[3]> 09:31:13 Step    771 at 32.434 [m], t= 288.588 [ns], E=73.110 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}> * Deleted 6967 particles, remaining 10894 particles
+ParallelTTracker {0}[3]> 09:31:13 Step    772 at 32.434 [m], t= 288.593 [ns], E=73.099 [MeV]
+ParallelTTracker {0}> * Deleted 3949 particles, remaining 6945 particles
+ParallelTTracker {0}[3]> 09:31:13 Step    773 at 32.435 [m], t= 288.598 [ns], E=73.202 [MeV]
+ParallelTTracker {0}> * Deleted 2061 particles, remaining 4884 particles
+ParallelTTracker {0}[3]> 09:31:13 Step    774 at 32.436 [m], t= 288.603 [ns], E=73.410 [MeV]
+ParallelTTracker {0}> * Deleted 905 particles, remaining 3979 particles
+ParallelTTracker {0}[3]> 09:31:13 Step    775 at 32.436 [m], t= 288.608 [ns], E=73.616 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}> * Deleted 308 particles, remaining 3671 particles
+ParallelTTracker {0}[3]> 09:31:13 Step    776 at 32.437 [m], t= 288.613 [ns], E=73.727 [MeV]
+ParallelTTracker {0}> * Deleted 100 particles, remaining 3571 particles
+ParallelTTracker {0}[3]> 09:31:13 Step    777 at 32.437 [m], t= 288.618 [ns], E=73.773 [MeV]
+ParallelTTracker {0}> * Deleted 38 particles, remaining 3533 particles
+ParallelTTracker {0}[3]> 09:31:13 Step    778 at 32.438 [m], t= 288.623 [ns], E=73.794 [MeV]
+ParallelTTracker {0}> * Deleted 7 particles, remaining 3526 particles
+ParallelTTracker {0}[3]> 09:31:13 Step    779 at 32.438 [m], t= 288.628 [ns], E=73.798 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}> * Deleted 2 particles, remaining 3524 particles
+ParallelTTracker {0}[3]> 09:31:13 Step    780 at 32.439 [m], t= 288.633 [ns], E=73.799 [MeV]
+ParallelTTracker {0}> * Deleted 1 particles, remaining 3523 particles
+ParallelTTracker {0}[3]> 09:31:13 Step    781 at 32.439 [m], t= 288.638 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    782 at 32.440 [m], t= 288.643 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    783 at 32.441 [m], t= 288.648 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    784 at 32.441 [m], t= 288.653 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    785 at 32.442 [m], t= 288.658 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    786 at 32.442 [m], t= 288.663 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    787 at 32.443 [m], t= 288.668 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    788 at 32.443 [m], t= 288.673 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    789 at 32.444 [m], t= 288.678 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    790 at 32.444 [m], t= 288.683 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    791 at 32.445 [m], t= 288.688 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    792 at 32.446 [m], t= 288.693 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    793 at 32.446 [m], t= 288.698 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    794 at 32.447 [m], t= 288.703 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    795 at 32.447 [m], t= 288.708 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    796 at 32.448 [m], t= 288.713 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    797 at 32.448 [m], t= 288.718 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    798 at 32.449 [m], t= 288.723 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[2]> 09:31:13 Step    799 at 32.450 [m], t= 288.728 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    800 at 32.450 [m], t= 288.733 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    801 at 32.451 [m], t= 288.738 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    802 at 32.451 [m], t= 288.743 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    803 at 32.452 [m], t= 288.748 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    804 at 32.452 [m], t= 288.753 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    805 at 32.453 [m], t= 288.758 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    806 at 32.453 [m], t= 288.763 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    807 at 32.454 [m], t= 288.768 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    808 at 32.455 [m], t= 288.773 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    809 at 32.455 [m], t= 288.778 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    810 at 32.456 [m], t= 288.783 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    811 at 32.456 [m], t= 288.788 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    812 at 32.457 [m], t= 288.793 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    813 at 32.457 [m], t= 288.798 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    814 at 32.458 [m], t= 288.803 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    815 at 32.459 [m], t= 288.808 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    816 at 32.459 [m], t= 288.813 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    817 at 32.460 [m], t= 288.818 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    818 at 32.460 [m], t= 288.823 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    819 at 32.461 [m], t= 288.828 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    820 at 32.461 [m], t= 288.833 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    821 at 32.462 [m], t= 288.838 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    822 at 32.462 [m], t= 288.843 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    823 at 32.463 [m], t= 288.848 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    824 at 32.464 [m], t= 288.853 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    825 at 32.464 [m], t= 288.858 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    826 at 32.465 [m], t= 288.863 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    827 at 32.465 [m], t= 288.868 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    828 at 32.466 [m], t= 288.873 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    829 at 32.466 [m], t= 288.878 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    830 at 32.467 [m], t= 288.883 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    831 at 32.468 [m], t= 288.888 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    832 at 32.468 [m], t= 288.893 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    833 at 32.469 [m], t= 288.898 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    834 at 32.469 [m], t= 288.903 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    835 at 32.470 [m], t= 288.908 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    836 at 32.470 [m], t= 288.913 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    837 at 32.471 [m], t= 288.918 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    838 at 32.471 [m], t= 288.923 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    839 at 32.472 [m], t= 288.928 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    840 at 32.473 [m], t= 288.933 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    841 at 32.473 [m], t= 288.938 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    842 at 32.474 [m], t= 288.943 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    843 at 32.474 [m], t= 288.948 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    844 at 32.475 [m], t= 288.953 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    845 at 32.475 [m], t= 288.958 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    846 at 32.476 [m], t= 288.963 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    847 at 32.477 [m], t= 288.968 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    848 at 32.477 [m], t= 288.973 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    849 at 32.478 [m], t= 288.978 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    850 at 32.478 [m], t= 288.983 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    851 at 32.479 [m], t= 288.988 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    852 at 32.479 [m], t= 288.993 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    853 at 32.480 [m], t= 288.998 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    854 at 32.480 [m], t= 289.003 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    855 at 32.481 [m], t= 289.008 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    856 at 32.482 [m], t= 289.013 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    857 at 32.482 [m], t= 289.018 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    858 at 32.483 [m], t= 289.023 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    859 at 32.483 [m], t= 289.028 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    860 at 32.484 [m], t= 289.033 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    861 at 32.484 [m], t= 289.038 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    862 at 32.485 [m], t= 289.043 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    863 at 32.486 [m], t= 289.048 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    864 at 32.486 [m], t= 289.053 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    865 at 32.487 [m], t= 289.058 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    866 at 32.487 [m], t= 289.063 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    867 at 32.488 [m], t= 289.068 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    868 at 32.488 [m], t= 289.073 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    869 at 32.489 [m], t= 289.078 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    870 at 32.489 [m], t= 289.083 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    871 at 32.490 [m], t= 289.088 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    872 at 32.491 [m], t= 289.093 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    873 at 32.491 [m], t= 289.098 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    874 at 32.492 [m], t= 289.103 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    875 at 32.492 [m], t= 289.108 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    876 at 32.493 [m], t= 289.113 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    877 at 32.493 [m], t= 289.118 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    878 at 32.494 [m], t= 289.123 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    879 at 32.495 [m], t= 289.128 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    880 at 32.495 [m], t= 289.133 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    881 at 32.496 [m], t= 289.138 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    882 at 32.496 [m], t= 289.143 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    883 at 32.497 [m], t= 289.148 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    884 at 32.497 [m], t= 289.153 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    885 at 32.498 [m], t= 289.158 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    886 at 32.498 [m], t= 289.163 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    887 at 32.499 [m], t= 289.168 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    888 at 32.500 [m], t= 289.173 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    889 at 32.500 [m], t= 289.178 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    890 at 32.501 [m], t= 289.183 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    891 at 32.501 [m], t= 289.188 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    892 at 32.502 [m], t= 289.193 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    893 at 32.502 [m], t= 289.198 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    894 at 32.503 [m], t= 289.203 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    895 at 32.503 [m], t= 289.208 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    896 at 32.504 [m], t= 289.213 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    897 at 32.505 [m], t= 289.218 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    898 at 32.505 [m], t= 289.223 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[2]> 09:31:13 Step    899 at 32.506 [m], t= 289.228 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    900 at 32.506 [m], t= 289.233 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    901 at 32.507 [m], t= 289.238 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    902 at 32.507 [m], t= 289.243 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    903 at 32.508 [m], t= 289.248 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    904 at 32.509 [m], t= 289.253 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    905 at 32.509 [m], t= 289.258 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    906 at 32.510 [m], t= 289.263 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    907 at 32.510 [m], t= 289.268 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    908 at 32.511 [m], t= 289.273 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    909 at 32.511 [m], t= 289.278 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    910 at 32.512 [m], t= 289.283 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    911 at 32.512 [m], t= 289.288 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    912 at 32.513 [m], t= 289.293 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    913 at 32.514 [m], t= 289.298 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    914 at 32.514 [m], t= 289.303 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    915 at 32.515 [m], t= 289.308 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    916 at 32.515 [m], t= 289.313 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    917 at 32.516 [m], t= 289.318 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    918 at 32.516 [m], t= 289.323 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    919 at 32.517 [m], t= 289.328 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    920 at 32.518 [m], t= 289.333 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    921 at 32.518 [m], t= 289.338 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    922 at 32.519 [m], t= 289.343 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    923 at 32.519 [m], t= 289.348 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    924 at 32.520 [m], t= 289.353 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    925 at 32.520 [m], t= 289.358 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    926 at 32.521 [m], t= 289.363 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    927 at 32.521 [m], t= 289.368 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    928 at 32.522 [m], t= 289.373 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    929 at 32.523 [m], t= 289.378 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    930 at 32.523 [m], t= 289.383 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    931 at 32.524 [m], t= 289.388 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    932 at 32.524 [m], t= 289.393 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    933 at 32.525 [m], t= 289.398 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    934 at 32.525 [m], t= 289.403 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    935 at 32.526 [m], t= 289.408 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    936 at 32.527 [m], t= 289.413 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    937 at 32.527 [m], t= 289.418 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    938 at 32.528 [m], t= 289.423 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    939 at 32.528 [m], t= 289.428 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    940 at 32.529 [m], t= 289.433 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    941 at 32.529 [m], t= 289.438 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    942 at 32.530 [m], t= 289.443 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    943 at 32.530 [m], t= 289.448 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    944 at 32.531 [m], t= 289.453 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    945 at 32.532 [m], t= 289.458 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    946 at 32.532 [m], t= 289.463 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    947 at 32.533 [m], t= 289.468 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    948 at 32.533 [m], t= 289.473 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    949 at 32.534 [m], t= 289.478 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    950 at 32.534 [m], t= 289.483 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    951 at 32.535 [m], t= 289.488 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    952 at 32.536 [m], t= 289.493 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    953 at 32.536 [m], t= 289.498 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    954 at 32.537 [m], t= 289.503 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    955 at 32.537 [m], t= 289.508 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    956 at 32.538 [m], t= 289.513 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    957 at 32.538 [m], t= 289.518 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    958 at 32.539 [m], t= 289.523 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    959 at 32.539 [m], t= 289.528 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    960 at 32.540 [m], t= 289.533 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    961 at 32.541 [m], t= 289.538 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    962 at 32.541 [m], t= 289.543 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    963 at 32.542 [m], t= 289.548 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    964 at 32.542 [m], t= 289.553 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    965 at 32.543 [m], t= 289.558 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    966 at 32.543 [m], t= 289.563 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    967 at 32.544 [m], t= 289.568 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    968 at 32.545 [m], t= 289.573 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    969 at 32.545 [m], t= 289.578 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    970 at 32.546 [m], t= 289.583 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    971 at 32.546 [m], t= 289.588 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    972 at 32.547 [m], t= 289.593 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    973 at 32.547 [m], t= 289.598 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    974 at 32.548 [m], t= 289.603 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    975 at 32.548 [m], t= 289.608 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    976 at 32.549 [m], t= 289.613 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    977 at 32.550 [m], t= 289.618 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    978 at 32.550 [m], t= 289.623 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    979 at 32.551 [m], t= 289.628 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    980 at 32.551 [m], t= 289.633 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    981 at 32.552 [m], t= 289.638 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    982 at 32.552 [m], t= 289.643 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    983 at 32.553 [m], t= 289.648 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    984 at 32.554 [m], t= 289.653 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    985 at 32.554 [m], t= 289.658 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    986 at 32.555 [m], t= 289.663 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    987 at 32.555 [m], t= 289.668 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    988 at 32.556 [m], t= 289.673 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    989 at 32.556 [m], t= 289.678 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    990 at 32.557 [m], t= 289.683 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    991 at 32.557 [m], t= 289.688 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    992 at 32.558 [m], t= 289.693 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    993 at 32.559 [m], t= 289.698 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    994 at 32.559 [m], t= 289.703 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    995 at 32.560 [m], t= 289.708 [ns], E=73.800 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+ParallelTTracker {0}[3]> 09:31:13 Step    996 at 32.560 [m], t= 289.713 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    997 at 32.561 [m], t= 289.718 [ns], E=73.800 [MeV]
+ParallelTTracker {0}[3]> 09:31:13 Step    998 at 32.561 [m], t= 289.723 [ns], E=73.800 [MeV]
+ParallelTTracker {0}> 09:31:13 Step    999 at 32.562 [m], t= 289.728 [ns], E=73.800 [MeV]
 OPAL {0}[3]> * Wrote beam statistics.
 OPAL {0}> 
 OPAL {0}> * ************** B U N C H ********************************************************* 
-OPAL {0}> * NP              = 3531
+OPAL {0}> * NP              = 3523
 OPAL {0}> * Qtot            =        0.000 [fC]         Qi    =        0.000 [fC]
-OPAL {0}> * Ekin            =      73.799 [MeV]         dEkin =     566.624 [keV]
+OPAL {0}> * Ekin            =      73.800 [MeV]         dEkin =     566.873 [keV]
 OPAL {0}> * rmax            = (      8.39648 ,      2.83130 ,      6.33821 ) [mm]
 OPAL {0}> * rmin            = (    -12.42940 ,     -8.95881 ,     -7.05318 ) [mm]
-OPAL {0}> * rms beam size   = (      5.21764 ,      2.29347 ,      1.92441 ) [mm]
-OPAL {0}> * rms momenta     = (  0.00000e+00 ,  0.00000e+00 ,  1.61100e-03 ) [beta gamma]
-OPAL {0}> * mean position   = (     -1.26270 ,     -2.97565 ,     -0.04089 ) [mm]
-OPAL {0}> * mean momenta    = (  0.00000e+00 ,  0.00000e+00 ,  4.04343e-01 ) [beta gamma]
-OPAL {0}> * rms emittance   = (  0.00000e+00 ,  0.00000e+00 ,  8.87541e-09 ) (not normalized)
-OPAL {0}> * rms correlation = (  0.00000e+00 ,  0.00000e+00 ,  9.99999e-01 )
+OPAL {0}> * rms beam size   = (      5.21281 ,      2.29184 ,      1.92535 ) [mm]
+OPAL {0}> * rms momenta     = (  0.00000e+00 ,  0.00000e+00 ,  1.61179e-03 ) [beta gamma]
+OPAL {0}> * mean position   = (     -1.24733 ,     -2.97238 ,     -0.03991 ) [mm]
+OPAL {0}> * mean momenta    = (  0.00000e+00 ,  0.00000e+00 ,  4.04344e-01 ) [beta gamma]
+OPAL {0}> * rms emittance   = (  0.00000e+00 ,  0.00000e+00 ,  8.88769e-09 ) (not normalized)
+OPAL {0}> * rms correlation = (         -nan ,         -nan ,  9.99999e-01 )
 OPAL {0}> * hr              = (      1.12507 ,      1.12473 ,      0.00000 ) [mm]
 OPAL {0}> * dh              =   1.00000e-10 [%]
-OPAL {0}> * t               =      289.732 [ns]         dT    =       10.000 [ps]
+OPAL {0}> * t               =      289.728 [ns]         dT    =        5.000 [ps]
 OPAL {0}> * spos            =        32.562 [m]
 OPAL {0}> * ********************************************************************************** 
 OPAL {0}> 
 OPAL {0}[2]> * Wrote beam phase space.
 ParallelTTracker {0}[2]> Dump phase space of last step
-Ippl{0}[2]> Save MSLIT1.h5
+OPAL{0}[2]> Save 'MSLIT1.h5'
 Ippl{0}[3]> MSLIT1 gone off
-Ippl{0}[2]> Save MASK1.h5
+OPAL{0}[2]> Save 'MASK1.h5'
 Ippl{0}[3]> MASK1 gone off
-Ippl{0}[2]> Save MSLIT2.h5
+OPAL{0}[2]> Save 'MSLIT2.h5'
 Ippl{0}[3]> MSLIT2 gone off
-OPAL{0}> done executing ParallelTTracker at 06:34:27
-OPAL{0}> * End of input stream "Mask-1.in".
+OPAL{0}> 
+OPAL{0}> * Done executing ParallelTTracker at 09:31:13
+OPAL{0}> 
+Ippl{0}> * Creating new file for data: 'Mask-1_Monitors.stat'
+OPAL{0}> * End of input stream 'Mask-1.in'
 Timings{0}> -----------------------------------------------------------------
 Timings{0}>      Timing results for 2 nodes:
 Timings{0}> -----------------------------------------------------------------
-Timings{0}> mainTimer........... Wall tot =    12.7865, CPU tot =      12.38
+Timings{0}> mainTimer........... Wall tot =    27.7948, CPU tot =      27.69
 Timings{0}> 
 Timings{0}> Binaryrepart........ Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
 Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
-Timings{0}> Boundingbox......... Wall max =   0.047092, CPU max =       0.05
-Timings{0}>                      Wall avg =   0.047036, CPU avg =      0.045
-Timings{0}>                      Wall min =    0.04698, CPU min =       0.04
+Timings{0}> Boundingbox......... Wall max =  0.0395542, CPU max =       0.04
+Timings{0}>                      Wall avg =  0.0395121, CPU avg =       0.04
+Timings{0}>                      Wall min =  0.0394701, CPU min =       0.04
 Timings{0}> 
-Timings{0}> Boundingbox-bounds.. Wall max =   0.000209, CPU max =          0
-Timings{0}>                      Wall avg =   0.000209, CPU avg =          0
-Timings{0}>                      Wall min =   0.000209, CPU min =          0
+Timings{0}> Boundingbox-bounds.. Wall max = 0.000143457, CPU max =          0
+Timings{0}>                      Wall avg = 0.000141879, CPU avg =          0
+Timings{0}>                      Wall min = 0.000140301, CPU min =          0
 Timings{0}> 
-Timings{0}> Boundingbox-update.. Wall max =   0.046734, CPU max =       0.05
-Timings{0}>                      Wall avg =   0.046733, CPU avg =      0.045
-Timings{0}>                      Wall min =   0.046732, CPU min =       0.04
+Timings{0}> Boundingbox-update.. Wall max =  0.0392962, CPU max =       0.04
+Timings{0}>                      Wall avg =  0.0392952, CPU avg =       0.04
+Timings{0}>                      Wall min =  0.0392942, CPU min =       0.04
 Timings{0}> 
-Timings{0}> Compute Statistics.. Wall max =   0.332706, CPU max =       0.31
-Timings{0}>                      Wall avg =   0.332683, CPU avg =       0.31
-Timings{0}>                      Wall min =   0.332659, CPU min =       0.31
+Timings{0}> Compute Statistics.. Wall max =   0.512744, CPU max =       0.51
+Timings{0}>                      Wall avg =   0.512639, CPU avg =       0.46
+Timings{0}>                      Wall min =   0.512533, CPU min =       0.41
 Timings{0}> 
-Timings{0}> Create Distr........ Wall max =     9.4407, CPU max =       9.45
-Timings{0}>                      Wall avg =    9.44069, CPU avg =       9.45
-Timings{0}>                      Wall min =    9.44067, CPU min =       9.45
+Timings{0}> Create Distr........ Wall max =    14.6065, CPU max =       14.6
+Timings{0}>                      Wall avg =    14.6065, CPU avg =     14.595
+Timings{0}>                      Wall min =    14.6065, CPU min =      14.59
 Timings{0}> 
-Timings{0}> External field eval. Wall max =   0.193539, CPU max =       0.21
-Timings{0}>                      Wall avg =   0.191611, CPU avg =        0.2
-Timings{0}>                      Wall min =   0.189683, CPU min =       0.19
+Timings{0}> External field eval. Wall max =    1.36689, CPU max =       1.32
+Timings{0}>                      Wall avg =    1.35397, CPU avg =       1.31
+Timings{0}>                      Wall min =    1.34106, CPU min =        1.3
 Timings{0}> 
 Timings{0}> Fast inside test.... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
@@ -1034,32 +1561,51 @@ Timings{0}> Ray tracing......... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
 Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
-Timings{0}> Secondary emission.. Wall max =          0, CPU max =          0
-Timings{0}>                      Wall avg =          0, CPU avg =          0
-Timings{0}>                      Wall min =          0, CPU min =          0
-Timings{0}> 
 Timings{0}> SelfField total..... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
 Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
-Timings{0}> TIntegration1....... Wall max =   0.410098, CPU max =       0.44
-Timings{0}>                      Wall avg =   0.398505, CPU avg =      0.435
-Timings{0}>                      Wall min =   0.386913, CPU min =       0.43
+Timings{0}> TIntegration1....... Wall max =    0.43609, CPU max =        0.5
+Timings{0}>                      Wall avg =   0.435159, CPU avg =       0.44
+Timings{0}>                      Wall min =   0.434229, CPU min =       0.38
 Timings{0}> 
-Timings{0}> TIntegration2....... Wall max =   0.978593, CPU max =       1.01
-Timings{0}>                      Wall avg =   0.978275, CPU avg =       0.96
-Timings{0}>                      Wall min =   0.977957, CPU min =       0.91
+Timings{0}> TIntegration2....... Wall max =    1.30686, CPU max =       1.49
+Timings{0}>                      Wall avg =    1.30573, CPU avg =      1.325
+Timings{0}>                      Wall min =    1.30459, CPU min =       1.16
 Timings{0}> 
 Timings{0}> WakeField........... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
 Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
-Timings{0}> Write H5-File....... Wall max =   0.079602, CPU max =       0.01
-Timings{0}>                      Wall avg =  0.0795695, CPU avg =       0.01
-Timings{0}>                      Wall min =   0.079537, CPU min =       0.01
+Timings{0}> Write H5-File....... Wall max = 0.00930902, CPU max =       0.01
+Timings{0}>                      Wall avg =  0.0092879, CPU avg =       0.01
+Timings{0}>                      Wall min = 0.00926678, CPU min =       0.01
 Timings{0}> 
-Timings{0}> Write Stat.......... Wall max =   0.367497, CPU max =       0.35
-Timings{0}>                      Wall avg =   0.357477, CPU avg =       0.34
-Timings{0}>                      Wall min =   0.347458, CPU min =       0.33
+Timings{0}> Write Stat.......... Wall max =  0.0256011, CPU max =       0.03
+Timings{0}>                      Wall avg =  0.0182745, CPU avg =       0.02
+Timings{0}>                      Wall min =  0.0109478, CPU min =       0.01
 Timings{0}> 
 Timings{0}> -----------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun has exited due to process rank 0 with PID 0 on
+node aceler15 exiting improperly. There are three reasons this could occur:
+
+1. this process did not call "init" before exiting, but others in
+the job did. This can cause a job to hang indefinitely while it waits
+for all processes to call "init". By rule, if one process calls "init",
+then ALL processes must call "init" prior to termination.
+
+2. this process called "init", but exited without calling "finalize".
+By rule, all processes that call "init" MUST call "finalize" prior to
+exiting or it will be considered an "abnormal termination"
+
+3. this process called "MPI_Abort" or "orte_abort" and the mca parameter
+orte_create_session_dirs is set to false. In this case, the run-time cannot
+detect that the abort call was an abnormal termination. Hence, the only
+error message you will receive is this one.
+
+This may have caused other processes in the application to be
+terminated by signals sent by mpirun (as reported here).
+
+You can avoid this message by specifying -quiet on the mpirun command line.
+--------------------------------------------------------------------------
