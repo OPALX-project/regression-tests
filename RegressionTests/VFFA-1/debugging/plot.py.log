@@ -1,0 +1,1000 @@
+OPAL>                ____  _____       ___ 
+OPAL>               / __ \|  __ \ /\   | | 
+OPAL>              | |  | | |__) /  \  | |
+OPAL>              | |  | |  ___/ /\ \ | |
+OPAL>              | |__| | |  / ____ \| |____
+OPAL>               \____/|_| /_/    \_\______|
+OPAL> 
+OPAL> This is OPAL (Object Oriented Parallel Accelerator Library) Version 2022.2.99
+OPAL>             git rev. 00b72f9575b978b8a190c65185937c0b489d317e
+OPAL> 
+OPAL> 
+OPAL>                      (c) PSI, http://amas.web.psi.ch
+OPAL> 
+OPAL> 
+OPAL> The optimiser (former opt-Pilot) is integrated 
+OPAL> 
+OPAL> Please send cookies, goodies or other motivations (wine and beer ... ) 
+OPAL> to the OPAL developers opal@lists.psi.ch
+OPAL> 
+OPAL> Time: 17:00:47 date: 13/09/2023
+OPAL> 
+OPAL> * Reading input stream 'VFFA-1.in'
+    2 //////////////////////////////////////////////////////////////////////////
+    3 // Input file for single particle tracking through VFFA ring            //
+    4 // The input particle should be on a closed orbit; so should return to  //
+    5 // the same point as injected in all the loss files                     //
+    6 //////////////////////////////////////////////////////////////////////////
+    7 Title,string="Small ring using OPAL code";
+    8 Option, ASCIIDUMP=TRUE;
+    9 Option, ENABLEHDF5=FALSE;
+   10 OPTION, PSDUMPFREQ=100000;
+   11 Option, VERSION=10900;
+   12 Option, SPTDUMPFREQ=100;
+   13 Option, STATDUMPFREQ=100000;
+   14 
+   15 ////////// CONSTANTS ////////////////////////////////////
+   16 
+   17 REAL DEGREE=PI/180.;
+   18 REAL MM=1000.;
+   19 REAL C_LIGHT=0.3; // m/ns
+   20 
+   21 ////////// RING PARAMETERS ///////////////
+   22 REAL R0=14.350158350258441;
+   23 REAL E0=400.0;
+   24 REAL P_MASS=938.2720813;
+   25 REAL P0=((E0+P_MASS)^2-P_MASS^2)^0.5;
+   26 REAL N_CELLS=15;
+   27 REAL RMIN=R0-1.0;
+   28 REAL RMAX=R0+1.0;
+   29 REAL LAT_PHI_INIT=0.0;
+   30 
+   31 ////////// TRACKING ///////////////
+   32 REAL STEP_SIZE=0.01; // m
+   33 REAL N_TURNS=2.01;
+   34 REAL N_PARTICLES=1;
+   35 
+   36 ////////// MAIN MAGNET PARAMETERS/////////
+   37 REAL M_INDEX=0.87721;
+   38 REAL F_CENTRE_LENGTH=1.2;
+   39 REAL F_END_LENGTH=0.3;
+   40 REAL D_CENTRE_LENGTH=1.2;
+   41 REAL D_END_LENGTH=0.3;
+   42 REAL BF=-4.92;
+   43 REAL BD=1.64;
+   44 REAL MAX_HORIZONTAL_POWER=10;
+   45 REAL NEG_EXTENT=1.0;
+   46 REAL POS_EXTENT=3.0;
+   47 REAL BB_LENGTH=8.0; 
+   48 REAL MAG_WIDTH=10.0;
+   49 
+   50 REAL D_OFFSET=-0.347745;
+   51 REAL F_OFFSET=0.347745;
+   52 
+   53 REAL DRIFT_1=1.8;
+   54 REAL DRIFT_2=1.8;
+   55 
+   56 //////////// MAIN MAGNETS /////////////////////
+   57 magnetF: VERTICALFFAMAGNET,
+   58           B0=BF,
+   59           FIELD_INDEX=M_INDEX,
+   60           MAX_HORIZONTAL_POWER=MAX_HORIZONTAL_POWER,
+   61           END_LENGTH=F_END_LENGTH,
+   62           CENTRE_LENGTH=F_CENTRE_LENGTH/2,
+   63           HEIGHT_NEG_EXTENT=NEG_EXTENT,
+   64           HEIGHT_POS_EXTENT=POS_EXTENT,
+   65           WIDTH=MAG_WIDTH,
+   66           BB_LENGTH=BB_LENGTH;
+   67 
+   68 magnetD: VERTICALFFAMAGNET,
+   69           B0=BD,
+   70           FIELD_INDEX=M_INDEX,
+   71           MAX_HORIZONTAL_POWER=MAX_HORIZONTAL_POWER,
+   72           END_LENGTH=D_END_LENGTH,
+   73           CENTRE_LENGTH=D_CENTRE_LENGTH/2,
+   74           HEIGHT_NEG_EXTENT=NEG_EXTENT,
+   75           HEIGHT_POS_EXTENT=POS_EXTENT,
+   76           WIDTH=MAG_WIDTH,
+   77           BB_LENGTH=BB_LENGTH;
+   78 
+   79 ///////////////////////// PLACEMENTS FOR MAGNET VD1 //////////////////////
+   80 
+   81 vd_offset_out: LOCAL_CARTESIAN_OFFSET,
+   82                 end_position_x=D_OFFSET,
+   83                 end_position_y=D_CENTRE_LENGTH/2.+DRIFT_1/2.-BB_LENGTH/2,
+   84                 end_normal_x=0.0,
+   85                 end_normal_y=1.0;
+   86 
+   87 vd_offset_back: LOCAL_CARTESIAN_OFFSET,
+   88                 end_position_x=-D_OFFSET,
+   89                 end_position_y=-D_CENTRE_LENGTH/2.-DRIFT_1/2.-BB_LENGTH/2,
+   90                 end_normal_x=0.0,
+   91                 end_normal_y=1.0;
+   92 
+   93 ///////////////////////////// D_SINGLE ///////////////////////////////
+   94 
+   95 d_single: Line = (vd_offset_out, magnetD, vd_offset_back);
+   96 
+   97 //////////////////////////// DRIFT /////////////////////////////////
+   98 
+   99 REAL D_HALF_CELL_LENGTH=D_CENTRE_LENGTH+DRIFT_1/2.+DRIFT_2/2.;
+  100 REAL D_HALF_CELL_ANGLE=360/N_CELLS/2*DEGREE;
+  101 
+  102 start_offset: LOCAL_CARTESIAN_OFFSET,
+  103             end_position_x=0.0,
+  104             end_position_y=-D_HALF_CELL_LENGTH,
+  105             end_normal_y=0.0,
+  106             end_normal_y=cos(D_HALF_CELL_ANGLE);
+  107 
+  108 d_half_cell_drift: LOCAL_CARTESIAN_OFFSET,
+  109                 end_position_x=0,
+  110                 end_position_y=D_HALF_CELL_LENGTH,
+  111                 end_normal_x=-sin(D_HALF_CELL_ANGLE),
+  112                 end_normal_y=cos(D_HALF_CELL_ANGLE);
+  113 
+  114 ///////////////////////// PLACEMENTS FOR MAGNET VF1 //////////////////////
+  115 
+  116 vf_offset_out: LOCAL_CARTESIAN_OFFSET,
+  117                 end_position_x=F_OFFSET,
+  118                 end_position_y=F_CENTRE_LENGTH/2.+DRIFT_2/2.-BB_LENGTH/2,
+  119                 end_normal_x=0.0,
+  120                 end_normal_y=1.0;
+  121 
+  122 vf_offset_back: LOCAL_CARTESIAN_OFFSET,
+  123                 end_position_x=-F_OFFSET,
+  124                 end_position_y=-F_CENTRE_LENGTH/2.-DRIFT_2/2.-BB_LENGTH/2,
+  125                 end_normal_x=0.0,
+  126                 end_normal_y=1.0;
+  127 
+  128 
+  129 ///////////////////////////// F_SINGLE ///////////////////////////////
+  130 
+  131 f_single: Line = (vf_offset_out, magnetF, vf_offset_back);
+  132 
+  133 //////////////////////////// DRIFT /////////////////////////////////
+  134 
+  135 REAL F_HALF_CELL_LENGTH=F_CENTRE_LENGTH+DRIFT_1/2.+DRIFT_2/2.;
+  136 REAL F_HALF_CELL_ANGLE=360/N_CELLS/2*DEGREE;
+  137 
+  138 f_half_cell_drift: LOCAL_CARTESIAN_OFFSET,
+  139                 end_position_x=0,
+  140                 end_position_y=F_HALF_CELL_LENGTH,
+  141                 end_normal_x=-sin(F_HALF_CELL_ANGLE),
+  142                 end_normal_y=cos(F_HALF_CELL_ANGLE);
+  143 
+  144 ////////////////// PROBES
+  145 REAL RING_PROBE_PHI_OFFSET=0.0;
+  146 BUILD_PROBE(NAME, ANGLE): MACRO {
+  147     NAME: PROBE, xstart=RMIN*1000*cos(ANGLE),  xend=RMAX*1000*cos(ANGLE),
+  148                  ystart=RMIN*1000*sin(ANGLE),  yend=RMAX*1000*sin(ANGLE);
+  149 }
+  150 
+  151 REAL THIS_PROBE_PHI=0;
+  152 BUILD_PROBE(RingProbe01, THIS_PROBE_PHI);
+  153 THIS_PROBE_PHI = EVAL(THIS_PROBE_PHI+2.*PI/N_CELLS);
+  154 BUILD_PROBE(RingProbe02, THIS_PROBE_PHI);
+  155 THIS_PROBE_PHI = EVAL(THIS_PROBE_PHI+2.*PI/N_CELLS);
+  156 BUILD_PROBE(RingProbe03, THIS_PROBE_PHI);
+  157 THIS_PROBE_PHI = EVAL(THIS_PROBE_PHI+2.*PI/N_CELLS);
+  158 BUILD_PROBE(RingProbe04, THIS_PROBE_PHI);
+  159 THIS_PROBE_PHI = EVAL(THIS_PROBE_PHI+2.*PI/N_CELLS);
+  160 BUILD_PROBE(RingProbe05, THIS_PROBE_PHI);
+  161 THIS_PROBE_PHI = EVAL(THIS_PROBE_PHI+2.*PI/N_CELLS);
+  162 BUILD_PROBE(RingProbe06, THIS_PROBE_PHI);
+  163 THIS_PROBE_PHI = EVAL(THIS_PROBE_PHI+2.*PI/N_CELLS);
+  164 BUILD_PROBE(RingProbe07, THIS_PROBE_PHI);
+  165 THIS_PROBE_PHI = EVAL(THIS_PROBE_PHI+2.*PI/N_CELLS);
+  166 BUILD_PROBE(RingProbe08, THIS_PROBE_PHI);
+  167 THIS_PROBE_PHI = EVAL(THIS_PROBE_PHI+2.*PI/N_CELLS);
+  168 BUILD_PROBE(RingProbe09, THIS_PROBE_PHI);
+  169 THIS_PROBE_PHI = EVAL(THIS_PROBE_PHI+2.*PI/N_CELLS);
+  170 BUILD_PROBE(RingProbe10, THIS_PROBE_PHI);
+  171 THIS_PROBE_PHI = EVAL(THIS_PROBE_PHI+2.*PI/N_CELLS);
+  172 BUILD_PROBE(RingProbe11, THIS_PROBE_PHI);
+  173 THIS_PROBE_PHI = EVAL(THIS_PROBE_PHI+2.*PI/N_CELLS);
+  174 BUILD_PROBE(RingProbe12, THIS_PROBE_PHI);
+  175 THIS_PROBE_PHI = EVAL(THIS_PROBE_PHI+2.*PI/N_CELLS);
+  176 BUILD_PROBE(RingProbe13, THIS_PROBE_PHI);
+  177 THIS_PROBE_PHI = EVAL(THIS_PROBE_PHI+2.*PI/N_CELLS);
+  178 BUILD_PROBE(RingProbe14, THIS_PROBE_PHI);
+  179 THIS_PROBE_PHI = EVAL(THIS_PROBE_PHI+2.*PI/N_CELLS);
+  180 BUILD_PROBE(RingProbe15, THIS_PROBE_PHI);
+  181 THIS_PROBE_PHI = EVAL(THIS_PROBE_PHI+2.*PI/N_CELLS);
+  182 
+  183 ringprobe: Line = (RingProbe01, RingProbe02, RingProbe03, RingProbe04, RingProbe05, 
+  184                    RingProbe06, RingProbe07, RingProbe08, RingProbe09, RingProbe10,
+  185                    RingProbe11, RingProbe12, RingProbe13, RingProbe14, RingProbe15);
+  186 
+  187 ringdef: RINGDEFINITION, HARMONIC_NUMBER=1, LAT_RINIT=R0, LAT_PHIINIT=LAT_PHI_INIT,
+  188          LAT_THETAINIT=360/4/N_CELLS, BEAM_PHIINIT=0, BEAM_PRINIT=0,
+  189          BEAM_RINIT=0.0, SYMMETRY=1, RFFREQ=1, IS_CLOSED=false,
+  190          MIN_R=0., MAX_R=40;
+  191 // magnet_d_placement_in, magnet_d_placement_out, 
+  192 cell: Line = ( f_half_cell_drift, f_single, d_half_cell_drift, d_single);
+  193 line1: Line = (ringdef, ringprobe,
+  194             cell, cell, cell, cell, cell,
+  195             cell, cell, cell, cell, cell,
+  196             cell, cell, cell, cell, cell
+  197            );
+  198 
+  199 Dist1: DISTRIBUTION, TYPE=fromfile, FNAME="disttest.dat", INPUTMOUNITS=NONE;
+  200 
+  201 Fs1:FIELDSOLVER, FSTYPE=None, MX=5, MY=5, MT=5,
+  202                  PARFFTX=true, PARFFTY=false, PARFFTT=false,
+  203                  BCFFTX=open, BCFFTY=open, BCFFTT=open,BBOXINCR=2;
+  204 
+  205 //// STEP SIZE ////
+  206 
+  207 REAL B_FREQ=1; // 1 MHz
+  208 REAL SPEED=C_LIGHT*(P0/(E0+P_MASS));
+  209 REAL STEP_SIZE_NS=STEP_SIZE/SPEED;
+  210 REAL STEPS_PER_TURN=1000/STEP_SIZE_NS/B_FREQ; // (this is really steps per B_FREQ)
+  211 REAL MAX_STEPS=2*PI*R0*N_TURNS/STEP_SIZE;
+  212 
+  213 beam1: BEAM, PARTICLE=PROTON, pc=P0/1000., NPART=N_PARTICLES, BCURRENT=1, CHARGE=1.0, BFREQ=B_FREQ;
+  214 
+  215 VALUE, VALUE={E0, P0, P_MASS};
+OPAL> 
+OPAL> value: {E0,P0,P_MASS} = {400, 954.263, 938.272}
+OPAL> 
+  216 
+  217 TRACK, LINE=line1, BEAM=beam1, MAXSTEPS=MAX_STEPS, STEPSPERTURN=STEPS_PER_TURN;
+  218 RUN, METHOD="CYCLOTRON-T", BEAM=beam1, FIELDSOLVER=Fs1, DISTRIBUTION=Dist1;
+Ippl> No solver attached
+Ippl> * Creating new file for data: 'VFFA-1.stat'
+Ippl> * Creating new file for data: 'VFFA-1.lbal'
+OPAL> 
+OPAL> * ************* T R A C K  R U N *************************************************** 
+OPAL> * Selected Tracking Method == CYCLOTRON-T, NEW TRACK
+OPAL> * ********************************************************************************** 
+OPAL> * Phase space dump frequency    = 100000
+OPAL> * Statistics dump frequency     = 100000 w.r.t. the time step.
+OPAL> * DT                            = 1e-12 [s]
+OPAL> * MAXSTEPS                      = 18123
+OPAL> * Mass of simulation particle   = 0.938272 [GeV/c^2]
+OPAL> * Charge of simulation particle = 1.60218e-19 [C]
+OPAL> * Number of neighbour bunches   = 1
+OPAL> * STEPSPERTURN                  = 21391
+OPAL> * ********************************************************************************** 
+OPAL> 
+OPAL> * ************* D I S T R I B U T I O N ********************************************
+OPAL> * 
+OPAL> * Number of particles: 1
+OPAL> * 
+OPAL> * Distribution input momentum units: [Beta Gamma]
+OPAL> * 
+OPAL> * Distribution type: FROMFILE
+OPAL> * 
+OPAL> * Input file: 'disttest.dat'
+OPAL> * 
+OPAL> * Distribution is injected.
+OPAL> * 
+OPAL> * **********************************************************************************
+OPAL> 
+OPAL> * ************* B E A M ************************************************************ 
+OPAL> * BEAM        BEAM1
+OPAL> * PARTICLE    PROTON
+OPAL> * REST MASS   0.938272 [GeV]
+OPAL> * CHARGE      +e * 1 
+OPAL> * MOMENTUM    9.54263e+08 [eV/c]
+OPAL> * CURRENT     1 [A]
+OPAL> * FREQUENCY   1 [MHz]
+OPAL> * NPART       1
+OPAL> * ********************************************************************************** 
+OPAL> 
+OPAL> * ************* F I E L D S O L V E R ********************************************** 
+OPAL> * FIELDSOLVER  FS1
+OPAL> * TYPE         NONE
+OPAL> * N-PROCESSORS 1
+OPAL> * MX           5
+OPAL> * MY           5
+OPAL> * MT           5
+OPAL> * BBOXINCR     2
+OPAL> * XDIM         parallel  
+OPAL> * YDIM         serial  
+OPAL> * Z(T)DIM      serial  
+OPAL> * ********************************************************************************** 
+OPAL> 
+OPAL> * ----------------------------- Ring ------------------------------------- *
+OPAL> * Initial beam radius = 0 [mm] 
+OPAL> * Initial gamma = 1.42632
+OPAL> * Initial beta  = 0.713056
+OPAL> * Total reference momentum      = 1.01704 [beta gamma]
+OPAL> * Reference azimuthal momentum  = 1.01704 [beta gamma]
+OPAL> * Reference radial momentum     = 0 [beta gamma]
+OPAL> * 1 fold field symmetry 
+OPAL> * Harmonic number h = 1 
+OPAL> * ----------------------------- Probe ------------------------------------ *
+OPAL> * Name    = RINGPROBE01
+OPAL> * XStart  = 13.3502 [m]
+OPAL> * XEnd    = 15.3502 [m]
+OPAL> * YStart  = 0 [m]
+OPAL> * YEnd    = 0 [m]
+OPAL> * ----------------------------- Probe ------------------------------------ *
+OPAL> * Name    = RINGPROBE02
+OPAL> * XStart  = 12.196 [m]
+OPAL> * XEnd    = 14.0231 [m]
+OPAL> * YStart  = 5.43 [m]
+OPAL> * YEnd    = 6.24347 [m]
+OPAL> * ----------------------------- Probe ------------------------------------ *
+OPAL> * Name    = RINGPROBE03
+OPAL> * XStart  = 8.933 [m]
+OPAL> * XEnd    = 10.2713 [m]
+OPAL> * YStart  = 9.9211 [m]
+OPAL> * YEnd    = 11.4074 [m]
+OPAL> * ----------------------------- Probe ------------------------------------ *
+OPAL> * Name    = RINGPROBE04
+OPAL> * XStart  = 4.12543 [m]
+OPAL> * XEnd    = 4.74346 [m]
+OPAL> * YStart  = 12.6968 [m]
+OPAL> * YEnd    = 14.5989 [m]
+OPAL> * ----------------------------- Probe ------------------------------------ *
+OPAL> * Name    = RINGPROBE05
+OPAL> * XStart  = -1.39547 [m]
+OPAL> * XEnd    = -1.60453 [m]
+OPAL> * YStart  = 13.277 [m]
+OPAL> * YEnd    = 15.2661 [m]
+OPAL> * ----------------------------- Probe ------------------------------------ *
+OPAL> * Name    = RINGPROBE06
+OPAL> * XStart  = -6.67508 [m]
+OPAL> * XEnd    = -7.67508 [m]
+OPAL> * YStart  = 11.5616 [m]
+OPAL> * YEnd    = 13.2936 [m]
+OPAL> * ----------------------------- Probe ------------------------------------ *
+OPAL> * Name    = RINGPROBE07
+OPAL> * XStart  = -10.8005 [m]
+OPAL> * XEnd    = -12.4185 [m]
+OPAL> * YStart  = 7.84703 [m]
+OPAL> * YEnd    = 9.0226 [m]
+OPAL> * ----------------------------- Probe ------------------------------------ *
+OPAL> * Name    = RINGPROBE08
+OPAL> * XStart  = -13.0584 [m]
+OPAL> * XEnd    = -15.0147 [m]
+OPAL> * YStart  = 2.77565 [m]
+OPAL> * YEnd    = 3.19148 [m]
+OPAL> * ----------------------------- Probe ------------------------------------ *
+OPAL> * Name    = RINGPROBE09
+OPAL> * XStart  = -13.0584 [m]
+OPAL> * XEnd    = -15.0147 [m]
+OPAL> * YStart  = -2.77565 [m]
+OPAL> * YEnd    = -3.19148 [m]
+OPAL> * ----------------------------- Probe ------------------------------------ *
+OPAL> * Name    = RINGPROBE10
+OPAL> * XStart  = -10.8005 [m]
+OPAL> * XEnd    = -12.4185 [m]
+OPAL> * YStart  = -7.84703 [m]
+OPAL> * YEnd    = -9.0226 [m]
+OPAL> * ----------------------------- Probe ------------------------------------ *
+OPAL> * Name    = RINGPROBE11
+OPAL> * XStart  = -6.67508 [m]
+OPAL> * XEnd    = -7.67508 [m]
+OPAL> * YStart  = -11.5616 [m]
+OPAL> * YEnd    = -13.2936 [m]
+OPAL> * ----------------------------- Probe ------------------------------------ *
+OPAL> * Name    = RINGPROBE12
+OPAL> * XStart  = -1.39547 [m]
+OPAL> * XEnd    = -1.60453 [m]
+OPAL> * YStart  = -13.277 [m]
+OPAL> * YEnd    = -15.2661 [m]
+OPAL> * ----------------------------- Probe ------------------------------------ *
+OPAL> * Name    = RINGPROBE13
+OPAL> * XStart  = 4.12543 [m]
+OPAL> * XEnd    = 4.74346 [m]
+OPAL> * YStart  = -12.6968 [m]
+OPAL> * YEnd    = -14.5989 [m]
+OPAL> * ----------------------------- Probe ------------------------------------ *
+OPAL> * Name    = RINGPROBE14
+OPAL> * XStart  = 8.933 [m]
+OPAL> * XEnd    = 10.2713 [m]
+OPAL> * YStart  = -9.9211 [m]
+OPAL> * YEnd    = -11.4074 [m]
+OPAL> * ----------------------------- Probe ------------------------------------ *
+OPAL> * Name    = RINGPROBE15
+OPAL> * XStart  = 12.196 [m]
+OPAL> * XEnd    = 14.0231 [m]
+OPAL> * YStart  = -5.43 [m]
+OPAL> * YEnd    = -6.24347 [m]
+OPAL> * Added F_HALF_CELL_DRIFT to Ring
+OPAL> * Start position (14350.2, 0, 0) normal (-0.104528, 0.994522, 0)
+OPAL> * End position   (14036.6, 2983.57, 0) normal (-0.309017, 0.951057, 0)
+OPAL> * Added VF_OFFSET_OUT to Ring
+OPAL> * Start position (14036.6, 2983.57, 0) normal (-0.309017, 0.951057, 0)
+OPAL> * End position   (15139.8, 713.384, 0) normal (-0.309017, 0.951057, 0)
+OPAL> Adding Vertical FFA Magnet
+OPAL> * Added MAGNETF to Ring
+OPAL> * Start position (15139.8, 713.384, 0) normal (-0.309017, 0.951057, 0)
+OPAL> * End position   (12667.7, 8321.84, 0) normal (-0.309017, 0.951057, 0)
+OPAL> * Added VF_OFFSET_BACK to Ring
+OPAL> * Start position (12667.7, 8321.84, 0) normal (-0.309017, 0.951057, 0)
+OPAL> * End position   (14036.6, 2983.57, 0) normal (-0.309017, 0.951057, 0)
+OPAL> * Added D_HALF_CELL_DRIFT to Ring
+OPAL> * Start position (14036.6, 2983.57, 0) normal (-0.309017, 0.951057, 0)
+OPAL> * End position   (13109.5, 5836.74, 0) normal (-0.5, 0.866025, 0)
+OPAL> * Added VD_OFFSET_OUT to Ring
+OPAL> * Start position (13109.5, 5836.74, 0) normal (-0.5, 0.866025, 0)
+OPAL> * End position   (14058.4, 3497.8, 0) normal (-0.5, 0.866025, 0)
+OPAL> Adding Vertical FFA Magnet
+OPAL> * Added MAGNETD to Ring
+OPAL> * Start position (14058.4, 3497.8, 0) normal (-0.5, 0.866025, 0)
+OPAL> * End position   (10058.4, 10426, 0) normal (-0.5, 0.866025, 0)
+OPAL> * Added VD_OFFSET_BACK to Ring
+OPAL> * Start position (10058.4, 10426, 0) normal (-0.5, 0.866025, 0)
+OPAL> * End position   (13109.5, 5836.74, 0) normal (-0.5, 0.866025, 0)
+OPAL> * Added F_HALF_CELL_DRIFT to Ring
+OPAL> * Start position (13109.5, 5836.74, 0) normal (-0.5, 0.866025, 0)
+OPAL> * End position   (11609.5, 8434.81, 0) normal (-0.669131, 0.743145, 0)
+OPAL> * Added VF_OFFSET_OUT to Ring
+OPAL> * Start position (11609.5, 8434.81, 0) normal (-0.669131, 0.743145, 0)
+OPAL> * End position   (13540.8, 6809.64, 0) normal (-0.669131, 0.743145, 0)
+OPAL> Adding Vertical FFA Magnet
+OPAL> * Added MAGNETF to Ring
+OPAL> * Start position (13540.8, 6809.64, 0) normal (-0.669131, 0.743145, 0)
+OPAL> * End position   (8187.73, 12754.8, 0) normal (-0.669131, 0.743145, 0)
+OPAL> * Added VF_OFFSET_BACK to Ring
+OPAL> * Start position (8187.73, 12754.8, 0) normal (-0.669131, 0.743145, 0)
+OPAL> * End position   (11609.5, 8434.81, 0) normal (-0.669131, 0.743145, 0)
+OPAL> * Added D_HALF_CELL_DRIFT to Ring
+OPAL> * Start position (11609.5, 8434.81, 0) normal (-0.669131, 0.743145, 0)
+OPAL> * End position   (9602.13, 10664.2, 0) normal (-0.809017, 0.587785, 0)
+OPAL> * Added VD_OFFSET_OUT to Ring
+OPAL> * Start position (9602.13, 10664.2, 0) normal (-0.809017, 0.587785, 0)
+OPAL> * End position   (11420.3, 8913.45, 0) normal (-0.809017, 0.587785, 0)
+OPAL> Adding Vertical FFA Magnet
+OPAL> * Added MAGNETD to Ring
+OPAL> * Start position (11420.3, 8913.45, 0) normal (-0.809017, 0.587785, 0)
+OPAL> * End position   (4948.14, 13615.7, 0) normal (-0.809017, 0.587785, 0)
+OPAL> * Added VD_OFFSET_BACK to Ring
+OPAL> * Start position (4948.14, 13615.7, 0) normal (-0.809017, 0.587785, 0)
+OPAL> * End position   (9602.13, 10664.2, 0) normal (-0.809017, 0.587785, 0)
+OPAL> * Added F_HALF_CELL_DRIFT to Ring
+OPAL> * Start position (9602.13, 10664.2, 0) normal (-0.809017, 0.587785, 0)
+OPAL> * End position   (7175.08, 12427.6, 0) normal (-0.913545, 0.406737, 0)
+OPAL> * Added VF_OFFSET_OUT to Ring
+OPAL> * Start position (7175.08, 12427.6, 0) normal (-0.913545, 0.406737, 0)
+OPAL> * End position   (9600.38, 11728.4, 0) normal (-0.913545, 0.406737, 0)
+OPAL> Adding Vertical FFA Magnet
+OPAL> * Added MAGNETF to Ring
+OPAL> * Start position (9600.38, 11728.4, 0) normal (-0.913545, 0.406737, 0)
+OPAL> * End position   (2292.02, 14982.3, 0) normal (-0.913545, 0.406737, 0)
+OPAL> * Added VF_OFFSET_BACK to Ring
+OPAL> * Start position (2292.02, 14982.3, 0) normal (-0.913545, 0.406737, 0)
+OPAL> * End position   (7175.08, 12427.6, 0) normal (-0.913545, 0.406737, 0)
+OPAL> * Added D_HALF_CELL_DRIFT to Ring
+OPAL> * Start position (7175.08, 12427.6, 0) normal (-0.913545, 0.406737, 0)
+OPAL> * End position   (4434.44, 13647.8, 0) normal (-0.978148, 0.207912, 0)
+OPAL> * Added VD_OFFSET_OUT to Ring
+OPAL> * Start position (4434.44, 13647.8, 0) normal (-0.978148, 0.207912, 0)
+OPAL> * End position   (6807.51, 12787.9, 0) normal (-0.978148, 0.207912, 0)
+OPAL> Adding Vertical FFA Magnet
+OPAL> * Added MAGNETD to Ring
+OPAL> * Start position (6807.51, 12787.9, 0) normal (-0.978148, 0.207912, 0)
+OPAL> * End position   (-1017.67, 14451.2, 0) normal (-0.978148, 0.207912, 0)
+OPAL> * Added VD_OFFSET_BACK to Ring
+OPAL> * Start position (-1017.67, 14451.2, 0) normal (-0.978148, 0.207912, 0)
+OPAL> * End position   (4434.44, 13647.8, 0) normal (-0.978148, 0.207912, 0)
+OPAL> * Added F_HALF_CELL_DRIFT to Ring
+OPAL> * Start position (4434.44, 13647.8, 0) normal (-0.978148, 0.207912, 0)
+OPAL> * End position   (1500, 14271.5, 0) normal (-1, -1.30451e-15, 0)
+OPAL> * Added VF_OFFSET_OUT to Ring
+OPAL> * Start position (1500, 14271.5, 0) normal (-1, -1.30451e-15, 0)
+OPAL> * End position   (4000, 14619.3, 0) normal (-1, -1.30451e-15, 0)
+OPAL> Adding Vertical FFA Magnet
+OPAL> * Added MAGNETF to Ring
+OPAL> * Start position (4000, 14619.3, 0) normal (-1, -1.30451e-15, 0)
+OPAL> * End position   (-4000, 14619.3, 0) normal (-1, -1.30451e-15, 0)
+OPAL> * Added VF_OFFSET_BACK to Ring
+OPAL> * Start position (-4000, 14619.3, 0) normal (-1, -1.30451e-15, 0)
+OPAL> * End position   (1500, 14271.5, 0) normal (-1, -1.30451e-15, 0)
+OPAL> * Added D_HALF_CELL_DRIFT to Ring
+OPAL> * Start position (1500, 14271.5, 0) normal (-1, -1.30451e-15, 0)
+OPAL> * End position   (-1500, 14271.5, 0) normal (-0.978148, -0.207912, 0)
+OPAL> * Added VD_OFFSET_OUT to Ring
+OPAL> * Start position (-1500, 14271.5, 0) normal (-0.978148, -0.207912, 0)
+OPAL> * End position   (1017.67, 14451.2, 0) normal (-0.978148, -0.207912, 0)
+OPAL> Adding Vertical FFA Magnet
+OPAL> * Added MAGNETD to Ring
+OPAL> * Start position (1017.67, 14451.2, 0) normal (-0.978148, -0.207912, 0)
+OPAL> * End position   (-6807.51, 12787.9, 0) normal (-0.978148, -0.207912, 0)
+OPAL> * Added VD_OFFSET_BACK to Ring
+OPAL> * Start position (-6807.51, 12787.9, 0) normal (-0.978148, -0.207912, 0)
+OPAL> * End position   (-1500, 14271.5, 0) normal (-0.978148, -0.207912, 0)
+OPAL> * Added F_HALF_CELL_DRIFT to Ring
+OPAL> * Start position (-1500, 14271.5, 0) normal (-0.978148, -0.207912, 0)
+OPAL> * End position   (-4434.44, 13647.8, 0) normal (-0.913545, -0.406737, 0)
+OPAL> * Added VF_OFFSET_OUT to Ring
+OPAL> * Start position (-4434.44, 13647.8, 0) normal (-0.913545, -0.406737, 0)
+OPAL> * End position   (-2292.02, 14982.3, 0) normal (-0.913545, -0.406737, 0)
+OPAL> Adding Vertical FFA Magnet
+OPAL> * Added MAGNETF to Ring
+OPAL> * Start position (-2292.02, 14982.3, 0) normal (-0.913545, -0.406737, 0)
+OPAL> * End position   (-9600.38, 11728.4, 0) normal (-0.913545, -0.406737, 0)
+OPAL> * Added VF_OFFSET_BACK to Ring
+OPAL> * Start position (-9600.38, 11728.4, 0) normal (-0.913545, -0.406737, 0)
+OPAL> * End position   (-4434.44, 13647.8, 0) normal (-0.913545, -0.406737, 0)
+OPAL> * Added D_HALF_CELL_DRIFT to Ring
+OPAL> * Start position (-4434.44, 13647.8, 0) normal (-0.913545, -0.406737, 0)
+OPAL> * End position   (-7175.08, 12427.6, 0) normal (-0.809017, -0.587785, 0)
+OPAL> * Added VD_OFFSET_OUT to Ring
+OPAL> * Start position (-7175.08, 12427.6, 0) normal (-0.809017, -0.587785, 0)
+OPAL> * End position   (-4948.14, 13615.7, 0) normal (-0.809017, -0.587785, 0)
+OPAL> Adding Vertical FFA Magnet
+OPAL> * Added MAGNETD to Ring
+OPAL> * Start position (-4948.14, 13615.7, 0) normal (-0.809017, -0.587785, 0)
+OPAL> * End position   (-11420.3, 8913.45, 0) normal (-0.809017, -0.587785, 0)
+OPAL> * Added VD_OFFSET_BACK to Ring
+OPAL> * Start position (-11420.3, 8913.45, 0) normal (-0.809017, -0.587785, 0)
+OPAL> * End position   (-7175.08, 12427.6, 0) normal (-0.809017, -0.587785, 0)
+OPAL> * Added F_HALF_CELL_DRIFT to Ring
+OPAL> * Start position (-7175.08, 12427.6, 0) normal (-0.809017, -0.587785, 0)
+OPAL> * End position   (-9602.13, 10664.2, 0) normal (-0.669131, -0.743145, 0)
+OPAL> * Added VF_OFFSET_OUT to Ring
+OPAL> * Start position (-9602.13, 10664.2, 0) normal (-0.669131, -0.743145, 0)
+OPAL> * End position   (-8187.73, 12754.8, 0) normal (-0.669131, -0.743145, 0)
+OPAL> Adding Vertical FFA Magnet
+OPAL> * Added MAGNETF to Ring
+OPAL> * Start position (-8187.73, 12754.8, 0) normal (-0.669131, -0.743145, 0)
+OPAL> * End position   (-13540.8, 6809.64, 0) normal (-0.669131, -0.743145, 0)
+OPAL> * Added VF_OFFSET_BACK to Ring
+OPAL> * Start position (-13540.8, 6809.64, 0) normal (-0.669131, -0.743145, 0)
+OPAL> * End position   (-9602.13, 10664.2, 0) normal (-0.669131, -0.743145, 0)
+OPAL> * Added D_HALF_CELL_DRIFT to Ring
+OPAL> * Start position (-9602.13, 10664.2, 0) normal (-0.669131, -0.743145, 0)
+OPAL> * End position   (-11609.5, 8434.81, 0) normal (-0.5, -0.866025, 0)
+OPAL> * Added VD_OFFSET_OUT to Ring
+OPAL> * Start position (-11609.5, 8434.81, 0) normal (-0.5, -0.866025, 0)
+OPAL> * End position   (-10058.4, 10426, 0) normal (-0.5, -0.866025, 0)
+OPAL> Adding Vertical FFA Magnet
+OPAL> * Added MAGNETD to Ring
+OPAL> * Start position (-10058.4, 10426, 0) normal (-0.5, -0.866025, 0)
+OPAL> * End position   (-14058.4, 3497.8, 0) normal (-0.5, -0.866025, 0)
+OPAL> * Added VD_OFFSET_BACK to Ring
+OPAL> * Start position (-14058.4, 3497.8, 0) normal (-0.5, -0.866025, 0)
+OPAL> * End position   (-11609.5, 8434.81, 0) normal (-0.5, -0.866025, 0)
+OPAL> * Added F_HALF_CELL_DRIFT to Ring
+OPAL> * Start position (-11609.5, 8434.81, 0) normal (-0.5, -0.866025, 0)
+OPAL> * End position   (-13109.5, 5836.74, 0) normal (-0.309017, -0.951057, 0)
+OPAL> * Added VF_OFFSET_OUT to Ring
+OPAL> * Start position (-13109.5, 5836.74, 0) normal (-0.309017, -0.951057, 0)
+OPAL> * End position   (-12667.7, 8321.84, 0) normal (-0.309017, -0.951057, 0)
+OPAL> Adding Vertical FFA Magnet
+OPAL> * Added MAGNETF to Ring
+OPAL> * Start position (-12667.7, 8321.84, 0) normal (-0.309017, -0.951057, 0)
+OPAL> * End position   (-15139.8, 713.384, 0) normal (-0.309017, -0.951057, 0)
+OPAL> * Added VF_OFFSET_BACK to Ring
+OPAL> * Start position (-15139.8, 713.384, 0) normal (-0.309017, -0.951057, 0)
+OPAL> * End position   (-13109.5, 5836.74, 0) normal (-0.309017, -0.951057, 0)
+OPAL> * Added D_HALF_CELL_DRIFT to Ring
+OPAL> * Start position (-13109.5, 5836.74, 0) normal (-0.309017, -0.951057, 0)
+OPAL> * End position   (-14036.6, 2983.57, 0) normal (-0.104528, -0.994522, 0)
+OPAL> * Added VD_OFFSET_OUT to Ring
+OPAL> * Start position (-14036.6, 2983.57, 0) normal (-0.104528, -0.994522, 0)
+OPAL> * End position   (-13429.4, 5433.52, 0) normal (-0.104528, -0.994522, 0)
+OPAL> Adding Vertical FFA Magnet
+OPAL> * Added MAGNETD to Ring
+OPAL> * Start position (-13429.4, 5433.52, 0) normal (-0.104528, -0.994522, 0)
+OPAL> * End position   (-14265.6, -2522.65, 0) normal (-0.104528, -0.994522, 0)
+OPAL> * Added VD_OFFSET_BACK to Ring
+OPAL> * Start position (-14265.6, -2522.65, 0) normal (-0.104528, -0.994522, 0)
+OPAL> * End position   (-14036.6, 2983.57, 0) normal (-0.104528, -0.994522, 0)
+OPAL> * Added F_HALF_CELL_DRIFT to Ring
+OPAL> * Start position (-14036.6, 2983.57, 0) normal (-0.104528, -0.994522, 0)
+OPAL> * End position   (-14350.2, -4.00178e-11, 0) normal (0.104528, -0.994522, 0)
+OPAL> * Added VF_OFFSET_OUT to Ring
+OPAL> * Start position (-14350.2, -4.00178e-11, 0) normal (0.104528, -0.994522, 0)
+OPAL> * End position   (-14957.3, 2449.96, 0) normal (0.104528, -0.994522, 0)
+OPAL> Adding Vertical FFA Magnet
+OPAL> * Added MAGNETF to Ring
+OPAL> * Start position (-14957.3, 2449.96, 0) normal (0.104528, -0.994522, 0)
+OPAL> * End position   (-14121.1, -5506.22, 0) normal (0.104528, -0.994522, 0)
+OPAL> * Added VF_OFFSET_BACK to Ring
+OPAL> * Start position (-14121.1, -5506.22, 0) normal (0.104528, -0.994522, 0)
+OPAL> * End position   (-14350.2, -3.91083e-11, 0) normal (0.104528, -0.994522, 0)
+OPAL> * Added D_HALF_CELL_DRIFT to Ring
+OPAL> * Start position (-14350.2, -3.91083e-11, 0) normal (0.104528, -0.994522, 0)
+OPAL> * End position   (-14036.6, -2983.57, 0) normal (0.309017, -0.951057, 0)
+OPAL> * Added VD_OFFSET_OUT to Ring
+OPAL> * Start position (-14036.6, -2983.57, 0) normal (0.309017, -0.951057, 0)
+OPAL> * End position   (-14478.4, -498.465, 0) normal (0.309017, -0.951057, 0)
+OPAL> Adding Vertical FFA Magnet
+OPAL> * Added MAGNETD to Ring
+OPAL> * Start position (-14478.4, -498.465, 0) normal (0.309017, -0.951057, 0)
+OPAL> * End position   (-12006.3, -8106.92, 0) normal (0.309017, -0.951057, 0)
+OPAL> * Added VD_OFFSET_BACK to Ring
+OPAL> * Start position (-12006.3, -8106.92, 0) normal (0.309017, -0.951057, 0)
+OPAL> * End position   (-14036.6, -2983.57, 0) normal (0.309017, -0.951057, 0)
+OPAL> * Added F_HALF_CELL_DRIFT to Ring
+OPAL> * Start position (-14036.6, -2983.57, 0) normal (0.309017, -0.951057, 0)
+OPAL> * End position   (-13109.5, -5836.74, 0) normal (0.5, -0.866025, 0)
+OPAL> * Added VF_OFFSET_OUT to Ring
+OPAL> * Start position (-13109.5, -5836.74, 0) normal (0.5, -0.866025, 0)
+OPAL> * End position   (-14660.7, -3845.54, 0) normal (0.5, -0.866025, 0)
+OPAL> Adding Vertical FFA Magnet
+OPAL> * Added MAGNETF to Ring
+OPAL> * Start position (-14660.7, -3845.54, 0) normal (0.5, -0.866025, 0)
+OPAL> * End position   (-10660.7, -10773.7, 0) normal (0.5, -0.866025, 0)
+OPAL> * Added VF_OFFSET_BACK to Ring
+OPAL> * Start position (-10660.7, -10773.7, 0) normal (0.5, -0.866025, 0)
+OPAL> * End position   (-13109.5, -5836.74, 0) normal (0.5, -0.866025, 0)
+OPAL> * Added D_HALF_CELL_DRIFT to Ring
+OPAL> * Start position (-13109.5, -5836.74, 0) normal (0.5, -0.866025, 0)
+OPAL> * End position   (-11609.5, -8434.81, 0) normal (0.669131, -0.743145, 0)
+OPAL> * Added VD_OFFSET_OUT to Ring
+OPAL> * Start position (-11609.5, -8434.81, 0) normal (0.669131, -0.743145, 0)
+OPAL> * End position   (-13023.9, -6344.26, 0) normal (0.669131, -0.743145, 0)
+OPAL> Adding Vertical FFA Magnet
+OPAL> * Added MAGNETD to Ring
+OPAL> * Start position (-13023.9, -6344.26, 0) normal (0.669131, -0.743145, 0)
+OPAL> * End position   (-7670.88, -12289.4, 0) normal (0.669131, -0.743145, 0)
+OPAL> * Added VD_OFFSET_BACK to Ring
+OPAL> * Start position (-7670.88, -12289.4, 0) normal (0.669131, -0.743145, 0)
+OPAL> * End position   (-11609.5, -8434.81, 0) normal (0.669131, -0.743145, 0)
+OPAL> * Added F_HALF_CELL_DRIFT to Ring
+OPAL> * Start position (-11609.5, -8434.81, 0) normal (0.669131, -0.743145, 0)
+OPAL> * End position   (-9602.13, -10664.2, 0) normal (0.809017, -0.587785, 0)
+OPAL> * Added VF_OFFSET_OUT to Ring
+OPAL> * Start position (-9602.13, -10664.2, 0) normal (0.809017, -0.587785, 0)
+OPAL> * End position   (-11829.1, -9476.11, 0) normal (0.809017, -0.587785, 0)
+OPAL> Adding Vertical FFA Magnet
+OPAL> * Added MAGNETF to Ring
+OPAL> * Start position (-11829.1, -9476.11, 0) normal (0.809017, -0.587785, 0)
+OPAL> * End position   (-5356.94, -14178.4, 0) normal (0.809017, -0.587785, 0)
+OPAL> * Added VF_OFFSET_BACK to Ring
+OPAL> * Start position (-5356.94, -14178.4, 0) normal (0.809017, -0.587785, 0)
+OPAL> * End position   (-9602.13, -10664.2, 0) normal (0.809017, -0.587785, 0)
+OPAL> * Added D_HALF_CELL_DRIFT to Ring
+OPAL> * Start position (-9602.13, -10664.2, 0) normal (0.809017, -0.587785, 0)
+OPAL> * End position   (-7175.08, -12427.6, 0) normal (0.913545, -0.406737, 0)
+OPAL> * Added VD_OFFSET_OUT to Ring
+OPAL> * Start position (-7175.08, -12427.6, 0) normal (0.913545, -0.406737, 0)
+OPAL> * End position   (-9317.5, -11093.1, 0) normal (0.913545, -0.406737, 0)
+OPAL> Adding Vertical FFA Magnet
+OPAL> * Added MAGNETD to Ring
+OPAL> * Start position (-9317.5, -11093.1, 0) normal (0.913545, -0.406737, 0)
+OPAL> * End position   (-2009.14, -14347, 0) normal (0.913545, -0.406737, 0)
+OPAL> * Added VD_OFFSET_BACK to Ring
+OPAL> * Start position (-2009.14, -14347, 0) normal (0.913545, -0.406737, 0)
+OPAL> * End position   (-7175.08, -12427.6, 0) normal (0.913545, -0.406737, 0)
+OPAL> * Added F_HALF_CELL_DRIFT to Ring
+OPAL> * Start position (-7175.08, -12427.6, 0) normal (0.913545, -0.406737, 0)
+OPAL> * End position   (-4434.44, -13647.8, 0) normal (0.978148, -0.207912, 0)
+OPAL> * Added VF_OFFSET_OUT to Ring
+OPAL> * Start position (-4434.44, -13647.8, 0) normal (0.978148, -0.207912, 0)
+OPAL> * End position   (-6952.11, -13468.2, 0) normal (0.978148, -0.207912, 0)
+OPAL> Adding Vertical FFA Magnet
+OPAL> * Added MAGNETF to Ring
+OPAL> * Start position (-6952.11, -13468.2, 0) normal (0.978148, -0.207912, 0)
+OPAL> * End position   (873.069, -15131.5, 0) normal (0.978148, -0.207912, 0)
+OPAL> * Added VF_OFFSET_BACK to Ring
+OPAL> * Start position (873.069, -15131.5, 0) normal (0.978148, -0.207912, 0)
+OPAL> * End position   (-4434.44, -13647.8, 0) normal (0.978148, -0.207912, 0)
+OPAL> * Added D_HALF_CELL_DRIFT to Ring
+OPAL> * Start position (-4434.44, -13647.8, 0) normal (0.978148, -0.207912, 0)
+OPAL> * End position   (-1500, -14271.5, 0) normal (1, 3.96905e-15, 0)
+OPAL> * Added VD_OFFSET_OUT to Ring
+OPAL> * Start position (-1500, -14271.5, 0) normal (1, 3.96905e-15, 0)
+OPAL> * End position   (-4000, -13923.8, 0) normal (1, 3.96905e-15, 0)
+OPAL> Adding Vertical FFA Magnet
+OPAL> * Added MAGNETD to Ring
+OPAL> * Start position (-4000, -13923.8, 0) normal (1, 3.96905e-15, 0)
+OPAL> * End position   (4000, -13923.8, 0) normal (1, 3.96905e-15, 0)
+OPAL> * Added VD_OFFSET_BACK to Ring
+OPAL> * Start position (4000, -13923.8, 0) normal (1, 3.96905e-15, 0)
+OPAL> * End position   (-1500, -14271.5, 0) normal (1, 3.96905e-15, 0)
+OPAL> * Added F_HALF_CELL_DRIFT to Ring
+OPAL> * Start position (-1500, -14271.5, 0) normal (1, 3.96905e-15, 0)
+OPAL> * End position   (1500, -14271.5, 0) normal (0.978148, 0.207912, 0)
+OPAL> * Added VF_OFFSET_OUT to Ring
+OPAL> * Start position (1500, -14271.5, 0) normal (0.978148, 0.207912, 0)
+OPAL> * End position   (-873.069, -15131.5, 0) normal (0.978148, 0.207912, 0)
+OPAL> Adding Vertical FFA Magnet
+OPAL> * Added MAGNETF to Ring
+OPAL> * Start position (-873.069, -15131.5, 0) normal (0.978148, 0.207912, 0)
+OPAL> * End position   (6952.11, -13468.2, 0) normal (0.978148, 0.207912, 0)
+OPAL> * Added VF_OFFSET_BACK to Ring
+OPAL> * Start position (6952.11, -13468.2, 0) normal (0.978148, 0.207912, 0)
+OPAL> * End position   (1500, -14271.5, 0) normal (0.978148, 0.207912, 0)
+OPAL> * Added D_HALF_CELL_DRIFT to Ring
+OPAL> * Start position (1500, -14271.5, 0) normal (0.978148, 0.207912, 0)
+OPAL> * End position   (4434.44, -13647.8, 0) normal (0.913545, 0.406737, 0)
+OPAL> * Added VD_OFFSET_OUT to Ring
+OPAL> * Start position (4434.44, -13647.8, 0) normal (0.913545, 0.406737, 0)
+OPAL> * End position   (2009.14, -14347, 0) normal (0.913545, 0.406737, 0)
+OPAL> Adding Vertical FFA Magnet
+OPAL> * Added MAGNETD to Ring
+OPAL> * Start position (2009.14, -14347, 0) normal (0.913545, 0.406737, 0)
+OPAL> * End position   (9317.5, -11093.1, 0) normal (0.913545, 0.406737, 0)
+OPAL> * Added VD_OFFSET_BACK to Ring
+OPAL> * Start position (9317.5, -11093.1, 0) normal (0.913545, 0.406737, 0)
+OPAL> * End position   (4434.44, -13647.8, 0) normal (0.913545, 0.406737, 0)
+OPAL> * Added F_HALF_CELL_DRIFT to Ring
+OPAL> * Start position (4434.44, -13647.8, 0) normal (0.913545, 0.406737, 0)
+OPAL> * End position   (7175.08, -12427.6, 0) normal (0.809017, 0.587785, 0)
+OPAL> * Added VF_OFFSET_OUT to Ring
+OPAL> * Start position (7175.08, -12427.6, 0) normal (0.809017, 0.587785, 0)
+OPAL> * End position   (5356.94, -14178.4, 0) normal (0.809017, 0.587785, 0)
+OPAL> Adding Vertical FFA Magnet
+OPAL> * Added MAGNETF to Ring
+OPAL> * Start position (5356.94, -14178.4, 0) normal (0.809017, 0.587785, 0)
+OPAL> * End position   (11829.1, -9476.11, 0) normal (0.809017, 0.587785, 0)
+OPAL> * Added VF_OFFSET_BACK to Ring
+OPAL> * Start position (11829.1, -9476.11, 0) normal (0.809017, 0.587785, 0)
+OPAL> * End position   (7175.08, -12427.6, 0) normal (0.809017, 0.587785, 0)
+OPAL> * Added D_HALF_CELL_DRIFT to Ring
+OPAL> * Start position (7175.08, -12427.6, 0) normal (0.809017, 0.587785, 0)
+OPAL> * End position   (9602.13, -10664.2, 0) normal (0.669131, 0.743145, 0)
+OPAL> * Added VD_OFFSET_OUT to Ring
+OPAL> * Start position (9602.13, -10664.2, 0) normal (0.669131, 0.743145, 0)
+OPAL> * End position   (7670.88, -12289.4, 0) normal (0.669131, 0.743145, 0)
+OPAL> Adding Vertical FFA Magnet
+OPAL> * Added MAGNETD to Ring
+OPAL> * Start position (7670.88, -12289.4, 0) normal (0.669131, 0.743145, 0)
+OPAL> * End position   (13023.9, -6344.26, 0) normal (0.669131, 0.743145, 0)
+OPAL> * Added VD_OFFSET_BACK to Ring
+OPAL> * Start position (13023.9, -6344.26, 0) normal (0.669131, 0.743145, 0)
+OPAL> * End position   (9602.13, -10664.2, 0) normal (0.669131, 0.743145, 0)
+OPAL> * Added F_HALF_CELL_DRIFT to Ring
+OPAL> * Start position (9602.13, -10664.2, 0) normal (0.669131, 0.743145, 0)
+OPAL> * End position   (11609.5, -8434.81, 0) normal (0.5, 0.866025, 0)
+OPAL> * Added VF_OFFSET_OUT to Ring
+OPAL> * Start position (11609.5, -8434.81, 0) normal (0.5, 0.866025, 0)
+OPAL> * End position   (10660.7, -10773.7, 0) normal (0.5, 0.866025, 0)
+OPAL> Adding Vertical FFA Magnet
+OPAL> * Added MAGNETF to Ring
+OPAL> * Start position (10660.7, -10773.7, 0) normal (0.5, 0.866025, 0)
+OPAL> * End position   (14660.7, -3845.54, 0) normal (0.5, 0.866025, 0)
+OPAL> * Added VF_OFFSET_BACK to Ring
+OPAL> * Start position (14660.7, -3845.54, 0) normal (0.5, 0.866025, 0)
+OPAL> * End position   (11609.5, -8434.81, 0) normal (0.5, 0.866025, 0)
+OPAL> * Added D_HALF_CELL_DRIFT to Ring
+OPAL> * Start position (11609.5, -8434.81, 0) normal (0.5, 0.866025, 0)
+OPAL> * End position   (13109.5, -5836.74, 0) normal (0.309017, 0.951057, 0)
+OPAL> * Added VD_OFFSET_OUT to Ring
+OPAL> * Start position (13109.5, -5836.74, 0) normal (0.309017, 0.951057, 0)
+OPAL> * End position   (12006.3, -8106.92, 0) normal (0.309017, 0.951057, 0)
+OPAL> Adding Vertical FFA Magnet
+OPAL> * Added MAGNETD to Ring
+OPAL> * Start position (12006.3, -8106.92, 0) normal (0.309017, 0.951057, 0)
+OPAL> * End position   (14478.4, -498.465, 0) normal (0.309017, 0.951057, 0)
+OPAL> * Added VD_OFFSET_BACK to Ring
+OPAL> * Start position (14478.4, -498.465, 0) normal (0.309017, 0.951057, 0)
+OPAL> * End position   (13109.5, -5836.74, 0) normal (0.309017, 0.951057, 0)
+OPAL> * Added F_HALF_CELL_DRIFT to Ring
+OPAL> * Start position (13109.5, -5836.74, 0) normal (0.309017, 0.951057, 0)
+OPAL> * End position   (14036.6, -2983.57, 0) normal (0.104528, 0.994522, 0)
+OPAL> * Added VF_OFFSET_OUT to Ring
+OPAL> * Start position (14036.6, -2983.57, 0) normal (0.104528, 0.994522, 0)
+OPAL> * End position   (14121.1, -5506.22, 0) normal (0.104528, 0.994522, 0)
+OPAL> Adding Vertical FFA Magnet
+OPAL> * Added MAGNETF to Ring
+OPAL> * Start position (14121.1, -5506.22, 0) normal (0.104528, 0.994522, 0)
+OPAL> * End position   (14957.3, 2449.96, 0) normal (0.104528, 0.994522, 0)
+OPAL> * Added VF_OFFSET_BACK to Ring
+OPAL> * Start position (14957.3, 2449.96, 0) normal (0.104528, 0.994522, 0)
+OPAL> * End position   (14036.6, -2983.57, 0) normal (0.104528, 0.994522, 0)
+OPAL> * Added D_HALF_CELL_DRIFT to Ring
+OPAL> * Start position (14036.6, -2983.57, 0) normal (0.104528, 0.994522, 0)
+OPAL> * End position   (14350.2, 7.13953e-11, 0) normal (-0.104528, 0.994522, 0)
+OPAL> * Added VD_OFFSET_OUT to Ring
+OPAL> * Start position (14350.2, 7.13953e-11, 0) normal (-0.104528, 0.994522, 0)
+OPAL> * End position   (14265.6, -2522.65, 0) normal (-0.104528, 0.994522, 0)
+OPAL> Adding Vertical FFA Magnet
+OPAL> * Added MAGNETD to Ring
+OPAL> * Start position (14265.6, -2522.65, 0) normal (-0.104528, 0.994522, 0)
+OPAL> * End position   (13429.4, 5433.52, 0) normal (-0.104528, 0.994522, 0)
+OPAL> * Added VD_OFFSET_BACK to Ring
+OPAL> * Start position (13429.4, 5433.52, 0) normal (-0.104528, 0.994522, 0)
+OPAL> * End position   (14350.2, 6.91216e-11, 0) normal (-0.104528, 0.994522, 0)
+OPAL> Applying symmetry to Ring
+OPAL> * ------------------------------------------------------------------------ *
+OPAL> * The selected Beam line elements are :
+OPAL> * -> Ring
+OPAL> * -> Probe
+OPAL> * -> Probe
+OPAL> * -> Probe
+OPAL> * -> Probe
+OPAL> * -> Probe
+OPAL> * -> Probe
+OPAL> * -> Probe
+OPAL> * -> Probe
+OPAL> * -> Probe
+OPAL> * -> Probe
+OPAL> * -> Probe
+OPAL> * -> Probe
+OPAL> * -> Probe
+OPAL> * -> Probe
+OPAL> * -> Probe
+OPAL> * ------------------------------------------------------------------------ *
+OPAL> 
+OPAL> * 4th order Runge-Kutta integrator
+OPAL> 
+OPAL> * Before repartition: min local particle number: 1
+OPAL> *                     max local particle number: 1
+OPAL> 
+OPAL> * After repartition:  min local particle number: 1
+OPAL> *                     max local particle number: 1
+OPAL> 
+OPAL> * *********************** Bunch information in local frame: ************************
+OPAL> * ************** B U N C H ********************************************************* 
+OPAL> * NP              = 1
+OPAL> * Qtot            =        0.000 [fC]         Qi    =        0.000 [fC]
+OPAL> * Ekin            =        -nan [MeV]         dEkin =        -nan [MeV]
+OPAL> * rmax            = (      0.00000 ,      0.00000 ,      0.00000 ) [um]
+OPAL> * rmin            = (      0.00000 ,      0.00000 ,      0.00000 ) [um]
+OPAL> * hr              = (      0.00005 ,      0.00005 ,      0.00005 ) [um]
+OPAL> * dh              =   1.00000e-10 [%]
+OPAL> * t               =        0.000 [fs]         dT    =       46.749 [ps]
+OPAL> * spos            =        0.000 [um]
+OPAL> * ********************************************************************************** 
+OPAL> 
+OPAL> 
+OPAL> * Integration step 0 (no phase space dump for <= 2 particles)
+OPAL> * T = 0 ns, Live Particles: 1
+OPAL> * E = -nan MeV, beta * gamma = 1.017
+OPAL> * Bunch position: R =  14228 mm, Theta = 0 Deg, Z = 57.185 mm
+OPAL> * Local Azimuth = 14.028 Deg, Local Elevation = -0.43359 Deg
+OPAL> 
+OPAL> * *********************** Bunch information in global frame: ***********************
+OPAL> * ************** B U N C H ********************************************************* 
+OPAL> * NP              = 1
+OPAL> * Qtot            =        0.000 [fC]         Qi    =        0.000 [fC]
+OPAL> * Ekin            =        -nan [MeV]         dEkin =        -nan [MeV]
+OPAL> * rmax            = (     14.22792 ,      0.00000 ,      0.05718 ) [m]
+OPAL> * rmin            = (     14.22792 ,      0.00000 ,      0.05718 ) [m]
+OPAL> * hr              = (      0.00005 ,      0.00005 ,      0.00005 ) [um]
+OPAL> * dh              =   1.00000e-10 [%]
+OPAL> * t               =        0.000 [fs]         dT    =       46.749 [ps]
+OPAL> * spos            =        0.000 [um]
+OPAL> * ********************************************************************************** 
+OPAL> 
+OPAL> * Beginning of this run is at t = 0 [ns]
+OPAL> * The time step is set to dt = 0.046749 [ns]
+OPAL> * Single particle trajectory dump frequency is set to 100
+OPAL> * The frequency to solve space charge fields is set to 1
+OPAL> * The repartition frequency is set to 10
+OPAL> 
+OPAL> * ------------------------------ SINGLE PARTICLE MODE --------------------------------- *
+OPAL> * Instruction: When the total particle number is equal to 1, single particle mode is    *
+OPAL> * triggered automatically. The initial distribution file must be specified which should *
+OPAL> * contain only one line for the single particle                                         *
+OPAL> * ---------NOTE: SINGLE PARTICLE MODE ONLY WORKS SERIALLY ON A SINGLE NODE ------------ *
+OPAL> 
+OPAL> * ---------------------- Start tracking ---------------------------------- *
+OPAL> 
+OPAL> * ---------------------- DONE TRACKING PARTICLES ------------------------- *
+OPAL> * Final energy of reference particle = 400 [MeV]
+OPAL> * Total phase space dump number(includes the initial distribution) = 0
+OPAL> * One can restart simulation from the last dump step (--restart -1)
+OPAL> *
+OPAL> * Finished during turn 1 (0 turns completed)
+OPAL> * Cave: Turn number is not correct for restart mode
+OPAL> 
+OPAL> * *********************** Bunch information in global frame: ***********************
+OPAL> * ************** B U N C H ********************************************************* 
+OPAL> * NP              = 1
+OPAL> * Qtot            =        0.000 [fC]         Qi    =        0.000 [fC]
+OPAL> * Ekin            =        -nan [MeV]         dEkin =        -nan [MeV]
+OPAL> * rmax            = (     13.57223 ,     -3.66511 ,      0.05570 ) [m]
+OPAL> * rmin            = (     13.57223 ,     -3.66511 ,      0.05570 ) [m]
+OPAL> * hr              = (      0.00005 ,      0.00005 ,      0.00005 ) [um]
+OPAL> * dh              =   1.00000e-10 [%]
+OPAL> * t               =      847.225 [ns]         dT    =       46.749 [ps]
+OPAL> * spos            =       181.110 [m]
+OPAL> * ********************************************************************************** 
+OPAL> 
+OPAL> * ------------------------------------------------------------------------ *
+OPAL> * Finalizing i.e. write data and close files :
+OPAL> * Probe RINGPROBE01 goes offline
+OPAL> * Probe RINGPROBE02 goes offline
+OPAL> * Probe RINGPROBE03 goes offline
+OPAL> * Probe RINGPROBE04 goes offline
+OPAL> * Probe RINGPROBE05 goes offline
+OPAL> * Probe RINGPROBE06 goes offline
+OPAL> * Probe RINGPROBE07 goes offline
+OPAL> * Probe RINGPROBE08 goes offline
+OPAL> * Probe RINGPROBE09 goes offline
+OPAL> * Probe RINGPROBE10 goes offline
+OPAL> * Probe RINGPROBE11 goes offline
+OPAL> * Probe RINGPROBE12 goes offline
+OPAL> * Probe RINGPROBE13 goes offline
+OPAL> * Probe RINGPROBE14 goes offline
+OPAL> * Probe RINGPROBE15 goes offline
+OPAL> * ------------------------------------------------------------------------ *
+  219 ENDTRACK;
+  220 STOP;
+OPAL> * End of input stream 'VFFA-1.in'
+Timings> -----------------------------------------------------------------
+Timings>      Timing results for 1 nodes:
+Timings> -----------------------------------------------------------------
+Timings> mainTimer........... Wall tot =    0.37989, CPU tot =       0.38
+Timings> 
+Timings> Binaryrepart........ Wall max =  1.976e-05, CPU max =          0
+Timings>                      Wall avg =  1.976e-05, CPU avg =          0
+Timings>                      Wall min =  1.976e-05, CPU min =          0
+Timings> 
+Timings> Boundingbox......... Wall max =   2.07e-05, CPU max =          0
+Timings>                      Wall avg =   2.07e-05, CPU avg =          0
+Timings>                      Wall min =   2.07e-05, CPU min =          0
+Timings> 
+Timings> Boundingbox-bounds.. Wall max =  1.943e-06, CPU max =          0
+Timings>                      Wall avg =  1.943e-06, CPU avg =          0
+Timings>                      Wall min =  1.943e-06, CPU min =          0
+Timings> 
+Timings> Boundingbox-update.. Wall max =  1.572e-06, CPU max =          0
+Timings>                      Wall avg =  1.572e-06, CPU avg =          0
+Timings>                      Wall min =  1.572e-06, CPU min =          0
+Timings> 
+Timings> Compute Statistics.. Wall max =  6.171e-06, CPU max =          0
+Timings>                      Wall avg =  6.171e-06, CPU avg =          0
+Timings>                      Wall min =  6.171e-06, CPU min =          0
+Timings> 
+Timings> Create Distr........ Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> DeleteParticles..... Wall max =  0.0027863, CPU max =          0
+Timings>                      Wall avg =  0.0027863, CPU avg =          0
+Timings>                      Wall min =  0.0027863, CPU min =          0
+Timings> 
+Timings> Dump................ Wall max = 0.000175657, CPU max =          0
+Timings>                      Wall avg = 0.000175657, CPU avg =          0
+Timings>                      Wall min = 0.000175657, CPU min =          0
+Timings> 
+Timings> Fast inside test.... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Frametransform...... Wall max =  2.229e-06, CPU max =          0
+Timings>                      Wall avg =  2.229e-06, CPU avg =          0
+Timings>                      Wall min =  2.229e-06, CPU min =          0
+Timings> 
+Timings> Histogram........... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Initialize geometry. Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Inside test......... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Integration......... Wall max =   0.297859, CPU max =       0.32
+Timings>                      Wall avg =   0.297859, CPU avg =       0.32
+Timings>                      Wall min =   0.297859, CPU min =       0.32
+Timings> 
+Timings> Load Distr.......... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Particle Inside..... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> PluginElements...... Wall max = 0.00895319, CPU max =       0.01
+Timings>                      Wall avg = 0.00895319, CPU avg =       0.01
+Timings>                      Wall min = 0.00895319, CPU min =       0.01
+Timings> 
+Timings> Ray tracing......... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> SelfField total..... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Write Stat.......... Wall max = 0.00014356, CPU max =          0
+Timings>                      Wall avg = 0.00014356, CPU avg =          0
+Timings>                      Wall min = 0.00014356, CPU min =          0
+Timings> 
+Timings> -----------------------------------------------------------------
+Initialised VFFA-1.in
+Generated cartesian field map in /home/cr67/Software/OPAL/regression-tests/RegressionTests/VFFA-1/scaling_ffa_map_cart.png
+Traceback (most recent call last):
+  File "/home/cr67/Software/OPAL/regression-tests/RegressionTests/VFFA-1/plot.py", line 55, in <module>
+    main()
+  File "/home/cr67/Software/OPAL/regression-tests/RegressionTests/VFFA-1/plot.py", line 51, in main
+    make_plot([14.0])
+  File "/home/cr67/Software/OPAL/regression-tests/RegressionTests/VFFA-1/plot.py", line 34, in make_plot
+    figure.save("field_map.png")
+AttributeError: 'Figure' object has no attribute 'save'. Did you mean: 'stale'?
