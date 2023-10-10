@@ -1,0 +1,57 @@
+OPTION, VERSION = 20500;
+OPTION, INFO = TRUE;
+OPTION, PSDUMPFREQ = 1000;
+OPTION, STATDUMPFREQ = 1;
+OPTION, SPTDUMPFREQ = 100000;
+OPTION, ENABLEHDF5 = FALSE;
+OPTION, ENABLEVTK = FALSE;
+OPTION, ASCIIDUMP = TRUE;
+OPTION, TELL = TRUE;
+
+TITLE, string = "OPAL-cycl: Ten turns in H- compact cyclotron, including BANDRF fieldmaps and geometry";
+
+REAL nstep = 800;
+REAL turns = 10;
+REAL npart = 1E4;
+REAL Edes  = 5*1E-9;
+REAL R_0   = 8.323315536567458;
+REAL phi_0 = -34.025870750692341;
+REAL freq  = 60.134;
+REAL phase = 300*DEGRAD;
+
+REAL gamma     = (Edes+HMMASS)/HMMASS;
+REAL beta      = sqrt(1-(1/gamma^2));
+REAL momentum  = gamma*beta*HMMASS;
+REAL betac     = beta*CLIGHT;
+REAL gambet    = gamma*beta;
+REAL timestep  = 1/(nstep*freq*1E6);
+REAL stepwidth = betac*timestep;
+
+VALUE, {gamma,Edes,beta,momentum,timestep,stepwidth};
+
+GEOM: GEOMETRY, FGEOM="Geometry.h5", XYZSCALE=0.001;
+
+AMIT: CYCLOTRON, TYPE=BANDRF, CYHARMON=1, SYMMETRY=1,
+      RINIT=R_0, PHIINIT=phi_0, ZINIT=0.0, PRINIT=0.0,
+      MAXZ=+6, MINZ=-6, MINR=0, MAXR=450, 
+      GEOMETRY=GEOM, FMAPFN="BField.dat", BSCALE=1.000,
+      RFPHI=TABLE(2,phase), RFFREQ=TABLE(2,freq), ESCALE=TABLE(2,1E-6), SUPERPOSE={FALSE,FALSE},
+      RFMAPFN={"EFieldGap.h5part","EFieldChamber.h5part"};
+
+C1: LINE = (AMIT);
+
+Dist1: DISTRIBUTION, TYPE=FROMFILE, INPUTMOUNITS=NONE, FNAME="particleDist.dat";
+
+Fs2: FIELDSOLVER, FSTYPE=NONE,
+                  MX=8, MY=8, MT=8,
+                  PARFFTX=TRUE, PARFFTY=TRUE, PARFFTT=TRUE;
+
+beam1: BEAM, PARTICLE=HMINUS, BFREQ=freq, PC=momentum, NPART=npart, BCURRENT=200E-6;
+
+SELECT, LINE=C1;
+TRACK, LINE=C1, BEAM=beam1, MAXSTEPS=nstep*turns, STEPSPERTURN=nstep, TIMEINTEGRATOR=RK4; 
+
+RUN, METHOD="CYCLOTRON-T", BEAM=beam1, FIELDSOLVER=Fs2, DISTRIBUTION=Dist1, BOUNDARYGEOMETRY=GEOM;
+
+ENDTRACK;
+STOP;
