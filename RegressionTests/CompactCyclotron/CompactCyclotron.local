@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd "$(dirname "$(readlink -nf "$0")")"
+mpirun -np 6 "$OPAL_EXE_PATH/opal" CompactCyclotron.in --info 2 --warn 0 "$@" 2>&1
