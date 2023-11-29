@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd "$(dirname "$(readlink -nf "$0")")"
+mpirun -np 1 "${OPAL_EXE_PATH}/opal" OpalRingTest.in --info 2 "$@" 2>&1

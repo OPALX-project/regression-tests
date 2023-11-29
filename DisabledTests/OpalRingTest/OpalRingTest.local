@@ -1,4 +1,0 @@
-#!/bin/bash
-
-cd "$(dirname "$(readlink -nf "$0")")"
-timeout 300 mpirun -np 1 "$OPAL_EXE_PATH/opal" OpalRingTest.in "$@" 2>&1
