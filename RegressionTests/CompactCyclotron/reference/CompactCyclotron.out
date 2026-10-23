@@ -5,8 +5,8 @@ OPAL{0}>              | |  | |  ___/ /\ \ | |
 OPAL{0}>              | |__| | |  / ____ \| |____
 OPAL{0}>               \____/|_| /_/    \_\______|
 OPAL{0}> 
-OPAL{0}> This is OPAL (Object Oriented Parallel Accelerator Library) Version 2022.2.99
-OPAL{0}>             git rev. afdb6697f934f28c4442495dc27833bfaf7c3499
+OPAL{0}> This is OPAL (Object Oriented Parallel Accelerator Library) Version 2024.2
+OPAL{0}>             git rev. 0e9395166a6c0bcfcbf8a64e6b3572d8dfbcc88a
 OPAL{0}> 
 OPAL{0}> 
 OPAL{0}>                      (c) PSI, http://amas.web.psi.ch
@@ -17,7 +17,7 @@ OPAL{0}>
 OPAL{0}> Please send cookies, goodies or other motivations (wine and beer ... ) 
 OPAL{0}> to the OPAL developers opal@lists.psi.ch
 OPAL{0}> 
-OPAL{0}> Time: 09:41:29 date: 26/09/2023
+OPAL{0}> Time: 10:48:08 date: 23/10/2026
 OPAL{0}> 
 OPAL{0}> * Reading input stream 'CompactCyclotron.in'
 OPAL{0}> 
@@ -174,7 +174,13 @@ OPAL{0}> * E-field scale factor = (1e-06, 1e-06)
 OPAL{0}> * Superpose electric field maps -> (FALSE, FALSE)
 OPAL{0}> * Read both median plane B field map and 3D E field map of RF cavity for compact cyclotron
 OPAL{0}> * Reading 'EFieldGap.h5part'
+Ippl{0}> field map 'EFieldGap.h5part' Efield: mapped read-only, 4 MiB shared per node
+Ippl{0}> field map 'EFieldGap.h5part' Hfield: mapped read-only, 4 MiB shared per node
+Ippl{0}> field map 'EFieldGap.h5part' Hfield: zero everywhere, not interpolated
 OPAL{0}> * Reading 'EFieldChamber.h5part'
+Ippl{0}> field map 'EFieldChamber.h5part' Efield: mapped read-only, 2 MiB shared per node
+Ippl{0}> field map 'EFieldChamber.h5part' Hfield: mapped read-only, 2 MiB shared per node
+Ippl{0}> field map 'EFieldChamber.h5part' Hfield: zero everywhere, not interpolated
 OPAL{0}> * ----------------------------------------------
 OPAL{0}> *      READ IN CARBON CYCLOTRON FIELD MAP       
 OPAL{0}> * ----------------------------------------------
@@ -224,9 +230,9 @@ OPAL{0}>
 OPAL{0}> 
 OPAL{0}> * Integration step 0 (no phase space dump for <= 2 particles)
 OPAL{0}> * T = 0 s, Live Particles: 10000
-OPAL{0}> * E = 5.0884e-06 MeV, beta * gamma = 0.00011476
-OPAL{0}> * Bunch position: R =  8.3113 mm, Theta = -35.127 Deg, Z = 0.53006 mm
-OPAL{0}> * Local Azimuth = -36.704 Deg, Local Elevation = 1.3761 Deg
+OPAL{0}> * E = 5.0884e-06 MeV, beta * gamma = 0.00010318
+OPAL{0}> * Bunch position: R =  8.3233 mm, Theta = -34.026 Deg, Z = 8.4703e-19 mm
+OPAL{0}> * Local Azimuth = -34.026 Deg, Local Elevation = 0 Deg
 OPAL{0}> 
 OPAL{0}> * *********************** Bunch information in global frame: ***********************
 OPAL{0}> * ************** B U N C H ********************************************************* 
@@ -255,96 +261,107 @@ OPAL{0}> * The repartition frequency is set to 10
 OPAL{0}> 
 OPAL{0}> * ---------------------- Start tracking ---------------------------------- *
 OPAL{0}> 
-OPAL{0}> *** Finished turn 1, Total number of live particles: 9083
+OPAL{0}> *** Finished turn 1, Total number of live particles: 9042
+OPAL{0}> Step 1000
 OPAL{0}> 
 OPAL{0}> * Integration step 1000 (no phase space dump for <= 2 particles)
-OPAL{0}> * T = 2.0787e-08 s, Live Particles: 9083
-OPAL{0}> * E = 0.14254 MeV, beta * gamma = 0.017465
-OPAL{0}> * Bunch position: R =  13.162 mm, Theta = 7.6388 Deg, Z = 0.094815 mm
-OPAL{0}> * Local Azimuth = 8.737 Deg, Local Elevation = -0.00044038 Deg
+OPAL{0}> * T = 2.0787e-08 s, Live Particles: 9042
+OPAL{0}> * E = 0.14221 MeV, beta * gamma = 0.017402
+OPAL{0}> * Bunch position: R =  13.185 mm, Theta = 8.5759 Deg, Z = 0.0014992 mm
+OPAL{0}> * Local Azimuth = 9.7321 Deg, Local Elevation = 0.0017142 Deg
 OPAL{0}> 
-OPAL{0}> *** Finished turn 2, Total number of live particles: 9083
+OPAL{0}> *** Finished turn 2, Total number of live particles: 9042
+OPAL{0}> Step 2000
 OPAL{0}> 
 OPAL{0}> * Integration step 2000 (no phase space dump for <= 2 particles)
-OPAL{0}> * T = 4.1574e-08 s, Live Particles: 9083
-OPAL{0}> * E = 0.25763 MeV, beta * gamma = 0.023439
-OPAL{0}> * Bunch position: R =  17.276 mm, Theta = 110.81 Deg, Z = 0.090235 mm
-OPAL{0}> * Local Azimuth = 108.01 Deg, Local Elevation = -0.0031866 Deg
+OPAL{0}> * T = 4.1574e-08 s, Live Particles: 9042
+OPAL{0}> * E = 0.25722 MeV, beta * gamma = 0.023381
+OPAL{0}> * Bunch position: R =  17.236 mm, Theta = 111.37 Deg, Z = 0.0031 mm
+OPAL{0}> * Local Azimuth = 108.81 Deg, Local Elevation = -0.0003383 Deg
 OPAL{0}> 
-OPAL{0}> *** Finished turn 3, Total number of live particles: 9083
+OPAL{0}> *** Finished turn 3, Total number of live particles: 9042
+OPAL{0}> Step 3000
 OPAL{0}> 
 OPAL{0}> * Integration step 3000 (no phase space dump for <= 2 particles)
-OPAL{0}> * T = 6.2361e-08 s, Live Particles: 9083
-OPAL{0}> * E = 0.42462 MeV, beta * gamma = 0.030073
-OPAL{0}> * Bunch position: R =  23.112 mm, Theta = -150.34 Deg, Z = 0.077663 mm
-OPAL{0}> * Local Azimuth = 204.53 Deg, Local Elevation = -0.0059472 Deg
+OPAL{0}> * T = 6.2361e-08 s, Live Particles: 9042
+OPAL{0}> * E = 0.42426 MeV, beta * gamma = 0.030033
+OPAL{0}> * Bunch position: R =  23.018 mm, Theta = -149.54 Deg, Z = -0.00018915 mm
+OPAL{0}> * Local Azimuth = 205.25 Deg, Local Elevation = -0.0016213 Deg
 OPAL{0}> 
-OPAL{0}> *** Finished turn 4, Total number of live particles: 9083
+OPAL{0}> *** Finished turn 4, Total number of live particles: 9042
 OPAL{0}> 
-OPAL{0}> *** Finished turn 5, Total number of live particles: 9083
+OPAL{0}> *** Finished turn 5, Total number of live particles: 9042
+OPAL{0}> Step 4000
 OPAL{0}> 
 OPAL{0}> * Integration step 4000 (no phase space dump for <= 2 particles)
-OPAL{0}> * T = 8.3148e-08 s, Live Particles: 9083
-OPAL{0}> * E = 0.54185 MeV, beta * gamma = 0.03397
-OPAL{0}> * Bunch position: R =  28.899 mm, Theta = -59.847 Deg, Z = 0.052527 mm
-OPAL{0}> * Local Azimuth = -60.577 Deg, Local Elevation = -0.0091906 Deg
+OPAL{0}> * T = 8.3148e-08 s, Live Particles: 9042
+OPAL{0}> * E = 0.54125 MeV, beta * gamma = 0.033928
+OPAL{0}> * Bunch position: R =  28.887 mm, Theta = -59.018 Deg, Z = -0.0062194 mm
+OPAL{0}> * Local Azimuth = -59.861 Deg, Local Elevation = -0.0019467 Deg
 OPAL{0}> 
-OPAL{0}> *** Finished turn 6, Total number of live particles: 9083
+OPAL{0}> *** Finished turn 6, Total number of live particles: 9042
+OPAL{0}> Step 5000
 OPAL{0}> 
 OPAL{0}> * Integration step 5000 (no phase space dump for <= 2 particles)
-OPAL{0}> * T = 1.0393e-07 s, Live Particles: 9083
-OPAL{0}> * E = 0.71551 MeV, beta * gamma = 0.039034
-OPAL{0}> * Bunch position: R =  29.746 mm, Theta = 30.818 Deg, Z = 0.021052 mm
-OPAL{0}> * Local Azimuth = 33.841 Deg, Local Elevation = -0.0091389 Deg
+OPAL{0}> * T = 1.0393e-07 s, Live Particles: 9042
+OPAL{0}> * E = 0.71466 MeV, beta * gamma = 0.038995
+OPAL{0}> * Bunch position: R =  29.779 mm, Theta = 31.52 Deg, Z = -0.011069 mm
+OPAL{0}> * Local Azimuth = 34.551 Deg, Local Elevation = -0.0010374 Deg
 OPAL{0}> 
-OPAL{0}> *** Finished turn 7, Total number of live particles: 9083
+OPAL{0}> *** Finished turn 7, Total number of live particles: 9042
+OPAL{0}> Step 6000
 OPAL{0}> 
 OPAL{0}> * Integration step 6000 (no phase space dump for <= 2 particles)
-OPAL{0}> * T = 1.2472e-07 s, Live Particles: 9083
-OPAL{0}> * E = 0.83263 MeV, beta * gamma = 0.042109
-OPAL{0}> * Bunch position: R =  31.57 mm, Theta = 129.79 Deg, Z = -0.029628 mm
-OPAL{0}> * Local Azimuth = 127.92 Deg, Local Elevation = -0.015044 Deg
+OPAL{0}> * T = 1.2472e-07 s, Live Particles: 9042
+OPAL{0}> * E = 0.83166 MeV, beta * gamma = 0.042065
+OPAL{0}> * Bunch position: R =  31.523 mm, Theta = 130.38 Deg, Z = -0.013361 mm
+OPAL{0}> * Local Azimuth = 128.62 Deg, Local Elevation = -0.00050672 Deg
 OPAL{0}> 
-OPAL{0}> *** Finished turn 8, Total number of live particles: 9083
+OPAL{0}> *** Finished turn 8, Total number of live particles: 9042
+OPAL{0}> Step 7000
 OPAL{0}> 
 OPAL{0}> * Integration step 7000 (no phase space dump for <= 2 particles)
-OPAL{0}> * T = 1.4551e-07 s, Live Particles: 9083
-OPAL{0}> * E = 1.0057 MeV, beta * gamma = 0.046282
-OPAL{0}> * Bunch position: R =  36.748 mm, Theta = -134.77 Deg, Z = -0.075967 mm
-OPAL{0}> * Local Azimuth = 221.77 Deg, Local Elevation = -0.0044286 Deg
+OPAL{0}> * T = 1.4551e-07 s, Live Particles: 9042
+OPAL{0}> * E = 1.0044 MeV, beta * gamma = 0.046224
+OPAL{0}> * Bunch position: R =  36.653 mm, Theta = -134.02 Deg, Z = -0.013225 mm
+OPAL{0}> * Local Azimuth = 222.48 Deg, Local Elevation = -0.00018201 Deg
 OPAL{0}> 
-OPAL{0}> *** Finished turn 9, Total number of live particles: 9083
+OPAL{0}> *** Finished turn 9, Total number of live particles: 9042
 OPAL{0}> 
-OPAL{0}> *** Finished turn 10, Total number of live particles: 9083
+OPAL{0}> *** Finished turn 10, Total number of live particles: 9042
+OPAL{0}> Step 8000
 OPAL{0}> 
 OPAL{0}> * Integration step 8000 (no phase space dump for <= 2 particles)
-OPAL{0}> * T = 1.663e-07 s, Live Particles: 9083
-OPAL{0}> * E = 1.1204 MeV, beta * gamma = 0.048853
-OPAL{0}> * Bunch position: R =  40.611 mm, Theta = -45.351 Deg, Z = -0.086879 mm
-OPAL{0}> * Local Azimuth = -44.754 Deg, Local Elevation = 0.0027345 Deg
+OPAL{0}> * T = 1.663e-07 s, Live Particles: 9042
+OPAL{0}> * E = 1.1188 MeV, beta * gamma = 0.048784
+OPAL{0}> * Bunch position: R =  40.576 mm, Theta = -44.573 Deg, Z = -0.011694 mm
+OPAL{0}> * Local Azimuth = -44.043 Deg, Local Elevation = 0.0003739 Deg
 OPAL{0}> 
 OPAL{0}> * ---------------------- DONE TRACKING PARTICLES ------------------------- *
+OPAL{0}> * Final energy of reference particle = 1.117 [MeV]
+OPAL{0}> * Total phase space dump number(includes the initial distribution) = 0
+OPAL{0}> * One can restart simulation from the last dump step (--restart -1)
 OPAL{0}> *
 OPAL{0}> * Finished during turn 11 (10 turns completed)
 OPAL{0}> * Cave: Turn number is not correct for restart mode
 OPAL{0}> 
 OPAL{0}> * *********************** Bunch information in global frame: ***********************
 OPAL{0}> * ************** B U N C H ********************************************************* 
-OPAL{0}> * NP              = 9083
-OPAL{0}> * Qtot            =        3.021 [pC]         Qi    =        0.333 [fC]
-OPAL{0}> * Ekin            =       1.120 [MeV]         dEkin =       1.711 [keV]
-OPAL{0}> * rmax            = (     29.02482 ,    -28.20048 ,      3.86782 ) [mm]
-OPAL{0}> * rmin            = (     28.25396 ,    -29.38524 ,     -4.31655 ) [mm]
-OPAL{0}> * rms beam size   = (      0.11529 ,      0.16989 ,      1.90525 ) [mm]
-OPAL{0}> * rms momenta     = (  1.83675e-04 ,  1.66925e-04 ,  5.78179e-05 ) [beta gamma]
-OPAL{0}> * mean position   = (     28.63495 ,    -28.79142 ,     -0.16593 ) [mm]
-OPAL{0}> * mean momenta    = (  3.43354e-02 ,  3.47562e-02 ,  6.38229e-06 ) [beta gamma]
-OPAL{0}> * rms emittance   = (  1.92504e-07 ,  1.72250e-07 ,  6.93885e-07 ) (not normalized)
-OPAL{0}> * rms correlation = ( -8.95955e-01 ,  9.54954e-01 , -9.51467e-01 )
-OPAL{0}> * hr              = (     32.59023 ,     43.89762 ,    694.62157 ) [um]
+OPAL{0}> * NP              = 9042
+OPAL{0}> * Qtot            =        3.007 [pC]         Qi    =        0.333 [fC]
+OPAL{0}> * Ekin            =       1.119 [MeV]         dEkin =       1.580 [keV]
+OPAL{0}> * rmax            = (     29.12752 ,    -28.10606 ,      4.05901 ) [mm]
+OPAL{0}> * rmin            = (     28.41560 ,    -29.22926 ,     -4.05274 ) [mm]
+OPAL{0}> * rms beam size   = (      0.11116 ,      0.16827 ,      1.95298 ) [mm]
+OPAL{0}> * rms momenta     = (  1.76795e-04 ,  1.56083e-04 ,  5.25652e-05 ) [beta gamma]
+OPAL{0}> * mean position   = (     28.74956 ,    -28.68029 ,      0.00906 ) [mm]
+OPAL{0}> * mean momenta    = (  3.41234e-02 ,  3.49161e-02 , -1.21815e-06 ) [beta gamma]
+OPAL{0}> * rms emittance   = (  1.77595e-07 ,  1.20879e-07 ,  5.18644e-07 ) (not normalized)
+OPAL{0}> * rms correlation = ( -8.97407e-01 ,  9.74429e-01 , -9.69103e-01 )
+OPAL{0}> * hr              = (     31.95604 ,     43.45081 ,    695.60042 ) [um]
 OPAL{0}> * dh              =   1.00000e-10 [%]
 OPAL{0}> * t               =      166.295 [ns]         dT    =       20.787 [ps]
-OPAL{0}> * spos            =         1.611 [m]
+OPAL{0}> * spos            =         1.608 [m]
 OPAL{0}> * ********************************************************************************** 
 OPAL{0}> 
 OPAL{0}> * ------------------------------------------------------------------------ *
@@ -356,75 +373,75 @@ OPAL{0}> * End of input stream 'CompactCyclotron.in'
 Timings{0}> -----------------------------------------------------------------
 Timings{0}>      Timing results for 6 nodes:
 Timings{0}> -----------------------------------------------------------------
-Timings{0}> mainTimer........... Wall tot =    162.989, CPU tot =     162.48
+Timings{0}> mainTimer........... Wall tot =    126.439, CPU tot =    133.352
 Timings{0}> 
-Timings{0}> Binaryrepart........ Wall max = 0.00160942, CPU max =       0.01
-Timings{0}>                      Wall avg = 0.00160668, CPU avg = 0.00166667
-Timings{0}>                      Wall min = 0.00159418, CPU min =          0
+Timings{0}> Binaryrepart........ Wall max = 0.00300564, CPU max =    0.00334
+Timings{0}>                      Wall avg = 0.00299754, CPU avg = 0.00333083
+Timings{0}>                      Wall min = 0.00295866, CPU min =   0.003287
 Timings{0}> 
-Timings{0}> Boundingbox......... Wall max =  0.0414876, CPU max =       0.05
-Timings{0}>                      Wall avg =  0.0304215, CPU avg =  0.0266667
-Timings{0}>                      Wall min =  0.0223399, CPU min =       0.01
+Timings{0}> Boundingbox......... Wall max =   0.021988, CPU max =   0.024195
+Timings{0}>                      Wall avg =  0.0209508, CPU avg =   0.023052
+Timings{0}>                      Wall min =  0.0200715, CPU min =   0.022033
 Timings{0}> 
-Timings{0}> Boundingbox-bounds.. Wall max = 0.000689306, CPU max =          0
-Timings{0}>                      Wall avg = 0.00065439, CPU avg =          0
-Timings{0}>                      Wall min = 0.000613798, CPU min =          0
+Timings{0}> Boundingbox-bounds.. Wall max = 0.00176045, CPU max =   0.001951
+Timings{0}>                      Wall avg = 0.00143089, CPU avg = 0.00158217
+Timings{0}>                      Wall min = 0.00116675, CPU min =   0.001295
 Timings{0}> 
-Timings{0}> Boundingbox-update.. Wall max = 0.00888719, CPU max =       0.01
-Timings{0}>                      Wall avg =  0.0088564, CPU avg = 0.00833333
-Timings{0}>                      Wall min = 0.00882834, CPU min =          0
+Timings{0}> Boundingbox-update.. Wall max =  0.0152725, CPU max =   0.016863
+Timings{0}>                      Wall avg =  0.0151678, CPU avg =  0.0167397
+Timings{0}>                      Wall min =  0.0151308, CPU min =   0.016699
 Timings{0}> 
-Timings{0}> Compute Statistics.. Wall max =    1.47494, CPU max =       1.67
-Timings{0}>                      Wall avg =    1.46416, CPU avg =      1.525
-Timings{0}>                      Wall min =    1.45855, CPU min =        1.4
+Timings{0}> Compute Statistics.. Wall max =    3.10673, CPU max =    3.27396
+Timings{0}>                      Wall avg =    3.05958, CPU avg =    3.22606
+Timings{0}>                      Wall min =    3.01627, CPU min =    3.18257
 Timings{0}> 
 Timings{0}> Create Distr........ Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
 Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
-Timings{0}> DeleteParticles..... Wall max =     127.36, CPU max =     127.37
-Timings{0}>                      Wall avg =    71.6832, CPU avg =    71.4683
-Timings{0}>                      Wall min =    6.94635, CPU min =       6.85
+Timings{0}> DeleteParticles..... Wall max =    92.2409, CPU max =    97.3677
+Timings{0}>                      Wall avg =    52.1176, CPU avg =    55.0111
+Timings{0}>                      Wall min =    6.93867, CPU min =    7.36195
 Timings{0}> 
-Timings{0}> Dump................ Wall max =    2.36146, CPU max =       2.32
-Timings{0}>                      Wall avg =    1.73088, CPU avg =       1.75
-Timings{0}>                      Wall min =    1.59411, CPU min =       1.52
+Timings{0}> Dump................ Wall max =    5.76261, CPU max =    6.02085
+Timings{0}>                      Wall avg =    4.07997, CPU avg =    4.27887
+Timings{0}>                      Wall min =    3.70761, CPU min =    3.88976
 Timings{0}> 
-Timings{0}> Fast inside test.... Wall max = 0.000206203, CPU max =          0
-Timings{0}>                      Wall avg = 0.000106229, CPU avg =          0
-Timings{0}>                      Wall min = 7.5333e-05, CPU min =          0
+Timings{0}> Fast inside test.... Wall max = 0.00041004, CPU max =   0.000456
+Timings{0}>                      Wall avg = 0.000162825, CPU avg = 0.000181333
+Timings{0}>                      Wall min =  7.677e-05, CPU min =    8.5e-05
 Timings{0}> 
-Timings{0}> Frametransform...... Wall max =  0.0680677, CPU max =       0.06
-Timings{0}>                      Wall avg =  0.0518227, CPU avg =  0.0466667
-Timings{0}>                      Wall min =  0.0294542, CPU min =          0
+Timings{0}> Frametransform...... Wall max = 0.00788653, CPU max =   0.008682
+Timings{0}>                      Wall avg = 0.00584357, CPU avg = 0.00645283
+Timings{0}>                      Wall min = 0.00375522, CPU min =   0.004138
 Timings{0}> 
 Timings{0}> Histogram........... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
 Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
-Timings{0}> Initialize geometry. Wall max =   0.885019, CPU max =       0.89
-Timings{0}>                      Wall avg =   0.883647, CPU avg =   0.883333
-Timings{0}>                      Wall min =   0.882836, CPU min =       0.88
+Timings{0}> Initialize geometry. Wall max =    1.53908, CPU max =     1.5781
+Timings{0}>                      Wall avg =    1.53836, CPU avg =    1.57457
+Timings{0}>                      Wall min =    1.53758, CPU min =     1.5695
 Timings{0}> 
-Timings{0}> Inside test......... Wall max = 0.00328424, CPU max =       0.01
-Timings{0}>                      Wall avg = 0.00324964, CPU avg = 0.00333333
-Timings{0}>                      Wall min = 0.00322043, CPU min =          0
+Timings{0}> Inside test......... Wall max = 0.00525852, CPU max =   0.005847
+Timings{0}>                      Wall avg = 0.00440946, CPU avg = 0.00490333
+Timings{0}>                      Wall min = 0.00322452, CPU min =   0.003586
 Timings{0}> 
-Timings{0}> Integration......... Wall max =    110.689, CPU max =      110.2
-Timings{0}>                      Wall avg =     63.209, CPU avg =    62.9467
-Timings{0}>                      Wall min =    22.6117, CPU min =      22.43
+Timings{0}> Integration......... Wall max =    35.2654, CPU max =    36.9037
+Timings{0}>                      Wall avg =    21.0038, CPU avg =    21.9734
+Timings{0}>                      Wall min =     9.2158, CPU min =    9.64307
 Timings{0}> 
 Timings{0}> Load Distr.......... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
 Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
-Timings{0}> Particle Inside..... Wall max =     23.928, CPU max =      23.84
-Timings{0}>                      Wall avg =    14.4146, CPU avg =      14.26
-Timings{0}>                      Wall min =    6.00306, CPU min =        5.9
+Timings{0}> Particle Inside..... Wall max =    30.1706, CPU max =     31.945
+Timings{0}>                      Wall avg =    18.5293, CPU avg =    19.6771
+Timings{0}>                      Wall min =    7.74676, CPU min =    8.24936
 Timings{0}> 
-Timings{0}> PluginElements...... Wall max = 0.00813856, CPU max =       0.01
-Timings{0}>                      Wall avg = 0.00741057, CPU avg =      0.005
-Timings{0}>                      Wall min = 0.00676498, CPU min =          0
+Timings{0}> PluginElements...... Wall max =  0.0110763, CPU max =   0.011552
+Timings{0}>                      Wall avg =  0.0103156, CPU avg =  0.0107415
+Timings{0}>                      Wall min = 0.00989613, CPU min =   0.010099
 Timings{0}> 
 Timings{0}> Ray tracing......... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
@@ -434,8 +451,8 @@ Timings{0}> SelfField total..... Wall max =          0, CPU max =          0
 Timings{0}>                      Wall avg =          0, CPU avg =          0
 Timings{0}>                      Wall min =          0, CPU min =          0
 Timings{0}> 
-Timings{0}> Write Stat.......... Wall max =   0.846015, CPU max =       0.89
-Timings{0}>                      Wall avg =    0.22134, CPU avg =   0.196667
-Timings{0}>                      Wall min =  0.0899063, CPU min =       0.04
+Timings{0}> Write Stat.......... Wall max =    2.28133, CPU max =    2.36928
+Timings{0}>                      Wall avg =   0.609162, CPU avg =   0.637258
+Timings{0}>                      Wall min =   0.228932, CPU min =   0.243372
 Timings{0}> 
 Timings{0}> -----------------------------------------------------------------
