@@ -1,236 +1,459 @@
-[merlin-l-001][[15151,1],0][/var/tmp/caubet_m/openmpi-3.1.6_slurm/src/opal/mca/btl/openib/btl_openib_component.c:1671:init_one_device] error obtaining device attributes for mlx5_0 errno says Protocol not supported
---------------------------------------------------------------------------
-WARNING: There was an error initializing an OpenFabrics device.
-
-  Local host:   merlin-l-001
-  Local device: mlx5_0
---------------------------------------------------------------------------
-Ippl> CommMPI: Parent process waiting for children ...
-Ippl> CommMPI: Initialization complete.
->                ____  _____       ___ 
->               / __ \|  __ \ /\   | | 
->              | |  | | |__) /  \  | |
->              | |  | |  ___/ /\ \ | |
->              | |__| | |  / ____ \| |____
->               \____/|_| /_/    \_\______|
-OPAL> 
-OPAL> This is OPAL (Object Oriented Parallel Accelerator Library) Version 2.3.0
-OPAL>             git rev. 40634beaad6e3b782bed353b206083821fbae5f4
-OPAL> 
-OPAL> 
-OPAL>                      (c) PSI, http://amas.web.psi.ch
-OPAL> 
-OPAL> 
-OPAL> The optimiser (former opt-Pilot) is integrated 
-OPAL> 
-OPAL> Please send cookies, goodies or other motivations (wine and beer ... ) 
-OPAL> to the OPAL developers opal@lists.psi.ch
-OPAL> 
-OPAL> Time: 11:33:58 date: 08/09/2020
-OPAL> 
-OPAL> Couldn't find startup file "/psi/home/albajacas_a/init.opal".
-OPAL> Note: this is not mandatory for an OPAL simulation!
-OPAL> 
-OPAL> * Reading input stream "Distribution-MultiGauss.in".
-OPAL> 
-OPAL> value: {GAMMA,P0} = {84.1489, 0.042997}
-OPAL> 
-OPAL> * ********************************************************************************** 
-OPAL> * Selected Tracking Method == PARALLEL-T, NEW TRACK
-OPAL> * ********************************************************************************** 
-Ippl> Creating new file for data: Distribution-MultiGauss.stat
-Ippl> Creating new file for data: Distribution-MultiGauss.lbal
-OPAL> 
-OPAL> * ************* D I S T R I B U T I O N ********************************************
-OPAL> * 
-OPAL> * Number of particles: 1000000
-OPAL> * 
-OPAL> * Distribution type: MULTIGAUSS
-OPAL> * 
-OPAL> * SIGMAX                        = 1.000000e-03 [m]
-OPAL> * SIGMAY                        = 1.000000e-03 [m]
-OPAL> * SIGMAZ                        = 4.246285e-05 [m]
-OPAL> * CUTOFFLONG                    = 4.000000e+00 [units of SIGMAZ]
-OPAL> * SEPPEAKS                      = 1.200000e-04 [m]
-OPAL> * NPEAKS                        = 4
-OPAL> * SIGMAPX                        = 0.000000e+00 [Beta Gamma]
-OPAL> * SIGMAPY                        = 0.000000e+00 [Beta Gamma]
-OPAL> * SIGMAPZ                        = 0.000000e+00 [Beta Gamma]
-OPAL> * CUTOFFPX                       = 3.000000e+00 [units of SIGMAPX]
-OPAL> * CUTOFFPY                       = 3.000000e+00 [units of SIGMAPY]
-OPAL> * CUTOFFPZ                       = 3.000000e+00 [units of SIGMAPZ]
-OPAL> * 
-OPAL> * Distribution is injected.
-OPAL> * 
-OPAL> * **********************************************************************************
-OPAL> 
-OPAL> * ************* B E A M ************************************************************ 
-OPAL> * BEAM        BEAM1
-OPAL> * PARTICLE    ELECTRON
-OPAL> * CURRENT     3.000000e-04 A
-OPAL> * FREQUENCY   1.000000e+00 MHz
-OPAL> * CHARGE      -e * 1.000000e+00 
-OPAL> * REST MASS   5.109990e-04 GeV
-OPAL> * MOMENTUM    4.299696e-02
-OPAL> * NPART       1.000000e+06
-OPAL> * ********************************************************************************** 
-OPAL> 
-OPAL> * ************* F I E L D S O L V E R ********************************************** 
-OPAL> * FIELDSOLVER  FS_SC
-OPAL> * TYPE         FFT
-OPAL> * N-PROCESSORS 1
-OPAL> * MX           8.000000e+00
-OPAL> * MY           8.000000e+00
-OPAL> * MT           8.000000e+00
-OPAL> * BBOXINCR     1.000000e+00
-OPAL> * GRRENSF      INTEGRATED
-OPAL> * XDIM         parallel  
-OPAL> * YDIM         parallel  
-OPAL> * Z(T)DIM      parallel  
-OPAL> 
-OPAL> * ********************************************************************************** 
-OPAL> 
-OPAL> 
-OPAL> Size of map 2 sections 
-OPAL> Key: (0.000000 - 0.098925) number of overlapping elements 1
-OPAL>                            DR1
-OPAL> Key: (0.098925 - 0.500688) number of overlapping elements 0
-OPAL> 
-Ippl> Creating new file for data: data/Distribution-MultiGauss_ElementPositions.sdds
-OPAL> 
-OPAL> * ************** B U N C H ********************************************************* 
-OPAL> * NP              = 1000000
-OPAL> * Qtot            =      300.000 [pC]         Qi    =        0.300 [fC]
-OPAL> * Ekin            =      42.489 [MeV]         dEkin =        0.000 [eV]
-OPAL> * rmax            = (      1.00084 ,      1.00044 ,      0.34712 ) [mm]
-OPAL> * rmin            = (   -998.90638 ,   -999.14089 ,   -344.18927 ) [um]
-OPAL> * rms beam size   = (    500.05490 ,    500.07846 ,    140.86421 ) [um]
-OPAL> * rms momenta     = (  0.00000e+00 ,  0.00000e+00 ,  0.00000e+00 ) [beta gamma]
-OPAL> * mean position   = (     -0.00000 ,      0.00000 ,      0.00000 ) [um]
-OPAL> * mean momenta    = (  0.00000e+00 ,  0.00000e+00 ,  8.41430e+01 ) [beta gamma]
-OPAL> * rms emittance   = (  0.00000e+00 ,  0.00000e+00 ,  0.00000e+00 ) (not normalized)
-OPAL> * rms correlation = (  0.00000e+00 ,  0.00000e+00 , -0.00000e+00 )
-OPAL> * hr              = (    291.39157 ,    291.36745 ,    100.73340 ) [um]
-OPAL> * dh              =   1.00000e+00 [%]
-OPAL> * t               =        0.000 [fs]         dT    =       10.000 [ps]
-OPAL> * spos            =        0.000 [um]
-OPAL> * ********************************************************************************** 
-OPAL> 
-OPAL> Track start at: 11:34:00, t= 0.000 [fs]; zstart at: 0.000 [um]
-OPAL> Executing ParallelTTracker, initial dt= 10.000 [ps];
-OPAL> max integration steps 1000000, next step= 0
-OPAL > 
-OPAL > * ************** B U N C H ********************************************************* 
-OPAL > * NP              = 1000000
-OPAL > * Qtot            =      300.000 [pC]         Qi    =        0.300 [fC]
-OPAL > * Ekin            =      42.489 [MeV]         dEkin =       5.836 [keV]
-OPAL > * rmax            = (      1.00360 ,      1.00331 ,      0.34712 ) [mm]
-OPAL > * rmin            = (     -1.00152 ,     -1.00200 ,     -0.34420 ) [mm]
-OPAL > * rms beam size   = (    501.56662 ,    501.59027 ,    140.86897 ) [um]
-OPAL > * rms momenta     = (  5.24333e-04 ,  5.24356e-04 ,  1.14208e-02 ) [beta gamma]
-OPAL > * mean position   = (      0.00038 ,      0.00007 ,     -0.00000 ) [um]
-OPAL > * mean momenta    = (  1.28256e-07 ,  2.31791e-08 ,  8.41430e+01 ) [beta gamma]
-OPAL > * rms emittance   = (  7.44989e-10 ,  7.44898e-10 ,  1.79828e-09 ) (not normalized)
-OPAL > * rms correlation = (  9.71177e-01 ,  9.71190e-01 ,  9.95567e-01 )
-OPAL > * hr              = (    292.17051 ,    292.19932 ,    100.73520 ) [um]
-OPAL > * dh              =   1.00000e+00 [%]
-OPAL > * t               =        1.670 [ns]         dT    =       10.000 [ps]
-OPAL > * spos            =      500.000 [mm]
-OPAL > * ********************************************************************************** 
-OPAL > 
-OPAL> done executing ParallelTTracker at 11:35:05
-OPAL> * End of input stream "Distribution-MultiGauss.in".
-Timings> -----------------------------------------------------------------
-Timings>      Timing results for 1 nodes:
-Timings> -----------------------------------------------------------------
-Timings> mainTimer........... Wall tot =     66.428, CPU tot =      66.32
-Timings> 
-Timings> Binaryrepart........ Wall max =          0, CPU max =          0
-Timings>                      Wall avg =          0, CPU avg =          0
-Timings>                      Wall min =          0, CPU min =          0
-Timings> 
-Timings> Boundingbox......... Wall max =    1.59274, CPU max =       1.54
-Timings>                      Wall avg =    1.59274, CPU avg =       1.54
-Timings>                      Wall min =    1.59274, CPU min =       1.54
-Timings> 
-Timings> Boundingbox-bounds.. Wall max =    0.62952, CPU max =       0.52
-Timings>                      Wall avg =    0.62952, CPU avg =       0.52
-Timings>                      Wall min =    0.62952, CPU min =       0.52
-Timings> 
-Timings> Boundingbox-update.. Wall max =   0.959706, CPU max =       1.02
-Timings>                      Wall avg =   0.959706, CPU avg =       1.02
-Timings>                      Wall min =   0.959706, CPU min =       1.02
-Timings> 
-Timings> Compute Statistics.. Wall max =     6.1594, CPU max =       6.08
-Timings>                      Wall avg =     6.1594, CPU avg =       6.08
-Timings>                      Wall min =     6.1594, CPU min =       6.08
-Timings> 
-Timings> ComputePotential.... Wall max =  0.0806861, CPU max =       0.07
-Timings>                      Wall avg =  0.0806861, CPU avg =       0.07
-Timings>                      Wall min =  0.0806861, CPU min =       0.07
-Timings> 
-Timings> Create Distr........ Wall max =    1.26068, CPU max =       1.25
-Timings>                      Wall avg =    1.26068, CPU avg =       1.25
-Timings>                      Wall min =    1.26068, CPU min =       1.25
-Timings> 
-Timings> External field eval. Wall max =     1.7929, CPU max =       1.95
-Timings>                      Wall avg =     1.7929, CPU avg =       1.95
-Timings>                      Wall min =     1.7929, CPU min =       1.95
-Timings> 
-Timings> Fast inside test.... Wall max =          0, CPU max =          0
-Timings>                      Wall avg =          0, CPU avg =          0
-Timings>                      Wall min =          0, CPU min =          0
-Timings> 
-Timings> Histogram........... Wall max =          0, CPU max =          0
-Timings>                      Wall avg =          0, CPU avg =          0
-Timings>                      Wall min =          0, CPU min =          0
-Timings> 
-Timings> Initialize geometry. Wall max =          0, CPU max =          0
-Timings>                      Wall avg =          0, CPU avg =          0
-Timings>                      Wall min =          0, CPU min =          0
-Timings> 
-Timings> Inside test......... Wall max =          0, CPU max =          0
-Timings>                      Wall avg =          0, CPU avg =          0
-Timings>                      Wall min =          0, CPU min =          0
-Timings> 
-Timings> Load Distr.......... Wall max =          0, CPU max =          0
-Timings>                      Wall avg =          0, CPU avg =          0
-Timings>                      Wall min =          0, CPU min =          0
-Timings> 
-Timings> Particle Inside..... Wall max =          0, CPU max =          0
-Timings>                      Wall avg =          0, CPU avg =          0
-Timings>                      Wall min =          0, CPU min =          0
-Timings> 
-Timings> Ray tracing......... Wall max =          0, CPU max =          0
-Timings>                      Wall avg =          0, CPU avg =          0
-Timings>                      Wall min =          0, CPU min =          0
-Timings> 
-Timings> SelfField total..... Wall max =    35.8603, CPU max =      35.77
-Timings>                      Wall avg =    35.8603, CPU avg =      35.77
-Timings>                      Wall min =    35.8603, CPU min =      35.77
-Timings> 
-Timings> SF: GreensFTotal.... Wall max =  0.0565687, CPU max =       0.06
-Timings>                      Wall avg =  0.0565687, CPU avg =       0.06
-Timings>                      Wall min =  0.0565687, CPU min =       0.06
-Timings> 
-Timings> TIntegration1....... Wall max =    2.95651, CPU max =       2.89
-Timings>                      Wall avg =    2.95651, CPU avg =       2.89
-Timings>                      Wall min =    2.95651, CPU min =       2.89
-Timings> 
-Timings> TIntegration2....... Wall max =    8.21723, CPU max =       8.06
-Timings>                      Wall avg =    8.21723, CPU avg =       8.06
-Timings>                      Wall min =    8.21723, CPU min =       8.06
-Timings> 
-Timings> WakeField........... Wall max =          0, CPU max =          0
-Timings>                      Wall avg =          0, CPU avg =          0
-Timings>                      Wall min =          0, CPU min =          0
-Timings> 
-Timings> Write H5-File....... Wall max =   0.112137, CPU max =       0.09
-Timings>                      Wall avg =   0.112137, CPU avg =       0.09
-Timings>                      Wall min =   0.112137, CPU min =       0.09
-Timings> 
-Timings> Write Stat.......... Wall max = 0.00403603, CPU max =          0
-Timings>                      Wall avg = 0.00403603, CPU avg =          0
-Timings>                      Wall min = 0.00403603, CPU min =          0
-Timings> 
-Timings> -----------------------------------------------------------------
+OPAL{0}>                ____  _____       ___ 
+OPAL{0}>               / __ \|  __ \ /\   | | 
+OPAL{0}>              | |  | | |__) /  \  | |
+OPAL{0}>              | |  | |  ___/ /\ \ | |
+OPAL{0}>              | |__| | |  / ____ \| |____
+OPAL{0}>               \____/|_| /_/    \_\______|
+OPAL{0}> 
+OPAL{0}> This is OPAL (Object Oriented Parallel Accelerator Library) Version 2024.2
+OPAL{0}>             git rev. 0e9395166a6c0bcfcbf8a64e6b3572d8dfbcc88a
+OPAL{0}> 
+OPAL{0}> 
+OPAL{0}>                      (c) PSI, http://amas.web.psi.ch
+OPAL{0}> 
+OPAL{0}> 
+OPAL{0}> The optimiser (former opt-Pilot) is integrated 
+OPAL{0}> 
+OPAL{0}> Please send cookies, goodies or other motivations (wine and beer ... ) 
+OPAL{0}> to the OPAL developers opal@lists.psi.ch
+OPAL{0}> 
+OPAL{0}> Time: 07:36:14 date: 23/10/2026
+OPAL{0}> 
+OPAL{0}> * Reading input stream 'Distribution-MultiGauss.in'
+OPAL{0}> 
+OPAL{0}> value: {GAMMA,P0} = {84.1489, 0.042997}
+OPAL{0}> 
+Ippl{0}[3]> BC set for normal Beam
+OPAL{0}[2]> * Generation of distribution with seed = 123456789
+OPAL{0}[2]> * isn't scalable with number of particles and cores.
+OPAL{0}> 
+OPAL{0}> * ************* T R A C K  R U N *************************************************** 
+OPAL{0}> * Selected Tracking Method == PARALLEL-T, NEW TRACK
+OPAL{0}> * ********************************************************************************** 
+OPAL{0}> * Phase space dump frequency    = 100000000
+OPAL{0}> * Statistics dump frequency     = 1000 w.r.t. the time step.
+OPAL{0}> * DT                            = 1e-11 [s]
+OPAL{0}> * MAXSTEPS                      = 1000000
+OPAL{0}> * Mass of simulation particle   = 0.956821 [GeV/c^2]
+OPAL{0}> * Charge of simulation particle = -3e-16 [C]
+OPAL{0}> * ********************************************************************************** 
+Ippl{0}> * Creating new file for data: 'Distribution-MultiGauss.stat'
+Ippl{0}> * Creating new file for data: 'Distribution-MultiGauss.lbal'
+OPAL{0}> 
+OPAL{0}> * ************* D I S T R I B U T I O N ********************************************
+OPAL{0}> * 
+OPAL{0}> * Number of particles: 1000000
+OPAL{0}> * 
+OPAL{0}> * Distribution input momentum units: [Beta Gamma]
+OPAL{0}> * 
+OPAL{0}> * Distribution type: MULTIGAUSS
+OPAL{0}> * 
+OPAL{0}> * SIGMAX                        = 1.000000e-03 [m]
+OPAL{0}> * SIGMAY                        = 1.000000e-03 [m]
+OPAL{0}> * SIGMAZ                        = 4.246285e-05 [m]
+OPAL{0}> * CUTOFFLONG                    = 4.000000e+00 [units of SIGMAZ]
+OPAL{0}> * SEPPEAKS                      = 1.200000e-04 [m]
+OPAL{0}> * NPEAKS                        = 4
+OPAL{0}> * SIGMAPX                        = 0.000000e+00 [Beta Gamma]
+OPAL{0}> * SIGMAPY                        = 0.000000e+00 [Beta Gamma]
+OPAL{0}> * SIGMAPZ                        = 0.000000e+00 [Beta Gamma]
+OPAL{0}> * CUTOFFPX                       = 3.000000e+00 [units of SIGMAPX]
+OPAL{0}> * CUTOFFPY                       = 3.000000e+00 [units of SIGMAPY]
+OPAL{0}> * CUTOFFPZ                       = 3.000000e+00 [units of SIGMAPZ]
+OPAL{0}> * 
+OPAL{0}> * Distribution is injected.
+OPAL{0}> * 
+OPAL{0}> * **********************************************************************************
+OPAL{0}> 
+OPAL{0}> * ************* B E A M ************************************************************ 
+OPAL{0}> * BEAM        BEAM1
+OPAL{0}> * PARTICLE    ELECTRON
+OPAL{0}> * REST MASS   5.109990e-04 [GeV]
+OPAL{0}> * CHARGE      -e * 1.000000e+00 
+OPAL{0}> * MOMENTUM    4.299696e+07 [eV/c]
+OPAL{0}> * MOMENTUM TOLERANCE 1.000000e-02
+OPAL{0}> * CURRENT     3.000000e-04 [A]
+OPAL{0}> * FREQUENCY   1.000000e+00 [MHz]
+OPAL{0}> * NPART       1.000000e+06
+OPAL{0}> * ********************************************************************************** 
+OPAL{0}> 
+OPAL{0}> * ************* F I E L D S O L V E R ********************************************** 
+OPAL{0}> * FIELDSOLVER  FS_SC
+OPAL{0}> * TYPE         FFT
+OPAL{0}> * N-PROCESSORS 4
+OPAL{0}> * MX           8.000000e+00
+OPAL{0}> * MY           8.000000e+00
+OPAL{0}> * MT           8.000000e+00
+OPAL{0}> * BBOXINCR     1.000000e+00
+OPAL{0}> * GREENSF      INTEGRATED
+OPAL{0}> * BCFFTX       OPEN
+OPAL{0}> * BCFFTY       OPEN
+OPAL{0}> * BCFFTZ       OPEN
+OPAL{0}> * MESHFIT      ALL
+OPAL{0}> * XDIM         parallel  
+OPAL{0}> * YDIM         parallel  
+OPAL{0}> * Z(T)DIM      parallel  
+Ippl{0}[3]> ======UniformCartesian<3,MFLOAT>==begin======
+Ippl{0}[3]> gridSizes[0] = 9
+Ippl{0}[3]> gridSizes[1] = 9
+Ippl{0}[3]> gridSizes[2] = 9
+Ippl{0}[3]> origin = ( 0 , 0 , 0 )
+Ippl{0}[3]> meshSpacing[0] = 1
+Ippl{0}[3]> meshSpacing[1] = 1
+Ippl{0}[3]> meshSpacing[2] = 1
+Ippl{0}[3]> Dvc[0] = ( -0.25 , -0.25 , -0.25 )
+Ippl{0}[3]> Dvc[1] = ( 0.25 , -0.25 , -0.25 )
+Ippl{0}[3]> Dvc[2] = ( -0.25 , 0.25 , -0.25 )
+Ippl{0}[3]> Dvc[3] = ( 0.25 , 0.25 , -0.25 )
+Ippl{0}[3]> Dvc[4] = ( -0.25 , -0.25 , 0.25 )
+Ippl{0}[3]> Dvc[5] = ( 0.25 , -0.25 , 0.25 )
+Ippl{0}[3]> Dvc[6] = ( -0.25 , 0.25 , 0.25 )
+Ippl{0}[3]> Dvc[7] = ( 0.25 , 0.25 , 0.25 )
+Ippl{0}[3]> cell volume = 1
+Ippl{0}[3]> ======UniformCartesian<3,MFLOAT>==end========
+Ippl{0}[3]> 
+Ippl{0}[3]> ParticleSpatialLayout, with particle distribution:
+Ippl{0}[3]>     Number of particles 0  Number of particles 0  Number of particles 0  Number of particles 0  
+Ippl{0}[3]> SpatialLayout decomposition = Total Domain = {[0,8),[0,8),[0,8)}
+Ippl{0}[3]> Local Rnodes = 1
+Ippl{0}[3]>  rnode 0 : {[0,4),[0,4),[0,8)}
+Ippl{0}[3]> Remote Rnodes = 3
+Ippl{0}[3]>  rnode 0 : {[0,4),[4,8),[0,8)}
+Ippl{0}[3]>  rnode 1 : {[4,8),[0,4),[0,8)}
+Ippl{0}[3]>  rnode 2 : {[4,8),[4,8),[0,8)}
+Ippl{0}[3]> Internal FieldLayout = Domain = {[0:7:1],[0:7:1],[0:7:1]}
+Ippl{0}[3]> FieldLayoutUsers = 4
+Ippl{0}[3]> Total number of vnodes = 4
+Ippl{0}[3]> Local Vnodes = 1
+Ippl{0}[3]>  vnode 0: Node = 0 ; vnode_m = 0 ; Domain = {[0:3:1],[0:3:1],[0:7:1]}
+Ippl{0}[3]> Remote Vnodes = 3
+Ippl{0}[3]>  vnode 0 : Node = 1 ; vnode_m = 1 ; Domain = {[0:3:1],[4:7:1],[0:7:1]}
+Ippl{0}[3]>  vnode 1 : Node = 2 ; vnode_m = 2 ; Domain = {[4:7:1],[0:3:1],[0:7:1]}
+Ippl{0}[3]>  vnode 2 : Node = 3 ; vnode_m = 3 ; Domain = {[4:7:1],[4:7:1],[0:7:1]}
+Ippl{0}[3]> 
+OPAL{0}> 
+OPAL{0}> * ********************************************************************************** 
+OPAL{0}> 
+Ippl{0}[3]> DR1 gone live
+OPAL{0}> 
+OPAL{0}> * Size of map 2 sections 
+OPAL{0}> * Key: (0.000000 - 0.098925) number of overlapping elements 1
+OPAL{0}> *                            DR1
+OPAL{0}> * Key: (0.098925 - 0.500688) number of overlapping elements 0
+OPAL{0}> 
+Ippl{0}> * Creating new file for data: 'data/Distribution-MultiGauss_ElementPositions.sdds'
+OPAL{0}> 
+OPAL{0}> * ************** B U N C H ********************************************************* 
+OPAL{0}> * NP              = 1000000
+OPAL{0}> * Qtot            =      300.000 [pC]         Qi    =        0.300 [fC]
+OPAL{0}> * Ekin            =      42.489 [MeV]         dEkin =        0.000 [eV]
+OPAL{0}> * rmax            = (      1.00084 ,      1.00044 ,      0.34712 ) [mm]
+OPAL{0}> * rmin            = (   -998.90638 ,   -999.14089 ,   -344.18927 ) [um]
+OPAL{0}> * rms beam size   = (    500.05490 ,    500.07846 ,    140.86421 ) [um]
+OPAL{0}> * rms momenta     = (  0.00000e+00 ,  0.00000e+00 ,  3.38318e-10 ) [beta gamma]
+OPAL{0}> * mean position   = (      0.00000 ,      0.00000 ,      0.00000 ) [um]
+OPAL{0}> * mean momenta    = (  0.00000e+00 ,  0.00000e+00 ,  8.41430e+01 ) [beta gamma]
+OPAL{0}> * rms emittance   = (  0.00000e+00 ,  0.00000e+00 ,  5.66380e-16 ) (not normalized)
+OPAL{0}> * rms correlation = (         -nan ,         -nan ,  7.51141e-07 )
+OPAL{0}> * hr              = (    291.39157 ,    291.36745 ,    100.73340 ) [um]
+OPAL{0}> * dh              =   1.00000e+00 [%]
+OPAL{0}> * t               =        0.000 [fs]         dT    =       10.000 [ps]
+OPAL{0}> * spos            =        0.000 [um]
+OPAL{0}> * ********************************************************************************** 
+OPAL{0}> 
+OPAL{0}> * Track start at: 07:36:15, t= 0.000 [fs]; zstart at: 0.000 [um]
+OPAL{0}> * Executing ParallelTTracker
+OPAL{0}> * Initial dt = 10.000 [ps]
+OPAL{0}> * Max integration steps = 1000000, next step = 0
+OPAL{0}> 
+ParallelTTracker {0}[2]> MINBINEMITTED 10
+ParallelTTracker {0}[2]> MINSTEPFORREBIN 200
+ParallelTTracker {0}[2]> REPARTFREQ 1000000
+ParallelTTracker {0}[3]> 07:36:16 Step      0 at 2.998 [mm], t= 10.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:16 Step      1 at 5.995 [mm], t= 20.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:16 Step      2 at 8.993 [mm], t= 30.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:16 Step      3 at 11.991 [mm], t= 40.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:16 Step      4 at 14.989 [mm], t= 50.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:16 Step      5 at 17.986 [mm], t= 60.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:16 Step      6 at 20.984 [mm], t= 70.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:17 Step      7 at 23.982 [mm], t= 80.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:17 Step      8 at 26.979 [mm], t= 90.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:17 Step      9 at 29.977 [mm], t= 100.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:17 Step     10 at 32.975 [mm], t= 110.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:17 Step     11 at 35.973 [mm], t= 120.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:17 Step     12 at 38.970 [mm], t= 130.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:17 Step     13 at 41.968 [mm], t= 140.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:18 Step     14 at 44.966 [mm], t= 150.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:18 Step     15 at 47.963 [mm], t= 160.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:18 Step     16 at 50.961 [mm], t= 170.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:18 Step     17 at 53.959 [mm], t= 180.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:18 Step     18 at 56.957 [mm], t= 190.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:18 Step     19 at 59.954 [mm], t= 200.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:19 Step     20 at 62.952 [mm], t= 210.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:19 Step     21 at 65.950 [mm], t= 220.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:19 Step     22 at 68.947 [mm], t= 230.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:19 Step     23 at 71.945 [mm], t= 240.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:19 Step     24 at 74.943 [mm], t= 250.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:19 Step     25 at 77.941 [mm], t= 260.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:20 Step     26 at 80.938 [mm], t= 270.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:20 Step     27 at 83.936 [mm], t= 280.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:20 Step     28 at 86.934 [mm], t= 290.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:20 Step     29 at 89.931 [mm], t= 300.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:20 Step     30 at 92.929 [mm], t= 310.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:20 Step     31 at 95.927 [mm], t= 320.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:20 Step     32 at 98.925 [mm], t= 330.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:21 Step     33 at 101.922 [mm], t= 340.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:21 Step     34 at 104.920 [mm], t= 350.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:21 Step     35 at 107.918 [mm], t= 360.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:21 Step     36 at 110.915 [mm], t= 370.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:21 Step     37 at 113.913 [mm], t= 380.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:21 Step     38 at 116.911 [mm], t= 390.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:21 Step     39 at 119.909 [mm], t= 400.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:21 Step     40 at 122.906 [mm], t= 410.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:22 Step     41 at 125.904 [mm], t= 420.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:22 Step     42 at 128.902 [mm], t= 430.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:22 Step     43 at 131.899 [mm], t= 440.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:22 Step     44 at 134.897 [mm], t= 450.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:22 Step     45 at 137.895 [mm], t= 460.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:22 Step     46 at 140.893 [mm], t= 470.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:22 Step     47 at 143.890 [mm], t= 480.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:23 Step     48 at 146.888 [mm], t= 490.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:23 Step     49 at 149.886 [mm], t= 500.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:23 Step     50 at 152.883 [mm], t= 510.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:23 Step     51 at 155.881 [mm], t= 520.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:23 Step     52 at 158.879 [mm], t= 530.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:23 Step     53 at 161.876 [mm], t= 540.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:25 Step     54 at 164.874 [mm], t= 550.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:25 Step     55 at 167.872 [mm], t= 560.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:25 Step     56 at 170.870 [mm], t= 570.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:25 Step     57 at 173.867 [mm], t= 580.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:25 Step     58 at 176.865 [mm], t= 590.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:26 Step     59 at 179.863 [mm], t= 600.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:26 Step     60 at 182.860 [mm], t= 610.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:26 Step     61 at 185.858 [mm], t= 620.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:26 Step     62 at 188.856 [mm], t= 630.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:26 Step     63 at 191.854 [mm], t= 640.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:26 Step     64 at 194.851 [mm], t= 650.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:26 Step     65 at 197.849 [mm], t= 660.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:26 Step     66 at 200.847 [mm], t= 670.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:27 Step     67 at 203.844 [mm], t= 680.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:27 Step     68 at 206.842 [mm], t= 690.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:27 Step     69 at 209.840 [mm], t= 700.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:27 Step     70 at 212.838 [mm], t= 710.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:27 Step     71 at 215.835 [mm], t= 720.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:27 Step     72 at 218.833 [mm], t= 730.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:27 Step     73 at 221.831 [mm], t= 740.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:28 Step     74 at 224.828 [mm], t= 750.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:28 Step     75 at 227.826 [mm], t= 760.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:28 Step     76 at 230.824 [mm], t= 770.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:28 Step     77 at 233.822 [mm], t= 780.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:28 Step     78 at 236.819 [mm], t= 790.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:28 Step     79 at 239.817 [mm], t= 800.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:28 Step     80 at 242.815 [mm], t= 810.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:28 Step     81 at 245.812 [mm], t= 820.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:29 Step     82 at 248.810 [mm], t= 830.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:29 Step     83 at 251.808 [mm], t= 840.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:29 Step     84 at 254.806 [mm], t= 850.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:29 Step     85 at 257.803 [mm], t= 860.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:29 Step     86 at 260.801 [mm], t= 870.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:29 Step     87 at 263.799 [mm], t= 880.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:29 Step     88 at 266.796 [mm], t= 890.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:29 Step     89 at 269.794 [mm], t= 900.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:30 Step     90 at 272.792 [mm], t= 910.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:30 Step     91 at 275.790 [mm], t= 920.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:30 Step     92 at 278.787 [mm], t= 930.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:30 Step     93 at 281.785 [mm], t= 940.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:30 Step     94 at 284.783 [mm], t= 950.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:30 Step     95 at 287.780 [mm], t= 960.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:30 Step     96 at 290.778 [mm], t= 970.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:31 Step     97 at 293.776 [mm], t= 980.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:31 Step     98 at 296.774 [mm], t= 990.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[2]> 07:36:31 Step     99 at 299.771 [mm], t= 1000.000 [ps], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:31 Step    100 at 302.769 [mm], t= 1.010 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:31 Step    101 at 305.767 [mm], t= 1.020 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:31 Step    102 at 308.764 [mm], t= 1.030 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:31 Step    103 at 311.762 [mm], t= 1.040 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:32 Step    104 at 314.760 [mm], t= 1.050 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:32 Step    105 at 317.758 [mm], t= 1.060 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:32 Step    106 at 320.755 [mm], t= 1.070 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:32 Step    107 at 323.753 [mm], t= 1.080 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:32 Step    108 at 326.751 [mm], t= 1.090 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:32 Step    109 at 329.748 [mm], t= 1.100 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:32 Step    110 at 332.746 [mm], t= 1.110 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:32 Step    111 at 335.744 [mm], t= 1.120 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:33 Step    112 at 338.742 [mm], t= 1.130 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:33 Step    113 at 341.739 [mm], t= 1.140 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:33 Step    114 at 344.737 [mm], t= 1.150 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:33 Step    115 at 347.735 [mm], t= 1.160 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:33 Step    116 at 350.732 [mm], t= 1.170 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:33 Step    117 at 353.730 [mm], t= 1.180 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:33 Step    118 at 356.728 [mm], t= 1.190 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:33 Step    119 at 359.726 [mm], t= 1.200 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:34 Step    120 at 362.723 [mm], t= 1.210 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:34 Step    121 at 365.721 [mm], t= 1.220 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:34 Step    122 at 368.719 [mm], t= 1.230 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:34 Step    123 at 371.716 [mm], t= 1.240 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:34 Step    124 at 374.714 [mm], t= 1.250 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:34 Step    125 at 377.712 [mm], t= 1.260 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:34 Step    126 at 380.710 [mm], t= 1.270 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:34 Step    127 at 383.707 [mm], t= 1.280 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:34 Step    128 at 386.705 [mm], t= 1.290 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:35 Step    129 at 389.703 [mm], t= 1.300 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:35 Step    130 at 392.700 [mm], t= 1.310 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:35 Step    131 at 395.698 [mm], t= 1.320 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:35 Step    132 at 398.696 [mm], t= 1.330 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:35 Step    133 at 401.694 [mm], t= 1.340 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:35 Step    134 at 404.691 [mm], t= 1.350 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:35 Step    135 at 407.689 [mm], t= 1.360 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:35 Step    136 at 410.687 [mm], t= 1.370 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:35 Step    137 at 413.684 [mm], t= 1.380 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:36 Step    138 at 416.682 [mm], t= 1.390 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:36 Step    139 at 419.680 [mm], t= 1.400 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:36 Step    140 at 422.678 [mm], t= 1.410 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:36 Step    141 at 425.675 [mm], t= 1.420 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:36 Step    142 at 428.673 [mm], t= 1.430 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:36 Step    143 at 431.671 [mm], t= 1.440 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:36 Step    144 at 434.668 [mm], t= 1.450 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:36 Step    145 at 437.666 [mm], t= 1.460 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:37 Step    146 at 440.664 [mm], t= 1.470 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:37 Step    147 at 443.662 [mm], t= 1.480 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:37 Step    148 at 446.659 [mm], t= 1.490 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:37 Step    149 at 449.657 [mm], t= 1.500 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:37 Step    150 at 452.655 [mm], t= 1.510 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:37 Step    151 at 455.652 [mm], t= 1.520 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:37 Step    152 at 458.650 [mm], t= 1.530 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:37 Step    153 at 461.648 [mm], t= 1.540 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:38 Step    154 at 464.645 [mm], t= 1.550 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:38 Step    155 at 467.643 [mm], t= 1.560 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:38 Step    156 at 470.641 [mm], t= 1.570 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:38 Step    157 at 473.639 [mm], t= 1.580 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:38 Step    158 at 476.636 [mm], t= 1.590 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:38 Step    159 at 479.634 [mm], t= 1.600 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:38 Step    160 at 482.632 [mm], t= 1.610 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:39 Step    161 at 485.629 [mm], t= 1.620 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:39 Step    162 at 488.627 [mm], t= 1.630 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:39 Step    163 at 491.625 [mm], t= 1.640 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:39 Step    164 at 494.623 [mm], t= 1.650 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:39 Step    165 at 497.620 [mm], t= 1.660 [ns], E=42.489 [MeV]
+ParallelTTracker {0}[3]> 07:36:39 Step    166 at 500.618 [mm], t= 1.670 [ns], E=42.489 [MeV]
+OPAL {0}[3]> * Wrote beam statistics.
+OPAL {0}> 
+OPAL {0}> * ************** B U N C H ********************************************************* 
+OPAL {0}> * NP              = 1000000
+OPAL {0}> * Qtot            =      300.000 [pC]         Qi    =        0.300 [fC]
+OPAL {0}> * Ekin            =      42.489 [MeV]         dEkin =       6.023 [keV]
+OPAL {0}> * rmax            = (      1.00504 ,      1.00474 ,      0.34712 ) [mm]
+OPAL {0}> * rmin            = (     -1.00298 ,     -1.00342 ,     -0.34420 ) [mm]
+OPAL {0}> * rms beam size   = (    501.95206 ,    501.97523 ,    140.86912 ) [um]
+OPAL {0}> * rms momenta     = (  6.51549e-04 ,  6.51470e-04 ,  1.17869e-02 ) [beta gamma]
+OPAL {0}> * mean position   = (     -0.00026 ,     -0.00011 ,     -0.00000 ) [um]
+OPAL {0}> * mean momenta    = ( -8.64916e-08 , -3.63079e-08 ,  8.41430e+01 ) [beta gamma]
+OPAL {0}> * rms emittance   = (  7.61141e-10 ,  7.62853e-10 ,  1.91343e-09 ) (not normalized)
+OPAL {0}> * rms correlation = (  9.80638e-01 ,  9.80547e-01 ,  9.95288e-01 )
+OPAL {0}> * hr              = (    292.59309 ,    292.61396 ,    100.73524 ) [um]
+OPAL {0}> * dh              =   1.00000e+00 [%]
+OPAL {0}> * t               =        1.670 [ns]         dT    =       10.000 [ps]
+OPAL {0}> * spos            =      500.000 [mm]
+OPAL {0}> * ********************************************************************************** 
+OPAL {0}> 
+OPAL {0}[2]> * Wrote beam phase space.
+ParallelTTracker {0}[2]> Dump phase space of last step
+Ippl{0}[3]> DR1 gone off
+OPAL{0}> 
+OPAL{0}> * Done executing ParallelTTracker at 07:36:40
+OPAL{0}> 
+OPAL{0}> * End of input stream 'Distribution-MultiGauss.in'
+Timings{0}> -----------------------------------------------------------------
+Timings{0}>      Timing results for 4 nodes:
+Timings{0}> -----------------------------------------------------------------
+Timings{0}> mainTimer........... Wall tot =    24.9981, CPU tot =    25.5183
+Timings{0}> 
+Timings{0}> Binaryrepart........ Wall max =          0, CPU max =          0
+Timings{0}>                      Wall avg =          0, CPU avg =          0
+Timings{0}>                      Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> Boundingbox......... Wall max =     1.6339, CPU max =    1.70759
+Timings{0}>                      Wall avg =    1.62917, CPU avg =    1.70273
+Timings{0}>                      Wall min =    1.62612, CPU min =    1.69977
+Timings{0}> 
+Timings{0}> Boundingbox-bounds.. Wall max =   0.199069, CPU max =   0.209292
+Timings{0}>                      Wall avg =   0.198741, CPU avg =    0.20897
+Timings{0}>                      Wall min =   0.198579, CPU min =   0.208833
+Timings{0}> 
+Timings{0}> Boundingbox-update.. Wall max =    1.36447, CPU max =    1.42503
+Timings{0}>                      Wall avg =    1.36437, CPU avg =    1.42494
+Timings{0}>                      Wall min =    1.36429, CPU min =    1.42488
+Timings{0}> 
+Timings{0}> Compute Statistics.. Wall max =    4.17419, CPU max =    4.38553
+Timings{0}>                      Wall avg =    4.15836, CPU avg =    4.36878
+Timings{0}>                      Wall min =    4.14843, CPU min =    4.35809
+Timings{0}> 
+Timings{0}> ComputePotential.... Wall max =  0.0764275, CPU max =   0.080157
+Timings{0}>                      Wall avg =  0.0755842, CPU avg =   0.079274
+Timings{0}>                      Wall min =  0.0737518, CPU min =   0.077345
+Timings{0}> 
+Timings{0}> Create Distr........ Wall max =    1.65469, CPU max =    1.71091
+Timings{0}>                      Wall avg =    1.65435, CPU avg =    1.71053
+Timings{0}>                      Wall min =    1.65414, CPU min =    1.71033
+Timings{0}> 
+Timings{0}> External field eval. Wall max =   0.591329, CPU max =   0.615021
+Timings{0}>                      Wall avg =   0.579409, CPU avg =   0.602654
+Timings{0}>                      Wall min =   0.567405, CPU min =     0.5902
+Timings{0}> 
+Timings{0}> Fast inside test.... Wall max =          0, CPU max =          0
+Timings{0}>                      Wall avg =          0, CPU avg =          0
+Timings{0}>                      Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> Histogram........... Wall max =          0, CPU max =          0
+Timings{0}>                      Wall avg =          0, CPU avg =          0
+Timings{0}>                      Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> Initialize geometry. Wall max =          0, CPU max =          0
+Timings{0}>                      Wall avg =          0, CPU avg =          0
+Timings{0}>                      Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> Inside test......... Wall max =          0, CPU max =          0
+Timings{0}>                      Wall avg =          0, CPU avg =          0
+Timings{0}>                      Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> Load Distr.......... Wall max =          0, CPU max =          0
+Timings{0}>                      Wall avg =          0, CPU avg =          0
+Timings{0}>                      Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> Particle Inside..... Wall max =          0, CPU max =          0
+Timings{0}>                      Wall avg =          0, CPU avg =          0
+Timings{0}>                      Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> Ray tracing......... Wall max =          0, CPU max =          0
+Timings{0}>                      Wall avg =          0, CPU avg =          0
+Timings{0}>                      Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> SelfField total..... Wall max =    8.54861, CPU max =    8.97823
+Timings{0}>                      Wall avg =    8.47671, CPU avg =    8.90292
+Timings{0}>                      Wall min =     8.4096, CPU min =    8.83295
+Timings{0}> 
+Timings{0}> SF: GreensFTotal.... Wall max =  0.0339302, CPU max =   0.035622
+Timings{0}>                      Wall avg =  0.0334659, CPU avg =  0.0351443
+Timings{0}>                      Wall min =  0.0332045, CPU min =   0.034856
+Timings{0}> 
+Timings{0}> TIntegration1....... Wall max =     1.1005, CPU max =    1.15716
+Timings{0}>                      Wall avg =    1.08859, CPU avg =    1.14441
+Timings{0}>                      Wall min =    1.07537, CPU min =    1.13055
+Timings{0}> 
+Timings{0}> TIntegration2....... Wall max =    2.34458, CPU max =    2.46289
+Timings{0}>                      Wall avg =    2.33993, CPU avg =    2.45788
+Timings{0}>                      Wall min =    2.33701, CPU min =    2.45467
+Timings{0}> 
+Timings{0}> WakeField........... Wall max =          0, CPU max =          0
+Timings{0}>                      Wall avg =          0, CPU avg =          0
+Timings{0}>                      Wall min =          0, CPU min =          0
+Timings{0}> 
+Timings{0}> Write H5-File....... Wall max =   0.881418, CPU max =    0.22665
+Timings{0}>                      Wall avg =   0.881366, CPU avg =   0.223008
+Timings{0}>                      Wall min =   0.881237, CPU min =   0.218624
+Timings{0}> 
+Timings{0}> Write Stat.......... Wall max = 0.000912263, CPU max =   0.000943
+Timings{0}>                      Wall avg = 0.000511007, CPU avg =   0.000529
+Timings{0}>                      Wall min = 0.000375415, CPU min =   0.000389
+Timings{0}> 
+Timings{0}> -----------------------------------------------------------------
