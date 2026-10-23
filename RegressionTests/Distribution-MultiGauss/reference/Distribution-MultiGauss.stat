@@ -1,6 +1,6 @@
 SDDS1
 &description
-        text="Statistics data 'Distribution-MultiGauss.in' 08/09/2020 11:35:04",
+        text="Statistics data 'Distribution-MultiGauss.in' 23/10/2026 07:36:39",
         contents="stat parameters"
 &end
 &parameter
@@ -39,7 +39,7 @@ SDDS1
 &column
         name=charge,
         type=double,
-        units=1,
+        units=C,
         description="4 Bunch Charge"
 &end
 &column
@@ -160,19 +160,19 @@ SDDS1
         name=max_x,
         type=double,
         units=m,
-        description="24 Max Beamsize in x"
+        description="24 Maximum x coordinate of the particles"
 &end
 &column
         name=max_y,
         type=double,
         units=m,
-        description="25 Max Beamsize in y"
+        description="25 Maximum y coordinate of the particles"
 &end
 &column
         name=max_s,
         type=double,
         units=m,
-        description="26 Max Beamsize in s"
+        description="26 Maximum s coordinate of the particles"
 &end
 &column
         name=xpx,
@@ -196,25 +196,25 @@ SDDS1
         name=Dx,
         type=double,
         units=m,
-        description="30 Dispersion in x"
+        description="30 Raw moment mean(x*pz) (not the dispersion)"
 &end
 &column
         name=DDx,
         type=double,
         units=1,
-        description="31 Derivative of dispersion in x"
+        description="31 Raw moment mean(px*pz) (not the dispersion derivative)"
 &end
 &column
         name=Dy,
         type=double,
         units=m,
-        description="32 Dispersion in y"
+        description="32 Raw moment mean(y*pz) (not the dispersion)"
 &end
 &column
         name=DDy,
         type=double,
         units=1,
-        description="33 Derivative of dispersion in y"
+        description="33 Raw moment mean(py*pz) (not the dispersion derivative)"
 &end
 &column
         name=Bx_ref,
@@ -270,11 +270,35 @@ SDDS1
         units=1,
         description="42 outside n*sigma of the beam"
 &end
+&column
+        name=DebyeLength,
+        type=double,
+        units=m,
+        description="43 Debye length in the boosted frame"
+&end
+&column
+        name=plasmaParameter,
+        type=double,
+        units=1,
+        description="44 Plasma parameter that gives no. of particles in a Debye sphere"
+&end
+&column
+        name=temperature,
+        type=double,
+        units=K,
+        description="45 Temperature of the beam"
+&end
+&column
+        name=rmsDensity,
+        type=double,
+        units=1,
+        description="46 RMS number density of the beam"
+&end
 &data
         mode=ascii,
         no_row_counts=1
 &end
-1
-OPAL 2.3.0 git rev. #40634beaad6e3b782bed353b206083821fbae5f4
+4
+OPAL 2024.2 git rev. #0e9395166a6c0bcfcbf8a64e6b3572d8dfbcc88a
 opal-t
-1.669999999999996e+00         	5.006180519134570e-01         	1000000         	-2.999999999960692e-10         	4.248901147146854e+01         	5.015703566855674e-04         	5.015940108374535e-04         	1.408689831825089e-04         	5.243331748280753e-04         	5.243562669084204e-04         	1.142075097101782e-02         	6.268560817656018e-08         	6.267793818411121e-08         	1.513125808895554e-07         	3.822314429223886e-10         	6.915133334456825e-11         	-1.804217969891483e-12         	0.000000000000000e+00         	0.000000000000000e+00         	5.006180519134570e-01         	0.000000000000000e+00         	0.000000000000000e+00         	8.414295883499398e+01         	1.003602232121907e-03         	1.003319399313483e-03         	3.471242506126186e-04         	9.711775060297045e-01         	9.711899967955003e-01         	9.955673483234164e-01         	3.313916675289808e-08         	1.079223987587600e-05         	2.985983911975861e-09         	1.951383895632064e-06         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	5.835579654129191e-03         	1.000000000000000e-02         	0         	
+1.669999999999996e+00         	5.006180519134570e-01         	1.000000000000000e+06         	-3.000000000004381e-10         	4.248901783590306e+01         	5.019567551630395e-04         	5.019799204986159e-04         	1.408691351811850e-04         	6.515491885529627e-04         	6.514700714584188e-04         	1.178687742709348e-02         	6.404466263419340e-08         	6.418873334630471e-08         	1.610018729541268e-07         	-2.557258579543031e-10         	-1.077310741948167e-10         	-1.899521178537478e-12         	0.000000000000000e+00         	0.000000000000000e+00         	5.006180519134570e-01         	0.000000000000000e+00         	0.000000000000000e+00         	8.414295883499398e+01         	1.005054013300098e-03         	1.004753555175018e-03         	3.471243385369618e-04         	9.806387411133557e-01         	9.805477127923536e-01         	9.952877634230665e-01         	-2.055626829678658e-08         	-7.277718801025912e-06         	-1.191823494264099e-08         	-3.054649589272230e-06         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	0.000000000000000e+00         	6.022656682849304e-03         	1.000000000000000e-02         	0.000000000000000e+00         	3.854056339478539e-07         	1.800183715461129e-03         	2.341525735943085e-01         	7.507131831169564e+15         	
